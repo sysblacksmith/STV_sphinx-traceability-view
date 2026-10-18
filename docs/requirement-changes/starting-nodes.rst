@@ -16,8 +16,14 @@ behavior remains supported. Collapsed initialization, model replacement,
 visibility exclusions and the 200-visible-node limit are retained. The project
 entry node is artificial and is not another stakeholder/architecture Need.
 
-Changed and new requirement revisions are draft pending review/acceptance;
-previous acceptance and content identities remain historical in
+The project owner explicitly reviewed and accepted the stakeholder amendment
+on 2026-10-18 in this conversation: "i have reviewd the new stakeholder req.
+and accept them. please update the status accrodingyl". Acceptance covers
+:need:`STV_SHR_003`, :need:`STV_SHR_025`, :need:`STV_SHR_026`,
+:need:`STV_SHR_047` and :need:`STV_SHR_048`. Their status is accepted.
+Affected system/software revisions remain draft pending concept refinement
+and review. This decision does not accept the downstream concept changes.
+Previous acceptance and content identities remain historical in
 :doc:`../concept-reviews/round-1` and :doc:`../concept-reviews/round-2`.
 Verification remains not_assessed.
 

@@ -15,8 +15,9 @@ owner-delegated concept review, rounds 1 and 2. Findings STV_REVIEW_001 through
 STV_REVIEW_009 are resolved. See the individual review records for assessed
 Need links, authority, revision identities and evidence.
 
-A subsequent starting-node amendment is in progress: new project-root and
-multi-seed requirements and their affected revisions are draft. The prior
+A subsequent starting-node amendment is in progress: the owner accepted the
+new and revised stakeholder requirements on 2026-10-18. Affected internal
+requirements remain draft pending concept refinement and review. The prior
 concept is not yet reconciled with this change; see
 :doc:`requirement-changes/starting-nodes`. Unchanged artifact acceptance remains
 valid within its previous scope.

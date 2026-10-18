@@ -40,7 +40,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Initially collapse traced objects
    :id: STV_SHR_003
-   :status: draft
+   :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner discussion 2026-10-18
@@ -480,7 +480,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Preserve objects reached through other open paths
    :id: STV_SHR_025
-   :status: draft
+   :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner overlapping path collapse confirmation 2026-10-18
@@ -503,7 +503,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Require a valid starting ID
    :id: STV_SHR_026
-   :status: draft
+   :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner invalid starting ID confirmation 2026-10-18
@@ -943,7 +943,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Start from the project when no seed is supplied
    :id: STV_SHR_047
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
@@ -962,7 +962,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Select multiple starting objects
    :id: STV_SHR_048
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
