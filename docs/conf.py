@@ -7,6 +7,7 @@ import sys
 project = "STV Sphinx Traceability View"
 version = release = "0.1"
 root_doc = "index"
+exclude_patterns = ["_build", "test-execution/0.1.0-candidate-1/index.rst"]
 
 # Select the shared reverse-engineering skill without storing a machine path.
 configured = os.environ.get("REQUIREMENTS_SKILL_DIR")
@@ -21,10 +22,11 @@ if skill_dir is None:
     raise RuntimeError("Set REQUIREMENTS_SKILL_DIR to the shared reverse-engineer-requirements skill directory (with its central method.md).")
 
 sys.path.insert(0, str(skill_dir / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 # The selected shared skill is resolved at runtime, outside this workspace.
 traceability_model = import_module("traceability_model")
 
-extensions = ["sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts"]
+extensions = ["sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts", "sphinx_traceability_view"]
 needs_types = traceability_model.NEEDS_TYPES
 needs_links = traceability_model.NEEDS_LINKS
 needs_fields = traceability_model.NEEDS_FIELDS

@@ -13,8 +13,8 @@ registry publication is outside the implementation task. Initial builder
 support is Sphinx's ``html`` builder. Fail clearly if a view is used with an
 unsupported builder rather than silently producing an empty view.
 
-Create the following product files; these are responsibilities, not existing
-implementation claims::
+The product files follow these responsibility boundaries. Implementation and
+verification evidence is maintained separately under :doc:`maturity`::
 
    pyproject.toml                       # Hatchling; includes built assets
    src/sphinx_traceability_view/

@@ -3,6 +3,9 @@ System requirements
 
 System-level behavior, constraints and architecture allocation.
 
+Executable criteria and retained results: :doc:`test-coverage` and
+:doc:`test-execution/0.1.0-final/index`.
+
 .. sysr:: Author and resolve embedded views
    :id: STV_SYS_001
    :status: accepted
@@ -10,7 +13,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_001, STV_SHR_002, STV_SHR_026, STV_SHR_047, STV_SHR_048
    :allocated_to: STV_SE_BUILD
 
@@ -33,7 +36,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_014, STV_SHR_036, STV_SHR_045
    :allocated_to: STV_SE_BUILD
 
@@ -48,7 +51,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_017, STV_SHR_018
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
@@ -63,7 +66,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_006, STV_SHR_013, STV_SHR_027, STV_SHR_028
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
@@ -78,7 +81,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_009, STV_SHR_010, STV_SHR_011, STV_SHR_012, STV_SHR_037
    :allocated_to: STV_SE_BROWSER
 
@@ -93,7 +96,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_015, STV_SHR_016, STV_SHR_033
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
@@ -108,7 +111,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_038
    :allocated_to: STV_SE_BROWSER
 
@@ -123,7 +126,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_043, STV_SHR_044
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
@@ -138,7 +141,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_042, STV_SHR_046
    :allocated_to: STV_SE_BUILD
 
@@ -153,7 +156,7 @@ System-level behavior, constraints and architecture allocation.
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_041
    :allocated_to: STV_SE_BROWSER
 

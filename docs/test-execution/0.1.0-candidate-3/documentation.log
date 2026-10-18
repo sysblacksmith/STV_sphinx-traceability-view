@@ -1,0 +1,197 @@
+Running Sphinx v8.1.3
+loading translations [en]... done
+loading pickled environment... The configuration has changed (3 options: 'html_css_files', 'needs_layouts', 'needs_types')
+done
+myst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [html]: targets for 4 source files that are out of date
+updating environment: 1 added, 36 changed, 0 removed
+reading sources... [  3%] architecture-decisions
+reading sources... [  6%] architecture-software
+reading sources... [  8%] architecture-system
+reading sources... [ 11%] architecture/decisions/STV_ADR_001_static_extension
+reading sources... [ 14%] architecture/decisions/STV_ADR_002_portable_bundle
+reading sources... [ 17%] architecture/decisions/STV_ADR_003_state_layout
+reading sources... [ 19%] architecture/decisions/STV_ADR_004_dependencies
+reading sources... [ 22%] architecture/decisions/STV_ADR_005_starting_nodes
+reading sources... [ 25%] concept-review
+reading sources... [ 28%] concept-reviews/documentation-reorganization
+reading sources... [ 31%] concept-reviews/round-1
+reading sources... [ 33%] concept-reviews/round-2
+reading sources... [ 36%] concept-reviews/round-3
+reading sources... [ 39%] demo
+reading sources... [ 42%] elements-software
+reading sources... [ 44%] elements-system
+reading sources... [ 47%] implementation-plan
+reading sources... [ 50%] index
+reading sources... [ 53%] internal-interfaces
+reading sources... [ 56%] maturity
+reading sources... [ 58%] method
+reading sources... [ 61%] requirement-changes/starting-nodes
+reading sources... [ 64%] review
+reading sources... [ 67%] software
+reading sources... [ 69%] sources
+reading sources... [ 72%] stakeholder
+reading sources... [ 75%] state-machine
+reading sources... [ 78%] system
+reading sources... [ 81%] technology-stack
+reading sources... [ 83%] test-coverage
+reading sources... [ 86%] test-execution/0.1.0-candidate-1/publication
+reading sources... [ 89%] test-execution/0.1.0-candidate-2/index
+reading sources... [ 92%] test-execution/0.1.0-candidate-3/index
+reading sources... [ 94%] test-execution/index
+reading sources... [ 97%] traceability
+reading sources... [100%] verification-plan
+
+Copying static files for sphinx-data-viewer support
+Copying static files for sphinx-needs datatables support
+Copying static style files for sphinx-needs
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+Schema validation completed with 0 warning(s) in 0.004 seconds. Validated 27618 needs/s.
+preparing documents... done
+copying assets... 
+copying downloadable files... [  1%] ../src/sphinx_traceability_view/__init__.py
+copying downloadable files... [  2%] ../src/sphinx_traceability_view/directives.py
+copying downloadable files... [  4%] ../src/sphinx_traceability_view/graph.py
+copying downloadable files... [  5%] ../src/sphinx_traceability_view/details.py
+copying downloadable files... [  6%] ../src/sphinx_traceability_view/bundle.py
+copying downloadable files... [  7%] ../frontend/src/state.js
+copying downloadable files... [  9%] ../frontend/src/layout.js
+copying downloadable files... [ 10%] ../frontend/src/view.js
+copying downloadable files... [ 11%] ../frontend/src/inspect.js
+copying downloadable files... [ 12%] ../tests/test_browser.py
+copying downloadable files... [ 14%] ../tests/test_build.py
+copying downloadable files... [ 15%] ../tests/test_bundle.py
+copying downloadable files... [ 16%] ../tests/test_capacity.py
+copying downloadable files... [ 17%] ../tests/test_details.py
+copying downloadable files... [ 19%] ../tests/test_graph.py
+copying downloadable files... [ 20%] ../tests/test_model.py
+copying downloadable files... [ 21%] ../tests/test_package.py
+copying downloadable files... [ 22%] ../frontend/test/layout.test.js
+copying downloadable files... [ 23%] ../frontend/test/state.test.js
+copying downloadable files... [ 25%] test-execution/0.1.0-candidate-1/browser-assets.log
+copying downloadable files... [ 26%] test-execution/0.1.0-candidate-1/python-package.log
+copying downloadable files... [ 27%] test-execution/0.1.0-candidate-1/coverage.log
+copying downloadable files... [ 28%] test-execution/0.1.0-candidate-1/diagram-links-source.log
+copying downloadable files... [ 30%] test-execution/0.1.0-candidate-1/documentation.log
+copying downloadable files... [ 31%] test-execution/0.1.0-candidate-1/capacity-build.log
+copying downloadable files... [ 32%] test-execution/0.1.0-candidate-1/pytest.log
+copying downloadable files... [ 33%] test-execution/0.1.0-candidate-1/node-tests.log
+copying downloadable files... [ 35%] test-execution/0.1.0-candidate-1/traceability.log
+copying downloadable files... [ 36%] test-execution/0.1.0-candidate-1/diagram-links-published.log
+copying downloadable files... [ 37%] test-execution/0.1.0-candidate-1/candidate.json
+copying downloadable files... [ 38%] test-execution/0.1.0-candidate-1/source-hashes.json
+copying downloadable files... [ 40%] test-execution/0.1.0-candidate-1/commands.json
+copying downloadable files... [ 41%] test-execution/0.1.0-candidate-1/environment.txt
+copying downloadable files... [ 42%] test-execution/0.1.0-candidate-1/runtime-wheel-hashes.json
+copying downloadable files... [ 43%] test-execution/0.1.0-candidate-1/test-map.json
+copying downloadable files... [ 44%] test-execution/0.1.0-candidate-1/pytest.xml
+copying downloadable files... [ 46%] test-execution/0.1.0-candidate-1/node.xml
+copying downloadable files... [ 47%] test-execution/0.1.0-candidate-1/results.json
+copying downloadable files... [ 48%] test-execution/0.1.0-candidate-1/capacity-build.json
+copying downloadable files... [ 49%] test-execution/0.1.0-candidate-1/capacity-browser.json
+copying downloadable files... [ 51%] test-execution/0.1.0-candidate-1/capacity-host.log
+copying downloadable files... [ 52%] test-execution/0.1.0-candidate-1/traceability.csv
+copying downloadable files... [ 53%] test-execution/0.1.0-candidate-1/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl
+copying downloadable files... [ 54%] test-execution/0.1.0-candidate-1/screenshots/file-example.png
+copying downloadable files... [ 56%] test-execution/0.1.0-candidate-1/screenshots/http-example.png
+copying downloadable files... [ 57%] test-execution/0.1.0-candidate-1/screenshots/project-demo.png
+copying downloadable files... [ 58%] test-execution/0.1.0-candidate-1/screenshots/state-diagram.png
+copying downloadable files... [ 59%] test-execution/0.1.0-candidate-1/screenshots/state-page.png
+copying downloadable files... [ 60%] test-execution/0.1.0-candidate-1/index.rst
+copying downloadable files... [ 62%] test-execution/0.1.0-candidate-2/browser-assets.log
+copying downloadable files... [ 63%] test-execution/0.1.0-candidate-2/python-package.log
+copying downloadable files... [ 64%] test-execution/0.1.0-candidate-2/coverage.log
+copying downloadable files... [ 65%] test-execution/0.1.0-candidate-2/diagram-links-source.log
+copying downloadable files... [ 67%] test-execution/0.1.0-candidate-2/documentation.log
+copying downloadable files... [ 68%] test-execution/0.1.0-candidate-2/capacity-build.log
+copying downloadable files... [ 69%] test-execution/0.1.0-candidate-2/pytest.log
+copying downloadable files... [ 70%] test-execution/0.1.0-candidate-2/node-tests.log
+copying downloadable files... [ 72%] test-execution/0.1.0-candidate-2/traceability.log
+copying downloadable files... [ 73%] test-execution/0.1.0-candidate-2/diagram-links-published.log
+copying downloadable files... [ 74%] test-execution/0.1.0-candidate-2/candidate.json
+copying downloadable files... [ 75%] test-execution/0.1.0-candidate-2/source-hashes.json
+copying downloadable files... [ 77%] test-execution/0.1.0-candidate-2/commands.json
+copying downloadable files... [ 78%] test-execution/0.1.0-candidate-2/environment.txt
+copying downloadable files... [ 79%] test-execution/0.1.0-candidate-2/runtime-wheel-hashes.json
+copying downloadable files... [ 80%] test-execution/0.1.0-candidate-2/test-map.json
+copying downloadable files... [ 81%] test-execution/0.1.0-candidate-2/pytest.xml
+copying downloadable files... [ 83%] test-execution/0.1.0-candidate-2/node.xml
+copying downloadable files... [ 84%] test-execution/0.1.0-candidate-2/results.json
+copying downloadable files... [ 85%] test-execution/0.1.0-candidate-2/capacity-build.json
+copying downloadable files... [ 86%] test-execution/0.1.0-candidate-2/capacity-browser.json
+copying downloadable files... [ 88%] test-execution/0.1.0-candidate-2/capacity-host.log
+copying downloadable files... [ 89%] test-execution/0.1.0-candidate-2/traceability.csv
+copying downloadable files... [ 90%] test-execution/0.1.0-candidate-2/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl
+copying downloadable files... [ 91%] test-execution/0.1.0-candidate-2/consumer/build.log
+copying downloadable files... [ 93%] test-execution/0.1.0-candidate-2/consumer/environment.txt
+copying downloadable files... [ 94%] test-execution/0.1.0-candidate-2/consumer/identity.txt
+copying downloadable files... [ 95%] test-execution/0.1.0-candidate-2/screenshots/file-example.png
+copying downloadable files... [ 96%] test-execution/0.1.0-candidate-2/screenshots/http-example.png
+copying downloadable files... [ 98%] test-execution/0.1.0-candidate-2/screenshots/project-demo.png
+copying downloadable files... [ 99%] test-execution/0.1.0-candidate-2/screenshots/state-diagram.png
+copying downloadable files... [100%] test-execution/0.1.0-candidate-2/screenshots/state-page.png
+
+copying static files... 
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\basic.css
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\documentation_options.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\language_data.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\js\versions.js
+copying static files: done
+copying extra files... 
+copying extra files: done
+copying assets: done
+writing output... [  3%] architecture-decisions
+writing output... [  6%] architecture-software
+writing output... [  8%] architecture-system
+writing output... [ 11%] architecture/decisions/STV_ADR_001_static_extension
+writing output... [ 14%] architecture/decisions/STV_ADR_002_portable_bundle
+writing output... [ 17%] architecture/decisions/STV_ADR_003_state_layout
+writing output... [ 19%] architecture/decisions/STV_ADR_004_dependencies
+writing output... [ 22%] architecture/decisions/STV_ADR_005_starting_nodes
+writing output... [ 25%] concept-review
+writing output... [ 28%] concept-reviews/documentation-reorganization
+writing output... [ 31%] concept-reviews/round-1
+writing output... [ 33%] concept-reviews/round-2
+writing output... [ 36%] concept-reviews/round-3
+writing output... [ 39%] demo
+writing output... [ 42%] elements-software
+writing output... [ 44%] elements-system
+writing output... [ 47%] implementation-plan
+writing output... [ 50%] index
+writing output... [ 53%] internal-interfaces
+writing output... [ 56%] maturity
+writing output... [ 58%] method
+writing output... [ 61%] requirement-changes/starting-nodes
+writing output... [ 64%] review
+writing output... [ 67%] software
+writing output... [ 69%] sources
+writing output... [ 72%] stakeholder
+writing output... [ 75%] state-machine
+writing output... [ 78%] system
+writing output... [ 81%] technology-stack
+writing output... [ 83%] test-coverage
+writing output... [ 86%] test-execution/0.1.0-candidate-1/publication
+writing output... [ 89%] test-execution/0.1.0-candidate-2/index
+writing output... [ 92%] test-execution/0.1.0-candidate-3/index
+writing output... [ 94%] test-execution/index
+writing output... [ 97%] traceability
+writing output... [100%] verification-plan
+
+generating indices... genindex done
+writing additional pages... search done
+copying images... [ 20%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_shr.svg
+copying images... [ 40%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_sysr.svg
+copying images... [ 60%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_swr.svg
+copying images... [ 80%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_syse.svg
+copying images... [100%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_swe.svg
+
+dumping search index in English (code: en)... done
+dumping object inventory... done
+Needs successfully exported
+build succeeded.
+
+The HTML pages are in docs\_build\html.

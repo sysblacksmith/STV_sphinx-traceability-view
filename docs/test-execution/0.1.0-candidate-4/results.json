@@ -1,0 +1,701 @@
+{
+  "started": "2026-10-18T15:24:59.311604+00:00",
+  "revision": "30aaba98776ecbe648558d278a985691d81bccb4",
+  "dirty_worktree": " M .gitignore\n M README.rst\n M docs/conf.py\n M docs/elements-software.rst\n M docs/implementation-plan.rst\n M docs/index.rst\n M docs/internal-interfaces.rst\n M docs/maturity.rst\n M docs/verification-plan.rst\n M requirements-docs.txt\n?? docs/architecture/diagrams/state-machine.drawio\n?? docs/architecture/diagrams/state-machine.svg\n?? docs/demo.rst\n?? docs/implementation-review.rst\n?? docs/state-machine.rst\n?? docs/test-coverage.rst\n?? docs/test-execution/\n?? frontend/\n?? hatch_build.py\n?? pyproject.toml\n?? scripts/benchmark.py\n?? scripts/check-coverage.py\n?? scripts/create-state-diagram.py\n?? scripts/verify-release.py\n?? src/\n?? tests/\n",
+  "source_identity": "9867e11555574fedc0dd1ec7f67276e1e8b17e703237c476b180ba57e6e2d85a",
+  "wheel": "sphinx_traceability_view-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "8a31577baec118e32d697c00faef83f06b60dd9478cb0f791be64a0c867f1fdd",
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\_build\\release-benchmark\\0.1.0-candidate-4\\html",
+  "finished": "2026-10-18T15:39:30.248463+00:00",
+  "outcomes": {
+    "passed": 54,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "attempts": [
+    {
+      "suite": "browser-assets",
+      "command": [
+        "node",
+        "build.js"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\frontend",
+      "started": "2026-10-18T15:24:59.311604+00:00",
+      "log": "browser-assets.log",
+      "finished": "2026-10-18T15:24:59.529907+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "python-package",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--no-isolation"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:24:59.529907+00:00",
+      "log": "python-package.log",
+      "finished": "2026-10-18T15:25:04.976439+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "coverage",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/check-coverage.py",
+        "--strict"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:25:05.570123+00:00",
+      "log": "coverage.log",
+      "finished": "2026-10-18T15:25:06.206646+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "diagram-links-source",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/normalize-diagram-links.py",
+        "--diagram-dir",
+        "docs/architecture/diagrams"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:25:06.206646+00:00",
+      "log": "diagram-links-source.log",
+      "finished": "2026-10-18T15:25:06.284732+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "documentation",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "-m",
+        "sphinx",
+        "-b",
+        "html",
+        "-W",
+        "--keep-going",
+        "docs",
+        "docs/_build/html"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:25:06.284732+00:00",
+      "log": "documentation.log",
+      "finished": "2026-10-18T15:25:10.867559+00:00",
+      "returncode": 1
+    },
+    {
+      "suite": "capacity-build",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/benchmark.py",
+        "--directory",
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\_build\\release-benchmark\\0.1.0-candidate-4"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:25:10.867559+00:00",
+      "log": "capacity-build.log",
+      "finished": "2026-10-18T15:30:44.858189+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "pytest",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "--junitxml=D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\test-execution\\0.1.0-candidate-4\\pytest.xml",
+        "--requirement-map=D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\test-execution\\0.1.0-candidate-4\\test-map.json"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:30:44.869051+00:00",
+      "log": "pytest.log",
+      "finished": "2026-10-18T15:39:29.815692+00:00",
+      "returncode": 0,
+      "report": "pytest.xml"
+    },
+    {
+      "suite": "node-tests",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=junit",
+        "frontend/test/*.test.js"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:39:29.815692+00:00",
+      "log": "node-tests.log",
+      "finished": "2026-10-18T15:39:30.057884+00:00",
+      "returncode": 0,
+      "report": "node-tests.log"
+    },
+    {
+      "suite": "traceability",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "D:\\Dropbox\\MikroContr_Projects\\#agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+        "docs/_build/html/needs.json",
+        "--version",
+        "0.1",
+        "--repo-root",
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+        "--csv",
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\test-execution\\0.1.0-candidate-4\\traceability.csv"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:39:30.064910+00:00",
+      "log": "traceability.log",
+      "finished": "2026-10-18T15:39:30.138277+00:00",
+      "returncode": 0
+    },
+    {
+      "suite": "diagram-links-published",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/normalize-diagram-links.py",
+        "--diagram-dir",
+        "docs/architecture/diagrams",
+        "--published-dir",
+        "docs/_build/html"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:39:30.138277+00:00",
+      "log": "diagram-links-published.log",
+      "finished": "2026-10-18T15:39:30.230468+00:00",
+      "returncode": 0
+    }
+  ],
+  "cases": [
+    {
+      "test": "tests.test_browser::test_offline_exploration[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_004",
+        "STV_SWR_008",
+        "STV_SWR_015",
+        "STV_SWR_016",
+        "STV_SWR_017",
+        "STV_SWR_018",
+        "STV_SWR_029",
+        "STV_SWR_031",
+        "STV_SWR_033",
+        "STV_SWR_034",
+        "STV_SWR_035",
+        "STV_SWR_038",
+        "STV_SWR_039",
+        "STV_SWR_040",
+        "STV_SWR_050",
+        "STV_SYS_003",
+        "STV_SYS_007"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_offline_exploration[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_004",
+        "STV_SWR_008",
+        "STV_SWR_015",
+        "STV_SWR_016",
+        "STV_SWR_017",
+        "STV_SWR_018",
+        "STV_SWR_029",
+        "STV_SWR_031",
+        "STV_SWR_033",
+        "STV_SWR_034",
+        "STV_SWR_035",
+        "STV_SWR_038",
+        "STV_SWR_039",
+        "STV_SWR_040",
+        "STV_SWR_050",
+        "STV_SYS_003",
+        "STV_SYS_007"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_project_paging[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_051",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_project_paging[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_051",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_async_layout_failure_and_stale_completion[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_044",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_async_layout_failure_and_stale_completion[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_044",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_alternate_model_geometry_details_and_external[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_008",
+        "STV_SWR_012",
+        "STV_SWR_015",
+        "STV_SWR_029",
+        "STV_SWR_031",
+        "STV_SWR_033",
+        "STV_SWR_037",
+        "STV_SWR_041",
+        "STV_SWR_047",
+        "STV_SWR_048",
+        "STV_SWR_049",
+        "STV_SWR_050",
+        "STV_SYS_004",
+        "STV_SYS_005",
+        "STV_SYS_006",
+        "STV_SYS_010"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_alternate_model_geometry_details_and_external[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_008",
+        "STV_SWR_012",
+        "STV_SWR_015",
+        "STV_SWR_029",
+        "STV_SWR_031",
+        "STV_SWR_033",
+        "STV_SWR_037",
+        "STV_SWR_041",
+        "STV_SWR_047",
+        "STV_SWR_048",
+        "STV_SWR_049",
+        "STV_SWR_050",
+        "STV_SYS_004",
+        "STV_SYS_005",
+        "STV_SYS_006",
+        "STV_SYS_010"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_missing_placeholder_and_detail_error[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_027",
+        "STV_SWR_028",
+        "STV_SWR_029",
+        "STV_SYS_004"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_missing_placeholder_and_detail_error[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_027",
+        "STV_SWR_028",
+        "STV_SWR_029",
+        "STV_SYS_004"
+      ]
+    },
+    {
+      "test": "tests.test_browser::test_documentation_visuals",
+      "outcome": "passed",
+      "requirements": []
+    },
+    {
+      "test": "tests.test_build::test_cross_page_bundle",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_001",
+        "STV_SWR_002",
+        "STV_SWR_013",
+        "STV_SWR_026",
+        "STV_SYS_001"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_invalid_seed_source_location[UNKNOWN]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_026",
+        "STV_SWR_048",
+        "STV_SYS_001"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_026",
+        "STV_SWR_048",
+        "STV_SYS_001"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_invalid_seed_source_location[HIDDEN_A]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_026",
+        "STV_SWR_048",
+        "STV_SYS_001"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_host_owns_broken_trace_failure",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_027",
+        "STV_SWR_028"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_incremental_body_change_hidden_and_deleted_objects",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_018",
+        "STV_SWR_048"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_seed_capacity_at_directive[200-True]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_001",
+        "STV_SWR_026",
+        "STV_SWR_043"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_seed_capacity_at_directive[201-False]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_001",
+        "STV_SWR_026",
+        "STV_SWR_043"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_alternate_host_schema_external_metadata_and_parts",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_014",
+        "STV_SWR_036",
+        "STV_SWR_045",
+        "STV_SWR_047",
+        "STV_SWR_048",
+        "STV_SYS_002"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_invalid_mapping_has_entry_path_and_location",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_unsupported_builder_fails_clearly",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_001"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_host_default_directional_labels_are_used",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_failed_finalization_retains_pending_page_and_previous_assets",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_017",
+        "STV_SWR_027"
+      ]
+    },
+    {
+      "test": "tests.test_build::test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_027"
+      ]
+    },
+    {
+      "test": "tests.test_bundle::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_017",
+        "STV_SWR_018",
+        "STV_SWR_027"
+      ]
+    },
+    {
+      "test": "tests.test_capacity::test_large_project_at_visible_capacity[file]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_043",
+        "STV_SWR_044",
+        "STV_SYS_008"
+      ]
+    },
+    {
+      "test": "tests.test_capacity::test_large_project_at_visible_capacity[http]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_043",
+        "STV_SWR_044",
+        "STV_SYS_008"
+      ]
+    },
+    {
+      "test": "tests.test_details::test_static_details_and_remote_fallback",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_017",
+        "STV_SWR_018",
+        "STV_SWR_048",
+        "STV_SWR_049"
+      ]
+    },
+    {
+      "test": "tests.test_details::test_portable_paths_preserve_queries_and_fragments",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_018"
+      ]
+    },
+    {
+      "test": "tests.test_details::test_srcset_data_images_and_css_resources",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_017",
+        "STV_SWR_018"
+      ]
+    },
+    {
+      "test": "tests.test_details::test_active_embed_urls_are_not_retained_as_navigation",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_017",
+        "STV_SWR_049"
+      ]
+    },
+    {
+      "test": "tests.test_graph::test_hidden_parts_external_and_missing_targets",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_013",
+        "STV_SWR_027",
+        "STV_SWR_047",
+        "STV_SWR_048"
+      ]
+    },
+    {
+      "test": "tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_047"
+      ]
+    },
+    {
+      "test": "tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_047"
+      ]
+    },
+    {
+      "test": "tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_047"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_host_normalization",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_014",
+        "STV_SWR_030",
+        "STV_SWR_032",
+        "STV_SWR_036",
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_model[change0-levels]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_model[change1-types.goal]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_model[change2-types]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_model[change3-accepted_statuses]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_directional_labels[]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036",
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_directional_labels[ ]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036",
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_directional_labels[None]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036",
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_model::test_invalid_directional_labels[1]",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_036",
+        "STV_SWR_045"
+      ]
+    },
+    {
+      "test": "tests.test_package::test_clean_wheel_host",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_042",
+        "STV_SWR_046",
+        "STV_SYS_009"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_009",
+        "STV_SWR_010",
+        "STV_SWR_011",
+        "STV_SWR_012",
+        "STV_SWR_037"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_003",
+        "STV_SWR_007",
+        "STV_SWR_020",
+        "STV_SWR_024",
+        "STV_SWR_025"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_005",
+        "STV_SWR_043",
+        "STV_SWR_044"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_006",
+        "STV_SWR_013"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_024: self-loop terminates and collapse restores the only seed",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_024"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_051",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_051",
+        "STV_SWR_052"
+      ]
+    },
+    {
+      "test": "test::STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+      "outcome": "passed",
+      "requirements": [
+        "STV_SWR_051",
+        "STV_SWR_052",
+        "STV_SWR_043",
+        "STV_SWR_044"
+      ]
+    }
+  ]
+}

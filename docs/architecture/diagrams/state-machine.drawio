@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="behavior" name="Behavior">
+    <mxGraphModel dx="1300" dy="1150" grid="1" page="1" pageWidth="1300" pageHeight="1150">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="collection" label="BUILD: collected invocations&#10;source locations + distinct seeds" link="elements-software.html#STV_SWE_DIRECTIVE" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="30" y="40" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="pending" label="BUILD: pending pages&#10;validated immutable snapshot" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="490" y="40" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="final" label="BUILD: finalized bundle&#10;content-addressed graph + details" link="elements-software.html#STV_SWE_BUNDLE" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="950" y="40" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="buildfailed" label="BUILD: failed&#10;no finalized new view" link="state-machine.html" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8dfdf;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="490" y="230" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="b1" value="write-started&#10;valid graph inputs" source="collection" target="pending" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="build-finished&#10;fragments emitted" source="pending" target="final" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="extraction or write failure" source="pending" target="buildfailed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="invalid builder, model or seed" source="collection" target="buildfailed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="277" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object id="committed" label="VIEW: committed&#10;seeds or active project page" link="elements-software.html#STV_SWE_STATE" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="30" y="450" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="candidate" label="VIEW: candidate&#10;rooted reachability; cap &lt;= 200" link="software.html#STV_SWR_043" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="490" y="450" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="layout" label="VIEW: laying out&#10;measured boxes + ELK projection" link="elements-software.html#STV_SWE_LAYOUT" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="950" y="450" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="v1" value="group/root toggle&#10;or page change" source="committed" target="candidate" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="valid complete candidate" source="candidate" target="layout" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="reject / retain graph, page + focus" source="candidate" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="610" />
+              <mxPoint x="160" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4" value="valid current result / commit + owned focus + initial alignment" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="670" />
+              <mxPoint x="160" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v5" value="failure / preserve scene + announce retry" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="730" />
+              <mxPoint x="160" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v6" value="pan / zoom / focus&#10;shared transform" source="committed" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="497" />
+              <mxPoint x="340" y="370" />
+              <mxPoint x="160" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object id="closed" label="DETAILS: closed&#10;no panel or position listeners" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="30" y="880" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="loading" label="DETAILS: loading&#10;local classic script; build-keyed cache" link="software.html#STV_SWR_017" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="490" y="880" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="open" label="DETAILS: open or error&#10;static rich body / explicit failure" link="software.html#STV_SWR_050" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="950" y="880" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="d1" value="hover or keyboard Details" source="closed" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="current token&#10;fragment or error" source="loading" target="open" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="Escape, Close, departure, scene or viewport change" source="open" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="1070" />
+              <mxPoint x="160" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d4" value="dismiss / invalidate pending completion" source="loading" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="1020" />
+              <mxPoint x="160" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

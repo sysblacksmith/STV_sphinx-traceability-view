@@ -1,7 +1,8 @@
 Internal interfaces and model contract
 ======================================
 
-This is the concrete MVP software design contract, not an implemented API.
+This is the accepted MVP software design contract. Executed implementation
+evidence and remaining verification gaps are linked from :doc:`maturity`.
 Use :doc:`implementation-plan` for lifecycle/module behavior and
 :doc:`technology-stack` for selected dependencies.
 Related decisions: :ref:`STV_ADR_001`, :ref:`STV_ADR_002` and :ref:`STV_ADR_005`.
@@ -9,7 +10,7 @@ Related decisions: :ref:`STV_ADR_001`, :ref:`STV_ADR_002` and :ref:`STV_ADR_005`
 Author interface
 ----------------
 
-Proposed package name: ``sphinx-traceability-view``; import name:
+Distribution name: ``sphinx-traceability-view``; import name:
 ``sphinx_traceability_view``. Neither name's registry availability has been
 verified. Enable the module in the host's Sphinx extensions list.
 

@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-18T14:57:19.576020+00:00",
+  "revision": "30aaba98776ecbe648558d278a985691d81bccb4",
+  "dirty_worktree": " M .gitignore\n M README.rst\n M docs/conf.py\n M docs/elements-software.rst\n M docs/implementation-plan.rst\n M docs/index.rst\n M docs/internal-interfaces.rst\n M docs/maturity.rst\n M docs/verification-plan.rst\n M requirements-docs.txt\n?? docs/architecture/diagrams/state-machine.drawio\n?? docs/architecture/diagrams/state-machine.svg\n?? docs/demo.rst\n?? docs/state-machine.rst\n?? docs/test-coverage.rst\n?? docs/test-execution/\n?? frontend/\n?? hatch_build.py\n?? pyproject.toml\n?? scripts/benchmark.py\n?? scripts/check-coverage.py\n?? scripts/create-state-diagram.py\n?? scripts/verify-release.py\n?? src/\n?? tests/\n",
+  "source_identity": "8c7484ceaeea0c7f186f5a34cb9b937c0b986776933564a886abdbea8e95ea4b",
+  "wheel": "sphinx_traceability_view-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "ad6d54122beb6af4415bead0182e333520f0a1ec875b7725822c68340db3cc97",
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\_build\\release-benchmark\\0.1.0-candidate-2\\html"
+}

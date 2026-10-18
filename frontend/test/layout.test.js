@@ -1,0 +1,26 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {compute} from '../src/layout.js';
+const key=id=>JSON.stringify(['need',id]);
+test('STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane', async()=> {
+  const model={levels:['stakeholder','hardware','system_arch','software','software_arch'],types:{
+    goal:{level:'stakeholder'},hardware:{level:'hardware'},system:{level:'system_arch'},software:{level:'software'},module:{level:'software_arch'},test:{role:'test'}}};
+  const objects=Object.fromEntries(['goal','hardware','system','software','module','test'].map(type=>[type,{type}]));
+  const edges=[['software','r','goal'],['test','r','goal'],['test','r','software'],['module','r','module']];
+  const result=await compute({objects,model,entries:['goal']},{ids:Object.keys(objects),edges,project:true},new Map(Object.keys(objects).map(id=>[key(id),160])));
+  let previous=result.nodes.get(JSON.stringify(['project']));
+  for(const id of ['goal','hardware','system','software','module']) {const node=result.nodes.get(key(id));assert.ok(node.y>previous.y+previous.height);previous=node;}
+  const testNode=result.nodes.get(key('test'));
+  assert.ok(testNode.x>=Math.max(...['goal','hardware','system','software','module'].map(id=>result.nodes.get(key(id)).x+280))+96);
+  for(const edge of result.edges) {
+    const a=result.nodes.get(edge.source),b=result.nodes.get(edge.target);
+    const onBoundary=(p,n)=>((p[0]===n.x||p[0]===n.x+n.width)&&p[1]>=n.y&&p[1]<=n.y+n.height)||((p[1]===n.y||p[1]===n.y+n.height)&&p[0]>=n.x&&p[0]<=n.x+n.width);
+    assert.ok(onBoundary(edge.points[0],a));assert.ok(onBoundary(edge.points.at(-1),b));
+    for(let i=1;i<edge.points.length;i++)for(const n of result.nodes.values()) {
+      const p=edge.points[i-1],q=edge.points[i];
+      const crosses=p[0]===q[0]?p[0]>n.x&&p[0]<n.x+n.width&&Math.max(p[1],q[1])>n.y&&Math.min(p[1],q[1])<n.y+n.height:
+        p[1]>n.y&&p[1]<n.y+n.height&&Math.max(p[0],q[0])>n.x&&Math.min(p[0],q[0])<n.x+n.width;
+      assert.equal(crosses,false,'edge cannot pass through a node');
+    }
+  }
+});

@@ -4,6 +4,9 @@ Software requirements
 Software behavior, interfaces and architecture allocation. See
 :doc:`architecture-software` for component interfaces.
 
+Executable criteria and retained results: :doc:`test-coverage` and
+:doc:`test-execution/0.1.0-final/index`.
+
 .. swr:: Register the RST entry point
    :id: STV_SWR_001
    :status: accepted
@@ -11,7 +14,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_DIRECTIVE
 
@@ -31,7 +34,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_GRAPH
 
@@ -46,7 +49,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
@@ -68,7 +71,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_004
    :allocated_to: STV_SWE_RENDER
 
@@ -85,7 +88,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_005
    :allocated_to: STV_SWE_STATE
 
@@ -102,7 +105,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_004
    :allocated_to: STV_SWE_GRAPH
 
@@ -117,7 +120,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_007
    :allocated_to: STV_SWE_STATE
 
@@ -135,7 +138,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_008
    :allocated_to: STV_SWE_RENDER
 
@@ -152,7 +155,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
@@ -167,7 +170,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
@@ -182,7 +185,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
@@ -197,7 +200,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
@@ -212,7 +215,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_004
    :allocated_to: STV_SWE_GRAPH
 
@@ -227,7 +230,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_002
    :allocated_to: STV_SWE_MODEL
 
@@ -246,7 +249,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_DETAIL_BUILD
 
@@ -269,7 +272,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_INSPECT
 
@@ -284,7 +287,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_003
    :allocated_to: STV_SWE_BUNDLE
 
@@ -299,7 +302,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_003
    :allocated_to: STV_SWE_BUNDLE
 
@@ -331,7 +334,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_020
    :allocated_to: STV_SWE_STATE
 
@@ -399,7 +402,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_024
    :allocated_to: STV_SWE_STATE
 
@@ -416,7 +419,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_025
    :allocated_to: STV_SWE_STATE
 
@@ -437,7 +440,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_DIRECTIVE
 
@@ -459,7 +462,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_004
    :allocated_to: STV_SWE_GRAPH
 
@@ -474,7 +477,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_004
    :allocated_to: STV_SWE_RENDER
 
@@ -489,7 +492,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_029
    :allocated_to: STV_SWE_RENDER
 
@@ -506,7 +509,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_030
    :allocated_to: STV_SWE_MODEL
 
@@ -523,7 +526,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_031
    :allocated_to: STV_SWE_RENDER
 
@@ -540,7 +543,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_032
    :allocated_to: STV_SWE_MODEL
 
@@ -557,7 +560,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_INSPECT
 
@@ -572,7 +575,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_034
    :allocated_to: STV_SWE_RENDER
 
@@ -589,7 +592,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_035
    :allocated_to: STV_SWE_RENDER
 
@@ -606,7 +609,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_002
    :allocated_to: STV_SWE_MODEL
 
@@ -621,7 +624,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
@@ -636,7 +639,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_007
    :allocated_to: STV_SWE_STATE
 
@@ -651,7 +654,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_039
    :allocated_to: STV_SWE_RENDER
 
@@ -668,7 +671,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_040
    :allocated_to: STV_SWE_RENDER
 
@@ -685,7 +688,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_010
    :allocated_to: STV_SWE_RENDER
 
@@ -700,7 +703,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_009
    :allocated_to: STV_SWE_DIRECTIVE
 
@@ -715,7 +718,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_008
    :allocated_to: STV_SWE_STATE, STV_SWE_DIRECTIVE
 
@@ -736,7 +739,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_008
    :allocated_to: STV_SWE_STATE
 
@@ -751,7 +754,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_002
    :allocated_to: STV_SWE_MODEL
 
@@ -766,7 +769,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_009
    :allocated_to: STV_SWE_DIRECTIVE
 
@@ -781,7 +784,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: owner
    :evidence: docs/sources.rst :: external Need detail scope confirmation 2026-10-18
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_INSPECT
 
@@ -802,7 +805,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: owner
    :evidence: docs/sources.rst :: hidden Need visibility confirmation 2026-10-18
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001, STV_SYS_004
    :allocated_to: STV_SWE_DIRECTIVE, STV_SWE_GRAPH, STV_SWE_DETAIL_BUILD
 
@@ -833,7 +836,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: owner
    :evidence: docs/sources.rst :: third-party widget scope confirmation 2026-10-18
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_INSPECT
 
@@ -857,7 +860,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006, STV_SHR_034
    :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
 
@@ -881,7 +884,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_GRAPH, STV_SWE_STATE, STV_SWE_RENDER
 
@@ -908,7 +911,7 @@ Software behavior, interfaces and architecture allocation. See
    :basis: inferred
    :evidence: docs/requirement-changes/starting-nodes.rst :: project-root pagination decision
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_047, STV_SYS_008
    :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
 

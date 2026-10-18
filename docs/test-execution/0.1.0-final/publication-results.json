@@ -1,0 +1,117 @@
+{
+  "started": "2026-10-18T15:40:44.427818+00:00",
+  "candidate": "0.1.0-candidate-4",
+  "revision": "30aaba98776ecbe648558d278a985691d81bccb4",
+  "source_identity": "9867e11555574fedc0dd1ec7f67276e1e8b17e703237c476b180ba57e6e2d85a",
+  "wheel_sha256": "8a31577baec118e32d697c00faef83f06b60dd9478cb0f791be64a0c867f1fdd",
+  "outcomes": {
+    "passed": 54,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "publication_only_changes": "Need verification fields, chapter evidence links, central maturity, execution records and an RST heading underline; no product/test changes",
+  "commands": [
+    {
+      "name": "coverage-final",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/check-coverage.py",
+        "--strict"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:40:44.483263+00:00",
+      "log": "coverage-final.log",
+      "finished": "2026-10-18T15:40:45.115859+00:00",
+      "returncode": 0
+    },
+    {
+      "name": "documentation-final",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv\\Scripts\\python.exe",
+        "-m",
+        "sphinx",
+        "-b",
+        "html",
+        "-W",
+        "--keep-going",
+        "docs",
+        "docs/_build/html"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:40:45.115859+00:00",
+      "log": "documentation-final.log",
+      "finished": "2026-10-18T15:40:50.021116+00:00",
+      "returncode": 0
+    },
+    {
+      "name": "visual-publication",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_browser.py::test_documentation_visuals",
+        "-q",
+        "--junitxml=D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\test-execution\\0.1.0-final\\visual-publication.xml"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:40:50.021116+00:00",
+      "log": "visual-publication.log",
+      "finished": "2026-10-18T15:40:57.630853+00:00",
+      "returncode": 0
+    },
+    {
+      "name": "traceability-final",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv\\Scripts\\python.exe",
+        "D:\\Dropbox\\MikroContr_Projects\\#agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+        "docs/_build/html/needs.json",
+        "--version",
+        "0.1",
+        "--repo-root",
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+        "--csv",
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\test-execution\\0.1.0-final\\traceability.csv"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:40:57.630853+00:00",
+      "log": "traceability-final.log",
+      "finished": "2026-10-18T15:40:57.703303+00:00",
+      "returncode": 0
+    },
+    {
+      "name": "diagram-publication-final",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv\\Scripts\\python.exe",
+        "scripts/normalize-diagram-links.py",
+        "--diagram-dir",
+        "docs/architecture/diagrams",
+        "--published-dir",
+        "docs/_build/html"
+      ],
+      "cwd": "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view",
+      "started": "2026-10-18T15:40:57.703303+00:00",
+      "log": "diagram-publication-final.log",
+      "finished": "2026-10-18T15:40:57.789315+00:00",
+      "returncode": 0
+    }
+  ],
+  "requirements": {
+    "system.rst": {
+      "before_sha256": "963a624ce089922887263548117a9947b2bef072ac96b4a1b64c742681de19b5",
+      "verified_initial": 10,
+      "accepted_blocks_unchanged": true,
+      "after_sha256": "ebbeea696976b043eff9f3515ef15d091c475ae7b8e2c4afacc7c924a8931e44"
+    },
+    "software.rst": {
+      "before_sha256": "c7db063d486cc3137bc37d53acb9fc9ec4adfe9ee4d906612eb8d4e2d44fb44b",
+      "verified_initial": 48,
+      "accepted_blocks_unchanged": true,
+      "after_sha256": "610b2e52a27bc74f64fdfecb5b951d0df7de90c534a7c1f54c853861f02c2c9e"
+    }
+  },
+  "product_and_test_inputs_unchanged": true,
+  "changed_non_documentation_inputs": [],
+  "finished": "2026-10-18T15:40:57.796416+00:00",
+  "passed": true
+}

@@ -1,0 +1,131 @@
+Running Sphinx v8.1.3
+loading translations [en]... done
+loading pickled environment... The configuration has changed (3 options: 'html_css_files', 'needs_layouts', 'needs_types')
+done
+myst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [html]: targets for 5 source files that are out of date
+updating environment: 2 added, 34 changed, 0 removed
+reading sources... [  3%] architecture-decisions
+reading sources... [  6%] architecture-software
+reading sources... [  9%] architecture-system
+reading sources... [ 12%] architecture/decisions/STV_ADR_001_static_extension
+reading sources... [ 15%] architecture/decisions/STV_ADR_002_portable_bundle
+reading sources... [ 18%] architecture/decisions/STV_ADR_003_state_layout
+reading sources... [ 21%] architecture/decisions/STV_ADR_004_dependencies
+reading sources... [ 24%] architecture/decisions/STV_ADR_005_starting_nodes
+reading sources... [ 26%] concept-review
+reading sources... [ 29%] concept-reviews/documentation-reorganization
+reading sources... [ 32%] concept-reviews/round-1
+reading sources... [ 35%] concept-reviews/round-2
+reading sources... [ 38%] concept-reviews/round-3
+reading sources... [ 41%] demo
+reading sources... [ 44%] elements-software
+reading sources... [ 47%] elements-system
+reading sources... [ 50%] implementation-plan
+reading sources... [ 53%] index
+reading sources... [ 56%] internal-interfaces
+reading sources... [ 59%] maturity
+reading sources... [ 62%] method
+reading sources... [ 65%] requirement-changes/starting-nodes
+reading sources... [ 68%] review
+reading sources... [ 71%] software
+reading sources... [ 74%] sources
+reading sources... [ 76%] stakeholder
+reading sources... [ 79%] state-machine
+reading sources... [ 82%] system
+reading sources... [ 85%] technology-stack
+reading sources... [ 88%] test-coverage
+reading sources... [ 91%] test-execution/0.1.0-candidate-1/index
+reading sources... [ 94%] test-execution/index
+reading sources... [ 97%] traceability
+reading sources... [100%] verification-plan
+
+Copying static files for sphinx-data-viewer support
+Copying static files for sphinx-needs datatables support
+Copying static style files for sphinx-needs
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+Schema validation completed with 0 warning(s) in 0.004 seconds. Validated 28213 needs/s.
+preparing documents... done
+copying assets... 
+copying downloadable files... [  5%] ../src/sphinx_traceability_view/__init__.py
+copying downloadable files... [ 11%] ../src/sphinx_traceability_view/directives.py
+copying downloadable files... [ 16%] ../src/sphinx_traceability_view/graph.py
+copying downloadable files... [ 21%] ../src/sphinx_traceability_view/details.py
+copying downloadable files... [ 26%] ../src/sphinx_traceability_view/bundle.py
+copying downloadable files... [ 32%] ../frontend/src/state.js
+copying downloadable files... [ 37%] ../frontend/src/layout.js
+copying downloadable files... [ 42%] ../frontend/src/view.js
+copying downloadable files... [ 47%] ../frontend/src/inspect.js
+copying downloadable files... [ 53%] ../tests/test_browser.py
+copying downloadable files... [ 58%] ../tests/test_build.py
+copying downloadable files... [ 63%] ../tests/test_bundle.py
+copying downloadable files... [ 68%] ../tests/test_capacity.py
+copying downloadable files... [ 74%] ../tests/test_details.py
+copying downloadable files... [ 79%] ../tests/test_graph.py
+copying downloadable files... [ 84%] ../tests/test_model.py
+copying downloadable files... [ 89%] ../tests/test_package.py
+copying downloadable files... [ 95%] ../frontend/test/layout.test.js
+copying downloadable files... [100%] ../frontend/test/state.test.js
+
+copying static files... 
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\basic.css
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\documentation_options.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\language_data.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_static\js\versions.js
+copying static files: done
+copying extra files... 
+copying extra files: done
+copying assets: done
+writing output... [  3%] architecture-decisions
+writing output... [  6%] architecture-software
+writing output... [  9%] architecture-system
+writing output... [ 12%] architecture/decisions/STV_ADR_001_static_extension
+writing output... [ 15%] architecture/decisions/STV_ADR_002_portable_bundle
+writing output... [ 18%] architecture/decisions/STV_ADR_003_state_layout
+writing output... [ 21%] architecture/decisions/STV_ADR_004_dependencies
+writing output... [ 24%] architecture/decisions/STV_ADR_005_starting_nodes
+writing output... [ 26%] concept-review
+writing output... [ 29%] concept-reviews/documentation-reorganization
+writing output... [ 32%] concept-reviews/round-1
+writing output... [ 35%] concept-reviews/round-2
+writing output... [ 38%] concept-reviews/round-3
+writing output... [ 41%] demo
+writing output... [ 44%] elements-software
+writing output... [ 47%] elements-system
+writing output... [ 50%] implementation-plan
+writing output... [ 53%] index
+writing output... [ 56%] internal-interfaces
+writing output... [ 59%] maturity
+writing output... [ 62%] method
+writing output... [ 65%] requirement-changes/starting-nodes
+writing output... [ 68%] review
+writing output... [ 71%] software
+writing output... [ 74%] sources
+writing output... [ 76%] stakeholder
+writing output... [ 79%] state-machine
+writing output... [ 82%] system
+writing output... [ 85%] technology-stack
+writing output... [ 88%] test-coverage
+writing output... [ 91%] test-execution/0.1.0-candidate-1/index
+writing output... [ 94%] test-execution/index
+writing output... [ 97%] traceability
+writing output... [100%] verification-plan
+
+generating indices... genindex done
+writing additional pages... search done
+copying images... [ 20%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_shr.svg
+copying images... [ 40%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_sysr.svg
+copying images... [ 60%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_swr.svg
+copying images... [ 80%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_syse.svg
+copying images... [100%] D:\Dropbox\MikroContr_Projects\sphinx-tracebility-view\docs\_build\html\_images\status_swe.svg
+
+dumping search index in English (code: en)... done
+dumping object inventory... done
+Needs successfully exported
+build succeeded.
+
+The HTML pages are in docs\_build\html.

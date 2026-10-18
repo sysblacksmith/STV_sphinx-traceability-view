@@ -1,0 +1,22 @@
+{
+  "fixture_version": 1,
+  "needs": 30000,
+  "authored_edges": 90000,
+  "seconds": 328.24485540000023,
+  "returncode": 0,
+  "command": [
+    "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\.venv-implementation\\Scripts\\python.exe",
+    "-m",
+    "sphinx",
+    "-b",
+    "html",
+    "-W",
+    "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\_build\\release-benchmark\\0.1.0-candidate-3\\source",
+    "D:\\Dropbox\\MikroContr_Projects\\sphinx-tracebility-view\\docs\\_build\\release-benchmark\\0.1.0-candidate-3\\html"
+  ],
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.10.9",
+  "graph_bytes": 34897944,
+  "detail_bytes": 147393890,
+  "total_bytes": 415467461
+}

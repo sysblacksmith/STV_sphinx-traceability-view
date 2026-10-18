@@ -1,0 +1,377 @@
+[
+  {
+    "test": "tests/test_browser.py::test_offline_exploration[file]",
+    "requirements": [
+      "STV_SWR_004",
+      "STV_SWR_008",
+      "STV_SWR_015",
+      "STV_SWR_016",
+      "STV_SWR_017",
+      "STV_SWR_018",
+      "STV_SWR_029",
+      "STV_SWR_031",
+      "STV_SWR_033",
+      "STV_SWR_034",
+      "STV_SWR_035",
+      "STV_SWR_038",
+      "STV_SWR_039",
+      "STV_SWR_040",
+      "STV_SWR_050",
+      "STV_SYS_003",
+      "STV_SYS_007"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_offline_exploration[http]",
+    "requirements": [
+      "STV_SWR_004",
+      "STV_SWR_008",
+      "STV_SWR_015",
+      "STV_SWR_016",
+      "STV_SWR_017",
+      "STV_SWR_018",
+      "STV_SWR_029",
+      "STV_SWR_031",
+      "STV_SWR_033",
+      "STV_SWR_034",
+      "STV_SWR_035",
+      "STV_SWR_038",
+      "STV_SWR_039",
+      "STV_SWR_040",
+      "STV_SWR_050",
+      "STV_SYS_003",
+      "STV_SYS_007"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_project_paging[file]",
+    "requirements": [
+      "STV_SWR_051",
+      "STV_SWR_052"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_project_paging[http]",
+    "requirements": [
+      "STV_SWR_051",
+      "STV_SWR_052"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]",
+    "requirements": [
+      "STV_SWR_044",
+      "STV_SWR_052"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_async_layout_failure_and_stale_completion[http]",
+    "requirements": [
+      "STV_SWR_044",
+      "STV_SWR_052"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]",
+    "requirements": [
+      "STV_SWR_008",
+      "STV_SWR_012",
+      "STV_SWR_015",
+      "STV_SWR_029",
+      "STV_SWR_031",
+      "STV_SWR_033",
+      "STV_SWR_037",
+      "STV_SWR_041",
+      "STV_SWR_047",
+      "STV_SWR_048",
+      "STV_SWR_049",
+      "STV_SWR_050",
+      "STV_SYS_004",
+      "STV_SYS_005",
+      "STV_SYS_006",
+      "STV_SYS_010"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]",
+    "requirements": [
+      "STV_SWR_008",
+      "STV_SWR_012",
+      "STV_SWR_015",
+      "STV_SWR_029",
+      "STV_SWR_031",
+      "STV_SWR_033",
+      "STV_SWR_037",
+      "STV_SWR_041",
+      "STV_SWR_047",
+      "STV_SWR_048",
+      "STV_SWR_049",
+      "STV_SWR_050",
+      "STV_SYS_004",
+      "STV_SYS_005",
+      "STV_SYS_006",
+      "STV_SYS_010"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_missing_placeholder_and_detail_error[file]",
+    "requirements": [
+      "STV_SWR_027",
+      "STV_SWR_028",
+      "STV_SWR_029",
+      "STV_SYS_004"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_missing_placeholder_and_detail_error[http]",
+    "requirements": [
+      "STV_SWR_027",
+      "STV_SWR_028",
+      "STV_SWR_029",
+      "STV_SYS_004"
+    ]
+  },
+  {
+    "test": "tests/test_browser.py::test_documentation_visuals",
+    "requirements": []
+  },
+  {
+    "test": "tests/test_build.py::test_cross_page_bundle",
+    "requirements": [
+      "STV_SWR_001",
+      "STV_SWR_002",
+      "STV_SWR_013",
+      "STV_SWR_026",
+      "STV_SYS_001"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_invalid_seed_source_location[UNKNOWN]",
+    "requirements": [
+      "STV_SWR_026",
+      "STV_SWR_048",
+      "STV_SYS_001"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+    "requirements": [
+      "STV_SWR_026",
+      "STV_SWR_048",
+      "STV_SYS_001"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]",
+    "requirements": [
+      "STV_SWR_026",
+      "STV_SWR_048",
+      "STV_SYS_001"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_host_owns_broken_trace_failure",
+    "requirements": [
+      "STV_SWR_027",
+      "STV_SWR_028"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_incremental_body_change_hidden_and_deleted_objects",
+    "requirements": [
+      "STV_SWR_015",
+      "STV_SWR_018",
+      "STV_SWR_048"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_seed_capacity_at_directive[200-True]",
+    "requirements": [
+      "STV_SWR_001",
+      "STV_SWR_026",
+      "STV_SWR_043"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_seed_capacity_at_directive[201-False]",
+    "requirements": [
+      "STV_SWR_001",
+      "STV_SWR_026",
+      "STV_SWR_043"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts",
+    "requirements": [
+      "STV_SWR_014",
+      "STV_SWR_036",
+      "STV_SWR_045",
+      "STV_SWR_047",
+      "STV_SWR_048",
+      "STV_SYS_002"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_invalid_mapping_has_entry_path_and_location",
+    "requirements": [
+      "STV_SWR_036"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_unsupported_builder_fails_clearly",
+    "requirements": [
+      "STV_SWR_001"
+    ]
+  },
+  {
+    "test": "tests/test_build.py::test_host_default_directional_labels_are_used",
+    "requirements": [
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+    "requirements": [
+      "STV_SWR_017",
+      "STV_SWR_018",
+      "STV_SWR_027"
+    ]
+  },
+  {
+    "test": "tests/test_capacity.py::test_large_project_at_visible_capacity",
+    "requirements": [
+      "STV_SWR_043",
+      "STV_SWR_044",
+      "STV_SYS_008"
+    ]
+  },
+  {
+    "test": "tests/test_details.py::test_static_details_and_remote_fallback",
+    "requirements": [
+      "STV_SWR_015",
+      "STV_SWR_017",
+      "STV_SWR_018",
+      "STV_SWR_048",
+      "STV_SWR_049"
+    ]
+  },
+  {
+    "test": "tests/test_details.py::test_portable_paths_preserve_queries_and_fragments",
+    "requirements": [
+      "STV_SWR_018"
+    ]
+  },
+  {
+    "test": "tests/test_details.py::test_srcset_data_images_and_css_resources",
+    "requirements": [
+      "STV_SWR_015",
+      "STV_SWR_017",
+      "STV_SWR_018"
+    ]
+  },
+  {
+    "test": "tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation",
+    "requirements": [
+      "STV_SWR_015",
+      "STV_SWR_017",
+      "STV_SWR_049"
+    ]
+  },
+  {
+    "test": "tests/test_graph.py::test_hidden_parts_external_and_missing_targets",
+    "requirements": [
+      "STV_SWR_013",
+      "STV_SWR_027",
+      "STV_SWR_047",
+      "STV_SWR_048"
+    ]
+  },
+  {
+    "test": "tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+    "requirements": [
+      "STV_SWR_047"
+    ]
+  },
+  {
+    "test": "tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+    "requirements": [
+      "STV_SWR_047"
+    ]
+  },
+  {
+    "test": "tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+    "requirements": [
+      "STV_SWR_047"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_host_normalization",
+    "requirements": [
+      "STV_SWR_014",
+      "STV_SWR_030",
+      "STV_SWR_032",
+      "STV_SWR_036",
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_model[change0-levels]",
+    "requirements": [
+      "STV_SWR_036"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_model[change1-types.goal]",
+    "requirements": [
+      "STV_SWR_036"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_model[change2-types]",
+    "requirements": [
+      "STV_SWR_036"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_model[change3-accepted_statuses]",
+    "requirements": [
+      "STV_SWR_036"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_directional_labels[]",
+    "requirements": [
+      "STV_SWR_036",
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_directional_labels[ ]",
+    "requirements": [
+      "STV_SWR_036",
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_directional_labels[None]",
+    "requirements": [
+      "STV_SWR_036",
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_model.py::test_invalid_directional_labels[1]",
+    "requirements": [
+      "STV_SWR_036",
+      "STV_SWR_045"
+    ]
+  },
+  {
+    "test": "tests/test_package.py::test_clean_wheel_host",
+    "requirements": [
+      "STV_SWR_042",
+      "STV_SWR_046",
+      "STV_SYS_009"
+    ]
+  }
+]

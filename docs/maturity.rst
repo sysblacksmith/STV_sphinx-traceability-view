@@ -23,8 +23,18 @@ project-root links. Concept refinement and round-3 review are complete; see
 All current requirements and elements are accepted. Historical review hashes
 remain snapshots of their respective revisions.
 
-Implementation has not started. Requirement verification remains not_assessed;
-concept acceptance and documentation checks do not establish runtime results.
+The initial shared-identity MVP is implemented from clean input revision
+``30aaba98776ecbe648558d278a985691d81bccb4`` under the owner's implementation
+instruction on 2026-10-18. It includes the installable extension, offline
+classic-script bundle, multiple seeds, paged project roots, semantic layout,
+rich static details, original links and independent accessible viewports.
+
+The stable candidate's executable suites passed. Its publication-only
+documentation retest passed; the consolidated record is
+:doc:`test-execution/0.1.0-final/index`. Initial system/software verification
+fields are updated against those actual results and the criterion review in
+:doc:`implementation-review`. Stakeholder verification and concept acceptance
+remain independent; no owner release approval or external publication is implied.
 Project licensing and numeric performance budgets remain explicitly deferred;
 separate-occurrence mode, touch and additional platforms are later scope.
 Implementation checks are specified in :doc:`verification-plan`; scope decisions
@@ -91,6 +101,9 @@ Review and lifecycle records
    concept-review
    concept-reviews/documentation-reorganization
    requirement-changes/starting-nodes
+   test-coverage
+   test-execution/index
+   implementation-review
 
 Maintenance rule
 ----------------
@@ -103,3 +116,14 @@ status; do not append per-review progress paragraphs, review evidence to every
 Need, or manually repeated status/count summaries throughout the site.
 Review-only updates touch these central records; edit an artifact only when
 its content, traceability, origin evidence or canonical status actually changes.
+
+Implementation verification dashboard
+------------------------------------------------------------
+
+The table reads canonical fields; deferred occurrence-mode criteria remain
+not_assessed. Executable definitions and results are linked from
+:doc:`test-coverage` and :doc:`test-execution/0.1.0-final/index`.
+
+.. needtable::
+   :filter: type in ['sysr', 'swr']
+   :columns: id;title;verification_state;tags

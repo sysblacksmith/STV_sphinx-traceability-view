@@ -1,3 +1,24 @@
 docs/_build/
 .venv/
 __pycache__/
+.venv-implementation/
+frontend/node_modules/
+.pytest_cache/
+dist/
+*.egg-info/
+
+# Routine logs; release execution records retain their linked evidence.
+*.log
+!docs/test-execution/**/*.log
+
+# Python build, coverage and local tool output.
+/build/
+*.py[cod]
+.coverage
+.coverage.*
+/coverage.xml
+/htmlcov/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/

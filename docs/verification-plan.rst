@@ -68,10 +68,11 @@ of copied script execution and the original-page link (STV_SWR_049).
 Add a host-hidden fixture that asserts absence of hidden IDs, edges and details
 from generated product data, plus a hidden-seed error case (STV_SWR_048).
 
-No product code exists yet, so the test module names in the handover are tasks,
-not executable commands claimed to pass today. Once implemented, the project
-test entry points must expose Python tests, Node tests, browser tests and wheel
-smoke tests with nonzero exit codes propagated.
+Executable cases are indexed in :doc:`test-coverage`. The project test entry
+points expose Python tests, Node tests, browser tests and clean-wheel checks
+with nonzero exit codes propagated. Passing executions and criterion-level gaps
+are recorded centrally from :doc:`maturity`; planned checks below do not claim
+results by themselves.
 
 Capacity measurements
 -------------------------

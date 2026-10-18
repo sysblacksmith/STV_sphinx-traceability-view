@@ -5,6 +5,12 @@ Sphinx-Needs extension specification, architecture and supporting records.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Getting started
+
+   Getting started <getting-started>
+
+.. toctree::
+   :maxdepth: 2
    :caption: Requirements
 
    stakeholder
@@ -18,6 +24,7 @@ Sphinx-Needs extension specification, architecture and supporting records.
    architecture-system
    elements-system
    architecture-software
+   state-machine
    elements-software
    architecture-decisions
    technology-stack
@@ -32,6 +39,7 @@ Sphinx-Needs extension specification, architecture and supporting records.
    verification-plan
    review
    maturity
+   demo
    sources
 
 .. toctree::
