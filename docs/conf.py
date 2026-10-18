@@ -1,4 +1,5 @@
 """Project documentation using the live shared requirements method."""
+from importlib import import_module
 import os
 from pathlib import Path
 import sys
@@ -20,12 +21,13 @@ if skill_dir is None:
     raise RuntimeError("Set REQUIREMENTS_SKILL_DIR to the shared reverse-engineer-requirements skill directory (with its central method.md).")
 
 sys.path.insert(0, str(skill_dir / "scripts"))
-from traceability_model import NEEDS_TYPES, NEEDS_LINKS, NEEDS_FIELDS
+# The selected shared skill is resolved at runtime, outside this workspace.
+traceability_model = import_module("traceability_model")
 
 extensions = ["sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts"]
-needs_types = NEEDS_TYPES
-needs_links = NEEDS_LINKS
-needs_fields = NEEDS_FIELDS
+needs_types = traceability_model.NEEDS_TYPES
+needs_links = traceability_model.NEEDS_LINKS
+needs_fields = traceability_model.NEEDS_FIELDS
 needs_build_json = True
 html_theme = "sphinx_rtd_theme"
 html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
