@@ -10,3 +10,4 @@ project summary is maintained only in :doc:`maturity`.
 
    concept-reviews/round-1
    concept-reviews/round-2
+   concept-reviews/round-3

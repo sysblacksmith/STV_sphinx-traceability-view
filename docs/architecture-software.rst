@@ -25,7 +25,7 @@ Browser sequence
 ----------------
 
 Initialize immutable graph data once per page and separate state per root.
-A command proposes a candidate expansion set, computes seed-rooted visibility,
+A command proposes a candidate expansion set, computes visibility from the selected seed set or project entry page,
 checks the 200-occurrence cap, and commits only on success. Layout receives the
 visible graph and model ranks. Rendering and inspection consume its positions
 without changing graph identities. Zoom and pan affect a per-view transform.
@@ -72,3 +72,14 @@ implementation: the product is not yet implemented.
 
 Diagram source: ``architecture/diagrams/software-architecture.drawio``.
 Edit in Draw.io and export SVG; element boxes link to their Need records.
+
+
+Initialization and project entry
+--------------------------------
+
+:ref:`STV_ADR_005` defines optional seed lists and the synthetic project root.
+The existing MODEL/GRAPH build path supplies the project name and stakeholder
+entry index to BUNDLE; STATE selects explicit roots or a project page, and
+LAYOUT/RENDER handle the root band and paging. Component boundaries and drawn
+interfaces remain unchanged. No server, dependency or host Need type is added.
+The authoritative input/state contracts are in :doc:`internal-interfaces`.

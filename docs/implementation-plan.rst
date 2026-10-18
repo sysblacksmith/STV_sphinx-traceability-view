@@ -112,7 +112,7 @@ the initial release; parallel support is not assumed from serialized data.
 1. **builder-inited:** Validate the HTML builder, arrange local JS/CSS assets
    and reset transient build data. The directive records invocations as plain
    serializable values in the environment; its HTML visitor emits the view root
-   with seed and instance attributes, never the full graph.
+   with initialization mode, seed-list and instance attributes, never the full graph.
 2. **env-purge-doc:** Remove invocations belonging to a reread/deleted document.
    **env-get-outdated:** conservatively return all existing documents for MVP
    builds with views. This deliberately favors coherent final fragments over
@@ -212,14 +212,20 @@ versions in the runtime with a visible diagnostic. Use sorted IDs and canonical
 edge triples for deterministic output. Treat labels and IDs as data; DOM text
 uses textContent rather than HTML interpolation. Build one index in O(N + E).
 
-``GraphSnapshot`` includes normalized model, objects by ID, canonical edge
+``GraphSnapshot`` includes the project name, sorted stakeholder entry IDs,
+normalized model, objects by ID, canonical edge
 triples, directional adjacency and detail script locations. Need parts follow
 their host full IDs when present in link targets; resolve them through the host
 part collection (NeedsView.to_list_with_parts()) and original anchor rather than incorrectly marking them
 missing. Detail inspection of a part points to its published containing object
 and part anchor; part-specific full rendering needs a fixture.
 
-``ViewState`` holds seed, expanded group keys, revision and viewport transform.
+``ViewState`` holds initialization mode, immutable distinct seed IDs, expanded
+group keys, revision and viewport transform. Project mode also holds a tagged
+synthetic root, root-expanded flag, page index and independent expansion-key
+sets per page. The graph snapshot contains no fabricated Need for that root.
+Derive its title from app.config.project and its entry list from normalized
+stakeholder roles; sort visible top-level IDs once at build time.
 Group keys are structured triples ``[objectId, relationName, direction]``;
 use nested maps/sets or JSON tuple encoding, not delimiter concatenation that
 can collide with an ID. Canonical edge identity uses the same tuple principle.
@@ -227,8 +233,10 @@ can collide with an ID. Canonical edge identity uses the same tuple principle.
 Filter hidden objects and their incident links before building directional
 indexes, degree counts or detail manifests. Remove host-generated hidden-target
 relationship references from copied fragments; do not attempt to redact arbitrary
-author-published prose. The initial state has one shared node. Expanding proposes an added group key;
-collapsing proposes its removal. Run breadth-first reachability from the seed,
+author-published prose. The initial state has all explicit seeds or only the project node. Normal
+group expansion proposes an added key; collapse proposes its removal. Run
+breadth-first reachability from every explicit seed, or from the project root
+and its open selected entry page,
 following only expanded groups owned by reached nodes. Retain previously
 expanded descendant keys while hidden so a reopened branch can restore them,
 but never treat those keys or disconnected cycles as visibility roots.
@@ -245,7 +253,7 @@ After a valid candidate graph is obtained, perform layout before committing its
 rendered revision. A per-view monotonically increasing request token discards
 late asynchronous ELK results. Show a busy indication during the transition;
 retain the previous view on layout failure and announce the error. On initial
-layout failure, retain the seed summary with an error/retry control instead of
+layout failure, retain all starting summaries with an error/retry control instead of
 leaving an empty unexplained root. Later
 occurrence projection remains behind the state interface and is not implemented
 in the MVP.
@@ -263,7 +271,8 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    Need ID as the stable tie-breaker. Ignore ELK's y coordinates and edge
    routes after this step. This is intentional: ELK graph-theoretic layers do
    not substitute for the host's semantic level order.
-3. Assign ordered horizontal rank bands using measured maximum heights and
+3. Place a visible synthetic project root in a separate band above every
+   configured level; retain normal level order and test lanes. Assign ordered horizontal rank bands using measured maximum heights and
    at least 80-pixel inter-band gaps; place nodes with 48-pixel horizontal
    separation. Empty semantic levels may keep an empty band so upward
    expansion does not invert level order. Reordering within a band is allowed.
@@ -297,7 +306,7 @@ view. Toolbar plus/minus and arrow controls call the same D3 transform API for
 keyboard use. Keep transforms per instance. A keyboard-focused node must be
 panned into view, not merely focused off-screen.
 
-Each resolved node has an original-object anchor with ``target=_blank`` and
+Each resolved Need node has an original-object anchor with ``target=_blank`` and
 ``rel=noopener noreferrer`` plus separate relationship buttons and a Details
 button. The original-object anchor fills the summary/background region of the
 node, excluding separate controls; placeholders have no navigable anchor.
@@ -325,7 +334,7 @@ Implementation sequence and completion gates
 
 1. **Package and host seam:** create the package, build assets from the selected
    lock, build a wheel, install it into an independent fixture, and resolve two
-   cross-page seed directives. Gate: unknown/missing seeds and invalid mappings
+   cross-page seed directives. Gate: unknown/hidden explicit seeds, oversized seed lists and invalid mappings
    fail at the correct source location.
 2. **Static data and full details:** implement host graph extraction, classic
    script registry and lazy detail scripts. Gate: source metadata/body parity,
@@ -360,3 +369,43 @@ Local resources and permitted data images remain usable; ordinary external
 navigation links remain explicit reader actions. Do not copy remote stylesheets
 or active embedded documents into details. This policy refines STV_SWR_015/017
 and the explicitly amended STV_SHR_015; it does not require a media cache.
+
+
+Project-root pages and multiple roots
+-------------------------------------
+
+The full input, identity and state schema is in :doc:`internal-interfaces` and
+:ref:`STV_ADR_005`. The existing components and dependency stack are sufficient.
+DIRECTIVE parses the optional list and rejects excess distinct seeds; MODEL
+normalizes stakeholder roles; GRAPH emits project metadata and the entry index;
+STATE owns seed sets and project pages; LAYOUT handles the root band; RENDER
+distinguishes the project node and owns accessible paging controls. BUNDLE
+serializes the extended snapshot unchanged in principle; INSPECT receives only
+real Need identities and never requests root details.
+
+For project mode, use a dedicated root expansion command, not a fake host
+relation name. Entry pages contain 50 IDs, except the final shorter page. Their
+virtual edges are outgoing from the root and only visible while it is open.
+Normal canonical traces may reach a stakeholder on a different page; that Need
+is then an ordinary reachable object, not an extra entry root. Shared identity
+deduplicates it with a page entry when applicable. The virtual root and entry
+edges never appear in host Needs, full-object detail data or authored backlinks.
+
+Changing page proposes a candidate using only that page's remembered expansion
+set. Save the outgoing page state only on a successful commit. Run capacity and
+layout before replacing the old scene; stale async results cannot change page.
+Restored page state previously passed the cap for this immutable build, but
+check again defensively. A first visit starts with no open Need groups. Changing
+page while root-collapsed is unavailable; reopening restores the current page.
+Previous/Next buttons have accessible names, disabled boundary states, and a
+live Page i of n / total stakeholder count. Successful paging keeps focus on
+the initiating paging control, closes any old detail panel and pans that
+control into view. Errors retain prior graph, page and focus. The root uses a
+neutral project style without a Need ID, status border, Details button or
+original-object link; its full project title remains accessible without clipping.
+
+Later occurrence mode treats each seed (or project entry) as an independent
+root path, using tagged root identity plus occurrence path for keys. Ancestor
+cycle detection remains path-local; shared-mode deduplication remains by Need
+identity. Existing later-mode deferrals are unchanged; no occurrence runtime is
+claimed implemented.

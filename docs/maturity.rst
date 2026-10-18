@@ -10,17 +10,18 @@ Current baseline
 ----------------
 
 Stakeholder baseline v1 and its explicitly recorded scope amendments are
-owner-accepted. The prior internal concept and four ADRs were accepted under
-owner-delegated concept review, rounds 1 and 2. Findings STV_REVIEW_001 through
+owner-accepted. The internal concept, including the starting-node amendment, is accepted
+under owner-delegated concept review, rounds 1 through 3. ADRs 001, 002, 004
+and 005 are current accepted decisions; ADR 003 is partially superseded by
+ADR 005 with its unaffected choices retained. Findings STV_REVIEW_001 through
 STV_REVIEW_009 are resolved. See the individual review records for assessed
 Need links, authority, revision identities and evidence.
 
-A subsequent starting-node amendment is in progress: the owner accepted the
-new and revised stakeholder requirements on 2026-10-18. Affected internal
-requirements remain draft pending concept refinement and review. The prior
-concept is not yet reconciled with this change; see
-:doc:`requirement-changes/starting-nodes`. Unchanged artifact acceptance remains
-valid within its previous scope.
+The owner accepted the starting-node stakeholder amendment and selected paged
+project-root links. Concept refinement and round-3 review are complete; see
+:doc:`requirement-changes/starting-nodes` and :doc:`concept-reviews/round-3`.
+All current requirements and elements are accepted. Historical review hashes
+remain snapshots of their respective revisions.
 
 Implementation has not started. Requirement verification remains not_assessed;
 concept acceptance and documentation checks do not establish runtime results.

@@ -5,7 +5,7 @@ System-level behavior, constraints and architecture allocation.
 
 .. sysr:: Author and resolve embedded views
    :id: STV_SYS_001
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst

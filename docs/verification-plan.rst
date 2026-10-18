@@ -27,7 +27,7 @@ release-browser result.
      - Behavior and fixture
      - Requirement coverage
    * - Host/model
-     - Required seed, forward references, alternate host names, extra ranks, accepted-state override, missing colors, invalid required mappings.
+     - Zero/one/multiple seeds, duplicate IDs, forward references, alternate host names, extra ranks, accepted-state override, missing colors, invalid required mappings.
      - STV_SWR_001, 002, 014, 026, 030, 032, 036, 037, 042, 045, 046.
    * - Graph/state
      - Chain, diamond, self-loop, A-B-C-A, reverse traversal, collapsed isolated cycle, exact 199/200/201 bounds and dangling targets.
@@ -59,7 +59,7 @@ Host failure ownership
 Configure the broken-link fixture with the host's dangling-link warning policy
 and warnings-as-errors. Assert a nonzero build result owned by host validation
 while valid graph data and a missing-target placeholder are still generated.
-The extension's own missing seed/model errors have separate fixtures; do not
+The extension's own invalid explicit-seed/model errors have separate fixtures; do not
 accept a generic traceback in place of source-located diagnostics.
 
 Add a third-party widget fixture checking static content preservation, absence
@@ -142,3 +142,36 @@ shows an unavailable-offline indication with the correct explicit resource
 link. Verify local bundled and permitted data images still render. Repeat under
 file URLs with networking disabled and static HTTP hosting. These are planned
 implementation checks, not passed runtime results.
+
+
+Starting-node amendment checks
+-------------------------------
+
+Cover STV_SHR_003/025/026/047/048 and STV_SWR_001/003/007/014/025/026/043/051/052:
+
+* Parse zero, one, multiple whitespace-separated and repeated IDs; preserve
+  first occurrence order. Unknown/hidden tokens fail alone or among valid IDs.
+  Exactly 200 distinct seeds succeed; 201 fail with source location. A supported
+  visible Need part remains selectable. Two directives keep independent modes.
+* Verify the host project name, including markup-like text, is displayed as
+  text. A real Need ID equal to an internal root label cannot collide with
+  tagged synthetic identity. The root has no original link, detail load or red
+  unaccepted-Need border; normal Need presentation remains unchanged.
+* Replace stakeholder type names and use multiple stakeholder types. Missing
+  designation fails only for seedless invocations; zero visible stakeholder
+  Needs is valid. Exclude hidden Needs and parts from entry lists.
+* For 0/1/50/51/199/200/201 stakeholder Needs, verify deterministic pages of 50,
+  total counts, page bounds and every entry available exactly once. Check
+  keyboard/mouse paging, focus retention, empty-state text, independent saved
+  page exploration, collapse/reopen, stale layout results and layout errors.
+* Verify ordinary trace expansion still rejects complete oversized groups
+  atomically; project pages do not introduce partial authored-edge expansion.
+  Cross-page trace targets are ordinary shared nodes, not extra visibility
+  roots. Collapse preserves every explicit seed and root-reachable shared path;
+  inactive pages and disconnected cycles do not retain visible nodes.
+* Assert root-above-level geometry, unchanged semantic ranks, independent views
+  and the hard 200-node count including the project node. Test file and static
+  HTTP deployment offline with the existing Firefox/Windows release workflow.
+
+These are implementation checks to be executed later, not passing runtime
+results established by this documentation update.

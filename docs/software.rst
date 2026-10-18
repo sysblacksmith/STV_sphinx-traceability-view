@@ -6,7 +6,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Register the RST entry point
    :id: STV_SWR_001
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -15,7 +15,10 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_DIRECTIVE
 
-   The software shall register a traceability-view directive accepting zero, one or multiple starting Need IDs and emit a serializable placeholder with source filename, line and per-page instance ID.
+   The software shall register a traceability-view directive accepting an optional whitespace-separated list of starting Need IDs and emit a serializable placeholder with source filename, line and per-page instance ID.
+
+   Repeated IDs shall normalize to their first occurrence. Commas are not list
+   separators; an explicit unknown token remains an invalid ID.
 
    **Acceptance criterion:** Zero-, one- and multiple-ID fixtures produce
    distinct placeholders recording the supplied seed list or project-root mode
@@ -38,7 +41,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Initialize collapsed state
    :id: STV_SWR_003
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -109,7 +112,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Collapse relationship groups
    :id: STV_SWR_007
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -228,9 +231,13 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SYS_002
    :allocated_to: STV_SWE_MODEL
 
-   The software shall normalize supplemental model mappings against host type and relationship definitions without hard-coded host type names in graph or layout algorithms.
+   The software shall normalize supplemental model mappings against host type and relationship definitions without hard-coded host type names in graph or layout algorithms, including
+   an explicit stakeholder role on normally placed types for project-root selection.
 
-   **Acceptance criterion:** Replacing types and mapping names changes the view without modifying extension code.
+   **Acceptance criterion:** Replacing types and mapping names changes the view
+   without modifying extension code. A project-root invocation requires at least
+   one type designated as stakeholder; no matching objects is a valid empty
+   project, while a missing designation produces an entry-located model error.
 
 .. swr:: Publish full rendered details
    :id: STV_SWR_015
@@ -404,7 +411,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Compute seed-rooted visibility
    :id: STV_SWR_025
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -425,7 +432,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Report invalid invocation seeds
    :id: STV_SWR_026
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -440,7 +447,10 @@ Software behavior, interfaces and architecture allocation. See
 
    **Acceptance criterion:** An unknown ID supplied alone or among valid IDs
    fails with that ID, invocation file and line. An invocation without IDs
-   selects project-root mode without an invalid-seed error.
+   selects project-root mode without an invalid-seed error. Repeated IDs are
+   deduplicated before initial capacity validation; more than 200 distinct
+   explicit seeds fails with an invocation-located capacity error, without
+   dropping or truncating supplied IDs.
 
 .. swr:: Tolerate host broken traces
    :id: STV_SWR_027
@@ -707,11 +717,13 @@ Software behavior, interfaces and architecture allocation. See
    :priority: unassigned
    :verification_state: not_assessed
    :derives_from: STV_SYS_008
-   :allocated_to: STV_SWE_STATE
+   :allocated_to: STV_SWE_STATE, STV_SWE_DIRECTIVE
 
-   The software shall count all candidate visible node occurrences, including placeholders, against a constant limit of 200 before committing a graph transition.
+   The software shall count all candidate visible node occurrences, including placeholders, against a constant limit of 200 before committing initialization, project-page selection or a graph
+   transition; the artificial project node counts as one occurrence.
 
-   **Acceptance criterion:** Candidate sizes 199 and 200 pass, 201 fails; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
+   **Acceptance criterion:** Candidate sizes 199 and 200 pass, 201 fails;
+   200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
 
    **Review note:** By owner decision on 2026-10-18, response-time and memory
    budgets will be agreed after first MVP benchmark measurements; the node cap
@@ -864,7 +876,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Provide the artificial project entry node
    :id: STV_SWR_051
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
@@ -878,9 +890,42 @@ Software behavior, interfaces and architecture allocation. See
    identified as stakeholder requirements by the input data model, without
    inserting a fabricated Need into the host collection.
 
+   The label shall use the host Sphinx project name. The root has no Need
+   status, original-object link or full-detail overlay, and is placed above
+   all configured artifact bands without changing their order.
+
    **Acceptance criterion:** A seedless fixture initially displays only the
-   project node. Expansion uses the ordinary visibility/collapse and capacity
-   rules to reveal stakeholder requirements. The project node remains visible
+   project node. Expansion reveals stakeholder requirements through the project-page
+   contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible
    during collapse, counts toward the visible-node limit and is distinguished
    from real Needs without a fabricated original-Need link. Replacing the input
    model's stakeholder type names does not require source-code changes.
+
+.. swr:: Page stakeholder entry links
+   :id: STV_SWR_052
+   :status: accepted
+   :tags: release_initial
+   :basis: inferred
+   :evidence: docs/requirement-changes/starting-nodes.rst :: project-root pagination decision
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_047, STV_SYS_008
+   :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
+
+   The software shall expose all project-root stakeholder entry links through
+   deterministic pages of at most 50 non-hidden top-level Needs, with accessible
+   Previous/Next controls and page/total information, without relaxing the
+   200-visible-node limit or changing ordinary trace-group expansion semantics.
+
+   **Acceptance criterion:** A 201-stakeholder fixture offers five pages and
+   every stakeholder ID appears on exactly one entry page. Initial root
+   expansion reveals at most 50 entries. Page changes retain the project root,
+   show only the selected page's rooted exploration and restore that page's
+   independent accepted expansion state when revisited. Hidden entries and
+   Need parts are not listed as top-level stakeholder roots. An empty project
+   shows a no-stakeholder-requirements indication without an empty plus control.
+
+   **Rationale:** Direct stakeholder derivation refines the software-local
+   paging interaction explicitly chosen by the owner. SYS 008 retains the
+   cross-boundary capacity constraint; no new artificial system obligation is
+   required for paging controls.

@@ -955,10 +955,13 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    stakeholder requirement is linked and can be explored interactively.
 
    **Acceptance criterion:** Omitting seed IDs shows a project-named node.
-   Its expansion control reveals stakeholder requirements and permits further
+   Its expansion control reveals stakeholder requirements, using pages when
+   needed to stay within the visible-node limit, and permits further
    trace navigation using the existing expansion/collapse behavior. Hidden
    requirements remain excluded. The artificial node is a view entry point,
-   not a new Need object in the host documentation.
+   not a new Need object in the host documentation. Paging the project-root
+   links for large projects was explicitly selected by the owner; ordinary
+   trace-group expansion remains subject to its existing atomic capacity rule.
 
 .. shr:: Select multiple starting objects
    :id: STV_SHR_048

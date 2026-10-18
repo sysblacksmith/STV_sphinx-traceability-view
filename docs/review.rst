@@ -34,8 +34,10 @@ agreement to the requirements, not implementation or successful verification.
 * **Resolved - cycles and collapse:** Cycles close through a connection or
   reference without endless repetition. Collapsing a branch retains objects
   reachable through other open paths (:need:`STV_SHR_024`, :need:`STV_SHR_025`).
-* **Resolved - invalid starting ID:** Omitted and unknown IDs fail the build
-  with an error identifying the invocation (:need:`STV_SHR_026`).
+* **Resolved - invalid starting ID:** Explicit unknown/hidden IDs fail the
+  build with an error identifying the invocation (:need:`STV_SHR_026`). The
+  accepted starting-node amendment replaces omitted-ID failure with project
+  entry and supports multiple explicit seeds (:need:`STV_SHR_047`, :need:`STV_SHR_048`).
 * **Resolved - broken traces:** The host build validates and fails broken
   traces; the extension still renders valid data and marked missing-target
   placeholders containing the target ID (:need:`STV_SHR_027`, :need:`STV_SHR_028`).

@@ -3,9 +3,10 @@
 STV_ADR_003: Transactional exploration and semantic rank layout
 ===============================================================
 
-Status: **accepted**. Date: 2026-10-18. Scope: software architecture.
+Status: **superseded**. Date: 2026-10-18. Scope: software architecture.
 Decision owner: project owner.
-Supersedes: none. Superseded by: none.
+Supersedes: none. Superseded by: :ref:`STV_ADR_005` (partial: single-root
+initialization and reachability). All other decisions below remain applicable.
 
 Related specifications and elements: :need:`STV_SYS_005`, :need:`STV_SYS_007`, :need:`STV_SYS_008`, :need:`STV_SWR_024`, :need:`STV_SWR_034`.
 
