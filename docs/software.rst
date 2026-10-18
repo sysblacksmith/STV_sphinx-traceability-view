@@ -130,9 +130,9 @@ MVP implementation commitments.
    :derives_from: STV_SHR_008
    :allocated_to: STV_SWE_RENDER
 
-   The software shall show the complete ID and a title shortened by a fixed implementation rule without author field-selection settings.
+   The software shall show the complete ID and a title visually clamped to two lines while keeping the full ID visible without author field-selection settings.
 
-   **Acceptance criterion:** Long-title nodes retain the complete ID and expose their full title in details; the shortening rule is documented and tested before implementation acceptance.
+   **Acceptance criterion:** Long-title nodes retain the complete ID and expose their full title in details; the two-line summary clamp is tested without making its field set configurable.
 
    **Rationale:** Channeling: this is a software-local interaction or presentation obligation with no additional system-boundary impact; a synthetic system requirement is unnecessary.
 

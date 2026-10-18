@@ -45,3 +45,14 @@ available; see the design review gaps in :doc:`review`.
 
 Diagram source: ``architecture/diagrams/system-architecture.drawio``.
 Edit in Draw.io and export SVG; element boxes link to their Need records.
+
+Selected external dependencies
+-------------------------------
+
+The host uses Python, Sphinx and Sphinx-Needs at the accepted baseline versions.
+The build integration adds Beautiful Soup for HTML extraction. Its distributed
+runtime contains ELK.js, D3 zoom/selection and Floating UI; all are locally
+bundled. Node/npm, esbuild, Hatchling, pytest, Selenium and geckodriver are
+maintainer or verification tools, not required reader services. Versions,
+licenses and boundary allocations are in :doc:`technology-stack`.
+The complete handover is :doc:`implementation-plan`.

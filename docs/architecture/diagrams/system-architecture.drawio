@@ -8,7 +8,7 @@
         <mxCell value="Host Sphinx-Needs project&#10;External: RST, model, Needs" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1" id="host">
           <mxGeometry x="60" y="40" width="300" height="100" as="geometry" />
         </mxCell>
-        <object id="build" label="Build integration&#10;Validate, extract and package&#10;STV_SE_BUILD" link="elements-system.html#STV_SE_BUILD" linkTarget="_top">
+        <object id="build" label="Build integration&#10;Sphinx / Sphinx-Needs / Beautiful Soup&#10;STV_SE_BUILD" link="elements-system.html#STV_SE_BUILD" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="60" y="230" width="300" height="100" as="geometry" />
           </mxCell>
@@ -16,7 +16,7 @@
         <mxCell value="Generated documentation&#10;Graph, full details, local JS/CSS" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1" id="bundle">
           <mxGeometry x="460" y="230" width="300" height="100" as="geometry" />
         </mxCell>
-        <object id="browser" label="Browser runtime&#10;Firefox: explore, inspect, navigate&#10;STV_SE_BROWSER" link="elements-system.html#STV_SE_BROWSER" linkTarget="_top">
+        <object id="browser" label="Browser runtime&#10;ELK.js / D3 zoom / Floating UI&#10;STV_SE_BROWSER" link="elements-system.html#STV_SE_BROWSER" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="460" y="450" width="300" height="100" as="geometry" />
           </mxCell>

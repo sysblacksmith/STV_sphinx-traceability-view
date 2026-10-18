@@ -17,7 +17,7 @@ The graph spans host documents; details must match full Need rendering even when
 Decision
 --------
 
-Propose one build-level classic-script graph registry and a full-detail registry captured from final host output. Page-relative references make both available to nested views without runtime fetch.
+Propose one build-level classic-script graph registry and a lazily populated full-detail registry with per-object local scripts captured from final host output. Page-relative references make both available to nested views without runtime fetch. Beautiful Soup extraction and the exact lifecycle are defined in :doc:`../../implementation-plan` and :ref:`STV_ADR_004`.
 
 Rationale
 ---------
@@ -49,3 +49,5 @@ Decision history
 
 2026-10-18: Proposed in response to the owner request for internal specification and architecture. No implementation or formal ADR acceptance is claimed.
 
+
+2026-10-18: Refined the still-proposed bundle design to lazy local detail scripts and selected Beautiful Soup under STV_ADR_004.

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-project = "Sphinx Traceability View"
+project = "STV Sphinx Traceability View"
 version = release = "0.1"
 root_doc = "index"
 

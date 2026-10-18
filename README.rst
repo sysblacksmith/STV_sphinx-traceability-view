@@ -62,3 +62,12 @@ project layouts. To validate the published targets after building::
    .\.venv\Scripts\python.exe scripts/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
 
  Sphinx embeds the linked SVGs as interactive objects.
+
+Implementation handover
+-----------------------
+
+Start with ``docs/implementation-plan.rst`` for module contracts and delivery
+steps, ``docs/technology-stack.rst`` for selected libraries/versions/licenses,
+and ``docs/verification-plan.rst`` for completion gates. Exact npm manifests and
+lock are in ``docs/architecture/implementation``; Python direct implementation
+pins are alongside them. These are design inputs, not an implemented package.

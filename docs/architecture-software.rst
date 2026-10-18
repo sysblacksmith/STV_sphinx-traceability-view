@@ -12,18 +12,12 @@ Proposed component design; file mappings are listed in :doc:`elements-software`.
 Build sequence
 --------------
 
-1. Register the directive, namespaced configuration and static assets through
-   the Sphinx extension setup entry point.
-2. Parse invocations into serializable placeholders with source locations.
-   Do not resolve forward-referenced IDs during parsing.
-3. After the host has resolved Needs, normalize configuration and snapshot the
-   complete project graph, including generated incoming indexes.
-4. During HTML writing, capture final host-rendered Need fragments across all
-   pages. Before reporting completion, emit the details bundle and data script.
-   Handler ordering must be verified against the pinned host toolchain.
-5. Invalidate generated data when source Needs, mappings or rendered details
-   change. The MVP supports serial builds; parallel-safety flags must remain
-   false until merge/purge behavior has dedicated checks.
+The exact hook priorities, failure ownership and incremental-build policy are
+fixed in :doc:`implementation-plan`. Read the resolved NeedsView at write-started
+priority 800; extract final rendered HTML with Beautiful Soup at build-finished
+priority 900. Emit one graph manifest and local per-object detail scripts. Keep
+the initial serial-build safety flags false. Source and type mappings remain
+host-owned; no duplicate model registry is introduced.
 
 Browser sequence
 ----------------
@@ -49,12 +43,12 @@ review question; the MVP does not silently select a policy.
 Layout and rendering
 --------------------
 
-Use an internal rank-based layout: horizontal slots within ordered rank bands,
-a right-side test lane, and SVG edges behind HTML node controls. Compute ranks
-from semantic mappings, not graph depth. Cycles can cross rank bands without
-changing their semantic order. Place shared test nodes beyond the rightmost
-associated artifact. This gives a deterministic starting point; crossing and
-spacing quality require prototype assessment rather than a claim of optimality.
+Use ELK.js 0.10.0 for ordering suggestions, then STV's authoritative semantic
+projection and final edge routing. Use D3 zoom/selection for view-local pan/zoom,
+Floating UI DOM for overlay placement, and native HTML controls over SVG edges.
+The complete algorithm and module APIs are specified in :doc:`implementation-plan`.
+Do not use generic solver layers as semantic ranks or retain its edge paths
+after moving nodes. See :ref:`STV_ADR_004` for the dependency decision.
 
 Fixed node summary: complete ID and title visually clamped to two lines, with
 full title in details. This is a proposed implementation choice, not an edit to
@@ -66,7 +60,8 @@ must not dismiss it. Pan gestures must not activate node links.
 Interfaces and verification
 ---------------------------
 
-See :doc:`internal-interfaces`, :ref:`STV_ADR_002` and :ref:`STV_ADR_003`.
+See :doc:`internal-interfaces`, :doc:`technology-stack`,
+:doc:`implementation-plan`, :doc:`verification-plan` and :ref:`STV_ADR_004`.
 Unit checks target graph normalization, state transitions and geometry
 invariants. Host integration fixtures cover build lifecycle, links and full
 Need content. Browser checks cover file/HTTP behavior, keyboard focus and

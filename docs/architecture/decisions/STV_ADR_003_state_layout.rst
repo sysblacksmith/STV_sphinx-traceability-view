@@ -17,7 +17,7 @@ Exploration must handle cycles, shared nodes, independent views, a hard node cap
 Decision
 --------
 
-Propose a pure state transition engine, seed-rooted reachability, pre-commit cap checks, a rank-based layout and HTML controls over SVG edges. Use shared identity initially and add path occurrences later.
+Propose a pure state transition engine, seed-rooted reachability, pre-commit cap checks, ELK ordering followed by STV semantic rank projection/final routing, D3 viewport controls, Floating UI detail positioning and HTML controls over SVG edges. Use shared identity initially and add path occurrences later.
 
 Rationale
 ---------
@@ -37,7 +37,7 @@ No persistence across reloads is proposed. Zoom/pan remain view-local. A two-lin
 Alternatives considered
 -----------------------
 
-A naive tree recursively duplicates cycles and obscures shared dependencies. A generic force layout does not guarantee semantic levels. A third-party layout library remains possible if prototype evidence warrants a new ADR.
+A naive tree recursively duplicates cycles and obscures shared dependencies. A generic force layout does not guarantee semantic levels. ELK.js is selected for ordering; authoritative rank and test constraints remain in STV. Dependency trade-offs are recorded in :ref:`STV_ADR_004`.
 
 Open design questions
 ---------------------
@@ -49,3 +49,5 @@ Decision history
 
 2026-10-18: Proposed in response to the owner request for internal specification and architecture. No implementation or formal ADR acceptance is claimed.
 
+
+2026-10-18: Refined this proposed decision with ELK/D3/Floating UI boundaries and the implementation algorithm in STV_ADR_004; no accepted decision was rewritten.

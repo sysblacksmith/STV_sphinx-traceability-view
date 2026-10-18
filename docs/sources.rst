@@ -193,3 +193,30 @@ adapter and requires a pinned-toolchain integration test. Official references:
 The live central method is rendered in :doc:`method`. Internal requirements
 are inferred engineering refinements, and ADRs are proposals; no owner approval
 or successful runtime verification is implied by their existence.
+
+Concrete technology selection and design checks
+-----------------------------------------------
+
+Owner request, 2026-10-18: complete the technology choices and produce an
+implementation-ready concept. Basis for STV_ADR_004, technology-stack,
+implementation-plan and verification-plan. No acceptance of those proposals
+or product implementation is implied.
+
+Verified exact npm/PyPI package metadata on 2026-10-18 for ELK.js 0.10.0,
+D3 zoom/selection 3.0.0, Floating UI DOM 1.7.4, esbuild 0.25.12,
+Beautiful Soup 4.13.5, Hatchling 1.27.0, build 1.3.0, pytest 8.4.2 and
+Selenium 4.35.0. Direct source references and rationale are in
+:doc:`technology-stack`; the npm lock records transitive versions/integrities.
+
+Temporary Node 24.21.0/npm 11.19.0 check: exact npm install completed;
+ELK cyclic A-B-C-A fixture produced finite coordinates; esbuild IIFE had
+150 bundled inputs, 1,508,230 minified bytes and no dynamic-import expression.
+The reproducible source check is
+``docs/architecture/implementation/check-stack.mjs``. The initial measurement
+used an equivalent file-entry check; the committed check bundles from stdin
+and additionally asserts that no unresolved output imports remain.
+
+Temporary Python check: Beautiful Soup 4.13.5 with html.parser located all
+113 exported Need objects in their original generated HTML across five pages,
+retaining ID text and acceptance criteria for requirement types. This did not
+exercise a product runtime or prove general media/anchor rewriting.

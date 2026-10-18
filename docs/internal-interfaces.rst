@@ -1,7 +1,9 @@
 Internal interfaces and model contract
 ======================================
 
-This is a proposed software design contract, not an implemented API.
+This is the concrete MVP software design contract, not an implemented API.
+Use :doc:`implementation-plan` for lifecycle/module behavior and
+:doc:`technology-stack` for selected dependencies.
 Related decisions: :ref:`STV_ADR_001` and :ref:`STV_ADR_002`.
 
 Author interface
@@ -59,10 +61,12 @@ A versioned immutable payload contains:
 * objects keyed by Need ID: title, type, status, document/anchor and detail key;
 * canonical outgoing edges and indexed incoming/outgoing target groups;
 * unresolved target records preserving the referenced ID;
-* a registry of final rendered detail fragments keyed by resolved Need ID.
+* per-object local detail-script locations and a lazily populated registry of
+  final rendered fragments keyed by resolved Need ID.
 
-Per-view seeds and identities remain page-local. Emit one shared project data
-asset per build rather than embedding the full graph in every view. Classic
+Per-view seeds and identities remain page-local. Emit one shared project graph
+asset per build rather than embedding the full graph in every view. Emit details
+as local per-object scripts and load them on first inspection, caching by ID. Classic
 script assignment to a private namespaced registry permits loading from disk;
 do not rely on file-origin fetch or ES-module requests. Include only project
 content already published by the host, not hidden Need internals. Serialize

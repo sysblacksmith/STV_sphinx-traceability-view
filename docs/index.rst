@@ -1,5 +1,5 @@
-Sphinx Traceability View
-========================
+STV Sphinx Traceability View
+============================
 
 Accepted stakeholder requirements baseline v1 for a Sphinx-Needs traceability extension (2026-10-18). Internal requirements and architecture are drafted for review; implementation and runtime verification remain pending.
 
@@ -72,12 +72,16 @@ Architecture element status
    architecture-software
    elements-software
    architecture-decisions
+   technology-stack
    traceability
 
 .. toctree::
    :maxdepth: 2
    :caption: Miscellaneous
 
+   internal-interfaces
+   implementation-plan
+   verification-plan
    review
    sources
 
