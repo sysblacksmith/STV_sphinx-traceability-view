@@ -223,6 +223,8 @@ def test_offline_exploration(browser, short_output, protocol):
         browser.execute_script('arguments[0].focus()',original);original.send_keys(Keys.ENTER)
         wait.until(lambda d: len(d.window_handles)==2)
         browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+        wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+        wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
         assert browser.current_url.endswith('requirements.html#ROOT_A')
         browser.close();browser.switch_to.window(before)
         # The card background belongs to the original-object anchor; separate
@@ -231,6 +233,8 @@ def test_offline_exploration(browser, short_output, protocol):
         ActionChains(browser).move_to_element_with_offset(card,-card.size['width']/2+3,-card.size['height']/2+3).click().perform()
         wait.until(lambda d:len(d.window_handles)==2)
         browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+        wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+        wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
         assert browser.current_url.endswith('requirements.html#ROOT_A')
         browser.close();browser.switch_to.window(before)
         artifact = os.environ.get("STV_SCREENSHOTS")

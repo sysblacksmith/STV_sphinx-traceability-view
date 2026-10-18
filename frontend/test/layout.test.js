@@ -3,6 +3,37 @@ import assert from 'node:assert/strict';
 import {compute} from '../src/layout.js';
 const key=id=>JSON.stringify(['need',id]);
 
+test('STV_SWR_056: competing parents do not displace a separate centered parent',async()=>{
+ const objects={P:{type:'p'},Q:{type:'p'},R:{type:'p'},...Object.fromEntries(['A','B','C','D','E','F'].map(id=>[id,{type:'c'}]))};
+ const graph={objects,model:{levels:['p','c'],types:{p:{level:'p'},c:{level:'c'}}}};
+ const edges=[['P','r','A'],...['Q','R'].flatMap(p=>['B','C','D','E','F'].map(c=>[p,'r',c]))];
+ const result=await compute(graph,{ids:Object.keys(objects),edges},new Map());
+ const center=id=>result.nodes.get(key(id)).x+140;
+ assert.equal(center('P'),center('A'),'a noncompeting parent can remain exactly centered');
+ const desired=(Math.min(...['B','C','D','E','F'].map(center))+Math.max(...['B','C','D','E','F'].map(center)))/2;
+ assert.equal((center('Q')+center('R'))/2,desired,'shared-parent displacement balances locally');
+ assert.equal(Math.abs(center('Q')-center('R')),328);
+});
+
+test('STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated',async()=>{
+ const graph={model:{levels:['top','middle','bottom'],types:{p:{level:'top'},a:{level:'middle'},b:{level:'bottom'},t:{role:'test'}}},
+  objects:{P:{type:'p'},Q:{type:'p'},A:{type:'a'},B:{type:'b'},Z:{type:'b'},T:{type:'t'}}};
+ const visible={ids:Object.keys(graph.objects),edges:[['P','r','A'],['A','r','P'],['Q','r','A'],['A','r','B'],['B','r','P'],['T','r','A'],['T','r','B']]};
+ const sizes=new Map(Object.keys(graph.objects).map((id,i)=>[key(id),100+i*31]));
+ const result=await compute(graph,visible,sizes),again=await compute(graph,visible,sizes);
+ assert.deepEqual([...result.nodes],[...again.nodes]);
+ assert.equal(result.nodes.size,6);
+ for(const [id,a] of result.nodes) {
+  assert.ok([a.x,a.y,a.width,a.height].every(Number.isFinite));
+  for(const [other,b] of result.nodes)if(id!==other)
+   assert.ok(a.x+a.width<=b.x||b.x+b.width<=a.x||a.y+a.height<=b.y||b.y+b.height<=a.y);
+ }
+ const t=result.nodes.get(key('T'));
+ assert.ok(t.x>=Math.max(...['P','Q','A','B','Z'].map(id=>result.nodes.get(key(id)).x+280))+96);
+ assert.ok(result.nodes.get(key('P')).y<result.nodes.get(key('A')).y);
+ assert.ok(result.nodes.get(key('A')).y<result.nodes.get(key('B')).y);
+});
+
 test('STV_SWR_056: parent and project center over five visible children',async()=>{
  const ids=['P','A','B','C','D','E'];
  const graph={model:{levels:['parent','child'],types:{p:{level:'parent'},c:{level:'child'}}},objects:Object.fromEntries(ids.map(id=>[id,{type:id==='P'?'p':'c'}]))};

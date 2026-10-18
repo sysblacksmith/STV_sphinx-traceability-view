@@ -140,6 +140,8 @@ def main():
         if (benchmark_dir/'metrics.json').is_file():
             shutil.copyfile(benchmark_dir/'metrics.json',record/'capacity-build.json')
             shutil.copyfile(benchmark_dir/'build.log',record/'capacity-host.log')
+    # Fixture reuse changes the actual benchmark path; retain it in both records.
+    (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('pytest',[sys.executable,'-m','pytest','tests','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
     run('node-tests',['node','--test','--test-reporter=junit','frontend/test/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')

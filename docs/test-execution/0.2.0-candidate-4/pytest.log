@@ -1,0 +1,138 @@
+...F......................................................               [100%]
+================================== FAILURES ===================================
+_______________________ test_offline_exploration[http] ________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="6fd924c2-63da-47ed-b254-4c45cb1a1cc3")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-1f4lvkk1')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements("STV_SYS_003", "STV_SYS_007", "STV_SWR_004", "STV_SWR_008", "STV_SWR_015", "STV_SWR_016", "STV_SWR_017", "STV_SWR_018", "STV_SWR_029", "STV_SWR_031", "STV_SWR_033", "STV_SWR_034", "STV_SWR_035", "STV_SWR_038", "STV_SWR_039", "STV_SWR_040", "STV_SWR_050")
+    @pytest.mark.parametrize("protocol", ["file", "http"])
+    def test_offline_exploration(browser, short_output, protocol):
+        tmp_path = short_output
+        output = tmp_path / "nested" / "documentation"
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        server = None
+        try:
+            if protocol == "http":
+                server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
+                threading.Thread(target=server.serve_forever, daemon=True).start()
+                url = f"http://127.0.0.1:{server.server_port}/nested/documentation/index.html"
+            else:
+                url = (output / "index.html").as_uri()
+            browser.get(url)
+            wait = WebDriverWait(browser, 20)
+            wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
+            roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
+            assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
+            browser.execute_script("arguments[0].focus()", root_button)
+            root_button.send_keys(Keys.ENTER)
+            wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+            assert roots[0].get_attribute("data-stv-revision") == "0"
+            inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
+            browser.execute_script("arguments[0].focus()", inspect)
+            inspect.send_keys(Keys.ENTER)
+            try:
+                wait.until(lambda d: "formatted body" in d.find_element(By.CSS_SELECTOR, ".stv-detail").text)
+            except Exception:
+                print(browser.find_element(By.CSS_SELECTOR, ".stv-detail").get_attribute("outerHTML"))
+                raise
+            assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+            wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
+            assert browser.switch_to.active_element == inspect
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node:not(.stv-unaccepted) .stv-id').text == 'ROOT_A'
+            # Pointer hover presents the same final host fragment; pointer travel
+            # into the interactive panel keeps it open beyond the dismissal grace.
+            ActionChains(browser).move_to_element(inspect).perform()
+            wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+            panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+            ActionChains(browser).move_to_element(panel).perform()
+            wait.until(lambda d: 'formatted body' in panel.text)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().right <= innerWidth',panel)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().bottom <= innerHeight',panel)
+            panel.find_element(By.CSS_SELECTOR,'button').click()
+            # View-local transforms are shared by edge and node layers.
+            other_transform=roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+            for label in ['Zoom in','Pan right','Pan down']:
+                control=roots[0].find_element(By.CSS_SELECTOR,f'[aria-label="{label}"]')
+                browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+            assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+            roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+            viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
+            scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
+            before_drag=scene.get_attribute('style')
+            x,y=browser.execute_script('const r=arguments[0].getBoundingClientRect();return [Math.min(r.right,innerWidth)-20,Math.min(r.bottom,innerHeight)-20]',viewport)
+            drag=ActionChains(browser)
+            drag.w3c_actions.pointer_action.move_to_location(x,y)
+            drag.click_and_hold().move_by_offset(-80,-60).release().perform()
+            wait.until(lambda d:scene.get_attribute('style')!=before_drag)
+            before_wheel=scene.get_attribute('style')
+            ActionChains(browser).scroll_from_origin(ScrollOrigin.from_element(viewport),0,-120).perform()
+            wait.until(lambda d:scene.get_attribute('style')!=before_wheel)
+            assert len(browser.window_handles)==1
+            assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+            roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+            group=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+            browser.execute_script('arguments[0].focus()',group);group.send_keys(Keys.ENTER)
+            wait.until(lambda d: roots[0].get_attribute('data-stv-revision')=='1')
+            assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-node'))==2
+            assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+            reverse=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traced by (incoming) for LEAF_B"]')
+            browser.execute_script('arguments[0].focus()',reverse);reverse.send_keys(Keys.ENTER)
+            wait.until(lambda d:roots[0].get_attribute('data-stv-revision')=='2')
+            assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+            original=roots[0].find_element(By.CSS_SELECTOR,'.stv-summary')
+            before=browser.current_window_handle
+            browser.execute_script('arguments[0].focus()',original);original.send_keys(Keys.ENTER)
+            wait.until(lambda d: len(d.window_handles)==2)
+            browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+>           assert browser.current_url.endswith('requirements.html#ROOT_A')
+E           assert False
+E            +  where False = <built-in method endswith of str object at 0x000001F9194633B0>('requirements.html#ROOT_A')
+E            +    where <built-in method endswith of str object at 0x000001F9194633B0> = 'about:blank'.endswith
+E            +      where 'about:blank' = <selenium.webdriver.firefox.webdriver.WebDriver (session="6fd924c2-63da-47ed-b254-4c45cb1a1cc3")>.current_url
+
+tests\test_browser.py:226: AssertionError
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/pygments.css?v=5ecbeea2 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/stv/stv.css?v=eb5f020c7185a7703c414c5e116b721e62dd41412270781e6bf5d658086ff36b HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/stv/graph-f5d5f0edc915ea5aafface83ea2a8f8b0806870089d59f4def9c8cc81ab303da.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/alabaster.css?v=27fed22d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/basic.css?v=686e5160 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/documentation_options.js?v=5929fcd5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:57] "GET /nested/documentation/_static/custom.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:58] code 404, message File not found
+127.0.0.1 - - [18/Oct/2026 22:29:58] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [18/Oct/2026 22:29:59] "GET /nested/documentation/_static/stv/stv.js?v=dd5dbdf6fd74a727b582613a665cba8ccde7110934c143c9a9fd8655589a1429 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:29:59] "GET /nested/documentation/_static/stv/details/84ee73e6b7c9fcb75ddbb4365087b991541e2702f850403c0cc62d73c6d9522d-f339ddd973c8c3e96070dce1c910b523d9ca6fd9b2324ab9cca590797ed42378.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 22:30:02] "GET /nested/documentation/requirements.html HTTP/1.1" 200 -
+- generated xml file: D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\test-execution\0.2.0-candidate-4\pytest.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_browser.py::test_offline_exploration[http] - assert False
+1 failed, 57 passed in 623.36s (0:10:23)

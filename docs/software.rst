@@ -49,7 +49,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
@@ -862,7 +862,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002; docs/requirement-changes/usability-problems.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_006, STV_SHR_034, STV_SHR_015
    :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
 
@@ -891,7 +891,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_GRAPH, STV_SWE_STATE, STV_SWE_RENDER
 
@@ -918,7 +918,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_047, STV_SYS_008
    :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
 
@@ -947,7 +947,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_050
    :allocated_to: STV_SWE_LAYOUT
 
@@ -965,7 +965,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_049
    :allocated_to: STV_SWE_RENDER
 
@@ -983,7 +983,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/problems/problem_5.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_051
    :allocated_to: STV_SWE_RENDER
 
@@ -1008,7 +1008,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_052
    :allocated_to: STV_SWE_LAYOUT
 
@@ -1033,7 +1033,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
    :derives_from: STV_SHR_053
    :allocated_to: STV_SWE_RENDER, STV_SWE_STATE
 

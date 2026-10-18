@@ -24,7 +24,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``tests/test_build.py::test_cross_page_bundle``
    * - :need:`STV_SWR_003`
      - One seed produces one node; multiple distinct seeds within the capacity limit produce their corresponding nodes; no seeds produces the project node and at most five stakeholder entries. Every case has an empty ordinary expansion set; project entries are the sole automatic expansion exception.
-     - ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
+     - ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
    * - :need:`STV_SWR_004`
      - The fixture exposes one control per nonempty group and activating it dispatches its group key.
      - ``tests/test_browser.py::test_offline_exploration[file]``;
@@ -201,7 +203,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``tests/test_browser.py::test_offline_exploration[file]``;
        ``tests/test_browser.py::test_offline_exploration[http]``;
        ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
-       ``tests/test_browser.py::test_interactive_seed_smoke[http]``
+       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``
    * - :need:`STV_SWR_039`
      - Pointer and keyboard zoom preserve state and do not change another view.
      - ``tests/test_browser.py::test_offline_exploration[file]``;
@@ -231,6 +235,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
        ``tests/test_capacity.py::test_large_project_at_visible_capacity[file]``;
        ``tests/test_capacity.py::test_large_project_at_visible_capacity[http]``;
+       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
+       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
        ``frontend/test/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_045`
@@ -264,7 +270,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
        ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
        ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``
+       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``
    * - :need:`STV_SWR_049`
      - A fixture with a widget containing static rendered text and an image retains that content in details without executing copied widget scripts. The original-object link opens its documentation page. No interactive parity or generated snapshot of script-only content is claimed.
      - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
@@ -283,6 +291,10 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - A seedless fixture initially displays the project node and first stakeholder entries through the project-page contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible during collapse, counts toward the visible-node limit and is distinguished from real Needs without a fabricated original-Need link. Replacing the input model's stakeholder type names does not require source-code changes.
      - ``tests/test_browser.py::test_project_paging[file]``;
        ``tests/test_browser.py::test_project_paging[http]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
@@ -292,6 +304,10 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_browser.py::test_project_paging[http]``;
        ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
        ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
@@ -314,12 +330,22 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - A five-child star centers exactly. Competing parents, shared children, cycles, reverse-authored links and isolated nodes preserve finite geometry, nonoverlap, semantic levels, shared identity and safe routes.
      - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
        ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``frontend/test/layout.test.js :: STV_SWR_056: competing parents do not displace a separate centered parent``;
+       ``frontend/test/layout.test.js :: STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated``;
        ``frontend/test/layout.test.js :: STV_SWR_056: parent and project center over five visible children``;
        ``frontend/test/layout.test.js :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap``
    * - :need:`STV_SWR_057`
      - ID/title search, exact-ID confirmation, keyboard suggestions, invalid/hidden input, empty catalogs, repeated changes, overview return, layout failure/staleness and independent views pass file/HTTP checks. Runtime seed replacement requires neither source edits nor a Sphinx rebuild.
      - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
        ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
+       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
+       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
        ``frontend/test/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``;
        ``frontend/test/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``
    * - :need:`STV_SYS_001`
@@ -378,6 +404,7 @@ Executable sources
 * :download:`tests/test_graph.py <../tests/test_graph.py>`
 * :download:`tests/test_model.py <../tests/test_model.py>`
 * :download:`tests/test_package.py <../tests/test_package.py>`
+* :download:`tests/test_release_seeds.py <../tests/test_release_seeds.py>`
 * :download:`frontend/test/groups.test.js <../frontend/test/groups.test.js>`
 * :download:`frontend/test/layout.test.js <../frontend/test/layout.test.js>`
 * :download:`frontend/test/seeds.test.js <../frontend/test/seeds.test.js>`

@@ -287,6 +287,8 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    including project-entry links, independently of authored edge direction.
    Process bands from children upward; retain shared identity and deterministically
    separate competing desired positions with the existing horizontal gap.
+   Pool only positions whose spacing constraints conflict and minimize their
+   squared displacement; unrelated parents retain their exact child-span centers.
    Same-rank and test-role links do not drive centering. Recompute the test lane
    after horizontal movement; semantic bands and nonoverlap take precedence.
 6. Try a direct segment between facing ports first: top-to-bottom upward,

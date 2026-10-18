@@ -1,0 +1,22 @@
+{
+  "started": "2026-10-18T20:20:25.599446+00:00",
+  "revision": "bee5a15fed8e0b89a21b9cced09d7a1e67bb3c40",
+  "dirty_worktree": " M docs/test-execution/index.rst\n M frontend/test/layout.test.js\n M scripts/verify-release.py\n?? docs/test-execution/0.2.0-candidate-2/\n?? docs/test-execution/0.2.0-candidate-3/\n?? tests/test_release_seeds.py\n",
+  "source_identity": "a9bf3e976a99a8c6077a14a1331c0ff981f6a28a40a21236f9c4b3f7a32c58e4",
+  "wheel": "sphinx_traceability_view-0.2.0-py3-none-any.whl",
+  "wheel_sha256": "a2e7964f3d3f7c754daaadea0fbabe4c151a2c02832190ba9d8f2d88d1816a44",
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\0.2.0-candidate-2\\html",
+  "capacity_fixture_reused_from": "0.2.0-candidate-2"
+}

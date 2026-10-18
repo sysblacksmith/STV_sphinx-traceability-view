@@ -170,3 +170,54 @@ claim. Their source-stability outcomes are preserved. Only the final stable
 candidate can support the delivered verification disposition. The first report's
 empty infrastructure Need label has a separately identified publication erratum;
 its original report and XML/JSON have not been overwritten.
+
+v0.2.0 criterion assessment
+------------------------------------------------------------------------------------------
+
+The owner accepted the centered-layout/seed-selection concept in
+:doc:`concept-reviews/round-6` and invoked release-test against pre-release
+revision ``bee5a15fed8e0b89a21b9cced09d7a1e67bb3c40``.
+The original assessment above remains historical. The delivered scope now covers
+all ten system and 53 initial-release software requirements. The four
+occurrence-mode requirements remain explicitly deferred and not_assessed.
+
+The amendment's criterion review adds the following observable evidence to the
+existing system/software assessment:
+
+* :need:`STV_SWR_003`, :need:`STV_SWR_051` and :need:`STV_SWR_052`:
+  real seeded/seedless builds, initial project plus at most five entries,
+  complete 201-entry/41-page traversal, empty projects, exact capacity counting,
+  independent page memory and hidden-object filtering.
+* :need:`STV_SWR_050`, :need:`STV_SWR_053`, :need:`STV_SWR_054` and
+  :need:`STV_SWR_055`: measured hover versus explicit activation, real Escape
+  outside view focus, cancellation, facing ports and safe obstacle/self-loop
+  routes, computed 975px viewports, and stable semantic control ordering with
+  replacement mappings. File/HTTP workflows exercise real pointer and keyboard
+  behavior as well as the pure state/geometry checks.
+* :need:`STV_SWR_056`: exact five-child and project centering, shared-parent
+  collision avoidance, retained identity, independent noncompeting parents,
+  deterministic cycles/isolated nodes/variable heights, test lanes and final
+  routes. The release review found that averaging collision displacement across
+  the whole band moved an unrelated parent by 109.33px. Local least-displacement
+  pooling fixes that defect within the accepted layout contract; the new
+  regression would fail the previous implementation. Component boundaries,
+  state transitions and ADR decisions are unaffected.
+* :need:`STV_SWR_057`: ID/title matching and result bounds, pointer and keyboard
+  confirmation, typing/Escape, exact trimmed IDs, invalid/hidden/case-mismatched
+  IDs, empty catalogs, repeated replacement, overview reset, independent seeded
+  and seedless views, retained focus, and failed/stale layout preservation.
+  ``tests/test_release_seeds.py`` extends the MVP smoke cases with these
+  real file/HTTP paths; Node checks cover pure catalog and transition invariants.
+
+A test synchronization defect was also corrected: the original-object workflow
+asserted a newly opened tab's URL while Firefox still reported about:blank.
+The test now waits for the expected URL and actual Need element, preserving and
+strengthening the original criterion. The failed release attempt and separate
+diagnostics remain retained; isolated passes did not substitute for full
+qualification.
+
+Final outcomes and artifact identities are in
+:doc:`test-execution/0.2.0-final/index`. Canonical verification is promoted only
+against the full passing candidate and this criterion review; acceptance remains
+independent. Browser/platform, occurrence-mode, widget-interaction, numeric
+performance-budget and external-distribution licensing limits above still apply.

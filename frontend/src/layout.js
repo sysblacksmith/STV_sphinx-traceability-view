@@ -70,13 +70,19 @@ export async function compute(graph, visible, boxes) {
       return [key,x];
     }));
     band.normal.sort((a,b)=>desired.get(a)-desired.get(b));
-    let last=-Infinity,totalShift=0;
-    for(const key of band.normal) {
-      const x=Math.max(desired.get(key),last+328);
-      nodes.get(key).x=x;last=x;totalShift+=x-desired.get(key);
+    // Least-displacement separation: pool only competing desired positions.
+    // Subtracting the gap turns spacing into a nondecreasing sequence problem.
+    const pools=[];
+    for(const [index,key] of band.normal.entries()) {
+      pools.push({first:index,last:index,sum:desired.get(key)-index*328,count:1});
+      while(pools.length>1) {
+        const a=pools.at(-2),b=pools.at(-1);
+        if(a.sum/a.count<=b.sum/b.count)break;
+        pools.splice(-2,2,{first:a.first,last:b.last,sum:a.sum+b.sum,count:a.count+b.count});
+      }
     }
-    const balance=band.normal.length?totalShift/band.normal.length:0;
-    for(const key of band.normal)nodes.get(key).x-=balance;
+    for(const pool of pools)for(let index=pool.first;index<=pool.last;index++)
+      nodes.get(band.normal[index]).x=pool.sum/pool.count+index*328;
   }
   const normalize=Math.max(0,30-Math.min(...[...nodes.values()].map(n=>n.x)));
   for(const node of nodes.values())node.x+=normalize;

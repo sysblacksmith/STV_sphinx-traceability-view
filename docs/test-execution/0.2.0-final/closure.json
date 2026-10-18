@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-18T20:49:27.308571+00:00",
+  "candidate": "0.2.0-candidate-5",
+  "outcomes": {
+    "passed": 76,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "active_requirements": 63,
+  "verified_passed": 63,
+  "uncovered_active_ids": [],
+  "deferred_not_assessed": [
+    "STV_SWR_019",
+    "STV_SWR_021",
+    "STV_SWR_022",
+    "STV_SWR_023"
+  ],
+  "post_execution_source_differences": [
+    "docs/software.rst"
+  ],
+  "allowed_verification_only_differences": [
+    "docs/system.rst",
+    "docs/software.rst"
+  ],
+  "tested_wheel_sha256": "ac1a23625c104ca26768856b1c00675c042fe62a0685bac7967a57f52f0ef6e5",
+  "publication_tests": 1,
+  "publication_failures_errors_skips": 0,
+  "documentation_build_exit": 0,
+  "traceability_exit": 0,
+  "diagram_links_exit": 0,
+  "coverage_exit": 0
+}

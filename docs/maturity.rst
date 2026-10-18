@@ -17,15 +17,21 @@ affected contracts/diagrams are accepted. ADR 005 is partially superseded;
 previous review snapshots remain historical. See
 :doc:`requirement-changes/centered-layout-and-interactive-seeds`.
 
-Focused MVP checks passed: 16 JavaScript tests, 33 non-browser tests and 11
-Firefox checks, plus documentation/traceability/diagram checks. Concept
-acceptance does not change verification fields. The owner inspection gate is
-closed; full v0.2.0 release qualification remains to be completed separately.
+Full v0.2.0 qualification passed against candidate 5: 58 Python/browser and
+18 JavaScript tests, with no failures/errors/skips, plus all packaging,
+documentation, coverage, traceability and diagram gates. See
+:doc:`test-execution/0.2.0-final/index` and :doc:`implementation-review`.
+A collision defect found during release review is corrected and regression-tested;
+new-tab navigation tests now wait for the actual destination. Ten system and
+53 delivered software requirements are verified passed; four occurrence-mode
+requirements remain not_assessed. Acceptance statuses are preserved. The
+candidate is validated for owner release decision; external distribution still
+requires the existing project-license decision. No publication is implied.
 
 The owner approved the preceding usability stakeholder revisions on 2026-10-18
 and delegated review and final implementation for v0.2.0. That internal concept
 was accepted under :doc:`concept-reviews/round-4`; the subsequent amendment
-has its own acceptance under round 6 and no completed release verification.
+has its own acceptance under round 6 and final verification in the record above.
 See :doc:`requirement-changes/usability-problems` and :doc:`problems/index`.
 User issue handover now uses first-class problem reports directly in
 ``docs/problems/``; the shared lifecycle/template update is recorded in
