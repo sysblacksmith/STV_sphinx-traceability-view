@@ -6,7 +6,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Register the RST entry point
    :id: STV_SWR_001
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -15,9 +15,11 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_DIRECTIVE
 
-   The software shall register a traceability-view directive taking one starting Need ID and emit a serializable placeholder with source filename, line and per-page instance ID.
+   The software shall register a traceability-view directive accepting zero, one or multiple starting Need IDs and emit a serializable placeholder with source filename, line and per-page instance ID.
 
-   **Acceptance criterion:** A host RST fixture with two directives produces distinct placeholders with the supplied IDs.
+   **Acceptance criterion:** Zero-, one- and multiple-ID fixtures produce
+   distinct placeholders recording the supplied seed list or project-root mode
+   and each invocation's source location.
 
 .. swr:: Resolve seeds after collection
    :id: STV_SWR_002
@@ -36,7 +38,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Initialize collapsed state
    :id: STV_SWR_003
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -45,9 +47,14 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
-   The software shall initialize each view with only its starting object visible and no expanded relationship keys.
+   The software shall initialize each view with every distinct selected seed
+   visible, or only the artificial project node when no seeds were supplied,
+   and no expanded relationship keys.
 
-   **Acceptance criterion:** Initial state has one node and an empty expansion set.
+   **Acceptance criterion:** One seed produces one node; multiple distinct
+   seeds within the capacity limit produce their corresponding nodes; no
+   seeds produces only the project node. Every case has an empty expansion set
+   and no automatically revealed traced objects.
 
    **Rationale:** Channeling: this is a software-local interaction or presentation obligation with no additional system-boundary impact; a synthetic system requirement is unnecessary.
 
@@ -102,7 +109,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Collapse relationship groups
    :id: STV_SWR_007
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -111,7 +118,8 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SHR_007
    :allocated_to: STV_SWE_STATE
 
-   The software shall remove the selected expansion key and recompute visible reachability from the seed.
+   The software shall remove the selected expansion key and recompute visible reachability from all selected seeds, or from the
+   artificial project node in project-root mode.
 
    **Acceptance criterion:** A collapsed group can be reopened and does not remain as a visibility root.
 
@@ -396,7 +404,7 @@ Software behavior, interfaces and architecture allocation. See
 
 .. swr:: Compute seed-rooted visibility
    :id: STV_SWR_025
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -405,15 +413,19 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SHR_025
    :allocated_to: STV_SWE_STATE
 
-   The software shall retain only nodes reachable from the seed through currently expanded groups after collapse, including nodes shared by remaining paths.
+   The software shall retain all starting nodes and all objects reachable
+   from any starting node through currently expanded groups after collapse,
+   including objects shared by remaining paths. In project-root mode the
+   artificial project node is the starting node.
 
-   **Acceptance criterion:** A diamond retains the shared target until the last path closes; a disconnected cycle is removed.
+   **Acceptance criterion:** A diamond retains the shared target until the last path closes; a disconnected cycle is removed. A multi-seed fixture retains every
+   seed and objects still reached from any other seed.
 
    **Rationale:** Channeling: this is a software-local interaction or presentation obligation with no additional system-boundary impact; a synthetic system requirement is unnecessary.
 
 .. swr:: Report invalid invocation seeds
    :id: STV_SWR_026
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -422,9 +434,13 @@ Software behavior, interfaces and architecture allocation. See
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_DIRECTIVE
 
-   The software shall raise a source-located build error for omitted seeds and for IDs unresolved after host collection.
+   The software shall raise a source-located build error identifying any
+   explicitly supplied ID unresolved after host collection, while treating
+   an omitted seed list as project-root mode.
 
-   **Acceptance criterion:** Both missing and unknown seed fixtures return failure with the invocation file and line.
+   **Acceptance criterion:** An unknown ID supplied alone or among valid IDs
+   fails with that ID, invocation file and line. An invocation without IDs
+   selects project-root mode without an invalid-seed error.
 
 .. swr:: Tolerate host broken traces
    :id: STV_SWR_027
@@ -845,3 +861,26 @@ Software behavior, interfaces and architecture allocation. See
    **Rationale:** The system parent carries full-object inspection; direct
    channeling from STV_SHR_034 refines the software-local keyboard interaction
    without adding an artificial system-level obligation.
+
+.. swr:: Provide the artificial project entry node
+   :id: STV_SWR_051
+   :status: draft
+   :tags: release_initial
+   :basis: inferred
+   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_001
+   :allocated_to: STV_SWE_GRAPH, STV_SWE_STATE, STV_SWE_RENDER
+
+   The software shall provide an artificial project-named entry node for
+   seedless views and an expandable group linking it to all non-hidden Needs
+   identified as stakeholder requirements by the input data model, without
+   inserting a fabricated Need into the host collection.
+
+   **Acceptance criterion:** A seedless fixture initially displays only the
+   project node. Expansion uses the ordinary visibility/collapse and capacity
+   rules to reveal stakeholder requirements. The project node remains visible
+   during collapse, counts toward the visible-node limit and is distinguished
+   from real Needs without a fabricated original-Need link. Replacing the input
+   model's stakeholder type names does not require source-code changes.

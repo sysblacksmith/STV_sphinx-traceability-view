@@ -40,19 +40,20 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Initially collapse traced objects
    :id: STV_SHR_003
-   :status: accepted
+   :status: draft
    :tags: feature_navigation, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
-   The system shall initially display the starting object with its related objects
-   collapsed.
+   The system shall initially display only the selected starting objects, or
+   the artificial project node when no IDs are supplied, with their linked
+   objects collapsed.
 
-   **Acceptance criterion:** On first opening a view whose starting object has
-   relationships, the starting object is visible and its related objects have not
-   yet been revealed.
+   **Acceptance criterion:** A single-seed view initially shows that object;
+   a multi-seed view shows all selected objects; a seedless view shows only the
+   project node. Linked objects are revealed only through expansion controls.
 
 .. shr:: Offer expansion by traceability type
    :id: STV_SHR_004
@@ -479,7 +480,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Preserve objects reached through other open paths
    :id: STV_SHR_025
-   :status: accepted
+   :status: draft
    :tags: feature_navigation, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner overlapping path collapse confirmation 2026-10-18
@@ -487,35 +488,39 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :verification_state: not_assessed
 
    The system shall keep an object visible after a branch is collapsed if
-   another open path from the starting object still reaches that object, and
-   hide objects no longer reached by any open path, retaining the starting object.
+   another open path from any starting object still reaches that object, and
+   hide objects no longer reached by any open path, retaining every starting
+   object (or the artificial project node in a seedless view).
 
    **Acceptance criterion:** In shared-node mode, two open branches reach a
    common object and its expanded descendants. Collapsing one branch leaves
    the common object and descendants visible through the other path. Collapsing
    the last path hides them. In separate-occurrence mode, collapsing one branch
    hides its unreachable occurrences while retaining occurrences reached through
-   the other branch. A disconnected cycle does not keep its objects visible.
+   the other branch. A disconnected cycle does not keep its objects visible. In a multi-seed
+   view, collapsing a branch from one seed does not remove another seed or
+   objects still reachable from it.
 
 .. shr:: Require a valid starting ID
    :id: STV_SHR_026
-   :status: accepted
+   :status: draft
    :tags: feature_integration, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner invalid starting ID confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
-   The system shall fail the Sphinx build when an embedded view omits its
-   starting ID or supplies one that does not resolve to an existing Need object,
-   with an error identifying the missing or unknown ID and the RST source
-   location of that view.
+   The system shall fail the Sphinx build when any explicitly supplied
+   starting ID does not resolve to an existing non-hidden Need object, with
+   an error identifying the invalid ID and the RST source location of that
+   view. Supplying no starting IDs shall select project-root mode instead.
 
    **Acceptance criterion:** Building a document containing a view with a
    nonexistent starting ID returns a nonzero exit code and reports that ID,
    the source filename and the location of the offending invocation.
-   Omitting the starting ID also returns a nonzero exit code and reports the
-   missing ID and the invocation's source filename and location.
+   A list containing valid IDs and one invalid ID also fails with that ID
+   and invocation location. Omitting all starting IDs produces project-root
+   mode and is not an invalid-seed error.
 
 .. shr:: Render valid traces despite unresolved targets
    :id: STV_SHR_027
@@ -935,3 +940,41 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    **Acceptance criterion:** A separate Sphinx-Needs project installs the packaged
    extension, enables it and builds an RST-embedded traceability view without
    copying implementation files from this repository.
+
+.. shr:: Start from the project when no seed is supplied
+   :id: STV_SHR_047
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The system shall start a view without seed IDs at an artificial node
+   labelled with the documentation project's name, from which every non-hidden
+   stakeholder requirement is linked and can be explored interactively.
+
+   **Acceptance criterion:** Omitting seed IDs shows a project-named node.
+   Its expansion control reveals stakeholder requirements and permits further
+   trace navigation using the existing expansion/collapse behavior. Hidden
+   requirements remain excluded. The artificial node is a view entry point,
+   not a new Need object in the host documentation.
+
+.. shr:: Select multiple starting objects
+   :id: STV_SHR_048
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The system shall allow a documentation author to supply a list of seed
+   Need IDs to initialize one embedded view with all selected objects rather
+   than requiring a separate view for each ID.
+
+   **Acceptance criterion:** A view given multiple valid non-hidden IDs shows
+   all selected objects initially with relationships collapsed, supports
+   exploration from each and retains all starting objects during collapse.
+   Single-ID invocation remains supported; shared-node identity and the
+   existing visible-node capacity limit continue to apply.

@@ -5,18 +5,26 @@ System-level behavior, constraints and architecture allocation.
 
 .. sysr:: Author and resolve embedded views
    :id: STV_SYS_001
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
    :verification_state: not_assessed
-   :derives_from: STV_SHR_001, STV_SHR_002, STV_SHR_026
+   :derives_from: STV_SHR_001, STV_SHR_002, STV_SHR_026, STV_SHR_047, STV_SHR_048
    :allocated_to: STV_SE_BUILD
 
-   The system shall resolve each RST view invocation against the completed host Needs collection and associate it with a unique view instance and visible valid starting object; host-hidden seeds shall fail with the invocation source location.
+   The system shall resolve each RST view invocation against the completed
+   host Needs collection and associate it with a unique view instance and all
+   explicitly selected valid starting objects, or an artificial project-named
+   root linked to the stakeholder requirements when no IDs are supplied.
+   Any explicitly supplied unknown or host-hidden seed shall fail with the
+   invocation source location.
 
-   **Acceptance criterion:** Two invocations on one page produce separate instances; missing and unknown IDs fail with filename and invocation location.
+   **Acceptance criterion:** Zero-, one- and multiple-ID invocations resolve
+   independently. Zero IDs selects the project root; multiple valid IDs select
+   every specified object. Any invalid explicit ID fails with the ID, filename
+   and invocation location.
 
 .. sysr:: Integrate the host data model
    :id: STV_SYS_002

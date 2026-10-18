@@ -10,10 +10,16 @@ Current baseline
 ----------------
 
 Stakeholder baseline v1 and its explicitly recorded scope amendments are
-owner-accepted. The current internal concept and four ADRs are accepted under
+owner-accepted. The prior internal concept and four ADRs were accepted under
 owner-delegated concept review, rounds 1 and 2. Findings STV_REVIEW_001 through
 STV_REVIEW_009 are resolved. See the individual review records for assessed
 Need links, authority, revision identities and evidence.
+
+A subsequent starting-node amendment is in progress: new project-root and
+multi-seed requirements and their affected revisions are draft. The prior
+concept is not yet reconciled with this change; see
+:doc:`requirement-changes/starting-nodes`. Unchanged artifact acceptance remains
+valid within its previous scope.
 
 Implementation has not started. Requirement verification remains not_assessed;
 concept acceptance and documentation checks do not establish runtime results.
@@ -82,6 +88,7 @@ Review and lifecycle records
 
    concept-review
    concept-reviews/documentation-reorganization
+   requirement-changes/starting-nodes
 
 Maintenance rule
 ----------------
