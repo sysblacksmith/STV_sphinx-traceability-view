@@ -6,7 +6,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Extension lifecycle and directives
    :id: STV_SWE_DIRECTIVE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -18,7 +18,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Host model normalization
    :id: STV_SWE_MODEL
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -30,7 +30,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Graph adapter and indexes
    :id: STV_SWE_GRAPH
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -42,7 +42,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Rendered detail extraction
    :id: STV_SWE_DETAIL_BUILD
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -54,7 +54,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Static bundle emission
    :id: STV_SWE_BUNDLE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -66,7 +66,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Exploration state engine
    :id: STV_SWE_STATE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -78,7 +78,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Semantic rank layout
    :id: STV_SWE_LAYOUT
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -90,7 +90,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Accessible view and viewport
    :id: STV_SWE_RENDER
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -102,7 +102,7 @@ evidence. Containment follows the two product system elements.
 
 .. swe:: Detail overlay and original links
    :id: STV_SWE_INSPECT
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst

@@ -90,8 +90,9 @@ Open design questions
 
 No library selection is left open for MVP implementation. Validation tasks
 remain: real browser execution, final geometry, incremental-build coherence
-and the measured large-project cost. External/hidden objects without a local
-full rendering and third-party executable widgets have explicit coverage gaps;
+and the measured large-project cost. External objects without local full rendering use the owner-confirmed
+metadata/link fallback. Hidden objects and incident links are excluded by owner decision. Static widget content is sufficient for MVP details; widget-specific
+JavaScript remains on the original page by owner agreement;
 they must not be reported as full offline-detail parity without evidence.
 Owner: implementation team; release exceptions require project-owner review.
 
@@ -102,3 +103,16 @@ Decision history
 response to the owner's implementation-ready concept request. Verified npm
 resolution, cyclic ELK layout and IIFE bundling in a temporary environment;
 these smoke checks do not establish product acceptance.
+
+2026-10-18: Owner confirmed external metadata/link fallback without downloading
+or caching pages as sufficient for the MVP. Other decisions remain proposed.
+
+2026-10-18: Owner confirmed host-hidden Need exclusion and hidden-seed
+rejection; filtering precedes published graph/detail generation.
+
+2026-10-18: Owner confirmed static third-party widget content as sufficient
+for MVP details, deferring widget-specific JavaScript behavior.
+
+2026-10-18: Owner deferred project license selection and agreed to set
+performance budgets after first MVP measurements. No numeric budget or project
+license is assigned; library decisions remain proposed.

@@ -220,3 +220,28 @@ Temporary Python check: Beautiful Soup 4.13.5 with html.parser located all
 113 exported Need objects in their original generated HTML across five pages,
 retaining ID text and acceptance criteria for requirement types. This did not
 exercise a product runtime or prove general media/anchor rewriting.
+
+External Need detail scope confirmation, 2026-10-18: the project owner
+confirmed available metadata, original-object link and a clear unavailable-local-
+details indication as sufficient for the MVP when external bodies are not
+locally rendered, without downloading/caching external pages. Explicit scope
+clarification to STV_SHR_015; basis for STV_SWR_047 and related internal refinements.
+Hidden Need visibility was not decided by this answer.
+
+Hidden Need visibility confirmation, 2026-10-18: owner agreed that Needs
+intentionally hidden by the host and their connections are excluded from STV,
+and hidden starting IDs are rejected. Basis for STV_SWR_048 and explicit
+scope clarification of STV_SHR_002. Hidden targets are not missing-target
+placeholders; baseline v1 history remains recorded.
+
+Third-party widget scope confirmation, 2026-10-18: owner confirmed that MVP
+details preserve rendered text, images and markup while widget-specific
+JavaScript behavior remains on the original Need page. Basis for STV_SWR_049
+and an explicit clarification of STV_SHR_015; baseline v1 history is retained.
+
+Project license decision, 2026-10-18: the owner requested deferring selection
+until later. No project distribution license has been selected.
+
+Performance budget decision, 2026-10-18: owner agreed to measure the first
+MVP against the planned large-project fixture, then agree response-time and
+memory budgets from those results. The hard 200-visible-node limit is unchanged.

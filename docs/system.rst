@@ -91,7 +91,7 @@ acceptance or claim implemented behavior.
    :derives_from: STV_SHR_015, STV_SHR_016, STV_SHR_033
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
-   The system shall provide the full rendered Need information and its original documentation location for every resolved object available to exploration.
+   The system shall provide locally rendered Need information and its original documentation location for inspection, using available metadata, the original link and an unavailable-details indication for external Needs without locally rendered bodies.
 
    **Acceptance criterion:** An object on a different page has equivalent displayed metadata/body in its details and opens at its original anchor from both file and HTTP URLs.
 

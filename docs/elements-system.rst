@@ -6,7 +6,7 @@ external execution dependencies, not product components with invented internals.
 
 .. syse:: Sphinx build integration
    :id: STV_SE_BUILD
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -17,7 +17,7 @@ external execution dependencies, not product components with invented internals.
 
 .. syse:: Browser exploration runtime
    :id: STV_SE_BROWSER
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst

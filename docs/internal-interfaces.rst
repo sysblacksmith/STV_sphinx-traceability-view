@@ -77,8 +77,9 @@ Detail fragments are derived from the host's final HTML, not reconstructed from
 raw Need dictionaries. Rebase relative links and media to work on the embedding
 page, namespace duplicated HTML IDs and update fragment references, preserve
 original documentation anchors for navigation, and exclude executable scripts
-from copied fragments. Exact adaptation of interactive third-party extensions
-must be assessed in the vertical slice; do not claim arbitrary widget fidelity.
+from copied fragments. Third-party widgets preserve their static rendered content in MVP details;
+widget-specific JavaScript remains on the original page by owner agreement
+(STV_SWR_049).
 
 State interface
 ---------------

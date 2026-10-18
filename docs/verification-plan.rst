@@ -63,6 +63,12 @@ while valid graph data and a missing-target placeholder are still generated.
 The extension's own missing seed/model errors have separate fixtures; do not
 accept a generic traceback in place of source-located diagnostics.
 
+Add a third-party widget fixture checking static content preservation, absence
+of copied script execution and the original-page link (STV_SWR_049).
+
+Add a host-hidden fixture that asserts absence of hidden IDs, edges and details
+from generated product data, plus a hidden-seed error case (STV_SWR_048).
+
 No product code exists yet, so the test module names in the handover are tasks,
 not executable commands claimed to pass today. Once implemented, the project
 test entry points must expose Python tests, Node tests, browser tests and wheel
@@ -89,10 +95,19 @@ Release exit criteria
 * File and HTTP workflows pass on recorded Firefox/Windows versions.
 * Python 3.10 and pinned Sphinx integration work from an installed wheel.
 * No later-mode behavior is falsely advertised as delivered.
-* Documented external/hidden-body coverage gaps and third-party interactive
-  widgets are either resolved or explicitly accepted as release exceptions;
+* The agreed external-body fallback passes STV_SWR_047 and hidden-object
+  exclusion passes STV_SWR_048. Static third-party widget content
+  and original-page navigation pass STV_SWR_049; widget-specific JavaScript
+  parity is not required for the MVP;
   do not claim complete STV_SHR_015 coverage otherwise.
 * Graph validation, warnings-as-errors Sphinx build and published diagram-link
   checks pass. These checks supplement product tests rather than replace them.
 * Notices, locked dependencies and wheel contents are reviewed; no unselected
   library or required runtime service has been introduced.
+* Before external distribution, the owner resolves the deferred project license
+  decision. Internal implementation and verification do not assign a license.
+
+The owner agreed on 2026-10-18 to measure the first MVP before setting
+response-time and memory budgets. Present measurements for agreement of the
+budgets; no numeric thresholds are assigned now. The 200-visible-node limit
+remains a hard acceptance criterion.

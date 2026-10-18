@@ -35,6 +35,11 @@ assumptions, open questions and coverage limitations.
    The system shall allow documentation authors to select any existing Need
    object as the starting object of an embedded view by specifying its ID.
 
+   **Scope clarification (owner, 2026-10-18):** Needs intentionally hidden by
+   the host are excluded from exploration and cannot be used as starting IDs.
+   Their connections are excluded as well; see :doc:`sources` and
+   :need:`STV_SWR_048`. Baseline v1 history is retained.
+
    **Acceptance criterion:** For each Need type in an agreed demonstration project,
    an embedded view seeded with an existing ID of that type displays that object.
 
@@ -280,6 +285,18 @@ assumptions, open questions and coverage limitations.
    with the same information as the full rendered Need object, including its
    displayed metadata and body content, without navigating away from the
    traceability view or configuring a list of tooltip fields.
+
+   **Widget scope clarification (owner, 2026-10-18):** Static rendered text,
+   images and non-executable markup of third-party widgets are sufficient in
+   MVP details; widget-specific JavaScript interaction remains on the original
+   Need page. See :need:`STV_SWR_049` and :doc:`sources`. This clarification
+   preserves baseline v1 history and does not waive STV's own interactions.
+
+   **MVP scope clarification (owner, 2026-10-18):** For an external Need whose
+   full body is not locally rendered, available metadata and the original-object
+   link are sufficient, with a clear "Full details unavailable locally"
+   indication. External pages need not be downloaded or cached. This explicitly
+   agreed exception is recorded in :doc:`sources`; baseline v1 history is retained.
 
    **Review note:** Keyboard access is covered by :need:`STV_SHR_034`; touch
    access is deferred beyond the initial release. Large tooltips are covered

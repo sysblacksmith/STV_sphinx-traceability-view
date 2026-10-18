@@ -199,7 +199,9 @@ Include the pinned ELK source archive and EPL text in the redistribution
 materials, preserve its notices, and avoid modifying vendored ELK source.
 Include MIT/ISC notices for bundled libraries and transitive components from
 the lock. This records the engineering distribution plan; no project license
-has been selected on behalf of the owner. The selected package metadata is
+has been selected on behalf of the owner. The owner explicitly deferred that
+decision on 2026-10-18; implementation can proceed with it unset, and selection
+remains a gate before external distribution. The selected package metadata is
 the source for versions/licenses, not an assertion that every future version
 has the same terms.
 

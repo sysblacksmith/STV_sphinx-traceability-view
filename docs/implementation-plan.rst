@@ -165,7 +165,10 @@ never using Need text as executable source. A fragment is trusted published
 host content, not an authorization to copy executable scripts: remove script
 elements, inline event attributes and executable URL schemes. Preserve
 displayed text, tables, links, images and host metadata. This is not a general
-untrusted-HTML sanitizer or a renderer for arbitrary third-party widgets.
+untrusted-HTML sanitizer. The owner agreed that static rendered widget text,
+images and non-executable markup are sufficient for MVP details; widget-specific
+JavaScript remains on the original page (STV_SWR_049). Do not execute copied
+widget scripts or claim snapshots of content that exists only after script execution.
 
 Store local resource/link targets in output-root-relative form with their
 query/fragment preserved. At insertion, resolve them against the embedding
@@ -180,10 +183,11 @@ page. Details have a loading/error message if a local asset is unavailable.
 When an existing object has no locally rendered body (for example an external
 Need), show all locally available host metadata and its original link with an
 explicit external/unavailable-body indication. Do not fetch external content
-during an offline build or pretend that its full body is present. Full offline
-content parity is verified for locally rendered Needs; external-only or hidden
-objects without a published body remain an explicit baseline-coverage gap,
-not an undocumented claim of satisfying STV_SHR_015 for those objects.
+during an offline build or pretend that its full body is present. For external Needs this metadata/link fallback was explicitly confirmed as
+sufficient for the MVP by the owner; see :need:`STV_SWR_047`. Full-body parity
+applies to locally rendered Needs. Host-hidden Needs and all their incident links are excluded before graph or
+detail serialization; a hidden starting ID fails with source location. Never
+turn a filtered hidden target into a missing-object placeholder.
 
 Graph and state contracts
 -----------------------------
@@ -205,7 +209,8 @@ Group keys are structured triples ``[objectId, relationName, direction]``;
 use nested maps/sets or JSON tuple encoding, not delimiter concatenation that
 can collide with an ID. Canonical edge identity uses the same tuple principle.
 
-The initial state has one shared node. Expanding proposes an added group key;
+Filter hidden objects and their incident links before building directional
+indexes, degree counts or detail manifests. The initial state has one shared node. Expanding proposes an added group key;
 collapsing proposes its removal. Run breadth-first reachability from the seed,
 following only expanded groups owned by reached nodes. Retain previously
 expanded descendant keys while hidden so a reopened branch can restore them,

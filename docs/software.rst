@@ -237,7 +237,7 @@ MVP implementation commitments.
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_DETAIL_BUILD
 
-   The software shall capture the final host-rendered Need representation for each resolved object and make its displayed metadata and body available to details without a separate field whitelist.
+   The software shall capture the final host-rendered Need representation for each locally rendered resolved object and make its displayed metadata and body available to details without a separate field whitelist.
 
    **Acceptance criterion:** A cross-page Need with custom metadata, formatted body and local images has equivalent information in details; hidden internal fields are not exposed.
 
@@ -691,6 +691,10 @@ MVP implementation commitments.
 
    **Acceptance criterion:** Candidate sizes 199 and 200 pass, 201 fails; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
 
+   **Review note:** By owner decision on 2026-10-18, response-time and memory
+   budgets will be agreed after first MVP benchmark measurements; the node cap
+   is mandatory independently of those future budgets.
+
 .. swr:: Reject over-limit transitions atomically
    :id: STV_SWR_044
    :status: draft
@@ -736,3 +740,73 @@ MVP implementation commitments.
 
    **Acceptance criterion:** A separate project enables the installed module and renders a seeded view without repository imports.
 
+
+.. swr:: Inspect external Needs without local full content
+   :id: STV_SWR_047
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/sources.rst :: external Need detail scope confirmation 2026-10-18
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_006
+   :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_INSPECT
+
+   The software shall display available metadata, the original-object link and
+   a "Full details unavailable locally" indication when inspecting an external
+   Need without a locally rendered full body, without downloading or caching
+   external pages.
+
+   **Acceptance criterion:** With external networking disabled, an external Need
+   without local full content has inspectable metadata and the indication. Its
+   original link is available, but opening that external destination is not
+   represented as an offline capability. No external page download is attempted.
+
+.. swr:: Respect host-hidden Need objects
+   :id: STV_SWR_048
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/sources.rst :: hidden Need visibility confirmation 2026-10-18
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_001, STV_SYS_004
+   :allocated_to: STV_SWE_DIRECTIVE, STV_SWE_GRAPH
+
+   The software shall exclude host-hidden Needs and their incident relationships
+   from the published view data and reject a hidden Need used as a starting ID
+   with a source-located build error.
+
+   **Acceptance criterion:** A visible Need tracing to a hidden Need exposes
+   neither the hidden node nor that connection or a missing-target placeholder
+   in the view or generated graph/detail data. A directive seeded with the hidden
+   ID fails with its source filename and invocation location. Visible objects
+   and their other relationships remain explorable.
+
+   **Review note:** Filtering precedes serialization and adjacency generation;
+   hiding a node only in the browser is insufficient. Hidden-object exclusion
+   takes precedence over placeholder creation for genuinely unresolved targets.
+
+.. swr:: Preserve static third-party widget content in details
+   :id: STV_SWR_049
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/sources.rst :: third-party widget scope confirmation 2026-10-18
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_006
+   :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_INSPECT
+
+   The software shall preserve the rendered text, images and non-executable
+   markup of third-party widgets in object details without requiring their
+   widget-specific JavaScript behavior in the MVP, while retaining access to
+   the original Need page for the full interaction.
+
+   **Acceptance criterion:** A fixture with a widget containing static rendered
+   text and an image retains that content in details without executing copied
+   widget scripts. The original-object link opens its documentation page.
+   No interactive parity or generated snapshot of script-only content is claimed.
+
+   **Review note:** This does not remove STV's own keyboard, scrolling or link
+   interactions. Widget-specific JavaScript behavior in details is deferred.

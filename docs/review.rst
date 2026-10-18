@@ -88,6 +88,41 @@ Deferred features - scope resolved
 * Touch interaction, including alternatives to hover: deferred beyond the MVP.
 * Other browsers, Linux and macOS: deferred beyond the MVP.
 * Other Sphinx and Sphinx-Needs versions: deferred beyond the MVP.
+* Widget-specific JavaScript behavior inside details: deferred; static rendered
+  content and original-page navigation are sufficient initially (STV_SWR_049).
+
+Owner design clarification queue
+--------------------------------
+
+The owner requested step-by-step clarification of remaining design decisions.
+The following items require owner input; none is agreed by listing it here:
+
+1. Resolved: external Needs without local full bodies show available metadata,
+   their original link and "Full details unavailable locally"; no external page
+   download/cache is required. See :need:`STV_SWR_047` and the explicit
+   MVP clarification in :need:`STV_SHR_015`. Hidden Need visibility is resolved separately in item 2.
+2. Resolved: host-hidden Needs and incident relationships are excluded before
+   publication, with no missing-target placeholder revealing the hidden ID;
+   hidden seeds fail with a source-located build error. See :need:`STV_SWR_048`.
+3. Resolved: preserve rendered text, images and non-executable widget markup
+   in MVP details; widget-specific JavaScript remains on the original Need page.
+   See :need:`STV_SWR_049` and the scope clarification in :need:`STV_SHR_015`.
+4. Deferred by owner: select the project distribution license later. No license
+   is assigned now. Dependency notices remain part of the packaging design;
+   resolve project licensing before external distribution.
+5. Resolved: measure the first MVP with the planned large-project fixture, then
+   agree response-time and memory budgets from the results. No numeric budgets
+   are assigned now. The hard 200-visible-node limit remains unchanged.
+
+All five queued topics now have an owner decision: items 1, 2, 3 and 5 are
+resolved; project license selection is explicitly deferred. None remains an
+unanswered MVP design question.
+
+Update each item and the affected requirements/ADRs after its answer. Preserve
+stakeholder baseline v1 history; any changed obligation needs explicit revision
+evidence rather than silently inheriting its previous acceptance.
+Implementation checks and deferred occurrence-mode policy are not additional
+MVP owner decisions unless evidence reveals a scope conflict.
 
 Remaining refinement - not blockers for design
 ----------------------------------------------
@@ -100,9 +135,9 @@ architecture work, prototype feedback and later requirement refinement:
 * Resolved in the internal concept: full ID and two-line title clamp.
 * Resolved design behavior: retain external links without fetching/caching
   their destinations; indicate when a full body is unavailable offline. This
-  does not claim full-detail coverage for external/hidden objects without local
-  rendered content.
-* Exact large-project benchmark, relationship density and response-time targets.
+  is the owner-agreed external-object fallback. Hidden objects and their incident relationships are excluded; no full-body parity is claimed for unavailable external bodies.
+* Use the planned 30,000-Need/90,000-edge benchmark for first MVP measurements;
+  agree response-time and memory budgets afterward by owner decision.
 * Later-mode behavior when shared-mode navigation changes saved independent
   occurrence states.
 * Additional accessibility criteria beyond the agreed keyboard workflow.
@@ -117,7 +152,7 @@ Method and coverage
 -------------------
 
 Stakeholder baseline v1 remains accepted. The internal specification now adds
-10 draft system requirements, 46 draft software requirements and proposed
+10 draft system requirements, 49 draft software requirements and proposed
 architecture allocations. These establish structural traceability, not product
 implementation or successful verification. All four ADRs remain proposed.
 The host model may contain test-case and other types beyond the five types used
@@ -153,10 +188,9 @@ Remaining work is implementation and verification, not unspecified architecture:
   and memory acceptance budgets remain unassigned; report measured results.
 * Verify Python 3.10 wheel installation, included assets/notices, changed/deleted
   source rebuilds and the conservative serial-build lifecycle.
-* Full offline-detail parity for external/hidden Needs lacking local published
-  bodies and executable third-party widgets is not established. Record explicit
-  release exceptions or resolve the coverage gap before claiming STV_SHR_015
-  fully passed.
+* The owner accepted metadata/link fallback for external Needs without local
+  bodies. Hidden Needs are excluded; widget-specific JavaScript in details is deferred. Verify the owner-agreed external, hidden-object and static-widget scope
+  against STV_SWR_047 through STV_SWR_049 before claiming STV_SHR_015 coverage.
 * Review internal requirements and proposed ADRs independently of accepted
   stakeholder baseline v1. No implementation or successful product tests exist yet.
 
@@ -165,6 +199,22 @@ start later occurrence mode or silently broaden compatibility in the MVP.
 
 Revision history
 ----------------
+
+- 2026-10-18: Owner agreed to set performance budgets after first MVP
+  measurements, retaining the hard 200-node limit. All queued owner topics
+  are resolved or explicitly deferred.
+
+- 2026-10-18: Owner deferred project license selection; no license was assigned.
+
+- 2026-10-18: Owner confirmed static widget content as sufficient for MVP
+  details; clarified STV_SHR_015 and added STV_SWR_049.
+
+- 2026-10-18: Owner confirmed hidden-object exclusion and hidden-seed rejection;
+  clarified STV_SHR_002 and added STV_SWR_048.
+
+- 2026-10-18: Owner confirmed external-object fallback as sufficient for MVP;
+  clarified STV_SHR_015 scope, refined STV_SYS_006/STV_SWR_015 and added
+  STV_SWR_047. Baseline v1 acceptance history is retained.
 
 - 2026-10-18: Completed the concrete dependency and implementation concept,
   added ADR 004, version/lock artifacts and verification gates, and recorded
