@@ -1,0 +1,43 @@
+"""Project documentation using the live shared requirements method."""
+import os
+from pathlib import Path
+import sys
+
+project = "Interactive Traceability View"
+version = release = "0.1"
+root_doc = "index"
+
+# Select the shared reverse-engineering skill without storing a machine path.
+configured = os.environ.get("REQUIREMENTS_SKILL_DIR")
+candidates = [Path(configured)] if configured else [
+    parent / "#agents" / "skills" / "reverse-engineer-requirements"
+    for parent in Path(__file__).resolve().parents
+] + [Path.home() / ".agents" / "skills" / "reverse-engineer-requirements"]
+skill_dir = next((p for p in candidates if
+                 (p / "scripts" / "traceability_model.py").is_file()
+                 and (p.parent.parent / "method.md").is_file()), None)
+if skill_dir is None:
+    raise RuntimeError("Set REQUIREMENTS_SKILL_DIR to the shared reverse-engineer-requirements skill directory (with its central method.md).")
+
+sys.path.insert(0, str(skill_dir / "scripts"))
+from traceability_model import NEEDS_TYPES, NEEDS_LINKS, NEEDS_FIELDS
+
+extensions = ["sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts"]
+needs_types = NEEDS_TYPES
+needs_links = NEEDS_LINKS
+needs_fields = NEEDS_FIELDS
+needs_build_json = True
+html_theme = "sphinx_rtd_theme"
+html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
+html_css_files = ["wide-layout.css"]
+
+
+def include_shared_method(app, docname, source):
+    if docname == "method":
+        master = skill_dir.parent.parent / "method.md"
+        relative = os.path.relpath(master, app.srcdir).replace(os.sep, "/")
+        source[0] = source[0].replace("@SHARED_REQUIREMENTS_METHOD@", relative)
+
+
+def setup(app):
+    app.connect("source-read", include_shared_method)

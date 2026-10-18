@@ -1,0 +1,6 @@
+# Separate from backend runtime dependencies; Python 3.10+.
+Sphinx==8.1.3
+sphinx-needs[plotting]==8.2.0
+matplotlib==3.10.8
+sphinx-rtd-theme==3.1.0
+myst-parser==4.0.1
