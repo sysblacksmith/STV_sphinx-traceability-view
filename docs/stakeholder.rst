@@ -267,10 +267,10 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Inspect object details on hover
    :id: STV_SHR_015
-   :status: accepted
+   :status: draft
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18; docs/requirement-changes/usability-problems.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -308,6 +308,10 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    by :need:`STV_SHR_033`.
    "All information" refers
    to information displayed by the full Need rendering, not hidden internal data.
+
+   Hover details shall appear after approximately one second of continuous node hover.
+
+   **Additional acceptance criterion:** Brief pointer crossings do not open details; sustained hover opens them around one second later. Explicit Details activation remains immediate.
 
 .. shr:: Open the original Need object in a new tab
    :id: STV_SHR_016
@@ -981,3 +985,45 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    exploration from each and retains all starting objects during collapse.
    Single-ID invocation remains supported; shared-node identity and the
    existing visible-node capacity limit continue to apply.
+
+.. shr:: Keep relationship paths readable
+   :id: STV_SHR_050
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/usability-problems.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The system shall connect facing box edges with direct paths when no intervening box blocks the route, avoiding unnecessary bends.
+
+   **Acceptance criterion:** An unobstructed upward link leaves the child top and enters the parent bottom; unobstructed fan-in links do not detour to an outer lane.
+
+.. shr:: Provide more vertical exploration space
+   :id: STV_SHR_049
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/usability-problems.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The standard view shall provide 1.5 times its previous vertical viewport space.
+
+   **Acceptance criterion:** The viewport is 975 CSS pixels high, compared with the previous 650 pixels; zoom and pan remain available.
+
+.. shr:: Order relationship controls by vertical direction
+   :id: STV_SHR_051
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/problems/problem_5.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The view shall place relationship expansion and collapse controls leading
+   to parents above the node before controls leading to children below it.
+
+   **Acceptance criterion:** A node with upward and downward relationship
+   groups lists upward controls first and downward controls last, both before
+   and after expansion. Other groups remain accessible between them.

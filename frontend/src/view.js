@@ -3,6 +3,7 @@ import {zoom,zoomIdentity} from 'd3-zoom';
 import {initial,visible,transition,groupKey} from './state.js';
 import {compute} from './layout.js';
 import {inspector} from './inspect.js';
+import {orderedGroups} from './groups.js';
 const nodeKey=id=>JSON.stringify(['need',id]);
 const rootKey=JSON.stringify(['project']);
 function element(tag,cls,text) {const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
@@ -16,6 +17,7 @@ export async function mount(root,graph,base,layout=compute) {
   const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('stv-edges');svg.setAttribute('aria-hidden','true');
   scene.append(svg,nodesLayer);viewport.append(scene);root.replaceChildren(toolbar,status,viewport);
   const details=inspector(root,graph,base),nodeElements=new Map();
+  root.addEventListener('keydown',e=>{if(e.key==='Escape')details.close();});
   const zoomer=zoom().scaleExtent([0.15,3]).filter(e=>e.type==='wheel'||(!e.button&&!e.target.closest('article,button,a')))
     .on('zoom',event=>{scene.style.transform=`translate(${event.transform.x}px,${event.transform.y}px) scale(${event.transform.k})`;details.close();});
   select(viewport).call(zoomer).on('dblclick.zoom',null);
@@ -62,8 +64,7 @@ export async function mount(root,graph,base,layout=compute) {
       const link=element('a','stv-summary');link.href=new URL(object.url,base).href;link.target='_blank';link.rel='noopener noreferrer';
       link.append(element('strong','stv-id',id),element('span','stv-title',object.title));node.append(link);
       const controls=element('div','stv-groups');
-      for(const direction of ['outgoing','incoming']) for(const [relation,targets] of Object.entries(graph.adjacency[id]?.[direction]||{})) {
-        if(!targets.length)continue;
+      for(const {direction,relation,targets} of orderedGroups(graph,id)) {
         const key=groupKey(id,relation,direction),open=s.expanded.has(key);
         const label=`${graph.model.relations[relation][direction]} (${direction})`;
         const control=button(`${open?'−':'+'} ${label} (${targets.length})`,()=>update({type:'group',id,relation,direction}),`${open?'Collapse':'Expand'} ${label} for ${id}`);
@@ -72,9 +73,9 @@ export async function mount(root,graph,base,layout=compute) {
       if(!controls.children.length)controls.append(element('span','','No relationships'));
       node.append(controls);
       const inspect=button('Details',()=>details.open(id,inspect,true),`Details for ${id}`);inspect.dataset.focus='details';
-      inspect.onmouseenter=()=>details.open(id,inspect);inspect.onmouseleave=details.schedule;
+      inspect.onmouseenter=()=>details.hover(id,inspect);
       inspect.onkeydown=e=>{if(e.key==='Escape')details.close(true);};
-      node.onmouseenter=()=>details.open(id,inspect);node.onmouseleave=details.schedule;
+      node.onmouseenter=()=>details.hover(id,inspect);node.onmouseleave=details.schedule;
       node.append(inspect);
     }
     return node;

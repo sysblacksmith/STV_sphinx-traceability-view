@@ -1,0 +1,26 @@
+{{REPORT_TITLE}}
+{{REPORT_TITLE_UNDERLINE}}
+
+.. problem_report:: {{REPORT_TITLE}}
+   :id: STV_PR_{{NEXT_UNUSED_NUMBER}}
+   :status: new
+   :basis: owner
+   :evidence: docs/problems/problem_{{SLUG}}.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   **Reporter/date:** {{KNOWN_REPORTER_AND_DATE_OR_UNKNOWN}}
+
+   **Observed behavior:** {{OBSERVATION}}
+
+   **Expected behavior:** {{EXPECTED_OUTCOME}}
+
+   **Reproduction and environment:** {{KNOWN_STEPS_OR_UNKNOWN}}
+
+   **Original report and attachments:** {{PRESERVED_WORDING_AND_RELATIVE_LINKS}}
+
+   **Analysis:** Pending.
+
+   **Disposition and checks:** Pending. Link affected Needs, change/design
+   documents, source changes and actual verification when available. Keep
+   remaining owner review and release limits explicit before marking fixed.

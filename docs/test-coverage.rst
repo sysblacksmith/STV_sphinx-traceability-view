@@ -271,7 +271,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
    * - :need:`STV_SWR_050`
      - A visible object exposes equivalent information through hover and keyboard Details activation. The panel permits keyboard scrolling and dismissal with focus restored to its trigger; new-tab node navigation remains a separate action.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
+     - ``tests/test_browser.py::test_usability_smoke``;
+       ``tests/test_browser.py::test_offline_exploration[file]``;
        ``tests/test_browser.py::test_offline_exploration[http]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
@@ -291,6 +292,18 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
+   * - :need:`STV_SWR_053`
+     - Geometry smoke cases cover upward/downward links, clear fan-in, a blocked skipped level, test-lane links and a self-link, with endpoints on boundaries and no segment crossing a box interior.
+     - ``frontend/test/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours``;
+       ``frontend/test/layout.test.js :: STV_SWR_053: blocked skipped-level edges retain safe detours``
+   * - :need:`STV_SWR_054`
+     - The rendered viewport reports a computed height of 975px.
+     - ``tests/test_browser.py::test_usability_smoke``
+   * - :need:`STV_SWR_055`
+     - Upward incoming and outgoing groups precede neutral and downward groups with stable ties. Replacement level mappings drive the order without relation-name assumptions. Expansion and collapse retain order and the existing keyboard/focus behavior.
+     - ``tests/test_browser.py::test_control_order_smoke``;
+       ``frontend/test/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship``;
+       ``frontend/test/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``tests/test_build.py::test_cross_page_bundle``;
@@ -316,7 +329,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_006`
      - A locally rendered object on another page has equivalent displayed metadata/body in hover or keyboard details and opens at its original anchor from file and HTTP URLs. An external object without a local body shows metadata, its original link and the unavailable-details indication; widget-specific script behavior is not required. Uncached remote embedded media uses the owner-approved unavailable-offline indication and explicit resource link, without automatic retrieval; local bundled media remains available.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+     - ``tests/test_browser.py::test_usability_smoke``;
+       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_007`
      - Expanding, zooming and panning one of two views leaves the other unchanged.
@@ -345,5 +359,6 @@ Executable sources
 * :download:`tests/test_graph.py <../tests/test_graph.py>`
 * :download:`tests/test_model.py <../tests/test_model.py>`
 * :download:`tests/test_package.py <../tests/test_package.py>`
+* :download:`frontend/test/groups.test.js <../frontend/test/groups.test.js>`
 * :download:`frontend/test/layout.test.js <../frontend/test/layout.test.js>`
 * :download:`frontend/test/state.test.js <../frontend/test/state.test.js>`

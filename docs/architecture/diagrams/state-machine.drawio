@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mxfile host="app.diagrams.net">
   <diagram id="behavior" name="Behavior">
-    <mxGraphModel dx="1300" dy="1150" grid="1" page="1" pageWidth="1300" pageHeight="1150">
+    <mxGraphModel dx="1300" dy="1150" grid="1" page="1" pageWidth="1300" pageHeight="1320">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -110,7 +110,30 @@
             <mxGeometry x="950" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="d1" value="hover or keyboard Details" source="closed" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <object id="hover" label="DETAILS: hover pending&#10;1000 ms continuous node hover" link="software.html#STV_SWR_050" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="30" y="1160" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="dh1" value="hover / start timer" source="closed" target="hover" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" x="-0.6" />
+        </mxCell>
+        <mxCell id="dh2" value="cancel hover" source="hover" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="1207" />
+              <mxPoint x="10" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dh3" value="1000 ms or explicit Details" source="hover" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="1207" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1" value="explicit Details / immediate" source="closed" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="d2" value="current token&#10;fragment or error" source="loading" target="open" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">

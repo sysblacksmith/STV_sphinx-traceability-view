@@ -97,7 +97,7 @@ Software module responsibilities and containment within the product system eleme
    :verification_state: not_assessed
    :part_of: STV_SE_BROWSER
 
-   Renders SVG connections and HTML controls/nodes, owns project-root presentation/paging, focus, keyboard operation, status styling and D3 zoom 3.0.0/selection 3.0.0 for view-local pan/zoom. Source: frontend/src/view.js and packaged static/stv.css. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
+   Renders SVG connections and HTML controls/nodes, owns project-root presentation/paging, relationship-control ordering, focus, keyboard operation, status styling and D3 zoom 3.0.0/selection 3.0.0 for view-local pan/zoom. Source: frontend/src/view.js, frontend/src/groups.js and packaged static/stv.css. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
 
 .. swe:: Detail overlay and original links
    :id: STV_SWE_INSPECT

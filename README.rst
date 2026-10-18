@@ -190,6 +190,15 @@ files directly in Firefox.
 No project license has been assigned; resolve that decision before external
 distribution.
 
+User issue handover
+-------------------
+
+Report issues in ``docs/problems/`` and keep screenshots/logs beside the report.
+The folder index and ``report.rst.template`` describe the format; informal text
+is also accepted for normalization by the problem solver. Reports use stable
+``problem_report`` Need IDs and ``new``, ``analyzed``, ``fixed`` states. Fixed
+reports remain in place, with evidence and any pending owner/release review.
+
 Development verification
 ------------------------
 

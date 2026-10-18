@@ -14,10 +14,11 @@ export function loadDetail(graph,id,base) {
   return promises.get(key);
 }
 export function inspector(root,graph,base) {
-  let panel,cleanup,trigger,timer,token=0;
-  const close=(restore=false)=> {token++;clearTimeout(timer);cleanup?.();cleanup=null;panel?.remove();panel=null;
+  let panel,cleanup,trigger,timer,hoverTimer,hoverButton,token=0;
+  const cancelHover=()=> {clearTimeout(hoverTimer);hoverButton=null;};
+  const close=(restore=false)=> {token++;cancelHover();clearTimeout(timer);cleanup?.();cleanup=null;panel?.remove();panel=null;
     trigger?.removeAttribute('aria-controls');if(restore&&trigger?.isConnected)trigger.focus();trigger=null;};
-  const schedule=()=> {clearTimeout(timer);timer=setTimeout(()=>{if(panel&&!panel.matches(':hover')&&!panel.contains(document.activeElement)&&!trigger?.matches(':hover')&&document.activeElement!==trigger)close();},220);};
+  const schedule=()=> {cancelHover();clearTimeout(timer);timer=setTimeout(()=>{if(panel&&!panel.matches(':hover')&&!panel.contains(document.activeElement)&&!trigger?.matches(':hover')&&document.activeElement!==trigger)close();},220);};
   const open=async(id,button,keyboard=false)=> {
     if(trigger===button&&panel) {clearTimeout(timer);if(keyboard)panel.querySelector('button').focus();return;}
     close(); const request=++token;trigger=button;
@@ -57,5 +58,11 @@ export function inspector(root,graph,base) {
       body.replaceChildren(template.content);position();
     }catch(error){if(request===token)body.textContent=error.message;}
   };
-  return {open,close,schedule};
+  const hover=(id,button)=> {
+    clearTimeout(timer);
+    if(trigger===button&&panel || hoverButton===button)return;
+    cancelHover();hoverButton=button;
+    hoverTimer=setTimeout(()=>{hoverButton=null;if(button.isConnected)open(id,button);},1000);
+  };
+  return {open,hover,close,schedule};
 }

@@ -176,3 +176,19 @@ Cover STV_SHR_003/025/026/047/048 and STV_SWR_001/003/007/014/025/026/043/051/05
 
 These are implementation checks to be executed later, not passing runtime
 results established by this documentation update.
+
+Draft usability smoke scope
+---------------------------
+
+For the owner-requested draft increment, execute layout geometry smoke cases
+and ``test_usability_smoke`` under Firefox file URLs. Check facing ports,
+clear fan-in, obstacle detours, 975px computed viewport height, delayed hover,
+departure/Escape cancellation and immediate explicit Details access. Build
+Sphinx with warnings as errors and validate traceability. Full regression,
+capacity, clean-install packaging and release qualification remain deferred
+until owner review; preserve existing suites and historical release evidence.
+
+For :need:`STV_SWR_055`, ``frontend/test/groups.test.js`` checks semantic target
+ordering, stable ties, mixed/same-level/test/missing targets, graph immutability
+and replacement mappings. ``test_control_order_smoke`` checks the rendered
+upward/downward controls and their retained order/state after expansion.

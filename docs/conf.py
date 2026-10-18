@@ -1,5 +1,6 @@
 """Project documentation using the live shared requirements method."""
 from importlib import import_module
+from copy import deepcopy
 import os
 from pathlib import Path
 import sys
@@ -31,6 +32,11 @@ needs_types = traceability_model.NEEDS_TYPES
 needs_links = traceability_model.NEEDS_LINKS
 needs_fields = traceability_model.NEEDS_FIELDS
 needs_build_json = True
+# Reports extend this documentation's host schema. The extension's default
+# five-level preset remains unchanged for existing consumer projects.
+traceability_view_model = deepcopy(import_module('sphinx_traceability_view.model').DEFAULT)
+traceability_view_model['levels'].append('problems')
+traceability_view_model['types']['problem_report'] = {'level': 'problems'}
 html_theme = "sphinx_rtd_theme"
 html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
 html_css_files = ["wide-layout.css"]

@@ -83,3 +83,11 @@ entry index to BUNDLE; STATE selects explicit roots or a project page, and
 LAYOUT/RENDER handle the root band and paging. Component boundaries and drawn
 interfaces remain unchanged. No server, dependency or host Need type is added.
 The authoritative input/state contracts are in :doc:`internal-interfaces`.
+
+Usability routing and inspection
+--------------------------------
+
+Layout owns facing ports, clear direct segments and obstacle detours. Rendering
+owns the 975px viewport; inspection owns delayed hover and cancellation.
+These refinements preserve existing component boundaries and selected libraries;
+see :doc:`requirement-changes/usability-problems` for their draft review scope.

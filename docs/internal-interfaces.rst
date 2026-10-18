@@ -1,7 +1,8 @@
 Internal interfaces and model contract
 ======================================
 
-This is the accepted MVP software design contract. Executed implementation
+This is the MVP software design contract. Draft usability amendments are tracked
+in :doc:`requirement-changes/usability-problems`. Executed implementation
 evidence and remaining verification gaps are linked from :doc:`maturity`.
 Use :doc:`implementation-plan` for lifecycle/module behavior and
 :doc:`technology-stack` for selected dependencies.
@@ -163,3 +164,17 @@ Local resources and permitted data images remain usable; ordinary external
 navigation links remain explicit reader actions. Do not copy remote stylesheets
 or active embedded documents into details. This policy refines STV_SWR_015/017
 and the explicitly amended STV_SHR_015; it does not require a media cache.
+
+Layout and inspection contract
+------------------------------
+
+Relationship controls use configured target levels to order wholly upward
+groups first, neutral groups next and wholly downward groups last. Mixed,
+same-level, test-role and unresolved groups are neutral. Stable ties preserve
+host order. The ordering helper preserves group identity and expansion state.
+
+Direct unobstructed routes use facing box edges; blocked routes retain outer
+corridors and canonical arrow direction. The viewport is 975 CSS pixels high.
+Inspection owns one pending 1000 ms hover timer per view; node departure,
+Escape, scene commit and viewport movement cancel it. Explicit Details
+activation bypasses it. Moving onto the Details button retains the node timer.

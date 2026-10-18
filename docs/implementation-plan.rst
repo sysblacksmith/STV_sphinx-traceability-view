@@ -281,9 +281,12 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    connected artifacts, breaking ties upward; an unconnected test seed uses
    the first band. Stack tests within each band and increase its height to
    avoid overlap. Every shared test remains right of all associated artifacts.
-5. Route final SVG edges from measured ports through empty inter-band corridors
-   and numbered outer lanes beyond all nodes. Backward edges and cycles retain
-   authored arrow direction; same-band links use the gap below that band.
+5. Try a direct segment between facing ports first: top-to-bottom upward,
+   bottom-to-top downward, and facing sides for overlapping vertical ranges.
+   Test against open box interiors. Only blocked routes and self-links use
+   empty inter-band corridors and numbered outer lanes beyond all nodes.
+   Backward edges and cycles retain authored arrow direction; same-band
+   blocked links use the gap below that band.
    Reserve separate lanes for self-links. Recompute routes after semantic
    projection rather than drawing stale ELK paths through moved nodes.
 6. Assert finite coordinates, nonoverlapping node rectangles, rank order,
@@ -297,6 +300,12 @@ claim of optimal layout is explicitly outside the acceptance criteria.
 
 Rendering, viewport and inspection
 --------------------------------------
+
+``frontend/src/groups.js`` supplies ``orderedGroups(graph, id)`` to the renderer.
+Using normalized type levels, order wholly upward target groups before neutral
+and wholly downward groups, independently of incoming/outgoing authorship.
+Mixed, same-level, test-role and unresolved targets are neutral. Stable ties
+preserve host order; expansion/collapse uses unchanged group identities.
 
 An outer view root contains a toolbar, live status region and clipped viewport.
 Inside it, one transformed scene contains an SVG edge layer and positioned HTML
@@ -314,7 +323,11 @@ Buttons expose aria-expanded and meaningful directional names. Stable
 DOM keys preserve focus after relayout; if the focused node disappears, return
 focus to the collapsing control or nearest surviving ancestor, then the toolbar.
 
-Hover and keyboard Details open the same nonmodal detail panel. Floating UI
+The viewport height is 975 CSS pixels. Continuous hover waits 1000 ms before
+opening details; departure cancels the pending timer. Explicit mouse or
+keyboard Details activation opens immediately. Escape, scene commit and
+viewport movement cancel pending hover. Node-to-button movement retains the
+same timer. Hover and keyboard Details open the same nonmodal detail panel. Floating UI
 positions it relative to the node using offset/flip/shift/size; use fixed
 positioning and available viewport dimensions. Keep it open while either trigger
 or panel is hovered/focused, with a short dismissal grace period for pointer

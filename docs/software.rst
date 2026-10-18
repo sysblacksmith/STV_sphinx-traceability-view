@@ -855,13 +855,13 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Open details through hover or keyboard activation
    :id: STV_SWR_050
-   :status: accepted
+   :status: draft
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002
+   :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002; docs/requirement-changes/usability-problems.rst
    :priority: unassigned
-   :verification_state: passed
-   :derives_from: STV_SYS_006, STV_SHR_034
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_006, STV_SHR_034, STV_SHR_015
    :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
 
    The software shall open the same full-detail panel when the reader hovers
@@ -874,8 +874,13 @@ Executable criteria and retained results: :doc:`test-coverage` and
    navigation remains a separate action.
 
    **Rationale:** The system parent carries full-object inspection; direct
-   channeling from STV_SHR_034 refines the software-local keyboard interaction
-   without adding an artificial system-level obligation.
+   channeling from STV_SHR_034 refines keyboard interaction and from STV_SHR_015
+   refines hover timing. These software-local interactions add no system
+   responsibility or interface, so no new system obligation is needed.
+
+   Hover activation shall wait 1000 ms. Leaving the node, dismissal, a scene commit or viewport movement shall cancel pending activation; moving from the node onto its Details button shall not restart the delay. Explicit Details activation shall bypass the delay.
+
+   **Additional acceptance criterion:** No panel appears after a brief hover/departure; one appears after sustained hover. Keyboard activation opens immediately and Escape cancels a pending hover.
 
 .. swr:: Provide the artificial project entry node
    :id: STV_SWR_051
@@ -932,3 +937,64 @@ Executable criteria and retained results: :doc:`test-coverage` and
    paging interaction explicitly chosen by the owner. SYS 008 retains the
    cross-boundary capacity constraint; no new artificial system obligation is
    required for paging controls.
+
+.. swr:: Prefer direct facing-edge routes
+   :id: STV_SWR_053
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/usability-problems.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_050
+   :allocated_to: STV_SWE_LAYOUT
+
+   The software shall test direct facing-edge segments against visible box interiors and use a direct segment when clear. Upward paths use source top and target bottom; downward paths use source bottom and target top. Overlapping vertical ranges use facing horizontal sides. Blocked paths and self-links retain obstacle-avoiding corridor routes.
+
+   **Channeling rationale:** Facing ports and routing are local to the existing
+   browser layout component, with no system responsibility or interface change.
+
+   **Acceptance criterion:** Geometry smoke cases cover upward/downward links, clear fan-in, a blocked skipped level, test-lane links and a self-link, with endpoints on boundaries and no segment crossing a box interior.
+
+.. swr:: Set enlarged standard viewport
+   :id: STV_SWR_054
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/usability-problems.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_049
+   :allocated_to: STV_SWE_RENDER
+
+   The stylesheet shall set the standard viewport height to 975 CSS pixels.
+
+   **Acceptance criterion:** The rendered viewport reports a computed height of 975px.
+
+   **Channeling rationale:** Viewport height is a software-local stylesheet
+   property within the existing renderer, with no additional system obligation.
+
+.. swr:: Order controls using target semantic levels
+   :id: STV_SWR_055
+   :status: draft
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/problems/problem_5.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_051
+   :allocated_to: STV_SWE_RENDER
+
+   The software shall order nonempty relationship controls by the normalized
+   levels of all targets relative to the source: wholly above, neutral, wholly
+   below. Mixed, same-level, unresolved and test-role groups are neutral.
+   Preserve the existing outgoing-then-incoming host order within each category,
+   without changing group identities, labels, membership or expansion state.
+
+   **Acceptance criterion:** Upward incoming and outgoing groups precede neutral
+   and downward groups with stable ties. Replacement level mappings drive the
+   order without relation-name assumptions. Expansion and collapse retain order
+   and the existing keyboard/focus behavior.
+
+   **Channeling rationale:** Control order is software-local presentation within
+   the existing renderer, with no additional system obligation or interface.

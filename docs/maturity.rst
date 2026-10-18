@@ -6,6 +6,19 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+Current draft increment
+-----------------------
+
+The 2026-10-18 usability problem fixes are draft changes awaiting owner review.
+See :doc:`requirement-changes/usability-problems` and :doc:`problems/index`.
+User issue handover now uses first-class problem reports directly in
+``docs/problems/``; the shared lifecycle/template update is recorded in
+:doc:`requirement-changes/problem-report-handover`.
+The fifth report's control-order fix is also a smoke-tested draft awaiting
+owner review; see :doc:`requirement-changes/control-order`.
+Changed requirements return to draft with verification not assessed. Smoke
+checks do not replace full release verification or extend historical acceptance.
+
 Current baseline
 ----------------
 
@@ -20,7 +33,7 @@ Need links, authority, revision identities and evidence.
 The owner accepted the starting-node stakeholder amendment and selected paged
 project-root links. Concept refinement and round-3 review are complete; see
 :doc:`requirement-changes/starting-nodes` and :doc:`concept-reviews/round-3`.
-All current requirements and elements are accepted. Historical review hashes
+The requirements and elements in that historical baseline were accepted. Historical review hashes
 remain snapshots of their respective revisions.
 
 The initial shared-identity MVP is implemented from clean input revision
@@ -101,6 +114,10 @@ Review and lifecycle records
    concept-review
    concept-reviews/documentation-reorganization
    requirement-changes/starting-nodes
+   requirement-changes/usability-problems
+   requirement-changes/problem-report-handover
+   requirement-changes/control-order
+   problems/index
    test-coverage
    test-execution/index
    implementation-review

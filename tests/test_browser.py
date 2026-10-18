@@ -4,8 +4,10 @@ from contextlib import contextmanager
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import os
+import json
 import threading
 import tempfile
+import time
 import subprocess
 import pytest
 from selenium import webdriver
@@ -16,6 +18,51 @@ from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from test_build import build, FIXTURE
+
+
+@pytest.mark.browser
+@pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
+def test_usability_smoke(browser, short_output):
+    """Draft smoke: viewport, hover delay/cancellation and explicit activation."""
+    output = short_output / 'usability'
+    result = build(FIXTURE, output)
+    assert result.returncode == 0, result.stderr
+    browser.get((output / 'index.html').as_uri())
+    wait = WebDriverWait(browser, 10)
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]'))
+    root = browser.find_element(By.CSS_SELECTOR, '.stv-view')
+    viewport = root.find_element(By.CSS_SELECTOR, '.stv-viewport')
+    assert browser.execute_script('return getComputedStyle(arguments[0]).height', viewport) == '975px'
+    node = root.find_element(By.CSS_SELECTOR, '.stv-node')
+    details = node.find_element(By.CSS_SELECTOR, '[data-focus="details"]')
+    toolbar = root.find_element(By.CSS_SELECTOR, '.stv-toolbar button')
+    ActionChains(browser).move_to_element(node).perform()
+    time.sleep(.3)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    ActionChains(browser).move_to_element(toolbar).perform()
+    time.sleep(1.1)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    # Moving onto Details inside the node must retain continuous hover timing.
+    ActionChains(browser).move_to_element(node).perform()
+    time.sleep(.45)
+    ActionChains(browser).move_to_element(details).perform()
+    time.sleep(.15)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+    browser.execute_script("arguments[0].dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))", details)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    ActionChains(browser).move_to_element(toolbar).perform()
+    ActionChains(browser).move_to_element(node).perform()
+    time.sleep(.2)
+    browser.execute_script("arguments[0].dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))", details)
+    time.sleep(1.1)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    browser.execute_script('arguments[0].focus()', details)
+    details.send_keys(Keys.ENTER)
+    assert browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    assert browser.switch_to.active_element == details
 
 
 @contextmanager
@@ -371,3 +418,29 @@ def test_documentation_visuals(browser):
     assert browser.find_elements(By.TAG_NAME,'svg')
     assert len(browser.find_elements(By.TAG_NAME,'a'))>=10
     browser.save_screenshot(str(screenshots/'state-diagram.png'))
+
+
+@pytest.mark.browser
+@pytest.mark.requirements('STV_SWR_055')
+def test_control_order_smoke(browser):
+    published=Path(__file__).parents[1]/'docs/_build/html'
+    browser.get((published/'demo.html').as_uri())
+    wait=WebDriverWait(browser,20)
+    wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+    root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+    def buttons():
+        node=next(n for n in root.find_elements(By.CSS_SELECTOR,'.stv-node')
+                  if n.find_element(By.CSS_SELECTOR,'.stv-id').text=='STV_SWR_001')
+        return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+    def identities():
+        return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
+    expected=[['derives_from','outgoing'],['allocated_to','outgoing']]
+    assert identities()==expected
+    buttons()[0].click()
+    wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+    assert identities()==expected
+    assert buttons()[0].get_attribute('aria-expanded')=='true'
+    buttons()[0].click()
+    wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+    assert identities()==expected
+    assert buttons()[0].get_attribute('aria-expanded')=='false'

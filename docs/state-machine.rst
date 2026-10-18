@@ -9,7 +9,7 @@ remain in :doc:`internal-interfaces`.
 
 .. raw:: html
 
-   <object type="image/svg+xml" data="state-machine.svg" style="width:100%;height:auto;aspect-ratio:1300/1150" aria-label="Build, exploration and detail state transitions">
+   <object type="image/svg+xml" data="state-machine.svg" style="width:100%;height:auto;aspect-ratio:1300/1320" aria-label="Build, exploration and detail state transitions">
      <a href="state-machine.svg">Open behavioral state diagram</a>
    </object>
 
@@ -136,7 +136,20 @@ The project root and missing targets never request details.
      - Guard
      - Action / destination
      - Coverage
-   * - Closed / hover or Details activation
+   * - Closed / node hover
+     - Resolved real Need
+     - Start one 1000 ms timer; hover pending. Entering its Details button
+       retains the timer.
+     - :need:`STV_SWR_050`; ``test_usability_smoke``
+   * - Hover pending / departure, Escape, scene commit or viewport change
+     - Timer pending
+     - Cancel timer; closed, no panel or detail load.
+     - :need:`STV_SWR_050`; ``test_usability_smoke``
+   * - Hover pending / 1000 ms elapsed
+     - Same connected trigger, no cancellation
+     - Open details; loading state.
+     - :need:`STV_SWR_050`; ``test_usability_smoke``
+   * - Closed or hover pending / explicit Details activation
      - Resolved real Need
      - ``open`` creates labeled nonmodal panel and loading message;
        Floating UI owns position/listeners; loading state.

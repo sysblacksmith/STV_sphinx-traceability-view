@@ -1,5 +1,16 @@
 import ELK from 'elkjs/lib/elk.bundled.js';
 const elk = new ELK();
+// Open rectangle intersection: touching a boundary does not obscure a box.
+export function crossesBox(p,q,n) {
+  let low=0,high=1;
+  for(const [axis,min,max] of [[0,n.x,n.x+n.width],[1,n.y,n.y+n.height]]) {
+    const delta=q[axis]-p[axis];
+    if(!delta) {if(p[axis]<=min||p[axis]>=max)return false;continue;}
+    const a=(min-p[axis])/delta,b=(max-p[axis])/delta;
+    low=Math.max(low,Math.min(a,b));high=Math.min(high,Math.max(a,b));
+  }
+  return low<high && high>0 && low<1;
+}
 /** ELK proposes ordering; domain bands own final geometry. */
 export async function compute(graph, visible, boxes) {
   const rootKey = JSON.stringify(['project']);
@@ -58,14 +69,22 @@ export async function compute(graph, visible, boxes) {
     edges.push({edge:[null,'entry',id],source:rootKey,target:JSON.stringify(['need',id])});
   edges.forEach((e,i)=> {
     const a=nodes.get(e.source),b=nodes.get(e.target);
+    const above=b.y+b.height<=a.y,below=a.y+a.height<=b.y;
+    const direct=above?[[a.x+a.width/2,a.y],[b.x+b.width/2,b.y+b.height]]:
+      below?[[a.x+a.width/2,a.y+a.height],[b.x+b.width/2,b.y]]:
+      a.x+a.width<=b.x?[[a.x+a.width,a.y+a.height/2],[b.x,b.y+b.height/2]]:
+      [[a.x,a.y+a.height/2],[b.x+b.width,b.y+b.height/2]];
+    if(e.source!==e.target && ![...nodes.values()].some(n=>crossesBox(...direct,n))) {
+      e.points=direct;return;
+    }
     const corridor=maxRight+32+i*12;
     const isTest=key=>graph.model.types[graph.objects[objects.get(key)]?.type]?.role==='test';
-    const exit=rankBounds.get(ranks.get(e.source)).bottom+12+(i%20)*2;
-    const entry=rankBounds.get(ranks.get(e.target)).top-12-(i%20)*2;
+    const exit=above?rankBounds.get(ranks.get(e.source)).top-12-(i%20)*2:rankBounds.get(ranks.get(e.source)).bottom+12+(i%20)*2;
+    const entry=above?rankBounds.get(ranks.get(e.target)).bottom+12+(i%20)*2:rankBounds.get(ranks.get(e.target)).top-12-(i%20)*2;
     const start=isTest(e.source)?[[a.x+a.width,a.y+a.height/2],[corridor,a.y+a.height/2]]:
-      [[a.x+a.width/2,a.y+a.height],[a.x+a.width/2,exit],[corridor,exit]];
+      [[a.x+a.width/2,above?a.y:a.y+a.height],[a.x+a.width/2,exit],[corridor,exit]];
     const end=isTest(e.target)?[[corridor,b.y+b.height/2],[b.x+b.width,b.y+b.height/2]]:
-      [[corridor,entry],[b.x+b.width/2,entry],[b.x+b.width/2,b.y]];
+      [[corridor,entry],[b.x+b.width/2,entry],[b.x+b.width/2,above?b.y+b.height:b.y]];
     e.points=[...start,...end];
   });
   const rectangles=[...nodes.values()];
