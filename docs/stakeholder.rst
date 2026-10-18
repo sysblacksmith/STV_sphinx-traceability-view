@@ -13,7 +13,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -28,7 +28,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -43,7 +43,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -59,7 +59,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -78,7 +78,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -93,7 +93,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -114,7 +114,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -132,7 +132,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -152,7 +152,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -169,7 +169,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -184,7 +184,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -199,7 +199,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner discussion 2026-10-18
+   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -224,7 +224,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner confirmation of bidirectional navigation 2026-10-18
+   :evidence: docs/sources.rst :: project owner confirmation of bidirectional navigation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -243,7 +243,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner confirmation of replaceable input data model 2026-10-18
+   :evidence: docs/sources.rst :: project owner confirmation of replaceable input data model 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -267,7 +267,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner inspection interaction clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -292,7 +292,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner inspection interaction clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -308,7 +308,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_distribution, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner offline and static hosting confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner offline and static hosting confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -329,7 +329,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_distribution, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner offline and static hosting confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner offline and static hosting confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -346,7 +346,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_later
    :basis: owner
-   :evidence: sources.rst - project owner shared object display selector request 2026-10-18
+   :evidence: docs/sources.rst :: project owner shared object display selector request 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -368,7 +368,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner shared node default confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner shared node default confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -384,7 +384,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_later
    :basis: owner
-   :evidence: sources.rst - project owner exploration state preservation confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner exploration state preservation confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -405,7 +405,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_later
    :basis: owner
-   :evidence: sources.rst - project owner independent occurrence expansion confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner independent occurrence expansion confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -421,7 +421,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_later
    :basis: owner
-   :evidence: sources.rst - project owner union of expanded traces confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner union of expanded traces confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -441,7 +441,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner cycle presentation confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner cycle presentation confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -461,7 +461,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner overlapping path collapse confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner overlapping path collapse confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -481,7 +481,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner invalid starting ID confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner invalid starting ID confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -501,7 +501,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner broken trace responsibility clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner broken trace responsibility clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -525,7 +525,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner missing target placeholder confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner missing target placeholder confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -543,7 +543,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner empty relationship presentation confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner empty relationship presentation confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -562,7 +562,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner artifact color clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner artifact color clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -587,7 +587,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner node border status clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner node border status clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -612,7 +612,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner accepted status mapping confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner accepted status mapping confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -629,7 +629,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner long tooltip behavior confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner long tooltip behavior confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -648,7 +648,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_accessibility, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner keyboard access confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner keyboard access confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -667,7 +667,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner directional trace controls confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner directional trace controls confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -686,7 +686,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner model validation confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner model validation confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -708,7 +708,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner extensible layout levels confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner extensible layout levels confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -732,7 +732,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner multiple independent views confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner multiple independent views confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -752,7 +752,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner zoom and pan confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner zoom and pan confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -769,7 +769,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner zoom and pan confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner zoom and pan confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -786,7 +786,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_compatibility, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner Firefox-only initial browser scope 2026-10-18
+   :evidence: docs/sources.rst :: project owner Firefox-only initial browser scope 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -807,7 +807,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_compatibility, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner initial toolchain confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner initial toolchain confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -827,7 +827,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_capacity, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner project size and view limit clarification 2026-10-18
+   :evidence: docs/sources.rst :: project owner project size and view limit clarification 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -857,7 +857,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_capacity, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner node limit handling confirmation 2026-10-18
+   :evidence: docs/sources.rst :: project owner node limit handling confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -886,7 +886,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_integration, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner MVP and integration decisions 2026-10-18
+   :evidence: docs/sources.rst :: project owner MVP and integration decisions 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -903,7 +903,7 @@ assumptions, open questions and coverage limitations.
    :status: accepted
    :tags: feature_distribution, release_initial
    :basis: owner
-   :evidence: sources.rst - project owner MVP and integration decisions 2026-10-18
+   :evidence: docs/sources.rst :: project owner MVP and integration decisions 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
 

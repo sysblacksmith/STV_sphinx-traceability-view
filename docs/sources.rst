@@ -172,3 +172,24 @@ Approval evidence: explicit instruction in this conversation, "let this be our
 baseline of stkh requirements. set them to accepted".
 This approval establishes requirement acceptance, not verification or downstream
 traceability coverage. Verification states remain not_assessed.
+
+Internal specification source baseline
+--------------------------------------
+
+The owner requested internal system/software specification and architecture
+for sphinx-traceability-view on 2026-10-18. Input: accepted stakeholder baseline
+v1 (STV_SHR_001 through STV_SHR_046), the shared method including channeling,
+and documentation at repository revision 322084f. No product implementation
+exists at this design point. Newly authored design documents are uncommitted
+work relative to that revision; source mappings in element records are proposed.
+
+Technical feasibility references inspected: installed Sphinx-Needs 8.2.0
+``data.py`` exposes ``SphinxNeedsData.get_needs_view``; use is isolated in the
+adapter and requires a pinned-toolchain integration test. Official references:
+
+* `Sphinx extension application API <https://www.sphinx-doc.org/en/master/extdev/appapi.html>`_
+* `Sphinx-Needs 8.2.0 Python API <https://sphinx-needs.readthedocs.io/en/8.2.0/api.html>`_
+
+The live central method is rendered in :doc:`method`. Internal requirements
+are inferred engineering refinements, and ADRs are proposals; no owner approval
+or successful runtime verification is implied by their existence.

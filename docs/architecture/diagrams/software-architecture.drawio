@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="software-architecture" name="software-architecture">
+    <mxGraphModel dx="1200" dy="900" grid="1" page="1" pageWidth="1200" pageHeight="1000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="DIRECTIVE" label="Lifecycle and directives&#10;Invocation and seed validation&#10;STV_SWE_DIRECTIVE" link="elements-software.html#STV_SWE_DIRECTIVE" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="40" y="40" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="MODEL" label="Model normalization&#10;Host types, levels and statuses&#10;STV_SWE_MODEL" link="elements-software.html#STV_SWE_MODEL" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="440" y="40" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="GRAPH" label="Graph adapter&#10;Canonical links and indexes&#10;STV_SWE_GRAPH" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="40" y="240" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="DETAIL_BUILD" label="Detail extraction&#10;Full rendered Need fragments&#10;STV_SWE_DETAIL_BUILD" link="elements-software.html#STV_SWE_DETAIL_BUILD" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="440" y="240" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="BUNDLE" label="Bundle emission&#10;Portable local data and assets&#10;STV_SWE_BUNDLE" link="elements-software.html#STV_SWE_BUNDLE" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="840" y="240" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="STATE" label="Exploration state&#10;Visibility and capacity checks&#10;STV_SWE_STATE" link="elements-software.html#STV_SWE_STATE" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="40" y="480" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="LAYOUT" label="Semantic layout&#10;Ordered levels and test placement&#10;STV_SWE_LAYOUT" link="elements-software.html#STV_SWE_LAYOUT" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="440" y="480" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="RENDER" label="Accessible view&#10;Controls, nodes, zoom and pan&#10;STV_SWE_RENDER" link="elements-software.html#STV_SWE_RENDER" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="440" y="700" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="INSPECT" label="Object inspection&#10;Details and original-object links&#10;STV_SWE_INSPECT" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="840" y="700" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="e0" value="normalized model" edge="1" parent="1" source="MODEL" target="DIRECTIVE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="resolved invocations" edge="1" parent="1" source="DIRECTIVE" target="GRAPH" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="graph and indexes" edge="1" parent="1" source="GRAPH" target="BUNDLE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="detail fragments" edge="1" parent="1" source="DETAIL_BUILD" target="BUNDLE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="immutable bundle" edge="1" parent="1" source="BUNDLE" target="STATE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="visible graph" edge="1" parent="1" source="STATE" target="LAYOUT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="geometry" edge="1" parent="1" source="LAYOUT" target="RENDER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="detail interaction" edge="1" parent="1" source="RENDER" target="INSPECT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="rendered details" edge="1" parent="1" source="BUNDLE" target="INSPECT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

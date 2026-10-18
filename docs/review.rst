@@ -112,15 +112,46 @@ Working assumptions ? not confirmed obligations
 Method and coverage
 -------------------
 
-This is accepted stakeholder baseline v1. No system/software refinement,
-architecture allocation or verification results are claimed.
+Stakeholder baseline v1 remains accepted. The internal specification now adds
+10 draft system requirements, 46 draft software requirements and proposed
+architecture allocations. These establish structural traceability, not product
+implementation or successful verification. All three ADRs remain proposed.
 The host model may contain test-case and other types beyond the five types used
 by this project's requirements documentation. Their visualization uses the
 agreed model integration; no extension of the shared documentation method is
 implied. No high-level scope questions remain blocking design.
 
+Internal design review gaps
+---------------------------
+
+The design is documented in :doc:`architecture-system`,
+:doc:`architecture-software` and :doc:`internal-interfaces`. Open prototype tasks:
+
+* Demonstrate final-rendered Need extraction and URL/ID/media rebasing across
+  documents on the pinned toolchain. Full host rendering, rather than raw field
+  reconstruction, is essential to STV_SHR_015.
+* Verify local classic-script loading and the overlay workflow from file URLs
+  in Firefox/Windows. Static-only operation is designed, not yet demonstrated.
+* Measure the proposed 30,000-Need/90,000-edge fixture; agreed numeric latency
+  and memory budgets are still absent. Payload size grows with project size.
+* Evaluate layout quality with mixed ranks, direct channeling, cycles and
+  shared tests. Geometry and keyboard checks need implementation fixtures.
+* Verify Python 3.10 and record exact release verification environments.
+* Validate incremental regeneration, purge behavior and dependency ordering.
+  Do not claim parallel build safety until it has dedicated validation.
+* Review and accept internal requirements and ADRs separately. Their current
+  draft/proposed state must not inherit stakeholder acceptance.
+
+First vertical slice: install the package in a separate fixture, embed two
+seeded views, follow a cross-page relationship in both directions, inspect its
+full details, and verify local-file operation before adding the remaining MVP
+interactions. Later occurrence mode remains deferred.
+
 Revision history
 ----------------
+
+- 2026-10-18: Added draft internal requirements, proposed system/software
+  elements, architecture diagrams, interfaces and three proposed ADRs.
 
 - 2026-10-18: Project owner accepted STV_SHR_001 through STV_SHR_046 as
   stakeholder requirements baseline v1. All priorities remain unassigned and

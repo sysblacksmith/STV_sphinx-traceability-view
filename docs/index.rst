@@ -1,7 +1,7 @@
-Interactive Traceability View
-=============================
+Sphinx Traceability View
+========================
 
-Accepted stakeholder requirements baseline v1 for a Sphinx-Needs traceability extension (2026-10-18). Downstream requirements and architecture are not yet defined.
+Accepted stakeholder requirements baseline v1 for a Sphinx-Needs traceability extension (2026-10-18). Internal requirements and architecture are drafted for review; implementation and runtime verification remain pending.
 
 Requirement status
 ------------------

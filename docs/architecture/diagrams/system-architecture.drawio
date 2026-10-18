@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="system-architecture" name="system-architecture">
+    <mxGraphModel dx="1200" dy="900" grid="1" page="1" pageWidth="1200" pageHeight="1000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell value="Host Sphinx-Needs project&#10;External: RST, model, Needs" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1" id="host">
+          <mxGeometry x="60" y="40" width="300" height="100" as="geometry" />
+        </mxCell>
+        <object id="build" label="Build integration&#10;Validate, extract and package&#10;STV_SE_BUILD" link="elements-system.html#STV_SE_BUILD" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="60" y="230" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell value="Generated documentation&#10;Graph, full details, local JS/CSS" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1" id="bundle">
+          <mxGeometry x="460" y="230" width="300" height="100" as="geometry" />
+        </mxCell>
+        <object id="browser" label="Browser runtime&#10;Firefox: explore, inspect, navigate&#10;STV_SE_BROWSER" link="elements-system.html#STV_SE_BROWSER" linkTarget="_top">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
+            <mxGeometry x="460" y="450" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="e0" value="resolved host input" edge="1" parent="1" source="host" target="build" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="build output" edge="1" parent="1" source="build" target="bundle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="file URL or static HTTP" edge="1" parent="1" source="bundle" target="browser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

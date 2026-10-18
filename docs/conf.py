@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import sys
 
-project = "Interactive Traceability View"
+project = "Sphinx Traceability View"
 version = release = "0.1"
 root_doc = "index"
 
@@ -32,6 +32,8 @@ needs_build_json = True
 html_theme = "sphinx_rtd_theme"
 html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
 html_css_files = ["wide-layout.css"]
+# Publish linked Draw.io SVGs as standalone interactive documents.
+html_extra_path = ["architecture/diagrams"]
 
 
 def include_shared_method(app, docname, source):
