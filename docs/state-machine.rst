@@ -67,7 +67,8 @@ Exploration lifecycle
 ---------------------
 
 Owner: ``frontend/src/state.js``, ``layout.js`` and ``view.js``. Initial state
-contains all explicit seeds or the collapsed project root. Only seeds or the
+contains all explicit seeds or the project root with its first five stakeholder
+entries. Only seeds or the
 open current project's entry page are reachability roots. Remembered expansions
 of hidden descendants and inactive pages do not create visibility roots.
 The 200-node cap includes missing objects and the synthetic project root.
@@ -90,6 +91,12 @@ The 200-node cap includes missing objects and the synthetic project root.
      - Save outgoing page's expansions into candidate map; restore target
        page's expansions; candidate state.
      - :need:`STV_SWR_052`; project pages Node case
+   * - Committed / confirmed exact Need or Project overview
+     - Existing published non-hidden Need, or explicit overview action
+     - Propose fresh single-seed state or first open five-entry project page;
+       clear candidate expansion/page memory. Invalid input leaves committed
+       state unchanged. Typing and suggestion browsing do not dispatch a change.
+     - :need:`STV_SWR_057`; seed catalog/state and Firefox picker cases
    * - Candidate / capacity validation
      - At most 200 visible nodes
      - ``view.update`` measures staged nodes and calls ``compute``; laying out.
@@ -102,6 +109,8 @@ The 200-node cap includes missing objects and the synthetic project root.
        Preserve the current control within the view; fall back to the initiating
        surviving control if its focused descendant disappears. A late completion
        does not pull focus back after the user has moved outside that view.
+       Seed/overview replacement resets only that view's viewport and retains
+       picker focus; a late prior request cannot restore old exploration.
      - :need:`STV_SWR_008`, :need:`STV_SWR_037`; layout Node case and browser case
    * - Laying out / stale completion
      - Newer request exists
@@ -120,6 +129,11 @@ The 200-node cap includes missing objects and the synthetic project root.
        native focus scrolling is folded into the same D3 transform.
      - :need:`STV_SWR_038`, :need:`STV_SWR_039`, :need:`STV_SWR_040`; browser cases
 
+Layout computes parent child-span centers after semantic rank projection,
+resolves same-band collisions without duplicating shared children, recomputes
+the right-hand test lane and routes final edges. Nonoverlap and semantic ranks
+take precedence over exact centering; see :need:`STV_SWR_056`.
+
 Inspection lifecycle
 --------------------
 
@@ -127,6 +141,9 @@ Owner: ``frontend/src/inspect.js``. Initial and terminal state is closed.
 Each open increments a token; late fragment/position completions cannot insert
 into a different inspection. Promises cache by build identity and Need ID.
 The project root and missing targets never request details.
+Escape cancellation is observed at document scope for each view: pointer hover
+need not move keyboard focus into the view. Existing Details controls retain
+their local focus-restoring dismissal behavior.
 
 .. list-table:: Inspection transitions
    :header-rows: 1

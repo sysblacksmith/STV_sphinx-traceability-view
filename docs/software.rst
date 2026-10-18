@@ -47,20 +47,22 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
+   :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: not_assessed
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
    The software shall initialize each view with every distinct selected seed
-   visible, or only the artificial project node when no seeds were supplied,
+   visible, or the project node and first five stakeholder entries when no
+   seeds were supplied,
    and no expanded relationship keys.
 
    **Acceptance criterion:** One seed produces one node; multiple distinct
    seeds within the capacity limit produce their corresponding nodes; no
-   seeds produces only the project node. Every case has an empty expansion set
-   and no automatically revealed traced objects.
+   seeds produces the project node and at most five stakeholder entries. Every
+   case has an empty ordinary expansion set; project entries are the sole
+   automatic expansion exception.
 
    **Rationale:** Channeling: this is a software-local interaction or presentation obligation with no additional system-boundary impact; a synthetic system requirement is unnecessary.
 
@@ -855,7 +857,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Open details through hover or keyboard activation
    :id: STV_SWR_050
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002; docs/requirement-changes/usability-problems.rst
@@ -887,9 +889,9 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: not_assessed
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_GRAPH, STV_SWE_STATE, STV_SWE_RENDER
 
@@ -902,8 +904,8 @@ Executable criteria and retained results: :doc:`test-coverage` and
    status, original-object link or full-detail overlay, and is placed above
    all configured artifact bands without changing their order.
 
-   **Acceptance criterion:** A seedless fixture initially displays only the
-   project node. Expansion reveals stakeholder requirements through the project-page
+   **Acceptance criterion:** A seedless fixture initially displays the
+   project node and first stakeholder entries through the project-page
    contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible
    during collapse, counts toward the visible-node limit and is distinguished
    from real Needs without a fabricated original-Need link. Replacing the input
@@ -914,20 +916,20 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/requirement-changes/starting-nodes.rst :: project-root pagination decision
+   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: not_assessed
    :derives_from: STV_SHR_047, STV_SYS_008
    :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
 
    The software shall expose all project-root stakeholder entry links through
-   deterministic pages of at most 50 non-hidden top-level Needs, with accessible
+   deterministic pages of at most five non-hidden top-level Needs, with accessible
    Previous/Next controls and page/total information, without relaxing the
    200-visible-node limit or changing ordinary trace-group expansion semantics.
 
-   **Acceptance criterion:** A 201-stakeholder fixture offers five pages and
-   every stakeholder ID appears on exactly one entry page. Initial root
-   expansion reveals at most 50 entries. Page changes retain the project root,
+   **Acceptance criterion:** A 201-stakeholder fixture offers 41 pages and
+   every stakeholder ID appears on exactly one entry page. The initially open
+   root reveals at most five entries. Page changes retain the project root,
    show only the selected page's rooted exploration and restore that page's
    independent accepted expansion state when revisited. Hidden entries and
    Need parts are not listed as top-level stakeholder roots. An empty project
@@ -940,7 +942,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Prefer direct facing-edge routes
    :id: STV_SWR_053
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
@@ -958,7 +960,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Set enlarged standard viewport
    :id: STV_SWR_054
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
@@ -976,7 +978,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Order controls using target semantic levels
    :id: STV_SWR_055
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/problems/problem_5.rst
@@ -998,3 +1000,60 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Channeling rationale:** Control order is software-local presentation within
    the existing renderer, with no additional system obligation or interface.
+
+.. swr:: Center parent boxes with collision-aware semantic placement
+   :id: STV_SWR_056
+   :status: accepted
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_052
+   :allocated_to: STV_SWE_LAYOUT
+
+   After semantic rank projection, layout shall derive each normal parent's
+   desired horizontal center from the leftmost and rightmost boxes of its
+   visible lower-level children, including synthetic project-entry children.
+   It shall resolve competing desired positions deterministically with at least
+   the existing inter-node gap, retain one shared box per Need and preserve
+   level/test-lane constraints before recomputing all edge routes.
+
+   **Acceptance criterion:** A five-child star centers exactly. Competing parents,
+   shared children, cycles, reverse-authored links and isolated nodes preserve
+   finite geometry, nonoverlap, semantic levels, shared identity and safe routes.
+
+   **Channeling rationale:** Horizontal placement is local to the existing
+   browser layout responsibility and adds no system interface or boundary.
+
+.. swr:: Confirm local interactive seeds and restore project overview
+   :id: STV_SWR_057
+   :status: accepted
+   :tags: release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_053
+   :allocated_to: STV_SWE_RENDER, STV_SWE_STATE
+
+   Each renderer shall offer a labelled local ID/title search with keyboard and
+   pointer match selection and explicit confirmation. Matching is case-insensitive;
+   free-text confirmation requires an exact existing ID after trimming. The
+   catalog shall use only the published non-hidden graph and make no requests.
+   Confirmation shall propose a fresh single-seed state; Project overview shall
+   propose a fresh open first project page. Both shall pass capacity and layout
+   checks before replacing only that view's committed scene and exploration.
+   Invalid input or failed layout shall preserve the previous scene/state
+   with a diagnostic. Stale layout completions shall be discarded without
+   overwriting the newer request's state or diagnostic. Successful replacement shall close old details, clear prior
+   expansions/page memory and reset that view's viewport; focus shall remain in
+   its initiating picker control. Unconfirmed typing shall not change the graph.
+
+   **Acceptance criterion:** ID/title search, exact-ID confirmation, keyboard
+   suggestions, invalid/hidden input, empty catalogs, repeated changes, overview
+   return, layout failure/staleness and independent views pass file/HTTP checks.
+   Runtime seed replacement requires neither source edits nor a Sphinx rebuild.
+
+   **Channeling rationale:** Selection and reset operate within the existing
+   browser state/renderer and immutable graph, adding no system obligation.

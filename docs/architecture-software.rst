@@ -25,7 +25,8 @@ Browser sequence
 ----------------
 
 Initialize immutable graph data once per page and separate state per root.
-A command proposes a candidate expansion set, computes visibility from the selected seed set or project entry page,
+A command proposes a candidate expansion set or fresh seed/overview state,
+computes visibility from the selected seed set or project entry page,
 checks the 200-occurrence cap, and commits only on success. Layout receives the
 visible graph and model ranks. Rendering and inspection consume its positions
 without changing graph identities. Zoom and pan affect a per-view transform.
@@ -67,8 +68,8 @@ See :doc:`internal-interfaces`, :doc:`technology-stack`,
 Unit checks target graph normalization, state transitions and geometry
 invariants. Host integration fixtures cover build lifecycle, links and full
 Need content. Browser checks cover file/HTTP behavior, keyboard focus and
-pointer interactions on Firefox/Windows. None have been executed for a runtime
-implementation: the product is not yet implemented.
+pointer interactions on Firefox/Windows. Executed results and remaining
+verification limits are recorded through :doc:`maturity` and :doc:`test-execution/index`.
 
 Diagram source: ``architecture/diagrams/software-architecture.drawio``.
 Edit in Draw.io and export SVG; element boxes link to their Need records.
@@ -84,10 +85,18 @@ LAYOUT/RENDER handle the root band and paging. Component boundaries and drawn
 interfaces remain unchanged. No server, dependency or host Need type is added.
 The authoritative input/state contracts are in :doc:`internal-interfaces`.
 
+Every view exposes local ID/title matching and exact seed confirmation through
+the renderer's ``seeds.js`` helper. STATE proposes fresh seed/overview states;
+the existing capacity/layout commit gate preserves prior exploration on failure.
+Project initialization opens the first five-entry page. LAYOUT centers parents
+toward visible child spans while retaining collision, rank and shared-identity
+constraints. Component connections and dependencies remain unchanged; the
+prototype decision is :ref:`STV_ADR_006`.
+
 Usability routing and inspection
 --------------------------------
 
 Layout owns facing ports, clear direct segments and obstacle detours. Rendering
 owns the 975px viewport; inspection owns delayed hover and cancellation.
 These refinements preserve existing component boundaries and selected libraries;
-see :doc:`requirement-changes/usability-problems` for their draft review scope.
+see :doc:`requirement-changes/usability-problems` for the change scope.

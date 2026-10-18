@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sphinx-traceability-view"
-version = "0.1.0"
+version = "0.2.0"
 description = "Offline interactive views of a Sphinx-Needs traceability graph"
 requires-python = ">=3.10"
 dependencies = ["Sphinx==8.1.3", "sphinx-needs==8.2.0", "beautifulsoup4==4.13.5"]

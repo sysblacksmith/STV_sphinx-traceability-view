@@ -12,6 +12,7 @@ its canonical lifecycle status; review history is in :doc:`maturity`.
    architecture/decisions/STV_ADR_003_state_layout
    architecture/decisions/STV_ADR_004_dependencies
    architecture/decisions/STV_ADR_005_starting_nodes
+   architecture/decisions/STV_ADR_006_interactive_overview
 
 The technology selection is listed directly under Architecture:
 :doc:`technology-stack`. Supporting material is listed under Miscellaneous:

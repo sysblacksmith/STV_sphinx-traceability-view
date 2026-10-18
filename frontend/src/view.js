@@ -1,9 +1,10 @@
 import {select} from 'd3-selection';
 import {zoom,zoomIdentity} from 'd3-zoom';
-import {initial,visible,transition,groupKey} from './state.js';
+import {initial,visible,transition,groupKey,PAGE_SIZE} from './state.js';
 import {compute} from './layout.js';
 import {inspector} from './inspect.js';
 import {orderedGroups} from './groups.js';
+import {seedPicker} from './seeds.js';
 const nodeKey=id=>JSON.stringify(['need',id]);
 const rootKey=JSON.stringify(['project']);
 function element(tag,cls,text) {const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
@@ -17,7 +18,8 @@ export async function mount(root,graph,base,layout=compute) {
   const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('stv-edges');svg.setAttribute('aria-hidden','true');
   scene.append(svg,nodesLayer);viewport.append(scene);root.replaceChildren(toolbar,status,viewport);
   const details=inspector(root,graph,base),nodeElements=new Map();
-  root.addEventListener('keydown',e=>{if(e.key==='Escape')details.close();});
+  // Pointer hover does not move keyboard focus into this root.
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')details.close();});
   const zoomer=zoom().scaleExtent([0.15,3]).filter(e=>e.type==='wheel'||(!e.button&&!e.target.closest('article,button,a')))
     .on('zoom',event=>{scene.style.transform=`translate(${event.transform.x}px,${event.transform.y}px) scale(${event.transform.k})`;details.close();});
   select(viewport).call(zoomer).on('dblclick.zoom',null);
@@ -26,6 +28,7 @@ export async function mount(root,graph,base,layout=compute) {
     ['Pan up',()=>select(viewport).call(zoomer.translateBy,0,100)],['Pan down',()=>select(viewport).call(zoomer.translateBy,0,-100)]])toolbar.append(button(label,action));
   toolbar.append(button('Reset viewport',()=>select(viewport).call(zoomer.transform,home)));
   const retry=button('Retry layout',()=>update(null));retry.hidden=true;toolbar.append(retry);
+  toolbar.prepend(seedPicker(root,graph,id=>update({type:'seed',id}),()=>update({type:'overview'})));
   viewport.addEventListener('focusin',e=> {
     // Native Tab focus can scroll an overflow-hidden element. Fold that motion
     // into the same D3 transform rather than keeping a second viewport offset.
@@ -48,7 +51,7 @@ export async function mount(root,graph,base,layout=compute) {
       else {
         const expand=button(s.rootOpen?'−':'+',()=>update({type:'root'}),'Toggle stakeholder requirements');expand.setAttribute('aria-expanded',String(s.rootOpen));expand.dataset.focus='root';node.append(expand);
         if(s.rootOpen) {
-          const pages=Math.ceil(graph.entries.length/50);
+          const pages=Math.ceil(graph.entries.length/PAGE_SIZE);
           node.append(element('p','',`Page ${s.page+1} of ${pages} / ${graph.entries.length} stakeholder requirements`));
           for(const [label,page] of [['Previous',s.page-1],['Next',s.page+1]]) {
             const unavailable=page<0||page>=pages;
@@ -115,8 +118,12 @@ export async function mount(root,graph,base,layout=compute) {
       const arrow=document.createElementNS(svg.namespaceURI,'path');arrow.setAttribute('d','M 0 0 L 10 5 L 0 10 z');arrow.setAttribute('fill','#536174');marker.append(arrow);defs.append(marker);svg.append(defs);
       for(const edge of geometry.edges){const path=document.createElementNS(svg.namespaceURI,'polyline');path.setAttribute('points',edge.points.map(p=>p.join(',')).join(' '));path.setAttribute('marker-end',`url(#${marker.id})`);const title=document.createElementNS(svg.namespaceURI,'title');title.textContent=edge.edge[1];path.append(title);svg.append(path);}
       scene.style.width=`${geometry.width}px`;scene.style.height=`${geometry.height}px`;
-      home=zoomIdentity.translate(0,30-Math.min(...[...geometry.nodes.values()].map(n=>n.y)));
-      if(!hasCommitted){select(viewport).call(zoomer.transform,home);hasCommitted=true;}
+      const minY=Math.min(...[...geometry.nodes.values()].map(n=>n.y));
+      const scale=Math.max(.15,Math.min(1,(viewport.clientWidth-40)/geometry.width,(viewport.clientHeight-60)/(geometry.height-minY)));
+      home=zoomIdentity.translate((viewport.clientWidth-geometry.width*scale)/2,30-minY*scale).scale(scale);
+      if(!hasCommitted||['seed','overview','page'].includes(command?.type)){
+        viewport.scrollLeft=0;viewport.scrollTop=0;select(viewport).call(zoomer.transform,home);hasCommitted=true;
+      }
       root.dataset.stvRevision=String(state.revision);status.textContent=`${keys.length} visible ${keys.length===1?'node':'nodes'}`;retry.hidden=true;
       if(focusKey&&restoreFocus){const owner=nodeElements.get(focusKey),initiator=nodeElements.get(initiatingKey);const match=owner&&[...owner.querySelectorAll('button,a')].find(e=>e.dataset.focus===focusControl&&!e.disabled);const fallback=initiator&&[...initiator.querySelectorAll('button,a')].find(e=>e.dataset.focus===initiatingControl&&!e.disabled);(match||owner?.querySelector('button,a')||fallback||toolbar.querySelector('button')).focus();}
     }catch(error){if(ticket===request){status.textContent=`Layout failed: ${error.message}`;retry.hidden=false;

@@ -2,15 +2,35 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {compute} from '../src/layout.js';
 const key=id=>JSON.stringify(['need',id]);
-test('STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane', async()=> {
+
+test('STV_SWR_056: parent and project center over five visible children',async()=>{
+ const ids=['P','A','B','C','D','E'];
+ const graph={model:{levels:['parent','child'],types:{p:{level:'parent'},c:{level:'child'}}},objects:Object.fromEntries(ids.map(id=>[id,{type:id==='P'?'p':'c'}]))};
+ const result=await compute(graph,{ids,edges:ids.slice(1).map(id=>[id,'r','P']),project:true,entries:['P']},new Map());
+ const parent=result.nodes.get(key('P')),children=ids.slice(1).map(id=>result.nodes.get(key(id)));
+ const middle=(Math.min(...children.map(n=>n.x))+Math.max(...children.map(n=>n.x+n.width)))/2;
+ assert.equal(parent.x+parent.width/2,middle);
+ const project=result.nodes.get(JSON.stringify(['project']));assert.equal(project.x,parent.x);
+});
+
+test('STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap',async()=>{
+ const graph={model:{levels:['p','c'],types:{p:{level:'p'},c:{level:'c'}}},objects:{P:{type:'p'},Q:{type:'p'},A:{type:'c'}}};
+ const result=await compute(graph,{ids:['P','Q','A'],edges:[['P','r','A'],['Q','r','A']]},new Map());
+ const p=result.nodes.get(key('P')),q=result.nodes.get(key('Q'));
+ assert.equal(result.nodes.size,3);assert.ok(Math.abs(p.x-q.x)>=328);
+});
+test('STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane', async()=> {
   const model={levels:['stakeholder','hardware','system_arch','software','software_arch'],types:{
     goal:{level:'stakeholder'},hardware:{level:'hardware'},system:{level:'system_arch'},software:{level:'software'},module:{level:'software_arch'},test:{role:'test'}}};
   const objects=Object.fromEntries(['goal','hardware','system','software','module','test'].map(type=>[type,{type}]));
-  const edges=[['software','r','goal'],['test','r','goal'],['test','r','software'],['module','r','module']];
+  const edges=[['software','r','goal'],['test','r','goal'],['test','r','software'],['module','r','module'],['test','r','test']];
   const result=await compute({objects,model,entries:['goal']},{ids:Object.keys(objects),edges,project:true},new Map(Object.keys(objects).map(id=>[key(id),160])));
   let previous=result.nodes.get(JSON.stringify(['project']));
   for(const id of ['goal','hardware','system','software','module']) {const node=result.nodes.get(key(id));assert.ok(node.y>previous.y+previous.height);previous=node;}
   const testNode=result.nodes.get(key('test'));
+  const loop=result.edges.find(e=>e.edge[0]==='test'&&e.edge[2]==='test');
+  assert.notDeepEqual(loop.points[0],loop.points.at(-1),'self-link needs distinct ports');
+  assert.ok(new Set(loop.points.map(p=>p[1])).size>1,'self-link needs a visible loop');
   assert.ok(testNode.x>=Math.max(...['goal','hardware','system','software','module'].map(id=>result.nodes.get(key(id)).x+280))+96);
   for(const edge of result.edges) {
     const a=result.nodes.get(edge.source),b=result.nodes.get(edge.target);

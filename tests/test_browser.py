@@ -22,12 +22,18 @@ from test_build import build, FIXTURE
 
 @pytest.mark.browser
 @pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
-def test_usability_smoke(browser, short_output):
-    """Draft smoke: viewport, hover delay/cancellation and explicit activation."""
+@pytest.mark.parametrize('protocol',['file','http'])
+def test_usability_smoke(browser, short_output, protocol):
+    """Viewport, hover lifecycle and explicit activation on both transports."""
     output = short_output / 'usability'
     result = build(FIXTURE, output)
     assert result.returncode == 0, result.stderr
-    browser.get((output / 'index.html').as_uri())
+    with published_url(output,protocol) as url:
+        browser.get(url)
+        _exercise_usability(browser)
+
+
+def _exercise_usability(browser):
     wait = WebDriverWait(browser, 10)
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]'))
     root = browser.find_element(By.CSS_SELECTOR, '.stv-view')
@@ -42,27 +48,49 @@ def test_usability_smoke(browser, short_output):
     ActionChains(browser).move_to_element(toolbar).perform()
     time.sleep(1.1)
     assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
-    # Moving onto Details inside the node must retain continuous hover timing.
-    ActionChains(browser).move_to_element(node).perform()
-    time.sleep(.45)
+    # Measure the actual deadline, independently of WebDriver command latency.
+    browser.execute_script("""
+      window.hoverTimes={};
+      arguments[0].addEventListener('mouseenter',()=>{hoverTimes.node=performance.now()},{once:true});
+      arguments[1].addEventListener('mouseenter',()=>{hoverTimes.button=performance.now()},{once:true});
+      const observer=new MutationObserver(()=>{if(document.querySelector('.stv-detail')){
+        hoverTimes.open=performance.now();observer.disconnect();}});
+      observer.observe(document.body,{childList:true});
+    """,node,details)
+    ActionChains(browser).move_to_element_with_offset(node,-node.size['width']/2+8,-node.size['height']/2+8).perform()
+    time.sleep(.5)
     ActionChains(browser).move_to_element(details).perform()
-    time.sleep(.15)
-    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
     wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
-    browser.execute_script("arguments[0].dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))", details)
-    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    times=browser.execute_script('return hoverTimes')
+    assert 950 <= times['open']-times['node'] < 1500, times
+    assert 0 <= times['open']-times['button'] < 850, times
+    # Hover did not focus the view: real Escape must still dismiss it.
+    browser.execute_script('document.body.tabIndex=-1;document.body.focus()')
+    browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+    assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
     ActionChains(browser).move_to_element(toolbar).perform()
     ActionChains(browser).move_to_element(node).perform()
     time.sleep(.2)
-    browser.execute_script("arguments[0].dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))", details)
+    browser.switch_to.active_element.send_keys(Keys.ESCAPE)
     time.sleep(1.1)
-    assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
     browser.execute_script('arguments[0].focus()', details)
     details.send_keys(Keys.ENTER)
     assert browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
     browser.switch_to.active_element.send_keys(Keys.ESCAPE)
     assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
     assert browser.switch_to.active_element == details
+    # Last, test each cancellation from the same reset viewport, with no
+    # pointer departure after the action masking whether it cancels the timer.
+    for selector in ('[aria-label="Pan right"]','.stv-groups button'):
+        browser.execute_script("arguments[0].querySelector('[aria-label=\"Reset viewport\"]').click()",root)
+        ActionChains(browser).move_to_element(toolbar).perform()
+        ActionChains(browser).move_to_element(node).perform()
+        time.sleep(.2)
+        browser.execute_script('arguments[0].querySelector(arguments[1]).click()',root,selector)
+        wait.until(lambda d:root.get_attribute('aria-busy')=='false')
+        time.sleep(1.1)
+        assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
 
 
 @contextmanager
@@ -129,12 +157,12 @@ def test_offline_exploration(browser, short_output, protocol):
         wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
         roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
         assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
-        assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+        assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
         root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
         browser.execute_script("arguments[0].focus()", root_button)
         root_button.send_keys(Keys.ENTER)
         wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
-        assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+        assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
         assert roots[0].get_attribute("data-stv-revision") == "0"
         inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
         browser.execute_script("arguments[0].focus()", inspect)
@@ -170,7 +198,10 @@ def test_offline_exploration(browser, short_output, protocol):
         viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
         scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
         before_drag=scene.get_attribute('style')
-        ActionChains(browser).move_to_element_with_offset(viewport,viewport.size['width']/2-20,viewport.size['height']/2-20).click_and_hold().move_by_offset(-80,-60).release().perform()
+        x,y=browser.execute_script('const r=arguments[0].getBoundingClientRect();return [Math.min(r.right,innerWidth)-20,Math.min(r.bottom,innerHeight)-20]',viewport)
+        drag=ActionChains(browser)
+        drag.w3c_actions.pointer_action.move_to_location(x,y)
+        drag.click_and_hold().move_by_offset(-80,-60).release().perform()
         wait.until(lambda d:scene.get_attribute('style')!=before_drag)
         before_wheel=scene.get_attribute('style')
         ActionChains(browser).scroll_from_origin(ScrollOrigin.from_element(viewport),0,-120).perform()
@@ -226,25 +257,52 @@ def test_project_paging(browser,short_output,protocol):
         _assert_project_pages(browser)
 
 
+@pytest.mark.browser
+@pytest.mark.requirements('STV_SWR_056','STV_SWR_057','STV_SWR_038')
+@pytest.mark.parametrize('protocol',['file','http'])
+def test_interactive_seed_smoke(browser,short_output,protocol):
+    output=short_output/'seed-picker';result=build(FIXTURE,output)
+    assert result.returncode==0,result.stderr
+    with published_url(output,protocol) as url:
+        browser.get(url);wait=WebDriverWait(browser,20)
+        wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+        roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+        field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+        field.send_keys('missing');field.send_keys(Keys.ENTER)
+        assert field.get_attribute('aria-invalid')=='true'
+        assert root.get_attribute('data-stv-revision')=='0'
+        field.clear();field.send_keys('software detail')
+        wait.until(lambda d:root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').is_displayed())
+        assert 'LEAF_B' in root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').text
+        field.send_keys(Keys.ARROW_DOWN);field.send_keys(Keys.ENTER)
+        wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+        assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['LEAF_B']
+        assert roots[1].get_attribute('data-stv-revision')=='0'
+        root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+        wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+        assert len(root.find_elements(By.CSS_SELECTOR,'.stv-project'))==1
+        assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['ROOT_A']
+        centers=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=>parseFloat(n.style.left)+n.offsetWidth/2)",root)
+        assert abs(centers[0]-centers[1])<1
+
+
 def _assert_project_pages(browser):
     wait=WebDriverWait(browser,30)
     wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
     root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
     assert root.find_element(By.CSS_SELECTOR,'.stv-project strong').text=='STV <Example>'
     assert not root.find_elements(By.CSS_SELECTOR,'.stv-project a,.stv-project [data-focus="details"]')
-    root.find_element(By.CSS_SELECTOR,'[data-focus="root"]').click()
-    wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
     found=[]
-    for page in range(5):
+    for page in range(41):
         found.extend(e.get_attribute('textContent') for e in root.find_elements(By.CSS_SELECTOR,'.stv-id'))
-        assert f'Page {page+1} of 5 / 201' in root.find_element(By.CSS_SELECTOR,'.stv-project').text
+        assert f'Page {page+1} of 41 / 201' in root.find_element(By.CSS_SELECTOR,'.stv-project').text
         previous=root.find_element(By.CSS_SELECTOR,'[data-focus="Previous"]')
         assert previous.get_attribute('aria-disabled') == str(page==0).lower()
         next_button=root.find_element(By.CSS_SELECTOR,'[data-focus="Next"]')
-        assert next_button.get_attribute('aria-disabled') == str(page==4).lower()
-        if page<4:
+        assert next_button.get_attribute('aria-disabled') == str(page==40).lower()
+        if page<40:
             browser.execute_script('arguments[0].focus()',next_button);next_button.send_keys(Keys.ENTER)
-            wait.until(lambda d:root.get_attribute('data-stv-revision')==str(page+2))
+            wait.until(lambda d:root.get_attribute('data-stv-revision')==str(page+1))
             assert browser.switch_to.active_element.get_attribute('data-focus') == 'Next'
     assert len(found)==len(set(found))==201
     assert root.find_element(By.CSS_SELECTOR,'[data-focus="Next"]').get_attribute('aria-disabled')=='true'
@@ -418,13 +476,28 @@ def test_documentation_visuals(browser):
     assert browser.find_elements(By.TAG_NAME,'svg')
     assert len(browser.find_elements(By.TAG_NAME,'a'))>=10
     browser.save_screenshot(str(screenshots/'state-diagram.png'))
+    for name in ('system-architecture','software-architecture'):
+        browser.get((published/(name+'.svg')).as_uri())
+        assert browser.find_elements(By.TAG_NAME,'svg')
+        assert browser.find_elements(By.TAG_NAME,'a')
+        browser.save_screenshot(str(screenshots/(name+'.png')))
+        page='architecture-system' if name.startswith('system') else 'architecture-software'
+        browser.get((published/(page+'.html')).as_uri())
+        assert browser.find_element(By.CSS_SELECTOR,'object[type="image/svg+xml"]')
+        browser.save_screenshot(str(screenshots/(page+'-page.png')))
 
 
 @pytest.mark.browser
 @pytest.mark.requirements('STV_SWR_055')
-def test_control_order_smoke(browser):
+@pytest.mark.parametrize('protocol',['file','http'])
+def test_control_order_smoke(browser,protocol):
     published=Path(__file__).parents[1]/'docs/_build/html'
-    browser.get((published/'demo.html').as_uri())
+    with published_url(published,protocol) as url:
+        browser.get(url.rsplit('/',1)[0]+'/demo.html')
+        _exercise_control_order(browser)
+
+
+def _exercise_control_order(browser):
     wait=WebDriverWait(browser,20)
     wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
     root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]

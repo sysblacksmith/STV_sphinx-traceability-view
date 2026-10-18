@@ -161,7 +161,7 @@ Cover STV_SHR_003/025/026/047/048 and STV_SWR_001/003/007/014/025/026/043/051/05
 * Replace stakeholder type names and use multiple stakeholder types. Missing
   designation fails only for seedless invocations; zero visible stakeholder
   Needs is valid. Exclude hidden Needs and parts from entry lists.
-* For 0/1/50/51/199/200/201 stakeholder Needs, verify deterministic pages of 50,
+* For 0/1/5/6/10/11/199/200/201 stakeholder Needs, verify deterministic pages of five,
   total counts, page bounds and every entry available exactly once. Check
   keyboard/mouse paging, focus retention, empty-state text, independent saved
   page exploration, collapse/reopen, stale layout results and layout errors.
@@ -177,8 +177,32 @@ Cover STV_SHR_003/025/026/047/048 and STV_SWR_001/003/007/014/025/026/043/051/05
 These are implementation checks to be executed later, not passing runtime
 results established by this documentation update.
 
-Draft usability smoke scope
----------------------------
+Centered-layout and picker MVP checks
+-------------------------------------
+
+For :need:`STV_SWR_056`, verify exact centering of one parent over five children,
+reverse-authored lower/upper relationships, synthetic root entries, competing
+parents, shared children, isolated nodes and cycles. Assert finite nonoverlapping
+boxes, semantic ranks, right-side test placement, retained shared identity and
+final routes avoiding all box interiors after centering.
+
+For :need:`STV_SWR_057`, verify case-insensitive ID/title substring matching,
+ten-result bounds with total/refine information, exact case-sensitive ID entry,
+keyboard Up/Down/Enter/Escape and pointer confirmation. Exercise originally
+seeded and seedless views, invalid/hidden/unmatched/empty input, empty catalogs,
+repeated replacement, independent views and return to first open overview.
+Typing alone must preserve state. Failed/stale layout must preserve the prior
+scene, viewport and exploration; success resets only that view's expansions,
+page memory and viewport with usable focus. Test Firefox file and HTTP output
+with external requests blocked. Confirm hidden IDs/titles never enter matches.
+
+The MVP increment used focused Node and browser smoke checks. Owner inspection
+and concept acceptance are complete; see :doc:`concept-reviews/round-6`.
+Full release qualification remains a separate execution gate; the retained
+failed release candidate remains historical evidence.
+
+Historical draft smoke scope
+----------------------------------------
 
 For the owner-requested draft increment, execute layout geometry smoke cases
 and ``test_usability_smoke`` under Firefox file URLs. Check facing ports,
@@ -187,6 +211,14 @@ departure/Escape cancellation and immediate explicit Details access. Build
 Sphinx with warnings as errors and validate traceability. Full regression,
 capacity, clean-install packaging and release qualification remain deferred
 until owner review; preserve existing suites and historical release evidence.
+
+Before the centered-layout/picker amendment, the owner authorized v0.2.0 full
+qualification, superseding the original smoke-only limit. That execution is
+retained; the new MVP inspection gate is now closed. For full qualification,
+run the complete Python and Node suites, file and static-HTTP Firefox workflows,
+30,000-object/90,000-edge capacity measurements, isolated consumer wheel build,
+documentation/traceability and diagram-publication checks. Retain a consolidated
+versioned execution record including actual failures/retests and candidate hashes.
 
 For :need:`STV_SWR_055`, ``frontend/test/groups.test.js`` checks semantic target
 ordering, stable ties, mixed/same-level/test/missing targets, graph immutability

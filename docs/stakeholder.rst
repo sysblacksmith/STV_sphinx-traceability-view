@@ -43,17 +43,19 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: docs/sources.rst :: project owner discussion 2026-10-18
+   :evidence: docs/sources.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 
    The system shall initially display only the selected starting objects, or
-   the artificial project node when no IDs are supplied, with their linked
-   objects collapsed.
+   the artificial project node and its first page of at most five stakeholder
+   requirements when no IDs are supplied. Ordinary traced relationships shall
+   initially remain collapsed.
 
    **Acceptance criterion:** A single-seed view initially shows that object;
-   a multi-seed view shows all selected objects; a seedless view shows only the
-   project node. Linked objects are revealed only through expansion controls.
+   a multi-seed view shows all selected objects; a seedless view shows the
+   project node plus its first five visible stakeholder requirements, or all
+   available entries if fewer exist. No ordinary trace is initially expanded.
 
 .. shr:: Offer expansion by traceability type
    :id: STV_SHR_004
@@ -267,7 +269,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Inspect object details on hover
    :id: STV_SHR_015
-   :status: draft
+   :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18; docs/requirement-changes/usability-problems.rst
@@ -950,7 +952,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -958,10 +960,11 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    labelled with the documentation project's name, from which every non-hidden
    stakeholder requirement is linked and can be explored interactively.
 
-   **Acceptance criterion:** Omitting seed IDs shows a project-named node.
-   Its expansion control reveals stakeholder requirements, using pages when
-   needed to stay within the visible-node limit, and permits further
-   trace navigation using the existing expansion/collapse behavior. Hidden
+   **Acceptance criterion:** Omitting seed IDs immediately shows a project-named
+   node and its first page of at most five non-hidden stakeholder requirements.
+   Previous/Next controls expose every further entry in deterministic pages of
+   at most five. The project group can be collapsed and reopened; ordinary
+   traces retain existing expansion/collapse behavior. Hidden
    requirements remain excluded. The artificial node is a view entry point,
    not a new Need object in the host documentation. Paging the project-root
    links for large projects was explicitly selected by the owner; ordinary
@@ -988,7 +991,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Keep relationship paths readable
    :id: STV_SHR_050
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
@@ -1001,7 +1004,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Provide more vertical exploration space
    :id: STV_SHR_049
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/requirement-changes/usability-problems.rst
@@ -1014,7 +1017,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Order relationship controls by vertical direction
    :id: STV_SHR_051
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/problems/problem_5.rst
@@ -1027,3 +1030,45 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    **Acceptance criterion:** A node with upward and downward relationship
    groups lists upward controls first and downward controls last, both before
    and after expansion. Other groups remain accessible between them.
+
+.. shr:: Center parents over their visible children
+   :id: STV_SHR_052
+   :status: accepted
+   :tags: feature_layout, release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The view shall center each parent over the horizontal span of its visible
+   children where this can be achieved without overlapping nodes or changing
+   semantic levels. Collision avoidance takes precedence where shared children
+   or competing parents prevent simultaneous exact centering.
+
+   **Acceptance criterion:** One parent of five equally spaced children aligns
+   above the middle child. Multiple-parent and shared-child fixtures retain one
+   node per Need, nonoverlapping boxes and semantic levels; constrained parents
+   remain as near their child-span centers as collision avoidance permits.
+
+.. shr:: Select a starting object interactively in every view
+   :id: STV_SHR_053
+   :status: accepted
+   :tags: feature_navigation, release_initial
+   :basis: owner
+   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Every view shall let readers find existing non-hidden Needs by ID or title
+   and explicitly confirm one exact Need as its new starting object. Successful
+   selection shall replace only that view's exploration with the chosen object
+   and collapsed traces. Invalid or unconfirmed input shall preserve the view.
+   A Project overview action shall return that view to the initial project node
+   and first stakeholder page without editing RST or rebuilding documentation.
+
+   **Acceptance criterion:** ID/title matching, keyboard and pointer selection
+   work offline in both originally seeded and seedless views. Confirming a
+   match or an exact existing ID replaces only that view; typing, invalid IDs,
+   hidden IDs and unmatched text leave its committed exploration unchanged.
+   Returning to overview shows the project plus its first five stakeholder
+   requirements and leaves other views unchanged.

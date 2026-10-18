@@ -1,7 +1,7 @@
 Internal interfaces and model contract
 ======================================
 
-This is the MVP software design contract. Draft usability amendments are tracked
+This is the MVP software design contract. Usability amendments are tracked
 in :doc:`requirement-changes/usability-problems`. Executed implementation
 evidence and remaining verification gaps are linked from :doc:`maturity`.
 Use :doc:`implementation-plan` for lifecycle/module behavior and
@@ -29,7 +29,8 @@ Commas are not separators. Each token must resolve after host collection,
 including supported visible Need parts. Unknown/hidden tokens fail the whole
 invocation with source location. More than 200 distinct explicit seeds is an
 invocation-located capacity error. Exactly 200 is valid but leaves no room for
-additional nodes until the view's selected seeds change in the RST source.
+additional nodes until runtime selection replaces that view's seed set or its
+author changes the RST defaults.
 Instance identity is generated from source document and invocation index.
 No project node is added for explicit seeds, and no edges are opened initially.
 
@@ -120,18 +121,32 @@ State interface
 
 Input: immutable graph/model, current view state and a command. Output: either
 new state plus visible graph, or unchanged state plus a diagnostic. Commands
-include expand/collapse group, open/close details, zoom and pan; the later
+include expand/collapse group, replace seed, project overview, open/close
+details, zoom and pan; the later
 selector adds mode projection. Graph state is separate from viewport state.
 A rejected cap transition cannot partially update graph, mode, page or focus.
-Seed mode retains every distinct supplied seed as a visibility root. Project
+Seed mode retains every distinct supplied seed as a visibility root until an
+explicit runtime seed or overview replacement succeeds. Project
 mode retains its synthetic root and follows only the current stakeholder entry
 page when expanded. Each page owns an independent expansion-key set; inactive
-pages contribute neither visible nodes nor traversal roots. Page size is 50,
+pages contribute neither visible nodes nor traversal roots. Page size is five,
 with IDs sorted lexicographically. Previous/Next selects an adjacent valid page,
 restores its saved valid exploration state, then uses normal cap/layout checks
-before atomic commit. Page zero starts collapsed; first root expansion opens
-its first 50 entries. Root collapse retains the page index and page state but
+before atomic commit. Project mode initially opens page zero and at most five
+entries. Root collapse retains the page index and page state but
 hides every descendant. Empty lists have no root expansion or page controls.
+
+Every view includes a labelled picker over its immutable published object
+catalog. Case-insensitive substring matching searches IDs and titles; show
+at most ten suggestions with the total and a refine-search hint. Confirmation
+of a suggestion or case-sensitive exact trimmed ID proposes fresh seed mode.
+Unconfirmed typing and invalid/hidden IDs cannot change graph state. Keyboard
+Up/Down selects a suggestion; Enter confirms; Escape dismisses suggestions.
+Project overview proposes fresh project mode with page zero open. Both commands
+clear previous expansions/page memory only on successful capacity/layout commit,
+reset that view's viewport and close old details. Preserve picker focus and
+other instances. Failed/stale transitions preserve the committed scene/state.
+No runtime graph fetching, source edit or rebuild is involved.
 
 Capacity and performance
 ------------------------
@@ -178,3 +193,4 @@ corridors and canonical arrow direction. The viewport is 975 CSS pixels high.
 Inspection owns one pending 1000 ms hover timer per view; node departure,
 Escape, scene commit and viewport movement cancel it. Explicit Details
 activation bypasses it. Moving onto the Details button retains the node timer.
+Escape is observed even when keyboard focus is outside the hovered view.

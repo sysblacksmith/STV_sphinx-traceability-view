@@ -104,4 +104,4 @@ def setup(app):
     app.connect("write-started", prepare, priority=800)
     app.connect("html-page-context", context)
     app.connect("build-finished", finish, priority=900)
-    return {"version": "0.1.0", "parallel_read_safe": False, "parallel_write_safe": False}
+    return {"version": "0.2.0", "parallel_read_safe": False, "parallel_write_safe": False}

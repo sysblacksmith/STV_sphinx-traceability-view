@@ -45,39 +45,44 @@ test('STV_SWR_024: self-loop terminates and collapse restores the only seed',()=
 });
 test('STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root', () => {
   const entries=Array.from({length:201},(_,i)=>String(i).padStart(3,'0'));
-  const g=graph([['000','r','child'],['050','r','other']],entries);
-  let s=initial(); assert.equal(visible(g,s).ids.length,0);
-  s=transition(g,s,{type:'root'}).state; assert.equal(visible(g,s).ids.length,50);
+  const g=graph([['000','r','child'],['005','r','other']],entries);
+  let s=initial(); assert.equal(visible(g,s).ids.length,5);
   s=toggle(g,s,'000');
   s=transition(g,s,{type:'page',page:1}).state; assert.ok(!visible(g,s).ids.includes('child'));
-  s=toggle(g,s,'050'); s=transition(g,s,{type:'page',page:0}).state;
+  s=toggle(g,s,'005'); s=transition(g,s,{type:'page',page:0}).state;
   assert.ok(visible(g,s).ids.includes('child')); assert.ok(!visible(g,s).ids.includes('other'));
   s=transition(g,s,{type:'root'}).state; assert.equal(visible(g,s).ids.length,0);
   s=transition(g,s,{type:'root'}).state; assert.ok(visible(g,s).ids.includes('child'));
-  const all=[]; for(let page=0;page<5;page++) {s=transition(g,s,{type:'page',page}).state; all.push(...visible(g,s).ids.filter(i=>entries.includes(i)));}
+  const all=[]; for(let page=0;page<41;page++) {s=transition(g,s,{type:'page',page}).state; all.push(...visible(g,s).ids.filter(i=>entries.includes(i)));}
   assert.equal(new Set(all).size,201);
   assert.notEqual(groupKey('a,b','c','incoming'),groupKey('a','b,c','incoming'));
 });
 test('STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges',()=> {
   const g=graph([['000','r','050']],Array.from({length:51},(_,i)=>String(i).padStart(3,'0')));
-  let s=transition(g,initial(),{type:'root'}).state;s=toggle(g,s,'000');
+  let s=initial();s=toggle(g,s,'000');
   const v=visible(g,s);assert.ok(v.ids.includes('050'));assert.ok(!v.entries.includes('050'));
-  assert.equal(v.entries.length,50);
+  assert.equal(v.entries.length,5);
 });
 test('STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views',()=> {
-  for(const size of [0,1,50,51,199,200,201]) {
+  for(const size of [0,1,5,6,199,200,201]) {
     const entries=Array.from({length:size},(_,i)=>String(i).padStart(3,'0')),g=graph([],entries),fresh=initial();
     const opened=transition(g,fresh,{type:'root'});
     if(!size){assert.equal(opened.state,fresh);assert.match(opened.error,/No stakeholder/);continue;}
-    let s=opened.state;const seen=[];
-    for(let page=0;page<Math.ceil(size/50);page++) {s=transition(g,s,{type:'page',page}).state;seen.push(...visible(g,s).entries);assert.ok(visible(g,s).ids.length<=50);}
-    assert.deepEqual(seen,entries);assert.equal(fresh.rootOpen,false);
-    const rejected=transition(g,s,{type:'page',page:Math.ceil(size/50)});assert.equal(rejected.state,s);
+    let s=fresh;const seen=[];
+    for(let page=0;page<Math.ceil(size/5);page++) {s=transition(g,s,{type:'page',page}).state;seen.push(...visible(g,s).entries);assert.ok(visible(g,s).ids.length<=5);}
+    assert.deepEqual(seen,entries);assert.equal(fresh.rootOpen,true);
+    const rejected=transition(g,s,{type:'page',page:Math.ceil(size/5)});assert.equal(rejected.state,s);
   }
   for(const total of [199,200,201]) {
     const entries=['A'],g=graph(Array.from({length:total-2},(_,i)=>['A','r','child'+i]),entries);
-    const s=transition(g,initial(),{type:'root'}).state;
+    const s=initial();
     const result=transition(g,s,{type:'group',id:'A',relation:'r',direction:'outgoing'});
     if(total<=200)assert.equal(result.graph.ids.length+1,total);else assert.equal(result.state,s);
   }
 });
+ test('STV_SWR_057: runtime reseeding is atomic and clears exploration',()=>{
+ const g=graph([['A','r','B']],['A','B']);g.objects={A:{},B:{}};
+ let s=toggle(g,initial(),'A');assert.equal(transition(g,s,{type:'seed',id:'unknown'}).state,s);
+ s=transition(g,s,{type:'seed',id:' B '}).state;assert.deepEqual(visible(g,s).ids,['B']);assert.equal(s.expanded.size,0);
+ s=transition(g,s,{type:'overview'}).state;assert.equal(s.page,0);assert.deepEqual(visible(g,s).entries,['A','B']);
+ });

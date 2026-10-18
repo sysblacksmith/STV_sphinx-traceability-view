@@ -56,7 +56,7 @@
             <mxGeometry x="950" y="450" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="v1" value="group/root toggle&#10;or page change" source="committed" target="candidate" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="v1" value="group/root toggle, page,&#10;confirmed seed or overview" source="committed" target="candidate" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="v2" value="valid complete candidate" source="candidate" target="layout" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
@@ -70,7 +70,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4" value="valid current result / commit + owned focus + initial alignment" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="v4" value="current result / commit; fit initial, seed, overview or page" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="670" />
@@ -92,6 +92,19 @@
               <mxPoint x="340" y="497" />
               <mxPoint x="340" y="370" />
               <mxPoint x="160" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object id="seedinput" label="SEED INPUT: editing / matches&#10;invalid ID retains committed view" link="software.html#STV_SWR_057" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="950" y="230" width="260" height="95" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="s1" value="exact existing ID / fresh single seed" source="seedinput" target="candidate" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="400" />
+              <mxPoint x="620" y="400" />
             </Array>
           </mxGeometry>
         </mxCell>

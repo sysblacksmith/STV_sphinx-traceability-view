@@ -283,3 +283,42 @@ guidance in concept-creation and concept-review. This explicitly amends the
 inspection scope of STV_SHR_015, preserving baseline v1 history. Round 2
 continues the previously recorded owner-delegated concept acceptance scope;
 it does not assert runtime verification. See :doc:`concept-review`.
+
+v0.2.0 stakeholder release and delegated review
+-----------------------------------------------
+
+2026-10-18: The owner formally released the new and changed stakeholder
+requirements and requested concept-review of the internal specification/design,
+delegated release to final implementation, and complete concept-implementation
+validation for v0.2.0. This accepts the exact current revisions of
+:need:`STV_SHR_015`, :need:`STV_SHR_049`, :need:`STV_SHR_050` and
+:need:`STV_SHR_051`, including the five usability fixes. The owner authorized
+independent repository edits and requested a proposed commit message and release
+description at completion. Commit, tagging, pushing and publication are not
+requested. Existing later-release deferrals remain unchanged. Review decisions
+and implementation results are linked from :doc:`maturity`.
+
+Centered-layout and interactive-seed MVP clarification
+------------------------------------------------------
+
+2026-10-18: After the retained failed v0.2.0 release execution, the owner
+requested parent centering over visible child spans with collision avoidance,
+an initially open project overview of five stakeholders per page, and a local
+ID/title picker in every view. Exact confirmation replaces only its view;
+invalid input preserves exploration and Project overview returns to its initial
+page. The owner authorized provisional concept review and MVP implementation
+for inspection. This is confirmation of intent and draft prototype authority,
+not formal acceptance of the newly written requirements or release approval.
+See :doc:`requirement-changes/centered-layout-and-interactive-seeds`.
+
+Centered-layout amendment approval and concept acceptance delegation
+------------------------------------------------------------------------------------------
+
+2026-10-18: After inspecting the new MVP, the project owner stated:
+"i love it. please proceed to make the requirements accepted by finishing the
+concept review. i release the stakeholder requirements to you."
+This explicitly releases the current revisions of STV_SHR_003/047/052/053
+and delegates acceptance of the clean affected internal concept. The scoped
+review, requirement/ADR decisions and artifact identities are recorded in
+:doc:`concept-reviews/round-6`. It does not establish full implementation
+verification or authorize committing, tagging or publication.

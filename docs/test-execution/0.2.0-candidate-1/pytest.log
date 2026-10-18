@@ -1,0 +1,598 @@
+FFFF..............................................                       [100%]
+================================== FAILURES ===================================
+_________________________ test_usability_smoke[file] __________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="2a47417f-6c2c-4f4b-8bb2-b0ff7cf52ee2")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-oikk_vj3')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_usability_smoke(browser, short_output, protocol):
+        """Viewport, hover lifecycle and explicit activation on both transports."""
+        output = short_output / 'usability'
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        with published_url(output,protocol) as url:
+            browser.get(url)
+>           _exercise_usability(browser)
+
+tests\test_browser.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_browser.py:78: in _exercise_usability
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="2a47417f-6c2c-4f4b-8bb2-b0ff7cf52ee2")>
+method = <function _exercise_usability.<locals>.<lambda> at 0x000001EB97585F30>
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        >>> from selenium.webdriver.common.by import By
+        >>> from selenium.webdriver.support.ui import WebDriverWait
+        >>> from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        >>> wait = WebDriverWait(driver, 10)
+        >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException
+_________________________ test_usability_smoke[http] __________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="7c880320-d7de-4819-bbc6-15550ac6c2b3")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-2dirq8zd')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_usability_smoke(browser, short_output, protocol):
+        """Viewport, hover lifecycle and explicit activation on both transports."""
+        output = short_output / 'usability'
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        with published_url(output,protocol) as url:
+            browser.get(url)
+>           _exercise_usability(browser)
+
+tests\test_browser.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_browser.py:78: in _exercise_usability
+    wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.support.wait.WebDriverWait (session="7c880320-d7de-4819-bbc6-15550ac6c2b3")>
+method = <function _exercise_usability.<locals>.<lambda> at 0x000001EB9763AA70>
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -> T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        >>> from selenium.webdriver.common.by import By
+        >>> from selenium.webdriver.support.ui import WebDriverWait
+        >>> from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        >>> wait = WebDriverWait(driver, 10)
+        >>> element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        >>> print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() > end_time:
+                break
+            time.sleep(self._poll)
+>       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/pygments.css?v=5ecbeea2 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/stv/graph-f5d5f0edc915ea5aafface83ea2a8f8b0806870089d59f4def9c8cc81ab303da.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/basic.css?v=686e5160 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/alabaster.css?v=27fed22d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/stv/stv.css?v=c72abe934b44c2aa2ab0f0562e329969621678138bae2dcf3f71dddd204e8592 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/documentation_options.js?v=5929fcd5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:15] "GET /usability/_static/custom.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:16] code 404, message File not found
+127.0.0.1 - - [18/Oct/2026 21:18:16] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [18/Oct/2026 21:18:16] "GET /usability/_static/stv/stv.js?v=7728040f72e07e3cc2698402b19c6b9f6f4a5ab99ad84865cd55db93d9deeb8a HTTP/1.1" 200 -
+_______________________ test_offline_exploration[file] ________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="6fa69a06-694d-4a56-af78-3f8d482e63b7")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-04r1zn1a')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements("STV_SYS_003", "STV_SYS_007", "STV_SWR_004", "STV_SWR_008", "STV_SWR_015", "STV_SWR_016", "STV_SWR_017", "STV_SWR_018", "STV_SWR_029", "STV_SWR_031", "STV_SWR_033", "STV_SWR_034", "STV_SWR_035", "STV_SWR_038", "STV_SWR_039", "STV_SWR_040", "STV_SWR_050")
+    @pytest.mark.parametrize("protocol", ["file", "http"])
+    def test_offline_exploration(browser, short_output, protocol):
+        tmp_path = short_output
+        output = tmp_path / "nested" / "documentation"
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        server = None
+        try:
+            if protocol == "http":
+                server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
+                threading.Thread(target=server.serve_forever, daemon=True).start()
+                url = f"http://127.0.0.1:{server.server_port}/nested/documentation/index.html"
+            else:
+                url = (output / "index.html").as_uri()
+            browser.get(url)
+            wait = WebDriverWait(browser, 20)
+            wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
+            roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
+            assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+            root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
+            browser.execute_script("arguments[0].focus()", root_button)
+            root_button.send_keys(Keys.ENTER)
+            wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            assert roots[0].get_attribute("data-stv-revision") == "0"
+            inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
+            browser.execute_script("arguments[0].focus()", inspect)
+            inspect.send_keys(Keys.ENTER)
+            try:
+                wait.until(lambda d: "formatted body" in d.find_element(By.CSS_SELECTOR, ".stv-detail").text)
+            except Exception:
+                print(browser.find_element(By.CSS_SELECTOR, ".stv-detail").get_attribute("outerHTML"))
+                raise
+            assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+            wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
+            assert browser.switch_to.active_element == inspect
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node:not(.stv-unaccepted) .stv-id').text == 'ROOT_A'
+            # Pointer hover presents the same final host fragment; pointer travel
+            # into the interactive panel keeps it open beyond the dismissal grace.
+            ActionChains(browser).move_to_element(inspect).perform()
+            wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+            panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+            ActionChains(browser).move_to_element(panel).perform()
+            wait.until(lambda d: 'formatted body' in panel.text)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().right <= innerWidth',panel)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().bottom <= innerHeight',panel)
+            panel.find_element(By.CSS_SELECTOR,'button').click()
+            # View-local transforms are shared by edge and node layers.
+            other_transform=roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+            for label in ['Zoom in','Pan right','Pan down']:
+                control=roots[0].find_element(By.CSS_SELECTOR,f'[aria-label="{label}"]')
+                browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+            assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+            roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+            viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
+            scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
+            before_drag=scene.get_attribute('style')
+>           ActionChains(browser).move_to_element_with_offset(viewport,viewport.size['width']/2-20,viewport.size['height']/2-20).click_and_hold().move_by_offset(-80,-60).release().perform()
+
+tests\test_browser.py:200: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001EB97663850>
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (1139, 1080) is out of ...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (1139, 1080) is out of bounds of viewport dimensions (1440, 1015)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException
+_______________________ test_offline_exploration[http] ________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="ebc294f3-512c-47a7-a78e-8f45a10117d0")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-acb3l80b')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements("STV_SYS_003", "STV_SYS_007", "STV_SWR_004", "STV_SWR_008", "STV_SWR_015", "STV_SWR_016", "STV_SWR_017", "STV_SWR_018", "STV_SWR_029", "STV_SWR_031", "STV_SWR_033", "STV_SWR_034", "STV_SWR_035", "STV_SWR_038", "STV_SWR_039", "STV_SWR_040", "STV_SWR_050")
+    @pytest.mark.parametrize("protocol", ["file", "http"])
+    def test_offline_exploration(browser, short_output, protocol):
+        tmp_path = short_output
+        output = tmp_path / "nested" / "documentation"
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        server = None
+        try:
+            if protocol == "http":
+                server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
+                threading.Thread(target=server.serve_forever, daemon=True).start()
+                url = f"http://127.0.0.1:{server.server_port}/nested/documentation/index.html"
+            else:
+                url = (output / "index.html").as_uri()
+            browser.get(url)
+            wait = WebDriverWait(browser, 20)
+            wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
+            roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
+            assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+            root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
+            browser.execute_script("arguments[0].focus()", root_button)
+            root_button.send_keys(Keys.ENTER)
+            wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
+            assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+            assert roots[0].get_attribute("data-stv-revision") == "0"
+            inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
+            browser.execute_script("arguments[0].focus()", inspect)
+            inspect.send_keys(Keys.ENTER)
+            try:
+                wait.until(lambda d: "formatted body" in d.find_element(By.CSS_SELECTOR, ".stv-detail").text)
+            except Exception:
+                print(browser.find_element(By.CSS_SELECTOR, ".stv-detail").get_attribute("outerHTML"))
+                raise
+            assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+            wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
+            assert browser.switch_to.active_element == inspect
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
+            assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node:not(.stv-unaccepted) .stv-id').text == 'ROOT_A'
+            # Pointer hover presents the same final host fragment; pointer travel
+            # into the interactive panel keeps it open beyond the dismissal grace.
+            ActionChains(browser).move_to_element(inspect).perform()
+            wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+            panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+            ActionChains(browser).move_to_element(panel).perform()
+            wait.until(lambda d: 'formatted body' in panel.text)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().right <= innerWidth',panel)
+            assert browser.execute_script('return arguments[0].getBoundingClientRect().bottom <= innerHeight',panel)
+            panel.find_element(By.CSS_SELECTOR,'button').click()
+            # View-local transforms are shared by edge and node layers.
+            other_transform=roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+            for label in ['Zoom in','Pan right','Pan down']:
+                control=roots[0].find_element(By.CSS_SELECTOR,f'[aria-label="{label}"]')
+                browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+            assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+            roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+            viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
+            scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
+            before_drag=scene.get_attribute('style')
+>           ActionChains(browser).move_to_element_with_offset(viewport,viewport.size['width']/2-20,viewport.size['height']/2-20).click_and_hold().move_by_offset(-80,-60).release().perform()
+
+tests\test_browser.py:200: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001EB97733340>
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (1139, 1080) is out of ...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (1139, 1080) is out of bounds of viewport dimensions (1440, 1015)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/pygments.css?v=5ecbeea2 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/stv/graph-f5d5f0edc915ea5aafface83ea2a8f8b0806870089d59f4def9c8cc81ab303da.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/alabaster.css?v=27fed22d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/stv/stv.css?v=c72abe934b44c2aa2ab0f0562e329969621678138bae2dcf3f71dddd204e8592 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/basic.css?v=686e5160 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/documentation_options.js?v=5929fcd5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:53] "GET /nested/documentation/_static/custom.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:55] code 404, message File not found
+127.0.0.1 - - [18/Oct/2026 21:18:55] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [18/Oct/2026 21:18:55] "GET /nested/documentation/_static/stv/stv.js?v=7728040f72e07e3cc2698402b19c6b9f6f4a5ab99ad84865cd55db93d9deeb8a HTTP/1.1" 200 -
+127.0.0.1 - - [18/Oct/2026 21:18:55] "GET /nested/documentation/_static/stv/details/84ee73e6b7c9fcb75ddbb4365087b991541e2702f850403c0cc62d73c6d9522d-f339ddd973c8c3e96070dce1c910b523d9ca6fd9b2324ab9cca590797ed42378.js HTTP/1.1" 200 -
+- generated xml file: D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\test-execution\0.2.0-candidate-1\pytest.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_browser.py::test_usability_smoke[file] - selenium.common.ex...
+FAILED tests/test_browser.py::test_usability_smoke[http] - selenium.common.ex...
+FAILED tests/test_browser.py::test_offline_exploration[file] - selenium.commo...
+FAILED tests/test_browser.py::test_offline_exploration[http] - selenium.commo...
+4 failed, 46 passed in 583.73s (0:09:43)

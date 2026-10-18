@@ -6,7 +6,8 @@ STV_ADR_005: Optional seed sets and paged project entry
 Status: **accepted**. Date: 2026-10-18. Scope: software architecture.
 Decision owner: project owner, through delegated concept review.
 Supersedes: :ref:`STV_ADR_003` partially, for single-root initialization and
-reachability assumptions. Superseded by: none. Its transactional engine,
+reachability assumptions. Superseded by: :ref:`STV_ADR_006` partially,
+for page size, initial root expansion and runtime seed mutability. Its transactional engine,
 semantic rank, viewport, inspection and later-mode isolation choices remain
 applicable. This extends :ref:`STV_ADR_001` and :ref:`STV_ADR_002` without changing
 their deployment or local-bundle decisions.
@@ -42,6 +43,10 @@ apply cap and layout checks before atomic page commit. Use one separate root
 band above configured levels and no fabricated Need status/details/link.
 Detailed parser, model, state, rendering and failure contracts are specified in
 :doc:`../../internal-interfaces` and :doc:`../../implementation-plan`.
+
+The original page-size/initialization/seed-immutability choices below are
+historical; :ref:`STV_ADR_006` supplies their current replacements. All unaffected
+choices remain applicable.
 
 Rationale
 -----------

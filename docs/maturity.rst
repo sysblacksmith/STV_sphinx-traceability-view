@@ -6,21 +6,36 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
-Current draft increment
------------------------
+Current release increment
+----------------------------------------
 
-The 2026-10-18 usability problem fixes are draft changes awaiting owner review.
+The owner approved the centered-layout and interactive-seed MVP and released
+its stakeholder requirements on 2026-10-18. Concept review is complete in
+:doc:`concept-reviews/round-6`: revised/new stakeholder requirements
+003/047/052/053, software requirements 003/051/052/056/057, ADR 006 and their
+affected contracts/diagrams are accepted. ADR 005 is partially superseded;
+previous review snapshots remain historical. See
+:doc:`requirement-changes/centered-layout-and-interactive-seeds`.
+
+Focused MVP checks passed: 16 JavaScript tests, 33 non-browser tests and 11
+Firefox checks, plus documentation/traceability/diagram checks. Concept
+acceptance does not change verification fields. The owner inspection gate is
+closed; full v0.2.0 release qualification remains to be completed separately.
+
+The owner approved the preceding usability stakeholder revisions on 2026-10-18
+and delegated review and final implementation for v0.2.0. That internal concept
+was accepted under :doc:`concept-reviews/round-4`; the subsequent amendment
+has its own acceptance under round 6 and no completed release verification.
 See :doc:`requirement-changes/usability-problems` and :doc:`problems/index`.
 User issue handover now uses first-class problem reports directly in
 ``docs/problems/``; the shared lifecycle/template update is recorded in
 :doc:`requirement-changes/problem-report-handover`.
-The fifth report's control-order fix is also a smoke-tested draft awaiting
-owner review; see :doc:`requirement-changes/control-order`.
-Changed requirements return to draft with verification not assessed. Smoke
-checks do not replace full release verification or extend historical acceptance.
+The fifth report's control-order fix is included; see
+:doc:`requirement-changes/control-order`. Final verification remains independent
+of concept acceptance; the previous smoke-only limit is superseded.
 
-Current baseline
-----------------
+Previous baseline
+----------------------------------------
 
 Stakeholder baseline v1 and its explicitly recorded scope amendments are
 owner-accepted. The internal concept, including the starting-node amendment, is accepted
@@ -117,6 +132,7 @@ Review and lifecycle records
    requirement-changes/usability-problems
    requirement-changes/problem-report-handover
    requirement-changes/control-order
+   requirement-changes/centered-layout-and-interactive-seeds
    problems/index
    test-coverage
    test-execution/index

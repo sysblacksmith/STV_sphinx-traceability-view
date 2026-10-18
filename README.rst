@@ -32,7 +32,7 @@ location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
 After building, run the shared validator (replace ``<shared-skill>`` with the
 selected reverse-engineer-requirements skill directory)::
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 0.1 --repo-root . --csv docs/_build/traceability.csv
+   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 0.2 --repo-root . --csv docs/_build/traceability.csv
 
 The internal specification includes conventional and channeled derivation paths,
 allocations and containment. Graph validation establishes structural checks;
@@ -45,18 +45,16 @@ Architecture diagrams
 Keep each .drawio source and its same-named .svg export together in
 ``docs/architecture/diagrams``. Edit the Draw.io source and export SVG only::
 
-   .\scripts\export-architecture.ps1
+   & <shared-skill>/scripts/export-architecture.ps1 -ProjectRoot .
 
-Both scripts in ``scripts/`` are symbolic links to the shared
-``#agents/skills/reverse-engineer-requirements/scripts`` tooling. Preserve these
-links and the shared checkout when setting up the workspace; Windows link
-creation may require Developer Mode or administrator rights.
+Use the selected shared skill checkout directly. No project-local symbolic
+links or administrator rights for link creation are required.
 
 The export script uses Draw.io and restores portable links from each paired
 Draw.io source. It accepts ``-ProjectRoot`` and ``-DiagramDirectory`` for other
 project layouts. To validate the published targets after building::
 
-   .\.venv\Scripts\python.exe scripts/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
+   .\.venv\Scripts\python.exe <shared-skill>/scripts/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
 
 Sphinx embeds the linked SVGs as interactive objects.
 

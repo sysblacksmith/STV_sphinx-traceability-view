@@ -13,7 +13,7 @@ ROOT=Path(__file__).parents[1]
 
 @pytest.mark.requirements('STV_SYS_009','STV_SWR_042','STV_SWR_046')
 def test_clean_wheel_host():
-    wheels=sorted((ROOT/'dist').glob('*.whl'))
+    wheels=[Path(os.environ['STV_WHEEL'])] if os.environ.get('STV_WHEEL') else sorted((ROOT/'dist').glob('*.whl'))
     assert wheels,'Build the wheel before packaging verification'
     wheel=wheels[-1]
     wheelhouse=ROOT/'docs/_build/wheelhouse'
@@ -22,7 +22,7 @@ def test_clean_wheel_host():
         names=archive.namelist()
         for asset in ('stv.js','stv.css','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js'):
             assert f'sphinx_traceability_view/static/{asset}' in names
-        metadata=archive.read('sphinx_traceability_view-0.1.0.dist-info/METADATA').decode()
+        metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
         assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
     with tempfile.TemporaryDirectory(prefix='stv-wheel-') as directory:
         root=Path(directory);envpath=root/'env'

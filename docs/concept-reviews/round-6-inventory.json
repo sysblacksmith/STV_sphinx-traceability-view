@@ -1,0 +1,1139 @@
+{
+  "review": "round-6",
+  "date": "2026-10-18",
+  "reviewer": "Codex",
+  "git_head": "e7a561cbf1e8706c784980eff8d24e299d4a9885",
+  "worktree": "uncommitted accepted concept; no release verification implied",
+  "method_sha256": "7a973f99f619bb92082854302a88464652b345541f3968e6c708ab9e47d712d5",
+  "files": [
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "sha256": "dde4f92b2c6689aaf53e65ea40ecb69db79cf657e98c3ed9da6c28a5ba95fe9f",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "sha256": "a952999f9cef4df1996fd0611dd1212f036eda9c386edc605ba2d9a482eaa315",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "sha256": "018b59cb2b49870f25f4ce98604ac37dd369f497fbdaa9325795efa334bf2b64",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "sha256": "2adc6b72460db040a42aef08fe1d14d184596b2a6836bfa18cac67af6a644f06",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "sha256": "820f5f5d89564dfdcb6062b7a0b73308921281f274555c997bb119f02cfb1c77",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "sha256": "aed93cf6bb9d43100146d99feb46a050ec195503b63fa4ca6db2f3a32768a0af",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "sha256": "4513a1440b72bc4086552c1210f405ee81f1b12f27fa9702da99a1ab26bd4418",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "sha256": "6aea975bf412176884a509cf89d52fb468641b3598db15c6cba951b3f515253a",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/concept-reviews/round-6.rst",
+      "sha256": "6e11b7a66b7b151843553ee4d92d0b1a5f9b7ba7112a014437ebbc116d7bd6ff",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/conf.py",
+      "sha256": "b2acca75e633133ef8eb15d0b6a74f86bade9194cd2eb274dfabb00eccaf3361",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/demo.rst",
+      "sha256": "ca2dfaa60c46d2f8b89d8b0729a61640ab5c72c72f31b15fa9be4872566a2a01",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "sha256": "d2d7727197cbedbe6308cf3640327a676677aa2c4692e57452af2ae1ac6cece7",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "sha256": "087bcb5ee8cba1da1fa14d6e312f7bcdb88b38413041aca1eff5fc1084e3a93f",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "sha256": "5fe107fc4aaf1cdb98fcda9d0689c48ff0cb95ea941a8e52f26361c855ef7430",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "sha256": "c8d1a7fdc8653f90c05eebe535572f58edfc675b42d729b025598d87c51852ce",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "ba61c2ece09d58629e60e00e6144b06cefd0039ac505477d14f258518be88c56",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "sha256": "b6f8597407a3ec23286967f7877ef0749e0f93192b7d028d16f66c7e4762dc05",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "sha256": "ef315a0019cd51bc09e4363cba36375df7334697b78e8be2272213cf3a20d42f",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/method.rst",
+      "sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/requirement-changes/centered-layout-and-interactive-seeds.rst",
+      "sha256": "5db6c279e4c81bcb96e6bb21120048285b169a77d583c30d3a73f25e7d54fc29",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/review.rst",
+      "sha256": "061ade0649318346d128256d258fc7742bd4428c7ffa9b2dc905bf6b386c0d42",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/software.rst",
+      "sha256": "e1d65474f8c3245e4fe5f5c29c599b65f25660612f1b292293468d7f8d023b5e",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/sources.rst",
+      "sha256": "6c27e5a43e573da309c236d00b18ccdbd369fd880671286da72aea3ffe4f88d7",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/stakeholder.rst",
+      "sha256": "4e83da244377866231bd14572c181cbf508842088a26b911c357f8c0cfb24f22",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "sha256": "b21883af75265ada2941a5a7d40a6b1b3512118e8f38a1f2d10b36d484ed5374",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/system.rst",
+      "sha256": "ebbeea696976b043eff9f3515ef15d091c475ae7b8e2c4afacc7c924a8931e44",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "sha256": "f8f4fcb3cc74e50c9e20e8d23fc30bb2a622a8a7d05b7e3c44d472099c0bd9db",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "sha256": "a6ea02647a43f2a0afa81f15a9fbcc933d50dc8c216a570d9a38407513c0db14",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "sha256": "684b96d372e2dcd7642126225d7be9ea339411a979029036915e3ec168230bfb",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "sha256": "f0eb73d33aeaa4b576e2a14984f6c381a1585074a954d990d8ac6cd67ab8fed6",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "135fab43a07c2a6109bc233d5e0cde955471b72e2190a87d30e0e9700f548c1d",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "e432e5aa4de6fa76fc8c7eb61c3c8eb384ef59965a2df953d83c4a63dacb1255",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "9f8f8338d5be8fe5373a68268ef93878fe8209461a0601d75d32671e1b02e428",
+      "outcome": "accepted concept or reviewed supporting record; historical statuses retained"
+    }
+  ],
+  "needs": [
+    {
+      "id": "STV_SHR_001",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "23850980956103c624f4be2f4909d216600757dc3e130a36e96fa0af992742d3",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_002",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "d0384f1193be629645f6d4a4ada810b736c4b3d2bd96384abc98739f9d9ddb61",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_003",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "ba303d687502e10dacafa438a978f2856d7442c651a60c865046550ab65698d6",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SHR_004",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "e38c87f9cc8fe69b0462994a65378e444163cd260c61d0fbb4536b8b25b6b813",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_005",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "8e6af1810e769cfbb5cf6119eef5c17cb9faa9fedcaabe7957fceaaf1e7596a8",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_006",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "badea361b7e509815b8e852970ec608ec785de6717689883d68b962959917dd4",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_007",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "7e19467ff59469bb30b8779b13b041154c41cc97a4fdce3d2506b730ca1c57fa",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_008",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "514996d378fb58751536bbacd70d0f1ae3c95395abd9b889c5ebeb757de85c80",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_009",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "459a46596e3b8376aaf352c9157dd89dbdc95f550af69f513e9848de39fcec4b",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_010",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "23c839e296724cb50980283e2e4f61e0e09edbf5d42ac6627fadcc0af878a3bb",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_011",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "1198fbb695545c1127da055b4b91785f4e2a193c5ca650d756c7053a38058f2f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_012",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "e70d38ec35b6a6079a5ea6d82c21620473bc523520b162c637b54981f1dd66dd",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_013",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "b0afd3ff57615343155da856d971816d9e2205408e6419d5eb57bd7f1f158340",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_014",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "3cdac79c9be80efb9fb61c86b3a1106e95d6f32f72ecc0b3d42cf46351114c5d",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_015",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "40f2165cae9bf7f7363f01764f79f3da410a61503696780470bddd9ffb027ee9",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_016",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "a0f192aad6bd23dea77e1d9e205ca466cbe5431dabfc65d3a7fce8af23e579f6",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_017",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "4a9a0b0e3822f2042ef1f292e418cafe8eba667c1741870dcf81cb7e6cecc940",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_018",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "9e967c768440a4fd69305138271c429b86cfc7c12eb990fa8688bc0faee02bcd",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_019",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "b5f52aae0513972254d3ff492e3c20816b5ccee4aceda0d605b0a4484b933aa6",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_020",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "9fc94fed4267df96e5c8bd0c2b1dae5a9cdf25177d858b93effeb2c4de91bc5d",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_021",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "eb99e262b00baa09a718eadc0f6a53f3064f1b942f99715b8ebb7e2e8b846337",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_022",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "c0e0b68672f5752bedc3be8776374aa7f06b2736beaaf8e6bc750c092b45e285",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_023",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "a739c93523496fa9d01f2e80c85caf7be940fc558ba336cb3042880448b82714",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_024",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "005ed0619307a2df78fdec7e6602f9a24bb29880b2f4774b90fc230a1ab6d527",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_025",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "052ff6d71272425894f3172533342f9967a3894a4cc67e514961d7abc2bbc0e4",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_026",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "385ed2846f530aea73a4a5d12413df7bded969dcd2d5cf17d22f7e6a85fcfd3c",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_027",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "7d6e3fb61d18c8a2148e29cbe8865880ada33a68a3b37196a5f790c20079b6fc",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_028",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "57ebd9ae9ce8d4abb8580c0af9a1e58b569d262962583e048dc0775ac1b1ba3f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_029",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "d360e7a46cad6a3d0a2cdffe34ea5b06f8d808bba559dde86e380ff05385613c",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_030",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "71ded3372131cf021cb27b22571ae28fba2471e87d6838f287d0a4f3e1f560cd",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_031",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "65de63bace57cf872a509a59856971d55b44ddb9ca5c26b6c72ca1a5ad9cbea0",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_032",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "f6e3da73ec668ec9f582224821076b4a2d70100b22ad50b51ee39cb6d80a5e3f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_033",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "a330b57a6a031e4edfeeffb3bcd2fba231460629c1ebf92b7c25169a95d99d88",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_034",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "104a14cf5bdb3fb7cad64e49e75cdb1b9b9bdf9304ab05c45a4f87725f585498",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_035",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "fdc139cc764a240c54cac7d4864a540d2abaa2dabdc59c249900f7c210f7a766",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_036",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "674ed5ce27c30ed5e79a2410cd91d22a246b7be772eb0392cad7b8b5d6a265e7",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_037",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "6a59f6be3ed5170068d5f9937ea1f2e03673180393feaf569f52644d3c3a0bb9",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_038",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "31ed5fc35c8df33f0b8109819046b33fdef5d69e5327cc7f8828378ccb1c0a26",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_039",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "da1c7681040cecb95555982ac17914541be6de2f8de6930637a6c7dbf1ec2497",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_040",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "d0d177cb6a445020426e179787f9c8770ea31950c1deb06c7758ecd573bb5c17",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_041",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "0f4766c5bfe27c23bba364465a875a6bdf63f9e29006e5c3a0f4c716f7f1e3ac",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_042",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "0ee7d11912f75ced317ff562e84895f6f31eb6f91f7e35187d808334adfc1bc2",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_043",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "b1b92c5d77bf7a0aa8477d76f8ba9c329917cceed0361dbd8c0f0e9e8ad8d995",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_044",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "f83dc43794e22550ae53523a4e1dd72a2852c9f9effed02fc09545fecb47f663",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_045",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "64bccb8580b3a5a6c92a15985f001916b378d3dbee41cdb489e7ebbffcecb588",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_046",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "89a877ef28937ad88c9979a1f8ed782a7fef17e18a7230f1a3f00b98e119c1b3",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_047",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "40eedf37f29a9a3c3ceb98f74ba7cb5dbea7d7628d17e90ad7ae3063259cdbcc",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SHR_048",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "9a932e493900a04a88ce734c3976ccf49fe9b256693791ffdfb6b8480e79d3ce",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_050",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "7168fce65e74cbb259982e473fffa41e7d2b11299ada7992f2ae54b6903652a7",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_049",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "4152481139135012ad476d4857f16d4919d19a3118ae6c5a48765c242451d5b3",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_051",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "ce14f4ba67aa7894b19aa258b707e91bedd4e6ca2cb7aa761178ab8cbee7889f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SHR_052",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "e82ad3c98dc0df66cb09611b81ae1202511055cd3d571e6e409024d9b71239dc",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SHR_053",
+      "path": "docs/stakeholder.rst",
+      "status": "accepted",
+      "content_sha256": "2b4cfb6d15522ccdbf4e5d4be5eb88924f3534570bebf2bd7382843df64ff043",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SYS_001",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "d89c2379b678860dc524546e2f8e731e9320cca40392fda4f0642898a6057494",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_002",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "787593d58bc891a67977ca4616ce84d47d63c353cd10b0b40b5e885201815eb2",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_003",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "6421c3aa2bf762f6538eb5160587857258474509f2ac535afae6de6b48834531",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_004",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "6d3ba6cac221310a430fdd173eda15d6f0774ea3265e9ef36f84c1c875b50773",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_005",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "44a1dd9b15aa4cbd6a5e9ccd34092be97390396817bf9321006b3772eed59576",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_006",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "9e126f40f9276cc6f1be3e577fc20e6c2daaa7c77cb3be25e0eb1f7197d95a23",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_007",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "9b168bd4c9104e6c135f7920d126d77f30d5c2a34d93821643870d8a80ec2981",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_008",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "a9733728749bfc31a11568b7886ff383eaf99c31c97336e7f09ac32583563b72",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_009",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "b01cc37e490565d939ea83c40c1f3f02158c570229c0545a2248c51638aa6521",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SYS_010",
+      "path": "docs/system.rst",
+      "status": "accepted",
+      "content_sha256": "0aebd7efe992b0470736c06d0fbf7941af538728a2aa2be44f26364c55e1bc1a",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_001",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "a321ee18f1d3b0fbe69704b5abd8d98901053356fd1a562756e9145c5703569f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_002",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "d81420b58e7b3902d4dbae6d687f323698ff3b2a747cfcb96f60c0264ef3ac51",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_003",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "a49979cf15fbbe2ddfbea22ecfa565c56a02aa76abcc1160609938b071fd19f6",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SWR_004",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "89c2882e9f2d69578e2df33bcb7d7287d7062bf6a4fe5a652fe2165bf086d631",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_005",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "bca20921aba2336929b8a81f1ae25666c431bb4d1d06ae9dd5b171bea88cd0c8",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_006",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "3974bf2037df399d2be418c3efd52fc6367291a762e65f3dd3e3491c7b8dee98",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_007",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "763dcff459889bdb2d785ba359bd995bf44321d943c37c10fd15a0739cc039ee",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_008",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "2f6a0c088fe14dcf0e21ca1d3bf48c2db209c85e9bc8c2a9adda8e7585c7c70d",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_009",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "d778632f11fced0e752b0ab5260bb87b79047e443a0a9a1b1390bb36be2cee3c",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_010",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "0af682553f89e8a3cc8164490f9d2abc76b70c5684cff8293aedf2ecae838f3f",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_011",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "5ba75f2db1e446d5f3c203910470e324fcb958b0fbc0755201894db646dc94b1",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_012",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "a8ce22e3113d09ae2b383b62c01f759bc90a71c8f3ef5e36d9b086138970a4d4",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_013",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "36fb55087fa53408506d834347dfce3e53aee8b1e321da40dd2b2d0ea31c558a",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_014",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "49c6b20c47089b5b5cc2238495b0dd83ce8b7f141cbb985800db2ec2b0c4d150",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_015",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "030ccfecdd2b5ca384601aa730804c4aa393e0f5914c0548209185c78e4dc6f6",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_016",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "e7388b9b094a53b716980792a2c4b7f203e94ada71dad16b9615be3289d1dfe0",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_017",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "2a1ae6a92532782b738ca61dc059bacd0ac0cf059fb01ea008e42313f9a984e2",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_018",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "4de4036e8eaea112aa8cd44711fb9eecdc8335aa6756bed65f1cee305b596187",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_019",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "3a7ce2ace97b57c31a45cc14e0e3376a9328fdc15790f791a276294443233921",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_020",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "919e445e8c165c0f1ee39d5003e3fbb5a437786e9b7f2c523bea37ad0931ba74",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_021",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "5bd7df72c0af7c03ad40ad9784525aa2e3df25e04215d52681330c9ffe10b12b",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_022",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "b6ae33b039a641b2b1306245cefa14d1a34d17aeade5d90ca4b341a827c36b99",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_023",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "c7c7df7600676fd8500665bb3e8b465922aaa35185e59d43e25b231906b9b318",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_024",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "10fa0ddffb694d0c1631b04aed7c9913e3103d71aa224192edd0fd476d53fe47",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_025",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "626b089362489b5f87197d4d65effe7f09587bf7ab54a92a34f829d6d3552a19",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_026",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "250af846911c1c47c75215cecc0d7c9d30fc66390913a449349a2ee2ab9466f0",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_027",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "65927cfb249fd3ac006640d430f475807495daf24eb4fbeaaad264d6acade742",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_028",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "28fe3e019101daa27efb4b4d75ae7ce7c9e7d0b1d41c115b8a3972a3b907c5fb",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_029",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "9160a17eb3c09186ddfe4a4451671c3fb930d74821b8c99a49b2d68b992a5935",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_030",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "9b32016dfda336f542191faa628ed9206bf117d88e5a027da3299adf340190c3",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_031",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "2381a51431a3d839842e72a4984b0c583b69747cc666b54efa6c67374f970f56",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_032",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "dd04d93e388d8a2adceeb62c56282effbe2a22c444fcb4e70682469b2e99fb81",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_033",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "8a345748be1feaea7d20348c833466ce3aaf94ebdf57f5525668fdfc2b710c57",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_034",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "51227bad43da8bb7bc6dd6f4656becc1070432936e6cfa3cdd6d719e1d9a8c4d",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_035",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "350e99f954db8f4c66b1161739e44bb7edea32cdb72ba27567b55c290195ed17",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_036",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "66b733e8f4b142dc5ddbadcf84fe62714f62b3b17d7a1a424204d88febd30f86",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_037",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "2431da5a5bd8204db865152e145e5581c3888524d6aaf6adad8d532fe5f33af4",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_038",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "61791953dbe0aae778d6e23682db2ff53e8acf7fcb7d6ec4011f615ed70fe12c",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_039",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "11020ff54fbb61c0bdc19b6294455b73663ced6ce723ae46a17d143f07b1fc73",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_040",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "cfeeb955a8b0772f8936e47bd7a2f675b12182f3d2286e68db3ca9af16384ebd",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_041",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "98b379e3de4786a4a0a0219d6fffbbb671eaa19fe69b4c7803a7210df8268926",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_042",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "b64e490619e4a9c70fb4d161a44e1eedf831b964dcba7462d426f7af63c36c79",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_043",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "0a823131c9c09bb350919e29d5753b6b0e978ccee52cf6032dd0b5deff3fcf16",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_044",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "8ac8fee2914d1e2e9b26f345f522f941c93b41b6eb1b691dd7f04300250c154a",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_045",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "572791d3d3b407084eb7224c652db04b84ea06a1830f7b59b35133013183a9fc",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_046",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "9e94225261878e26907c96cb431981ae010684b8cf865c61ea88c878fdc4b864",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_047",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "7926d5aee39e294b9157db2479f6255f9d67fe58bff3d649e22f66d85ae86662",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_048",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "b0bcd56694ba48c31bd86b22179c5d0c22de56b9e9f2298ad2df719fda484bd8",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_049",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "a3f04f4d812b7a82d2362b6f1f793326d5a6c18052f642bdcc356391486a208e",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_050",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "0ce1767267fd19a4025a476674df19366928322b2257ff19242b5a687ca89332",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_051",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "47435d0fd543625a5fd561dd4cb955741fec8e80919efc0e734dd5c2265dc5c5",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SWR_052",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "48590a560290436c8853b33555272048defd93f9dbe7d1eeaca1fed26a344de7",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SWR_053",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "3c117020b98e5520ae8f12f985dcb5904df3a699df1cd81e843bf093117895ff",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_054",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "6fe9485fd4cfaacc15b31d1ead43b11a45d03094f24a405f3da91e7e6c40921e",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_055",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "a3c3394dfea937ac4ae9ac7c05b7bdc03a80bce31a4c7bfc2c6251503b28e529",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWR_056",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "10491384c09abed0c816724d82f6676568c19af6c836a3fe1945a4d683285c8b",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SWR_057",
+      "path": "docs/software.rst",
+      "status": "accepted",
+      "content_sha256": "c57bd7f4aabcfd4e481242ea80ea74c05f53e90f2e6cb9931daeed48498a0da8",
+      "acceptance": "round-6"
+    },
+    {
+      "id": "STV_SE_BUILD",
+      "path": "docs/elements-system.rst",
+      "status": "accepted",
+      "content_sha256": "68ee24a0a527f63ba6a2c751224791b23361d727647906f58beacc3fe9c6a3d7",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SE_BROWSER",
+      "path": "docs/elements-system.rst",
+      "status": "accepted",
+      "content_sha256": "edfb17ab21ec9e02b79effab488316089acd7e533f94ecbf9c47d84f0445c71d",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_DIRECTIVE",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "de7c04e8206460b759d5376a88f55c3c9bdc50d3c9ae8f67ee160de3088208ac",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_MODEL",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "a8ec77572307efcc5380263d4fec2ae5eca473fdac69702080a3002d1acae071",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_GRAPH",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "d8e9bc92e44bc24d30a5fcd575acef84f0527ccdf9e4f0a50fd3ac27390588f9",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_DETAIL_BUILD",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "47f6056c492cb58a9bea5746f78002590b6dea7af70bf283a759ccb97bfef596",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_BUNDLE",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "08ae708f158c4c5f4b262346feadb5a4f5b420f7a3a8535e402cd6b7c7dec3d1",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_STATE",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "05378f9454dd954acf21ddc521b3164725f15479cdec2158c2a379f7fcfbfc53",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_LAYOUT",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "f40d2f3fa5425ab7b94f0a39dc399b9b8cc2d9b77150004b04e3278c951a77b4",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_RENDER",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "3c1d348df439a9d3413eec26e4c57e4d925972c1141823832a9050b06dd91d14",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    },
+    {
+      "id": "STV_SWE_INSPECT",
+      "path": "docs/elements-software.rst",
+      "status": "accepted",
+      "content_sha256": "63e6d656ae494fba216b1c346a917edd94651cda40c887af172b1491023825c6",
+      "acceptance": "retained accepted baseline; rounds 1-4"
+    }
+  ]
+}

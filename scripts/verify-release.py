@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import shutil
 import subprocess
 import sys
@@ -40,10 +41,14 @@ def junit_cases(path):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--record',default='0.1.0-candidate-1')
+    version=re.search(r'^version = "([^"]+)"', (ROOT/'pyproject.toml').read_text(encoding='utf-8'), re.M)[1]
+    parser.add_argument('--record',default=version+'-candidate-1')
     parser.add_argument('--driver',required=True,type=Path)
+    parser.add_argument('--reuse-capacity-from',help='Reuse an unchanged, verified host fixture; browser capacity tests still run')
     args=parser.parse_args()
     if Path(args.record).name!=args.record:parser.error('record must be a directory name')
+    if args.reuse_capacity_from and Path(args.reuse_capacity_from).name!=args.reuse_capacity_from:
+        parser.error('reuse-capacity-from must be a record directory name')
     record=ROOT/'docs/test-execution'/args.record
     if record.exists():parser.error('record already exists; use a new candidate name to retain previous evidence')
     record.mkdir(parents=True)
@@ -52,7 +57,9 @@ def main():
     index=record.parent/'index.rst'
     existing=index.read_text(encoding='utf-8') if index.exists() else 'Release test executions\n=======================\n\nHistorical candidate results; no deployment or release approval is implied.\n\n.. toctree::\n   :maxdepth: 2\n\n'
     index.write_text(existing+'   '+args.record+'/index\n',encoding='utf-8')
-    env=dict(os.environ,STV_GECKODRIVER=str(args.driver.resolve()),STV_SCREENSHOTS=str(record/'screenshots'),
+    wheel=ROOT/'dist'/f'sphinx_traceability_view-{version}-py3-none-any.whl'
+    shared=Path(os.environ.get('REQUIREMENTS_SKILL_DIR',ROOT.parent/'#agents/skills/reverse-engineer-requirements'))
+    env=dict(os.environ,STV_WHEEL=str(wheel),STV_GECKODRIVER=str(args.driver.resolve()),STV_SCREENSHOTS=str(record/'screenshots'),
              STV_CAPACITY_OUTPUT=str(ROOT/'docs/_build/release-benchmark'/args.record/'html'),
              STV_CAPACITY_METRICS=str(record/'capacity-browser.json'),STV_CONSUMER_RECORD=str(record/'consumer'))
 
@@ -68,9 +75,9 @@ def main():
         print(f'{name}: exit {result.returncode}',flush=True)
         return result.returncode
 
-    run('browser-assets',['node','build.js'],ROOT/'frontend')
-    run('python-package',[sys.executable,'-m','build','--no-isolation'])
-    wheel=ROOT/'dist/sphinx_traceability_view-0.1.0-py3-none-any.whl'
+    if run('browser-assets',['node','build.js'],ROOT/'frontend') or run('python-package',[sys.executable,'-m','build','--no-isolation']):
+        (record/'index.rst').write_text(f'{args.record} execution\n'+('='*(len(args.record)+10))+'\n\nCandidate preparation failed; see commands.json and retained logs.\n',encoding='utf-8')
+        return 2
     if not wheel.is_file():return 2
     sources=candidate_sources()
     source_identity=hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()
@@ -92,19 +99,52 @@ def main():
               'benchmark_output':env['STV_CAPACITY_OUTPUT']}
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('coverage',[sys.executable,'scripts/check-coverage.py','--strict'])
-    run('diagram-links-source',[sys.executable,'scripts/normalize-diagram-links.py','--diagram-dir','docs/architecture/diagrams'])
+    run('diagram-links-source',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams'])
     run('documentation',[sys.executable,'-m','sphinx','-b','html','-W','--keep-going','docs','docs/_build/html'])
     benchmark_dir=ROOT/'docs/_build/release-benchmark'/args.record
-    run('capacity-build',[sys.executable,'scripts/benchmark.py','--directory',str(benchmark_dir)])
-    if (benchmark_dir/'metrics.json').is_file():
-        shutil.copyfile(benchmark_dir/'metrics.json',record/'capacity-build.json')
-        shutil.copyfile(benchmark_dir/'build.log',record/'capacity-host.log')
+    if args.reuse_capacity_from:
+        previous=record.parent/args.reuse_capacity_from
+        previous_metadata=json.loads((previous/'candidate.json').read_text(encoding='utf-8'))
+        previous_sources=json.loads((previous/'source-hashes.json').read_text(encoding='utf-8'))
+        metrics=json.loads((previous/'capacity-build.json').read_text(encoding='utf-8'))
+        output=Path(previous_metadata['benchmark_output']).resolve()
+        relevant=[name for name in sources if name.startswith('src/') or name in (
+            'scripts/benchmark.py','tests/fixtures/minimal/conf.py','frontend/package-lock.json')]
+        proof={'source_record':args.reuse_capacity_from,'output':str(output),
+               'current_wheel_sha256':sha(wheel),'previous_wheel_sha256':previous_metadata['wheel_sha256'],
+               'changed_fixture_inputs':[name for name in relevant if previous_sources.get(name)!=sources[name]]}
+        proof['valid']=(proof['current_wheel_sha256']==proof['previous_wheel_sha256']
+            and not proof['changed_fixture_inputs'] and previous_metadata['python']==sys.version
+            and lock==json.loads((previous/'runtime-wheel-hashes.json').read_text(encoding='utf-8'))
+            and metrics.get('returncode')==0 and metrics.get('needs')==30000
+            and metrics.get('authored_edges')==90000 and metrics.get('fixture_version')==1
+            and output.is_relative_to((ROOT/'docs/_build/release-benchmark').resolve())
+            and (output/'index.html').is_file()
+            and sha(output/'_static/stv/stv.js')==sha(ROOT/'src/sphinx_traceability_view/static/stv.js'))
+        (record/'capacity-reuse.json').write_text(json.dumps(proof,indent=2),encoding='utf-8')
+        (record/'capacity-fixture-reuse.log').write_text(json.dumps(proof,indent=2),encoding='utf-8')
+        attempts.append({'suite':'capacity-fixture-reuse','returncode':0 if proof['valid'] else 1,
+                         'log':'capacity-fixture-reuse.log','source_record':args.reuse_capacity_from})
+        if not proof['valid']:
+            (record/'index.rst').write_text(f'{args.record} execution\n'+('='*(len(args.record)+10))+
+                '\n\nFixture reuse rejected; see capacity-reuse.json. No release pass is claimed.\n',encoding='utf-8')
+            return 2
+        env['STV_CAPACITY_OUTPUT']=str(output)
+        metadata['benchmark_output']=str(output)
+        metadata['capacity_fixture_reused_from']=args.reuse_capacity_from
+        metrics['reused_from']=args.reuse_capacity_from
+        (record/'capacity-build.json').write_text(json.dumps(metrics,indent=2),encoding='utf-8')
+        shutil.copyfile(previous/'capacity-host.log',record/'capacity-host.log')
+    else:
+        run('capacity-build',[sys.executable,'scripts/benchmark.py','--directory',str(benchmark_dir)])
+        if (benchmark_dir/'metrics.json').is_file():
+            shutil.copyfile(benchmark_dir/'metrics.json',record/'capacity-build.json')
+            shutil.copyfile(benchmark_dir/'build.log',record/'capacity-host.log')
     run('pytest',[sys.executable,'-m','pytest','tests','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
     run('node-tests',['node','--test','--test-reporter=junit','frontend/test/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
-    shared=Path(os.environ.get('REQUIREMENTS_SKILL_DIR',ROOT.parent/'#agents/skills/reverse-engineer-requirements'))
-    run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','0.1','--repo-root',str(ROOT),'--csv',str(record/'traceability.csv')])
-    run('diagram-links-published',[sys.executable,'scripts/normalize-diagram-links.py','--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
+    run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--csv',str(record/'traceability.csv')])
+    run('diagram-links-published',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
     cases=junit_cases(record/'pytest.xml')+junit_cases(record/'node.xml')
     for case in cases:
         if not case['requirements']:case['requirements']=__import__('re').findall(r'STV_(?:SYS|SWR)_\d+',case['test'])
@@ -130,7 +170,7 @@ def main():
     for case in cases:
         lines+=['   * - ``'+case['test']+'``','     - '+case['outcome'],'     - '+(', '.join(':need:`'+identity+'`' for identity in case['requirements']) or 'Publication/build infrastructure')]
     lines+=['','Retained evidence','-----------------','']
-    for name in ('candidate.json','source-hashes.json','commands.json','environment.txt','runtime-wheel-hashes.json','test-map.json','pytest.xml','node.xml','results.json','capacity-build.json','capacity-browser.json','capacity-host.log','traceability.csv'):
+    for name in ('candidate.json','source-hashes.json','commands.json','environment.txt','runtime-wheel-hashes.json','test-map.json','pytest.xml','node.xml','results.json','capacity-build.json','capacity-reuse.json','capacity-browser.json','capacity-host.log','traceability.csv'):
         if (record/name).exists():lines+=['* :download:`'+name+' <'+name+'>`']
     lines+=['* :download:`Tested wheel <artifacts/'+wheel.name+'>`','','Browser screenshots','-------------------','']
     for path in sorted((record/'consumer').glob('*')):

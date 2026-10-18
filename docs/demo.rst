@@ -7,10 +7,17 @@ from the software requirement below. Each view keeps its own exploration and
 viewport. Details show the final published Need body; the summary link opens
 its original page in a new tab.
 
-Draft usability review
-----------------------
+MVP exploration
+------------------------------
 
-The :doc:`requirement-changes/usability-problems` increment awaits owner review.
+The :doc:`requirement-changes/centered-layout-and-interactive-seeds` increment
+has completed owner inspection and concept acceptance. The project overview immediately shows five stakeholder
+requirements; Previous and Next browse the remaining pages. Parents align over
+the span of their visible children, with overlap prevention taking priority.
+Use Starting Need in either view to search IDs or titles, select a suggestion
+with the arrow keys and Enter, or confirm an exact existing ID. Project overview
+returns that view to its first page. Invalid input keeps the current graph.
+
 In Software entry below, expand ``derives from`` to inspect the upward link
 to STV_SYS_001, then ``allocated to`` for the downward link to
 STV_SWE_DIRECTIVE. Expand the latter's incoming allocated requirements for a

@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-18T19:12:04.536594+00:00",
+  "revision": "e7a561cbf1e8706c784980eff8d24e299d4a9885",
+  "dirty_worktree": " M README.rst\n M docs/architecture-software.rst\n M docs/concept-review.rst\n M docs/conf.py\n M docs/internal-interfaces.rst\n M docs/maturity.rst\n M docs/software.rst\n M docs/sources.rst\n M docs/stakeholder.rst\n M docs/state-machine.rst\n M docs/test-coverage.rst\n M docs/test-execution/index.rst\n M docs/verification-plan.rst\n M frontend/package-lock.json\n M frontend/package.json\n M frontend/src/layout.js\n M frontend/src/view.js\n M frontend/test/layout.test.js\n M pyproject.toml\n M scripts/verify-release.py\n M src/sphinx_traceability_view/__init__.py\n M src/sphinx_traceability_view/static/stv.js\n M tests/test_browser.py\n M tests/test_package.py\n?? docs/concept-reviews/round-4-inventory.json\n?? docs/concept-reviews/round-4.rst\n?? docs/test-execution/0.2.0-candidate-1/\n",
+  "source_identity": "798f87ec81e2ca85a2a71878c74c2c759ab0da3593798520c3527d54f047b8dd",
+  "wheel": "sphinx_traceability_view-0.2.0-py3-none-any.whl",
+  "wheel_sha256": "2a9cbe046177b58973781de8df45598219f6510a88f9ca1f89498e2aa7b9b199",
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\0.2.0-candidate-1\\html"
+}

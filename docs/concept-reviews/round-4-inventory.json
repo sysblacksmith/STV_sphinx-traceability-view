@@ -1,0 +1,670 @@
+{
+  "review": "round-4",
+  "date": "2026-10-18",
+  "input_revision": "e7a561cbf1e8706c784980eff8d24e299d4a9885",
+  "files": {
+    "docs/architecture/decisions/STV_ADR_001_static_extension.rst": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91",
+    "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d",
+    "docs/architecture/decisions/STV_ADR_003_state_layout.rst": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5",
+    "docs/architecture/decisions/STV_ADR_004_dependencies.rst": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6",
+    "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst": "37e9921deb1526b12f0b2fade1e1b99041f83e17ea291bfb393c5b653b5a6453",
+    "docs/architecture/diagrams/software-architecture.drawio": "a952999f9cef4df1996fd0611dd1212f036eda9c386edc605ba2d9a482eaa315",
+    "docs/architecture/diagrams/software-architecture.svg": "018b59cb2b49870f25f4ce98604ac37dd369f497fbdaa9325795efa334bf2b64",
+    "docs/architecture/diagrams/state-machine.drawio": "50774a42e8f0dde60b86050a9b2d47fd51b58061ba5dd30b3d93ed9df294faa6",
+    "docs/architecture/diagrams/state-machine.svg": "f861d3321d04d764079a8a1301b259820ddfcb5f339a8e051e4d4fbf01e0a95a",
+    "docs/architecture/diagrams/system-architecture.drawio": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+    "docs/architecture/diagrams/system-architecture.svg": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d",
+    "docs/architecture-decisions.rst": "1c645cde487937d3f0bacfc9aaf24b349d835d4632d58d212520ec3950e80cc5",
+    "docs/architecture-software.rst": "d4d26b6bb56b4e727c9db26a4dd8a73a94c4d95585874462856864f9523f6707",
+    "docs/architecture-system.rst": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42",
+    "docs/elements-software.rst": "d2d7727197cbedbe6308cf3640327a676677aa2c4692e57452af2ae1ac6cece7",
+    "docs/elements-system.rst": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff",
+    "docs/implementation-plan.rst": "ed6f97acfab79b4221e0c66db112da830940e281365d5e318684eee859666c83",
+    "docs/internal-interfaces.rst": "fa4950cba39d7bdf41c2bedb781e31c66879847ab6de8c938beffd06d16fa7c0",
+    "docs/software.rst": "1a56ccef479f2b0f492a6c450e1b4f18703465df11a26c84b5b16c4f41b6d041",
+    "docs/stakeholder.rst": "2e4564d0bcd5b3fce46ce72edce3ee4615a60d2e465de9eb43b205807f08dc62",
+    "docs/state-machine.rst": "3452b0c997fe5c44b0392b32d783b085c7f53b025e73a59c907bd56724d37b42",
+    "docs/system.rst": "ebbeea696976b043eff9f3515ef15d091c475ae7b8e2c4afacc7c924a8931e44",
+    "docs/technology-stack.rst": "f8f4fcb3cc74e50c9e20e8d23fc30bb2a622a8a7d05b7e3c44d472099c0bd9db",
+    "docs/test-coverage.rst": "57baec4c1f705976997c5b7ca3b78e1d01b7d6475de9bf50d0c5a8d9d64fb840",
+    "docs/traceability.rst": "684b96d372e2dcd7642126225d7be9ea339411a979029036915e3ec168230bfb",
+    "docs/verification-plan.rst": "9cfb5937e0428d3da72c43246b339fba851d5c88b7591e9f71daa4eff4116760"
+  },
+  "needs": {
+    "STV_SE_BROWSER": {
+      "type": "syse",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SE_BUILD": {
+      "type": "syse",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_001": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_002": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_003": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_004": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_005": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_006": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_007": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_008": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_009": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_010": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_011": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_012": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_013": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_014": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_015": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_016": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_017": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_018": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_019": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SHR_020": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_021": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SHR_022": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SHR_023": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SHR_024": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_025": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_026": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_027": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_028": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_029": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_030": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_031": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_032": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_033": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_034": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_035": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_036": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_037": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_038": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_039": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_040": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_041": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_042": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_043": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_044": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_045": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_046": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_047": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_048": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_049": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_050": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SHR_051": {
+      "type": "shr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_BUNDLE": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_DETAIL_BUILD": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_DIRECTIVE": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_GRAPH": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_INSPECT": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_LAYOUT": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_MODEL": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_RENDER": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWE_STATE": {
+      "type": "swe",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_001": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_002": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_003": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_004": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_005": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_006": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_007": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_008": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_009": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_010": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_011": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_012": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_013": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_014": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_015": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_016": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_017": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_018": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_019": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SWR_020": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_021": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SWR_022": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SWR_023": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "later"
+    },
+    "STV_SWR_024": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_025": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_026": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_027": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_028": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_029": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_030": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_031": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_032": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_033": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_034": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_035": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_036": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_037": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_038": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_039": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_040": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_041": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_042": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_043": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_044": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_045": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_046": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_047": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_048": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_049": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_050": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_051": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_052": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_053": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_054": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SWR_055": {
+      "type": "swr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_001": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_002": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_003": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_004": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_005": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_006": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_007": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_008": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_009": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    },
+    "STV_SYS_010": {
+      "type": "sysr",
+      "status": "accepted",
+      "release_scope": "initial"
+    }
+  }
+}

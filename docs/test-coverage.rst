@@ -23,7 +23,7 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - A visible seed defined on a later-read document resolves for each fixture type; hidden seeds are rejected as specified in STV_SWR_048.
      - ``tests/test_build.py::test_cross_page_bundle``
    * - :need:`STV_SWR_003`
-     - One seed produces one node; multiple distinct seeds within the capacity limit produce their corresponding nodes; no seeds produces only the project node. Every case has an empty expansion set and no automatically revealed traced objects.
+     - One seed produces one node; multiple distinct seeds within the capacity limit produce their corresponding nodes; no seeds produces the project node and at most five stakeholder entries. Every case has an empty ordinary expansion set; project entries are the sole automatic expansion exception.
      - ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
    * - :need:`STV_SWR_004`
      - The fixture exposes one control per nonempty group and activating it dispatches its group key.
@@ -46,18 +46,18 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_009`
      - Their node bounding boxes remain vertically ordered after each expansion.
-     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane``
+     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_010`
      - A fixture with all three categories has nonoverlapping ordered rank bands.
-     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane``
+     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_011`
      - Expanding architecture preserves the required rank order.
-     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane``
+     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_012`
      - A test linked to two ranks appears once beyond both artifact right bounds in shared mode.
      - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane``
+       ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_013`
      - A single authored relationship appears in both directional indexes with one canonical edge identity.
      - ``tests/test_build.py::test_cross_page_bundle``;
@@ -195,11 +195,13 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - An added hardware level is placed at its declared index without code changes.
      - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037: semantic bands and shared test lane``
+       ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_038`
      - Two views remain independent after navigation and viewport commands; later selectors are independent too.
      - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+       ``tests/test_browser.py::test_offline_exploration[http]``;
+       ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``tests/test_browser.py::test_interactive_seed_smoke[http]``
    * - :need:`STV_SWR_039`
      - Pointer and keyboard zoom preserve state and do not change another view.
      - ``tests/test_browser.py::test_offline_exploration[file]``;
@@ -271,20 +273,21 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
    * - :need:`STV_SWR_050`
      - A visible object exposes equivalent information through hover and keyboard Details activation. The panel permits keyboard scrolling and dismissal with focus restored to its trigger; new-tab node navigation remains a separate action.
-     - ``tests/test_browser.py::test_usability_smoke``;
+     - ``tests/test_browser.py::test_usability_smoke[file]``;
+       ``tests/test_browser.py::test_usability_smoke[http]``;
        ``tests/test_browser.py::test_offline_exploration[file]``;
        ``tests/test_browser.py::test_offline_exploration[http]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_051`
-     - A seedless fixture initially displays only the project node. Expansion reveals stakeholder requirements through the project-page contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible during collapse, counts toward the visible-node limit and is distinguished from real Needs without a fabricated original-Need link. Replacing the input model's stakeholder type names does not require source-code changes.
+     - A seedless fixture initially displays the project node and first stakeholder entries through the project-page contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible during collapse, counts toward the visible-node limit and is distinguished from real Needs without a fabricated original-Need link. Replacing the input model's stakeholder type names does not require source-code changes.
      - ``tests/test_browser.py::test_project_paging[file]``;
        ``tests/test_browser.py::test_project_paging[http]``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_052`
-     - A 201-stakeholder fixture offers five pages and every stakeholder ID appears on exactly one entry page. Initial root expansion reveals at most 50 entries. Page changes retain the project root, show only the selected page's rooted exploration and restore that page's independent accepted expansion state when revisited. Hidden entries and Need parts are not listed as top-level stakeholder roots. An empty project shows a no-stakeholder-requirements indication without an empty plus control.
+     - A 201-stakeholder fixture offers 41 pages and every stakeholder ID appears on exactly one entry page. The initially open root reveals at most five entries. Page changes retain the project root, show only the selected page's rooted exploration and restore that page's independent accepted expansion state when revisited. Hidden entries and Need parts are not listed as top-level stakeholder roots. An empty project shows a no-stakeholder-requirements indication without an empty plus control.
      - ``tests/test_browser.py::test_project_paging[file]``;
        ``tests/test_browser.py::test_project_paging[http]``;
        ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
@@ -294,16 +297,31 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_053`
      - Geometry smoke cases cover upward/downward links, clear fan-in, a blocked skipped level, test-lane links and a self-link, with endpoints on boundaries and no segment crossing a box interior.
-     - ``frontend/test/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours``;
+     - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``;
+       ``frontend/test/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours``;
        ``frontend/test/layout.test.js :: STV_SWR_053: blocked skipped-level edges retain safe detours``
    * - :need:`STV_SWR_054`
      - The rendered viewport reports a computed height of 975px.
-     - ``tests/test_browser.py::test_usability_smoke``
+     - ``tests/test_browser.py::test_usability_smoke[file]``;
+       ``tests/test_browser.py::test_usability_smoke[http]``
    * - :need:`STV_SWR_055`
      - Upward incoming and outgoing groups precede neutral and downward groups with stable ties. Replacement level mappings drive the order without relation-name assumptions. Expansion and collapse retain order and the existing keyboard/focus behavior.
-     - ``tests/test_browser.py::test_control_order_smoke``;
+     - ``tests/test_browser.py::test_control_order_smoke[file]``;
+       ``tests/test_browser.py::test_control_order_smoke[http]``;
        ``frontend/test/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship``;
        ``frontend/test/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions``
+   * - :need:`STV_SWR_056`
+     - A five-child star centers exactly. Competing parents, shared children, cycles, reverse-authored links and isolated nodes preserve finite geometry, nonoverlap, semantic levels, shared identity and safe routes.
+     - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``frontend/test/layout.test.js :: STV_SWR_056: parent and project center over five visible children``;
+       ``frontend/test/layout.test.js :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap``
+   * - :need:`STV_SWR_057`
+     - ID/title search, exact-ID confirmation, keyboard suggestions, invalid/hidden input, empty catalogs, repeated changes, overview return, layout failure/staleness and independent views pass file/HTTP checks. Runtime seed replacement requires neither source edits nor a Sphinx rebuild.
+     - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``frontend/test/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``;
+       ``frontend/test/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``tests/test_build.py::test_cross_page_bundle``;
@@ -329,7 +347,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_006`
      - A locally rendered object on another page has equivalent displayed metadata/body in hover or keyboard details and opens at its original anchor from file and HTTP URLs. An external object without a local body shows metadata, its original link and the unavailable-details indication; widget-specific script behavior is not required. Uncached remote embedded media uses the owner-approved unavailable-offline indication and explicit resource link, without automatic retrieval; local bundled media remains available.
-     - ``tests/test_browser.py::test_usability_smoke``;
+     - ``tests/test_browser.py::test_usability_smoke[file]``;
+       ``tests/test_browser.py::test_usability_smoke[http]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_007`
@@ -361,4 +380,5 @@ Executable sources
 * :download:`tests/test_package.py <../tests/test_package.py>`
 * :download:`frontend/test/groups.test.js <../frontend/test/groups.test.js>`
 * :download:`frontend/test/layout.test.js <../frontend/test/layout.test.js>`
+* :download:`frontend/test/seeds.test.js <../frontend/test/seeds.test.js>`
 * :download:`frontend/test/state.test.js <../frontend/test/state.test.js>`

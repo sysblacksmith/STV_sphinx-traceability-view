@@ -49,6 +49,37 @@ export async function compute(graph, visible, boxes) {
     for(const key of normal) {const h=boxes.get(key)||160;nodes.set(key,{x,y,width:280,height:h});x+=328;height=Math.max(height,h);}
     bands.push({rank,y,normal,tests,height}); y+=Math.max(height,40)+100;
   }
+  // Geometric parenthood follows semantic rank, not authored link direction.
+  const children=new Map();
+  const connect=(parent,child)=> {
+    if(!children.has(parent))children.set(parent,new Set());
+    children.get(parent).add(child);
+  };
+  for(const [a,,b] of visible.edges) {
+    const ka=JSON.stringify(['need',a]),kb=JSON.stringify(['need',b]);
+    const ta=graph.model.types[graph.objects[a]?.type],tb=graph.model.types[graph.objects[b]?.type];
+    if(!ta||!tb||ta.role==='test'||tb.role==='test')continue;
+    if(ranks.get(ka)<ranks.get(kb))connect(ka,kb);
+    else if(ranks.get(kb)<ranks.get(ka))connect(kb,ka);
+  }
+  if(visible.project)for(const id of visible.entries||[])connect(rootKey,JSON.stringify(['need',id]));
+  for(const band of [...bands].reverse()) {
+    const desired=new Map(band.normal.map(key=> {
+      const boxes=[...(children.get(key)||[])].map(k=>nodes.get(k));
+      const x=boxes.length?(Math.min(...boxes.map(n=>n.x))+Math.max(...boxes.map(n=>n.x+n.width)))/2-140:nodes.get(key).x;
+      return [key,x];
+    }));
+    band.normal.sort((a,b)=>desired.get(a)-desired.get(b));
+    let last=-Infinity,totalShift=0;
+    for(const key of band.normal) {
+      const x=Math.max(desired.get(key),last+328);
+      nodes.get(key).x=x;last=x;totalShift+=x-desired.get(key);
+    }
+    const balance=band.normal.length?totalShift/band.normal.length:0;
+    for(const key of band.normal)nodes.get(key).x-=balance;
+  }
+  const normalize=Math.max(0,30-Math.min(...[...nodes.values()].map(n=>n.x)));
+  for(const node of nodes.values())node.x+=normalize;
   const right=Math.max(30,...[...nodes.values()].map(n=>n.x+n.width))+96;
   // A stacked test lane can increase a band height; shift subsequent bands together.
   let shift=0;
@@ -79,6 +110,11 @@ export async function compute(graph, visible, boxes) {
     }
     const corridor=maxRight+32+i*12;
     const isTest=key=>graph.model.types[graph.objects[objects.get(key)]?.type]?.role==='test';
+    if(e.source===e.target && isTest(e.source)) {
+      e.points=[[a.x+a.width,a.y+a.height*.35],[corridor,a.y+a.height*.35],
+        [corridor,a.y+a.height*.65],[a.x+a.width,a.y+a.height*.65]];
+      return;
+    }
     const exit=above?rankBounds.get(ranks.get(e.source)).top-12-(i%20)*2:rankBounds.get(ranks.get(e.source)).bottom+12+(i%20)*2;
     const entry=above?rankBounds.get(ranks.get(e.target)).bottom+12+(i%20)*2:rankBounds.get(ranks.get(e.target)).top-12-(i%20)*2;
     const start=isTest(e.source)?[[a.x+a.width,a.y+a.height/2],[corridor,a.y+a.height/2]]:
@@ -88,6 +124,17 @@ export async function compute(graph, visible, boxes) {
     e.points=[...start,...end];
   });
   const rectangles=[...nodes.values()];
+  const onBoundary=(p,n)=>((p[0]===n.x||p[0]===n.x+n.width)&&p[1]>=n.y&&p[1]<=n.y+n.height)||
+    ((p[1]===n.y||p[1]===n.y+n.height)&&p[0]>=n.x&&p[0]<=n.x+n.width);
+  for(const edge of edges) {
+    if(!edge.points.every(p=>p.every(Number.isFinite)) ||
+       !onBoundary(edge.points[0],nodes.get(edge.source)) ||
+       !onBoundary(edge.points.at(-1),nodes.get(edge.target)))
+      throw Error('Layout produced invalid edge ports.');
+    for(let i=1;i<edge.points.length;i++)
+      if(rectangles.some(n=>crossesBox(edge.points[i-1],edge.points[i],n)))
+        throw Error('Layout produced an edge through a node.');
+  }
   for(let i=0;i<rectangles.length;i++) {
     const a=rectangles[i];
     if(!Object.values(a).every(Number.isFinite)) throw Error('Layout produced invalid coordinates.');

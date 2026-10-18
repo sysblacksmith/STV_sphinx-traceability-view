@@ -220,7 +220,8 @@ part collection (NeedsView.to_list_with_parts()) and original anchor rather than
 missing. Detail inspection of a part points to its published containing object
 and part anchor; part-specific full rendering needs a fixture.
 
-``ViewState`` holds initialization mode, immutable distinct seed IDs, expanded
+``ViewState`` holds initialization mode, a distinct seed list replaced only by
+an explicit successful seed/overview transition, expanded
 group keys, revision and viewport transform. Project mode also holds a tagged
 synthetic root, root-expanded flag, page index and independent expansion-key
 sets per page. The graph snapshot contains no fabricated Need for that root.
@@ -233,7 +234,8 @@ can collide with an ID. Canonical edge identity uses the same tuple principle.
 Filter hidden objects and their incident links before building directional
 indexes, degree counts or detail manifests. Remove host-generated hidden-target
 relationship references from copied fragments; do not attempt to redact arbitrary
-author-published prose. The initial state has all explicit seeds or only the project node. Normal
+author-published prose. The initial state has all explicit seeds or the project
+node and first page of at most five stakeholder entries. Normal
 group expansion proposes an added key; collapse proposes its removal. Run
 breadth-first reachability from every explicit seed, or from the project root
 and its open selected entry page,
@@ -281,7 +283,13 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    connected artifacts, breaking ties upward; an unconnected test seed uses
    the first band. Stack tests within each band and increase its height to
    avoid overlap. Every shared test remains right of all associated artifacts.
-5. Try a direct segment between facing ports first: top-to-bottom upward,
+5. Center parent boxes toward the midpoint of visible lower-level child spans,
+   including project-entry links, independently of authored edge direction.
+   Process bands from children upward; retain shared identity and deterministically
+   separate competing desired positions with the existing horizontal gap.
+   Same-rank and test-role links do not drive centering. Recompute the test lane
+   after horizontal movement; semantic bands and nonoverlap take precedence.
+6. Try a direct segment between facing ports first: top-to-bottom upward,
    bottom-to-top downward, and facing sides for overlapping vertical ranges.
    Test against open box interiors. Only blocked routes and self-links use
    empty inter-band corridors and numbered outer lanes beyond all nodes.
@@ -289,7 +297,7 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    blocked links use the gap below that band.
    Reserve separate lanes for self-links. Recompute routes after semantic
    projection rather than drawing stale ELK paths through moved nodes.
-6. Assert finite coordinates, nonoverlapping node rectangles, rank order,
+7. Assert finite coordinates, nonoverlapping node rectangles, rank order,
    correct test-side placement and edge endpoints on their owning nodes.
    Geometry failure keeps the previous view and produces a diagnostic.
 
@@ -397,7 +405,7 @@ serializes the extended snapshot unchanged in principle; INSPECT receives only
 real Need identities and never requests root details.
 
 For project mode, use a dedicated root expansion command, not a fake host
-relation name. Entry pages contain 50 IDs, except the final shorter page. Their
+relation name. Entry pages contain five IDs, except the final shorter page. Their
 virtual edges are outgoing from the root and only visible while it is open.
 Normal canonical traces may reach a stakeholder on a different page; that Need
 is then an ordinary reachable object, not an extra entry root. Shared identity
@@ -416,6 +424,16 @@ the initiating paging control, closes any old detail panel and pans that
 control into view. Errors retain prior graph, page and focus. The root uses a
 neutral project style without a Need ID, status border, Details button or
 original-object link; its full project title remains accessible without clipping.
+
+Runtime seed selection uses ``frontend/src/seeds.js`` for the local ID/title
+catalog and accessible suggestion picker. STATE handles ``seed`` and
+``overview`` commands as fresh candidate states; RENDER owns confirmation,
+diagnostics, focus and viewport reset. Commit through the existing asynchronous
+layout request token so stale results cannot restore a previous selection.
+The picker exists in every view; suggestions use only published non-hidden
+objects, at most ten displayed matches with totals, and no remote service.
+Only exact-ID or selected-match confirmation changes exploration. Overview
+return starts a fresh open page zero; ordinary paging retains page memory.
 
 Later occurrence mode treats each seed (or project entry) as an independent
 root path, using tagged root identity plus occurrence path for keys. Ancestor
