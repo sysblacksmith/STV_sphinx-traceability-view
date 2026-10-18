@@ -1,8 +1,7 @@
 Implementation verification plan
 ====================================
 
-This plan is ready for implementation; it records intended checks, not passed
-runtime results. Requirement verification states remain ``not_assessed``.
+Planned checks, execution environments, fixtures and release gates.
 
 Execution environments
 --------------------------
@@ -111,3 +110,35 @@ The owner agreed on 2026-10-18 to measure the first MVP before setting
 response-time and memory budgets. Present measurements for agreement of the
 budgets; no numeric thresholds are assigned now. The 200-visible-node limit
 remains a hard acceptance criterion.
+
+Concept review additions
+--------------------------
+
+Verify STV_SWR_050 explicitly: hover and keyboard activation open equivalent
+object details, keyboard scrolling/dismissal work and original-link activation
+is independent. Hidden-object tests include generated relationship references
+inside copied detail fragments, inherited hidden parts and filtered counts.
+Verify the external_url branch never passes a null external docname to the
+builder URI resolver. Test host-default relation labels and invalid missing labels.
+
+Run a cached-browser two-build fixture changing a Need body and making another
+Need hidden: the finalized view page references the new graph identity and new
+fragment hashes, no STV placeholder remains, and no current manifest references
+obsolete or hidden details. Assert no generated view page is presented as
+finalized if bundle generation fails. Do not claim revocation of previously
+distributed copies; publish a clean output tree.
+
+The remote-media fixtures below check the no-external-request contract;
+the external-original-page link remains a separate explicit reader action.
+
+
+Remote-media fallback fixtures
+-------------------------------
+
+For STV_SWR_015/017, exercise remote img/srcset, SVG references, video/poster,
+iframe/object/embed, protocol-relative URLs and CSS url()/imports in copied
+details. Assert that opening details makes no automatic remote requests and
+shows an unavailable-offline indication with the correct explicit resource
+link. Verify local bundled and permitted data images still render. Repeat under
+file URLs with networking disabled and static HTTP hosting. These are planned
+implementation checks, not passed runtime results.

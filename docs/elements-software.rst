@@ -1,8 +1,7 @@
 Software elements
 =================
 
-All source mappings below are proposed file responsibilities, not existing code
-evidence. Containment follows the two product system elements.
+Software module responsibilities and containment within the product system elements.
 
 .. swe:: Extension lifecycle and directives
    :id: STV_SWE_DIRECTIVE
@@ -111,4 +110,3 @@ evidence. Containment follows the two product system elements.
    :part_of: STV_SE_BROWSER
 
    Uses Floating UI DOM 1.7.4 to position final rendered fragments in bounded scrollable overlays and retains original-object new-tab links. Proposed source: frontend/src/inspect.js. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
-

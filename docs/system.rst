@@ -1,13 +1,11 @@
 System requirements
 ===================
 
-Derived from accepted stakeholder baseline v1. All records are proposed internal
-requirements (draft, inferred, not assessed); they do not change stakeholder
-acceptance or claim implemented behavior.
+System-level behavior, constraints and architecture allocation.
 
 .. sysr:: Author and resolve embedded views
    :id: STV_SYS_001
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -16,13 +14,13 @@ acceptance or claim implemented behavior.
    :derives_from: STV_SHR_001, STV_SHR_002, STV_SHR_026
    :allocated_to: STV_SE_BUILD
 
-   The system shall resolve each RST view invocation against the completed host Needs collection and associate it with a unique view instance and valid starting object.
+   The system shall resolve each RST view invocation against the completed host Needs collection and associate it with a unique view instance and visible valid starting object; host-hidden seeds shall fail with the invocation source location.
 
    **Acceptance criterion:** Two invocations on one page produce separate instances; missing and unknown IDs fail with filename and invocation location.
 
 .. sysr:: Integrate the host data model
    :id: STV_SYS_002
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -37,7 +35,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Deliver a self-contained documentation bundle
    :id: STV_SYS_003
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -52,7 +50,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Expose the complete host trace graph
    :id: STV_SYS_004
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -61,13 +59,13 @@ acceptance or claim implemented behavior.
    :derives_from: STV_SHR_006, STV_SHR_013, STV_SHR_027, STV_SHR_028
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
-   The system shall make authored relationships traversable in either direction while preserving unresolved target identities and delegating broken-trace build failure to host validation.
+   The system shall make authored relationships between non-hidden objects traversable in either direction while excluding host-hidden objects and incident links and preserving genuinely unresolved target identities and delegating broken-trace build failure to host validation.
 
    **Acceptance criterion:** A cross-document chain can be followed from either end; a missing target appears as a placeholder and host validation determines overall build failure.
 
 .. sysr:: Preserve semantic layout
    :id: STV_SYS_005
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -82,7 +80,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Provide original-object inspection
    :id: STV_SYS_006
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -93,11 +91,11 @@ acceptance or claim implemented behavior.
 
    The system shall provide locally rendered Need information and its original documentation location for inspection, using available metadata, the original link and an unavailable-details indication for external Needs without locally rendered bodies.
 
-   **Acceptance criterion:** An object on a different page has equivalent displayed metadata/body in its details and opens at its original anchor from both file and HTTP URLs.
+   **Acceptance criterion:** A locally rendered object on another page has equivalent displayed metadata/body in hover or keyboard details and opens at its original anchor from file and HTTP URLs. An external object without a local body shows metadata, its original link and the unavailable-details indication; widget-specific script behavior is not required. Uncached remote embedded media uses the owner-approved unavailable-offline indication and explicit resource link, without automatic retrieval; local bundled media remains available.
 
 .. sysr:: Isolate view sessions
    :id: STV_SYS_007
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -112,7 +110,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Bound exploration of large projects
    :id: STV_SYS_008
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -127,7 +125,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Deliver the reusable extension
    :id: STV_SYS_009
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -142,7 +140,7 @@ acceptance or claim implemented behavior.
 
 .. sysr:: Support the initial execution platform
    :id: STV_SYS_010
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -153,5 +151,4 @@ acceptance or claim implemented behavior.
 
    The system shall support the initial release workflow in stable desktop Firefox on Windows.
 
-   **Acceptance criterion:** The release interaction checks run on recorded Firefox and Windows versions against file and static HTTP output.
-
+   **Acceptance criterion:** All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.

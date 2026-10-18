@@ -1,11 +1,11 @@
 Architecture View for System
 ============================
 
-Proposed architecture, not an implemented system. See :ref:`STV_ADR_001`.
+System boundary and deployment. See :ref:`STV_ADR_001`.
 
 .. raw:: html
 
-   <object type="image/svg+xml" data="system-architecture.svg" style="width:100%;height:auto;aspect-ratio:800/570" aria-label="Interactive architecture diagram with links to Need objects">
+   <object type="image/svg+xml" data="system-architecture.svg" style="display:block;width:100%;max-width:520px;margin:0 auto;height:auto;aspect-ratio:382/702" aria-label="Interactive architecture diagram with links to Need objects">
      <a href="system-architecture.svg">Open linked architecture diagram</a>
    </object>
 

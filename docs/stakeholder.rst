@@ -1,12 +1,7 @@
 Stakeholder requirements
 ========================
 
-Stakeholder requirements baseline v1, accepted by the project owner on 2026-10-18.
-Approval evidence is recorded in :doc:`sources`. Acceptance does not imply
-implementation or successful verification.
-Priorities remain unassigned. Release allocations are recorded where explicitly
-agreed; otherwise they remain unassigned. See :doc:`review` for
-assumptions, open questions and coverage limitations.
+Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Embed a traceability view
    :id: STV_SHR_001
@@ -148,7 +143,7 @@ assumptions, open questions and coverage limitations.
    ID and shortened title directly in the node without opening another page.
 
    **Review note:** Node fields and shortening limits are not configurable in
-   the current scope. The shortening rule remains to be specified.
+   the current scope. The internal concept specifies a fixed two-line title clamp (STV_SWR_008).
    Hover details and access to the original object are specified separately in
    :need:`STV_SHR_015` and :need:`STV_SHR_016`.
 
@@ -263,7 +258,9 @@ assumptions, open questions and coverage limitations.
    position artifacts according to their supplied layout mappings, using the
    same extension implementation.
 
-   **Review note:** Input format and delivery mechanism remain to be clarified.
+   **Review note:** The internal concept uses the supplemental Sphinx mapping
+   described in :doc:`internal-interfaces`; the host type/link definitions remain
+   authoritative.
    Invalid or incomplete models are covered by :need:`STV_SHR_036`. The shared method's
    schema is one possible input model, not a fixed schema for the extension.
 
@@ -297,6 +294,13 @@ assumptions, open questions and coverage limitations.
    link are sufficient, with a clear "Full details unavailable locally"
    indication. External pages need not be downloaded or cached. This explicitly
    agreed exception is recorded in :doc:`sources`; baseline v1 history is retained.
+
+   **Remote-media clarification (owner, 2026-10-18):** Uncached remote
+   embedded resources may be replaced by an unavailable-offline indication
+   and an explicit original-resource link. Local bundled media remains
+   available; automatic downloading is not required or permitted by this
+   fallback. See :doc:`sources` and STV_REVIEW_007 in :doc:`concept-review`.
+   This is an explicit scope amendment; baseline v1 history is retained.
 
    **Review note:** Keyboard access is covered by :need:`STV_SHR_034`; touch
    access is deferred beyond the initial release. Large tooltips are covered
@@ -338,8 +342,8 @@ assumptions, open questions and coverage limitations.
    documented Need object in a new tab.
 
    **Review note:** Access to original documentation hosted outside the built
-   documentation bundle depends on its availability; handling such links remains
-   to be clarified.
+   documentation bundle depends on its availability; the owner agreed to retain
+   external-object links without fetching/caching their destinations.
 
 .. shr:: Explore documentation on static hosting
    :id: STV_SHR_018
@@ -864,8 +868,9 @@ assumptions, open questions and coverage limitations.
    **Rationale:** The project may be large, while a view should remain small
    enough for readers to navigate meaningfully.
 
-   **Review note:** The precise project-size benchmark, relationship count,
-   response-time targets remain open. Expansion limit handling is specified in
+   **Review note:** The engineering measurement fixture is 30,000 Needs and
+   90,000 edges; response-time/memory budgets will be agreed after first MVP
+   measurements, per the recorded owner decision. Expansion limit handling is specified in
    :need:`STV_SHR_044`. Handling a display-mode switch that would exceed the
    limit follows :need:`STV_SHR_044`.
 

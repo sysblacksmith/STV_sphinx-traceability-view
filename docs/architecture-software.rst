@@ -1,11 +1,12 @@
 Architecture View for Software
 ==============================
 
-Proposed component design; file mappings are listed in :doc:`elements-software`.
+Component responsibilities and interfaces; file mappings are listed in
+:doc:`elements-software`.
 
 .. raw:: html
 
-   <object type="image/svg+xml" data="software-architecture.svg" style="width:100%;height:auto;aspect-ratio:1140/780" aria-label="Interactive architecture diagram with links to Need objects">
+   <object type="image/svg+xml" data="software-architecture.svg" style="width:100%;height:auto;aspect-ratio:1302/1152" aria-label="Interactive architecture diagram with links to Need objects">
      <a href="software-architecture.svg">Open linked architecture diagram</a>
    </object>
 
@@ -15,7 +16,8 @@ Build sequence
 The exact hook priorities, failure ownership and incremental-build policy are
 fixed in :doc:`implementation-plan`. Read the resolved NeedsView at write-started
 priority 800; extract final rendered HTML with Beautiful Soup at build-finished
-priority 900. Emit one graph manifest and local per-object detail scripts. Keep
+priority 900. Emit content-addressed details and the final manifest, then
+patch STV-owned script/root attributes in view pages to the completed identity. Keep
 the initial serial-build safety flags false. Source and type mappings remain
 host-owned; no duplicate model registry is introduced.
 
@@ -51,7 +53,7 @@ Do not use generic solver layers as semantic ranks or retain its edge paths
 after moving nodes. See :ref:`STV_ADR_004` for the dependency decision.
 
 Fixed node summary: complete ID and title visually clamped to two lines, with
-full title in details. This is a proposed implementation choice, not an edit to
+full title in details. This is a fixed implementation choice, not an edit to
 the accepted stakeholder baseline. Details use a focusable, dismissible overlay
 with constrained height/width and scrolling. Expansion controls must not bubble
 activation into the new-tab object link. A tooltip-to-overlay pointer transition

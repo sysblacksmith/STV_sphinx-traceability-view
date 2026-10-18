@@ -1,9 +1,8 @@
 Architecture Design Decisions
 =============================
 
-All decisions are proposed on 2026-10-18, with no formal acceptance or
-supersession. Their scope is solution architecture (001) and software
-architecture (002, 003), with concrete dependency selection (004). No historical records have been removed.
+Architecture choices, rationale, constraints and alternatives. Each ADR records
+its canonical lifecycle status; review history is in :doc:`maturity`.
 
 .. toctree::
    :maxdepth: 1

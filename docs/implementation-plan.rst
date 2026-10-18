@@ -1,10 +1,8 @@
 Implementation concept and handover
 =======================================
 
-This page fixes the MVP implementation approach. Start implementation from the
-accepted stakeholder baseline, draft internal specification and the concrete
-choices in :doc:`technology-stack`. No additional library-selection phase is
-needed. ADRs remain proposed until reviewed; runtime acceptance is a later gate.
+MVP implementation sequence, module contracts and delivery gates using the
+internal specification and dependencies in :doc:`technology-stack`.
 
 Product boundary and source layout
 --------------------------------------
@@ -119,16 +117,18 @@ the initial release; parallel support is not assumed from serialized data.
    **env-get-outdated:** conservatively return all existing documents for MVP
    builds with views. This deliberately favors coherent final fragments over
    fine-grained caching. No-op builds still regenerate bundle manifests.
-3. **write-started, priority 800:** Read
+3. **write-started, priority 800 (handler signature app, builder):** Read
    ``SphinxNeedsData(app.env).get_needs_view()`` after host postprocessing
    (registered at the default priority in installed 8.2.0). Normalize the
    host model, resolve seeds across documents, construct canonical graph and
    incoming indexes. Use ``builder.get_target_uri(docname)`` and original
-   anchors for original-object locations. Validate before any view is emitted.
+   anchors for local original-object locations; external objects use the host
+   external_url instead of passing a missing docname to the builder. Validate before any view is emitted.
 4. **html-page-context:** Include graph and runtime scripts only on pages with
    view roots, using relative builder URLs. Detail fragments have per-object
-   script URLs from the manifest. Scripts are classic scripts with ordered
-   loading, never ES modules or runtime fetch requests.
+   script URLs from the manifest. The graph script is an STV-owned tagged placeholder at this phase because
+   final detail-content hashes are not known yet. Scripts are classic scripts
+   with ordered loading, never ES modules or runtime fetch requests.
 5. **build-finished, priority 900:** Parse final HTML pages listed by the graph,
    produce detail fragments and bundle files, even when host dangling-link
    warnings made the final exit code nonzero, provided final pages exist.
@@ -140,6 +140,19 @@ Build output is not published until Sphinx exits. Thus pages can reference
 files emitted at build-finished without a runtime race in the finished bundle.
 Write outputs through sibling temporary files and rename only when complete.
 Regenerate graph and detail manifests together to prevent stale seed/link data.
+At finalization, hash each transformed detail fragment, then hash the canonical
+manifest payload containing those detail URLs (excluding its own identity
+field). Emit detail files, then the graph script named by that manifest hash.
+Finally patch only STV-owned tagged graph-script src attributes and view-root
+build-identity attributes in generated view pages to reference the final graph.
+Preserve unrelated host markup. A view page is not finalized while its placeholder
+remains. This explicit post-write step avoids referring to final hashes before
+rendered detail content is available.
+A failed build must not overwrite a previously complete manifest with a partial
+one. Missing/deleted/hidden IDs disappear from the current manifest; obsolete
+files are not referenced by current pages. Clean distribution output prevents
+previously published hidden content persisting in old artifacts. STV cannot
+revoke copies of old bundles already distributed.
 Keep output paths under the builder output root; never delete unrelated files.
 
 Final rendered details and offline loading
@@ -153,10 +166,12 @@ do not constrain extraction to a table tag, so another host layout can use a
 different element with the same anchor.
 
 Write one small classic-script file per resolved Need detail under
-``_static/stv/details/<sha256-of-id>.js``. The graph manifest includes its
-relative path and original-page location. Each file registers the rendered
-fragment in ``globalThis.__STV_DATA__.details``. Load it on first inspection
-by adding a script element; cache the resulting promise per ID. This works
+``_static/stv/details/<sha256-of-id>-<sha256-of-fragment>.js``. The graph manifest includes its
+relative path and original-page location. Each detail file registers its rendered
+fragment by content digest under ``globalThis.__STV_DATA__.fragments``. Graph
+manifests are stored under their build identity and name the expected detail
+digests, so sharing an immutable fragment cannot overwrite a newer revision. Load it on first inspection
+by adding a script element; cache the resulting promise per build identity and ID. This works
 without fetching an HTML page or loading all rich Need bodies at startup.
 Files are generated locally at build time and require no network service.
 
@@ -173,8 +188,8 @@ widget scripts or claim snapshots of content that exists only after script execu
 Store local resource/link targets in output-root-relative form with their
 query/fragment preserved. At insertion, resolve them against the embedding
 page's known documentation root. Use ``urllib.parse`` and path components;
-handle href, src, srcset, poster and SVG href attributes. Do not rewrite http,
-https, mailto, data-image or telephone links as local paths. Reject executable
+handle href, src, srcset, poster and SVG href attributes. Do not rewrite ordinary http, https, mailto or telephone navigation links
+as local paths. Embedded-resource handling follows the policy below. Reject executable
 schemes. Prefix cloned DOM IDs using view ID and inspection sequence and
 update same-fragment links and IDREF attributes such as ``for`` and
 ``aria-labelledby``. Original-object links retain original IDs on the original
@@ -200,7 +215,7 @@ uses textContent rather than HTML interpolation. Build one index in O(N + E).
 ``GraphSnapshot`` includes normalized model, objects by ID, canonical edge
 triples, directional adjacency and detail script locations. Need parts follow
 their host full IDs when present in link targets; resolve them through the host
-part collection and original anchor rather than incorrectly marking them
+part collection (NeedsView.to_list_with_parts()) and original anchor rather than incorrectly marking them
 missing. Detail inspection of a part points to its published containing object
 and part anchor; part-specific full rendering needs a fixture.
 
@@ -210,7 +225,9 @@ use nested maps/sets or JSON tuple encoding, not delimiter concatenation that
 can collide with an ID. Canonical edge identity uses the same tuple principle.
 
 Filter hidden objects and their incident links before building directional
-indexes, degree counts or detail manifests. The initial state has one shared node. Expanding proposes an added group key;
+indexes, degree counts or detail manifests. Remove host-generated hidden-target
+relationship references from copied fragments; do not attempt to redact arbitrary
+author-published prose. The initial state has one shared node. Expanding proposes an added group key;
 collapsing proposes its removal. Run breadth-first reachability from the seed,
 following only expanded groups owned by reached nodes. Retain previously
 expanded descendant keys while hidden so a reopened branch can restore them,
@@ -227,7 +244,9 @@ silent mapping for a real host artifact type.
 After a valid candidate graph is obtained, perform layout before committing its
 rendered revision. A per-view monotonically increasing request token discards
 late asynchronous ELK results. Show a busy indication during the transition;
-retain the previous view on layout failure and announce the error. Later
+retain the previous view on layout failure and announce the error. On initial
+layout failure, retain the seed summary with an error/retry control instead of
+leaving an empty unexplained root. Later
 occurrence projection remains behind the state interface and is not implemented
 in the MVP.
 
@@ -278,9 +297,11 @@ view. Toolbar plus/minus and arrow controls call the same D3 transform API for
 keyboard use. Keep transforms per instance. A keyboard-focused node must be
 panned into view, not merely focused off-screen.
 
-Each node has an original-object anchor with ``target=_blank`` and
+Each resolved node has an original-object anchor with ``target=_blank`` and
 ``rel=noopener noreferrer`` plus separate relationship buttons and a Details
-button. Buttons expose aria-expanded and meaningful directional names. Stable
+button. The original-object anchor fills the summary/background region of the
+node, excluding separate controls; placeholders have no navigable anchor.
+Buttons expose aria-expanded and meaningful directional names. Stable
 DOM keys preserve focus after relayout; if the focused node disappears, return
 focus to the collapsing control or nearest surviving ancestor, then the toolbar.
 
@@ -322,3 +343,20 @@ Implementation sequence and completion gates
 Do not implement later occurrence mode, broaden supported platforms or change
 accepted requirements as incidental work. Do not mark internal requirements
 passed because a documentation build or a library smoke test succeeds.
+
+Remote embedded resources
+-------------------------
+
+Uncached remote embedded media uses an unavailable-offline indication and
+an explicit original-resource link.
+Preserve local bundled media. Do not download remote media automatically at
+build time or request it when a detail panel opens. During extraction, replace
+remote image/srcset, audio/video/source/poster, iframe/object/embed and SVG
+resource references with a static placeholder and explicit link. Remove remote
+CSS imports and url() dependencies from copied styles; retain the affected
+resource URLs as explicit links. Resolve relative references against the
+original page before classifying them, including protocol-relative URLs.
+Local resources and permitted data images remain usable; ordinary external
+navigation links remain explicit reader actions. Do not copy remote stylesheets
+or active embedded documents into details. This policy refines STV_SWR_015/017
+and the explicitly amended STV_SHR_015; it does not require a media cache.

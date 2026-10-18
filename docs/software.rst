@@ -1,14 +1,12 @@
 Software requirements
 =====================
 
-Draft software specification derived from the accepted stakeholder baseline and
-proposed system requirements. See :doc:`architecture-software` for interfaces
-and :doc:`review` for remaining verification gaps. Later-mode clauses are not
-MVP implementation commitments.
+Software behavior, interfaces and architecture allocation. See
+:doc:`architecture-software` for component interfaces.
 
 .. swr:: Register the RST entry point
    :id: STV_SWR_001
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -23,7 +21,7 @@ MVP implementation commitments.
 
 .. swr:: Resolve seeds after collection
    :id: STV_SWR_002
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -32,13 +30,13 @@ MVP implementation commitments.
    :derives_from: STV_SYS_001
    :allocated_to: STV_SWE_GRAPH
 
-   The software shall resolve starting IDs only after all host documents have contributed Needs, without restricting eligible seeds to selected types.
+   The software shall resolve starting IDs only after all host documents have contributed Needs, for any configured type, excluding host-hidden objects and their parts.
 
-   **Acceptance criterion:** A seed defined on a later-read document resolves for each fixture type.
+   **Acceptance criterion:** A visible seed defined on a later-read document resolves for each fixture type; hidden seeds are rejected as specified in STV_SWR_048.
 
 .. swr:: Initialize collapsed state
    :id: STV_SWR_003
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -55,7 +53,7 @@ MVP implementation commitments.
 
 .. swr:: Expose plus controls
    :id: STV_SWR_004
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -72,7 +70,7 @@ MVP implementation commitments.
 
 .. swr:: Expand complete target groups
    :id: STV_SWR_005
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -89,7 +87,7 @@ MVP implementation commitments.
 
 .. swr:: Traverse without depth cutoff
    :id: STV_SWR_006
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -98,13 +96,13 @@ MVP implementation commitments.
    :derives_from: STV_SYS_004
    :allocated_to: STV_SWE_GRAPH
 
-   The software shall provide indexed outgoing and incoming adjacency for every resolved object without imposing a traversal-depth cutoff.
+   The software shall provide indexed outgoing and incoming adjacency for every non-hidden resolved object without imposing a traversal-depth cutoff.
 
    **Acceptance criterion:** A path crossing document boundaries can be followed beyond three hops from either end.
 
 .. swr:: Collapse relationship groups
    :id: STV_SWR_007
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -121,7 +119,7 @@ MVP implementation commitments.
 
 .. swr:: Render fixed node summaries
    :id: STV_SWR_008
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -138,7 +136,7 @@ MVP implementation commitments.
 
 .. swr:: Order requirement ranks
    :id: STV_SWR_009
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -153,7 +151,7 @@ MVP implementation commitments.
 
 .. swr:: Insert system architecture rank
    :id: STV_SWR_010
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -168,7 +166,7 @@ MVP implementation commitments.
 
 .. swr:: Place software architecture rank
    :id: STV_SWR_011
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -183,7 +181,7 @@ MVP implementation commitments.
 
 .. swr:: Place test nodes on the right
    :id: STV_SWR_012
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -198,7 +196,7 @@ MVP implementation commitments.
 
 .. swr:: Index both trace directions
    :id: STV_SWR_013
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -213,7 +211,7 @@ MVP implementation commitments.
 
 .. swr:: Normalize replacement mappings
    :id: STV_SWR_014
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -228,7 +226,7 @@ MVP implementation commitments.
 
 .. swr:: Publish full rendered details
    :id: STV_SWR_015
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -239,11 +237,19 @@ MVP implementation commitments.
 
    The software shall capture the final host-rendered Need representation for each locally rendered resolved object and make its displayed metadata and body available to details without a separate field whitelist.
 
-   **Acceptance criterion:** A cross-page Need with custom metadata, formatted body and local images has equivalent information in details; hidden internal fields are not exposed.
+   Uncached remote embedded media shall be replaced with an unavailable-offline
+   indication and explicit original-resource link, without automatic retrieval.
+   This includes resource-bearing HTML/SVG attributes and remote CSS imports
+   or url() references. Local bundled media shall remain available.
+
+   **Acceptance criterion:** A cross-page Need with custom metadata, formatted
+   body and local images has equivalent information in details; hidden internal
+   fields are not exposed. Remote media/CSS fixtures show the fallback and
+   preserve the original URL without automatic network requests.
 
 .. swr:: Open canonical object links
    :id: STV_SWR_016
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -258,7 +264,7 @@ MVP implementation commitments.
 
 .. swr:: Avoid runtime network loading
    :id: STV_SWR_017
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -273,7 +279,7 @@ MVP implementation commitments.
 
 .. swr:: Use portable output URLs
    :id: STV_SWR_018
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -288,7 +294,7 @@ MVP implementation commitments.
 
 .. swr:: Offer occurrence mode later
    :id: STV_SWR_019
-   :status: draft
+   :status: accepted
    :tags: release_later
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -305,7 +311,7 @@ MVP implementation commitments.
 
 .. swr:: Use shared identity initially
    :id: STV_SWR_020
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -322,7 +328,7 @@ MVP implementation commitments.
 
 .. swr:: Retain state across later mode changes
    :id: STV_SWR_021
-   :status: draft
+   :status: accepted
    :tags: release_later
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -339,7 +345,7 @@ MVP implementation commitments.
 
 .. swr:: Key later expansions by occurrence
    :id: STV_SWR_022
-   :status: draft
+   :status: accepted
    :tags: release_later
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -356,7 +362,7 @@ MVP implementation commitments.
 
 .. swr:: Project later shared expansion union
    :id: STV_SWR_023
-   :status: draft
+   :status: accepted
    :tags: release_later
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -373,7 +379,7 @@ MVP implementation commitments.
 
 .. swr:: Close repeated paths safely
    :id: STV_SWR_024
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -390,7 +396,7 @@ MVP implementation commitments.
 
 .. swr:: Compute seed-rooted visibility
    :id: STV_SWR_025
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -407,7 +413,7 @@ MVP implementation commitments.
 
 .. swr:: Report invalid invocation seeds
    :id: STV_SWR_026
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -422,7 +428,7 @@ MVP implementation commitments.
 
 .. swr:: Tolerate host broken traces
    :id: STV_SWR_027
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -437,7 +443,7 @@ MVP implementation commitments.
 
 .. swr:: Create missing-target nodes
    :id: STV_SWR_028
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -448,11 +454,11 @@ MVP implementation commitments.
 
    The software shall display a missing-target node with its referenced ID, explicit missing-object text and source connection when its group is expanded.
 
-   **Acceptance criterion:** The placeholder is identifiable without color and does not pretend to offer a valid original-object link.
+   **Acceptance criterion:** Expanding a genuine missing-target group shows the target ID, missing-object text and source connection without relying on color. No valid original-object link is offered. Hidden targets do not become placeholders.
 
 .. swr:: Indicate empty adjacency
    :id: STV_SWR_029
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -469,7 +475,7 @@ MVP implementation commitments.
 
 .. swr:: Resolve type palette
    :id: STV_SWR_030
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -486,7 +492,7 @@ MVP implementation commitments.
 
 .. swr:: Apply acceptance borders
    :id: STV_SWR_031
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -503,7 +509,7 @@ MVP implementation commitments.
 
 .. swr:: Normalize accepted values
    :id: STV_SWR_032
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -520,7 +526,7 @@ MVP implementation commitments.
 
 .. swr:: Constrain and retain details overlays
    :id: STV_SWR_033
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -535,7 +541,7 @@ MVP implementation commitments.
 
 .. swr:: Provide keyboard interaction
    :id: STV_SWR_034
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -552,7 +558,7 @@ MVP implementation commitments.
 
 .. swr:: Label directional controls
    :id: STV_SWR_035
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -569,7 +575,7 @@ MVP implementation commitments.
 
 .. swr:: Reject invalid model entries
    :id: STV_SWR_036
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -584,7 +590,7 @@ MVP implementation commitments.
 
 .. swr:: Honor declared level ordering
    :id: STV_SWR_037
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -599,7 +605,7 @@ MVP implementation commitments.
 
 .. swr:: Scope state to view roots
    :id: STV_SWR_038
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -614,7 +620,7 @@ MVP implementation commitments.
 
 .. swr:: Implement view-local zoom
    :id: STV_SWR_039
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -631,7 +637,7 @@ MVP implementation commitments.
 
 .. swr:: Implement view-local pan
    :id: STV_SWR_040
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -648,7 +654,7 @@ MVP implementation commitments.
 
 .. swr:: Verify Firefox on Windows
    :id: STV_SWR_041
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -659,11 +665,11 @@ MVP implementation commitments.
 
    The software shall use browser interfaces exercised by the documented release checks on stable Firefox desktop for Windows in both file and HTTP contexts.
 
-   **Acceptance criterion:** The release record states exact browser and OS versions and results for both contexts.
+   **Acceptance criterion:** All in-scope interaction checks pass in both file and HTTP contexts; the release record states the exact stable Firefox and Windows versions and actual results.
 
 .. swr:: Package for the pinned toolchain
    :id: STV_SWR_042
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -678,7 +684,7 @@ MVP implementation commitments.
 
 .. swr:: Enforce visible occurrence capacity
    :id: STV_SWR_043
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -697,7 +703,7 @@ MVP implementation commitments.
 
 .. swr:: Reject over-limit transitions atomically
    :id: STV_SWR_044
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -712,7 +718,7 @@ MVP implementation commitments.
 
 .. swr:: Reuse canonical host definitions
    :id: STV_SWR_045
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -727,7 +733,7 @@ MVP implementation commitments.
 
 .. swr:: Expose an installable entry module
    :id: STV_SWR_046
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -740,10 +746,9 @@ MVP implementation commitments.
 
    **Acceptance criterion:** A separate project enables the installed module and renders a seeded view without repository imports.
 
-
 .. swr:: Inspect external Needs without local full content
    :id: STV_SWR_047
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/sources.rst :: external Need detail scope confirmation 2026-10-18
@@ -764,14 +769,14 @@ MVP implementation commitments.
 
 .. swr:: Respect host-hidden Need objects
    :id: STV_SWR_048
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/sources.rst :: hidden Need visibility confirmation 2026-10-18
    :priority: unassigned
    :verification_state: not_assessed
    :derives_from: STV_SYS_001, STV_SYS_004
-   :allocated_to: STV_SWE_DIRECTIVE, STV_SWE_GRAPH
+   :allocated_to: STV_SWE_DIRECTIVE, STV_SWE_GRAPH, STV_SWE_DETAIL_BUILD
 
    The software shall exclude host-hidden Needs and their incident relationships
    from the published view data and reject a hidden Need used as a starting ID
@@ -787,9 +792,15 @@ MVP implementation commitments.
    hiding a node only in the browser is insufficient. Hidden-object exclusion
    takes precedence over placeholder creation for genuinely unresolved targets.
 
+   **Detail filtering:** Exclude host-generated relationship references to hidden
+   targets from copied detail fragments as well as graph indexes and counts.
+   Do not synthesize a placeholder revealing a filtered target. This is host
+   visibility conformance, not redaction of prose already deliberately published
+   by the author.
+
 .. swr:: Preserve static third-party widget content in details
    :id: STV_SWR_049
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: owner
    :evidence: docs/sources.rst :: third-party widget scope confirmation 2026-10-18
@@ -810,3 +821,27 @@ MVP implementation commitments.
 
    **Review note:** This does not remove STV's own keyboard, scrolling or link
    interactions. Widget-specific JavaScript behavior in details is deferred.
+
+.. swr:: Open details through hover or keyboard activation
+   :id: STV_SWR_050
+   :status: accepted
+   :tags: release_initial
+   :basis: inferred
+   :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_006, STV_SHR_034
+   :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
+
+   The software shall open the same full-detail panel when the reader hovers
+   over a node or activates its keyboard-accessible Details control, without
+   navigating away from the view.
+
+   **Acceptance criterion:** A visible object exposes equivalent information
+   through hover and keyboard Details activation. The panel permits keyboard
+   scrolling and dismissal with focus restored to its trigger; new-tab node
+   navigation remains a separate action.
+
+   **Rationale:** The system parent carries full-object inspection; direct
+   channeling from STV_SHR_034 refines the software-local keyboard interaction
+   without adding an artificial system-level obligation.

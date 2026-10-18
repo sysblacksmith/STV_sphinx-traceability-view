@@ -2,11 +2,8 @@ Interactive traceability view
 =============================
 
 Specification for a Sphinx-Needs extension providing interactive traceability
-exploration. Accepted stakeholder baseline v1 is in ``docs/stakeholder.rst``.
-Draft internal requirements are in ``docs/system.rst`` and ``docs/software.rst``;
-proposed architecture, interfaces and ADRs are indexed in the documentation.
-Design review gaps are recorded in ``docs/review.rst``. Runtime implementation
-has not started.
+exploration. Requirements and architecture are indexed in ``docs/index.rst``.
+Project maturity and review records are maintained in ``docs/maturity.rst``.
 
 Build documentation
 -------------------
@@ -61,7 +58,7 @@ project layouts. To validate the published targets after building::
 
    .\.venv\Scripts\python.exe scripts/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
 
- Sphinx embeds the linked SVGs as interactive objects.
+Sphinx embeds the linked SVGs as interactive objects.
 
 Implementation handover
 -----------------------

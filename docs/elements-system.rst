@@ -1,7 +1,7 @@
 System elements
 ===============
 
-Proposed product elements. Sphinx, Sphinx-Needs, the static host and browser are
+Product elements. Sphinx, Sphinx-Needs, the static host and browser are
 external execution dependencies, not product components with invented internals.
 
 .. syse:: Sphinx build integration
@@ -13,7 +13,7 @@ external execution dependencies, not product components with invented internals.
    :priority: unassigned
    :verification_state: not_assessed
 
-   Consumes host configuration, resolved Needs and doctrees; produces validated view invocations and portable graph/detail/runtime files. Runs only during documentation generation. **Source mapping:** proposed; no runtime implementation exists. See :ref:`STV_ADR_001` and :ref:`STV_ADR_002`.
+   Consumes host configuration, resolved Needs and doctrees; produces validated view invocations and portable graph/detail/runtime files. Runs only during documentation generation. **Source mapping:** build/browser responsibilities described in the software elements. See :ref:`STV_ADR_001` and :ref:`STV_ADR_002`.
 
 .. syse:: Browser exploration runtime
    :id: STV_SE_BROWSER
@@ -24,5 +24,4 @@ external execution dependencies, not product components with invented internals.
    :priority: unassigned
    :verification_state: not_assessed
 
-   Consumes generated immutable data and rendered detail fragments; owns independent per-view state, layout, accessible interactions and viewport. Runs in Firefox on Windows with no service dependency. **Source mapping:** proposed; no runtime implementation exists. See :ref:`STV_ADR_001` and :ref:`STV_ADR_002`.
-
+   Consumes generated immutable data and rendered detail fragments; owns independent per-view state, layout, accessible interactions and viewport. Runs in Firefox on Windows with no service dependency. **Source mapping:** build/browser responsibilities described in the software elements. See :ref:`STV_ADR_001` and :ref:`STV_ADR_002`.

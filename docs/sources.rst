@@ -245,3 +245,41 @@ until later. No project distribution license has been selected.
 Performance budget decision, 2026-10-18: owner agreed to measure the first
 MVP against the planned large-project fixture, then agree response-time and
 memory budgets from those results. The hard 200-visible-node limit is unchanged.
+
+Concept review delegation and round 1
+--------------------------------------
+
+On 2026-10-18 the project owner explicitly invoked the concept-review skill
+in this conversation ("please conduct the ... concept-review"). This invokes
+its review-and-accept workflow for the current STV concept. The assistant
+acts as delegated reviewer; this is not a claim of separate line-by-line owner
+review. Scope, findings, per-artifact outcomes and acceptance evidence are
+recorded in :doc:`concept-review`. Requirements verification remains
+not_assessed. No project license or remote-media exception was inferred.
+
+The input included pre-existing accepted flags on both system elements and
+all nine software elements without a referenced concept-review record. Round 1
+preserves that fact as history, supplies current review evidence for clean
+records and marks affected records reviewed where acceptance is held for 007.
+
+Round 1 validation results, 2026-10-18: Sphinx 8.1.3 build with
+-E -a -W --keep-going succeeded. Shared graph/evidence validation succeeded
+for 46 stakeholder, 10 system, 50 software requirements and 11 architecture
+elements; CSV paths exported. All 11 published diagram-to-Need links validated.
+Manifest/lock direct pins agree; all verification states remain not_assessed.
+The missing hover/keyboard trigger obligation is now STV_SWR_050. Seven findings
+were corrected and re-reviewed; STV_REVIEW_007 awaits owner input. No runtime
+implementation acceptance or performance result is claimed.
+
+
+Concept review round 2 - remote media and diagram readability
+--------------------------------------------------------------
+
+2026-10-18: The project owner confirmed the recommended unavailable-offline
+indication and explicit-link fallback for uncached remote embedded media as
+sufficient, then identified overlapping/crossing architecture arrows missed
+by round 1. The owner requested correction of both pictures and preventive
+guidance in concept-creation and concept-review. This explicitly amends the
+inspection scope of STV_SHR_015, preserving baseline v1 history. Round 2
+continues the previously recorded owner-delegated concept acceptance scope;
+it does not assert runtime verification. See :doc:`concept-review`.

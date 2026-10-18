@@ -1,10 +1,9 @@
 Traceability
 ============
 
-Derived records are draft design obligations, not implemented coverage. The
-accepted stakeholder baseline is unchanged. System-boundary concerns derive
-through system requirements; local interaction obligations channel directly
-from software to stakeholder requirements with rationale in each SWR.
+System-boundary concerns derive through system requirements; software-local
+interaction obligations channel directly to stakeholder requirements with
+rationale in each SWR.
 
 Requirement refinement and backlinks
 ------------------------------------

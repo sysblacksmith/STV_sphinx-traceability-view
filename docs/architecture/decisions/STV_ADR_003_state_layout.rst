@@ -3,8 +3,8 @@
 STV_ADR_003: Transactional exploration and semantic rank layout
 ===============================================================
 
-Status: **proposed**. Date: 2026-10-18. Scope: software architecture.
-Decision owner: project owner; acceptance evidence: none yet.
+Status: **accepted**. Date: 2026-10-18. Scope: software architecture.
+Decision owner: project owner.
 Supersedes: none. Superseded by: none.
 
 Related specifications and elements: :need:`STV_SYS_005`, :need:`STV_SYS_007`, :need:`STV_SYS_008`, :need:`STV_SWR_024`, :need:`STV_SWR_034`.
@@ -12,7 +12,7 @@ Related specifications and elements: :need:`STV_SYS_005`, :need:`STV_SYS_007`, :
 Context
 -------
 
-Exploration must handle cycles, shared nodes, independent views, a hard node cap and semantic ranks independent of the seed. Source baseline: accepted stakeholder baseline v1; design is inferred/proposed, not recovered implementation.
+Exploration must handle cycles, shared nodes, independent views, a hard node cap and semantic ranks independent of the seed.
 
 Decision
 --------
@@ -38,16 +38,3 @@ Alternatives considered
 -----------------------
 
 A naive tree recursively duplicates cycles and obscures shared dependencies. A generic force layout does not guarantee semantic levels. ELK.js is selected for ordering; authoritative rank and test constraints remain in STV. Dependency trade-offs are recorded in :ref:`STV_ADR_004`.
-
-Open design questions
----------------------
-
-Prototype crossing/spacing quality and accessible overlay behavior. Define later shared-mode edits before occurrence-mode delivery; do not silently discard independent branch state. Owner: implementation/design team; resolve through prototype evidence and owner review where obligations change.
-
-Decision history
-----------------
-
-2026-10-18: Proposed in response to the owner request for internal specification and architecture. No implementation or formal ADR acceptance is claimed.
-
-
-2026-10-18: Refined this proposed decision with ELK/D3/Floating UI boundaries and the implementation algorithm in STV_ADR_004; no accepted decision was rewritten.

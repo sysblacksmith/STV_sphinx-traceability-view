@@ -95,7 +95,8 @@ Owner design clarification queue
 --------------------------------
 
 The owner requested step-by-step clarification of remaining design decisions.
-The following items require owner input; none is agreed by listing it here:
+The following historical queue records the owner decisions; later concept
+review findings are tracked separately in :doc:`concept-review`:
 
 1. Resolved: external Needs without local full bodies show available metadata,
    their original link and "Full details unavailable locally"; no external page
@@ -116,7 +117,9 @@ The following items require owner input; none is agreed by listing it here:
 
 All five queued topics now have an owner decision: items 1, 2, 3 and 5 are
 resolved; project license selection is explicitly deferred. None remains an
-unanswered MVP design question.
+unanswered question from that original queue. Concept review subsequently
+identified remote embedded media as STV_REVIEW_007; the owner-approved
+fallback and round-2 re-review now resolve it.
 
 Update each item and the affected requirements/ADRs after its answer. Preserve
 stakeholder baseline v1 history; any changed obligation needs explicit revision
@@ -148,57 +151,11 @@ Working assumptions - not confirmed obligations
 * Exploration is read-only; editing Needs is outside the current draft.
 * Unrevealed ancestors need not be displayed automatically.
 
-Method and coverage
--------------------
-
-Stakeholder baseline v1 remains accepted. The internal specification now adds
-10 draft system requirements, 49 draft software requirements and proposed
-architecture allocations. These establish structural traceability, not product
-implementation or successful verification. All four ADRs remain proposed.
-The host model may contain test-case and other types beyond the five types used
-by this project's requirements documentation. Their visualization uses the
-agreed model integration; no extension of the shared documentation method is
-implied. No high-level scope questions remain blocking design.
-
-Implementation readiness and validation gates
-----------------------------------------------
-
-The owner requested a complete implementation concept after the initial
-architecture left library selection implicit. The selected stack, exact npm
-lock, module/lifecycle contracts, layout algorithm, detail extraction/loading,
-packaging boundaries and implementation sequence are now in
-:doc:`technology-stack`, :doc:`implementation-plan` and :doc:`verification-plan`.
-No further MVP technology-selection step is required.
-
-Completed design checks: exact npm dependencies resolved; ELK handled a cyclic
-three-node fixture; esbuild produced a self-contained IIFE; Beautiful Soup
-extracted all 113 current Need renderings across five pages. These are design
-feasibility checks, not product runtime verification. Python transitive hash
-locking remains an explicit packaging task, not a completed artifact.
-
-Remaining work is implementation and verification, not unspecified architecture:
-
-* Implement and test final-body extraction, link/media/ID rebasing, Need parts
-  and lazy local detail scripts against rich-content fixtures.
-* Execute full pointer/keyboard workflows in installed Firefox/Windows from
-  file and HTTP URLs; verify focus, hover retention and independent views.
-* Exercise ELK ordering followed by authoritative semantic projection and final
-  routing with cycles, direct channeling and shared tests.
-* Measure the defined 30,000-object/90,000-edge benchmark. Numeric response-time
-  and memory acceptance budgets remain unassigned; report measured results.
-* Verify Python 3.10 wheel installation, included assets/notices, changed/deleted
-  source rebuilds and the conservative serial-build lifecycle.
-* The owner accepted metadata/link fallback for external Needs without local
-  bodies. Hidden Needs are excluded; widget-specific JavaScript in details is deferred. Verify the owner-agreed external, hidden-object and static-widget scope
-  against STV_SWR_047 through STV_SWR_049 before claiming STV_SHR_015 coverage.
-* Review internal requirements and proposed ADRs independently of accepted
-  stakeholder baseline v1. No implementation or successful product tests exist yet.
-
-The implementation handover has concrete stages and completion gates; do not
-start later occurrence mode or silently broaden compatibility in the MVP.
+Project maturity and review outcomes are maintained in :doc:`maturity`.
 
 Revision history
 ----------------
+
 
 - 2026-10-18: Owner agreed to set performance budgets after first MVP
   measurements, retaining the hard 200-node limit. All queued owner topics
@@ -345,4 +302,3 @@ Revision history
   and release allocations remain unassigned.
 
 - 2026-10-18: Converted the initial Markdown draft into canonical RST Needs, preserving all 12 IDs; added the shared-method documentation structure.
-

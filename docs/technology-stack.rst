@@ -1,10 +1,7 @@
 Technology stack and dependency decisions
 =============================================
 
-This is the selected implementation concept for stakeholder baseline v1.
-Internal requirements remain draft and ADRs remain proposed; selection here
-authorizes a concrete engineering starting point, not a claim of completed
-implementation or stakeholder acceptance of the internal design.
+Selected dependencies, responsibilities and delivery constraints.
 
 .. _browser-runtime:
 
@@ -197,7 +194,7 @@ stale/missing bundle output as a build failure. See
 Dependency notices accompany both the wheel and generated documentation.
 Include the pinned ELK source archive and EPL text in the redistribution
 materials, preserve its notices, and avoid modifying vendored ELK source.
-Include MIT/ISC notices for bundled libraries and transitive components from
+Include MIT/ISC/BSD-3-Clause notices for bundled libraries and transitive components from
 the lock. This records the engineering distribution plan; no project license
 has been selected on behalf of the owner. The owner explicitly deferred that
 decision on 2026-10-18; implementation can proceed with it unset, and selection
