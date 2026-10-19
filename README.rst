@@ -200,6 +200,12 @@ reports remain in place, with evidence and any pending owner/release review.
 Development verification
 ------------------------
 
+``scripts/normalize-diagram-links.py`` is a relative symbolic link to the
+shared ``-agents`` diagram utility. Keep that repository alongside this
+checkout. Make utility changes explicitly in the shared repository rather
+than editing through this link. The documentation and release workflow also
+depend on the shared method, model and tools as described above.
+
 Verify development changes::
 
    .\.venv-implementation\Scripts\python.exe -m pytest -m "not browser"

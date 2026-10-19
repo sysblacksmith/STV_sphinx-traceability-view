@@ -1,1 +1,1 @@
-D:/Dropbox/MikroContr_Projects/#agents/skills/reverse-engineer-requirements/scripts/normalize-diagram-links.py
+../../-agents/skills/reverse-engineer-requirements/scripts/normalize-diagram-links.py

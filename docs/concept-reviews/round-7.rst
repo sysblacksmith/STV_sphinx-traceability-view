@@ -25,9 +25,11 @@ regression preserving the known :need:`STV_PR_006` gap. Each executable case kee
 its exact collected selector, parameter variant, source procedure and observable
 assertions. Shared cases cover several requirements without duplicating the
 test implementation. The migration mapping is retained as
-:download:`round-7-test-map.json <round-7-test-map.json>`; the one-time
-:download:`migration procedure <migrate-test-traces.py>` refuses to overwrite
-existing case or execution history.
+:download:`round-7-test-map.json <round-7-test-map.json>`. The one-time
+``migrate-test-traces.py`` and ``finalize-method-qualification.py`` helpers
+were removed after the completed migration. Their implementations remain in
+Git history; historical inventories retain their original paths and hashes.
+The reusable result importer, canonical cases and execution evidence remain.
 
 Every stakeholder, system and software requirement has direct test-case
 coverage. Executable links identify the criterion portions exercised, not
