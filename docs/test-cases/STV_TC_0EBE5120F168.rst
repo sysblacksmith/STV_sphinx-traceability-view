@@ -1,0 +1,66 @@
+missing placeholder and detail error
+====================================
+
+.. test_case:: missing placeholder and detail error
+   :id: STV_TC_0EBE5120F168
+   :status: accepted
+   :tags: release_initial
+   :basis: documented
+   :evidence: tests/test_browser.py :: tests/test_browser.py::test_missing_placeholder_and_detail_error[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
+   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08
+   :last_result: passed
+
+   **Level:** Browser/system.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_missing_placeholder_and_detail_error[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
+          import shutil
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          path=source/'requirements.rst';path.write_text(path.read_text(encoding='utf-8').replace(':traces: LEAF_B',':traces: MISSING_A'),encoding='utf-8')
+          output=short_output/'html';result=build(source,output)
+          assert result.returncode!=0 and 'MISSING_A' in result.stderr
+          saved={script:script.read_bytes() for script in (output/'_static/stv/details').glob('*.js')}
+          for script in saved:script.unlink()
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+              root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+              assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
+              assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
+              inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',inspect);inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'Local detail asset unavailable' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+              wait.until(lambda d:not d.find_elements(By.CSS_SELECTOR,'.stv-detail'))
+              for script,content in saved.items():script.write_bytes(content)
+              inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'formatted body' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.

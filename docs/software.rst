@@ -251,7 +251,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: partial
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_DETAIL_BUILD
 
@@ -289,7 +289,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: partial
    :derives_from: STV_SYS_003
    :allocated_to: STV_SWE_BUNDLE
 
@@ -304,7 +304,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: partial
    :derives_from: STV_SYS_003
    :allocated_to: STV_SWE_BUNDLE
 

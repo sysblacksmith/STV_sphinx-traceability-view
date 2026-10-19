@@ -9,6 +9,43 @@ below read those fields rather than duplicating them in prose.
 Current release increment
 ----------------------------------------
 
+Method migration and requalification, 2026-10-19
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The owner requested migration to the shared test-case/execution model followed
+by release qualification. :doc:`concept-reviews/round-7` accepts 81 concrete
+case designs, covering all 120 requirements structurally. Seventy-six have
+existing executables; four occurrence-mode procedures and the known long-path
+regression remain planned and unexecuted. Existing requirement and architecture
+acceptance is preserved.
+The shared method now resolves from the renamed ``-agents`` repository.
+
+This migration changes documentation and records. Product code is unchanged.
+The known nested-Windows detail-loading report :need:`STV_PR_006` remains
+analyzed and outside this migration's implementation scope. A passing existing
+suite must not be described as resolving that report's acceptance criteria.
+The requested full rerun passed all 76 executable cases (58 Python/browser and
+18 JavaScript), with no failures/errors/skips, under Windows/Firefox 158.0 and
+Python 3.10.9. See :doc:`test-execution/0.2.0-method-2/index`; the first attempt
+and its corrected documentation assertions remain retained separately.
+
+There are 152 new per-case execution records. All 76 executable cases now have
+``last_result: passed``; the four later-mode cases and the known long-path
+regression remain ``not_run``. The freshly rebuilt capacity fixture contains
+30,000 Needs and 90,000 edges. Its unchanged identity was verified before reuse
+for the rerun; both browser transports were exercised again.
+
+Current verification for :need:`STV_SYS_003`, :need:`STV_SYS_006`,
+:need:`STV_SWR_015`, :need:`STV_SWR_017` and :need:`STV_SWR_018` is partial
+because the known nested-path detail-loading gap remains. Eight other system
+and 50 delivered software requirements retain their passing disposition; four
+later software requirements remain not_assessed. Requirement acceptance and
+historical qualification evidence are preserved. Passing regression and method
+gates do not establish new product-release readiness while this issue is open.
+
+Prior v0.2.0 qualification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The owner approved the centered-layout and interactive-seed MVP and released
 its stakeholder requirements on 2026-10-18. Concept review is complete in
 :doc:`concept-reviews/round-6`: revised/new stakeholder requirements

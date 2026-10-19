@@ -1,0 +1,48 @@
+prior fatal exception is not replaced by bundle generation
+==========================================================
+
+.. test_case:: prior fatal exception is not replaced by bundle generation
+   :id: STV_TC_B5D550F17384
+   :status: accepted
+   :tags: release_initial
+   :basis: documented
+   :evidence: tests/test_build.py :: tests/test_build.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SWR_027
+   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273
+   :last_result: passed
+
+   **Level:** Unit/host integration.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``tests/test_build.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_prior_fatal_exception_is_not_replaced_by_bundle_generation(tmp_path):
+          from types import SimpleNamespace
+          from sphinx_traceability_view import finish
+          page=tmp_path/'index.html';page.write_text('previous complete page',encoding='utf-8')
+          app=SimpleNamespace(_stv_graph={},outdir=str(tmp_path))
+          finish(app,RuntimeError('Earlier fatal failure'))
+          assert page.read_text(encoding='utf-8')=='previous complete page'
+          assert not (tmp_path/'_static').exists()
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.

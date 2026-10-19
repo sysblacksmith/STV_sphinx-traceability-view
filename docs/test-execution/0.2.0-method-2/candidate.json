@@ -1,0 +1,22 @@
+{
+  "started": "2026-10-19T20:33:31.928139+00:00",
+  "revision": "77354cc578d23a5430b75df8c47ba34c1b7a0341",
+  "dirty_worktree": " M README.rst\n M docs/concept-review.rst\n M docs/conf.py\n M docs/index.rst\n M docs/maturity.rst\n M docs/test-execution/index.rst\n M docs/traceability.rst\n M docs/verification-plan.rst\n M tests/test_browser.py\n?? docs/concept-reviews/migrate-test-traces.py\n?? docs/concept-reviews/round-7-inventory.json\n?? docs/concept-reviews/round-7-test-map.json\n?? docs/concept-reviews/round-7.rst\n?? docs/test-cases/\n?? docs/test-execution/0.2.0-method-1/\n?? docs/test-execution/0.2.0-method-2/\n?? docs/test-execution/finalize-method-qualification.py\n?? docs/test-execution/import-case-results.py\n?? docs/test-execution/method-migration-handover.rst\n",
+  "source_identity": "af423390727ed7dfccf7fc88f2682b6e6a5548d9db633716cc442f1a90dadfdf",
+  "wheel": "sphinx_traceability_view-0.2.0-py3-none-any.whl",
+  "wheel_sha256": "ac1a23625c104ca26768856b1c00675c042fe62a0685bac7967a57f52f0ef6e5",
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\0.2.0-method-1\\html",
+  "capacity_fixture_reused_from": "0.2.0-method-1"
+}

@@ -1,0 +1,720 @@
+{
+  "review": "round-7",
+  "reviewer": "Codex",
+  "date": "2026-10-19",
+  "authority": "Owner invoked concept creation/review with autonomous file modification and subsequent release testing",
+  "method_sha256": "15af778391628d7129339254f1ba8c2f681b4a6a75d678d631df33fa5771671b",
+  "validation": "Sphinx warnings-as-errors and shared validator --require-test-coverage --repo-root passed before accepting 80 cases",
+  "files": [
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "design_sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "design_sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "design_sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "design_sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "design_sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "design_sha256": "dde4f92b2c6689aaf53e65ea40ecb69db79cf657e98c3ed9da6c28a5ba95fe9f",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "design_sha256": "a952999f9cef4df1996fd0611dd1212f036eda9c386edc605ba2d9a482eaa315",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "design_sha256": "018b59cb2b49870f25f4ce98604ac37dd369f497fbdaa9325795efa334bf2b64",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "design_sha256": "2adc6b72460db040a42aef08fe1d14d184596b2a6836bfa18cac67af6a644f06",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "design_sha256": "820f5f5d89564dfdcb6062b7a0b73308921281f274555c997bb119f02cfb1c77",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "design_sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "design_sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/implementation/package-lock.json",
+      "design_sha256": "f96e2b0f5c29cee9f69563030caad259ebcafd4a650bd4196560f21bdeb051ba",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture/implementation/package.json",
+      "design_sha256": "a7c1aced6534eff63ee4b01475dce5dfdac4d6449fc0d5f8777754ef2daeee60",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "design_sha256": "aed93cf6bb9d43100146d99feb46a050ec195503b63fa4ca6db2f3a32768a0af",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "design_sha256": "4513a1440b72bc4086552c1210f405ee81f1b12f27fa9702da99a1ab26bd4418",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "design_sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "design_sha256": "36b6a7ee019ce3025b8c684aa26d8fcad6c54a731dc08455c9683c0c6e90605f",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/documentation-reorganization.rst",
+      "design_sha256": "2d088214283c895748f9465dee094b3a54b1ceac40acce8fbeba871979e7c748",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-1.rst",
+      "design_sha256": "976020305247eaaf8e74b6c680ab3a460dd16f5d92d4dfaf9448fa8b33914b64",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-2.rst",
+      "design_sha256": "727e5a7e94243f860e90e1f4815bfa6db346db319496adb34acf28c2f7add755",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-3.rst",
+      "design_sha256": "126a63b7235875a04b565c406edecce57bd1ba257a332b248abb6201cf940c64",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-4-inventory.json",
+      "design_sha256": "ccb05114b9ea38483794200e7fc189f334610f3792144dd91d2f137af038adce",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-4.rst",
+      "design_sha256": "99f260dadf31d41dd2a846a7a5fa974da9846ec1aaa36eec78f8ea8c07951ae4",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-5.rst",
+      "design_sha256": "112d4aeac4d72db1210f9ce1ac2efbabab4eb0474482ebfc7e192bc9f400f52d",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-6-inventory.json",
+      "design_sha256": "dc2289b080052bb97ce0aba7936018bb571222cd4a7247e3c7bb58ef80a41422",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-6.rst",
+      "design_sha256": "6e11b7a66b7b151843553ee4d92d0b1a5f9b7ba7112a014437ebbc116d7bd6ff",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-7-test-map.json",
+      "design_sha256": "7699ad4cb78145933dd96bc91c53731fd5df895c5ac7a3fc1f54601da9c55f2f",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-7.rst",
+      "design_sha256": "57fd2a35723b692746ed5ed5d3cbd8c28118c4a57afc375d795d157db48a94a8",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/demo.rst",
+      "design_sha256": "ca2dfaa60c46d2f8b89d8b0729a61640ab5c72c72f31b15fa9be4872566a2a01",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "design_sha256": "d2d7727197cbedbe6308cf3640327a676677aa2c4692e57452af2ae1ac6cece7",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "design_sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "design_sha256": "087bcb5ee8cba1da1fa14d6e312f7bcdb88b38413041aca1eff5fc1084e3a93f",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "design_sha256": "70c9bd6371e3ca5f9b437b917e4aed05bfcacb29e1156e8c211bebca08d9b7a8",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "design_sha256": "3bf9bb1aaa5466870061499e31e8d69f4bc2c4799e3ddab304a8b803642498f0",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/index.rst",
+      "design_sha256": "404dfe3dcc44ab9f4e5531a8c379c4eb3cc1db3071a9f6584217cc231532d002",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "design_sha256": "b6f8597407a3ec23286967f7877ef0749e0f93192b7d028d16f66c7e4762dc05",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "design_sha256": "de9fca3762ba54419dd834072a84bd27c2138e2837eea362c075955ff3f1a8bc",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/method.rst",
+      "design_sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/index.rst",
+      "design_sha256": "2224bae1435ad4acc773a68672ef61199677ef4c6edd62930f7131bd6faf0845",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_1.rst",
+      "design_sha256": "199a16d1d145cd80eac90becd17077f80775738227a6b33ad3e1b958899c6511",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_2.rst",
+      "design_sha256": "a8c970b538b1c788bdc18a143f58efe38d2aa0e48aedadaf017aa42239b43a74",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_3.rst",
+      "design_sha256": "2343775ce91886f07ca5838c11bfc2b83b1eebb20244c06877c6c4578a9a63fa",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_4.rst",
+      "design_sha256": "6ec5136ae704a262ae640d07f5ae18b5e94281aa22cca235dc6364a6e0914c4c",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_5.rst",
+      "design_sha256": "64b06c98dbd5604e99294077668631d6e8e7da0299a4f239452c9c71c8ef7684",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/problems/problem_6.rst",
+      "design_sha256": "77852b0b2b8b77cb3d567ce1ad6b8346be3d80f5a047098599356ebcdda28044",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/requirement-changes/centered-layout-and-interactive-seeds.rst",
+      "design_sha256": "5db6c279e4c81bcb96e6bb21120048285b169a77d583c30d3a73f25e7d54fc29",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/requirement-changes/control-order.rst",
+      "design_sha256": "7e938eff029383c00391322650cccaa1504ff4b32c185de348a9a23ddcb425b4",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/requirement-changes/problem-report-handover.rst",
+      "design_sha256": "4e1a10aefa2d7ea3f0e276673f5e032e596a9cfa67201561f5766d37f2236572",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/requirement-changes/starting-nodes.rst",
+      "design_sha256": "4d73ed989eb390771bb77b38442240b96941370ec24edd514e63b6d68464d28e",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/requirement-changes/usability-problems.rst",
+      "design_sha256": "e50f7d5f1d35093894c8a762452bc96364ef4b282ed6817f937374a80fbed53f",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/review.rst",
+      "design_sha256": "061ade0649318346d128256d258fc7742bd4428c7ffa9b2dc905bf6b386c0d42",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/software.rst",
+      "design_sha256": "a473bcb98943a45df008eed1e15f430cbdc157ff601d39e62b137a44236fd7cd",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/sources.rst",
+      "design_sha256": "6c27e5a43e573da309c236d00b18ccdbd369fd880671286da72aea3ffe4f88d7",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/stakeholder.rst",
+      "design_sha256": "4e83da244377866231bd14572c181cbf508842088a26b911c357f8c0cfb24f22",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "design_sha256": "b21883af75265ada2941a5a7d40a6b1b3512118e8f38a1f2d10b36d484ed5374",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/system.rst",
+      "design_sha256": "ebbeea696976b043eff9f3515ef15d091c475ae7b8e2c4afacc7c924a8931e44",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "design_sha256": "f8f4fcb3cc74e50c9e20e8d23fc30bb2a622a8a7d05b7e3c44d472099c0bd9db",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/test-cases/index.rst",
+      "design_sha256": "ce3d6e9689f2b146d773bc5bc0f7e364c89ef084cadcc58bc098be9937eb384d",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_025DB3F44E8E.rst",
+      "design_sha256": "59f8044b701d14f789512ebf655a0f99857b59b5fa280a06496c345d59138ab5",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_06CC5EE46517.rst",
+      "design_sha256": "63c69f693aed765a44ea966541d69c581581aa0bb488c338780f00c9a806b014",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_07D369AD0A2F.rst",
+      "design_sha256": "dc046d20064bbf1f336335ba850ced3274740eb446479db6a86498499a4b7803",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_08AC936D55F9.rst",
+      "design_sha256": "093c8aa51f9cea5ee695c3db38ac878aeea2077ce89eba685b0951c71d90608e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_0C2F9B7BE8A7.rst",
+      "design_sha256": "a4a3dd6b8f89f927cdcfb18efe9c2511fa251eab79418f9c2bf31207d91a20b8",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_0CAAF47BBD14.rst",
+      "design_sha256": "00eab9477bece6862d4bea715057275245a85de6b0c4f7b1e836b9e1543254e0",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_0EBE5120F168.rst",
+      "design_sha256": "81bf3e28f82ce789f3cbebb652b0a9a2bacc4891003443f7f79467b9befe7b8a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_11FDDB8E8864.rst",
+      "design_sha256": "db3a25ceefe022b54d784721e91754d20a2755cfb5ce28241e2e92176160f941",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_136FE8B1A097.rst",
+      "design_sha256": "3377ebccb0fb72af70f4b8e08549274026524e6f26402a53078054ba8fd8c6d8",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_156E45252AF4.rst",
+      "design_sha256": "d6108e8dadbb9bcc48c6479decdc73ad93e0db82089ce494678b91d5c2b32740",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_1BFD0971844A.rst",
+      "design_sha256": "33ae46000b86f62e7ca29883a685d9005f7d3382086fefdc790a10457b07ddae",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_1E00212E164D.rst",
+      "design_sha256": "79bf1074c9cdcb25b5aa45711719842e2d766154f66733300a730b3ebaed4e1e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_25803A2B9F90.rst",
+      "design_sha256": "ccae2582501cf13dbaa2947fca285417711d4e2c14381f18bfcf7d5452a83679",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_287ABDA90FE3.rst",
+      "design_sha256": "49435e88d2a8b72fa9d851034ec0059e528d5399aeb8b13371bb91ad668dfb03",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_2BC87902D1FD.rst",
+      "design_sha256": "655706ea90b80fa8b948e6c63fb9e0f1772ee81c88fbc0c90b70fba4b773382a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_2EE2AB9ECAE3.rst",
+      "design_sha256": "00e7207403ae5610cafd371d447d28c128f826b2dba8f5d1ba0f01d9c727759b",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_35E510D6991A.rst",
+      "design_sha256": "c620a8a3e625503829c1d27b80f2ca57b99b9ccb8a7ce94dda98cee40e116c78",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_3B0D9F21166C.rst",
+      "design_sha256": "3395df90061446085e69f1358874d99d1fd9f01d841bf9868e40caa27fed906a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_3B2659FB2D0A.rst",
+      "design_sha256": "1a7ba6e7e0a8ba795307c7a231c7c189a78cb0f5868399298d919e0e6b4d9a23",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_3DF9A4D8CF8D.rst",
+      "design_sha256": "831f384a958c9b0dd3c195ccb97abcc770db7b8749e716f0a0553ea301371c1a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_41F176801699.rst",
+      "design_sha256": "3aa11228c28def9341fd65a8cfe200f49c13dadc92f934543621c6ce28a51341",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_4594B1E01BC7.rst",
+      "design_sha256": "2fc97f4da24f500332ec86ee191e1ef5a35a3399057cfbf3bc4ee2d4eb4c0205",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_4E68C09504E8.rst",
+      "design_sha256": "8b305373ff4603ff10f7ad4e09b2cbc22b6eda1c17e789d5216328d7fe94ed04",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_51B932282614.rst",
+      "design_sha256": "c28c76375d7ab759c81483f5020f87013d40633e32d9d6d54ce98c3be27fb348",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_535022565896.rst",
+      "design_sha256": "6034c3773c79a253a95450f698c295c9d39fcc56f985eaae10a795b70cda5d51",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_5652621CFF4A.rst",
+      "design_sha256": "bfe154a67a233234521d89d302cb15e69f5291952ad171903668b4f72e89965e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_59537D3F286A.rst",
+      "design_sha256": "0733ec95bacee8e2e8d24b524f7ebf2e9343973aa282d37a24b4df9a9c5a5285",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_59C06D617036.rst",
+      "design_sha256": "df7c762574f3c007c385e3573932665b5f9d9405b3b60b53a6cdc8e0e5903754",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_5C902A5F732E.rst",
+      "design_sha256": "29a23cc5a975a073960b22dc99367ab6816cc3c213fd370f6b1a59ab968e11db",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_5D3C07D3C5DE.rst",
+      "design_sha256": "81d2d4eae9e75a371ac64c8d91391f739dfb6f923ed99e16d9aab7aec0e8b503",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_6C7A64E533AC.rst",
+      "design_sha256": "3b6b0612a4f96ef09c2bdc8d12df95d2e4b8339ed9bbc083d3b40b5d43dc4c74",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_6FE4CFC63C95.rst",
+      "design_sha256": "ec7d19a6198cb52d0778d85b2a4ac3fb970e386f758c06f5d5b5f294159c0feb",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_7016FADA6FBA.rst",
+      "design_sha256": "9a3a1126c3482714aa11bd2ba94d07325a85658c2413f1ad57b1abc92263057f",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_734CF1BFE372.rst",
+      "design_sha256": "c93c6778896f9c3f193b954c31d92f313598e1e542e5e2c6faf292ac8be91381",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_7441DB459B14.rst",
+      "design_sha256": "cfd90499f9c2298ce10338a32a962506ae0eee77f7932fc7b7b483ef8852c7db",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_7D1212345072.rst",
+      "design_sha256": "8012d919f7e7b724d4e713cc452ac40b795b6c4dcf11624168252c82a9f8dce4",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_7EDF1A472879.rst",
+      "design_sha256": "fb7ace7fc6f0455ffce07782e61ac2833fbefa79990d5ccc47dbaca7a6298e31",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_8023D1B4838C.rst",
+      "design_sha256": "3a37c03d0aa548d089f1d96190908ded7e648dfdbfed5994cfee66c2f8944242",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_85BBE1714F96.rst",
+      "design_sha256": "4c38079e0da06022aa3a90d5630a48287f276926c577b59fead02877c4273caa",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_880A2E13BCE9.rst",
+      "design_sha256": "4d9348527fd85f70010692b06e3d6d39d8ff9a691c5280ddde96444e6ffa3045",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_9316CE9A1843.rst",
+      "design_sha256": "27d2f9e1cc1b6ca1e1276885e14f548fc753ef9a7cd7cadddeaf2cec2ef1f925",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_97667EB28A11.rst",
+      "design_sha256": "768af58ccf8ecfac6ef77bd157f1dbfe923ebcad0ad2851a8679932bdcf9dbad",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_9A67DAACB2A4.rst",
+      "design_sha256": "c0e58fdf50c8e051865e97f51d55a5dcce3395b274440d1615479ffd1fcab03c",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_9E5477EFE2F1.rst",
+      "design_sha256": "1af8f6801a8e41f710310f374e2995bbf5967256df382557165ca2ed9979281b",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_A1747C52BC63.rst",
+      "design_sha256": "da84b6e004beaa7ddea2be63996b516a603cac7d46283305d4fbd2d98308fe78",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_A221103BC26C.rst",
+      "design_sha256": "98e184ffad9088ffc563e9ac5ab46bbedba3e917d83e0c898c14137f514bf76d",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_A953C70E70B1.rst",
+      "design_sha256": "8297695cbed001294cbdd8dd5a33fccac7f8f4dbf53353c87cb07d385747b224",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_ABB4E85E5F66.rst",
+      "design_sha256": "6f90a1b7a314f3d61ab860fb197381227354f228f2a7fc188a21b8d477f0c3ee",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_AEF53EABA753.rst",
+      "design_sha256": "e73203822bdca7e3424c2775405d531cf51ded9d4f4e8c0132ea9d1d6abf1f44",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_B2EF591B7F1E.rst",
+      "design_sha256": "f68773c1688361fefc680942b59831768ba6a6ae2317de896a9e43cfcaef878e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_B5D550F17384.rst",
+      "design_sha256": "970ab33a6b81d1afce9a8f70a4643572088f0c4e50e100ed2d896baeea0b634e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_C747492F203E.rst",
+      "design_sha256": "4ec3dc43210da7dee7a950271a4c2c93add91d7dd9101e57705e35c2798f3db6",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_CFE6B0377595.rst",
+      "design_sha256": "4bba40c4bb1eeaee102898b0e0af6b668183a1ad2c95eba7cd5286ddc974e5b9",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_D00DA9F2CD10.rst",
+      "design_sha256": "011c76ce7f3aee282baf51c1d056f9d32486bace0bc8b507e5702ffd59b65a83",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_D1A17B11B9C1.rst",
+      "design_sha256": "8c681379a70cb3d34440dfcc1690da2a10decb6fcf455134734721da5f053db5",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_D22785EE6859.rst",
+      "design_sha256": "05d77dfb56b35e7125623a057d5c7ff37d82dd750179668f074b66f5fe1c6751",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_D31601FDD080.rst",
+      "design_sha256": "8f4b43fdd0ac79744ac30bbaf558037908e095938160ba2293d16b8d068c9df2",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_D43DE71AF846.rst",
+      "design_sha256": "c167254ea226d34acf1a80063c3a722427c30f0982fb70d1c1eb50ef51d42fda",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_DB4FE4CDD257.rst",
+      "design_sha256": "77c35309a93709e0d470848ecf9f81136e2901828c319f5c36d999413dde4cb7",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_DE0C60E0BB97.rst",
+      "design_sha256": "287cfc87b93053e94874184c6991f4d9c79f63a027dbbef3cd66fc82d63f01ae",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_DF0D9B21A92D.rst",
+      "design_sha256": "e970784af1ccdb9420db440471b562103fef441a3fbdb5a3096bd7ff7a05cdc7",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_E0AB07ABA378.rst",
+      "design_sha256": "754a153a33c9b3ffdf54857652572a325644a2c862d55ce6b25ff8ed8369222a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_E23001FBE2A5.rst",
+      "design_sha256": "db3034184b8b29fc059734166c4408c10ae8a32e5eb03d1c7b238f2a94a3608e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_E2A064F091BE.rst",
+      "design_sha256": "c069e81e80662592fa3f531f79ca6f9ed0d4d7fb2b03ae50c8d630c2c02b6fcb",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_E66A443619C6.rst",
+      "design_sha256": "6d8b9155c4d6c1888182fa0dec8caaa1c337eada688fd3a8a31ab7a5b68478bf",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_E6FA25320A8F.rst",
+      "design_sha256": "366ca32a603b0b09f8d029d7b4478bff7854efd4aebcf46518e0304827db6572",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_EB0F95BABF84.rst",
+      "design_sha256": "e1c8f9e42729146c9971381590093441ad08dc670df47907a2ec637a260b2f45",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_EB472A6879CF.rst",
+      "design_sha256": "50ad2e8ffbd1d563e86d5328b8ae2db496beb1d02ed9dda4a6d11d25bae1ed0e",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_EFBBC00F61AC.rst",
+      "design_sha256": "93291b5112772099e33f4fc7212238d180298f8ad4a53708160770a4428095a1",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_F3892D8A1C98.rst",
+      "design_sha256": "fc0f959645538a0bdebde67b66968fc1983c60dea6e75a666ff05b84dd7601dc",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_F549DE4D0BF4.rst",
+      "design_sha256": "d6a7b6f09a35c90ae789c31846131bb5a04e993f6714ee34cd461b79555bc310",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_F6E0695BB399.rst",
+      "design_sha256": "e2501fdd03e2afdd5ab938264cb5bcc2219a39558cc24e09a28141d243e3412a",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_F988267D01C9.rst",
+      "design_sha256": "7dcb300c2fa1ab993f6858cad0aaa6b980f611464a8e3f37a0fb0b2f9de72cdc",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_FB72ADBCAE29.rst",
+      "design_sha256": "5b3dc045f39963c6acf1f3fcf6e57bf74c26f74fc7f0f0204bbd20556868b78f",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_FBDDCC607412.rst",
+      "design_sha256": "94b01bed0f887e1727f08129f6194ad44261413e6f429918038790ac120ef670",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_FC50F6627767.rst",
+      "design_sha256": "e8c70ddd59a6319a60d941a614d51fd39cc1c513f6fc78679945bfe518445d56",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_OCC_019.rst",
+      "design_sha256": "bdbd4a5c9a1bf059e94ae6dce016f90ac2995c507dffa8f1147bc9dcba461144",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_OCC_021.rst",
+      "design_sha256": "bfdf4141c8e6774d18ceda33b9bbe2bb53347f97b3ada0b564d37e209bd56419",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_OCC_022.rst",
+      "design_sha256": "75dc4a2ccfa6bc84ba299faf7a02d72e3a8dbd4c3177bcb5006e2372354c665b",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-cases/STV_TC_OCC_023.rst",
+      "design_sha256": "64b264d79c1eab96e6940f86bb358005f2babee622debf6a231f65579ba72676",
+      "disposition": "accepted test design; result/history fields excluded from design identity"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "design_sha256": "dbafca8a871f93443cd92f0e70f4e992cfe3ee9437bb432fb3beb6d21ee2ff91",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "design_sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "design_sha256": "430a0aa44838a51ad5b910f49c707946b77dc96c183c6a98bc068c8deed951b7",
+      "disposition": "reviewed migration context; existing acceptance/history preserved"
+    }
+  ]
+}

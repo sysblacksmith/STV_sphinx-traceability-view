@@ -1,0 +1,117 @@
+...............FF.........................................               [100%]
+================================== FAILURES ===================================
+_______________________ test_control_order_smoke[file] ________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="7cb62f95-17dd-4661-af65-d911954b1ab2")>
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_055')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_control_order_smoke(browser,protocol):
+        published=Path(__file__).parents[1]/'docs/_build/html'
+        with published_url(published,protocol) as url:
+            browser.get(url.rsplit('/',1)[0]+'/demo.html')
+>           _exercise_control_order(browser)
+
+tests\test_browser.py:501: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="7cb62f95-17dd-4661-af65-d911954b1ab2")>
+
+    def _exercise_control_order(browser):
+        wait=WebDriverWait(browser,20)
+        wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+        root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+        def buttons():
+            node=next(n for n in root.find_elements(By.CSS_SELECTOR,'.stv-node')
+                      if n.find_element(By.CSS_SELECTOR,'.stv-id').text=='STV_SWR_001')
+            return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+        def identities():
+            return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
+        expected=[['derives_from','outgoing'],['allocated_to','outgoing']]
+>       assert identities()==expected
+E       AssertionError: assert [['derives_fr..., 'outgoing']] == [['derives_fr..., 'outgoing']]
+E         
+E         At index 1 diff: ['verifies', 'incoming'] != ['allocated_to', 'outgoing']
+E         Left contains one more item: ['allocated_to', 'outgoing']
+E         Use -v to get more diff
+
+tests\test_browser.py:515: AssertionError
+_______________________ test_control_order_smoke[http] ________________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="12992818-41fd-40d7-b1d8-20a12b7ef660")>
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_055')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_control_order_smoke(browser,protocol):
+        published=Path(__file__).parents[1]/'docs/_build/html'
+        with published_url(published,protocol) as url:
+            browser.get(url.rsplit('/',1)[0]+'/demo.html')
+>           _exercise_control_order(browser)
+
+tests\test_browser.py:501: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="12992818-41fd-40d7-b1d8-20a12b7ef660")>
+
+    def _exercise_control_order(browser):
+        wait=WebDriverWait(browser,20)
+        wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+        root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+        def buttons():
+            node=next(n for n in root.find_elements(By.CSS_SELECTOR,'.stv-node')
+                      if n.find_element(By.CSS_SELECTOR,'.stv-id').text=='STV_SWR_001')
+            return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+        def identities():
+            return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
+        expected=[['derives_from','outgoing'],['allocated_to','outgoing']]
+>       assert identities()==expected
+E       AssertionError: assert [['derives_fr..., 'outgoing']] == [['derives_fr..., 'outgoing']]
+E         
+E         At index 1 diff: ['verifies', 'incoming'] != ['allocated_to', 'outgoing']
+E         Left contains one more item: ['allocated_to', 'outgoing']
+E         Use -v to get more diff
+
+tests\test_browser.py:515: AssertionError
+---------------------------- Captured stderr call -----------------------------
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/demo.html HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/stv/stv.css?v=eb5f020c7185a7703c414c5e116b721e62dd41412270781e6bf5d658086ff36b HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/pygments.css?v=b86133f3 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/css/theme.css?v=9edc463e HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/wide-layout.css?v=5013bd77 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/documentation_options.js?v=938c9ccc HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/stv/graph-f9feb5d6934e13979d916abb98be5aae5c75a0d6cb2e82e703f450f1a33b6acc.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/js/theme.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/css/fonts/lato-normal.woff2?bd03a2cc277bbbc338d464e679fe9942 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/css/fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/css/fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:53] "GET /html/_static/css/fonts/lato-bold.woff2?cccb897485813c7c256901dbca54ecf2 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 22:24:55] code 404, message File not found
+127.0.0.1 - - [19/Oct/2026 22:24:55] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [19/Oct/2026 22:24:55] "GET /html/_static/stv/stv.js?v=dd5dbdf6fd74a727b582613a665cba8ccde7110934c143c9a9fd8655589a1429 HTTP/1.1" 200 -
+- generated xml file: D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\test-execution\0.2.0-method-1\pytest.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_browser.py::test_control_order_smoke[file] - AssertionError...
+FAILED tests/test_browser.py::test_control_order_smoke[http] - AssertionError...
+2 failed, 56 passed in 623.73s (0:10:23)

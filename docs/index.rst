@@ -37,6 +37,7 @@ Sphinx-Needs extension specification, architecture and supporting records.
    internal-interfaces
    implementation-plan
    verification-plan
+   test-cases/index
    review
    maturity
    demo

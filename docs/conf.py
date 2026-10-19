@@ -14,7 +14,7 @@ exclude_patterns = ["_build", "test-execution/0.1.0-candidate-1/index.rst"]
 # Select the shared reverse-engineering skill without storing a machine path.
 configured = os.environ.get("REQUIREMENTS_SKILL_DIR")
 candidates = [Path(configured)] if configured else [
-    parent / "#agents" / "skills" / "reverse-engineer-requirements"
+    parent / "-agents" / "skills" / "reverse-engineer-requirements"
     for parent in Path(__file__).resolve().parents
 ] + [Path.home() / ".agents" / "skills" / "reverse-engineer-requirements"]
 skill_dir = next((p for p in candidates if
@@ -38,6 +38,9 @@ needs_build_json = True
 traceability_view_model = deepcopy(import_module('sphinx_traceability_view.model').DEFAULT)
 traceability_view_model['levels'].append('problems')
 traceability_view_model['types']['problem_report'] = {'level': 'problems'}
+traceability_view_model['types']['test_case'] = {'role': 'test'}
+traceability_view_model['levels'].append('executions')
+traceability_view_model['types']['test_execution'] = {'level': 'executions'}
 html_theme = "sphinx_rtd_theme"
 html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
 html_css_files = ["wide-layout.css"]

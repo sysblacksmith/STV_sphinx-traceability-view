@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-10-19T20:41:14.463853+00:00",
+  "reason": "Preserve passing regression results while disclosing the known full-environment criterion gap; no requirement intent or acceptance status changed",
+  "files": [
+    {
+      "path": "docs/system.rst",
+      "before_snapshot": "system-before-verification.rst.txt",
+      "before_sha256": "ebbeea696976b043eff9f3515ef15d091c475ae7b8e2c4afacc7c924a8931e44",
+      "after_sha256": "1ef5a3f8dd7539cdb127a04ae42de6939139d01b10c4b6d888571f37b2f5c8a0",
+      "requirements": [
+        "STV_SYS_003",
+        "STV_SYS_006"
+      ],
+      "change": "passed -> partial only; known nested-Windows local-detail loading gap STV_PR_006"
+    },
+    {
+      "path": "docs/software.rst",
+      "before_snapshot": "software-before-verification.rst.txt",
+      "before_sha256": "a473bcb98943a45df008eed1e15f430cbdc157ff601d39e62b137a44236fd7cd",
+      "after_sha256": "c29b58f490f61779b112cebce9fcfd51ce5d4872edbaa8832a0affa19cb80442",
+      "requirements": [
+        "STV_SWR_015",
+        "STV_SWR_017",
+        "STV_SWR_018"
+      ],
+      "change": "passed -> partial only; known nested-Windows local-detail loading gap STV_PR_006"
+    }
+  ]
+}

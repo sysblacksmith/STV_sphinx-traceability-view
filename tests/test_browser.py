@@ -511,7 +511,7 @@ def _exercise_control_order(browser):
         return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
     def identities():
         return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
-    expected=[['derives_from','outgoing'],['allocated_to','outgoing']]
+    expected=[['derives_from','outgoing'],['verifies','incoming'],['allocated_to','outgoing']]
     assert identities()==expected
     buttons()[0].click()
     wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')

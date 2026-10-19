@@ -1,0 +1,86 @@
+{
+  "reviewed_at": "2026-10-19T20:37:04.526961+00:00",
+  "approval": "Owner approved only this list in the session on 2026-10-19",
+  "delete_only_after": "all release and final publication gates have finished",
+  "items": [
+    {
+      "path": "docs/_build/release-benchmark",
+      "files": 30082,
+      "bytes": 433413345,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "dist",
+      "files": 2,
+      "bytes": 3015277,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": ".pytest_cache",
+      "files": 5,
+      "bytes": 4896,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "__pycache__",
+      "files": 1,
+      "bytes": 978,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "docs/test-execution/__pycache__",
+      "files": 2,
+      "bytes": 9914,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "src/sphinx_traceability_view/__pycache__",
+      "files": 6,
+      "bytes": 21396,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "tests/__pycache__",
+      "files": 10,
+      "bytes": 136691,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "docs/_build/test-map.json",
+      "files": 1,
+      "bytes": 11648,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "docs/_build/traceability.csv",
+      "files": 1,
+      "bytes": 11498,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    },
+    {
+      "path": "docs/_build/test-traceability.csv",
+      "files": 1,
+      "bytes": 21953,
+      "reason": "Reproducible benchmark/build output or cache; retain release evidence separately",
+      "rebuild_consequence": "Rebuild/recollect before a future consuming verification run"
+    }
+  ],
+  "total_bytes": 436647596,
+  "retain": [
+    "docs/_build/html",
+    "docs/_build/wheelhouse",
+    "docs/test-execution (except the explicitly listed __pycache__)",
+    ".venv",
+    ".venv-implementation",
+    "frontend/node_modules"
+  ]
+}

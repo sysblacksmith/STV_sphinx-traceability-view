@@ -3,6 +3,27 @@ Implementation verification plan
 
 Planned checks, execution environments, fixtures and release gates.
 
+Canonical test and execution records
+--------------------------------------------------------------------------------
+
+The :doc:`test-cases/index` contains the concept's concrete verification
+procedures and explicit requirement links. The executable inventory in
+:doc:`test-coverage` supplements those modeled cases. Case design acceptance
+does not imply execution; unexecuted cases use ``last_result: not_run``.
+
+For each actual attempt, retain one ``test_execution`` Need per executable
+case in the release execution folder. Link it from its test case using
+``executed_by`` and record timestamp with timezone, actual result, candidate,
+test/environment identity and JUnit/log evidence. Synchronize ``last_result``
+with the latest linked attempt without overwriting earlier records. Suite
+results and criterion-level verification remain separate assessments.
+
+Run structural coverage validation with ``--require-test-coverage`` and export
+the requirement/test/execution matrix using ``--test-csv``. Planned
+occurrence-mode coverage is retained for all later requirements, but those
+cases have no delivered executable or passing execution claim. The release
+must separately assess execution coverage of the delivered scope.
+
 Execution environments
 --------------------------
 

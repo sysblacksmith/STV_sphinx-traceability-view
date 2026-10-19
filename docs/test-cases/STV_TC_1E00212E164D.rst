@@ -1,0 +1,46 @@
+runtime reseeding is atomic and clears exploration
+==================================================
+
+.. test_case:: runtime reseeding is atomic and clears exploration
+   :id: STV_TC_1E00212E164D
+   :status: accepted
+   :tags: release_initial
+   :basis: documented
+   :evidence: frontend/test/state.test.js :: frontend/test/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_053, STV_SWR_057
+   :executed_by: STV_TE_AEF4AE7CB966E22D, STV_TE_221D15B62302934C
+   :last_result: passed
+
+   **Level:** JavaScript unit/state/geometry.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``frontend/test/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``.
+
+   **Invocation:** ``node --test "frontend/test/state.test.js"``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: javascript
+
+      test('STV_SWR_057: runtime reseeding is atomic and clears exploration',()=>{
+       const g=graph([['A','r','B']],['A','B']);g.objects={A:{},B:{}};
+       let s=toggle(g,initial(),'A');assert.equal(transition(g,s,{type:'seed',id:'unknown'}).state,s);
+       s=transition(g,s,{type:'seed',id:' B '}).state;assert.deepEqual(visible(g,s).ids,['B']);assert.equal(s.expanded.size,0);
+       s=transition(g,s,{type:'overview'}).state;assert.equal(s.page,0);assert.deepEqual(visible(g,s).entries,['A','B']);
+       });
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.

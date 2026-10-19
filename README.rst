@@ -24,7 +24,7 @@ not required.
 
 The configuration imports the shared model, status-chart extension and styling
 directly, and includes the live central method. It discovers the shared skill
-under an ancestor's ``#agents/skills`` or ``~/.agents/skills``. To select another
+under an ancestor's ``-agents/skills`` or ``~/.agents/skills``. To select another
 location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
 ``reverse-engineer-requirements`` skill directory. Its repository-level
 ``method.md`` must also be present.
@@ -32,7 +32,7 @@ location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
 After building, run the shared validator (replace ``<shared-skill>`` with the
 selected reverse-engineer-requirements skill directory)::
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 0.2 --repo-root . --csv docs/_build/traceability.csv
+   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 0.2 --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
 
 The internal specification includes conventional and channeled derivation paths,
 allocations and containment. Graph validation establishes structural checks;
@@ -99,7 +99,7 @@ Use in another Sphinx project
 Install STV as a Python package in the consuming project's documentation
 environment, then use its directive in that project's RST pages. Consumers
 need the wheel and its Python dependencies; they do not need this repository,
-the shared ``#agents`` checkout, Draw.io or Node.
+the shared ``-agents`` checkout, Draw.io or Node.
 
 1. Download the wheel (``.whl``) for the desired release from
    `GitHub Releases <https://github.com/sysforger/STV_sphinx-traceability-view/releases>`_.
@@ -212,3 +212,27 @@ The packaging test needs a built wheel and an offline runtime wheelhouse at
 ``docs/_build/wheelhouse``. Source tests, release results and deferred criteria
 are linked from the central maturity page. No project license has been assigned;
 the owner must resolve that decision before external distribution.
+
+The documentation's ``test-cases/index`` specifies canonical cases and their
+requirement links. Per-case execution records retain actual attempts, while
+``last_result`` shows each case's latest recorded outcome. Planned
+occurrence-mode cases remain unexecuted. Review acceptance and recorded test
+results are independent.
+
+For full qualification, select the shared skill explicitly (the release
+runner's legacy fallback predates the directory rename)::
+
+   $env:REQUIREMENTS_SKILL_DIR = '<shared-skill>'
+   .\.venv-implementation\Scripts\python.exe scripts/verify-release.py --record <new-record-name> --driver <provisioned-geckodriver>
+   .\.venv-implementation\Scripts\python.exe docs/test-execution/import-case-results.py <new-record-name>
+
+Replace the placeholders with the shared ``reverse-engineer-requirements``
+directory, a unique execution name and the provisioned driver path. Retain failed
+attempts. Import results only after the runner has finished; then rebuild and
+validate the published requirement/test/execution graph. Inspect the generated
+cleanup proposal and approve exact paths before deleting disposable output.
+
+Retain the entire ``dist/`` directory during cleanup, including wheels and
+source archives for current and older versions. The owner removes older
+versions manually after uploading them to GitHub. Copies retained as test
+evidence do not replace the distribution files in ``dist/``.

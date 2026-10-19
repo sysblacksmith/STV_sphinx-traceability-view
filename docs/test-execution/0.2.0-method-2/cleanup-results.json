@@ -1,0 +1,68 @@
+﻿{
+    "finished":  "2026-10-19T20:43:58.1174198+00:00",
+    "approval":  "Owner approved only this list in the session on 2026-10-19",
+    "approved_payload_bytes":  436647596,
+    "results":  [
+                    {
+                        "path":  "docs/_build/release-benchmark",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "dist",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  ".pytest_cache",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "docs/test-execution/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "docs/_build/test-map.json",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "docs/_build/traceability.csv",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "docs/_build/test-traceability.csv",
+                        "removed":  true,
+                        "error":  null
+                    }
+                ],
+    "remaining_approved_paths":  [
+
+                                 ],
+    "retained":  [
+                     "docs/_build/html",
+                     "docs/_build/wheelhouse",
+                     "docs/test-execution evidence",
+                     ".venv",
+                     ".venv-implementation",
+                     "frontend/node_modules"
+                 ]
+}
