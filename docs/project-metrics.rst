@@ -57,3 +57,54 @@ Architecture element status
 
       **Total:** :need_count:`type == 'swe'`
 
+Test-case maturity
+------------------
+
+Maturity describes review status (draft, reviewed, accepted), not execution
+outcome, pass rate or verification state. Populations use the canonical
+``test_system`` and ``test_software`` tags, independently of requirement links.
+
+.. container:: requirement-status-charts test-case-status-charts
+
+   .. container:: requirement-status-card
+
+      **System test cases**
+
+      .. status-pie:: test_case
+         :tag: test_system
+
+      **Total:** :need_count:`type == 'test_case' and 'test_system' in tags`
+
+   .. container:: requirement-status-card
+
+      **Software test cases**
+
+      .. status-pie:: test_case
+         :tag: test_software
+
+      **Total:** :need_count:`type == 'test_case' and 'test_software' in tags`
+
+Scope management status
+------------------------
+
+Problem tickets use their New / Analyzed / Fixed lifecycle. Change requests
+use their canonical Draft / Accepted / Implemented Need status. These lifecycles
+do not change requirement acceptance or verification results.
+
+.. container:: requirement-status-charts scope-status-charts
+
+   .. container:: requirement-status-card
+
+      **Problem tickets**
+
+      .. status-pie:: problem_report
+
+      **Total:** :need_count:`type == 'problem_report'`
+
+   .. container:: requirement-status-card
+
+      **Change requests**
+
+      .. status-pie:: change_request
+
+      **Total:** :need_count:`type == 'change_request'`

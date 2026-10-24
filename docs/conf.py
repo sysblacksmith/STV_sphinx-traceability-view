@@ -39,9 +39,10 @@ traceability_view_model = deepcopy(import_module('sphinx_traceability_view.model
 traceability_view_model['levels'] = [
     'stakeholder', 'system', 'system_tests', 'system_executions', 'system_arch',
     'software', 'software_tests', 'software_executions', 'software_arch',
-    'unclassified_tests', 'problems',
+    'unclassified_tests', 'problems', 'changes',
 ]
 traceability_view_model['types']['problem_report'] = {'level': 'problems'}
+traceability_view_model['types']['change_request'] = {'level': 'changes'}
 traceability_view_model['types']['test_case'] = {
     'levels_by_tag': {'test_system': 'system_tests', 'test_software': 'software_tests'},
     'fallback_level': 'unclassified_tests',
