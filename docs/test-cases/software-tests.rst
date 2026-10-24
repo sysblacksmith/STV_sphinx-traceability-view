@@ -9,11 +9,11 @@ for classification and evidence semantics.
    :filter: type == 'test_case' and 'test_software' in tags
    :columns: id;title;status;verifies;last_result;executed_by
 
-STV_TC_07D369AD0A2F: reverse traversal has no depth cutoff
-----------------------------------------------------------
+STV_TC_SW_001: reverse traversal has no depth cutoff
+----------------------------------------------------
 
 .. test_case:: reverse traversal has no depth cutoff
-   :id: STV_TC_07D369AD0A2F
+   :id: STV_TC_SW_001
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -57,11 +57,11 @@ STV_TC_07D369AD0A2F: reverse traversal has no depth cutoff
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_08AC936D55F9: parent and project center over five visible children
--------------------------------------------------------------------------
+STV_TC_SW_002: parent and project center over five visible children
+-------------------------------------------------------------------
 
 .. test_case:: parent and project center over five visible children
-   :id: STV_TC_08AC936D55F9
+   :id: STV_TC_SW_002
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -107,11 +107,11 @@ STV_TC_08AC936D55F9: parent and project center over five visible children
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_0C2F9B7BE8A7: page boundaries, root capacity and independent views
--------------------------------------------------------------------------
+STV_TC_SW_003: page boundaries, root capacity and independent views
+-------------------------------------------------------------------
 
 .. test_case:: page boundaries, root capacity and independent views
-   :id: STV_TC_0C2F9B7BE8A7
+   :id: STV_TC_SW_003
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -165,11 +165,11 @@ STV_TC_0C2F9B7BE8A7: page boundaries, root capacity and independent views
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_0CAAF47BBD14: semantic bands and shared test lane
---------------------------------------------------------
+STV_TC_SW_004: semantic bands and shared test lane
+--------------------------------------------------
 
 .. test_case:: semantic bands and shared test lane
-   :id: STV_TC_0CAAF47BBD14
+   :id: STV_TC_SW_004
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -234,11 +234,11 @@ STV_TC_0CAAF47BBD14: semantic bands and shared test lane
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_11FDDB8E8864: external original url rejects executable or nonportable navigation
----------------------------------------------------------------------------------------
+STV_TC_SW_005: external original url rejects executable or nonportable navigation
+---------------------------------------------------------------------------------
 
 .. test_case:: external original url rejects executable or nonportable navigation
-   :id: STV_TC_11FDDB8E8864
+   :id: STV_TC_SW_005
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -280,11 +280,11 @@ STV_TC_11FDDB8E8864: external original url rejects executable or nonportable nav
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_156E45252AF4: self-loop terminates and collapse restores the only seed
------------------------------------------------------------------------------
+STV_TC_SW_006: self-loop terminates and collapse restores the only seed
+-----------------------------------------------------------------------
 
 .. test_case:: self-loop terminates and collapse restores the only seed
-   :id: STV_TC_156E45252AF4
+   :id: STV_TC_SW_006
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -326,11 +326,11 @@ STV_TC_156E45252AF4: self-loop terminates and collapse restores the only seed
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_1BFD0971844A: replacement level mappings drive ordering without relation-name assumptions
-------------------------------------------------------------------------------------------------
+STV_TC_SW_007: replacement level mappings drive ordering without relation-name assumptions
+------------------------------------------------------------------------------------------
 
 .. test_case:: replacement level mappings drive ordering without relation-name assumptions
-   :id: STV_TC_1BFD0971844A
+   :id: STV_TC_SW_007
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -374,11 +374,11 @@ STV_TC_1BFD0971844A: replacement level mappings drive ordering without relation-
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_1E00212E164D: runtime reseeding is atomic and clears exploration
------------------------------------------------------------------------
+STV_TC_SW_008: runtime reseeding is atomic and clears exploration
+-----------------------------------------------------------------
 
 .. test_case:: runtime reseeding is atomic and clears exploration
-   :id: STV_TC_1E00212E164D
+   :id: STV_TC_SW_008
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -421,11 +421,11 @@ STV_TC_1E00212E164D: runtime reseeding is atomic and clears exploration
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_287ABDA90FE3: host normalization
----------------------------------------
+STV_TC_SW_009: host normalization
+---------------------------------
 
 .. test_case:: host normalization
-   :id: STV_TC_287ABDA90FE3
+   :id: STV_TC_SW_009
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -473,11 +473,11 @@ STV_TC_287ABDA90FE3: host normalization
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_2BC87902D1FD: clear facing ports and fan-in avoid outer detours
-----------------------------------------------------------------------
+STV_TC_SW_010: clear facing ports and fan-in avoid outer detours
+----------------------------------------------------------------
 
 .. test_case:: clear facing ports and fan-in avoid outer detours
-   :id: STV_TC_2BC87902D1FD
+   :id: STV_TC_SW_010
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -525,11 +525,11 @@ STV_TC_2BC87902D1FD: clear facing ports and fan-in avoid outer detours
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_2EE2AB9ECAE3: competing parents do not displace a separate centered parent
----------------------------------------------------------------------------------
+STV_TC_SW_011: competing parents do not displace a separate centered parent
+---------------------------------------------------------------------------
 
 .. test_case:: competing parents do not displace a separate centered parent
-   :id: STV_TC_2EE2AB9ECAE3
+   :id: STV_TC_SW_011
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -577,11 +577,11 @@ STV_TC_2EE2AB9ECAE3: competing parents do not displace a separate centered paren
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_35E510D6991A: project pages preserve independent expansion and collapsed root
-------------------------------------------------------------------------------------
+STV_TC_SW_012: project pages preserve independent expansion and collapsed root
+------------------------------------------------------------------------------
 
 .. test_case:: project pages preserve independent expansion and collapsed root
-   :id: STV_TC_35E510D6991A
+   :id: STV_TC_SW_012
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -632,11 +632,11 @@ STV_TC_35E510D6991A: project pages preserve independent expansion and collapsed 
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_3DF9A4D8CF8D: invalid directional labels
------------------------------------------------
+STV_TC_SW_013: invalid directional labels
+-----------------------------------------
 
 .. test_case:: invalid directional labels
-   :id: STV_TC_3DF9A4D8CF8D
+   :id: STV_TC_SW_013
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -676,11 +676,11 @@ STV_TC_3DF9A4D8CF8D: invalid directional labels
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_4594B1E01BC7: classic registration treats prototype keys and script text as data
----------------------------------------------------------------------------------------
+STV_TC_SW_014: classic registration treats prototype keys and script text as data
+---------------------------------------------------------------------------------
 
 .. test_case:: classic registration treats prototype keys and script text as data
-   :id: STV_TC_4594B1E01BC7
+   :id: STV_TC_SW_014
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -726,11 +726,11 @@ STV_TC_4594B1E01BC7: classic registration treats prototype keys and script text 
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_4E68C09504E8: rooted diamond and isolated cycle
-------------------------------------------------------
+STV_TC_SW_015: rooted diamond and isolated cycle
+------------------------------------------------
 
 .. test_case:: rooted diamond and isolated cycle
-   :id: STV_TC_4E68C09504E8
+   :id: STV_TC_SW_015
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -778,11 +778,11 @@ STV_TC_4E68C09504E8: rooted diamond and isolated cycle
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_51B932282614: invalid model
-----------------------------------
+STV_TC_SW_016: invalid model
+----------------------------
 
 .. test_case:: invalid model
-   :id: STV_TC_51B932282614
+   :id: STV_TC_SW_016
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -822,11 +822,11 @@ STV_TC_51B932282614: invalid model
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_5D3C07D3C5DE: invalid model
-----------------------------------
+STV_TC_SW_017: invalid model
+----------------------------
 
 .. test_case:: invalid model
-   :id: STV_TC_5D3C07D3C5DE
+   :id: STV_TC_SW_017
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -866,11 +866,11 @@ STV_TC_5D3C07D3C5DE: invalid model
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_6FE4CFC63C95: 199/200/201 atomic capacity
-------------------------------------------------
+STV_TC_SW_018: 199/200/201 atomic capacity
+------------------------------------------
 
 .. test_case:: 199/200/201 atomic capacity
-   :id: STV_TC_6FE4CFC63C95
+   :id: STV_TC_SW_018
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -915,11 +915,11 @@ STV_TC_6FE4CFC63C95: 199/200/201 atomic capacity
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_734CF1BFE372: external original url rejects executable or nonportable navigation
----------------------------------------------------------------------------------------
+STV_TC_SW_019: external original url rejects executable or nonportable navigation
+---------------------------------------------------------------------------------
 
 .. test_case:: external original url rejects executable or nonportable navigation
-   :id: STV_TC_734CF1BFE372
+   :id: STV_TC_SW_019
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -961,11 +961,11 @@ STV_TC_734CF1BFE372: external original url rejects executable or nonportable nav
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_7D1212345072: external original url rejects executable or nonportable navigation
----------------------------------------------------------------------------------------
+STV_TC_SW_020: external original url rejects executable or nonportable navigation
+---------------------------------------------------------------------------------
 
 .. test_case:: external original url rejects executable or nonportable navigation
-   :id: STV_TC_7D1212345072
+   :id: STV_TC_SW_020
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1007,11 +1007,11 @@ STV_TC_7D1212345072: external original url rejects executable or nonportable nav
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_8023D1B4838C: portable paths preserve queries and fragments
-------------------------------------------------------------------
+STV_TC_SW_021: portable paths preserve queries and fragments
+------------------------------------------------------------
 
 .. test_case:: portable paths preserve queries and fragments
-   :id: STV_TC_8023D1B4838C
+   :id: STV_TC_SW_021
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1052,11 +1052,11 @@ STV_TC_8023D1B4838C: portable paths preserve queries and fragments
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_880A2E13BCE9: shared children keep unique nodes and conflicting parents do not overlap
----------------------------------------------------------------------------------------------
+STV_TC_SW_022: shared children keep unique nodes and conflicting parents do not overlap
+---------------------------------------------------------------------------------------
 
 .. test_case:: shared children keep unique nodes and conflicting parents do not overlap
-   :id: STV_TC_880A2E13BCE9
+   :id: STV_TC_SW_022
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1099,11 +1099,11 @@ STV_TC_880A2E13BCE9: shared children keep unique nodes and conflicting parents d
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_9316CE9A1843: invalid directional labels
------------------------------------------------
+STV_TC_SW_023: invalid directional labels
+-----------------------------------------
 
 .. test_case:: invalid directional labels
-   :id: STV_TC_9316CE9A1843
+   :id: STV_TC_SW_023
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1143,11 +1143,11 @@ STV_TC_9316CE9A1843: invalid directional labels
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_97667EB28A11: blocked skipped-level edges retain safe detours
---------------------------------------------------------------------
+STV_TC_SW_024: blocked skipped-level edges retain safe detours
+--------------------------------------------------------------
 
 .. test_case:: blocked skipped-level edges retain safe detours
-   :id: STV_TC_97667EB28A11
+   :id: STV_TC_SW_024
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1201,11 +1201,11 @@ STV_TC_97667EB28A11: blocked skipped-level edges retain safe detours
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_ABB4E85E5F66: srcset data images and css resources
----------------------------------------------------------
+STV_TC_SW_025: srcset data images and css resources
+---------------------------------------------------
 
 .. test_case:: srcset data images and css resources
-   :id: STV_TC_ABB4E85E5F66
+   :id: STV_TC_SW_025
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1250,11 +1250,11 @@ STV_TC_ABB4E85E5F66: srcset data images and css resources
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_AEF53EABA753: cross-page targets do not acquire synthetic root edges
----------------------------------------------------------------------------
+STV_TC_SW_026: cross-page targets do not acquire synthetic root edges
+---------------------------------------------------------------------
 
 .. test_case:: cross-page targets do not acquire synthetic root edges
-   :id: STV_TC_AEF53EABA753
+   :id: STV_TC_SW_026
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1297,11 +1297,11 @@ STV_TC_AEF53EABA753: cross-page targets do not acquire synthetic root edges
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_B2EF591B7F1E: upward controls precede neutral and downward controls regardless of authorship
----------------------------------------------------------------------------------------------------
+STV_TC_SW_027: upward controls precede neutral and downward controls regardless of authorship
+---------------------------------------------------------------------------------------------
 
 .. test_case:: upward controls precede neutral and downward controls regardless of authorship
-   :id: STV_TC_B2EF591B7F1E
+   :id: STV_TC_SW_027
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1350,11 +1350,11 @@ STV_TC_B2EF591B7F1E: upward controls precede neutral and downward controls regar
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_C747492F203E: invalid model
-----------------------------------
+STV_TC_SW_028: invalid model
+----------------------------
 
 .. test_case:: invalid model
-   :id: STV_TC_C747492F203E
+   :id: STV_TC_SW_028
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1394,11 +1394,11 @@ STV_TC_C747492F203E: invalid model
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_D00DA9F2CD10: hidden parts external and missing targets
---------------------------------------------------------------
+STV_TC_SW_029: hidden parts external and missing targets
+--------------------------------------------------------
 
 .. test_case:: hidden parts external and missing targets
-   :id: STV_TC_D00DA9F2CD10
+   :id: STV_TC_SW_029
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1458,11 +1458,11 @@ STV_TC_D00DA9F2CD10: hidden parts external and missing targets
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_D22785EE6859: cyclic shared geometry with isolated nodes remains deterministic and separated
----------------------------------------------------------------------------------------------------
+STV_TC_SW_030: cyclic shared geometry with isolated nodes remains deterministic and separated
+---------------------------------------------------------------------------------------------
 
 .. test_case:: cyclic shared geometry with isolated nodes remains deterministic and separated
-   :id: STV_TC_D22785EE6859
+   :id: STV_TC_SW_030
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1517,11 +1517,11 @@ STV_TC_D22785EE6859: cyclic shared geometry with isolated nodes remains determin
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_D31601FDD080: invalid directional labels
------------------------------------------------
+STV_TC_SW_031: invalid directional labels
+-----------------------------------------
 
 .. test_case:: invalid directional labels
-   :id: STV_TC_D31601FDD080
+   :id: STV_TC_SW_031
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1561,11 +1561,11 @@ STV_TC_D31601FDD080: invalid directional labels
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_D43DE71AF846: static details and remote fallback
--------------------------------------------------------
+STV_TC_SW_032: static details and remote fallback
+-------------------------------------------------
 
 .. test_case:: static details and remote fallback
-   :id: STV_TC_D43DE71AF846
+   :id: STV_TC_SW_032
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1626,11 +1626,11 @@ STV_TC_D43DE71AF846: static details and remote fallback
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_DETAIL_CACHE: Concurrent build-scoped detail loading
------------------------------------------------------------
+STV_TC_SW_033: Concurrent build-scoped detail loading
+-----------------------------------------------------
 
 .. test_case:: Concurrent build-scoped detail loading
-   :id: STV_TC_DETAIL_CACHE
+   :id: STV_TC_SW_033
    :status: accepted
    :tags: test_software
    :basis: documented
@@ -1657,11 +1657,11 @@ STV_TC_DETAIL_CACHE: Concurrent build-scoped detail loading
    qualification. Routine refactor checks do not create a release record or
    change this canonical latest-result field.
 
-STV_TC_DETAIL_RETRY: Retry local detail loading after failure
--------------------------------------------------------------
+STV_TC_SW_034: Retry local detail loading after failure
+-------------------------------------------------------
 
 .. test_case:: Retry local detail loading after failure
-   :id: STV_TC_DETAIL_RETRY
+   :id: STV_TC_SW_034
    :status: accepted
    :tags: test_software
    :basis: documented
@@ -1688,11 +1688,11 @@ STV_TC_DETAIL_RETRY: Retry local detail loading after failure
    qualification. Routine refactor checks do not create a release record or
    change this canonical latest-result field.
 
-STV_TC_E6FA25320A8F: active embed urls are not retained as navigation
----------------------------------------------------------------------
+STV_TC_SW_035: active embed urls are not retained as navigation
+---------------------------------------------------------------
 
 .. test_case:: active embed urls are not retained as navigation
-   :id: STV_TC_E6FA25320A8F
+   :id: STV_TC_SW_035
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1734,11 +1734,11 @@ STV_TC_E6FA25320A8F: active embed urls are not retained as navigation
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_EB472A6879CF: local suggestions match IDs and titles and bound results
------------------------------------------------------------------------------
+STV_TC_SW_036: local suggestions match IDs and titles and bound results
+-----------------------------------------------------------------------
 
 .. test_case:: local suggestions match IDs and titles and bound results
-   :id: STV_TC_EB472A6879CF
+   :id: STV_TC_SW_036
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1783,11 +1783,11 @@ STV_TC_EB472A6879CF: local suggestions match IDs and titles and bound results
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_F549DE4D0BF4: invalid directional labels
------------------------------------------------
+STV_TC_SW_037: invalid directional labels
+-----------------------------------------
 
 .. test_case:: invalid directional labels
-   :id: STV_TC_F549DE4D0BF4
+   :id: STV_TC_SW_037
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1827,11 +1827,11 @@ STV_TC_F549DE4D0BF4: invalid directional labels
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_FBDDCC607412: invalid model
-----------------------------------
+STV_TC_SW_038: invalid model
+----------------------------
 
 .. test_case:: invalid model
-   :id: STV_TC_FBDDCC607412
+   :id: STV_TC_SW_038
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1871,11 +1871,11 @@ STV_TC_FBDDCC607412: invalid model
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_COMPACT_PATHS: Compact immutable detail assets
------------------------------------------------------
+STV_TC_SW_039: Compact immutable detail assets
+----------------------------------------------
 
 .. test_case:: Compact immutable detail assets
-   :id: STV_TC_COMPACT_PATHS
+   :id: STV_TC_SW_039
    :status: accepted
    :tags: release_initial, test_software
    :basis: documented
@@ -1902,11 +1902,11 @@ STV_TC_COMPACT_PATHS: Compact immutable detail assets
    **Evidence:** Actual JUnit outcome, source identity and maintenance log;
    the system Windows-path case covers real browser/path/retry behavior.
 
-STV_TC_TRANSPORT_ATTRS: Reserved authored transport attributes are discarded
-----------------------------------------------------------------------------
+STV_TC_SW_040: Reserved authored transport attributes are discarded
+-------------------------------------------------------------------
 
 .. test_case:: Reserved authored transport attributes are discarded
-   :id: STV_TC_TRANSPORT_ATTRS
+   :id: STV_TC_SW_040
    :status: draft
    :tags: release_initial, test_software
    :basis: documented
@@ -1933,11 +1933,11 @@ STV_TC_TRANSPORT_ATTRS: Reserved authored transport attributes are discarded
    **Evidence:** Retain actual JUnit results, commands and source identities in
    :doc:`../test-execution/prsa-002-fix/index`. Design review remains pending.
 
-STV_TC_DETAIL_URLS: Restored URLs obey the output-local policy
---------------------------------------------------------------
+STV_TC_SW_041: Restored URLs obey the output-local policy
+---------------------------------------------------------
 
 .. test_case:: Restored URLs obey the output-local policy
-   :id: STV_TC_DETAIL_URLS
+   :id: STV_TC_SW_041
    :status: draft
    :tags: release_initial, test_software
    :basis: documented
@@ -1964,11 +1964,11 @@ STV_TC_DETAIL_URLS: Restored URLs obey the output-local policy
    **Evidence:** Retain actual JUnit results, commands and source identities in
    :doc:`../test-execution/prsa-002-fix/index`. Design review remains pending.
 
-STV_TC_DETAIL_CSS: Restored CSS rejects unchecked resources
------------------------------------------------------------
+STV_TC_SW_042: Restored CSS rejects unchecked resources
+-------------------------------------------------------
 
 .. test_case:: Restored CSS rejects unchecked resources
-   :id: STV_TC_DETAIL_CSS
+   :id: STV_TC_SW_042
    :status: draft
    :tags: release_initial, test_software
    :basis: documented

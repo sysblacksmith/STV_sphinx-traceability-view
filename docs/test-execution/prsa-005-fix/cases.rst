@@ -15,7 +15,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: failed
    :executed_at: 2026-10-24T14:48:49.902075+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_CLEAN`.
+   **Case:** :need:`STV_TC_SY_052`.
 
    **Evidence:** :download:`fixture-initial.xml <fixture-initial.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -30,7 +30,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: failed
    :executed_at: 2026-10-24T14:48:49.902075+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_FAIL`.
+   **Case:** :need:`STV_TC_SY_053`.
 
    **Evidence:** :download:`fixture-initial.xml <fixture-initial.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -45,7 +45,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: failed
    :executed_at: 2026-10-24T14:48:49.902075+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_ROLLBACK`.
+   **Case:** :need:`STV_TC_SY_054`.
 
    **Evidence:** :download:`fixture-initial.xml <fixture-initial.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -60,7 +60,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:49:40.932303+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_CLEAN`.
+   **Case:** :need:`STV_TC_SY_052`.
 
    **Evidence:** :download:`first-pass.xml <first-pass.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -75,7 +75,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:49:40.932303+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_FAIL`.
+   **Case:** :need:`STV_TC_SY_053`.
 
    **Evidence:** :download:`first-pass.xml <first-pass.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -90,7 +90,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:49:40.932303+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_ROLLBACK`.
+   **Case:** :need:`STV_TC_SY_054`.
 
    **Evidence:** :download:`first-pass.xml <first-pass.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -105,7 +105,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:52:25.019713+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_CLEAN`.
+   **Case:** :need:`STV_TC_SY_052`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -120,7 +120,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:52:25.019713+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_FAIL`.
+   **Case:** :need:`STV_TC_SY_053`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.
@@ -135,7 +135,7 @@ are demonstrated by the passing real-Sphinx cases. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:52:25.019713+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_ROLLBACK`.
+   **Case:** :need:`STV_TC_SY_054`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`. See :doc:`index`
    for setup corrections, final source identity, exact commands and scope.

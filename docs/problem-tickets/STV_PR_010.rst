@@ -30,7 +30,7 @@ STV_PR_010: Source archives include execution logs despite exclusion
    existing build hook own this boundary. No requirement, component allocation,
    browser asset, version or state-machine transition changes.
 
-   **Regression and review:** :need:`STV_TC_SDIST_BOUNDARY` inspects actual tar
+   **Regression and review:** :need:`STV_TC_SY_051` inspects actual tar
    members with root/nested ignore negations and local-only sentinels. It checks
    a wheel rebuilt from the archive. The existing installed-wheel case checks
    the real development build in an isolated offline Sphinx host. Evidence and

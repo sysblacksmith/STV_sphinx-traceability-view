@@ -17,7 +17,7 @@ of concept acceptance or requirement verification.
    :result: failed
    :executed_at: 2026-10-24T12:25:22.452189+00:00
 
-   **Case:** :need:`STV_TC_WINDOWS_PATH`.
+   **Case:** :need:`STV_TC_SY_045`.
 
    **Inputs:** Original base implementation plus the new regression; expected failure, 298-character asset path.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -36,7 +36,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:27:03.318712+00:00
 
-   **Case:** :need:`STV_TC_4594B1E01BC7`.
+   **Case:** :need:`STV_TC_SW_014`.
 
    **Inputs:** First compact-path component/system verification; before final inventory-copy integration.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -55,7 +55,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:27:03.318712+00:00
 
-   **Case:** :need:`STV_TC_COMPACT_PATHS`.
+   **Case:** :need:`STV_TC_SW_039`.
 
    **Inputs:** First compact-path component/system verification; before final inventory-copy integration.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -74,7 +74,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:27:03.318712+00:00
 
-   **Case:** :need:`STV_TC_WINDOWS_PATH`.
+   **Case:** :need:`STV_TC_SY_045`.
 
    **Inputs:** First compact-path component/system verification; before final inventory-copy integration.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -93,7 +93,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_4594B1E01BC7`.
+   **Case:** :need:`STV_TC_SW_014`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -112,7 +112,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_COMPACT_PATHS`.
+   **Case:** :need:`STV_TC_SW_039`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -131,7 +131,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_D43DE71AF846`.
+   **Case:** :need:`STV_TC_SW_032`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -150,7 +150,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_8023D1B4838C`.
+   **Case:** :need:`STV_TC_SW_021`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -169,7 +169,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_ABB4E85E5F66`.
+   **Case:** :need:`STV_TC_SW_025`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -188,7 +188,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_E6FA25320A8F`.
+   **Case:** :need:`STV_TC_SW_035`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -207,7 +207,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_136FE8B1A097`.
+   **Case:** :need:`STV_TC_SY_004`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -226,7 +226,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_B5D550F17384`.
+   **Case:** :need:`STV_TC_SY_024`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -245,7 +245,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_D00DA9F2CD10`.
+   **Case:** :need:`STV_TC_SW_029`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -264,7 +264,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_11FDDB8E8864`.
+   **Case:** :need:`STV_TC_SW_005`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -283,7 +283,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_7D1212345072`.
+   **Case:** :need:`STV_TC_SW_020`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -302,7 +302,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_734CF1BFE372`.
+   **Case:** :need:`STV_TC_SW_019`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -321,7 +321,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_287ABDA90FE3`.
+   **Case:** :need:`STV_TC_SW_009`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -340,7 +340,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_51B932282614`.
+   **Case:** :need:`STV_TC_SW_016`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -359,7 +359,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_C747492F203E`.
+   **Case:** :need:`STV_TC_SW_028`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -378,7 +378,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_5D3C07D3C5DE`.
+   **Case:** :need:`STV_TC_SW_017`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -397,7 +397,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_FBDDCC607412`.
+   **Case:** :need:`STV_TC_SW_038`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -416,7 +416,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_3DF9A4D8CF8D`.
+   **Case:** :need:`STV_TC_SW_013`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -435,7 +435,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_9316CE9A1843`.
+   **Case:** :need:`STV_TC_SW_023`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -454,7 +454,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_F549DE4D0BF4`.
+   **Case:** :need:`STV_TC_SW_037`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -473,7 +473,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_D31601FDD080`.
+   **Case:** :need:`STV_TC_SW_031`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -492,7 +492,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_7441DB459B14`.
+   **Case:** :need:`STV_TC_SY_016`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -511,7 +511,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_025DB3F44E8E`.
+   **Case:** :need:`STV_TC_SY_001`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -530,7 +530,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_E0AB07ABA378`.
+   **Case:** :need:`STV_TC_SY_030`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -549,7 +549,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_F6E0695BB399`.
+   **Case:** :need:`STV_TC_SY_037`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -568,7 +568,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_E23001FBE2A5`.
+   **Case:** :need:`STV_TC_SY_031`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -587,7 +587,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_CFE6B0377595`.
+   **Case:** :need:`STV_TC_SY_025`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -606,7 +606,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_5652621CFF4A`.
+   **Case:** :need:`STV_TC_SY_010`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -625,7 +625,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_A1747C52BC63`.
+   **Case:** :need:`STV_TC_SY_021`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -644,7 +644,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_9E5477EFE2F1`.
+   **Case:** :need:`STV_TC_SY_020`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -663,7 +663,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_E2A064F091BE`.
+   **Case:** :need:`STV_TC_SY_032`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -682,7 +682,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_7016FADA6FBA`.
+   **Case:** :need:`STV_TC_SY_015`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -701,7 +701,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_E66A443619C6`.
+   **Case:** :need:`STV_TC_SY_033`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -720,7 +720,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_0EBE5120F168`.
+   **Case:** :need:`STV_TC_SY_003`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -739,7 +739,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_59C06D617036`.
+   **Case:** :need:`STV_TC_SY_012`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -758,7 +758,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_3B2659FB2D0A`.
+   **Case:** :need:`STV_TC_SY_007`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -777,7 +777,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_535022565896`.
+   **Case:** :need:`STV_TC_SY_009`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -796,7 +796,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_06CC5EE46517`.
+   **Case:** :need:`STV_TC_SY_002`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -815,7 +815,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_5C902A5F732E`.
+   **Case:** :need:`STV_TC_SY_013`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -834,7 +834,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_41F176801699`.
+   **Case:** :need:`STV_TC_SY_008`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -853,7 +853,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_6C7A64E533AC`.
+   **Case:** :need:`STV_TC_SY_014`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -872,7 +872,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_A221103BC26C`.
+   **Case:** :need:`STV_TC_SY_022`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -891,7 +891,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_DB4FE4CDD257`.
+   **Case:** :need:`STV_TC_SY_027`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -910,7 +910,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_D1A17B11B9C1`.
+   **Case:** :need:`STV_TC_SY_026`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -929,7 +929,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_59537D3F286A`.
+   **Case:** :need:`STV_TC_SY_011`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -948,7 +948,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_A953C70E70B1`.
+   **Case:** :need:`STV_TC_SY_023`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -967,7 +967,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_3B0D9F21166C`.
+   **Case:** :need:`STV_TC_SY_006`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -986,7 +986,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_85BBE1714F96`.
+   **Case:** :need:`STV_TC_SY_018`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1005,7 +1005,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_FC50F6627767`.
+   **Case:** :need:`STV_TC_SY_040`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1024,7 +1024,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_DF0D9B21A92D`.
+   **Case:** :need:`STV_TC_SY_029`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1043,7 +1043,7 @@ of concept acceptance or requirement verification.
    :result: failed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1062,7 +1062,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_DE0C60E0BB97`.
+   **Case:** :need:`STV_TC_SY_028`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1081,7 +1081,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_9A67DAACB2A4`.
+   **Case:** :need:`STV_TC_SY_019`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1100,7 +1100,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_FB72ADBCAE29`.
+   **Case:** :need:`STV_TC_SY_039`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1119,7 +1119,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_EB0F95BABF84`.
+   **Case:** :need:`STV_TC_SY_034`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1138,7 +1138,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_25803A2B9F90`.
+   **Case:** :need:`STV_TC_SY_005`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1157,7 +1157,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_F3892D8A1C98`.
+   **Case:** :need:`STV_TC_SY_036`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1176,7 +1176,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:53.834522+00:00
 
-   **Case:** :need:`STV_TC_WINDOWS_PATH`.
+   **Case:** :need:`STV_TC_SY_045`.
 
    **Inputs:** Broad development run; source-hashes-at-regression.json and first development artifact.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1195,7 +1195,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CACHE`.
+   **Case:** :need:`STV_TC_SW_033`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1214,7 +1214,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_RETRY`.
+   **Case:** :need:`STV_TC_SW_034`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1233,7 +1233,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_2EE2AB9ECAE3`.
+   **Case:** :need:`STV_TC_SW_011`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1252,7 +1252,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_D22785EE6859`.
+   **Case:** :need:`STV_TC_SW_030`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1271,7 +1271,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_08AC936D55F9`.
+   **Case:** :need:`STV_TC_SW_002`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1290,7 +1290,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_880A2E13BCE9`.
+   **Case:** :need:`STV_TC_SW_022`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1309,7 +1309,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_0CAAF47BBD14`.
+   **Case:** :need:`STV_TC_SW_004`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1328,7 +1328,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_2BC87902D1FD`.
+   **Case:** :need:`STV_TC_SW_010`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1347,7 +1347,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_97667EB28A11`.
+   **Case:** :need:`STV_TC_SW_024`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1366,7 +1366,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_B2EF591B7F1E`.
+   **Case:** :need:`STV_TC_SW_027`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1385,7 +1385,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_1BFD0971844A`.
+   **Case:** :need:`STV_TC_SW_007`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1404,7 +1404,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_EB472A6879CF`.
+   **Case:** :need:`STV_TC_SW_036`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1423,7 +1423,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_4E68C09504E8`.
+   **Case:** :need:`STV_TC_SW_015`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1442,7 +1442,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_6FE4CFC63C95`.
+   **Case:** :need:`STV_TC_SW_018`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1461,7 +1461,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_07D369AD0A2F`.
+   **Case:** :need:`STV_TC_SW_001`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1480,7 +1480,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_156E45252AF4`.
+   **Case:** :need:`STV_TC_SW_006`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1499,7 +1499,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_35E510D6991A`.
+   **Case:** :need:`STV_TC_SW_012`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1518,7 +1518,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_AEF53EABA753`.
+   **Case:** :need:`STV_TC_SW_026`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1537,7 +1537,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_0C2F9B7BE8A7`.
+   **Case:** :need:`STV_TC_SW_003`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1556,7 +1556,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:34:54.482527+00:00
 
-   **Case:** :need:`STV_TC_1E00212E164D`.
+   **Case:** :need:`STV_TC_SW_008`.
 
    **Inputs:** Broad JavaScript run; frontend source inputs unchanged since the broad-run hash snapshot.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1575,7 +1575,7 @@ of concept acceptance or requirement verification.
    :result: failed
    :executed_at: 2026-10-24T12:36:04.221647+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Inputs:** Corrected test expression against first development artifact; missing generated inventory found.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1594,7 +1594,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:36:51.922277+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Inputs:** Negative build-input checks against the actual frontend build.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1613,7 +1613,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:38:25.263283+00:00
 
-   **Case:** :need:`STV_TC_136FE8B1A097`.
+   **Case:** :need:`STV_TC_SY_004`.
 
    **Inputs:** Development artifact 2; corrected lifecycle copy, component/installed/path/guard regressions.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1632,7 +1632,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:38:25.263283+00:00
 
-   **Case:** :need:`STV_TC_B5D550F17384`.
+   **Case:** :need:`STV_TC_SY_024`.
 
    **Inputs:** Development artifact 2; corrected lifecycle copy, component/installed/path/guard regressions.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1651,7 +1651,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:38:25.263283+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Inputs:** Development artifact 2; corrected lifecycle copy, component/installed/path/guard regressions.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1670,7 +1670,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:38:25.263283+00:00
 
-   **Case:** :need:`STV_TC_WINDOWS_PATH`.
+   **Case:** :need:`STV_TC_SY_045`.
 
    **Inputs:** Development artifact 2; corrected lifecycle copy, component/installed/path/guard regressions.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1689,7 +1689,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:38:25.263283+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Inputs:** Development artifact 2; corrected lifecycle copy, component/installed/path/guard regressions.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1708,7 +1708,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:43:31.831802+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Inputs:** Development artifact 3; final normalized notices and installed-package/legal-guard checks.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1727,7 +1727,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:43:31.831802+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Inputs:** Development artifact 3; final normalized notices and installed-package/legal-guard checks.
    Source revision before maintenance: ``17cafd9``. Exact retained commands,
@@ -1746,7 +1746,7 @@ of concept acceptance or requirement verification.
    :result: passed
    :executed_at: 2026-10-24T12:47:51.787779+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Inputs:** The scoped acceptance review removed an irrelevant SWR_046
    link from the negative build guard. No product behavior changed. This

@@ -88,7 +88,7 @@ re-reviewed against the corrected assertion; product code is unchanged.
 
 The browser helper procedures were expanded into the case specifications so
 their observable assertions are available with their selectors. A separate
-accepted case :need:`STV_TC_WINDOWS_PATH` preserves concrete nested-checkout,
+accepted case :need:`STV_TC_SY_045` preserves concrete nested-checkout,
 file/HTTP, missing-asset/retry and content-identity regression steps from
 :need:`STV_PR_006`. It remains ``not_run`` and explicitly blocks any new claim
 that the known product issue has been qualified or fixed. The complete reviewed

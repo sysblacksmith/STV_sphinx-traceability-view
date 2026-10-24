@@ -18,7 +18,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_7441DB459B14`.
+   **Case:** :need:`STV_TC_SY_016`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -39,7 +39,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_025DB3F44E8E`.
+   **Case:** :need:`STV_TC_SY_001`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -60,7 +60,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_E0AB07ABA378`.
+   **Case:** :need:`STV_TC_SY_030`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -81,7 +81,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_F6E0695BB399`.
+   **Case:** :need:`STV_TC_SY_037`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -102,7 +102,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_E23001FBE2A5`.
+   **Case:** :need:`STV_TC_SY_031`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -123,7 +123,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_CFE6B0377595`.
+   **Case:** :need:`STV_TC_SY_025`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -144,7 +144,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_5652621CFF4A`.
+   **Case:** :need:`STV_TC_SY_010`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -165,7 +165,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_A1747C52BC63`.
+   **Case:** :need:`STV_TC_SY_021`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -186,7 +186,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_9E5477EFE2F1`.
+   **Case:** :need:`STV_TC_SY_020`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -207,7 +207,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_E2A064F091BE`.
+   **Case:** :need:`STV_TC_SY_032`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -228,7 +228,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_7016FADA6FBA`.
+   **Case:** :need:`STV_TC_SY_015`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -249,7 +249,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_E66A443619C6`.
+   **Case:** :need:`STV_TC_SY_033`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -270,7 +270,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_0EBE5120F168`.
+   **Case:** :need:`STV_TC_SY_003`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -291,7 +291,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_59C06D617036`.
+   **Case:** :need:`STV_TC_SY_012`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -312,7 +312,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_3B2659FB2D0A`.
+   **Case:** :need:`STV_TC_SY_007`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -333,7 +333,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: failed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_535022565896`.
+   **Case:** :need:`STV_TC_SY_009`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -354,7 +354,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: failed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_06CC5EE46517`.
+   **Case:** :need:`STV_TC_SY_002`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -375,7 +375,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_5C902A5F732E`.
+   **Case:** :need:`STV_TC_SY_013`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -396,7 +396,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_41F176801699`.
+   **Case:** :need:`STV_TC_SY_008`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -417,7 +417,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_6C7A64E533AC`.
+   **Case:** :need:`STV_TC_SY_014`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -438,7 +438,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_A221103BC26C`.
+   **Case:** :need:`STV_TC_SY_022`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -459,7 +459,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_DB4FE4CDD257`.
+   **Case:** :need:`STV_TC_SY_027`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -480,7 +480,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_D1A17B11B9C1`.
+   **Case:** :need:`STV_TC_SY_026`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -501,7 +501,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_59537D3F286A`.
+   **Case:** :need:`STV_TC_SY_011`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -522,7 +522,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_A953C70E70B1`.
+   **Case:** :need:`STV_TC_SY_023`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -543,7 +543,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_3B0D9F21166C`.
+   **Case:** :need:`STV_TC_SY_006`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -564,7 +564,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_85BBE1714F96`.
+   **Case:** :need:`STV_TC_SY_018`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -585,7 +585,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_FC50F6627767`.
+   **Case:** :need:`STV_TC_SY_040`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -606,7 +606,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_DF0D9B21A92D`.
+   **Case:** :need:`STV_TC_SY_029`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -627,7 +627,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_136FE8B1A097`.
+   **Case:** :need:`STV_TC_SY_004`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -648,7 +648,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_B5D550F17384`.
+   **Case:** :need:`STV_TC_SY_024`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -669,7 +669,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_4594B1E01BC7`.
+   **Case:** :need:`STV_TC_SW_014`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -690,7 +690,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_7EDF1A472879`.
+   **Case:** :need:`STV_TC_SY_017`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -711,7 +711,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_EFBBC00F61AC`.
+   **Case:** :need:`STV_TC_SY_035`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -732,7 +732,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_D43DE71AF846`.
+   **Case:** :need:`STV_TC_SW_032`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -753,7 +753,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_8023D1B4838C`.
+   **Case:** :need:`STV_TC_SW_021`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -774,7 +774,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_ABB4E85E5F66`.
+   **Case:** :need:`STV_TC_SW_025`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -795,7 +795,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_E6FA25320A8F`.
+   **Case:** :need:`STV_TC_SW_035`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -816,7 +816,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_D00DA9F2CD10`.
+   **Case:** :need:`STV_TC_SW_029`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -837,7 +837,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_11FDDB8E8864`.
+   **Case:** :need:`STV_TC_SW_005`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -858,7 +858,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_7D1212345072`.
+   **Case:** :need:`STV_TC_SW_020`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -879,7 +879,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_734CF1BFE372`.
+   **Case:** :need:`STV_TC_SW_019`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -900,7 +900,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_287ABDA90FE3`.
+   **Case:** :need:`STV_TC_SW_009`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -921,7 +921,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_51B932282614`.
+   **Case:** :need:`STV_TC_SW_016`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -942,7 +942,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_C747492F203E`.
+   **Case:** :need:`STV_TC_SW_028`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -963,7 +963,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_5D3C07D3C5DE`.
+   **Case:** :need:`STV_TC_SW_017`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -984,7 +984,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_FBDDCC607412`.
+   **Case:** :need:`STV_TC_SW_038`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1005,7 +1005,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_3DF9A4D8CF8D`.
+   **Case:** :need:`STV_TC_SW_013`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1026,7 +1026,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_9316CE9A1843`.
+   **Case:** :need:`STV_TC_SW_023`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1047,7 +1047,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_F549DE4D0BF4`.
+   **Case:** :need:`STV_TC_SW_037`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1068,7 +1068,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_D31601FDD080`.
+   **Case:** :need:`STV_TC_SW_031`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1089,7 +1089,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1110,7 +1110,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_DE0C60E0BB97`.
+   **Case:** :need:`STV_TC_SY_028`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1131,7 +1131,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_9A67DAACB2A4`.
+   **Case:** :need:`STV_TC_SY_019`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1152,7 +1152,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_FB72ADBCAE29`.
+   **Case:** :need:`STV_TC_SY_039`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1173,7 +1173,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_EB0F95BABF84`.
+   **Case:** :need:`STV_TC_SY_034`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1194,7 +1194,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_25803A2B9F90`.
+   **Case:** :need:`STV_TC_SY_005`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1215,7 +1215,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:18.959137+00:00
 
-   **Case:** :need:`STV_TC_F3892D8A1C98`.
+   **Case:** :need:`STV_TC_SY_036`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1236,7 +1236,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_B2EF591B7F1E`.
+   **Case:** :need:`STV_TC_SW_027`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1257,7 +1257,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_1BFD0971844A`.
+   **Case:** :need:`STV_TC_SW_007`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1278,7 +1278,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_2EE2AB9ECAE3`.
+   **Case:** :need:`STV_TC_SW_011`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1299,7 +1299,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_D22785EE6859`.
+   **Case:** :need:`STV_TC_SW_030`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1320,7 +1320,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_08AC936D55F9`.
+   **Case:** :need:`STV_TC_SW_002`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1341,7 +1341,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_880A2E13BCE9`.
+   **Case:** :need:`STV_TC_SW_022`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1362,7 +1362,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_0CAAF47BBD14`.
+   **Case:** :need:`STV_TC_SW_004`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1383,7 +1383,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_2BC87902D1FD`.
+   **Case:** :need:`STV_TC_SW_010`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1404,7 +1404,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_97667EB28A11`.
+   **Case:** :need:`STV_TC_SW_024`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1425,7 +1425,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_EB472A6879CF`.
+   **Case:** :need:`STV_TC_SW_036`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1446,7 +1446,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_4E68C09504E8`.
+   **Case:** :need:`STV_TC_SW_015`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1467,7 +1467,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_6FE4CFC63C95`.
+   **Case:** :need:`STV_TC_SW_018`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1488,7 +1488,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_07D369AD0A2F`.
+   **Case:** :need:`STV_TC_SW_001`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1509,7 +1509,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_156E45252AF4`.
+   **Case:** :need:`STV_TC_SW_006`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1530,7 +1530,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_35E510D6991A`.
+   **Case:** :need:`STV_TC_SW_012`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1551,7 +1551,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_AEF53EABA753`.
+   **Case:** :need:`STV_TC_SW_026`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1572,7 +1572,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_0C2F9B7BE8A7`.
+   **Case:** :need:`STV_TC_SW_003`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256
@@ -1593,7 +1593,7 @@ known issues or demonstrate full acceptance-criterion coverage by themselves.
    :result: passed
    :executed_at: 2026-10-19T20:32:19.358984+00:00
 
-   **Case:** :need:`STV_TC_1E00212E164D`.
+   **Case:** :need:`STV_TC_SW_008`.
 
    **Candidate:** ``77354cc578d23a5430b75df8c47ba34c1b7a0341`` plus the recorded
    worktree/source identity; wheel SHA-256

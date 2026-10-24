@@ -15,7 +15,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_4594B1E01BC7`.
+   **Case:** :need:`STV_TC_SW_014`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -30,7 +30,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_COMPACT_PATHS`.
+   **Case:** :need:`STV_TC_SW_039`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -45,7 +45,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_D43DE71AF846`.
+   **Case:** :need:`STV_TC_SW_032`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -60,7 +60,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_8023D1B4838C`.
+   **Case:** :need:`STV_TC_SW_021`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -75,7 +75,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_ABB4E85E5F66`.
+   **Case:** :need:`STV_TC_SW_025`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -90,7 +90,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_E6FA25320A8F`.
+   **Case:** :need:`STV_TC_SW_035`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -105,7 +105,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_TRANSPORT_ATTRS`.
+   **Case:** :need:`STV_TC_SW_040`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -120,7 +120,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_136FE8B1A097`.
+   **Case:** :need:`STV_TC_SY_004`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -135,7 +135,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_B5D550F17384`.
+   **Case:** :need:`STV_TC_SY_024`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -150,7 +150,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_D00DA9F2CD10`.
+   **Case:** :need:`STV_TC_SW_029`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -165,7 +165,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_11FDDB8E8864`.
+   **Case:** :need:`STV_TC_SW_005`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -180,7 +180,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_7D1212345072`.
+   **Case:** :need:`STV_TC_SW_020`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -195,7 +195,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_734CF1BFE372`.
+   **Case:** :need:`STV_TC_SW_019`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -210,7 +210,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_287ABDA90FE3`.
+   **Case:** :need:`STV_TC_SW_009`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -225,7 +225,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_51B932282614`.
+   **Case:** :need:`STV_TC_SW_016`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -240,7 +240,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_C747492F203E`.
+   **Case:** :need:`STV_TC_SW_028`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -255,7 +255,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_5D3C07D3C5DE`.
+   **Case:** :need:`STV_TC_SW_017`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -270,7 +270,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_FBDDCC607412`.
+   **Case:** :need:`STV_TC_SW_038`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -285,7 +285,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_3DF9A4D8CF8D`.
+   **Case:** :need:`STV_TC_SW_013`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -300,7 +300,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_9316CE9A1843`.
+   **Case:** :need:`STV_TC_SW_023`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -315,7 +315,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_F549DE4D0BF4`.
+   **Case:** :need:`STV_TC_SW_037`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -330,7 +330,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_D31601FDD080`.
+   **Case:** :need:`STV_TC_SW_031`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -345,7 +345,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_5C902A5F732E`.
+   **Case:** :need:`STV_TC_SY_013`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -360,7 +360,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_41F176801699`.
+   **Case:** :need:`STV_TC_SY_008`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -375,7 +375,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_6C7A64E533AC`.
+   **Case:** :need:`STV_TC_SY_014`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -390,7 +390,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_A221103BC26C`.
+   **Case:** :need:`STV_TC_SY_022`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -405,7 +405,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_DB4FE4CDD257`.
+   **Case:** :need:`STV_TC_SY_027`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -420,7 +420,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_D1A17B11B9C1`.
+   **Case:** :need:`STV_TC_SY_026`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -435,7 +435,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_59537D3F286A`.
+   **Case:** :need:`STV_TC_SY_011`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -450,7 +450,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_A953C70E70B1`.
+   **Case:** :need:`STV_TC_SY_023`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -465,7 +465,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_3B0D9F21166C`.
+   **Case:** :need:`STV_TC_SY_006`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -480,7 +480,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_85BBE1714F96`.
+   **Case:** :need:`STV_TC_SY_018`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -495,7 +495,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_FC50F6627767`.
+   **Case:** :need:`STV_TC_SY_040`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -510,7 +510,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_DF0D9B21A92D`.
+   **Case:** :need:`STV_TC_SY_029`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -525,7 +525,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -540,7 +540,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -555,7 +555,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_CLEAN`.
+   **Case:** :need:`STV_TC_SY_052`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -570,7 +570,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_FAIL`.
+   **Case:** :need:`STV_TC_SY_053`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -585,7 +585,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_ROLLBACK`.
+   **Case:** :need:`STV_TC_SY_054`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -600,7 +600,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.222184+00:00
 
-   **Case:** :need:`STV_TC_SDIST_BOUNDARY`.
+   **Case:** :need:`STV_TC_SY_051`.
 
    **Evidence:** :download:`first-pytest.xml <first-pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -615,7 +615,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CACHE`.
+   **Case:** :need:`STV_TC_SW_033`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -630,7 +630,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_RETRY`.
+   **Case:** :need:`STV_TC_SW_034`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -645,7 +645,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_URLS`.
+   **Case:** :need:`STV_TC_SW_041`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -660,7 +660,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CSS`.
+   **Case:** :need:`STV_TC_SW_042`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -675,7 +675,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_2EE2AB9ECAE3`.
+   **Case:** :need:`STV_TC_SW_011`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -690,7 +690,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_D22785EE6859`.
+   **Case:** :need:`STV_TC_SW_030`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -705,7 +705,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_08AC936D55F9`.
+   **Case:** :need:`STV_TC_SW_002`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -720,7 +720,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_880A2E13BCE9`.
+   **Case:** :need:`STV_TC_SW_022`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -735,7 +735,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_0CAAF47BBD14`.
+   **Case:** :need:`STV_TC_SW_004`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -750,7 +750,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_2BC87902D1FD`.
+   **Case:** :need:`STV_TC_SW_010`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -765,7 +765,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_97667EB28A11`.
+   **Case:** :need:`STV_TC_SW_024`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -780,7 +780,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_B2EF591B7F1E`.
+   **Case:** :need:`STV_TC_SW_027`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -795,7 +795,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_1BFD0971844A`.
+   **Case:** :need:`STV_TC_SW_007`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -810,7 +810,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_EB472A6879CF`.
+   **Case:** :need:`STV_TC_SW_036`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -825,7 +825,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_4E68C09504E8`.
+   **Case:** :need:`STV_TC_SW_015`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -840,7 +840,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_6FE4CFC63C95`.
+   **Case:** :need:`STV_TC_SW_018`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -855,7 +855,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_07D369AD0A2F`.
+   **Case:** :need:`STV_TC_SW_001`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -870,7 +870,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_156E45252AF4`.
+   **Case:** :need:`STV_TC_SW_006`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -885,7 +885,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_35E510D6991A`.
+   **Case:** :need:`STV_TC_SW_012`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -900,7 +900,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_AEF53EABA753`.
+   **Case:** :need:`STV_TC_SW_026`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -915,7 +915,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_0C2F9B7BE8A7`.
+   **Case:** :need:`STV_TC_SW_003`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -930,7 +930,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:46.237120+00:00
 
-   **Case:** :need:`STV_TC_1E00212E164D`.
+   **Case:** :need:`STV_TC_SW_008`.
 
    **Evidence:** :download:`first-node.xml <first-node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -945,7 +945,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:04:49.568884+00:00
 
-   **Case:** :need:`STV_TC_CI_TRUST`.
+   **Case:** :need:`STV_TC_SY_055`.
 
    **Evidence:** :download:`checksum-initial.xml <checksum-initial.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -960,7 +960,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: failed
    :executed_at: 2026-10-24T15:04:49.568884+00:00
 
-   **Case:** :need:`STV_TC_CI_CHECKSUMS`.
+   **Case:** :need:`STV_TC_SY_056`.
 
    **Evidence:** :download:`checksum-initial.xml <checksum-initial.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -975,7 +975,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:19.935247+00:00
 
-   **Case:** :need:`STV_TC_CI_TRUST`.
+   **Case:** :need:`STV_TC_SY_055`.
 
    **Evidence:** :download:`security-first-pass.xml <security-first-pass.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -990,7 +990,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:05:19.935247+00:00
 
-   **Case:** :need:`STV_TC_CI_CHECKSUMS`.
+   **Case:** :need:`STV_TC_SY_056`.
 
    **Evidence:** :download:`security-first-pass.xml <security-first-pass.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1005,7 +1005,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_4594B1E01BC7`.
+   **Case:** :need:`STV_TC_SW_014`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1020,7 +1020,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_COMPACT_PATHS`.
+   **Case:** :need:`STV_TC_SW_039`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1035,7 +1035,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_D43DE71AF846`.
+   **Case:** :need:`STV_TC_SW_032`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1050,7 +1050,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_8023D1B4838C`.
+   **Case:** :need:`STV_TC_SW_021`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1065,7 +1065,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_ABB4E85E5F66`.
+   **Case:** :need:`STV_TC_SW_025`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1080,7 +1080,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_E6FA25320A8F`.
+   **Case:** :need:`STV_TC_SW_035`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1095,7 +1095,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_TRANSPORT_ATTRS`.
+   **Case:** :need:`STV_TC_SW_040`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1110,7 +1110,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_136FE8B1A097`.
+   **Case:** :need:`STV_TC_SY_004`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1125,7 +1125,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_B5D550F17384`.
+   **Case:** :need:`STV_TC_SY_024`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1140,7 +1140,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_D00DA9F2CD10`.
+   **Case:** :need:`STV_TC_SW_029`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1155,7 +1155,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_11FDDB8E8864`.
+   **Case:** :need:`STV_TC_SW_005`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1170,7 +1170,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_7D1212345072`.
+   **Case:** :need:`STV_TC_SW_020`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1185,7 +1185,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_734CF1BFE372`.
+   **Case:** :need:`STV_TC_SW_019`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1200,7 +1200,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_287ABDA90FE3`.
+   **Case:** :need:`STV_TC_SW_009`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1215,7 +1215,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_51B932282614`.
+   **Case:** :need:`STV_TC_SW_016`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1230,7 +1230,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_C747492F203E`.
+   **Case:** :need:`STV_TC_SW_028`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1245,7 +1245,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_5D3C07D3C5DE`.
+   **Case:** :need:`STV_TC_SW_017`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1260,7 +1260,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_FBDDCC607412`.
+   **Case:** :need:`STV_TC_SW_038`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1275,7 +1275,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_3DF9A4D8CF8D`.
+   **Case:** :need:`STV_TC_SW_013`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1290,7 +1290,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_9316CE9A1843`.
+   **Case:** :need:`STV_TC_SW_023`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1305,7 +1305,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_F549DE4D0BF4`.
+   **Case:** :need:`STV_TC_SW_037`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1320,7 +1320,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_D31601FDD080`.
+   **Case:** :need:`STV_TC_SW_031`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1335,7 +1335,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_5C902A5F732E`.
+   **Case:** :need:`STV_TC_SY_013`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1350,7 +1350,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_41F176801699`.
+   **Case:** :need:`STV_TC_SY_008`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1365,7 +1365,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_6C7A64E533AC`.
+   **Case:** :need:`STV_TC_SY_014`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1380,7 +1380,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_A221103BC26C`.
+   **Case:** :need:`STV_TC_SY_022`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1395,7 +1395,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_DB4FE4CDD257`.
+   **Case:** :need:`STV_TC_SY_027`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1410,7 +1410,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_D1A17B11B9C1`.
+   **Case:** :need:`STV_TC_SY_026`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1425,7 +1425,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_59537D3F286A`.
+   **Case:** :need:`STV_TC_SY_011`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1440,7 +1440,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_A953C70E70B1`.
+   **Case:** :need:`STV_TC_SY_023`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1455,7 +1455,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_3B0D9F21166C`.
+   **Case:** :need:`STV_TC_SY_006`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1470,7 +1470,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_85BBE1714F96`.
+   **Case:** :need:`STV_TC_SY_018`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1485,7 +1485,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_FC50F6627767`.
+   **Case:** :need:`STV_TC_SY_040`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1500,7 +1500,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_DF0D9B21A92D`.
+   **Case:** :need:`STV_TC_SY_029`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1515,7 +1515,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_CI_TRUST`.
+   **Case:** :need:`STV_TC_SY_055`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1530,7 +1530,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_CI_CHECKSUMS`.
+   **Case:** :need:`STV_TC_SY_056`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1545,7 +1545,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_LEGAL_GUARD`.
+   **Case:** :need:`STV_TC_SY_046`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1560,7 +1560,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1575,7 +1575,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_CLEAN`.
+   **Case:** :need:`STV_TC_SY_052`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1590,7 +1590,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_FAIL`.
+   **Case:** :need:`STV_TC_SY_053`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1605,7 +1605,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_PUBLICATION_ROLLBACK`.
+   **Case:** :need:`STV_TC_SY_054`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1620,7 +1620,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.737350+00:00
 
-   **Case:** :need:`STV_TC_SDIST_BOUNDARY`.
+   **Case:** :need:`STV_TC_SY_051`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1635,7 +1635,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CACHE`.
+   **Case:** :need:`STV_TC_SW_033`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1650,7 +1650,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_RETRY`.
+   **Case:** :need:`STV_TC_SW_034`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1665,7 +1665,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_URLS`.
+   **Case:** :need:`STV_TC_SW_041`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1680,7 +1680,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CSS`.
+   **Case:** :need:`STV_TC_SW_042`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1695,7 +1695,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_2EE2AB9ECAE3`.
+   **Case:** :need:`STV_TC_SW_011`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1710,7 +1710,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_D22785EE6859`.
+   **Case:** :need:`STV_TC_SW_030`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1725,7 +1725,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_08AC936D55F9`.
+   **Case:** :need:`STV_TC_SW_002`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1740,7 +1740,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_880A2E13BCE9`.
+   **Case:** :need:`STV_TC_SW_022`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1755,7 +1755,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_0CAAF47BBD14`.
+   **Case:** :need:`STV_TC_SW_004`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1770,7 +1770,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_2BC87902D1FD`.
+   **Case:** :need:`STV_TC_SW_010`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1785,7 +1785,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_97667EB28A11`.
+   **Case:** :need:`STV_TC_SW_024`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1800,7 +1800,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_B2EF591B7F1E`.
+   **Case:** :need:`STV_TC_SW_027`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1815,7 +1815,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_1BFD0971844A`.
+   **Case:** :need:`STV_TC_SW_007`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1830,7 +1830,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_EB472A6879CF`.
+   **Case:** :need:`STV_TC_SW_036`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1845,7 +1845,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_4E68C09504E8`.
+   **Case:** :need:`STV_TC_SW_015`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1860,7 +1860,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_6FE4CFC63C95`.
+   **Case:** :need:`STV_TC_SW_018`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1875,7 +1875,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_07D369AD0A2F`.
+   **Case:** :need:`STV_TC_SW_001`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1890,7 +1890,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_156E45252AF4`.
+   **Case:** :need:`STV_TC_SW_006`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1905,7 +1905,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_35E510D6991A`.
+   **Case:** :need:`STV_TC_SW_012`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1920,7 +1920,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_AEF53EABA753`.
+   **Case:** :need:`STV_TC_SW_026`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1935,7 +1935,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_0C2F9B7BE8A7`.
+   **Case:** :need:`STV_TC_SW_003`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1950,7 +1950,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:12.744931+00:00
 
-   **Case:** :need:`STV_TC_1E00212E164D`.
+   **Case:** :need:`STV_TC_SW_008`.
 
    **Evidence:** :download:`node.xml <node.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1965,7 +1965,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:09:12.302733+00:00
 
-   **Case:** :need:`STV_TC_CI_TRUST`.
+   **Case:** :need:`STV_TC_SY_055`.
 
    **Evidence:** :download:`security.xml <security.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1980,7 +1980,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:09:12.302733+00:00
 
-   **Case:** :need:`STV_TC_CI_CHECKSUMS`.
+   **Case:** :need:`STV_TC_SY_056`.
 
    **Evidence:** :download:`security.xml <security.xml>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.
@@ -1995,7 +1995,7 @@ history. Final source identities and command scope are retained in :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T15:08:16.834772+00:00
 
-   **Case:** :need:`STV_TC_CI_RUNTIME`.
+   **Case:** :need:`STV_TC_SY_057`.
 
    **Evidence:** :download:`runtime.log <runtime.log>`; inputs, refinements,
    candidate/source identity and local-only limits in :doc:`index`.

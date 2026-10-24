@@ -267,6 +267,6 @@ negations cannot widen the archive. Python caches/bytecode are excluded within
 selected directories. Engineering documentation and execution evidence remain
 in the repository; source packages are for rebuilding the installable extension.
 Hatch's generated package metadata and standard metadata files may accompany
-these inputs. :need:`STV_PR_010` and :need:`STV_TC_SDIST_BOUNDARY` retain the
+these inputs. :need:`STV_PR_010` and :need:`STV_TC_SY_051` retain the
 cause and actual archive/rebuilt-wheel regression evidence. Runtime behavior,
 state-machine transitions and accepted requirement meanings are unchanged.

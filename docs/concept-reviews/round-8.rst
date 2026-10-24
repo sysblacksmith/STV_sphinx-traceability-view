@@ -38,7 +38,7 @@ explicit delegation recorded above.
   exceeded Windows file-loader limits. :need:`STV_PR_006` now uses one full
   content digest, with deduplication and unchanged per-object manifest identity.
   Before-fix failure and root/nested file/HTTP/retry passes are retained in
-  :need:`STV_TC_WINDOWS_PATH`; :need:`STV_TC_COMPACT_PATHS` covers immutable
+  :need:`STV_TC_SY_045`; :need:`STV_TC_SW_039` covers immutable
   digest/reference/deduplication invariants. Closed by implementation and actual
   regression evidence, not by path-length inference alone.
 * **STV_R8_002, dependency notices:** npm-level ELK licensing omitted compiled
@@ -128,10 +128,10 @@ Acceptance decision
 --------------------
 
 Accepted under the scoped owner delegation: :ref:`STV_ADR_007`;
-:need:`STV_TC_DETAIL_CACHE`, :need:`STV_TC_DETAIL_RETRY`,
-:need:`STV_TC_COMPACT_PATHS`, :need:`STV_TC_LEGAL_GUARD`.
-Reaffirmed after changed-procedure review: :need:`STV_TC_WINDOWS_PATH` and
-:need:`STV_TC_F988267D01C9`.
+:need:`STV_TC_SW_033`, :need:`STV_TC_SW_034`,
+:need:`STV_TC_SW_039`, :need:`STV_TC_SY_046`.
+Reaffirmed after changed-procedure review: :need:`STV_TC_SY_045` and
+:need:`STV_TC_SY_038`.
 
 Scoped ordinary-document acceptance covers the changed source mappings,
 interface/implementation/state text, technology/licensing/version delivery

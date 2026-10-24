@@ -106,11 +106,11 @@ STV_PR_006: Detail tooltips fail on long Windows paths
    ``bundle.emit`` now uses the complete fragment content hash alone. It
    preserves registration/manifest identity and deduplicates identical content.
 
-   The real system regression :need:`STV_TC_WINDOWS_PATH` reproduced the old
+   The real system regression :need:`STV_TC_SY_045` reproduced the old
    failure in Firefox 158.0.1 at a 298-character local asset path, then passed
    at 233 characters after the fix. Root and nested pages were checked over
    file and HTTP, including missing-asset failure and successful restoration/
-   reopening. :need:`STV_TC_COMPACT_PATHS` verifies full 64-character digests,
+   reopening. :need:`STV_TC_SW_039` verifies full 64-character digests,
    graph references, shared fragments and registration. Applicable component,
    host/browser and installed-wheel regressions are retained in
    :doc:`../test-execution/maintenance-2026-10-24/index`, including all failures

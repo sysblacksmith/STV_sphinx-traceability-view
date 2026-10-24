@@ -15,7 +15,7 @@ not imply owner acceptance or full release qualification. See :doc:`index`.
    :result: failed
    :executed_at: 2026-10-24T14:39:54.392761+00:00
 
-   **Case:** :need:`STV_TC_SDIST_BOUNDARY`.
+   **Case:** :need:`STV_TC_SY_051`.
 
    **Evidence:** :download:`before.xml <before.xml>`. Exact commands,
    source identities, actual archive members and limits are retained in :doc:`index`.
@@ -30,7 +30,7 @@ not imply owner acceptance or full release qualification. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:40:25.945287+00:00
 
-   **Case:** :need:`STV_TC_SDIST_BOUNDARY`.
+   **Case:** :need:`STV_TC_SY_051`.
 
    **Evidence:** :download:`after.xml <after.xml>`. Exact commands,
    source identities, actual archive members and limits are retained in :doc:`index`.
@@ -45,7 +45,7 @@ not imply owner acceptance or full release qualification. See :doc:`index`.
    :result: passed
    :executed_at: 2026-10-24T14:41:42.683929+00:00
 
-   **Case:** :need:`STV_TC_F988267D01C9`.
+   **Case:** :need:`STV_TC_SY_038`.
 
    **Evidence:** :download:`package.xml <package.xml>`. Exact commands,
    source identities, actual archive members and limits are retained in :doc:`index`.

@@ -15,7 +15,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_D43DE71AF846`.
+   **Case:** :need:`STV_TC_SW_032`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -30,7 +30,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_8023D1B4838C`.
+   **Case:** :need:`STV_TC_SW_021`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -45,7 +45,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_ABB4E85E5F66`.
+   **Case:** :need:`STV_TC_SW_025`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -60,7 +60,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_E6FA25320A8F`.
+   **Case:** :need:`STV_TC_SW_035`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -75,7 +75,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_TRANSPORT_ATTRS`.
+   **Case:** :need:`STV_TC_SW_040`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -90,7 +90,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_TRANSPORT_FILE`.
+   **Case:** :need:`STV_TC_SY_047`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -105,7 +105,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_TRANSPORT_HTTP`.
+   **Case:** :need:`STV_TC_SY_048`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -120,7 +120,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_E0AB07ABA378`.
+   **Case:** :need:`STV_TC_SY_030`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -135,7 +135,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_F6E0695BB399`.
+   **Case:** :need:`STV_TC_SY_037`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -150,7 +150,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_7016FADA6FBA`.
+   **Case:** :need:`STV_TC_SY_015`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -165,7 +165,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:13:35.940375+00:00
 
-   **Case:** :need:`STV_TC_E66A443619C6`.
+   **Case:** :need:`STV_TC_SY_033`.
 
    **Evidence:** :download:`pytest.xml <pytest.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -180,7 +180,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CACHE`.
+   **Case:** :need:`STV_TC_SW_033`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -195,7 +195,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_RETRY`.
+   **Case:** :need:`STV_TC_SW_034`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -210,7 +210,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_URLS`.
+   **Case:** :need:`STV_TC_SW_041`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -225,7 +225,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_DETAIL_CSS`.
+   **Case:** :need:`STV_TC_SW_042`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -240,7 +240,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_2EE2AB9ECAE3`.
+   **Case:** :need:`STV_TC_SW_011`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -255,7 +255,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_D22785EE6859`.
+   **Case:** :need:`STV_TC_SW_030`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -270,7 +270,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_08AC936D55F9`.
+   **Case:** :need:`STV_TC_SW_002`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -285,7 +285,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_880A2E13BCE9`.
+   **Case:** :need:`STV_TC_SW_022`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -300,7 +300,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_0CAAF47BBD14`.
+   **Case:** :need:`STV_TC_SW_004`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -315,7 +315,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_2BC87902D1FD`.
+   **Case:** :need:`STV_TC_SW_010`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -330,7 +330,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_97667EB28A11`.
+   **Case:** :need:`STV_TC_SW_024`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -345,7 +345,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_B2EF591B7F1E`.
+   **Case:** :need:`STV_TC_SW_027`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -360,7 +360,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_1BFD0971844A`.
+   **Case:** :need:`STV_TC_SW_007`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -375,7 +375,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_EB472A6879CF`.
+   **Case:** :need:`STV_TC_SW_036`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -390,7 +390,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_4E68C09504E8`.
+   **Case:** :need:`STV_TC_SW_015`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -405,7 +405,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_6FE4CFC63C95`.
+   **Case:** :need:`STV_TC_SW_018`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -420,7 +420,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_07D369AD0A2F`.
+   **Case:** :need:`STV_TC_SW_001`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -435,7 +435,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_156E45252AF4`.
+   **Case:** :need:`STV_TC_SW_006`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -450,7 +450,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_35E510D6991A`.
+   **Case:** :need:`STV_TC_SW_012`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -465,7 +465,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_AEF53EABA753`.
+   **Case:** :need:`STV_TC_SW_026`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -480,7 +480,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_0C2F9B7BE8A7`.
+   **Case:** :need:`STV_TC_SW_003`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.
@@ -495,7 +495,7 @@ No release artifact was created. These results do not confer owner acceptance.
    :result: passed
    :executed_at: 2026-10-24T14:12:47.559647+00:00
 
-   **Case:** :need:`STV_TC_1E00212E164D`.
+   **Case:** :need:`STV_TC_SW_008`.
 
    **Evidence:** :download:`node.xml <node.xml>`; development source identity
    and invocation in verification.json. Scope and limits: :doc:`index`.

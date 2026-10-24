@@ -1,0 +1,1100 @@
+{
+  "date": "2026-10-24",
+  "authority": "Owner requested SY/SW category prefixes with independent numeric sequences",
+  "assignment": "Existing document order within each category; independent SY and SW counters, assigned once",
+  "cases": [
+    {
+      "old_id": "STV_TC_025DB3F44E8E",
+      "new_id": "STV_TC_SY_001",
+      "title": "usability smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_usability_smoke[http]",
+      "previous_ids": [
+        "STV_TC_001"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_06CC5EE46517",
+      "new_id": "STV_TC_SY_002",
+      "title": "control order smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_control_order_smoke[http]",
+      "previous_ids": [
+        "STV_TC_002"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_0EBE5120F168",
+      "new_id": "STV_TC_SY_003",
+      "title": "missing placeholder and detail error",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]",
+      "previous_ids": [
+        "STV_TC_003"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_136FE8B1A097",
+      "new_id": "STV_TC_SY_004",
+      "title": "failed finalization retains pending page and previous assets",
+      "document": "system-tests.rst",
+      "selector": "src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets",
+      "previous_ids": [
+        "STV_TC_004"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_25803A2B9F90",
+      "new_id": "STV_TC_SY_005",
+      "title": "seed layout replacement failure and staleness",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]",
+      "previous_ids": [
+        "STV_TC_005"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_3B0D9F21166C",
+      "new_id": "STV_TC_SY_006",
+      "title": "alternate host schema external metadata and parts",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts",
+      "previous_ids": [
+        "STV_TC_006"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_3B2659FB2D0A",
+      "new_id": "STV_TC_SY_007",
+      "title": "documentation visuals",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_documentation_visuals",
+      "previous_ids": [
+        "STV_TC_007"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_41F176801699",
+      "new_id": "STV_TC_SY_008",
+      "title": "invalid seed source location",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]",
+      "previous_ids": [
+        "STV_TC_008"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_535022565896",
+      "new_id": "STV_TC_SY_009",
+      "title": "control order smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_control_order_smoke[file]",
+      "previous_ids": [
+        "STV_TC_009"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_5652621CFF4A",
+      "new_id": "STV_TC_SY_010",
+      "title": "interactive seed smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]",
+      "previous_ids": [
+        "STV_TC_010"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_59537D3F286A",
+      "new_id": "STV_TC_SY_011",
+      "title": "seed capacity at directive",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]",
+      "previous_ids": [
+        "STV_TC_011"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_59C06D617036",
+      "new_id": "STV_TC_SY_012",
+      "title": "missing placeholder and detail error",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]",
+      "previous_ids": [
+        "STV_TC_012"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_5C902A5F732E",
+      "new_id": "STV_TC_SY_013",
+      "title": "cross page bundle",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_cross_page_bundle",
+      "previous_ids": [
+        "STV_TC_013"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_6C7A64E533AC",
+      "new_id": "STV_TC_SY_014",
+      "title": "invalid seed source location",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+      "previous_ids": [
+        "STV_TC_014"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_7016FADA6FBA",
+      "new_id": "STV_TC_SY_015",
+      "title": "alternate model geometry details and external",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]",
+      "previous_ids": [
+        "STV_TC_015"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_7441DB459B14",
+      "new_id": "STV_TC_SY_016",
+      "title": "usability smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_usability_smoke[file]",
+      "previous_ids": [
+        "STV_TC_016"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_7EDF1A472879",
+      "new_id": "STV_TC_SY_017",
+      "title": "large project at visible capacity",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]",
+      "previous_ids": [
+        "STV_TC_017"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_85BBE1714F96",
+      "new_id": "STV_TC_SY_018",
+      "title": "invalid mapping has entry path and location",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location",
+      "previous_ids": [
+        "STV_TC_018"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_9A67DAACB2A4",
+      "new_id": "STV_TC_SY_019",
+      "title": "seed selection release",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]",
+      "previous_ids": [
+        "STV_TC_019"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_9E5477EFE2F1",
+      "new_id": "STV_TC_SY_020",
+      "title": "async layout failure and stale completion",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]",
+      "previous_ids": [
+        "STV_TC_020"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_A1747C52BC63",
+      "new_id": "STV_TC_SY_021",
+      "title": "interactive seed smoke",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]",
+      "previous_ids": [
+        "STV_TC_021"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_A221103BC26C",
+      "new_id": "STV_TC_SY_022",
+      "title": "invalid seed source location",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]",
+      "previous_ids": [
+        "STV_TC_022"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_A953C70E70B1",
+      "new_id": "STV_TC_SY_023",
+      "title": "seed capacity at directive",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]",
+      "previous_ids": [
+        "STV_TC_023"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_B5D550F17384",
+      "new_id": "STV_TC_SY_024",
+      "title": "prior fatal exception is not replaced by bundle generation",
+      "document": "system-tests.rst",
+      "selector": "src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+      "previous_ids": [
+        "STV_TC_024"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_CFE6B0377595",
+      "new_id": "STV_TC_SY_025",
+      "title": "project paging",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_project_paging[http]",
+      "previous_ids": [
+        "STV_TC_025"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_D1A17B11B9C1",
+      "new_id": "STV_TC_SY_026",
+      "title": "incremental body change hidden and deleted objects",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects",
+      "previous_ids": [
+        "STV_TC_026"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_DB4FE4CDD257",
+      "new_id": "STV_TC_SY_027",
+      "title": "host owns broken trace failure",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure",
+      "previous_ids": [
+        "STV_TC_027"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_DE0C60E0BB97",
+      "new_id": "STV_TC_SY_028",
+      "title": "seed selection release",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]",
+      "previous_ids": [
+        "STV_TC_028"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_DF0D9B21A92D",
+      "new_id": "STV_TC_SY_029",
+      "title": "host default directional labels are used",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used",
+      "previous_ids": [
+        "STV_TC_029"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_E0AB07ABA378",
+      "new_id": "STV_TC_SY_030",
+      "title": "offline exploration",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_offline_exploration[file]",
+      "previous_ids": [
+        "STV_TC_030"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_E23001FBE2A5",
+      "new_id": "STV_TC_SY_031",
+      "title": "project paging",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_project_paging[file]",
+      "previous_ids": [
+        "STV_TC_031"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_E2A064F091BE",
+      "new_id": "STV_TC_SY_032",
+      "title": "async layout failure and stale completion",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]",
+      "previous_ids": [
+        "STV_TC_032"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_E66A443619C6",
+      "new_id": "STV_TC_SY_033",
+      "title": "alternate model geometry details and external",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]",
+      "previous_ids": [
+        "STV_TC_033"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_EB0F95BABF84",
+      "new_id": "STV_TC_SY_034",
+      "title": "empty seed catalog",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]",
+      "previous_ids": [
+        "STV_TC_034"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_EFBBC00F61AC",
+      "new_id": "STV_TC_SY_035",
+      "title": "large project at visible capacity",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]",
+      "previous_ids": [
+        "STV_TC_035"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_F3892D8A1C98",
+      "new_id": "STV_TC_SY_036",
+      "title": "seed layout replacement failure and staleness",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]",
+      "previous_ids": [
+        "STV_TC_036"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_F6E0695BB399",
+      "new_id": "STV_TC_SY_037",
+      "title": "offline exploration",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_browser.py::test_offline_exploration[http]",
+      "previous_ids": [
+        "STV_TC_037"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_F988267D01C9",
+      "new_id": "STV_TC_SY_038",
+      "title": "clean wheel host",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_package.py::test_clean_wheel_host",
+      "previous_ids": [
+        "STV_TC_038"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_FB72ADBCAE29",
+      "new_id": "STV_TC_SY_039",
+      "title": "empty seed catalog",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]",
+      "previous_ids": [
+        "STV_TC_039"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_FC50F6627767",
+      "new_id": "STV_TC_SY_040",
+      "title": "unsupported builder fails clearly",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_build.py::test_unsupported_builder_fails_clearly",
+      "previous_ids": [
+        "STV_TC_040"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_OCC_019",
+      "new_id": "STV_TC_SY_041",
+      "title": "Select separate occurrences",
+      "document": "system-tests.rst",
+      "selector": null,
+      "previous_ids": [
+        "STV_TC_041"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_OCC_021",
+      "new_id": "STV_TC_SY_042",
+      "title": "Restore occurrence exploration",
+      "document": "system-tests.rst",
+      "selector": null,
+      "previous_ids": [
+        "STV_TC_042"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_OCC_022",
+      "new_id": "STV_TC_SY_043",
+      "title": "Isolate occurrence expansion",
+      "document": "system-tests.rst",
+      "selector": null,
+      "previous_ids": [
+        "STV_TC_043"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_OCC_023",
+      "new_id": "STV_TC_SY_044",
+      "title": "Merge shared expansion sets",
+      "document": "system-tests.rst",
+      "selector": null,
+      "previous_ids": [
+        "STV_TC_044"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_WINDOWS_PATH",
+      "new_id": "STV_TC_SY_045",
+      "title": "Inspect details from a nested Windows checkout",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry",
+      "previous_ids": [
+        "STV_TC_045"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_LEGAL_GUARD",
+      "new_id": "STV_TC_SY_046",
+      "title": "Reject unaudited distribution inputs",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices",
+      "previous_ids": [
+        "STV_TC_046"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_TRANSPORT_FILE",
+      "new_id": "STV_TC_SY_047",
+      "title": "Authored transport markers remain inert over file",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]",
+      "previous_ids": [
+        "STV_TC_047"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_TRANSPORT_HTTP",
+      "new_id": "STV_TC_SY_048",
+      "title": "Authored transport markers remain inert over HTTP",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]",
+      "previous_ids": [
+        "STV_TC_048"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_HISTORICAL_LICENSES",
+      "new_id": "STV_TC_SY_049",
+      "title": "Retained historical archives carry a complete licensing supplement",
+      "document": "system-tests.rst",
+      "selector": "scripts/historical-licenses.py",
+      "previous_ids": [
+        "STV_TC_049"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_RUNTIME310",
+      "new_id": "STV_TC_SY_050",
+      "title": "Patched offline distribution remains usable on Python 3.10",
+      "document": "system-tests.rst",
+      "selector": "docs/test-execution/prsa-001-003-fix/check-runtime310.py",
+      "previous_ids": [
+        "STV_TC_050"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_SDIST_BOUNDARY",
+      "new_id": "STV_TC_SY_051",
+      "title": "Actual source archive respects the distribution boundary",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel",
+      "previous_ids": [
+        "STV_TC_051"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_PUBLICATION_CLEAN",
+      "new_id": "STV_TC_SY_052",
+      "title": "Clean rebuild retires obsolete publication files",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets",
+      "previous_ids": [
+        "STV_TC_052"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_PUBLICATION_FAIL",
+      "new_id": "STV_TC_SY_053",
+      "title": "Failed documentation build preserves published bytes",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree",
+      "previous_ids": [
+        "STV_TC_053"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_PUBLICATION_ROLLBACK",
+      "new_id": "STV_TC_SY_054",
+      "title": "Failed directory promotion restores previous publication",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree",
+      "previous_ids": [
+        "STV_TC_054"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_CI_TRUST",
+      "new_id": "STV_TC_SY_055",
+      "title": "CI policy rejects privilege and provenance drift",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_ci_security.py::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+      "previous_ids": [
+        "STV_TC_055"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_CI_CHECKSUMS",
+      "new_id": "STV_TC_SY_056",
+      "title": "Candidate checksums detect changed artifact bytes",
+      "document": "system-tests.rst",
+      "selector": "docs/test-scripts/test_ci_security.py::test_candidate_checksums_detect_changed_artifact_bytes",
+      "previous_ids": [
+        "STV_TC_056"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_CI_RUNTIME",
+      "new_id": "STV_TC_SY_057",
+      "title": "CI runtime command imports the installed Python 3.10 package",
+      "document": "system-tests.rst",
+      "selector": "scripts/ci.py runtime",
+      "previous_ids": [
+        "STV_TC_057"
+      ],
+      "category": "SY"
+    },
+    {
+      "old_id": "STV_TC_07D369AD0A2F",
+      "new_id": "STV_TC_SW_001",
+      "title": "reverse traversal has no depth cutoff",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+      "previous_ids": [
+        "STV_TC_058"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_08AC936D55F9",
+      "new_id": "STV_TC_SW_002",
+      "title": "parent and project center over five visible children",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: parent and project center over five visible children",
+      "previous_ids": [
+        "STV_TC_059"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_0C2F9B7BE8A7",
+      "new_id": "STV_TC_SW_003",
+      "title": "page boundaries, root capacity and independent views",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+      "previous_ids": [
+        "STV_TC_060"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_0CAAF47BBD14",
+      "new_id": "STV_TC_SW_004",
+      "title": "semantic bands and shared test lane",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+      "previous_ids": [
+        "STV_TC_061"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_11FDDB8E8864",
+      "new_id": "STV_TC_SW_005",
+      "title": "external original url rejects executable or nonportable navigation",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/graph/tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+      "previous_ids": [
+        "STV_TC_062"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_156E45252AF4",
+      "new_id": "STV_TC_SW_006",
+      "title": "self-loop terminates and collapse restores the only seed",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_024: self-loop terminates and collapse restores the only seed",
+      "previous_ids": [
+        "STV_TC_063"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_1BFD0971844A",
+      "new_id": "STV_TC_SW_007",
+      "title": "replacement level mappings drive ordering without relation-name assumptions",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/render/tests/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+      "previous_ids": [
+        "STV_TC_064"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_1E00212E164D",
+      "new_id": "STV_TC_SW_008",
+      "title": "runtime reseeding is atomic and clears exploration",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration",
+      "previous_ids": [
+        "STV_TC_065"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_287ABDA90FE3",
+      "new_id": "STV_TC_SW_009",
+      "title": "host normalization",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_host_normalization",
+      "previous_ids": [
+        "STV_TC_066"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_2BC87902D1FD",
+      "new_id": "STV_TC_SW_010",
+      "title": "clear facing ports and fan-in avoid outer detours",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+      "previous_ids": [
+        "STV_TC_067"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_2EE2AB9ECAE3",
+      "new_id": "STV_TC_SW_011",
+      "title": "competing parents do not displace a separate centered parent",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: competing parents do not displace a separate centered parent",
+      "previous_ids": [
+        "STV_TC_068"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_35E510D6991A",
+      "new_id": "STV_TC_SW_012",
+      "title": "project pages preserve independent expansion and collapsed root",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+      "previous_ids": [
+        "STV_TC_069"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_3DF9A4D8CF8D",
+      "new_id": "STV_TC_SW_013",
+      "title": "invalid directional labels",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_directional_labels[]",
+      "previous_ids": [
+        "STV_TC_070"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_4594B1E01BC7",
+      "new_id": "STV_TC_SW_014",
+      "title": "classic registration treats prototype keys and script text as data",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+      "previous_ids": [
+        "STV_TC_071"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_4E68C09504E8",
+      "new_id": "STV_TC_SW_015",
+      "title": "rooted diamond and isolated cycle",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+      "previous_ids": [
+        "STV_TC_072"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_51B932282614",
+      "new_id": "STV_TC_SW_016",
+      "title": "invalid model",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_model[change0-levels]",
+      "previous_ids": [
+        "STV_TC_073"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_5D3C07D3C5DE",
+      "new_id": "STV_TC_SW_017",
+      "title": "invalid model",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_model[change2-types]",
+      "previous_ids": [
+        "STV_TC_074"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_6FE4CFC63C95",
+      "new_id": "STV_TC_SW_018",
+      "title": "199/200/201 atomic capacity",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+      "previous_ids": [
+        "STV_TC_075"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_734CF1BFE372",
+      "new_id": "STV_TC_SW_019",
+      "title": "external original url rejects executable or nonportable navigation",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/graph/tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+      "previous_ids": [
+        "STV_TC_076"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_7D1212345072",
+      "new_id": "STV_TC_SW_020",
+      "title": "external original url rejects executable or nonportable navigation",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/graph/tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+      "previous_ids": [
+        "STV_TC_077"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_8023D1B4838C",
+      "new_id": "STV_TC_SW_021",
+      "title": "portable paths preserve queries and fragments",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_portable_paths_preserve_queries_and_fragments",
+      "previous_ids": [
+        "STV_TC_078"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_880A2E13BCE9",
+      "new_id": "STV_TC_SW_022",
+      "title": "shared children keep unique nodes and conflicting parents do not overlap",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+      "previous_ids": [
+        "STV_TC_079"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_9316CE9A1843",
+      "new_id": "STV_TC_SW_023",
+      "title": "invalid directional labels",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_directional_labels[ ]",
+      "previous_ids": [
+        "STV_TC_080"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_97667EB28A11",
+      "new_id": "STV_TC_SW_024",
+      "title": "blocked skipped-level edges retain safe detours",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_053: blocked skipped-level edges retain safe detours",
+      "previous_ids": [
+        "STV_TC_081"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_ABB4E85E5F66",
+      "new_id": "STV_TC_SW_025",
+      "title": "srcset data images and css resources",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources",
+      "previous_ids": [
+        "STV_TC_082"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_AEF53EABA753",
+      "new_id": "STV_TC_SW_026",
+      "title": "cross-page targets do not acquire synthetic root edges",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+      "previous_ids": [
+        "STV_TC_083"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_B2EF591B7F1E",
+      "new_id": "STV_TC_SW_027",
+      "title": "upward controls precede neutral and downward controls regardless of authorship",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/render/tests/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+      "previous_ids": [
+        "STV_TC_084"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_C747492F203E",
+      "new_id": "STV_TC_SW_028",
+      "title": "invalid model",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_model[change1-types.goal]",
+      "previous_ids": [
+        "STV_TC_085"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_D00DA9F2CD10",
+      "new_id": "STV_TC_SW_029",
+      "title": "hidden parts external and missing targets",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/graph/tests/test_graph.py::test_hidden_parts_external_and_missing_targets",
+      "previous_ids": [
+        "STV_TC_086"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_D22785EE6859",
+      "new_id": "STV_TC_SW_030",
+      "title": "cyclic shared geometry with isolated nodes remains deterministic and separated",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+      "previous_ids": [
+        "STV_TC_087"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_D31601FDD080",
+      "new_id": "STV_TC_SW_031",
+      "title": "invalid directional labels",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_directional_labels[1]",
+      "previous_ids": [
+        "STV_TC_088"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_D43DE71AF846",
+      "new_id": "STV_TC_SW_032",
+      "title": "static details and remote fallback",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback",
+      "previous_ids": [
+        "STV_TC_089"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_DETAIL_CACHE",
+      "new_id": "STV_TC_SW_033",
+      "title": "Concurrent build-scoped detail loading",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+      "previous_ids": [
+        "STV_TC_090"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_DETAIL_RETRY",
+      "new_id": "STV_TC_SW_034",
+      "title": "Retry local detail loading after failure",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+      "previous_ids": [
+        "STV_TC_091"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_E6FA25320A8F",
+      "new_id": "STV_TC_SW_035",
+      "title": "active embed urls are not retained as navigation",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation",
+      "previous_ids": [
+        "STV_TC_092"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_EB472A6879CF",
+      "new_id": "STV_TC_SW_036",
+      "title": "local suggestions match IDs and titles and bound results",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/render/tests/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results",
+      "previous_ids": [
+        "STV_TC_093"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_F549DE4D0BF4",
+      "new_id": "STV_TC_SW_037",
+      "title": "invalid directional labels",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_directional_labels[None]",
+      "previous_ids": [
+        "STV_TC_094"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_FBDDCC607412",
+      "new_id": "STV_TC_SW_038",
+      "title": "invalid model",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/model/tests/test_model.py::test_invalid_model[change3-accepted_statuses]",
+      "previous_ids": [
+        "STV_TC_095"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_COMPACT_PATHS",
+      "new_id": "STV_TC_SW_039",
+      "title": "Compact immutable detail assets",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths",
+      "previous_ids": [
+        "STV_TC_096"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_TRANSPORT_ATTRS",
+      "new_id": "STV_TC_SW_040",
+      "title": "Reserved authored transport attributes are discarded",
+      "document": "software-tests.rst",
+      "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+      "previous_ids": [
+        "STV_TC_097"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_DETAIL_URLS",
+      "new_id": "STV_TC_SW_041",
+      "title": "Restored URLs obey the output-local policy",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+      "previous_ids": [
+        "STV_TC_098"
+      ],
+      "category": "SW"
+    },
+    {
+      "old_id": "STV_TC_DETAIL_CSS",
+      "new_id": "STV_TC_SW_042",
+      "title": "Restored CSS rejects unchecked resources",
+      "document": "software-tests.rst",
+      "selector": "frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+      "previous_ids": [
+        "STV_TC_099"
+      ],
+      "category": "SW"
+    }
+  ],
+  "next_ids_at_migration": {
+    "SY": "STV_TC_SY_058",
+    "SW": "STV_TC_SW_043"
+  }
+}

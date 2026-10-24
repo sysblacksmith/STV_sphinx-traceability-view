@@ -9,11 +9,11 @@ for classification and evidence semantics.
    :filter: type == 'test_case' and 'test_system' in tags
    :columns: id;title;status;verifies;last_result;executed_by
 
-STV_TC_025DB3F44E8E: usability smoke
-------------------------------------
+STV_TC_SY_001: usability smoke
+------------------------------
 
 .. test_case:: usability smoke
-   :id: STV_TC_025DB3F44E8E
+   :id: STV_TC_SY_001
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -121,11 +121,11 @@ STV_TC_025DB3F44E8E: usability smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_06CC5EE46517: control order smoke
-----------------------------------------
+STV_TC_SY_002: control order smoke
+----------------------------------
 
 .. test_case:: control order smoke
-   :id: STV_TC_06CC5EE46517
+   :id: STV_TC_SY_002
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -192,11 +192,11 @@ STV_TC_06CC5EE46517: control order smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_0EBE5120F168: missing placeholder and detail error
----------------------------------------------------------
+STV_TC_SY_003: missing placeholder and detail error
+---------------------------------------------------
 
 .. test_case:: missing placeholder and detail error
-   :id: STV_TC_0EBE5120F168
+   :id: STV_TC_SY_003
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -259,11 +259,11 @@ STV_TC_0EBE5120F168: missing placeholder and detail error
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_136FE8B1A097: failed finalization retains pending page and previous assets
----------------------------------------------------------------------------------
+STV_TC_SY_004: failed finalization retains pending page and previous assets
+---------------------------------------------------------------------------
 
 .. test_case:: failed finalization retains pending page and previous assets
-   :id: STV_TC_136FE8B1A097
+   :id: STV_TC_SY_004
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -315,11 +315,11 @@ STV_TC_136FE8B1A097: failed finalization retains pending page and previous asset
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_25803A2B9F90: seed layout replacement failure and staleness
-------------------------------------------------------------------
+STV_TC_SY_005: seed layout replacement failure and staleness
+------------------------------------------------------------
 
 .. test_case:: seed layout replacement failure and staleness
-   :id: STV_TC_25803A2B9F90
+   :id: STV_TC_SY_005
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -385,11 +385,11 @@ STV_TC_25803A2B9F90: seed layout replacement failure and staleness
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_3B0D9F21166C: alternate host schema external metadata and parts
-----------------------------------------------------------------------
+STV_TC_SY_006: alternate host schema external metadata and parts
+----------------------------------------------------------------
 
 .. test_case:: alternate host schema external metadata and parts
-   :id: STV_TC_3B0D9F21166C
+   :id: STV_TC_SY_006
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -438,11 +438,11 @@ STV_TC_3B0D9F21166C: alternate host schema external metadata and parts
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_3B2659FB2D0A: documentation visuals
-------------------------------------------
+STV_TC_SY_007: documentation visuals
+------------------------------------
 
 .. test_case:: documentation visuals
-   :id: STV_TC_3B2659FB2D0A
+   :id: STV_TC_SY_007
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -505,11 +505,11 @@ STV_TC_3B2659FB2D0A: documentation visuals
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_41F176801699: invalid seed source location
--------------------------------------------------
+STV_TC_SY_008: invalid seed source location
+-------------------------------------------
 
 .. test_case:: invalid seed source location
-   :id: STV_TC_41F176801699
+   :id: STV_TC_SY_008
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -556,11 +556,11 @@ STV_TC_41F176801699: invalid seed source location
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_535022565896: control order smoke
-----------------------------------------
+STV_TC_SY_009: control order smoke
+----------------------------------
 
 .. test_case:: control order smoke
-   :id: STV_TC_535022565896
+   :id: STV_TC_SY_009
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -627,11 +627,11 @@ STV_TC_535022565896: control order smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_5652621CFF4A: interactive seed smoke
--------------------------------------------
+STV_TC_SY_010: interactive seed smoke
+-------------------------------------
 
 .. test_case:: interactive seed smoke
-   :id: STV_TC_5652621CFF4A
+   :id: STV_TC_SY_010
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -692,11 +692,11 @@ STV_TC_5652621CFF4A: interactive seed smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_59537D3F286A: seed capacity at directive
------------------------------------------------
+STV_TC_SY_011: seed capacity at directive
+-----------------------------------------
 
 .. test_case:: seed capacity at directive
-   :id: STV_TC_59537D3F286A
+   :id: STV_TC_SY_011
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -744,11 +744,11 @@ STV_TC_59537D3F286A: seed capacity at directive
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_59C06D617036: missing placeholder and detail error
----------------------------------------------------------
+STV_TC_SY_012: missing placeholder and detail error
+---------------------------------------------------
 
 .. test_case:: missing placeholder and detail error
-   :id: STV_TC_59C06D617036
+   :id: STV_TC_SY_012
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -811,11 +811,11 @@ STV_TC_59C06D617036: missing placeholder and detail error
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_5C902A5F732E: cross page bundle
---------------------------------------
+STV_TC_SY_013: cross page bundle
+--------------------------------
 
 .. test_case:: cross page bundle
-   :id: STV_TC_5C902A5F732E
+   :id: STV_TC_SY_013
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -867,11 +867,11 @@ STV_TC_5C902A5F732E: cross page bundle
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_6C7A64E533AC: invalid seed source location
--------------------------------------------------
+STV_TC_SY_014: invalid seed source location
+-------------------------------------------
 
 .. test_case:: invalid seed source location
-   :id: STV_TC_6C7A64E533AC
+   :id: STV_TC_SY_014
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -918,11 +918,11 @@ STV_TC_6C7A64E533AC: invalid seed source location
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_7016FADA6FBA: alternate model geometry details and external
-------------------------------------------------------------------
+STV_TC_SY_015: alternate model geometry details and external
+------------------------------------------------------------
 
 .. test_case:: alternate model geometry details and external
-   :id: STV_TC_7016FADA6FBA
+   :id: STV_TC_SY_015
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1017,11 +1017,11 @@ STV_TC_7016FADA6FBA: alternate model geometry details and external
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_7441DB459B14: usability smoke
-------------------------------------
+STV_TC_SY_016: usability smoke
+------------------------------
 
 .. test_case:: usability smoke
-   :id: STV_TC_7441DB459B14
+   :id: STV_TC_SY_016
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1129,11 +1129,11 @@ STV_TC_7441DB459B14: usability smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_7EDF1A472879: large project at visible capacity
-------------------------------------------------------
+STV_TC_SY_017: large project at visible capacity
+------------------------------------------------
 
 .. test_case:: large project at visible capacity
-   :id: STV_TC_7EDF1A472879
+   :id: STV_TC_SY_017
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1196,11 +1196,11 @@ STV_TC_7EDF1A472879: large project at visible capacity
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_85BBE1714F96: invalid mapping has entry path and location
-----------------------------------------------------------------
+STV_TC_SY_018: invalid mapping has entry path and location
+----------------------------------------------------------
 
 .. test_case:: invalid mapping has entry path and location
-   :id: STV_TC_85BBE1714F96
+   :id: STV_TC_SY_018
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1245,11 +1245,11 @@ STV_TC_85BBE1714F96: invalid mapping has entry path and location
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_9A67DAACB2A4: seed selection release
--------------------------------------------
+STV_TC_SY_019: seed selection release
+-------------------------------------
 
 .. test_case:: seed selection release
-   :id: STV_TC_9A67DAACB2A4
+   :id: STV_TC_SY_019
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1342,11 +1342,11 @@ STV_TC_9A67DAACB2A4: seed selection release
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_9E5477EFE2F1: async layout failure and stale completion
---------------------------------------------------------------
+STV_TC_SY_020: async layout failure and stale completion
+--------------------------------------------------------
 
 .. test_case:: async layout failure and stale completion
-   :id: STV_TC_9E5477EFE2F1
+   :id: STV_TC_SY_020
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1393,11 +1393,11 @@ STV_TC_9E5477EFE2F1: async layout failure and stale completion
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_A1747C52BC63: interactive seed smoke
--------------------------------------------
+STV_TC_SY_021: interactive seed smoke
+-------------------------------------
 
 .. test_case:: interactive seed smoke
-   :id: STV_TC_A1747C52BC63
+   :id: STV_TC_SY_021
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1458,11 +1458,11 @@ STV_TC_A1747C52BC63: interactive seed smoke
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_A221103BC26C: invalid seed source location
--------------------------------------------------
+STV_TC_SY_022: invalid seed source location
+-------------------------------------------
 
 .. test_case:: invalid seed source location
-   :id: STV_TC_A221103BC26C
+   :id: STV_TC_SY_022
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1509,11 +1509,11 @@ STV_TC_A221103BC26C: invalid seed source location
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_A953C70E70B1: seed capacity at directive
------------------------------------------------
+STV_TC_SY_023: seed capacity at directive
+-----------------------------------------
 
 .. test_case:: seed capacity at directive
-   :id: STV_TC_A953C70E70B1
+   :id: STV_TC_SY_023
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1561,11 +1561,11 @@ STV_TC_A953C70E70B1: seed capacity at directive
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_B5D550F17384: prior fatal exception is not replaced by bundle generation
--------------------------------------------------------------------------------
+STV_TC_SY_024: prior fatal exception is not replaced by bundle generation
+-------------------------------------------------------------------------
 
 .. test_case:: prior fatal exception is not replaced by bundle generation
-   :id: STV_TC_B5D550F17384
+   :id: STV_TC_SY_024
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1610,11 +1610,11 @@ STV_TC_B5D550F17384: prior fatal exception is not replaced by bundle generation
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_CFE6B0377595: project paging
------------------------------------
+STV_TC_SY_025: project paging
+-----------------------------
 
 .. test_case:: project paging
-   :id: STV_TC_CFE6B0377595
+   :id: STV_TC_SY_025
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1660,11 +1660,11 @@ STV_TC_CFE6B0377595: project paging
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_D1A17B11B9C1: incremental body change hidden and deleted objects
------------------------------------------------------------------------
+STV_TC_SY_026: incremental body change hidden and deleted objects
+-----------------------------------------------------------------
 
 .. test_case:: incremental body change hidden and deleted objects
-   :id: STV_TC_D1A17B11B9C1
+   :id: STV_TC_SY_026
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1719,11 +1719,11 @@ STV_TC_D1A17B11B9C1: incremental body change hidden and deleted objects
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_DB4FE4CDD257: host owns broken trace failure
----------------------------------------------------
+STV_TC_SY_027: host owns broken trace failure
+---------------------------------------------
 
 .. test_case:: host owns broken trace failure
-   :id: STV_TC_DB4FE4CDD257
+   :id: STV_TC_SY_027
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1775,11 +1775,11 @@ STV_TC_DB4FE4CDD257: host owns broken trace failure
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_DE0C60E0BB97: seed selection release
--------------------------------------------
+STV_TC_SY_028: seed selection release
+-------------------------------------
 
 .. test_case:: seed selection release
-   :id: STV_TC_DE0C60E0BB97
+   :id: STV_TC_SY_028
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1872,11 +1872,11 @@ STV_TC_DE0C60E0BB97: seed selection release
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_DF0D9B21A92D: host default directional labels are used
--------------------------------------------------------------
+STV_TC_SY_029: host default directional labels are used
+-------------------------------------------------------
 
 .. test_case:: host default directional labels are used
-   :id: STV_TC_DF0D9B21A92D
+   :id: STV_TC_SY_029
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -1920,11 +1920,11 @@ STV_TC_DF0D9B21A92D: host default directional labels are used
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_E0AB07ABA378: offline exploration
-----------------------------------------
+STV_TC_SY_030: offline exploration
+----------------------------------
 
 .. test_case:: offline exploration
-   :id: STV_TC_E0AB07ABA378
+   :id: STV_TC_SY_030
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2067,11 +2067,11 @@ STV_TC_E0AB07ABA378: offline exploration
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_E23001FBE2A5: project paging
------------------------------------
+STV_TC_SY_031: project paging
+-----------------------------
 
 .. test_case:: project paging
-   :id: STV_TC_E23001FBE2A5
+   :id: STV_TC_SY_031
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2117,11 +2117,11 @@ STV_TC_E23001FBE2A5: project paging
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_E2A064F091BE: async layout failure and stale completion
---------------------------------------------------------------
+STV_TC_SY_032: async layout failure and stale completion
+--------------------------------------------------------
 
 .. test_case:: async layout failure and stale completion
-   :id: STV_TC_E2A064F091BE
+   :id: STV_TC_SY_032
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2168,11 +2168,11 @@ STV_TC_E2A064F091BE: async layout failure and stale completion
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_E66A443619C6: alternate model geometry details and external
-------------------------------------------------------------------
+STV_TC_SY_033: alternate model geometry details and external
+------------------------------------------------------------
 
 .. test_case:: alternate model geometry details and external
-   :id: STV_TC_E66A443619C6
+   :id: STV_TC_SY_033
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2267,11 +2267,11 @@ STV_TC_E66A443619C6: alternate model geometry details and external
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_EB0F95BABF84: empty seed catalog
----------------------------------------
+STV_TC_SY_034: empty seed catalog
+---------------------------------
 
 .. test_case:: empty seed catalog
-   :id: STV_TC_EB0F95BABF84
+   :id: STV_TC_SY_034
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2327,11 +2327,11 @@ STV_TC_EB0F95BABF84: empty seed catalog
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_EFBBC00F61AC: large project at visible capacity
-------------------------------------------------------
+STV_TC_SY_035: large project at visible capacity
+------------------------------------------------
 
 .. test_case:: large project at visible capacity
-   :id: STV_TC_EFBBC00F61AC
+   :id: STV_TC_SY_035
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2394,11 +2394,11 @@ STV_TC_EFBBC00F61AC: large project at visible capacity
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_F3892D8A1C98: seed layout replacement failure and staleness
-------------------------------------------------------------------
+STV_TC_SY_036: seed layout replacement failure and staleness
+------------------------------------------------------------
 
 .. test_case:: seed layout replacement failure and staleness
-   :id: STV_TC_F3892D8A1C98
+   :id: STV_TC_SY_036
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2464,11 +2464,11 @@ STV_TC_F3892D8A1C98: seed layout replacement failure and staleness
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_F6E0695BB399: offline exploration
-----------------------------------------
+STV_TC_SY_037: offline exploration
+----------------------------------
 
 .. test_case:: offline exploration
-   :id: STV_TC_F6E0695BB399
+   :id: STV_TC_SY_037
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2611,11 +2611,11 @@ STV_TC_F6E0695BB399: offline exploration
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_F988267D01C9: clean wheel host
--------------------------------------
+STV_TC_SY_038: clean wheel host
+-------------------------------
 
 .. test_case:: clean wheel host
-   :id: STV_TC_F988267D01C9
+   :id: STV_TC_SY_038
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -2720,11 +2720,11 @@ STV_TC_F988267D01C9: clean wheel host
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_FB72ADBCAE29: empty seed catalog
----------------------------------------
+STV_TC_SY_039: empty seed catalog
+---------------------------------
 
 .. test_case:: empty seed catalog
-   :id: STV_TC_FB72ADBCAE29
+   :id: STV_TC_SY_039
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2780,11 +2780,11 @@ STV_TC_FB72ADBCAE29: empty seed catalog
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_FC50F6627767: unsupported builder fails clearly
-------------------------------------------------------
+STV_TC_SY_040: unsupported builder fails clearly
+------------------------------------------------
 
 .. test_case:: unsupported builder fails clearly
-   :id: STV_TC_FC50F6627767
+   :id: STV_TC_SY_040
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -2825,11 +2825,11 @@ STV_TC_FC50F6627767: unsupported builder fails clearly
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
 
-STV_TC_OCC_019: Select separate occurrences
--------------------------------------------
+STV_TC_SY_041: Select separate occurrences
+------------------------------------------
 
 .. test_case:: Select separate occurrences
-   :id: STV_TC_OCC_019
+   :id: STV_TC_SY_041
    :status: accepted
    :tags: release_later, test_system
    :basis: documented
@@ -2859,11 +2859,11 @@ STV_TC_OCC_019: Select separate occurrences
    Retain per-case results, candidate identity and file/HTTP screenshots when
    the future release implements this scope; no execution record is invented.
 
-STV_TC_OCC_021: Restore occurrence exploration
-----------------------------------------------
+STV_TC_SY_042: Restore occurrence exploration
+---------------------------------------------
 
 .. test_case:: Restore occurrence exploration
-   :id: STV_TC_OCC_021
+   :id: STV_TC_SY_042
    :status: accepted
    :tags: release_later, test_system
    :basis: documented
@@ -2893,11 +2893,11 @@ STV_TC_OCC_021: Restore occurrence exploration
    Retain per-case results, candidate identity and file/HTTP screenshots when
    the future release implements this scope; no execution record is invented.
 
-STV_TC_OCC_022: Isolate occurrence expansion
---------------------------------------------
+STV_TC_SY_043: Isolate occurrence expansion
+-------------------------------------------
 
 .. test_case:: Isolate occurrence expansion
-   :id: STV_TC_OCC_022
+   :id: STV_TC_SY_043
    :status: accepted
    :tags: release_later, test_system
    :basis: documented
@@ -2927,11 +2927,11 @@ STV_TC_OCC_022: Isolate occurrence expansion
    Retain per-case results, candidate identity and file/HTTP screenshots when
    the future release implements this scope; no execution record is invented.
 
-STV_TC_OCC_023: Merge shared expansion sets
--------------------------------------------
+STV_TC_SY_044: Merge shared expansion sets
+------------------------------------------
 
 .. test_case:: Merge shared expansion sets
-   :id: STV_TC_OCC_023
+   :id: STV_TC_SY_044
    :status: accepted
    :tags: release_later, test_system
    :basis: documented
@@ -2961,11 +2961,11 @@ STV_TC_OCC_023: Merge shared expansion sets
    Retain per-case results, candidate identity and file/HTTP screenshots when
    the future release implements this scope; no execution record is invented.
 
-STV_TC_WINDOWS_PATH: Inspect details from a nested Windows checkout
--------------------------------------------------------------------
+STV_TC_SY_045: Inspect details from a nested Windows checkout
+-------------------------------------------------------------
 
 .. test_case:: Inspect details from a nested Windows checkout
-   :id: STV_TC_WINDOWS_PATH
+   :id: STV_TC_SY_045
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -3001,11 +3001,11 @@ STV_TC_WINDOWS_PATH: Inspect details from a nested Windows checkout
    screenshots in the maintenance execution record. No arbitrary-depth path,
    other browser or other-machine support is inferred.
 
-STV_TC_LEGAL_GUARD: Reject unaudited distribution inputs
---------------------------------------------------------
+STV_TC_SY_046: Reject unaudited distribution inputs
+---------------------------------------------------
 
 .. test_case:: Reject unaudited distribution inputs
-   :id: STV_TC_LEGAL_GUARD
+   :id: STV_TC_SY_046
    :status: accepted
    :tags: release_initial, test_system
    :basis: documented
@@ -3031,11 +3031,11 @@ STV_TC_LEGAL_GUARD: Reject unaudited distribution inputs
    **Evidence:** Per-case JUnit and command log. The clean installed-wheel case
    separately verifies the successful shipping path and notice inventory.
 
-STV_TC_TRANSPORT_FILE: Authored transport markers remain inert over file
-------------------------------------------------------------------------
+STV_TC_SY_047: Authored transport markers remain inert over file
+----------------------------------------------------------------
 
 .. test_case:: Authored transport markers remain inert over file
-   :id: STV_TC_TRANSPORT_FILE
+   :id: STV_TC_SY_047
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3062,11 +3062,11 @@ STV_TC_TRANSPORT_FILE: Authored transport markers remain inert over file
    **Evidence:** Retain actual JUnit results, commands and source identities in
    :doc:`../test-execution/prsa-002-fix/index`. Design review remains pending.
 
-STV_TC_TRANSPORT_HTTP: Authored transport markers remain inert over HTTP
-------------------------------------------------------------------------
+STV_TC_SY_048: Authored transport markers remain inert over HTTP
+----------------------------------------------------------------
 
 .. test_case:: Authored transport markers remain inert over HTTP
-   :id: STV_TC_TRANSPORT_HTTP
+   :id: STV_TC_SY_048
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3093,11 +3093,11 @@ STV_TC_TRANSPORT_HTTP: Authored transport markers remain inert over HTTP
    **Evidence:** Retain actual JUnit results, commands and source identities in
    :doc:`../test-execution/prsa-002-fix/index`. Design review remains pending.
 
-STV_TC_HISTORICAL_LICENSES: Retained historical archives carry a complete licensing supplement
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_049: Retained historical archives carry a complete licensing supplement
+---------------------------------------------------------------------------------
 
 .. test_case:: Retained historical archives carry a complete licensing supplement
-   :id: STV_TC_HISTORICAL_LICENSES
+   :id: STV_TC_SY_049
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3124,11 +3124,11 @@ STV_TC_HISTORICAL_LICENSES: Retained historical archives carry a complete licens
    **Evidence:** Actual result in ``historical-licenses.log`` and source/environment identity
    in :doc:`../test-execution/prsa-001-003-fix/index`. Design review is pending.
 
-STV_TC_RUNTIME310: Patched offline distribution remains usable on Python 3.10
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_050: Patched offline distribution remains usable on Python 3.10
+-------------------------------------------------------------------------
 
 .. test_case:: Patched offline distribution remains usable on Python 3.10
-   :id: STV_TC_RUNTIME310
+   :id: STV_TC_SY_050
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3155,11 +3155,11 @@ STV_TC_RUNTIME310: Patched offline distribution remains usable on Python 3.10
    **Evidence:** Actual result in ``runtime310.json`` and source/environment identity
    in :doc:`../test-execution/prsa-001-003-fix/index`. Design review is pending.
 
-STV_TC_SDIST_BOUNDARY: Actual source archive respects the distribution boundary
-================================================================================
+STV_TC_SY_051: Actual source archive respects the distribution boundary
+-----------------------------------------------------------------------
 
 .. test_case:: Actual source archive respects the distribution boundary
-   :id: STV_TC_SDIST_BOUNDARY
+   :id: STV_TC_SY_051
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3193,11 +3193,11 @@ STV_TC_SDIST_BOUNDARY: Actual source archive respects the distribution boundary
    old-configuration failure is historical; the latest outcome is independent
    of owner acceptance and release readiness.
 
-STV_TC_PUBLICATION_CLEAN: Clean rebuild retires obsolete publication files
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_052: Clean rebuild retires obsolete publication files
+---------------------------------------------------------------
 
 .. test_case:: Clean rebuild retires obsolete publication files
-   :id: STV_TC_PUBLICATION_CLEAN
+   :id: STV_TC_SY_052
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3224,11 +3224,11 @@ STV_TC_PUBLICATION_CLEAN: Clean rebuild retires obsolete publication files
    file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
    review remains pending; these are not full release qualification cases.
 
-STV_TC_PUBLICATION_FAIL: Failed documentation build preserves published bytes
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_053: Failed documentation build preserves published bytes
+-------------------------------------------------------------------
 
 .. test_case:: Failed documentation build preserves published bytes
-   :id: STV_TC_PUBLICATION_FAIL
+   :id: STV_TC_SY_053
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3255,11 +3255,11 @@ STV_TC_PUBLICATION_FAIL: Failed documentation build preserves published bytes
    file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
    review remains pending; these are not full release qualification cases.
 
-STV_TC_PUBLICATION_ROLLBACK: Failed directory promotion restores previous publication
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_054: Failed directory promotion restores previous publication
+-----------------------------------------------------------------------
 
 .. test_case:: Failed directory promotion restores previous publication
-   :id: STV_TC_PUBLICATION_ROLLBACK
+   :id: STV_TC_SY_054
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3286,11 +3286,11 @@ STV_TC_PUBLICATION_ROLLBACK: Failed directory promotion restores previous public
    file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
    review remains pending; these are not full release qualification cases.
 
-STV_TC_CI_TRUST: CI policy rejects privilege and provenance drift
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_055: CI policy rejects privilege and provenance drift
+---------------------------------------------------------------
 
 .. test_case:: CI policy rejects privilege and provenance drift
-   :id: STV_TC_CI_TRUST
+   :id: STV_TC_SY_055
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3320,11 +3320,11 @@ STV_TC_CI_TRUST: CI policy rejects privilege and provenance drift
    in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
    local verification does not prove a hosted run or attestation occurred.
 
-STV_TC_CI_CHECKSUMS: Candidate checksums detect changed artifact bytes
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_056: Candidate checksums detect changed artifact bytes
+----------------------------------------------------------------
 
 .. test_case:: Candidate checksums detect changed artifact bytes
-   :id: STV_TC_CI_CHECKSUMS
+   :id: STV_TC_SY_056
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
@@ -3354,11 +3354,11 @@ STV_TC_CI_CHECKSUMS: Candidate checksums detect changed artifact bytes
    in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
    local verification does not prove a hosted run or attestation occurred.
 
-STV_TC_CI_RUNTIME: CI runtime command imports the installed Python 3.10 package
-------------------------------------------------------------------------------------------------------------------------
+STV_TC_SY_057: CI runtime command imports the installed Python 3.10 package
+---------------------------------------------------------------------------
 
 .. test_case:: CI runtime command imports the installed Python 3.10 package
-   :id: STV_TC_CI_RUNTIME
+   :id: STV_TC_SY_057
    :status: draft
    :tags: release_initial, test_system
    :basis: documented
