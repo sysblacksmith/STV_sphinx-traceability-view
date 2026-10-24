@@ -6,7 +6,7 @@ external original url rejects executable or nonportable navigation
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_graph.py :: tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]
+   :evidence: docs/test-scripts/test_graph.py :: docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_047
@@ -22,9 +22,9 @@ external original url rejects executable or nonportable navigation
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]``.
+   **Executable selector:** ``docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

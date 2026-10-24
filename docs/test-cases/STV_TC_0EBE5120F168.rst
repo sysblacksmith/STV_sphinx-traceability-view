@@ -6,7 +6,7 @@ missing placeholder and detail error
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_missing_placeholder_and_detail_error[file]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
@@ -22,9 +22,9 @@ missing placeholder and detail error
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_missing_placeholder_and_detail_error[file]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

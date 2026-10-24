@@ -30,7 +30,7 @@ in the adjacent ``round-4-inventory.json``. Assessed current artifacts:
   :ref:`STV_ADR_004`, :ref:`STV_ADR_005`. ADR 003 retains its partial
   supersession history and unaffected decisions.
 * Both architecture Draw.io/SVG pairs and the behavioral state-machine pair;
-  source mappings, manifests, build/packaging commands, :doc:`/problems/index`
+  source mappings, manifests, build/packaging commands, :doc:`/problem-tickets/index`
   and the current requirement-change records.
 
 Findings and resolution

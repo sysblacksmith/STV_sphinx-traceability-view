@@ -12,7 +12,7 @@ The owner accepted the stakeholder amendment, then explicitly instructed
 concept-review sequence. Scope: incorporate and review that amendment and
 its affected dependency neighborhood in the existing concept; not product
 implementation. Decisions and paging approval are recorded in
-:doc:`../requirement-changes/starting-nodes`.
+:doc:`../change-requests/STV_CR_002_starting-nodes`.
 
 Input HEAD: ``6060b63856a879cab6f5321e53133df0fa1f9641`` with a clean worktree.
 Prior rounds remain historical; this focused round reuses their evidence for

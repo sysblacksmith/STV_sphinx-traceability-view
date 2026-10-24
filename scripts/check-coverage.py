@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--strict',action='store_true');args=parser.parse_args()
     mapping=ROOT/'docs/_build/test-map.json'
-    result=subprocess.run([sys.executable,'-m','pytest','tests','--collect-only','-q','--requirement-map',str(mapping)],cwd=ROOT,capture_output=True,text=True)
+    result=subprocess.run([sys.executable,'-m','pytest','docs/test-scripts','--collect-only','-q','--requirement-map',str(mapping)],cwd=ROOT,capture_output=True,text=True)
     if result.returncode:
         print(result.stdout+result.stderr);return result.returncode
     cases=json.loads(mapping.read_text(encoding='utf-8'))
@@ -48,7 +48,7 @@ def main():
             lines+=['     - '+ '\n       '.join('``'+test+'``'+(';' if i<len(tests)-1 else '') for i,test in enumerate(tests))]
         else:lines+=['     - '+('Deferred occurrence-mode release; no runtime delivered.' if requirements[identity] else '**GAP: executable criterion coverage required.**')]
     lines+=['','Executable sources','------------------','']
-    for source in sorted((ROOT/'tests').glob('test_*.py'))+sorted((ROOT/'frontend/test').glob('*.test.js')):
+    for source in sorted((ROOT/'docs/test-scripts').glob('test_*.py'))+sorted((ROOT/'frontend/test').glob('*.test.js')):
         relative=source.relative_to(ROOT).as_posix();lines+=['* :download:`'+relative+' <../'+relative+'>`']
     (ROOT/'docs/test-coverage.rst').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(f'{len(requirements)} requirements; {len(cases)} executable cases; unmapped active requirements: {gaps}; unknown IDs: {unknown}')

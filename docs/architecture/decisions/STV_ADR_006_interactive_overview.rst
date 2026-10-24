@@ -69,4 +69,4 @@ Verification and handover
 Use focused geometry/state and Firefox file/HTTP cases from
 :doc:`../../verification-plan`. Concept acceptance is recorded in :doc:`../../concept-reviews/round-6`.
 Full release qualification remains separate; see
-:doc:`../../requirement-changes/centered-layout-and-interactive-seeds`.
+:doc:`../../change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.

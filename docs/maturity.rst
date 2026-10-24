@@ -52,7 +52,7 @@ its stakeholder requirements on 2026-10-18. Concept review is complete in
 003/047/052/053, software requirements 003/051/052/056/057, ADR 006 and their
 affected contracts/diagrams are accepted. ADR 005 is partially superseded;
 previous review snapshots remain historical. See
-:doc:`requirement-changes/centered-layout-and-interactive-seeds`.
+:doc:`change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.
 
 Full v0.2.0 qualification passed against candidate 5: 58 Python/browser and
 18 JavaScript tests, with no failures/errors/skips, plus all packaging,
@@ -69,12 +69,12 @@ The owner approved the preceding usability stakeholder revisions on 2026-10-18
 and delegated review and final implementation for v0.2.0. That internal concept
 was accepted under :doc:`concept-reviews/round-4`; the subsequent amendment
 has its own acceptance under round 6 and final verification in the record above.
-See :doc:`requirement-changes/usability-problems` and :doc:`problems/index`.
+See :doc:`change-requests/STV_CR_003_usability-problems` and :doc:`problem-tickets/index`.
 User issue handover now uses first-class problem reports directly in
-``docs/problems/``; the shared lifecycle/template update is recorded in
-:doc:`requirement-changes/problem-report-handover`.
+``docs/problem-tickets/``; the shared lifecycle/template update is recorded in
+:doc:`change-requests/STV_CR_004_problem-report-handover`.
 The fifth report's control-order fix is included; see
-:doc:`requirement-changes/control-order`. Final verification remains independent
+:doc:`change-requests/STV_CR_005_control-order`. Final verification remains independent
 of concept acceptance; the previous smoke-only limit is superseded.
 
 Previous baseline
@@ -90,7 +90,7 @@ Need links, authority, revision identities and evidence.
 
 The owner accepted the starting-node stakeholder amendment and selected paged
 project-root links. Concept refinement and round-3 review are complete; see
-:doc:`requirement-changes/starting-nodes` and :doc:`concept-reviews/round-3`.
+:doc:`change-requests/STV_CR_002_starting-nodes` and :doc:`concept-reviews/round-3`.
 The requirements and elements in that historical baseline were accepted. Historical review hashes
 remain snapshots of their respective revisions.
 
@@ -171,14 +171,8 @@ Review and lifecycle records
 
    concept-review
    concept-reviews/documentation-reorganization
-   requirement-changes/starting-nodes
-   requirement-changes/usability-problems
-   requirement-changes/problem-report-handover
-   requirement-changes/control-order
-   requirement-changes/centered-layout-and-interactive-seeds
-   problems/index
-   test-coverage
-   test-execution/index
+   change-requests/index
+   problem-tickets/index
    implementation-review
 
 Maintenance rule

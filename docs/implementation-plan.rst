@@ -37,7 +37,7 @@ verification evidence is maintained separately under :doc:`maturity`::
        src/inspect.js                  # Floating UI and accessible detail panel
        src/index.js                    # bundle registry and instance startup
        test/*.test.js                  # Node's built-in test runner
-   tests/
+   docs/test-scripts/
        test_model.py
        test_graph.py
        test_details.py

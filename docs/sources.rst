@@ -1,4 +1,4 @@
-﻿Sources and evidence
+Sources and evidence
 ====================
 
 Source: project owner discussion in this chat, 2026-10-18. The initial request describes RST embedding, a starting Need ID, interactive expansion and collapse, hierarchical artifact placement and test cases on the right. Requirement wording is a draft interpretation, not formal acceptance.
@@ -309,7 +309,7 @@ invalid input preserves exploration and Project overview returns to its initial
 page. The owner authorized provisional concept review and MVP implementation
 for inspection. This is confirmation of intent and draft prototype authority,
 not formal acceptance of the newly written requirements or release approval.
-See :doc:`requirement-changes/centered-layout-and-interactive-seeds`.
+See :doc:`change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.
 
 Centered-layout amendment approval and concept acceptance delegation
 ------------------------------------------------------------------------------------------

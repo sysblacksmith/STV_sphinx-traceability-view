@@ -1,5 +1,5 @@
-Implemented behavioral state machines
-======================================
+Behavioral state machines
+=========================
 
 The machines below describe the implemented build, exploration and inspection
 lifecycles. They coordinate through an immutable build identity and per-view
@@ -41,7 +41,7 @@ images remain static resources.
      - At most 200 distinct seeds
      - ``TraceabilityView.run`` saves serializable invocation with location;
        remain in collection. Excess seeds produce a directive error.
-     - :need:`STV_SWR_001`, :need:`STV_SWR_026`; ``tests/test_build.py``
+     - :need:`STV_SWR_001`, :need:`STV_SWR_026`; ``docs/test-scripts/test_build.py``
    * - Collection / write-started
      - HTML builder, valid model, visible seeds and portable original URLs
      - ``prepare`` builds snapshot and copies assets; pending output.
@@ -61,7 +61,7 @@ images remain static resources.
      - Document reread/deleted
      - ``purge`` removes old invocation. ``outdated`` requests full reread
        when views exist; rebuild follows the same collection path.
-     - :need:`STV_SWR_018`; ``tests/test_build.py``
+     - :need:`STV_SWR_018`; ``docs/test-scripts/test_build.py``
 
 Exploration lifecycle
 ---------------------

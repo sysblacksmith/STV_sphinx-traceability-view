@@ -6,7 +6,7 @@ Problem 5: Order relationship controls by vertical direction
    :status: fixed
    :tags: usability_draft
    :basis: owner
-   :evidence: docs/problems/problem_5.rst
+   :evidence: docs/problem-tickets/STV_PR_005.rst
    :priority: unassigned
    :verification_state: partial
 
@@ -17,7 +17,7 @@ Problem 5: Order relationship controls by vertical direction
    to parents above the node shall appear at the top, and buttons that open
    links to children below the node shall appear at the bottom.
 
-   **Source:** Converted from the owner's ``docs/problems/problem_5.txt``.
+   **Source:** Converted from the owner's ``docs/problem-tickets/STV_PR_005.txt``.
    Corrections preserve the requested behavior; reproduction/environment
    details beyond the existing MVP were not supplied.
 
@@ -32,7 +32,7 @@ Problem 5: Order relationship controls by vertical direction
    Ordering applies before expansion and remains identical for collapse controls.
 
    **Affected artifacts:** :need:`STV_SHR_051`, :need:`STV_SWR_055`,
-   :need:`STV_SWE_RENDER`. See :doc:`/requirement-changes/control-order`.
+   :need:`STV_SWE_RENDER`. See :doc:`/change-requests/STV_CR_005_control-order`.
 
    **Implementation:** ``frontend/src/groups.js`` and ``frontend/src/view.js``.
    No system responsibility, architecture boundary or behavioral transition

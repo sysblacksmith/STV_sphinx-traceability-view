@@ -6,7 +6,7 @@ invalid model
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_model.py :: tests/test_model.py::test_invalid_model[change3-accepted_statuses]
+   :evidence: docs/test-scripts/test_model.py :: docs/test-scripts/test_model.py::test_invalid_model[change3-accepted_statuses]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
@@ -22,9 +22,9 @@ invalid model
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_model.py::test_invalid_model[change3-accepted_statuses]``.
+   **Executable selector:** ``docs/test-scripts/test_model.py::test_invalid_model[change3-accepted_statuses]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_model.py::test_invalid_model[change3-accepted_statuses]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_model.py::test_invalid_model[change3-accepted_statuses]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

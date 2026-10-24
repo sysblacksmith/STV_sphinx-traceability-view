@@ -6,7 +6,7 @@ host default directional labels are used
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_host_default_directional_labels_are_used
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_045, STV_SWR_045
@@ -22,9 +22,9 @@ host default directional labels are used
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_host_default_directional_labels_are_used``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_host_default_directional_labels_are_used" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

@@ -6,7 +6,7 @@ alternate model geometry details and external
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_008, STV_SHR_012, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_037, STV_SHR_041, STV_SHR_047, STV_SHR_048, STV_SWR_008, STV_SWR_012, STV_SWR_015, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_037, STV_SWR_041, STV_SWR_047, STV_SWR_048, STV_SWR_049, STV_SWR_050, STV_SYS_004, STV_SYS_005, STV_SYS_006, STV_SYS_010
@@ -22,9 +22,9 @@ alternate model geometry details and external
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

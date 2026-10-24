@@ -19,6 +19,6 @@ exclude = ["/docs/test-execution"]
 path = "hatch_build.py"
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["docs/test-scripts"]
 pythonpath = ["src"]
 markers = ["requirements(*ids): requirement criteria exercised by this case", "browser: real Firefox integration"]

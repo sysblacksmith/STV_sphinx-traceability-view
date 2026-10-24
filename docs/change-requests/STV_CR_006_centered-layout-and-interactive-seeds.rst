@@ -1,5 +1,9 @@
+.. _STV_CR_006:
+
 Centered parents and interactive seed selection
 ============================================================
+
+Record: ``STV_CR_006``. Sequence follows the originating request.
 
 Owner request and workflow
 ---------------------------

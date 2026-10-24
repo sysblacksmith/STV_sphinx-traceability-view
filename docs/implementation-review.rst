@@ -81,7 +81,7 @@ System criterion assessment
    * - :need:`STV_SYS_010`
      - Interaction workflows use the installed stable Firefox desktop binary
        on Windows, including pointer, keyboard, pan/zoom, paging and recovery.
-     - ``tests/test_browser.py`` and ``tests/test_capacity.py``;
+     - ``docs/test-scripts/test_browser.py`` and ``docs/test-scripts/test_capacity.py``;
        exact binary/platform versions and headless mode are retained per run
 
 Software criteria and transition review
@@ -206,7 +206,7 @@ existing system/software assessment:
   confirmation, typing/Escape, exact trimmed IDs, invalid/hidden/case-mismatched
   IDs, empty catalogs, repeated replacement, overview reset, independent seeded
   and seedless views, retained focus, and failed/stale layout preservation.
-  ``tests/test_release_seeds.py`` extends the MVP smoke cases with these
+  ``docs/test-scripts/test_release_seeds.py`` extends the MVP smoke cases with these
   real file/HTTP paths; Node checks cover pure catalog and transition invariants.
 
 A test synchronization defect was also corrected: the original-object workflow

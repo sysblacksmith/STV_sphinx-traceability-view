@@ -2,7 +2,7 @@ Internal interfaces and model contract
 ======================================
 
 This is the MVP software design contract. Usability amendments are tracked
-in :doc:`requirement-changes/usability-problems`. Executed implementation
+in :doc:`change-requests/STV_CR_003_usability-problems`. Executed implementation
 evidence and remaining verification gaps are linked from :doc:`maturity`.
 Use :doc:`implementation-plan` for lifecycle/module behavior and
 :doc:`technology-stack` for selected dependencies.

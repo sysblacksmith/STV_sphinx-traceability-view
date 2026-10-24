@@ -6,7 +6,7 @@ clean wheel host
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_package.py :: tests/test_package.py::test_clean_wheel_host
+   :evidence: docs/test-scripts/test_package.py :: docs/test-scripts/test_package.py::test_clean_wheel_host
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_042, STV_SHR_046, STV_SWR_042, STV_SWR_046, STV_SYS_009
@@ -22,9 +22,9 @@ clean wheel host
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_package.py::test_clean_wheel_host``.
+   **Executable selector:** ``docs/test-scripts/test_package.py::test_clean_wheel_host``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_package.py::test_clean_wheel_host" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_package.py::test_clean_wheel_host" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable
@@ -54,7 +54,7 @@ clean wheel host
               python=envpath/'Scripts/python.exe'
               result=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),str(wheel)],capture_output=True,text=True)
               assert result.returncode==0,result.stdout+result.stderr
-              source=root/'source';shutil.copytree(ROOT/'tests/fixtures/minimal',source)
+              source=root/'source';shutil.copytree(ROOT/'docs/test-scripts/fixtures/minimal',source)
               env=dict(os.environ);env.pop('PYTHONPATH',None)
               env['PATH']=str(envpath/'Scripts')+os.pathsep+str(Path(os.environ['SystemRoot'])/'System32')
               result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)

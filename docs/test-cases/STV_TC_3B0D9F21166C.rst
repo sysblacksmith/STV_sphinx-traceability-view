@@ -6,7 +6,7 @@ alternate host schema external metadata and parts
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_036, STV_SHR_045, STV_SHR_047, STV_SHR_048, STV_SWR_014, STV_SWR_036, STV_SWR_045, STV_SWR_047, STV_SWR_048, STV_SYS_002
@@ -22,9 +22,9 @@ alternate host schema external metadata and parts
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

@@ -1,5 +1,9 @@
+.. _STV_CR_005:
+
 Draft relationship-control ordering
 ===================================
+
+Record: ``STV_CR_005``. Sequence follows the originating request.
 
 Owner request and scope
 ----------------------------------------
@@ -40,7 +44,7 @@ the existing project Python environments and installed Firefox/geckodriver:
   relationship directions, neutral edge cases, stable ties, graph immutability
   and replacement level mappings.
 * ``node build.js`` from ``frontend``: passed; packaged runtime bundle updated.
-* ``.venv-implementation/Scripts/python.exe -m pytest tests/test_browser.py -q
+* ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_browser.py -q
   -k control_order_smoke`` with ``STV_GECKODRIVER`` set: 1 passed, 12 deselected.
   The real project demo lists the upward derives-from control before the
   downward allocation control and retains order/state through expand/collapse.

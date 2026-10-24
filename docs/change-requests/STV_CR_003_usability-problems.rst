@@ -1,5 +1,9 @@
+.. _STV_CR_003:
+
 Draft usability problem resolution
 ====================================
+
+Record: ``STV_CR_003``. Sequence follows the originating request.
 
 Authority and baseline
 ----------------------
@@ -11,7 +15,7 @@ This explicitly authorizes provisional downstream work before acceptance of
 the exact requirement wording. No concept acceptance or release is delegated.
 Input revision: ``67f967c47b31a565c6800c32b3e615e5391c1acf``.
 The only pre-existing untracked content
-was the owner's ``problems/`` folder. Prior accepted records and release
+was the owner's ``problem-tickets/`` folder. Prior accepted records and release
 execution evidence remain historical snapshots.
 
 Problem analysis and traceability
@@ -25,19 +29,19 @@ Problem analysis and traceability
      - Cause / intent
      - Requirements
      - Implementation / verification
-   * - :doc:`/problems/problem_1`
+   * - :doc:`/problem-tickets/STV_PR_001`
      - Router always left the bottom and entered the top, even upward.
      - New :need:`STV_SHR_050`, :need:`STV_SWR_053`.
      - ``frontend/src/layout.js``; facing-port geometry smoke.
-   * - :doc:`/problems/problem_2`
+   * - :doc:`/problem-tickets/STV_PR_002`
      - Every edge used a far-right corridor regardless of obstacles.
      - Same routing requirements; no duplicate outcome for the same defect.
      - Clear direct segments; corridor fallback for blocked paths/self-links.
-   * - :doc:`/problems/problem_3`
+   * - :doc:`/problem-tickets/STV_PR_003`
      - Fixed viewport was 650 CSS pixels high.
      - New :need:`STV_SHR_049`, :need:`STV_SWR_054`.
      - ``static/stv.css`` now 975px; Firefox computed-height smoke.
-   * - :doc:`/problems/problem_4`
+   * - :doc:`/problem-tickets/STV_PR_004`
      - Mouse entry opened a panel immediately.
      - Revised :need:`STV_SHR_015`, :need:`STV_SWR_050`.
      - ``inspect.js`` timer, ``view.js`` hover/Escape; Firefox timing smoke.
@@ -71,7 +75,7 @@ Contracts and allocation: :doc:`/internal-interfaces`,
 :need:`STV_SWE_INSPECT`. Plans: :doc:`/implementation-plan` and
 :doc:`/verification-plan`. Behavioral transitions and editable diagram:
 :doc:`/state-machine`. Test definitions: ``frontend/test/layout.test.js`` and
-``tests/test_browser.py::test_usability_smoke``. Coverage is supplemented in
+``docs/test-scripts/test_browser.py::test_usability_smoke``. Coverage is supplemented in
 :doc:`/test-coverage`; no historical release record is rewritten.
 
 Draft review and verification
@@ -91,7 +95,7 @@ installed desktop Firefox through geckodriver 0.37.1:
   test-lane/self-link box avoidance, direct upward/downward fan-in and blocked
   skipped-level routes. Names map the new routing criteria to executable cases.
 * ``node build.js`` from ``frontend``: passed; regenerated the bundled MVP asset.
-* ``.venv-implementation/Scripts/python.exe -m pytest tests/test_browser.py -q
+* ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_browser.py -q
   -k usability_smoke`` with ``STV_GECKODRIVER`` set: 1 passed, 11 deselected.
   Observed 975px viewport height, brief-hover departure cancellation, sustained
   node-to-button hover, Escape cancellation and immediate keyboard activation
@@ -122,12 +126,12 @@ product assertion was omitted or classified as passed. Full criteria remain
 unverified, and no full release execution record was created for this draft.
 
 Review entry point: :doc:`/demo`. The source reports are canonical directly in
-``docs/problems/``; there are no include-wrapper copies or separate intake tree.
+``docs/problem-tickets/``; there are no include-wrapper copies or separate intake tree.
 The user moved the reports and screenshots here. They are now first-class
 problem reports :need:`STV_PR_001`, :need:`STV_PR_002`, :need:`STV_PR_003` and
 :need:`STV_PR_004`, with fixed disposition and partial draft/smoke verification.
 The report model and folder handover update is tracked in
-:doc:`problem-report-handover`.
+:doc:`STV_CR_004_problem-report-handover`.
 
 Traceability correction after owner review
 ------------------------------------------

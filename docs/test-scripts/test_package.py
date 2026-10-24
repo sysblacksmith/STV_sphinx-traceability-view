@@ -8,7 +8,7 @@ import tempfile
 import zipfile
 import pytest
 
-ROOT=Path(__file__).parents[1]
+ROOT=Path(__file__).parents[2]
 
 
 @pytest.mark.requirements('STV_SYS_009','STV_SWR_042','STV_SWR_046')
@@ -31,7 +31,7 @@ def test_clean_wheel_host():
         python=envpath/'Scripts/python.exe'
         result=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),str(wheel)],capture_output=True,text=True)
         assert result.returncode==0,result.stdout+result.stderr
-        source=root/'source';shutil.copytree(ROOT/'tests/fixtures/minimal',source)
+        source=root/'source';shutil.copytree(ROOT/'docs/test-scripts/fixtures/minimal',source)
         env=dict(os.environ);env.pop('PYTHONPATH',None)
         env['PATH']=str(envpath/'Scripts')+os.pathsep+str(Path(os.environ['SystemRoot'])/'System32')
         result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)

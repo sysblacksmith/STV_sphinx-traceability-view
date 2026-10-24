@@ -99,9 +99,9 @@ def test_empty_seed_catalog(browser,short_output,protocol):
 @pytest.mark.parametrize('protocol',['file','http'])
 def test_seed_layout_replacement_failure_and_staleness(browser,short_output,protocol):
     from pathlib import Path
-    project=Path(__file__).parents[1]
+    project=Path(__file__).parents[2]
     script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
-    result=subprocess.run(['node','--input-type=module','-e',script,str(project/'tests/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+    result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
     assert result.returncode==0,result.stderr
     (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
     with published_url(short_output,protocol) as url:

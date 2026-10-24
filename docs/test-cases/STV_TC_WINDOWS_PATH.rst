@@ -6,7 +6,7 @@ Inspect details from a nested Windows checkout
    :status: accepted
    :tags: known_issue
    :basis: documented
-   :evidence: docs/problems/problem_6.rst
+   :evidence: docs/problem-tickets/STV_PR_006.rst
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_018, STV_SYS_003, STV_SYS_006, STV_SWR_015, STV_SWR_017, STV_SWR_018

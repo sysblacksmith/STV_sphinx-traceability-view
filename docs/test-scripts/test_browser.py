@@ -316,9 +316,9 @@ def _assert_project_pages(browser):
 @pytest.mark.requirements('STV_SWR_044','STV_SWR_052')
 @pytest.mark.parametrize('protocol',['file','http'])
 def test_async_layout_failure_and_stale_completion(browser,short_output,protocol):
-    project=Path(__file__).parents[1]
+    project=Path(__file__).parents[2]
     script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
-    result=subprocess.run(['node','--input-type=module','-e',script,str(project/'tests/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+    result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
     assert result.returncode==0,result.stderr
     (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
     # Keep the host alive across all injected completions.
@@ -464,7 +464,7 @@ def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
 
 @pytest.mark.browser
 def test_documentation_visuals(browser):
-    published=Path(__file__).parents[1]/'docs/_build/html'
+    published=Path(__file__).parents[2]/'docs/_build/html'
     assert (published/'demo.html').is_file(),'Build project documentation before publication checks'
     browser.set_window_size(1500,1300)
     browser.get((published/'demo.html').as_uri())
@@ -495,7 +495,7 @@ def test_documentation_visuals(browser):
 @pytest.mark.requirements('STV_SWR_055')
 @pytest.mark.parametrize('protocol',['file','http'])
 def test_control_order_smoke(browser,protocol):
-    published=Path(__file__).parents[1]/'docs/_build/html'
+    published=Path(__file__).parents[2]/'docs/_build/html'
     with published_url(published,protocol) as url:
         browser.get(url.rsplit('/',1)[0]+'/demo.html')
         _exercise_control_order(browser)

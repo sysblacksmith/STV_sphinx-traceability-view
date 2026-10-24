@@ -5,7 +5,7 @@ Problem 6: Detail tooltips fail on long Windows paths
    :id: STV_PR_006
    :status: analyzed
    :basis: owner
-   :evidence: docs/problems/problem_6.rst
+   :evidence: docs/problem-tickets/STV_PR_006.rst
    :priority: unassigned
    :verification_state: partial
 
@@ -64,7 +64,7 @@ Problem 6: Detail tooltips fail on long Windows paths
 
    **Affected artifacts:** :need:`STV_SWE_BUNDLE` and
    :need:`STV_SWE_INSPECT`; ``src/sphinx_traceability_view/bundle.py``,
-   ``frontend/src/inspect.js`` and ``tests/test_bundle.py``.
+   ``frontend/src/inspect.js`` and ``docs/test-scripts/test_bundle.py``.
 
    **Actual checks on 2026-10-19:**
 
@@ -74,7 +74,7 @@ Problem 6: Detail tooltips fail on long Windows paths
    * After the change and rebuild, the same page and control displayed the
      published requirement body with no failed requests during that check.
    * ``.\build-docs.ps1`` completed successfully.
-   * ``.venv/Scripts/python.exe -m pytest tests/test_bundle.py::test_detail_assets_use_only_content_hash_for_portable_paths -q``
+   * ``.venv/Scripts/python.exe -m pytest docs/test-scripts/test_bundle.py::test_detail_assets_use_only_content_hash_for_portable_paths -q``
      passed: one test. It checks filename length by the full-content-hash-only
      naming contract, shared-fragment deduplication, graph references and
      generated registration content.

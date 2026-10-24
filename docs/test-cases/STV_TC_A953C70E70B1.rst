@@ -6,7 +6,7 @@ seed capacity at directive
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_seed_capacity_at_directive[201-False]
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
@@ -22,9 +22,9 @@ seed capacity at directive
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_seed_capacity_at_directive[201-False]``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_seed_capacity_at_directive[201-False]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

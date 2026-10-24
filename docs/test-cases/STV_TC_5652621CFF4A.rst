@@ -6,7 +6,7 @@ interactive seed smoke
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_interactive_seed_smoke[file]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_038, STV_SHR_052, STV_SHR_053, STV_SWR_038, STV_SWR_056, STV_SWR_057
@@ -22,9 +22,9 @@ interactive seed smoke
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_interactive_seed_smoke[file]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_interactive_seed_smoke[file]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

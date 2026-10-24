@@ -47,7 +47,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_003
@@ -860,7 +860,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002; docs/requirement-changes/usability-problems.rst
+   :evidence: docs/concept-reviews/round-1.rst :: STV_REVIEW_002; docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SYS_006, STV_SHR_034, STV_SHR_015
@@ -889,7 +889,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_002_starting-nodes.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SYS_001
@@ -916,7 +916,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: inferred
-   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_002_starting-nodes.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_047, STV_SYS_008
@@ -945,7 +945,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/usability-problems.rst
+   :evidence: docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_050
@@ -963,7 +963,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/usability-problems.rst
+   :evidence: docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_049
@@ -981,7 +981,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/problems/problem_5.rst
+   :evidence: docs/problem-tickets/STV_PR_005.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_051
@@ -1006,7 +1006,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_052
@@ -1031,7 +1031,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: passed
    :derives_from: STV_SHR_053

@@ -6,7 +6,7 @@ seed layout replacement failure and staleness
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_release_seeds.py :: tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_053, STV_SWR_044, STV_SWR_057
@@ -22,9 +22,9 @@ seed layout replacement failure and staleness
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``.
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable
@@ -39,7 +39,7 @@ seed layout replacement failure and staleness
           from pathlib import Path
           project=Path(__file__).parents[1]
           script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
-          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'tests/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
           assert result.returncode==0,result.stderr
           (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
           with published_url(short_output,protocol) as url:

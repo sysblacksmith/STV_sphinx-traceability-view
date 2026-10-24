@@ -18,7 +18,7 @@ def main():
     args=parser.parse_args()
     directory=args.directory.resolve();source=directory/'source';output=directory/'html'
     source.mkdir(parents=True,exist_ok=True)
-    shutil.copyfile(Path(__file__).parents[1]/'tests/fixtures/minimal/conf.py',source/'conf.py')
+    shutil.copyfile(Path(__file__).parents[1]/'docs/test-scripts/fixtures/minimal/conf.py',source/'conf.py')
     with (source/'conf.py').open('a',encoding='utf-8') as stream:
         stream.write('\nneeds_types.append({"directive":"check","title":"Test","prefix":"TC_","color":"#eeeeff","style":"node"})\ntraceability_view_model["types"]["check"]={"role":"test"}\n')
     # Fixed topology version 1: three forward modular edges, including wraparound

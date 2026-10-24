@@ -6,7 +6,7 @@ offline exploration
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_offline_exploration[http]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_offline_exploration[http]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_004, STV_SHR_008, STV_SHR_015, STV_SHR_016, STV_SHR_017, STV_SHR_018, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_034, STV_SHR_035, STV_SHR_038, STV_SHR_039, STV_SHR_040, STV_SWR_004, STV_SWR_008, STV_SWR_015, STV_SWR_016, STV_SWR_017, STV_SWR_018, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_034, STV_SWR_035, STV_SWR_038, STV_SWR_039, STV_SWR_040, STV_SWR_050, STV_SYS_003, STV_SYS_007
@@ -22,9 +22,9 @@ offline exploration
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_offline_exploration[http]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_offline_exploration[http]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_offline_exploration[http]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

@@ -6,7 +6,7 @@ host owns broken trace failure
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_host_owns_broken_trace_failure
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SWR_027, STV_SWR_028
@@ -22,9 +22,9 @@ host owns broken trace failure
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_host_owns_broken_trace_failure``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_host_owns_broken_trace_failure" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

@@ -9,7 +9,7 @@ project = "STV Sphinx Traceability View"
 version = "0.2"
 release = "0.2.0"
 root_doc = "index"
-exclude_patterns = ["_build", "test-execution/0.1.0-candidate-1/index.rst"]
+exclude_patterns = ["test-scripts/fixtures/**", "_build", "test-execution/0.1.0-candidate-1/index.rst"]
 
 # Select the shared reverse-engineering skill without storing a machine path.
 configured = os.environ.get("REQUIREMENTS_SKILL_DIR")

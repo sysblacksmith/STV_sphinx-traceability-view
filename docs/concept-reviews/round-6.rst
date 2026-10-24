@@ -88,7 +88,7 @@ requirements and no unknown IDs. Firefox ``test_documentation_visuals`` passed
 (one case, 16 deselected); all three SVG exports and their embedded publication
 views were inspected. These are acceptance/publication checks, not a new full
 runtime qualification. Prior focused MVP
-results remain in :doc:`/requirement-changes/centered-layout-and-interactive-seeds`.
+results remain in :doc:`/change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.
 
 The listed requirement revisions and ADR 006 are accepted under explicit owner
 authority. Ordinary documents/diagrams are accepted at their inventory identities.

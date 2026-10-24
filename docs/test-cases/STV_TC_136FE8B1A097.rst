@@ -6,7 +6,7 @@ failed finalization retains pending page and previous assets
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_027, STV_SWR_015, STV_SWR_017, STV_SWR_027
@@ -22,9 +22,9 @@ failed finalization retains pending page and previous assets
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

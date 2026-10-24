@@ -6,7 +6,7 @@ project paging
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_project_paging[http]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_project_paging[http]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
@@ -22,9 +22,9 @@ project paging
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_project_paging[http]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_project_paging[http]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_project_paging[http]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_project_paging[http]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

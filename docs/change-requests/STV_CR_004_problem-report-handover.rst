@@ -1,11 +1,15 @@
+.. _STV_CR_004:
+
 Problem-report model and folder handover
 ==================================================
+
+Record: ``STV_CR_004``. Sequence follows the originating request.
 
 Owner request and scope
 -----------------------
 
 On 2026-10-18 the owner moved the reports and screenshots directly into
-``docs/problems/`` and requested that this be the future user issue handover
+``docs/problem-tickets/`` and requested that this be the future user issue handover
 folder. The owner also requested the ``problem_report`` Need type with states
 such as new, analyzed and fixed, applied here and in the shared model, method,
 skills and folder template. This is documentation/workflow infrastructure;
@@ -32,7 +36,7 @@ linked requirements.
 Applied repository changes
 --------------------------
 
-* :doc:`/problems/index` is the intake/return index, with its own lifecycle chart,
+* :doc:`/problem-tickets/index` is the intake/return index, with its own lifecycle chart,
   all-status table, report navigation and downloadable starter template.
 * :need:`STV_PR_001`, :need:`STV_PR_002`, :need:`STV_PR_003` and
   :need:`STV_PR_004` retain the owner's current wording and adjacent screenshots.
@@ -49,7 +53,7 @@ Shared handover
 ---------------
 
 The agents repository maintains the extended model, type-aware validator and
-charts, the method, and ``reverse-engineer-requirements/assets/sphinx/problems/``.
+charts, the method, and ``reverse-engineer-requirements/assets/sphinx/problem-tickets/``.
 The folder template includes intake instructions and a non-instantiated report
 starter. New project navigation includes its index under Miscellaneous.
 ``problem-solver`` consumes and updates the same report records; requirements,

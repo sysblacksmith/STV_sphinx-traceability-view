@@ -1,3 +1,5 @@
+.. _STV_CR_002:
+
 Starting-node requirement amendment
 =====================================
 

@@ -6,7 +6,7 @@ Problem 2: Direct readable routes
    :status: fixed
    :tags: usability_draft
    :basis: owner
-   :evidence: docs/problems/problem_2.rst; docs/requirement-changes/usability-problems.rst
+   :evidence: docs/problem-tickets/STV_PR_002.rst; docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: partial
 
@@ -20,17 +20,17 @@ Problem 2: Direct readable routes
 
    .. code-block:: text
 
-      the arrows in the view are routed with unnecessary edges which makes the picture hard to read (see problem_2.png). Please route on direct pathes to establish better readability
+      the arrows in the view are routed with unnecessary edges which makes the picture hard to read (see STV_PR_002.png). Please route on direct pathes to establish better readability
 
    **Evidence**
 
-   .. image:: problem_2.png
+   .. image:: STV_PR_002.png
       :alt: Original screenshot illustrating problem 2
       :width: 100%
 
    **Analysis and disposition**
 
-   See :doc:`/requirement-changes/usability-problems` for requirements, design,
+   See :doc:`/change-requests/STV_CR_003_usability-problems` for requirements, design,
    source changes and smoke-test evidence.
 
    **Diagnosis and fix**
@@ -42,7 +42,7 @@ Problem 2: Direct readable routes
 
    **Verification and handover**
 
-   Smoke check: ``node --test test/layout.test.js`` passed on 2026-10-18; commands and limits are recorded in :doc:`/requirement-changes/usability-problems`.
+   Smoke check: ``node --test test/layout.test.js`` passed on 2026-10-18; commands and limits are recorded in :doc:`/change-requests/STV_CR_003_usability-problems`.
    The fix is implemented as a draft. Owner review, full regression and release
    approval remain pending; partial verification does not accept linked requirements.
 

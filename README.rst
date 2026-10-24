@@ -191,7 +191,7 @@ distribution.
 User issue handover
 -------------------
 
-Report issues in ``docs/problems/`` and keep screenshots/logs beside the report.
+Report issues in ``docs/problem-tickets/`` and keep screenshots/logs beside the report.
 The folder index and ``report.rst.template`` describe the format; informal text
 is also accepted for normalization by the problem solver. Reports use stable
 ``problem_report`` Need IDs and ``new``, ``analyzed``, ``fixed`` states. Fixed
@@ -213,7 +213,7 @@ Verify development changes::
    .\.venv-implementation\Scripts\python.exe scripts/check-coverage.py --strict
 
 For Firefox verification set ``STV_GECKODRIVER`` to an explicitly provisioned
-driver and run ``pytest tests/test_browser.py`` in the implementation environment.
+driver and run ``pytest docs/test-scripts/test_browser.py`` in the implementation environment.
 The packaging test needs a built wheel and an offline runtime wheelhouse at
 ``docs/_build/wheelhouse``. Source tests, release results and deferred criteria
 are linked from the central maturity page. No project license has been assigned;

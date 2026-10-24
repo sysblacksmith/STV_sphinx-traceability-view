@@ -6,7 +6,7 @@ active embed urls are not retained as navigation
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_details.py :: tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation
+   :evidence: docs/test-scripts/test_details.py :: docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_015, STV_SWR_017, STV_SWR_049
@@ -22,9 +22,9 @@ active embed urls are not retained as navigation
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``.
+   **Executable selector:** ``docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

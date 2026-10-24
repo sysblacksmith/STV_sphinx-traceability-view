@@ -11,7 +11,7 @@ it grants neither formal stakeholder/concept acceptance nor release approval.
 The input is the uncommitted amendment after round 4 and the retained failed
 ``0.2.0-candidate-1``; historical round-4 identities are not rewritten.
 Owner intent and exceptions are recorded in
-:doc:`/requirement-changes/centered-layout-and-interactive-seeds`.
+:doc:`/change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.
 
 Assessed dependency neighborhood
 ------------------------------------------------------------------------------------------
@@ -65,6 +65,6 @@ draft design is suitable for implementation and focused verification under the
 owner's existing MVP authority. Current Needs remain draft/not_assessed;
 ADR 006 remains proposed and ADR 005's acceptance history is preserved.
 Actual Node/browser checks and exported state-diagram visual/link checks are
-recorded in :doc:`/requirement-changes/centered-layout-and-interactive-seeds`.
+recorded in :doc:`/change-requests/STV_CR_006_centered-layout-and-interactive-seeds`.
 Owner inspection remains pending. Full release qualification, formal baseline
 acceptance, tagging and publication remain outside this round's disposition.

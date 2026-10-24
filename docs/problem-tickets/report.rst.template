@@ -5,7 +5,7 @@
    :id: STV_PR_{{NEXT_UNUSED_NUMBER}}
    :status: new
    :basis: owner
-   :evidence: docs/problems/problem_{{SLUG}}.rst
+   :evidence: docs/problem-tickets/{{REPORT_ID}}.rst
    :priority: unassigned
    :verification_state: not_assessed
 

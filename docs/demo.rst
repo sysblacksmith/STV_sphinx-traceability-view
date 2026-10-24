@@ -10,7 +10,7 @@ its original page in a new tab.
 MVP exploration
 ------------------------------
 
-The :doc:`requirement-changes/centered-layout-and-interactive-seeds` increment
+The :doc:`change-requests/STV_CR_006_centered-layout-and-interactive-seeds` increment
 has completed owner inspection and concept acceptance. The project overview immediately shows five stakeholder
 requirements; Previous and Next browse the remaining pages. Parents align over
 the span of their visible children, with overlap prevention taking priority.

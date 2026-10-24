@@ -6,7 +6,7 @@ invalid mapping has entry path and location
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_invalid_mapping_has_entry_path_and_location
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
@@ -22,9 +22,9 @@ invalid mapping has entry path and location
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_invalid_mapping_has_entry_path_and_location``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_invalid_mapping_has_entry_path_and_location" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

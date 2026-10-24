@@ -6,7 +6,7 @@ Problem 4: Delay hover details
    :status: fixed
    :tags: usability_draft
    :basis: owner
-   :evidence: docs/problems/problem_4.rst; docs/requirement-changes/usability-problems.rst
+   :evidence: docs/problem-tickets/STV_PR_004.rst; docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: partial
 
@@ -24,7 +24,7 @@ Problem 4: Delay hover details
 
    **Analysis and disposition**
 
-   See :doc:`/requirement-changes/usability-problems` for requirements, design,
+   See :doc:`/change-requests/STV_CR_003_usability-problems` for requirements, design,
    source changes and smoke-test evidence.
 
    **Diagnosis and fix**
@@ -36,7 +36,7 @@ Problem 4: Delay hover details
 
    **Verification and handover**
 
-   Smoke check: ``tests/test_browser.py::test_usability_smoke`` passed on 2026-10-18; commands and limits are recorded in :doc:`/requirement-changes/usability-problems`.
+   Smoke check: ``docs/test-scripts/test_browser.py::test_usability_smoke`` passed on 2026-10-18; commands and limits are recorded in :doc:`/change-requests/STV_CR_003_usability-problems`.
    The fix is implemented as a draft. Owner review, full regression and release
    approval remain pending; partial verification does not accept linked requirements.
 

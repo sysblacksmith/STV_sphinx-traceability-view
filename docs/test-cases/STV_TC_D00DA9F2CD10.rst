@@ -6,7 +6,7 @@ hidden parts external and missing targets
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_graph.py :: tests/test_graph.py::test_hidden_parts_external_and_missing_targets
+   :evidence: docs/test-scripts/test_graph.py :: docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_013, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_027, STV_SHR_047, STV_SHR_048, STV_SWR_013, STV_SWR_027, STV_SWR_047, STV_SWR_048
@@ -22,9 +22,9 @@ hidden parts external and missing targets
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``.
+   **Executable selector:** ``docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_graph.py::test_hidden_parts_external_and_missing_targets" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

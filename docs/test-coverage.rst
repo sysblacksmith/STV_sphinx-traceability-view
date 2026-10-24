@@ -15,22 +15,22 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - Executable cases / explicit gap
    * - :need:`STV_SWR_001`
      - Zero-, one- and multiple-ID fixtures produce distinct placeholders recording the supplied seed list or project-root mode and each invocation's source location.
-     - ``tests/test_build.py::test_cross_page_bundle``;
-       ``tests/test_build.py::test_seed_capacity_at_directive[200-True]``;
-       ``tests/test_build.py::test_seed_capacity_at_directive[201-False]``;
-       ``tests/test_build.py::test_unsupported_builder_fails_clearly``
+     - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
+       ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``;
+       ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]``;
+       ``docs/test-scripts/test_build.py::test_unsupported_builder_fails_clearly``
    * - :need:`STV_SWR_002`
      - A visible seed defined on a later-read document resolves for each fixture type; hidden seeds are rejected as specified in STV_SWR_048.
-     - ``tests/test_build.py::test_cross_page_bundle``
+     - ``docs/test-scripts/test_build.py::test_cross_page_bundle``
    * - :need:`STV_SWR_003`
      - One seed produces one node; multiple distinct seeds within the capacity limit produce their corresponding nodes; no seeds produces the project node and at most five stakeholder entries. Every case has an empty ordinary expansion set; project entries are the sole automatic expansion exception.
-     - ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+     - ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``;
        ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
    * - :need:`STV_SWR_004`
      - The fixture exposes one control per nonempty group and activating it dispatches its group key.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_005`
      - Expanding a group displays every target or rejects the entire transition at the cap.
      - ``frontend/test/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity``
@@ -42,10 +42,10 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
    * - :need:`STV_SWR_008`
      - Long-title nodes retain the complete ID and expose their full title in details; the two-line summary clamp is tested without making its field set configurable.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_009`
      - Their node bounding boxes remain vertically ordered after each expansion.
      - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
@@ -57,51 +57,51 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_012`
      - A test linked to two ranks appears once beyond both artifact right bounds in shared mode.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_013`
      - A single authored relationship appears in both directional indexes with one canonical edge identity.
-     - ``tests/test_build.py::test_cross_page_bundle``;
-       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
+     - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
+       ``docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets``;
        ``frontend/test/state.test.js :: STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff``
    * - :need:`STV_SWR_014`
      - Replacing types and mapping names changes the view without modifying extension code. A project-root invocation requires at least one type designated as stakeholder; no matching objects is a valid empty project, while a missing designation produces an entry-located model error.
-     - ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
-       ``tests/test_model.py::test_host_normalization``
+     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_model.py::test_host_normalization``
    * - :need:`STV_SWR_015`
      - A cross-page Need with custom metadata, formatted body and local images has equivalent information in details; hidden internal fields are not exposed. Remote media/CSS fixtures show the fallback and preserve the original URL without automatic network requests.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
-       ``tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
-       ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_details.py::test_srcset_data_images_and_css_resources``;
-       ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
+       ``docs/test-scripts/test_details.py::test_static_details_and_remote_fallback``;
+       ``docs/test-scripts/test_details.py::test_srcset_data_images_and_css_resources``;
+       ``docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
    * - :need:`STV_SWR_016`
      - Activation from file and HTTP output opens the correct cross-page object and preserves exploration.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_017`
      - With network disabled, file-URL output supports expansion, details and local links with no missing runtime assets.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
-       ``tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
-       ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_details.py::test_srcset_data_images_and_css_resources``;
-       ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
+       ``docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
+       ``docs/test-scripts/test_details.py::test_static_details_and_remote_fallback``;
+       ``docs/test-scripts/test_details.py::test_srcset_data_images_and_css_resources``;
+       ``docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
    * - :need:`STV_SWR_018`
      - The same nested-page bundle works below a non-root HTTP prefix and through file URLs.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
-       ``tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
-       ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_details.py::test_portable_paths_preserve_queries_and_fragments``;
-       ``tests/test_details.py::test_srcset_data_images_and_css_resources``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
+       ``docs/test-scripts/test_details.py::test_static_details_and_remote_fallback``;
+       ``docs/test-scripts/test_details.py::test_portable_paths_preserve_queries_and_fragments``;
+       ``docs/test-scripts/test_details.py::test_srcset_data_images_and_css_resources``
    * - :need:`STV_SWR_019`
      - A two-parent fixture changes between one shared node and two occurrences using the selector.
      - Deferred occurrence-mode release; no runtime delivered.
@@ -126,188 +126,188 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``frontend/test/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle``
    * - :need:`STV_SWR_026`
      - An unknown ID supplied alone or among valid IDs fails with that ID, invocation file and line. An invocation without IDs selects project-root mode without an invalid-seed error. Repeated IDs are deduplicated before initial capacity validation; more than 200 distinct explicit seeds fails with an invocation-located capacity error, without dropping or truncating supplied IDs.
-     - ``tests/test_build.py::test_cross_page_bundle``;
-       ``tests/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``;
-       ``tests/test_build.py::test_seed_capacity_at_directive[200-True]``;
-       ``tests/test_build.py::test_seed_capacity_at_directive[201-False]``
+     - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``;
+       ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``;
+       ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]``
    * - :need:`STV_SWR_027`
      - A dangling target does not prevent generation of valid view data; host broken-link validation still controls build status.
-     - ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[http]``;
-       ``tests/test_build.py::test_host_owns_broken_trace_failure``;
-       ``tests/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
-       ``tests/test_build.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation``;
-       ``tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
-       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``
+     - ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``;
+       ``docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure``;
+       ``docs/test-scripts/test_build.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
+       ``docs/test-scripts/test_build.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation``;
+       ``docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
+       ``docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets``
    * - :need:`STV_SWR_028`
      - Expanding a genuine missing-target group shows the target ID, missing-object text and source connection without relying on color. No valid original-object link is offered. Hidden targets do not become placeholders.
-     - ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[http]``;
-       ``tests/test_build.py::test_host_owns_broken_trace_failure``
+     - ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``;
+       ``docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure``
    * - :need:`STV_SWR_029`
      - An isolated node has the indication and no controls; a dangling target group still has a control.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``
    * - :need:`STV_SWR_030`
      - Explicit colors survive mixed configured/unconfigured fixtures and omitted colors are consistent per type.
-     - ``tests/test_model.py::test_host_normalization``
+     - ``docs/test-scripts/test_model.py::test_host_normalization``
    * - :need:`STV_SWR_031`
      - Draft, reviewed and empty statuses are red; configured accepted statuses have no red status border.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_032`
      - An approved override changes styling without requiring field-level tooltip settings.
-     - ``tests/test_model.py::test_host_normalization``
+     - ``docs/test-scripts/test_model.py::test_host_normalization``
    * - :need:`STV_SWR_033`
      - A long object at a viewport corner remains readable and scrollable without closing.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_034`
      - The shared-mode workflow is completable without a pointer; later mode controls meet the same rule when delivered.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_035`
      - An object with both directions of one relation can toggle each independently using distinguishable labels.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_036`
      - Malformed fixtures fail before asset generation while omitted optional colors and acceptance values receive defaults.
-     - ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
-       ``tests/test_build.py::test_invalid_mapping_has_entry_path_and_location``;
-       ``tests/test_model.py::test_host_normalization``;
-       ``tests/test_model.py::test_invalid_model[change0-levels]``;
-       ``tests/test_model.py::test_invalid_model[change1-types.goal]``;
-       ``tests/test_model.py::test_invalid_model[change2-types]``;
-       ``tests/test_model.py::test_invalid_model[change3-accepted_statuses]``;
-       ``tests/test_model.py::test_invalid_directional_labels[]``;
-       ``tests/test_model.py::test_invalid_directional_labels[ ]``;
-       ``tests/test_model.py::test_invalid_directional_labels[None]``;
-       ``tests/test_model.py::test_invalid_directional_labels[1]``
+     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location``;
+       ``docs/test-scripts/test_model.py::test_host_normalization``;
+       ``docs/test-scripts/test_model.py::test_invalid_model[change0-levels]``;
+       ``docs/test-scripts/test_model.py::test_invalid_model[change1-types.goal]``;
+       ``docs/test-scripts/test_model.py::test_invalid_model[change2-types]``;
+       ``docs/test-scripts/test_model.py::test_invalid_model[change3-accepted_statuses]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[ ]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[None]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[1]``
    * - :need:`STV_SWR_037`
      - An added hardware level is placed at its declared index without code changes.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``frontend/test/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_038`
      - Two views remain independent after navigation and viewport commands; later selectors are independent too.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
-       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``
    * - :need:`STV_SWR_039`
      - Pointer and keyboard zoom preserve state and do not change another view.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_040`
      - All off-screen nodes can be brought into view by pointer or keyboard.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SWR_041`
      - All in-scope interaction checks pass in both file and HTTP contexts; the release record states the exact stable Firefox and Windows versions and actual results.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_042`
      - A clean Python 3.10 environment with pinned Sphinx dependencies installs the wheel and builds the fixture.
-     - ``tests/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
    * - :need:`STV_SWR_043`
      - Candidate sizes 199 and 200 pass, 201 fails; 200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
-     - ``tests/test_build.py::test_seed_capacity_at_directive[200-True]``;
-       ``tests/test_build.py::test_seed_capacity_at_directive[201-False]``;
-       ``tests/test_capacity.py::test_large_project_at_visible_capacity[file]``;
-       ``tests/test_capacity.py::test_large_project_at_visible_capacity[http]``;
+     - ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``;
+       ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]``;
+       ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]``;
+       ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``;
        ``frontend/test/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_044`
      - An over-limit expansion adds no partial targets and explains that branches must be collapsed first.
-     - ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
-       ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
-       ``tests/test_capacity.py::test_large_project_at_visible_capacity[file]``;
-       ``tests/test_capacity.py::test_large_project_at_visible_capacity[http]``;
-       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
-       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
+     - ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
+       ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
+       ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]``;
+       ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
        ``frontend/test/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_045`
      - Changing a host type label or relation label is reflected without duplicate definitions in extension configuration.
-     - ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
-       ``tests/test_build.py::test_host_default_directional_labels_are_used``;
-       ``tests/test_model.py::test_host_normalization``;
-       ``tests/test_model.py::test_invalid_directional_labels[]``;
-       ``tests/test_model.py::test_invalid_directional_labels[ ]``;
-       ``tests/test_model.py::test_invalid_directional_labels[None]``;
-       ``tests/test_model.py::test_invalid_directional_labels[1]``
+     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used``;
+       ``docs/test-scripts/test_model.py::test_host_normalization``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[ ]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[None]``;
+       ``docs/test-scripts/test_model.py::test_invalid_directional_labels[1]``
    * - :need:`STV_SWR_046`
      - A separate project enables the installed module and renders a seeded view without repository imports.
-     - ``tests/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
    * - :need:`STV_SWR_047`
      - With external networking disabled, an external Need without local full content has inspectable metadata and the indication. Its original link is available, but opening that external destination is not represented as an offline capability. No external page download is attempted.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
-       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
-       ``tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]``;
-       ``tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]``;
-       ``tests/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets``;
+       ``docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]``;
+       ``docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]``;
+       ``docs/test-scripts/test_graph.py::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]``
    * - :need:`STV_SWR_048`
      - A visible Need tracing to a hidden Need exposes neither the hidden node nor that connection or a missing-target placeholder in the view or generated graph/detail data. A directive seeded with the hidden ID fails with its source filename and invocation location. Visible objects and their other relationships remain explorable.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``;
-       ``tests/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
-       ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
-       ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``;
+       ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_details.py::test_static_details_and_remote_fallback``;
+       ``docs/test-scripts/test_graph.py::test_hidden_parts_external_and_missing_targets``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``
    * - :need:`STV_SWR_049`
      - A fixture with a widget containing static rendered text and an image retains that content in details without executing copied widget scripts. The original-object link opens its documentation page. No interactive parity or generated snapshot of script-only content is claimed.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_details.py::test_static_details_and_remote_fallback``;
-       ``tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_details.py::test_static_details_and_remote_fallback``;
+       ``docs/test-scripts/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``
    * - :need:`STV_SWR_050`
      - A visible object exposes equivalent information through hover and keyboard Details activation. The panel permits keyboard scrolling and dismissal with focus restored to its trigger; new-tab node navigation remains a separate action.
-     - ``tests/test_browser.py::test_usability_smoke[file]``;
-       ``tests/test_browser.py::test_usability_smoke[http]``;
-       ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_051`
      - A seedless fixture initially displays the project node and first stakeholder entries through the project-page contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible during collapse, counts toward the visible-node limit and is distinguished from real Needs without a fabricated original-Need link. Replacing the input model's stakeholder type names does not require source-code changes.
-     - ``tests/test_browser.py::test_project_paging[file]``;
-       ``tests/test_browser.py::test_project_paging[http]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
+     - ``docs/test-scripts/test_browser.py::test_project_paging[file]``;
+       ``docs/test-scripts/test_browser.py::test_project_paging[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
    * - :need:`STV_SWR_052`
      - A 201-stakeholder fixture offers 41 pages and every stakeholder ID appears on exactly one entry page. The initially open root reveals at most five entries. Page changes retain the project root, show only the selected page's rooted exploration and restore that page's independent accepted expansion state when revisited. Hidden entries and Need parts are not listed as top-level stakeholder roots. An empty project shows a no-stakeholder-requirements indication without an empty plus control.
-     - ``tests/test_browser.py::test_project_paging[file]``;
-       ``tests/test_browser.py::test_project_paging[http]``;
-       ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
-       ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
+     - ``docs/test-scripts/test_browser.py::test_project_paging[file]``;
+       ``docs/test-scripts/test_browser.py::test_project_paging[http]``;
+       ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
+       ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges``;
        ``frontend/test/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views``
@@ -318,93 +318,93 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``frontend/test/layout.test.js :: STV_SWR_053: blocked skipped-level edges retain safe detours``
    * - :need:`STV_SWR_054`
      - The rendered viewport reports a computed height of 975px.
-     - ``tests/test_browser.py::test_usability_smoke[file]``;
-       ``tests/test_browser.py::test_usability_smoke[http]``
+     - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``
    * - :need:`STV_SWR_055`
      - Upward incoming and outgoing groups precede neutral and downward groups with stable ties. Replacement level mappings drive the order without relation-name assumptions. Expansion and collapse retain order and the existing keyboard/focus behavior.
-     - ``tests/test_browser.py::test_control_order_smoke[file]``;
-       ``tests/test_browser.py::test_control_order_smoke[http]``;
+     - ``docs/test-scripts/test_browser.py::test_control_order_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_control_order_smoke[http]``;
        ``frontend/test/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship``;
        ``frontend/test/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions``
    * - :need:`STV_SWR_056`
      - A five-child star centers exactly. Competing parents, shared children, cycles, reverse-authored links and isolated nodes preserve finite geometry, nonoverlap, semantic levels, shared identity and safe routes.
-     - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
-       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
+     - ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``;
        ``frontend/test/layout.test.js :: STV_SWR_056: competing parents do not displace a separate centered parent``;
        ``frontend/test/layout.test.js :: STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated``;
        ``frontend/test/layout.test.js :: STV_SWR_056: parent and project center over five visible children``;
        ``frontend/test/layout.test.js :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap``
    * - :need:`STV_SWR_057`
      - ID/title search, exact-ID confirmation, keyboard suggestions, invalid/hidden input, empty catalogs, repeated changes, overview return, layout failure/staleness and independent views pass file/HTTP checks. Runtime seed replacement requires neither source edits nor a Sphinx rebuild.
-     - ``tests/test_browser.py::test_interactive_seed_smoke[file]``;
-       ``tests/test_browser.py::test_interactive_seed_smoke[http]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[file]``;
-       ``tests/test_release_seeds.py::test_seed_selection_release[http]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[file]``;
-       ``tests/test_release_seeds.py::test_empty_seed_catalog[http]``;
-       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
-       ``tests/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
+     - ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
+       ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
        ``frontend/test/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``;
        ``frontend/test/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
-     - ``tests/test_build.py::test_cross_page_bundle``;
-       ``tests/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
-       ``tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``
+     - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``;
+       ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``
    * - :need:`STV_SYS_002`
      - Two differently named host schemas generate correctly mapped views without duplicate type definitions; an unknown level or missing required mapping fails with its entry path.
-     - ``tests/test_build.py::test_alternate_host_schema_external_metadata_and_parts``
+     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``
    * - :need:`STV_SYS_003`
      - The same output supports navigation and local-object inspection under file URLs with networking disabled and under static HTTP hosting.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SYS_004`
      - A cross-document chain can be followed from either end; a missing target appears as a placeholder and host validation determines overall build failure.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
-       ``tests/test_browser.py::test_missing_placeholder_and_detail_error[http]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
+       ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``
    * - :need:`STV_SYS_005`
      - A software-seeded view reveals higher levels above it, an added hardware level respects its declared position, and shared tests remain right of every connected artifact.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_006`
      - A locally rendered object on another page has equivalent displayed metadata/body in hover or keyboard details and opens at its original anchor from file and HTTP URLs. An external object without a local body shows metadata, its original link and the unavailable-details indication; widget-specific script behavior is not required. Uncached remote embedded media uses the owner-approved unavailable-offline indication and explicit resource link, without automatic retrieval; local bundled media remains available.
-     - ``tests/test_browser.py::test_usability_smoke[file]``;
-       ``tests/test_browser.py::test_usability_smoke[http]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
+       ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SYS_007`
      - Expanding, zooming and panning one of two views leaves the other unchanged.
-     - ``tests/test_browser.py::test_offline_exploration[file]``;
-       ``tests/test_browser.py::test_offline_exploration[http]``
+     - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
    * - :need:`STV_SYS_008`
      - A tens-of-thousands fixture remains explorable; a transition to 200 succeeds and one to 201 leaves prior state unchanged with an explanation.
-     - ``tests/test_capacity.py::test_large_project_at_visible_capacity[file]``;
-       ``tests/test_capacity.py::test_large_project_at_visible_capacity[http]``
+     - ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]``;
+       ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``
    * - :need:`STV_SYS_009`
      - A built wheel installs into a clean host environment and produces an embedded HTML view without copying repository implementation files.
-     - ``tests/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
    * - :need:`STV_SYS_010`
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
-     - ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``tests/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+     - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
 
 Executable sources
 ------------------
 
-* :download:`tests/test_browser.py <../tests/test_browser.py>`
-* :download:`tests/test_build.py <../tests/test_build.py>`
-* :download:`tests/test_bundle.py <../tests/test_bundle.py>`
-* :download:`tests/test_capacity.py <../tests/test_capacity.py>`
-* :download:`tests/test_details.py <../tests/test_details.py>`
-* :download:`tests/test_graph.py <../tests/test_graph.py>`
-* :download:`tests/test_model.py <../tests/test_model.py>`
-* :download:`tests/test_package.py <../tests/test_package.py>`
-* :download:`tests/test_release_seeds.py <../tests/test_release_seeds.py>`
+* :download:`docs/test-scripts/test_browser.py <../docs/test-scripts/test_browser.py>`
+* :download:`docs/test-scripts/test_build.py <../docs/test-scripts/test_build.py>`
+* :download:`docs/test-scripts/test_bundle.py <../docs/test-scripts/test_bundle.py>`
+* :download:`docs/test-scripts/test_capacity.py <../docs/test-scripts/test_capacity.py>`
+* :download:`docs/test-scripts/test_details.py <../docs/test-scripts/test_details.py>`
+* :download:`docs/test-scripts/test_graph.py <../docs/test-scripts/test_graph.py>`
+* :download:`docs/test-scripts/test_model.py <../docs/test-scripts/test_model.py>`
+* :download:`docs/test-scripts/test_package.py <../docs/test-scripts/test_package.py>`
+* :download:`docs/test-scripts/test_release_seeds.py <../docs/test-scripts/test_release_seeds.py>`
 * :download:`frontend/test/groups.test.js <../frontend/test/groups.test.js>`
 * :download:`frontend/test/layout.test.js <../frontend/test/layout.test.js>`
 * :download:`frontend/test/seeds.test.js <../frontend/test/seeds.test.js>`

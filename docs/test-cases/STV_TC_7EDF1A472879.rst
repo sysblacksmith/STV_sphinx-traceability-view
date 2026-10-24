@@ -6,7 +6,7 @@ large project at visible capacity
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_capacity.py :: tests/test_capacity.py::test_large_project_at_visible_capacity[file]
+   :evidence: docs/test-scripts/test_capacity.py :: docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_043, STV_SHR_044, STV_SWR_043, STV_SWR_044, STV_SYS_008
@@ -22,9 +22,9 @@ large project at visible capacity
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_capacity.py::test_large_project_at_visible_capacity[file]``.
+   **Executable selector:** ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_capacity.py::test_large_project_at_visible_capacity[file]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

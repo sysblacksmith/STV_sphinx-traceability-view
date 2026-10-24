@@ -6,7 +6,7 @@ invalid seed source location
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_build.py :: tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
@@ -22,9 +22,9 @@ invalid seed source location
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``.
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_build.py::test_invalid_seed_source_location[HIDDEN_A]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

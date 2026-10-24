@@ -1,8 +1,8 @@
 User problem reports
 ====================
 
-This folder, ``docs/problems/``, is the canonical handover location for user
-issues. Add a report named ``problem_<slug>.rst`` and keep screenshots/logs
+This folder, ``docs/problem-tickets/``, is the canonical handover location for user
+issues. Add a report named ``STV_PR_<NNN>.rst`` and keep screenshots/logs
 beside it. Use :download:`report.rst.template <report.rst.template>` or provide
 an informal text report for the problem solver to normalize. Include observed
 and expected behavior, reproduction steps and environment when known.
@@ -24,4 +24,4 @@ with partial verification; owner review remains pending.
    :glob:
    :maxdepth: 1
 
-   problem_*
+   STV_PR_*

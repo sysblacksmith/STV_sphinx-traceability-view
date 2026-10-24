@@ -1,0 +1,18 @@
+Change requests
+===============
+
+Records use stable project-prefixed sequence numbers in original request order,
+not retrospective file creation time. The initial request is reconstructed from
+available evidence; see its provenance. Canonical requirement IDs and historical
+acceptance records remain unchanged.
+
+.. toctree::
+   :maxdepth: 1
+
+   STV_CR_001_initial-project-request
+   STV_CR_002_starting-nodes
+   STV_CR_003_usability-problems
+   STV_CR_004_problem-report-handover
+   STV_CR_005_control-order
+   STV_CR_006_centered-layout-and-interactive-seeds
+   STV_CR_007_record-folder-layout

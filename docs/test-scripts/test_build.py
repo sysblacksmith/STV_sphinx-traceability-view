@@ -19,7 +19,7 @@ def manifest(output):
 
 
 def build(source, output, *options):
-    env = dict(os.environ, PYTHONPATH=str(Path(__file__).parents[1] / "src"))
+    env = dict(os.environ, PYTHONPATH=str(Path(__file__).parents[2] / "src"))
     return subprocess.run([sys.executable, "-m", "sphinx", "-b", "html", "-W", "--keep-going", *options, str(source), str(output)], env=env, capture_output=True, text=True)
 
 

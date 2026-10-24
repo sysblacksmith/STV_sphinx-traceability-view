@@ -6,7 +6,7 @@ documentation visuals
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_documentation_visuals
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_documentation_visuals
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_017, STV_SHR_018, STV_SYS_003
@@ -22,9 +22,9 @@ documentation visuals
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_documentation_visuals``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_documentation_visuals``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_documentation_visuals" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_documentation_visuals" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

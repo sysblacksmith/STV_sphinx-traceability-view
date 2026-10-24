@@ -43,7 +43,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: docs/sources.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/sources.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -272,7 +272,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: feature_inspection, release_initial
    :basis: owner
-   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18; docs/requirement-changes/usability-problems.rst
+   :evidence: docs/sources.rst :: project owner inspection interaction clarification 2026-10-18; docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -952,7 +952,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/starting-nodes.rst; docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_002_starting-nodes.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -975,7 +975,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/starting-nodes.rst :: owner request and requirement amendment
+   :evidence: docs/change-requests/STV_CR_002_starting-nodes.rst :: owner request and requirement amendment
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -994,7 +994,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/usability-problems.rst
+   :evidence: docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -1007,7 +1007,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/usability-problems.rst
+   :evidence: docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -1020,7 +1020,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: release_initial
    :basis: owner
-   :evidence: docs/problems/problem_5.rst
+   :evidence: docs/problem-tickets/STV_PR_005.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -1036,7 +1036,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 
@@ -1055,7 +1055,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :status: accepted
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: docs/requirement-changes/centered-layout-and-interactive-seeds.rst
+   :evidence: docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
    :verification_state: not_assessed
 

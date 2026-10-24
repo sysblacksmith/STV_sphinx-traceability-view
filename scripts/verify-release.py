@@ -23,7 +23,7 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def candidate_sources():
     files=[]
-    for directory in ('src','frontend/src','frontend/test','tests','scripts'):
+    for directory in ('src','frontend/src','frontend/test','docs/test-scripts','scripts'):
         files.extend(path for path in (ROOT/directory).rglob('*') if path.is_file() and '__pycache__' not in path.parts and not path.is_symlink())
     files.extend(ROOT/name for name in ('pyproject.toml','hatch_build.py','frontend/package.json','frontend/package-lock.json'))
     files.extend(ROOT/'docs'/name for name in ('stakeholder.rst','system.rst','software.rst','internal-interfaces.rst','implementation-plan.rst','verification-plan.rst'))
@@ -58,7 +58,7 @@ def main():
     existing=index.read_text(encoding='utf-8') if index.exists() else 'Release test executions\n=======================\n\nHistorical candidate results; no deployment or release approval is implied.\n\n.. toctree::\n   :maxdepth: 2\n\n'
     index.write_text(existing+'   '+args.record+'/index\n',encoding='utf-8')
     wheel=ROOT/'dist'/f'sphinx_traceability_view-{version}-py3-none-any.whl'
-    shared=Path(os.environ.get('REQUIREMENTS_SKILL_DIR',ROOT.parent/'#agents/skills/reverse-engineer-requirements'))
+    shared=Path(os.environ.get('REQUIREMENTS_SKILL_DIR',ROOT.parent/'-agents/skills/reverse-engineer-requirements'))
     env=dict(os.environ,STV_WHEEL=str(wheel),STV_GECKODRIVER=str(args.driver.resolve()),STV_SCREENSHOTS=str(record/'screenshots'),
              STV_CAPACITY_OUTPUT=str(ROOT/'docs/_build/release-benchmark'/args.record/'html'),
              STV_CAPACITY_METRICS=str(record/'capacity-browser.json'),STV_CONSUMER_RECORD=str(record/'consumer'))
@@ -109,7 +109,7 @@ def main():
         metrics=json.loads((previous/'capacity-build.json').read_text(encoding='utf-8'))
         output=Path(previous_metadata['benchmark_output']).resolve()
         relevant=[name for name in sources if name.startswith('src/') or name in (
-            'scripts/benchmark.py','tests/fixtures/minimal/conf.py','frontend/package-lock.json')]
+            'scripts/benchmark.py','docs/test-scripts/fixtures/minimal/conf.py','frontend/package-lock.json')]
         proof={'source_record':args.reuse_capacity_from,'output':str(output),
                'current_wheel_sha256':sha(wheel),'previous_wheel_sha256':previous_metadata['wheel_sha256'],
                'changed_fixture_inputs':[name for name in relevant if previous_sources.get(name)!=sources[name]]}
@@ -142,7 +142,7 @@ def main():
             shutil.copyfile(benchmark_dir/'build.log',record/'capacity-host.log')
     # Fixture reuse changes the actual benchmark path; retain it in both records.
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
-    run('pytest',[sys.executable,'-m','pytest','tests','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
+    run('pytest',[sys.executable,'-m','pytest','docs/test-scripts','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
     run('node-tests',['node','--test','--test-reporter=junit','frontend/test/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
     run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--csv',str(record/'traceability.csv')])

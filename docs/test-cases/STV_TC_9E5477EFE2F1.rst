@@ -6,7 +6,7 @@ async layout failure and stale completion
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_browser.py :: tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_047, STV_SWR_044, STV_SWR_052
@@ -22,9 +22,9 @@ async layout failure and stale completion
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]``.
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_browser.py::test_async_layout_failure_and_stale_completion[file]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable
@@ -38,7 +38,7 @@ async layout failure and stale completion
       def test_async_layout_failure_and_stale_completion(browser,short_output,protocol):
           project=Path(__file__).parents[1]
           script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
-          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'tests/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
           assert result.returncode==0,result.stderr
           (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
           # Keep the host alive across all injected completions.

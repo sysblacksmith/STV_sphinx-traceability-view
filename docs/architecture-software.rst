@@ -99,4 +99,4 @@ Usability routing and inspection
 Layout owns facing ports, clear direct segments and obstacle detours. Rendering
 owns the 975px viewport; inspection owns delayed hover and cancellation.
 These refinements preserve existing component boundaries and selected libraries;
-see :doc:`requirement-changes/usability-problems` for the change scope.
+see :doc:`change-requests/STV_CR_003_usability-problems` for the change scope.

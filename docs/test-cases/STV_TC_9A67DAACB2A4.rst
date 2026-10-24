@@ -6,7 +6,7 @@ seed selection release
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_release_seeds.py :: tests/test_release_seeds.py::test_seed_selection_release[http]
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_003, STV_SHR_014, STV_SHR_026, STV_SHR_038, STV_SHR_047, STV_SHR_048, STV_SHR_052, STV_SHR_053, STV_SWR_003, STV_SWR_038, STV_SWR_048, STV_SWR_051, STV_SWR_052, STV_SWR_056, STV_SWR_057
@@ -22,9 +22,9 @@ seed selection release
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_release_seeds.py::test_seed_selection_release[http]``.
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_release_seeds.py::test_seed_selection_release[http]" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

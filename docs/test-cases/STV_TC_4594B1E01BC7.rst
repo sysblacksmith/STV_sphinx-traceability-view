@@ -6,7 +6,7 @@ classic registration treats prototype keys and script text as data
    :status: accepted
    :tags: release_initial
    :basis: documented
-   :evidence: tests/test_bundle.py :: tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data
+   :evidence: docs/test-scripts/test_bundle.py :: docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_017, STV_SHR_018, STV_SHR_027, STV_SWR_017, STV_SWR_018, STV_SWR_027
@@ -22,9 +22,9 @@ classic registration treats prototype keys and script text as data
    30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
    offline wheelhouse. The procedure below specifies test-specific inputs.
 
-   **Executable selector:** ``tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``.
+   **Executable selector:** ``docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``.
 
-   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data" -q``.
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data" -q``.
 
    **Procedure and expected outcomes:** Execute the following existing test
    procedure with its fixture helpers. Every assertion is a required observable

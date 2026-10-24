@@ -21,14 +21,24 @@ Sphinx-Needs extension specification, architecture and supporting records.
    :maxdepth: 2
    :caption: Architecture
 
+   architecture-decisions
    architecture-system
    elements-system
    architecture-software
-   state-machine
    elements-software
-   architecture-decisions
+   state-machine
    technology-stack
    traceability
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Verification and Validation
+
+   verification-plan
+   test-cases/index
+   test-scripts/index
+   test-coverage
+   test-execution/index
 
 .. toctree::
    :maxdepth: 2
@@ -36,8 +46,6 @@ Sphinx-Needs extension specification, architecture and supporting records.
 
    internal-interfaces
    implementation-plan
-   verification-plan
-   test-cases/index
    review
    maturity
    demo

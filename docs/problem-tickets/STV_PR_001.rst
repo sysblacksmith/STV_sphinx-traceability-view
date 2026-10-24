@@ -6,7 +6,7 @@ Problem 1: Facing edge ports
    :status: fixed
    :tags: usability_draft
    :basis: owner
-   :evidence: docs/problems/problem_1.rst; docs/requirement-changes/usability-problems.rst
+   :evidence: docs/problem-tickets/STV_PR_001.rst; docs/change-requests/STV_CR_003_usability-problems.rst
    :priority: unassigned
    :verification_state: partial
 
@@ -20,17 +20,17 @@ Problem 1: Facing edge ports
 
    .. code-block:: text
 
-      The arrows in the view are routed around the boxes (see problem_1.png). This is unneceesaryily complex. the link to elements above the box shall start on the boxes top and not bottom. Furthermore the links shall end at the bottom of the parent box (STV_SYS_001) and not on its top. This avoids unnesessary edges in the arrows.
+      The arrows in the view are routed around the boxes (see STV_PR_001.png). This is unneceesaryily complex. the link to elements above the box shall start on the boxes top and not bottom. Furthermore the links shall end at the bottom of the parent box (STV_SYS_001) and not on its top. This avoids unnesessary edges in the arrows.
 
    **Evidence**
 
-   .. image:: problem_1.png
+   .. image:: STV_PR_001.png
       :alt: Original screenshot illustrating problem 1
       :width: 100%
 
    **Analysis and disposition**
 
-   See :doc:`/requirement-changes/usability-problems` for requirements, design,
+   See :doc:`/change-requests/STV_CR_003_usability-problems` for requirements, design,
    source changes and smoke-test evidence.
 
    **Diagnosis and fix**
@@ -42,7 +42,7 @@ Problem 1: Facing edge ports
 
    **Verification and handover**
 
-   Smoke check: ``node --test test/layout.test.js`` passed on 2026-10-18; commands and limits are recorded in :doc:`/requirement-changes/usability-problems`.
+   Smoke check: ``node --test test/layout.test.js`` passed on 2026-10-18; commands and limits are recorded in :doc:`/change-requests/STV_CR_003_usability-problems`.
    The fix is implemented as a draft. Owner review, full regression and release
    approval remain pending; partial verification does not accept linked requirements.
 
