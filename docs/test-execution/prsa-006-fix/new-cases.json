@@ -1,0 +1,20 @@
+[
+  [
+    "STV_TC_CI_TRUST",
+    "CI policy rejects privilege and provenance drift",
+    "docs/test-scripts/test_ci_security.py::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+    "Load both real workflow files, require the reviewed least-privilege policy, and mutate copies to request write tokens, unsafe triggers, mutable action tags, privileged repository code, missing attestation jobs, altered subjects or an unrestricted attestation condition. Every modified variant must be rejected."
+  ],
+  [
+    "STV_TC_CI_CHECKSUMS",
+    "Candidate checksums detect changed artifact bytes",
+    "docs/test-scripts/test_ci_security.py::test_candidate_checksums_detect_changed_artifact_bytes",
+    "Generate checksums and source metadata for a wheel/source pair. Verify both with GNU sha256sum, alter wheel bytes and require verification failure. An extra wheel must make checksum generation fail rather than omit an ambiguous subject."
+  ],
+  [
+    "STV_TC_CI_RUNTIME",
+    "CI runtime command imports the installed Python 3.10 package",
+    "scripts/ci.py runtime",
+    "Install the newly built development wheel into a Python 3.10 host, execute the CI runtime subcommand, require an installed-package import outside the checkout, matching installed version, a successful pip check and warnings-as-errors Sphinx fixture build."
+  ]
+]

@@ -1,0 +1,16 @@
+{
+  "repository": "sysblacksmith/STV_sphinx-traceability-view",
+  "visibility": "private",
+  "main_sha": "31fd1b523a8b0f6b0250d90ebac47e7afe7496ef",
+  "main_protected": false,
+  "rulesets_response": {
+    "status": 403,
+    "message": "Upgrade to GitHub Pro or make this repository public to enable this feature."
+  },
+  "branch_protection_response": {
+    "status": 403,
+    "message": "Resource not accessible by integration"
+  },
+  "shared_method_repository_private": true,
+  "remote_changes_performed": false
+}

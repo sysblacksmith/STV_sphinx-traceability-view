@@ -1,0 +1,39 @@
+{
+  "baseline": "31fd1b523a8b0f6b0250d90ebac47e7afe7496ef",
+  "scope": "Local CI/provenance preparation only; no remote settings or hosted runs",
+  "final_source_sha256": {
+    ".github/dependabot.yml": "9e028e72a69f7cd28e6321d36b59bd1103f849cb2566eb0e3c639b1fc7371920",
+    ".github/workflows/provenance.yml": "2b3c855a3464c9ab5328f1ceb291230b0e093a6e45e3f6f9136d366f5a4ce56e",
+    ".github/workflows/validation.yml": "4c5915e1e58df3b9413406e6bafc5e322524d8dbd9e3e2cf5eb4d6aee0f9cf1b",
+    ".github/main-protection.json": "c98787ecd01bae40c1336def79b3c2533b66ad2dcf19fffa6ae613f3aab9cbc5",
+    "scripts/ci.py": "13c62c1b5a9c1aa508ebcc83e4f5b030afd1b99069b15fd539d7df70e76dd7a4",
+    "scripts/check-workflows.py": "e203a2a5ff1d42629427c23deabdbd3829d5c623a07067cb15ccb36c790c121a",
+    "docs/test-scripts/test_ci_security.py": "b14d407acd598d27145f7f26f79ba7f9682006231c2aab9e442cdc66ea38890e",
+    "docs/architecture/implementation/requirements-implementation.txt": "4829fb5c6043b6d7976b215e7a79fd823881ccb129d768dce158975a656f33e6"
+  },
+  "commands": [
+    ".venv-implementation/Scripts/python.exe scripts/ci.py validate",
+    ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_ci_security.py -q --junitxml=docs/test-execution/prsa-006-fix/security.xml",
+    "docs/_build/ci-tools/actionlint.exe -shellcheck= -pyflakes= .github/workflows/validation.yml .github/workflows/provenance.yml",
+    "docs/_build/runtime310-prsa003/Scripts/python.exe scripts/ci.py runtime"
+  ],
+  "identity_note": "CI snapshot retained before final policy refinement; final targeted security retest and actionlint cover current workflows/policy. Initial reports predate final source and are not attributed to it.",
+  "development_artifacts": [
+    {
+      "name": "build-info.json",
+      "sha256": "09ff57da667097ab1fdd49028255d7ff03fa075688fc4695d725997b40d4e5c7"
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "a300d3c6b14c75effc73952eef981abc104571a6da0da02371bf8cf148347ab4"
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "sha256": "ca8c4e3f43e7307e549ec42da7ed1d04ceb84d52517dc5672099522256ffbf83"
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0.dev0.tar.gz",
+      "sha256": "e335029605579d9c931532a43dd80468d941d3289f4cf8ed227cb3b0b64bd8a7"
+    }
+  ]
+}

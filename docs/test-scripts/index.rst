@@ -20,4 +20,5 @@ the installed wheel. Canonical test-case identities remain in
 * ``test_package.py``
 * ``test_sdist.py``
 * ``test_publication.py``
+* ``test_ci_security.py``
 * ``test_release_seeds.py``

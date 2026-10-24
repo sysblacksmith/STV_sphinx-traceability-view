@@ -52,6 +52,7 @@ installation and a minimal integration example.
    :caption: Verification and Validation
 
    verification-plan
+   ci-and-provenance
    test-cases/index
    test-scripts/index
    test-coverage

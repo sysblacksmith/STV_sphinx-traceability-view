@@ -1,0 +1,9 @@
+{
+  "source_commit": "31fd1b523a8b0f6b0250d90ebac47e7afe7496ef",
+  "dirty_worktree": true,
+  "run_id": null,
+  "run_attempt": null,
+  "repository": null,
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "qualification": "development checks only; no release approval, capacity/browser qualification or publication"
+}

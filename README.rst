@@ -267,3 +267,13 @@ A wheel can be rebuilt from this archive without Node. Engineering documentation
 execution history and local build/tool environments remain in the repository;
 they are not source-package inputs. Archive selection ignores VCS negations so
 retaining execution logs in Git cannot accidentally publish them in a package.
+
+Automated validation and provenance
+-----------------------------------
+
+GitHub workflows validate package/fixture changes with read-only tokens and
+immutable action pins. A separate manual main-branch workflow prepares
+checksummed candidate bytes and, for a public repository, build provenance.
+Neither workflow publishes a release. ``docs/ci-and-provenance.rst`` describes
+the check scope, verification commands and unapplied branch-protection proposal.
+Hosted runs and protection activation remain separate owner steps.

@@ -271,7 +271,7 @@ STV_TC_136FE8B1A097: failed finalization retains pending page and previous asset
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_027, STV_SWR_015, STV_SWR_017, STV_SWR_027
-   :executed_by: STV_TE_2FE927B84AC573F5, STV_TE_5428B57695F57556, STV_TE_370A22653A3C61D1, STV_TE_AB3AB31683DE7C64, STV_TE_35ACFC65C5B99B80, STV_TE_644E38E89EF5303D
+   :executed_by: STV_TE_2FE927B84AC573F5, STV_TE_5428B57695F57556, STV_TE_370A22653A3C61D1, STV_TE_AB3AB31683DE7C64, STV_TE_35ACFC65C5B99B80, STV_TE_644E38E89EF5303D, STV_TE_147E98E60DA06020, STV_TE_FB2A4E45E7928173
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -397,7 +397,7 @@ STV_TC_3B0D9F21166C: alternate host schema external metadata and parts
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_036, STV_SHR_045, STV_SHR_047, STV_SHR_048, STV_SWR_014, STV_SWR_036, STV_SWR_045, STV_SWR_047, STV_SWR_048, STV_SYS_002
-   :executed_by: STV_TE_19C8684FFE688A1D, STV_TE_CECCD71A1F7BD48C, STV_TE_AA534A6986BCE95B, STV_TE_8105F93F757B5B04, STV_TE_1DEFDCD63760E5EB
+   :executed_by: STV_TE_19C8684FFE688A1D, STV_TE_CECCD71A1F7BD48C, STV_TE_AA534A6986BCE95B, STV_TE_8105F93F757B5B04, STV_TE_1DEFDCD63760E5EB, STV_TE_4D22B3B6FFD3CE4C, STV_TE_5878BEA6800904D7
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -517,7 +517,7 @@ STV_TC_41F176801699: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_55AFED6304CFE81F, STV_TE_93AFE98F3EE60BE8, STV_TE_785BF58793290B0E, STV_TE_C6840C674379E70A, STV_TE_98C1FD50055BD13A
+   :executed_by: STV_TE_55AFED6304CFE81F, STV_TE_93AFE98F3EE60BE8, STV_TE_785BF58793290B0E, STV_TE_C6840C674379E70A, STV_TE_98C1FD50055BD13A, STV_TE_B541FAAB192B3BBE, STV_TE_4CA68E5E713B77CF
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -704,7 +704,7 @@ STV_TC_59537D3F286A: seed capacity at directive
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
-   :executed_by: STV_TE_A5B37D2B297444D4, STV_TE_10B3E6446E94D385, STV_TE_B88FABBBBA1DB23F, STV_TE_BE6098AB231764A5, STV_TE_A15052A1362D4FBC
+   :executed_by: STV_TE_A5B37D2B297444D4, STV_TE_10B3E6446E94D385, STV_TE_B88FABBBBA1DB23F, STV_TE_BE6098AB231764A5, STV_TE_A15052A1362D4FBC, STV_TE_15D0BD9F9CF33DA9, STV_TE_C7A76049793288AA
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -823,7 +823,7 @@ STV_TC_5C902A5F732E: cross page bundle
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_002, STV_SHR_013, STV_SHR_026, STV_SHR_048, STV_SWR_001, STV_SWR_002, STV_SWR_013, STV_SWR_026, STV_SYS_001
-   :executed_by: STV_TE_764956AD4834A5CE, STV_TE_7BF04875B87C2A7D, STV_TE_4B3E601321BA8924, STV_TE_226A0A5469B1E2C8, STV_TE_18FC22178525A93E
+   :executed_by: STV_TE_764956AD4834A5CE, STV_TE_7BF04875B87C2A7D, STV_TE_4B3E601321BA8924, STV_TE_226A0A5469B1E2C8, STV_TE_18FC22178525A93E, STV_TE_3E778A3C5CF09B0C, STV_TE_6B9128D591CDF82B
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -879,7 +879,7 @@ STV_TC_6C7A64E533AC: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_97AA7EB41C45F077, STV_TE_39301A83113F7C7D, STV_TE_9EBE4F77A19E95FE, STV_TE_D18E0A7F3567D77B, STV_TE_1C3AE7E9B5E53605
+   :executed_by: STV_TE_97AA7EB41C45F077, STV_TE_39301A83113F7C7D, STV_TE_9EBE4F77A19E95FE, STV_TE_D18E0A7F3567D77B, STV_TE_1C3AE7E9B5E53605, STV_TE_5F20F75886471936, STV_TE_8E740204118C54D9
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1208,7 +1208,7 @@ STV_TC_85BBE1714F96: invalid mapping has entry path and location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_25353B9B728085D0, STV_TE_386D5C547F786FC8, STV_TE_1BA15C05B4E308DA, STV_TE_62AC4B0AB9B248F8, STV_TE_04003BC62A11DADD
+   :executed_by: STV_TE_25353B9B728085D0, STV_TE_386D5C547F786FC8, STV_TE_1BA15C05B4E308DA, STV_TE_62AC4B0AB9B248F8, STV_TE_04003BC62A11DADD, STV_TE_BEB0736CCC12C0B6, STV_TE_B1B8242C880AB7CE
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1470,7 +1470,7 @@ STV_TC_A221103BC26C: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_DA7D6F5E8EF93887, STV_TE_0898010E7C9AF0A4, STV_TE_2CDA237388E56731, STV_TE_72C2FBE6E1A2D120, STV_TE_FE11303CE3990960
+   :executed_by: STV_TE_DA7D6F5E8EF93887, STV_TE_0898010E7C9AF0A4, STV_TE_2CDA237388E56731, STV_TE_72C2FBE6E1A2D120, STV_TE_FE11303CE3990960, STV_TE_06A072906D5A03D1, STV_TE_971193CC70E48D46
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1521,7 +1521,7 @@ STV_TC_A953C70E70B1: seed capacity at directive
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
-   :executed_by: STV_TE_686277C8A7C1D863, STV_TE_5EBB8A15272B4D9F, STV_TE_8F17CFA55BF7EBA1, STV_TE_649684CCAC6F8A53, STV_TE_19BECE77146BA374
+   :executed_by: STV_TE_686277C8A7C1D863, STV_TE_5EBB8A15272B4D9F, STV_TE_8F17CFA55BF7EBA1, STV_TE_649684CCAC6F8A53, STV_TE_19BECE77146BA374, STV_TE_37235BA0631DE3C2, STV_TE_7CA638873EC75B4A
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1573,7 +1573,7 @@ STV_TC_B5D550F17384: prior fatal exception is not replaced by bundle generation
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SWR_027
-   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273, STV_TE_13B11B8AE03CF870, STV_TE_10081046B1450184, STV_TE_05C8C8194E3C5F0D, STV_TE_95BAD407570E981E
+   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273, STV_TE_13B11B8AE03CF870, STV_TE_10081046B1450184, STV_TE_05C8C8194E3C5F0D, STV_TE_95BAD407570E981E, STV_TE_E6D08074BE5F60AD, STV_TE_C9F5F024FD54FD79
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1672,7 +1672,7 @@ STV_TC_D1A17B11B9C1: incremental body change hidden and deleted objects
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_018, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_015, STV_SWR_018, STV_SWR_048
-   :executed_by: STV_TE_A7840F205B45812E, STV_TE_1FEF2B44838D4155, STV_TE_AD072603469BA90E, STV_TE_8447E3E24802A7A4, STV_TE_F5233640F6DF867D
+   :executed_by: STV_TE_A7840F205B45812E, STV_TE_1FEF2B44838D4155, STV_TE_AD072603469BA90E, STV_TE_8447E3E24802A7A4, STV_TE_F5233640F6DF867D, STV_TE_55D1143DA9DE27A7, STV_TE_010FFE0C52956BBD
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1731,7 +1731,7 @@ STV_TC_DB4FE4CDD257: host owns broken trace failure
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SWR_027, STV_SWR_028
-   :executed_by: STV_TE_89DB9F0DFA6EBD36, STV_TE_DC50B0D40735701B, STV_TE_93C0D8BF6B430F32, STV_TE_C22DE139B2E5DF52, STV_TE_F75BB11AA22CCBEA
+   :executed_by: STV_TE_89DB9F0DFA6EBD36, STV_TE_DC50B0D40735701B, STV_TE_93C0D8BF6B430F32, STV_TE_C22DE139B2E5DF52, STV_TE_F75BB11AA22CCBEA, STV_TE_5BD3D06F689A4099, STV_TE_71A42A22CDFDE17A
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1884,7 +1884,7 @@ STV_TC_DF0D9B21A92D: host default directional labels are used
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_045, STV_SWR_045
-   :executed_by: STV_TE_379307EDD1A87108, STV_TE_45E5FFF9B4722E84, STV_TE_C1E476628B443676, STV_TE_CFF8782DE1D60572, STV_TE_B8467BD319FACA48
+   :executed_by: STV_TE_379307EDD1A87108, STV_TE_45E5FFF9B4722E84, STV_TE_C1E476628B443676, STV_TE_CFF8782DE1D60572, STV_TE_B8467BD319FACA48, STV_TE_580685ED94D01FB9, STV_TE_4C39FAAE619D9350
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -2623,7 +2623,7 @@ STV_TC_F988267D01C9: clean wheel host
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_042, STV_SHR_046, STV_SWR_042, STV_SWR_046, STV_SYS_009
-   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD, STV_TE_23CFB2E2F59258A0, STV_TE_7BEB3B1B6625A5DC, STV_TE_01F92BEF833F1EDE, STV_TE_E9C945EDF4A0769F, STV_TE_9AFC30AFCB2544CA, STV_TE_8C0DFF558A66DCA0
+   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD, STV_TE_23CFB2E2F59258A0, STV_TE_7BEB3B1B6625A5DC, STV_TE_01F92BEF833F1EDE, STV_TE_E9C945EDF4A0769F, STV_TE_9AFC30AFCB2544CA, STV_TE_8C0DFF558A66DCA0, STV_TE_B4CE34E817E66D0A, STV_TE_8C81216F00482ADD
    :last_result: passed
 
    **Level:** System packaging integration.
@@ -2792,7 +2792,7 @@ STV_TC_FC50F6627767: unsupported builder fails clearly
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SWR_001
-   :executed_by: STV_TE_B17272C4602B2A77, STV_TE_BE1ACFDE9841CB9D, STV_TE_DB3A63198D744D1A, STV_TE_5D5D6764322F0A1B, STV_TE_F6C5F1F06B8C8442
+   :executed_by: STV_TE_B17272C4602B2A77, STV_TE_BE1ACFDE9841CB9D, STV_TE_DB3A63198D744D1A, STV_TE_5D5D6764322F0A1B, STV_TE_F6C5F1F06B8C8442, STV_TE_B4A4DD22BA6B72F8, STV_TE_09A2807578D5A808
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -3013,7 +3013,7 @@ STV_TC_LEGAL_GUARD: Reject unaudited distribution inputs
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SYS_009, STV_SWR_042
-   :executed_by: STV_TE_7F0E0FAA905ACCA8, STV_TE_FA10CBBD5A653BBA, STV_TE_B143FA7927D35E75, STV_TE_506DA5166F4226E8, STV_TE_1074CEBE7559F606
+   :executed_by: STV_TE_7F0E0FAA905ACCA8, STV_TE_FA10CBBD5A653BBA, STV_TE_B143FA7927D35E75, STV_TE_506DA5166F4226E8, STV_TE_1074CEBE7559F606, STV_TE_EF7E4DAFEAFBC4FA, STV_TE_EE13FB7DE2E2F1CD
    :last_result: passed
 
    **Level:** System build/distribution interface.
@@ -3167,7 +3167,7 @@ STV_TC_SDIST_BOUNDARY: Actual source archive respects the distribution boundary
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SYS_009, STV_SWR_042, STV_SWR_046
-   :executed_by: STV_TE_053E27C9576BC49A, STV_TE_3F0DEB05F990600D
+   :executed_by: STV_TE_053E27C9576BC49A, STV_TE_3F0DEB05F990600D, STV_TE_74B1E2689D5AA322, STV_TE_1DDD21C8F37EF5DC
    :last_result: passed
 
    **Level:** Packaging integration.
@@ -3205,7 +3205,7 @@ STV_TC_PUBLICATION_CLEAN: Clean rebuild retires obsolete publication files
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SYS_009, STV_SWR_042
-   :executed_by: STV_TE_D5D5C30CB3605726, STV_TE_00DF8B8564A416AA, STV_TE_0BA0673DB0572C62
+   :executed_by: STV_TE_D5D5C30CB3605726, STV_TE_00DF8B8564A416AA, STV_TE_0BA0673DB0572C62, STV_TE_DF5D6826958881EC, STV_TE_9A991F5CD63BFC3C
    :last_result: passed
 
    **Level:** Maintainer/Sphinx publication integration.
@@ -3236,7 +3236,7 @@ STV_TC_PUBLICATION_FAIL: Failed documentation build preserves published bytes
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SYS_009, STV_SWR_042
-   :executed_by: STV_TE_04F65BAA6CDB685B, STV_TE_057BEBB8A33EC7E4, STV_TE_4B16C75492B3457D
+   :executed_by: STV_TE_04F65BAA6CDB685B, STV_TE_057BEBB8A33EC7E4, STV_TE_4B16C75492B3457D, STV_TE_37C71B72B4C9EB26, STV_TE_55FA0354073DF3AF
    :last_result: passed
 
    **Level:** Maintainer/Sphinx publication integration.
@@ -3267,7 +3267,7 @@ STV_TC_PUBLICATION_ROLLBACK: Failed directory promotion restores previous public
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SYS_009, STV_SWR_042
-   :executed_by: STV_TE_257F51CA54DE5456, STV_TE_D90868BD589779C5, STV_TE_E0C20537B8E451DF
+   :executed_by: STV_TE_257F51CA54DE5456, STV_TE_D90868BD589779C5, STV_TE_E0C20537B8E451DF, STV_TE_D03C25CCCCEF8DF9, STV_TE_4658E397071ACF9C
    :last_result: passed
 
    **Level:** Maintainer/Sphinx publication integration.
@@ -3285,3 +3285,105 @@ STV_TC_PUBLICATION_ROLLBACK: Failed directory promotion restores previous public
    **Evidence:** Retain actual JUnit/log outcomes, source hashes and relative
    file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
    review remains pending; these are not full release qualification cases.
+
+STV_TC_CI_TRUST: CI policy rejects privilege and provenance drift
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: CI policy rejects privilege and provenance drift
+   :id: STV_TC_CI_TRUST
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_ci_security.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_136F9269B7351A90, STV_TE_30562D2F63C7ED1A, STV_TE_A0B0212F491B4997, STV_TE_4E407028E958FA48
+   :last_result: passed
+
+   **Level:** CI/distribution integration.
+
+   **Preconditions and inputs:** Maintained implementation environment for
+   workflow/checksum tests, real GitHub workflow files, Git and GNU sha256sum.
+   The runtime case requires the development wheel installed on Python 3.10.
+   No hosted workflow or attestation service is used in these local checks.
+
+   **Executable selector:** ``docs/test-scripts/test_ci_security.py::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift``.
+
+   **Invocation:** Run pytest for ``docs/test-scripts/test_ci_security.py``;
+   for the runtime case, use the installed Python 3.10 host to run
+   ``scripts/ci.py runtime``.
+
+   **Procedure and expected outcomes:** Load both real workflow files, require the reviewed least-privilege policy, and mutate copies to request write tokens, unsafe triggers, mutable action tags, privileged repository code, missing attestation jobs, altered subjects or an unrestricted attestation condition. Every modified variant must be rejected.
+
+   **Evidence:** Retain actual reports, commands and source/artifact identities
+   in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
+   local verification does not prove a hosted run or attestation occurred.
+
+STV_TC_CI_CHECKSUMS: Candidate checksums detect changed artifact bytes
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: Candidate checksums detect changed artifact bytes
+   :id: STV_TC_CI_CHECKSUMS
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_ci_security.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_0086C904AA50BF6E, STV_TE_F46E8734D73CCD1D, STV_TE_D0BFD3B60852DD51, STV_TE_EAC633983360B5F2
+   :last_result: passed
+
+   **Level:** CI/distribution integration.
+
+   **Preconditions and inputs:** Maintained implementation environment for
+   workflow/checksum tests, real GitHub workflow files, Git and GNU sha256sum.
+   The runtime case requires the development wheel installed on Python 3.10.
+   No hosted workflow or attestation service is used in these local checks.
+
+   **Executable selector:** ``docs/test-scripts/test_ci_security.py::test_candidate_checksums_detect_changed_artifact_bytes``.
+
+   **Invocation:** Run pytest for ``docs/test-scripts/test_ci_security.py``;
+   for the runtime case, use the installed Python 3.10 host to run
+   ``scripts/ci.py runtime``.
+
+   **Procedure and expected outcomes:** Generate checksums and source metadata for a wheel/source pair. Verify both with GNU sha256sum, alter wheel bytes and require verification failure. An extra wheel must make checksum generation fail rather than omit an ambiguous subject.
+
+   **Evidence:** Retain actual reports, commands and source/artifact identities
+   in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
+   local verification does not prove a hosted run or attestation occurred.
+
+STV_TC_CI_RUNTIME: CI runtime command imports the installed Python 3.10 package
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: CI runtime command imports the installed Python 3.10 package
+   :id: STV_TC_CI_RUNTIME
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: scripts/ci.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_B5A2DB777F66970D
+   :last_result: passed
+
+   **Level:** CI/distribution integration.
+
+   **Preconditions and inputs:** Maintained implementation environment for
+   workflow/checksum tests, real GitHub workflow files, Git and GNU sha256sum.
+   The runtime case requires the development wheel installed on Python 3.10.
+   No hosted workflow or attestation service is used in these local checks.
+
+   **Executable selector:** ``scripts/ci.py runtime``.
+
+   **Invocation:** Run pytest for ``docs/test-scripts/test_ci_security.py``;
+   for the runtime case, use the installed Python 3.10 host to run
+   ``scripts/ci.py runtime``.
+
+   **Procedure and expected outcomes:** Install the newly built development wheel into a Python 3.10 host, execute the CI runtime subcommand, require an installed-package import outside the checkout, matching installed version, a successful pip check and warnings-as-errors Sphinx fixture build.
+
+   **Evidence:** Retain actual reports, commands and source/artifact identities
+   in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
+   local verification does not prove a hosted run or attestation occurred.

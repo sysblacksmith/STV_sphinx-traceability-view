@@ -243,7 +243,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_042`
      - A clean Python 3.10 environment with pinned Sphinx dependencies installs the wheel and builds the fixture.
-     - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
+     - ``docs/test-scripts/test_ci_security.py::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift``;
+       ``docs/test-scripts/test_ci_security.py::test_candidate_checksums_detect_changed_artifact_bytes``;
+       ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
        ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
        ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
        ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
@@ -420,7 +422,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``
    * - :need:`STV_SYS_009`
      - A built wheel installs into a clean host environment and produces an embedded HTML view without copying repository implementation files.
-     - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
+     - ``docs/test-scripts/test_ci_security.py::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift``;
+       ``docs/test-scripts/test_ci_security.py::test_candidate_checksums_detect_changed_artifact_bytes``;
+       ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
        ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
        ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
        ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
@@ -442,6 +446,7 @@ Executable sources
 * ``docs/test-scripts/test_browser.py``
 * ``docs/test-scripts/test_build.py``
 * ``docs/test-scripts/test_capacity.py``
+* ``docs/test-scripts/test_ci_security.py``
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.209" timestamp="2026-10-24T17:04:49.285537+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_ci_security" name="test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift" time="0.006"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SYS_009" /></properties></testcase><testcase classname="docs.test-scripts.test_ci_security" name="test_candidate_checksums_detect_changed_artifact_bytes" time="0.107"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SYS_009" /></properties><failure message="assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], return... 'example-1.tar.gz'$'\\r': No such file or directory\n/usr/bin/sha256sum: WARNING: 2 listed files could not be read\n&quot;).returncode&#10; +    where CompletedProcess(args=['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], return... 'example-1.tar.gz'$'\\r': No such file or directory\n/usr/bin/sha256sum: WARNING: 2 listed files could not be read\n&quot;) = &lt;function run at 0x0000023B0F8CDB20&gt;(['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], cwd=WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-50/test_candidate_checksums_detec0'), capture_output=True)&#10; +      where &lt;function run at 0x0000023B0F8CDB20&gt; = subprocess.run">tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-50/test_candidate_checksums_detec0')
+
+    @pytest.mark.requirements('STV_SYS_009','STV_SWR_042')
+    def test_candidate_checksums_detect_changed_artifact_bytes(tmp_path):
+        wheel=tmp_path/'example-1-py3-none-any.whl';wheel.write_bytes(b'wheel bytes')
+        source=tmp_path/'example-1.tar.gz';source.write_bytes(b'source bytes')
+        ci.write_checksums(tmp_path)
+        assert json.loads((tmp_path/'build-info.json').read_text())['source_commit']==subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+        expected={hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name for p in (wheel,source)}
+        assert set((tmp_path/'SHA256SUMS').read_text().splitlines())==expected
+        verifier=shutil.which('sha256sum') or str(Path(os.environ.get('ProgramFiles','C:/Program Files'))/'Git/usr/bin/sha256sum.exe')
+        assert Path(verifier).is_file(),'Provision GNU sha256sum (included with Git for Windows)'
+&gt;       assert subprocess.run([verifier,'--strict','--check','SHA256SUMS'],cwd=tmp_path,capture_output=True).returncode==0
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], return... 'example-1.tar.gz'$'\\r': No such file or directory\n/usr/bin/sha256sum: WARNING: 2 listed files could not be read\n").returncode
+E        +    where CompletedProcess(args=['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], return... 'example-1.tar.gz'$'\\r': No such file or directory\n/usr/bin/sha256sum: WARNING: 2 listed files could not be read\n") = &lt;function run at 0x0000023B0F8CDB20&gt;(['C:\\Program Files\\Git\\usr\\bin\\sha256sum.exe', '--strict', '--check', 'SHA256SUMS'], cwd=WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-50/test_candidate_checksums_detec0'), capture_output=True)
+E        +      where &lt;function run at 0x0000023B0F8CDB20&gt; = subprocess.run
+
+docs\test-scripts\test_ci_security.py:50: AssertionError</failure></testcase></testsuite></testsuites>

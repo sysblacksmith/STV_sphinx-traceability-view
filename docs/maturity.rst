@@ -6,6 +6,17 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+PRSA-006 local preparation; hosted hardening pending
+--------------------------------------------------------------------------------
+
+:need:`STV_PR_012` remains analyzed with partial verification. Pinned CI and
+manual provenance workflows, checksum generation and an unapplied protection
+profile are prepared. :doc:`ci-and-provenance` defines their trust boundary and
+:doc:`test-execution/prsa-006-fix/index` retains local validation. GitHub's
+private-plan restriction prevents rulesets; hosted runs, attestations and chosen
+protections remain unconfirmed. New/refined workflow and case designs await
+owner review. No release or remote setting change is performed.
+
 PRSA-005 clean publication remediation
 --------------------------------------------------------------------------------
 

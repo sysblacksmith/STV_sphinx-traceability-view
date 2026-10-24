@@ -1,0 +1,60 @@
+name: Candidate provenance
+'on':
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-2025
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Install maintained toolchain
+        run: python -m pip install -r docs/architecture/implementation/requirements-implementation.txt -r requirements-docs.txt
+      - name: Validate package and fixtures
+        run: python scripts/ci.py validate
+      - name: Report attestation availability
+        if: github.event.repository.visibility != 'public'
+        run: Write-Output 'Candidate bytes were built, but this workflow intentionally skips attestations until the repository is public. No release was published.'
+      - name: Retain candidate bytes and checksums
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: candidate-distributions
+          path: docs/_build/ci/distributions/
+          if-no-files-found: error
+          retention-days: 14
+  attest:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event.repository.visibility == 'public'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+      attestations: write
+    steps:
+      # No checkout, package installation or repository code executes with OIDC permissions.
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: candidate-distributions
+          path: dist
+      - name: Verify downloaded checksums
+        working-directory: dist
+        run: sha256sum --strict --check SHA256SUMS
+      - name: Attest candidate distributions
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: |
+            dist/*.whl
+            dist/*.tar.gz
