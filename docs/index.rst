@@ -1,7 +1,17 @@
 STV Sphinx Traceability View
 ============================
 
-Sphinx-Needs extension specification, architecture and supporting records.
+STV (Sphinx Traceability View) adds interactive traceability graphs to
+Sphinx-Needs documentation. Explore how requirements, architecture elements
+and tests connect, then inspect their published details without losing your
+place in the graph.
+
+Views are part of the generated HTML and work offline from disk or on static
+HTTP hosting. STV uses your existing Need types and relationships; no separate
+application server is needed.
+
+**New to STV?** Start with :doc:`getting-started` for a live demonstration,
+installation and a minimal integration example.
 
 .. toctree::
    :maxdepth: 2
@@ -9,6 +19,12 @@ Sphinx-Needs extension specification, architecture and supporting records.
 
    Getting started <getting-started>
    licensing
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Explore this project's traces
+
+   demo
 
 .. toctree::
    :maxdepth: 2
@@ -49,7 +65,6 @@ Sphinx-Needs extension specification, architecture and supporting records.
    implementation-plan
    review
    maturity
-   demo
    sources
 
 .. toctree::

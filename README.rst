@@ -96,58 +96,9 @@ The project's documentation includes a live ``demo.html`` using its own Needs.
 Use in another Sphinx project
 -----------------------------
 
-Install STV as a Python package in the consuming project's documentation
-environment, then use its directive in that project's RST pages. Consumers
-need the wheel and its Python dependencies; they do not need this repository,
-the shared ``-agents`` checkout, Draw.io or Node.
-
-1. Download the wheel (``.whl``) for the desired release from
-   `GitHub Releases <https://github.com/sysforger/STV_sphinx-traceability-view/releases>`_.
-   The repository is private, so downloading requires an account with repository
-   access. For an unpublished local build, use the wheel generated in ``dist/``.
-   From the download directory, using the consuming project's documentation
-   Python environment, install the wheel::
-
-      python -m pip install ./sphinx_traceability_view-<version>-py3-none-any.whl
-
-   Replace ``<version>`` with the downloaded release version; the placeholder
-   is not a literal shell argument. For repeatable developer and CI setup,
-   select a specific release and download its wheel to a consistent relative
-   location before installing. CI needs authenticated access to this private
-   repository. Keep credentials out of requirements files and committed URLs.
-
-2. Add the extension to the existing ``extensions`` list in ``conf.py``::
-
-      extensions = [
-          # Keep the project's existing extensions here.
-          "sphinx_traceability_view",
-      ]
-
-   STV loads Sphinx-Needs automatically. Keep the project's existing Need types
-   and relationships: they remain authoritative.
-
-3. Add a page to the project's toctree and embed a project-root view::
-
-      Traceability
-      ============
-
-      .. traceability-view::
-
-   Alternatively, start from specific existing Need IDs::
-
-      .. traceability-view:: MY_SHR_001 MY_SWE_BACKEND
-
-   Replace these example IDs with IDs from the consuming project. Multiple
-   views can appear on the same page.
-
-4. Build the documentation normally using Sphinx's HTML builder, for example::
-
-      python -m sphinx -b html docs docs/_build/html
-
-   STV writes the graph data, lazy detail bundles, JavaScript and CSS into the
-   HTML output. Distribute the complete output directory as static documentation.
-   Readers need only a browser; no Python, Node or separate application server
-   is required. Static HTTP hosting and direct opening from disk are supported.
+See `Getting Started <docs/getting-started.rst>`_ for installation, the live
+demonstration and the minimal integration steps for an existing Sphinx project.
+The following sections provide additional host-model and compatibility details.
 
 Host model configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -178,12 +129,16 @@ configuration and require both incoming and outgoing labels. See
 Current compatibility and delivery limits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. stv-compatibility-start
+
 The current package requires Python 3.10 or newer and pins Sphinx 8.1.3,
 Sphinx-Needs 8.2.0 and Beautiful Soup 4.13.5. Check compatibility with the host's
 documentation dependencies before installation. Only the ``html`` builder is
 supported when a traceability view is present. Each view supports up to 200
 visible graph nodes. On Windows, use a short HTML output path when opening
 files directly in Firefox.
+
+.. stv-compatibility-end
 
 STV-owned code and documentation are licensed under MIT; see Licensing below.
 
