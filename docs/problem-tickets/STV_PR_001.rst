@@ -38,7 +38,7 @@ Problem 1: Facing edge ports
    The router used a bottom exit and top entry even for upward links. Facing ports now follow the relative box positions.
 
    Affected artifacts: :need:`STV_SHR_050`, :need:`STV_SWR_053`.
-   Source: ``frontend/src/layout.js``.
+   Source: ``frontend/src/layout/layout.js``.
 
    **Verification and handover**
 

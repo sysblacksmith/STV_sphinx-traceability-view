@@ -6,6 +6,31 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+Component source organization, 2026-10-24
+-----------------------------------------
+
+The owner requested direct software-element-to-code boundaries. The nine
+existing elements now own matching component directories with sources, unit
+tests and boundary READMEs; :doc:`elements-software` records the naming convention.
+Cross-component checks remain in :doc:`test-scripts/index`. The public
+extension setup and generated asset locations remain stable.
+
+:doc:`change-requests/STV_CR_008_component-directories` records scope,
+path migration and actual development verification. The source-organization
+ADR (:ref:`STV_ADR_007`) and two new inspector case designs remain
+proposed/draft pending review. This refactor does not update requirement
+verification or supersede historical release execution results.
+
+Requirement filenames and test levels, 2026-10-24
+-------------------------------------------------
+
+The owner requested explicit requirement filenames and a system/software split
+of test specifications. See :doc:`change-requests/STV_CR_009_requirement-filenames-and-test-levels`.
+Canonical requirement/test IDs, criteria, latest results and historical
+execution records are retained. :doc:`test-cases/system-tests` contains
+whole-tool checks; :doc:`test-cases/software-tests` contains component checks.
+This organization does not infer new verification results or acceptance.
+
 Current release increment
 ----------------------------------------
 

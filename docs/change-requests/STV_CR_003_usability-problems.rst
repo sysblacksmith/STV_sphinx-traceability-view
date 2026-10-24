@@ -32,7 +32,7 @@ Problem analysis and traceability
    * - :doc:`/problem-tickets/STV_PR_001`
      - Router always left the bottom and entered the top, even upward.
      - New :need:`STV_SHR_050`, :need:`STV_SWR_053`.
-     - ``frontend/src/layout.js``; facing-port geometry smoke.
+     - ``frontend/src/layout/layout.js``; facing-port geometry smoke.
    * - :doc:`/problem-tickets/STV_PR_002`
      - Every edge used a far-right corridor regardless of obstacles.
      - Same routing requirements; no duplicate outcome for the same defect.
@@ -74,7 +74,7 @@ Contracts and allocation: :doc:`/internal-interfaces`,
 :doc:`/architecture-software`, :need:`STV_SWE_LAYOUT`, :need:`STV_SWE_RENDER`,
 :need:`STV_SWE_INSPECT`. Plans: :doc:`/implementation-plan` and
 :doc:`/verification-plan`. Behavioral transitions and editable diagram:
-:doc:`/state-machine`. Test definitions: ``frontend/test/layout.test.js`` and
+:doc:`/state-machine`. Test definitions: ``frontend/src/layout/tests/layout.test.js`` and
 ``docs/test-scripts/test_browser.py::test_usability_smoke``. Coverage is supplemented in
 :doc:`/test-coverage`; no historical release record is rewritten.
 

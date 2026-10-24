@@ -46,7 +46,7 @@
             <mxGeometry x="30" y="450" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="candidate" label="VIEW: candidate&#10;rooted reachability; cap &lt;= 200" link="software.html#STV_SWR_043" linkTarget="_top">
+        <object id="candidate" label="VIEW: candidate&#10;rooted reachability; cap &lt;= 200" link="requirements-software.html#STV_SWR_043" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="490" y="450" width="260" height="95" as="geometry" />
           </mxCell>
@@ -95,7 +95,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <object id="seedinput" label="SEED INPUT: editing / matches&#10;invalid ID retains committed view" link="software.html#STV_SWR_057" linkTarget="_top">
+        <object id="seedinput" label="SEED INPUT: editing / matches&#10;invalid ID retains committed view" link="requirements-software.html#STV_SWR_057" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="950" y="230" width="260" height="95" as="geometry" />
           </mxCell>
@@ -113,17 +113,17 @@
             <mxGeometry x="30" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="loading" label="DETAILS: loading&#10;local classic script; build-keyed cache" link="software.html#STV_SWR_017" linkTarget="_top">
+        <object id="loading" label="DETAILS: loading&#10;local classic script; build-keyed cache" link="requirements-software.html#STV_SWR_017" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="490" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="open" label="DETAILS: open or error&#10;static rich body / explicit failure" link="software.html#STV_SWR_050" linkTarget="_top">
+        <object id="open" label="DETAILS: open or error&#10;static rich body / explicit failure" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="950" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="hover" label="DETAILS: hover pending&#10;1000 ms continuous node hover" link="software.html#STV_SWR_050" linkTarget="_top">
+        <object id="hover" label="DETAILS: hover pending&#10;1000 ms continuous node hover" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="30" y="1160" width="260" height="95" as="geometry" />
           </mxCell>

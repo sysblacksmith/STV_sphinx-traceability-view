@@ -73,7 +73,7 @@ MVP verification on 2026-10-18
 The authorized MVP is implemented. Executed checks against the current
 worktree passed:
 
-* ``node --test frontend/test/*.test.js``: 16 passed, including five-child
+* ``node --test frontend/src/*/tests/*.test.js``: 16 passed, including five-child
   centering, shared-child collision avoidance, five-entry page boundaries,
   atomic reseeding and bounded ID/title matching.
 * ``pytest tests -q -m 'not browser' --tb=short``: 33 passed, 19 deselected.

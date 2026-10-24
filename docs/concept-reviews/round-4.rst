@@ -20,7 +20,7 @@ software elements were read, including every authored derivation/allocation/
 containment path. Individual Need IDs and current file identities are retained
 in the adjacent ``round-4-inventory.json``. Assessed current artifacts:
 
-* :doc:`/stakeholder`, :doc:`/system`, :doc:`/software`,
+* :doc:`/requirements-stakeholder`, :doc:`/requirements-system`, :doc:`/requirements-software`,
   :doc:`/elements-system`, :doc:`/elements-software`, :doc:`/traceability`.
 * :doc:`/architecture-system`, :doc:`/architecture-software`,
   :doc:`/state-machine`, :doc:`/internal-interfaces`,

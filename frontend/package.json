@@ -1,14 +1,21 @@
-﻿{
+{
   "name": "stv-browser-build",
   "private": true,
   "version": "0.2.0",
   "type": "module",
-  "engines": {"node": ">=22"},
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
     "elkjs": "0.10.0",
     "d3-selection": "3.0.0",
     "d3-zoom": "3.0.0",
     "@floating-ui/dom": "1.7.4"
   },
-  "devDependencies": {"esbuild": "0.25.12"}
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "scripts": {
+    "test": "node --test src/*/tests/*.test.js"
+  }
 }

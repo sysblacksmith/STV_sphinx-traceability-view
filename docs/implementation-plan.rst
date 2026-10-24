@@ -13,40 +13,32 @@ registry publication is outside the implementation task. Initial builder
 support is Sphinx's ``html`` builder. Fail clearly if a view is used with an
 unsupported builder rather than silently producing an empty view.
 
-The product files follow these responsibility boundaries. Implementation and
-verification evidence is maintained separately under :doc:`maturity`::
+The nine software elements have one implementation directory each. Directory
+names match the lowercase suffix of their ``STV_SWE_*`` ID. The authoritative
+code/test naming conventions and component boundary records are in :doc:`elements-software`::
 
-   pyproject.toml                       # Hatchling; includes built assets
    src/sphinx_traceability_view/
-       __init__.py                     # setup, dependency and hook registration
-       directives.py                   # placeholder node and RST directive
-       model.py                        # normalized supplemental host model
-       graph.py                        # pinned NeedsView adapter and adjacency
-       details.py                      # Beautiful Soup final-HTML extraction
-       bundle.py                       # stable data/detail scripts and manifest
-       static/stv.js                   # generated IIFE, included in wheel/sdist
-       static/stv.css                  # scoped styles
-       static/THIRD_PARTY_NOTICES.txt
-   frontend/
-       package.json                    # copy selected architecture manifest
-       package-lock.json               # copy verified lock
-       build.js                        # esbuild plus notice generation
-       src/state.js                    # pure graph commands and reachability
-       src/layout.js                   # ELK adapter plus semantic projection
-       src/view.js                     # HTML controls, SVG edges and D3 zoom
-       src/inspect.js                  # Floating UI and accessible detail panel
-       src/index.js                    # bundle registry and instance startup
-       test/*.test.js                  # Node's built-in test runner
-   docs/test-scripts/
-       test_model.py
-       test_graph.py
-       test_details.py
-       test_build.py
-       test_browser.py
-       fixtures/minimal/               # actual Sphinx host project
-       fixtures/alternate_model/
-       fixtures/broken_links/
-       fixtures/rich_details/
+       __init__.py             # Public Sphinx setup entry point only
+       directive/              # STV_SWE_DIRECTIVE; lifecycle and directive parsing
+       model/                  # STV_SWE_MODEL; schema normalization
+       graph/                  # STV_SWE_GRAPH; NeedsView adapter and indexes
+       detail_build/           # STV_SWE_DETAIL_BUILD; rendered HTML extraction
+       bundle/                 # STV_SWE_BUNDLE; static bundle emission
+       static/                 # Generated delivery assets, not another component
+   frontend/src/
+       state/                  # STV_SWE_STATE
+       layout/                 # STV_SWE_LAYOUT
+       render/                 # STV_SWE_RENDER; includes bootstrap and source CSS
+       inspect/                # STV_SWE_INSPECT
+   docs/test-scripts/          # Cross-component integration and browser tests
+   conftest.py                 # Shared pytest traceability metadata hooks
+
+Each component contains its sources, a ``tests/`` directory and ``README.rst``
+for its boundary and interfaces. The renderer owns ``stv.css`` source; the
+frontend build copies it into the packaged static delivery directory. Runtime
+assets and dependencies keep their established public locations. Component
+unit tests do not ship in the installed wheel. Detailed design can be added
+inside the owning component later without inventing design evidence now.
 
 Use JavaScript modules with JSDoc types in source, compiled to a classic IIFE
 for the browser. No TypeScript compiler or frontend framework is needed.
@@ -311,7 +303,7 @@ claim of optimal layout is explicitly outside the acceptance criteria.
 Rendering, viewport and inspection
 --------------------------------------
 
-``frontend/src/groups.js`` supplies ``orderedGroups(graph, id)`` to the renderer.
+``frontend/src/render/groups.js`` supplies ``orderedGroups(graph, id)`` to the renderer.
 Using normalized type levels, order wholly upward target groups before neutral
 and wholly downward groups, independently of incoming/outgoing authorship.
 Mixed, same-level, test-role and unresolved targets are neutral. Stable ties
@@ -427,7 +419,7 @@ control into view. Errors retain prior graph, page and focus. The root uses a
 neutral project style without a Need ID, status border, Details button or
 original-object link; its full project title remains accessible without clipping.
 
-Runtime seed selection uses ``frontend/src/seeds.js`` for the local ID/title
+Runtime seed selection uses ``frontend/src/render/seeds.js`` for the local ID/title
 catalog and accessible suggestion picker. STATE handles ``seed`` and
 ``overview`` commands as fresh candidate states; RENDER owns confirmation,
 diagnostics, focus and viewport reset. Commit through the existing asynchronous

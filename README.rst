@@ -209,7 +209,7 @@ depend on the shared method, model and tools as described above.
 Verify development changes::
 
    .\.venv-implementation\Scripts\python.exe -m pytest -m "not browser"
-   node --test frontend/test/*.test.js
+   node --test frontend/src/*/tests/*.test.js
    .\.venv-implementation\Scripts\python.exe scripts/check-coverage.py --strict
 
 For Firefox verification set ``STV_GECKODRIVER`` to an explicitly provisioned
@@ -242,3 +242,17 @@ Retain the entire ``dist/`` directory during cleanup, including wheels and
 source archives for current and older versions. The owner removes older
 versions manually after uploading them to GitHub. Copies retained as test
 evidence do not replace the distribution files in ``dist/``.
+
+
+Architecture-to-code navigation
+-------------------------------
+
+Each software element owns a directory named after the lowercase suffix of
+its canonical ``STV_SWE_*`` ID. Python build components live under
+``src/sphinx_traceability_view/``; browser components live under ``frontend/src/``.
+Each component contains its unit tests in ``tests/`` and a ``README.rst``
+explaining its boundary. ``docs/elements-software.rst`` identifies each element
+through its component and test naming conventions. Run all Python tests with ``python -m pytest``
+and browser-component unit tests with ``node --test frontend/src/*/tests/*.test.js``.
+Host integration, browser and release checks remain in ``docs/test-scripts/``.
+Component tests are excluded from the installed wheel.

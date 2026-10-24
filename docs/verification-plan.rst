@@ -11,6 +11,12 @@ procedures and explicit requirement links. The executable inventory in
 :doc:`test-coverage` supplements those modeled cases. Case design acceptance
 does not imply execution; unexecuted cases use ``last_result: not_run``.
 
+The case index separates :doc:`test-cases/system-tests` from
+:doc:`test-cases/software-tests`. System cases exercise the integrated Sphinx,
+browser or installation boundary; software cases exercise isolated components.
+Requirement links can span levels and are preserved independently of the
+classification. Case IDs are stable across these directory moves.
+
 For each actual attempt, retain one ``test_execution`` Need per executable
 case in the release execution folder. Link it from its test case using
 ``executed_by`` and record timestamp with timezone, actual result, candidate,
@@ -241,7 +247,7 @@ run the complete Python and Node suites, file and static-HTTP Firefox workflows,
 documentation/traceability and diagram-publication checks. Retain a consolidated
 versioned execution record including actual failures/retests and candidate hashes.
 
-For :need:`STV_SWR_055`, ``frontend/test/groups.test.js`` checks semantic target
+For :need:`STV_SWR_055`, ``frontend/src/render/tests/groups.test.js`` checks semantic target
 ordering, stable ties, mixed/same-level/test/missing targets, graph immutability
 and replacement mappings. ``test_control_order_smoke`` checks the rendered
 upward/downward controls and their retained order/state after expansion.

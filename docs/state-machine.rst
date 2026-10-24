@@ -19,8 +19,9 @@ is exported with Draw.io and published interactively.
 Build lifecycle
 ---------------
 
-Owner: ``src/sphinx_traceability_view/__init__.py``, ``directives.py``,
-``graph.py``, ``details.py`` and ``bundle.py``. Initial state is collected
+Owners: :need:`STV_SWE_DIRECTIVE`, :need:`STV_SWE_GRAPH`,
+:need:`STV_SWE_DETAIL_BUILD` and :need:`STV_SWE_BUNDLE`. Their component
+source and unit-test paths are listed in :doc:`elements-software`. Initial state is collected
 invocations; terminal states are finalized output or failed build. Hidden Needs
 and their incident edges never enter the snapshot. Published detail fragments
 are keyed by content hash; manifests name the required revision explicitly.
@@ -66,7 +67,8 @@ images remain static resources.
 Exploration lifecycle
 ---------------------
 
-Owner: ``frontend/src/state.js``, ``layout.js`` and ``view.js``. Initial state
+Owners: :need:`STV_SWE_STATE`, :need:`STV_SWE_LAYOUT` and
+:need:`STV_SWE_RENDER`; see :doc:`elements-software` for component boundaries. Initial state
 contains all explicit seeds or the project root with its first five stakeholder
 entries. Only seeds or the
 open current project's entry page are reachability roots. Remembered expansions
@@ -85,7 +87,7 @@ The 200-node cap includes missing objects and the synthetic project root.
      - Available group; nonempty entries for root
      - ``transition`` clones state; ``visible`` traverses open groups from
        active roots; candidate state. Descendant expansion memory survives collapse.
-     - :need:`STV_SWR_003`, :need:`STV_SWR_007`, :need:`STV_SWR_025`; ``frontend/test/state.test.js``
+     - :need:`STV_SWR_003`, :need:`STV_SWR_007`, :need:`STV_SWR_025`; ``frontend/src/state/tests/state.test.js``
    * - Committed / Previous or Next
      - Root open; valid page index
      - Save outgoing page's expansions into candidate map; restore target
@@ -137,7 +139,7 @@ take precedence over exact centering; see :need:`STV_SWR_056`.
 Inspection lifecycle
 --------------------
 
-Owner: ``frontend/src/inspect.js``. Initial and terminal state is closed.
+Owner: ``frontend/src/inspect/inspect.js``. Initial and terminal state is closed.
 Each open increments a token; late fragment/position completions cannot insert
 into a different inspection. Promises cache by build identity and Need ID.
 The project root and missing targets never request details.
@@ -199,15 +201,15 @@ their local focus-restoring dismissal behavior.
 Source entry points
 -------------------
 
-* :download:`Lifecycle <../src/sphinx_traceability_view/__init__.py>`
-* :download:`Directive <../src/sphinx_traceability_view/directives.py>`
-* :download:`Graph <../src/sphinx_traceability_view/graph.py>`
-* :download:`Detail extraction <../src/sphinx_traceability_view/details.py>`
-* :download:`Bundle emission <../src/sphinx_traceability_view/bundle.py>`
-* :download:`Exploration state <../frontend/src/state.js>`
-* :download:`Layout <../frontend/src/layout.js>`
-* :download:`View and async commit <../frontend/src/view.js>`
-* :download:`Inspection <../frontend/src/inspect.js>`
+* Lifecycle: ``src/sphinx_traceability_view/directive/lifecycle.py``
+* Directive: ``src/sphinx_traceability_view/directive/directives.py``
+* Graph: ``src/sphinx_traceability_view/graph/__init__.py``
+* Detail extraction: ``src/sphinx_traceability_view/detail_build/__init__.py``
+* Bundle emission: ``src/sphinx_traceability_view/bundle/__init__.py``
+* Exploration state: ``frontend/src/state/state.js``
+* Layout: ``frontend/src/layout/layout.js``
+* View and async commit: ``frontend/src/render/view.js``
+* Inspection: ``frontend/src/inspect/inspect.js``
 
 Transition tables distinguish code behavior from executed verification. A linked
 requirement or test source is not itself a passing result; consult the coverage

@@ -8,6 +8,11 @@ Use :doc:`implementation-plan` for lifecycle/module behavior and
 :doc:`technology-stack` for selected dependencies.
 Related decisions: :ref:`STV_ADR_001`, :ref:`STV_ADR_002` and :ref:`STV_ADR_005`.
 
+Implementation ownership follows :doc:`elements-software`: every software
+element maps to its matching component directory, source filenames and colocated
+unit tests. :ref:`STV_ADR_007` defines the organization; the interfaces below
+retain their behavior across the source move.
+
 Author interface
 ----------------
 

@@ -12,16 +12,16 @@ ROOT=Path(__file__).resolve().parents[1]
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--strict',action='store_true');args=parser.parse_args()
     mapping=ROOT/'docs/_build/test-map.json'
-    result=subprocess.run([sys.executable,'-m','pytest','docs/test-scripts','--collect-only','-q','--requirement-map',str(mapping)],cwd=ROOT,capture_output=True,text=True)
+    result=subprocess.run([sys.executable,'-m','pytest','--collect-only','-q','--requirement-map',str(mapping)],cwd=ROOT,capture_output=True,text=True)
     if result.returncode:
         print(result.stdout+result.stderr);return result.returncode
     cases=json.loads(mapping.read_text(encoding='utf-8'))
-    for source in (ROOT/'frontend/test').glob('*.test.js'):
+    for source in (ROOT/'frontend/src').glob('*/tests/*.test.js'):
         for match in re.finditer(r"test\('([^']+)'",source.read_text(encoding='utf-8')):
             cases.append({'test':str(source.relative_to(ROOT)).replace('\\','/')+' :: '+match[1],
                           'requirements':re.findall(r'STV_(?:SYS|SWR)_\d+',match[1])})
     requirements={};criteria={}
-    for source in ('system.rst','software.rst'):
+    for source in ('requirements-system.rst','requirements-software.rst'):
         text=(ROOT/'docs'/source).read_text(encoding='utf-8')
         for block in re.split(r'\n(?=\.\. (?:sysr|swr)::)', '\n'+text):
             identity=re.search(r':id: (STV_(?:SYS|SWR)_\d+)',block)
@@ -48,8 +48,8 @@ def main():
             lines+=['     - '+ '\n       '.join('``'+test+'``'+(';' if i<len(tests)-1 else '') for i,test in enumerate(tests))]
         else:lines+=['     - '+('Deferred occurrence-mode release; no runtime delivered.' if requirements[identity] else '**GAP: executable criterion coverage required.**')]
     lines+=['','Executable sources','------------------','']
-    for source in sorted((ROOT/'docs/test-scripts').glob('test_*.py'))+sorted((ROOT/'frontend/test').glob('*.test.js')):
-        relative=source.relative_to(ROOT).as_posix();lines+=['* :download:`'+relative+' <../'+relative+'>`']
+    for source in sorted((ROOT/'src/sphinx_traceability_view').glob('*/tests/test_*.py'))+sorted((ROOT/'docs/test-scripts').glob('test_*.py'))+sorted((ROOT/'frontend/src').glob('*/tests/*.test.js')):
+        relative=source.relative_to(ROOT).as_posix();lines+=['* ``'+relative+'``']
     (ROOT/'docs/test-coverage.rst').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(f'{len(requirements)} requirements; {len(cases)} executable cases; unmapped active requirements: {gaps}; unknown IDs: {unknown}')
     return int(bool(unknown or (args.strict and gaps)))

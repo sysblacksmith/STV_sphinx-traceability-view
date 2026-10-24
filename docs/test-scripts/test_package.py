@@ -20,6 +20,7 @@ def test_clean_wheel_host():
     assert wheelhouse.is_dir(),'Provision the runtime wheelhouse before offline packaging verification'
     with zipfile.ZipFile(wheel) as archive:
         names=archive.namelist()
+        assert not any("/tests/" in name for name in names), "Unit tests must not ship in the runtime wheel"
         for asset in ('stv.js','stv.css','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js'):
             assert f'sphinx_traceability_view/static/{asset}' in names
         metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()

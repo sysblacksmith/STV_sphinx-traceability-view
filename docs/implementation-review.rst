@@ -55,7 +55,7 @@ System criterion assessment
      - Software-seeded expansion reveals higher declared levels above it;
        the added hardware rank and right-side shared test retain geometry.
      - ``test_alternate_model_geometry_details_and_external`` plus
-       ``frontend/test/layout.test.js`` invariant assertions
+       ``frontend/src/layout/tests/layout.test.js`` invariant assertions
    * - :need:`STV_SYS_006`
      - Hover/keyboard details preserve host metadata, rich body, tables,
        local images and namespaced IDREFs; external metadata and unavailable
@@ -73,7 +73,7 @@ System criterion assessment
        200 visible nodes; another complete group is rejected without changing
        the committed revision. Measurements repeat under file and HTTP URLs.
      - ``test_large_project_at_visible_capacity`` plus exact 199/200/201
-       and project-root counting cases in ``frontend/test/state.test.js``
+       and project-root counting cases in ``frontend/src/state/tests/state.test.js``
    * - :need:`STV_SYS_009`
      - A wheel installs offline into a fresh Python 3.10 host and builds the
        fixture with Node absent from PATH; import resolves inside that host.

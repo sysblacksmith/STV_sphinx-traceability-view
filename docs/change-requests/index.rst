@@ -16,3 +16,6 @@ acceptance records remain unchanged.
    STV_CR_005_control-order
    STV_CR_006_centered-layout-and-interactive-seeds
    STV_CR_007_record-folder-layout
+   STV_CR_008_component-directories
+   STV_CR_009_requirement-filenames-and-test-levels
+   STV_CR_010_consolidated-test-specifications

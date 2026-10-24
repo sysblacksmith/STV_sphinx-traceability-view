@@ -38,7 +38,7 @@ Problem 6: Detail tooltips fail on long Windows paths
    #. Observe the error in the detail panel and a failed request for the
       generated ``_static/stv/details/<identity-hash>-<content-hash>.js`` asset.
 
-   **Root cause:** ``src/sphinx_traceability_view/bundle.py::emit`` generated
+   **Root cause:** ``src/sphinx_traceability_view/bundle/__init__.py::emit`` generated
    each detail filename from two full SHA-256 hashes: the object identity hash
    and the fragment content hash. The filename alone was 132 characters.
    In this checkout the resulting absolute detail asset path was 263
@@ -47,7 +47,7 @@ Problem 6: Detail tooltips fail on long Windows paths
    with ``net::ERR_UNEXPECTED``. Python successfully creating the files did
    not establish that the browser could load them.
 
-   ``frontend/src/inspect.js::loadDetail`` received the script error event and
+   ``frontend/src/inspect/inspect.js::loadDetail`` received the script error event and
    displayed its generic asset-unavailable message. The generated URL resolved
    to the correct file; the Sphinx base URL and ``docs/conf.py`` link settings
    were not the cause. A shorter checkout path is consistent with the owner's
@@ -63,8 +63,8 @@ Problem 6: Detail tooltips fail on long Windows paths
    candidate fix, not evidence of integration or release on master.
 
    **Affected artifacts:** :need:`STV_SWE_BUNDLE` and
-   :need:`STV_SWE_INSPECT`; ``src/sphinx_traceability_view/bundle.py``,
-   ``frontend/src/inspect.js`` and ``docs/test-scripts/test_bundle.py``.
+   :need:`STV_SWE_INSPECT`; ``src/sphinx_traceability_view/bundle/__init__.py``,
+   ``frontend/src/inspect/inspect.js`` and ``src/sphinx_traceability_view/bundle/tests/test_bundle.py``.
 
    **Actual checks on 2026-10-19:**
 
@@ -74,7 +74,7 @@ Problem 6: Detail tooltips fail on long Windows paths
    * After the change and rebuild, the same page and control displayed the
      published requirement body with no failed requests during that check.
    * ``.\build-docs.ps1`` completed successfully.
-   * ``.venv/Scripts/python.exe -m pytest docs/test-scripts/test_bundle.py::test_detail_assets_use_only_content_hash_for_portable_paths -q``
+   * ``.venv/Scripts/python.exe -m pytest src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_use_only_content_hash_for_portable_paths -q``
      passed: one test. It checks filename length by the full-content-hash-only
      naming contract, shared-fragment deduplication, graph references and
      generated registration content.

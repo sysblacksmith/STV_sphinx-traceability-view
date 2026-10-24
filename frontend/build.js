@@ -3,7 +3,8 @@ import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
 import path from 'node:path';
 const output='../src/sphinx_traceability_view/static';
 await mkdir(output,{recursive:true});
-await build({entryPoints:['src/index.js'],bundle:true,format:'iife',platform:'browser',target:['firefox115'],outfile:`${output}/stv.js`,legalComments:'eof',minify:true});
+await build({entryPoints:['src/render/index.js'],bundle:true,format:'iife',platform:'browser',target:['firefox115'],outfile:`${output}/stv.js`,legalComments:'eof',minify:true});
+await writeFile(`${output}/stv.css`,await readFile('src/render/stv.css'));
 const notices=[];
 for(const folder of await readdir('node_modules')) {
   const children=folder.startsWith('@') ? (await readdir(`node_modules/${folder}`)).map(c=>`${folder}/${c}`) : [folder];

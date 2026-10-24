@@ -23,10 +23,10 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def candidate_sources():
     files=[]
-    for directory in ('src','frontend/src','frontend/test','docs/test-scripts','scripts'):
+    for directory in ('src','frontend/src','docs/test-scripts','scripts'):
         files.extend(path for path in (ROOT/directory).rglob('*') if path.is_file() and '__pycache__' not in path.parts and not path.is_symlink())
-    files.extend(ROOT/name for name in ('pyproject.toml','hatch_build.py','frontend/package.json','frontend/package-lock.json'))
-    files.extend(ROOT/'docs'/name for name in ('stakeholder.rst','system.rst','software.rst','internal-interfaces.rst','implementation-plan.rst','verification-plan.rst'))
+    files.extend(ROOT/name for name in ('pyproject.toml','conftest.py','hatch_build.py','frontend/package.json','frontend/package-lock.json'))
+    files.extend(ROOT/'docs'/name for name in ('requirements-stakeholder.rst','requirements-system.rst','requirements-software.rst','internal-interfaces.rst','implementation-plan.rst','verification-plan.rst'))
     files.extend((ROOT/'docs/architecture/decisions').glob('*.rst'))
     return {path.relative_to(ROOT).as_posix():sha(path) for path in sorted(set(files))}
 
@@ -142,8 +142,8 @@ def main():
             shutil.copyfile(benchmark_dir/'build.log',record/'capacity-host.log')
     # Fixture reuse changes the actual benchmark path; retain it in both records.
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
-    run('pytest',[sys.executable,'-m','pytest','docs/test-scripts','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
-    run('node-tests',['node','--test','--test-reporter=junit','frontend/test/*.test.js'],report='node-tests.log')
+    run('pytest',[sys.executable,'-m','pytest','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
+    run('node-tests',['node','--test','--test-reporter=junit','frontend/src/*/tests/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
     run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--csv',str(record/'traceability.csv')])
     run('diagram-links-published',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])

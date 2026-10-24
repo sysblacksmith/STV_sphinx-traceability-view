@@ -1,0 +1,2976 @@
+System test cases
+=================
+
+Canonical specifications at the system verification level. Each case retains
+its own Need ID, requirement links and execution history. See :doc:`index`
+for classification and evidence semantics.
+
+.. needtable::
+   :filter: type == 'test_case' and 'test_system' in tags
+   :columns: id;title;status;verifies;last_result;executed_by
+
+STV_TC_025DB3F44E8E: usability smoke
+------------------------------------
+
+.. test_case:: usability smoke
+   :id: STV_TC_025DB3F44E8E
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_usability_smoke[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_015, STV_SHR_049, STV_SWR_050, STV_SWR_054, STV_SYS_006
+   :executed_by: STV_TE_EDDA1B963CE797B3, STV_TE_E61ABF83926193AC
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_usability_smoke[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_usability_smoke(browser, short_output, protocol):
+          """Viewport, hover lifecycle and explicit activation on both transports."""
+          output = short_output / 'usability'
+          result = build(FIXTURE, output)
+          assert result.returncode == 0, result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url)
+              _exercise_usability(browser)
+
+   **Interaction procedure and observable outcomes:**
+
+   .. code-block:: python
+
+      def _exercise_usability(browser):
+          wait = WebDriverWait(browser, 10)
+          wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]'))
+          root = browser.find_element(By.CSS_SELECTOR, '.stv-view')
+          viewport = root.find_element(By.CSS_SELECTOR, '.stv-viewport')
+          assert browser.execute_script('return getComputedStyle(arguments[0]).height', viewport) == '975px'
+          node = root.find_element(By.CSS_SELECTOR, '.stv-node')
+          details = node.find_element(By.CSS_SELECTOR, '[data-focus="details"]')
+          toolbar = root.find_element(By.CSS_SELECTOR, '.stv-toolbar button')
+          ActionChains(browser).move_to_element(node).perform()
+          time.sleep(.3)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          ActionChains(browser).move_to_element(toolbar).perform()
+          time.sleep(1.1)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          # Measure the actual deadline, independently of WebDriver command latency.
+          browser.execute_script("""
+            window.hoverTimes={};
+            arguments[0].addEventListener('mouseenter',()=>{hoverTimes.node=performance.now()},{once:true});
+            arguments[1].addEventListener('mouseenter',()=>{hoverTimes.button=performance.now()},{once:true});
+            const observer=new MutationObserver(()=>{if(document.querySelector('.stv-detail')){
+              hoverTimes.open=performance.now();observer.disconnect();}});
+            observer.observe(document.body,{childList:true});
+          """,node,details)
+          ActionChains(browser).move_to_element_with_offset(node,-node.size['width']/2+8,-node.size['height']/2+8).perform()
+          time.sleep(.5)
+          ActionChains(browser).move_to_element(details).perform()
+          wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+          times=browser.execute_script('return hoverTimes')
+          assert 950 <= times['open']-times['node'] < 1500, times
+          assert 0 <= times['open']-times['button'] < 850, times
+          # Hover did not focus the view: real Escape must still dismiss it.
+          browser.execute_script('document.body.tabIndex=-1;document.body.focus()')
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+          ActionChains(browser).move_to_element(toolbar).perform()
+          ActionChains(browser).move_to_element(node).perform()
+          time.sleep(.2)
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          time.sleep(1.1)
+          assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+          browser.execute_script('arguments[0].focus()', details)
+          details.send_keys(Keys.ENTER)
+          assert browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          assert browser.switch_to.active_element == details
+          # Last, test each cancellation from the same reset viewport, with no
+          # pointer departure after the action masking whether it cancels the timer.
+          for selector in ('[aria-label="Pan right"]','.stv-groups button'):
+              browser.execute_script("arguments[0].querySelector('[aria-label=\"Reset viewport\"]').click()",root)
+              ActionChains(browser).move_to_element(toolbar).perform()
+              ActionChains(browser).move_to_element(node).perform()
+              time.sleep(.2)
+              browser.execute_script('arguments[0].querySelector(arguments[1]).click()',root,selector)
+              wait.until(lambda d:root.get_attribute('aria-busy')=='false')
+              time.sleep(1.1)
+              assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_06CC5EE46517: control order smoke
+----------------------------------------
+
+.. test_case:: control order smoke
+   :id: STV_TC_06CC5EE46517
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_control_order_smoke[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_051, STV_SWR_055
+   :executed_by: STV_TE_E9DF4EB84C2C809D, STV_TE_48E662C1225F4525
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_control_order_smoke[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_control_order_smoke[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_control_order_smoke(browser,protocol):
+          published=Path(__file__).parents[1]/'docs/_build/html'
+          with published_url(published,protocol) as url:
+              browser.get(url.rsplit('/',1)[0]+'/demo.html')
+              _exercise_control_order(browser)
+
+   **Interaction procedure and observable outcomes:**
+
+   .. code-block:: python
+
+      def _exercise_control_order(browser):
+          wait=WebDriverWait(browser,20)
+          wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+          root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+          def buttons():
+              node=next(n for n in root.find_elements(By.CSS_SELECTOR,'.stv-node')
+                        if n.find_element(By.CSS_SELECTOR,'.stv-id').text=='STV_SWR_001')
+              return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+          def identities():
+              return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
+          expected=[['derives_from','outgoing'],['verifies','incoming'],['allocated_to','outgoing']]
+          assert identities()==expected
+          buttons()[0].click()
+          wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+          assert identities()==expected
+          assert buttons()[0].get_attribute('aria-expanded')=='true'
+          buttons()[0].click()
+          wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+          assert identities()==expected
+          assert buttons()[0].get_attribute('aria-expanded')=='false'
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_0EBE5120F168: missing placeholder and detail error
+---------------------------------------------------------
+
+.. test_case:: missing placeholder and detail error
+   :id: STV_TC_0EBE5120F168
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
+   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
+          import shutil
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          path=source/'requirements.rst';path.write_text(path.read_text(encoding='utf-8').replace(':traces: LEAF_B',':traces: MISSING_A'),encoding='utf-8')
+          output=short_output/'html';result=build(source,output)
+          assert result.returncode!=0 and 'MISSING_A' in result.stderr
+          saved={script:script.read_bytes() for script in (output/'_static/stv/details').glob('*.js')}
+          for script in saved:script.unlink()
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+              root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+              assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
+              assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
+              inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',inspect);inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'Local detail asset unavailable' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+              wait.until(lambda d:not d.find_elements(By.CSS_SELECTOR,'.stv-detail'))
+              for script,content in saved.items():script.write_bytes(content)
+              inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'formatted body' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_136FE8B1A097: failed finalization retains pending page and previous assets
+---------------------------------------------------------------------------------
+
+.. test_case:: failed finalization retains pending page and previous assets
+   :id: STV_TC_136FE8B1A097
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_027, STV_SWR_015, STV_SWR_017, STV_SWR_027
+   :executed_by: STV_TE_2FE927B84AC573F5, STV_TE_5428B57695F57556
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_failed_finalization_retains_pending_page_and_previous_assets(tmp_path):
+          from types import SimpleNamespace
+          from sphinx.errors import SphinxError
+          from sphinx_traceability_view.directive.lifecycle import finish
+          pending='<section data-stv-build="STV_PENDING"></section>'
+          (tmp_path/'index.html').write_text(pending,encoding='utf-8')
+          (tmp_path/'requirements.html').write_text('<p>Expected Need body missing</p>',encoding='utf-8')
+          previous=tmp_path/'_static/stv/graph-old.js';previous.parent.mkdir(parents=True);previous.write_text('previous complete asset',encoding='utf-8')
+          graph={'model':{'relations':{}},'objects':{'A':{'url':'requirements.html#A','external':False,'parent':None}}}
+          app=SimpleNamespace(_stv_graph=graph,_stv_hidden=set(),outdir=str(tmp_path),env=SimpleNamespace(stv_views={'index':[{}]}))
+          with pytest.raises(SphinxError,match='Rendered Need.*missing'):
+              finish(app,None)
+          assert (tmp_path/'index.html').read_text(encoding='utf-8')==pending
+          assert previous.read_text(encoding='utf-8')=='previous complete asset'
+          assert list(previous.parent.glob('graph-*.js'))==[previous]
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_25803A2B9F90: seed layout replacement failure and staleness
+------------------------------------------------------------------
+
+.. test_case:: seed layout replacement failure and staleness
+   :id: STV_TC_25803A2B9F90
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_044, STV_SHR_053, STV_SWR_044, STV_SWR_057
+   :executed_by: STV_TE_3B3E61D7DFC99D73, STV_TE_0EEADCA1406FD6ED
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_layout_replacement_failure_and_staleness(browser,short_output,protocol):
+          from pathlib import Path
+          project=Path(__file__).parents[1]
+          script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          assert result.returncode==0,result.stderr
+          (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
+          with published_url(short_output,protocol) as url:
+              browser.get(url);_assert_async_layout(browser)
+              wait=WebDriverWait(browser,20);root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              previous=root.find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+              field.send_keys('B');field.send_keys(Keys.ENTER)
+              wait.until(lambda d:d.execute_script('return calls.length')==7)
+              browser.execute_script('calls[6].reject(Error("Seed layout failure"))')
+              wait.until(lambda d:'Seed layout failure' in root.find_element(By.CSS_SELECTOR,'.stv-status').text)
+              assert root.get_attribute('data-stv-revision')=='2'
+              assert root.find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')==previous
+              assert browser.switch_to.active_element==field
+              for identity,count in [('A',8),('B',9)]:
+                  field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys(identity);field.send_keys(Keys.ENTER)
+                  wait.until(lambda d:d.execute_script('return calls.length')==count)
+              browser.execute_script('stvHarness.compute(...calls[8].args).then(calls[8].resolve)')
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='3')
+              browser.execute_script('stvHarness.compute(...calls[7].args).then(calls[7].resolve)')
+              wait.until(lambda d:d.execute_script('return document.querySelectorAll(".stv-measure").length')==0)
+              assert root.get_attribute('data-stv-revision')=='3'
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['B']
+              assert browser.switch_to.active_element==field
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_3B0D9F21166C: alternate host schema external metadata and parts
+----------------------------------------------------------------------
+
+.. test_case:: alternate host schema external metadata and parts
+   :id: STV_TC_3B0D9F21166C
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_036, STV_SHR_045, STV_SHR_047, STV_SHR_048, STV_SWR_014, STV_SWR_036, STV_SWR_045, STV_SWR_047, STV_SWR_048, STV_SYS_002
+   :executed_by: STV_TE_19C8684FFE688A1D, STV_TE_CECCD71A1F7BD48C
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_alternate_host_schema_external_metadata_and_parts(tmp_path):
+          result=build(FIXTURE.parent/'alternate_model',tmp_path)
+          assert result.returncode==0,result.stdout+result.stderr
+          data=manifest(tmp_path)
+          assert data['model']['types']['hardware']['level']=='hardware'
+          assert data['model']['relations']['traces']['outgoing']=='Traces to'
+          assert data['objects']['EXTERNAL_A']['metadata']['owner']=='External owner'
+          assert data['objects']['EXTERNAL_A']['docname'] is None
+          assert 'GOAL_A.fragment' in data['objects']
+          assert 'GOAL_A.fragment' not in data['entries']
+          assert 'HIDDEN_A' not in data['objects']
+          assert not any('HIDDEN_A' in edge for edge in data['edges'])
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_3B2659FB2D0A: documentation visuals
+------------------------------------------
+
+.. test_case:: documentation visuals
+   :id: STV_TC_3B2659FB2D0A
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_documentation_visuals
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_017, STV_SHR_018, STV_SYS_003
+   :executed_by: STV_TE_22DE49BBDDE7EC3B, STV_TE_281E939E541ADC21
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_documentation_visuals``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_documentation_visuals" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_documentation_visuals(browser):
+          published=Path(__file__).parents[1]/'docs/_build/html'
+          assert (published/'demo.html').is_file(),'Build project documentation before publication checks'
+          browser.set_window_size(1500,1300)
+          browser.get((published/'demo.html').as_uri())
+          wait=WebDriverWait(browser,20)
+          wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+          assert 'Traceability view failed' not in browser.find_element(By.TAG_NAME,'body').text
+          screenshots=Path(os.environ.get('STV_SCREENSHOTS','docs/_build/browser'));screenshots.mkdir(parents=True,exist_ok=True)
+          browser.save_screenshot(str(screenshots/'project-demo.png'))
+          browser.get((published/'state-machine.html').as_uri())
+          assert browser.find_element(By.CSS_SELECTOR,'object[type="image/svg+xml"]').get_attribute('data').endswith('state-machine.svg')
+          browser.save_screenshot(str(screenshots/'state-page.png'))
+          browser.get((published/'state-machine.svg').as_uri())
+          assert browser.find_elements(By.TAG_NAME,'svg')
+          assert len(browser.find_elements(By.TAG_NAME,'a'))>=10
+          browser.save_screenshot(str(screenshots/'state-diagram.png'))
+          for name in ('system-architecture','software-architecture'):
+              browser.get((published/(name+'.svg')).as_uri())
+              assert browser.find_elements(By.TAG_NAME,'svg')
+              assert browser.find_elements(By.TAG_NAME,'a')
+              browser.save_screenshot(str(screenshots/(name+'.png')))
+              page='architecture-system' if name.startswith('system') else 'architecture-software'
+              browser.get((published/(page+'.html')).as_uri())
+              assert browser.find_element(By.CSS_SELECTOR,'object[type="image/svg+xml"]')
+              browser.save_screenshot(str(screenshots/(page+'-page.png')))
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_41F176801699: invalid seed source location
+-------------------------------------------------
+
+.. test_case:: invalid seed source location
+   :id: STV_TC_41F176801699
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
+   :executed_by: STV_TE_55AFED6304CFE81F, STV_TE_93AFE98F3EE60BE8
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_seed_source_location[UNKNOWN]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_invalid_seed_source_location(tmp_path, seed):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          (source / "index.rst").write_text(f"Invalid\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: {seed}\n", encoding="utf-8")
+          with (source / "requirements.rst").open("a", encoding="utf-8") as stream:
+              stream.write("\n.. shr:: Hidden\n   :id: HIDDEN_A\n   :hide:\n")
+          result = build(source, tmp_path / "html")
+          assert result.returncode != 0
+          assert "index.rst:8" in result.stderr
+          assert "unknown or hidden starting ID" in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_535022565896: control order smoke
+----------------------------------------
+
+.. test_case:: control order smoke
+   :id: STV_TC_535022565896
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_control_order_smoke[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_051, STV_SWR_055
+   :executed_by: STV_TE_193BABCE01804ECD, STV_TE_D54F9EC1B8C3DC2D
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_control_order_smoke[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_control_order_smoke[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_control_order_smoke(browser,protocol):
+          published=Path(__file__).parents[1]/'docs/_build/html'
+          with published_url(published,protocol) as url:
+              browser.get(url.rsplit('/',1)[0]+'/demo.html')
+              _exercise_control_order(browser)
+
+   **Interaction procedure and observable outcomes:**
+
+   .. code-block:: python
+
+      def _exercise_control_order(browser):
+          wait=WebDriverWait(browser,20)
+          wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+          root=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+          def buttons():
+              node=next(n for n in root.find_elements(By.CSS_SELECTOR,'.stv-node')
+                        if n.find_element(By.CSS_SELECTOR,'.stv-id').text=='STV_SWR_001')
+              return node.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+          def identities():
+              return [json.loads(b.get_attribute('data-focus'))[1:] for b in buttons()]
+          expected=[['derives_from','outgoing'],['verifies','incoming'],['allocated_to','outgoing']]
+          assert identities()==expected
+          buttons()[0].click()
+          wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+          assert identities()==expected
+          assert buttons()[0].get_attribute('aria-expanded')=='true'
+          buttons()[0].click()
+          wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+          assert identities()==expected
+          assert buttons()[0].get_attribute('aria-expanded')=='false'
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_5652621CFF4A: interactive seed smoke
+-------------------------------------------
+
+.. test_case:: interactive seed smoke
+   :id: STV_TC_5652621CFF4A
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_038, STV_SHR_052, STV_SHR_053, STV_SWR_038, STV_SWR_056, STV_SWR_057
+   :executed_by: STV_TE_542E4BF583AB9821, STV_TE_E5587901B2158B26
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_interactive_seed_smoke[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_interactive_seed_smoke(browser,short_output,protocol):
+          output=short_output/'seed-picker';result=build(FIXTURE,output)
+          assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              field.send_keys('missing');field.send_keys(Keys.ENTER)
+              assert field.get_attribute('aria-invalid')=='true'
+              assert root.get_attribute('data-stv-revision')=='0'
+              field.clear();field.send_keys('software detail')
+              wait.until(lambda d:root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').is_displayed())
+              assert 'LEAF_B' in root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').text
+              field.send_keys(Keys.ARROW_DOWN);field.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['LEAF_B']
+              assert roots[1].get_attribute('data-stv-revision')=='0'
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-project'))==1
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['ROOT_A']
+              centers=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=>parseFloat(n.style.left)+n.offsetWidth/2)",root)
+              assert abs(centers[0]-centers[1])<1
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_59537D3F286A: seed capacity at directive
+-----------------------------------------------
+
+.. test_case:: seed capacity at directive
+   :id: STV_TC_59537D3F286A
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
+   :executed_by: STV_TE_A5B37D2B297444D4, STV_TE_10B3E6446E94D385
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_capacity_at_directive(tmp_path, count, success):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          ids = [f"NEED_{i:03}" for i in range(count)]
+          (source / "requirements.rst").write_text("Requirements\n============\n\n" + "\n".join(f".. shr:: Item {i}\n   :id: {identity}\n" for i, identity in enumerate(ids)), encoding="utf-8")
+          (source / "index.rst").write_text("Capacity\n========\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: " + " ".join(ids) + "\n", encoding="utf-8")
+          result = build(source, tmp_path / "html")
+          assert (result.returncode == 0) is success, result.stderr
+          if not success:
+              assert "index.rst:8" in result.stderr
+              assert "200 distinct starting IDs" in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_59C06D617036: missing placeholder and detail error
+---------------------------------------------------------
+
+.. test_case:: missing placeholder and detail error
+   :id: STV_TC_59C06D617036
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
+   :executed_by: STV_TE_69D0670DBA913348, STV_TE_7FB8F491ACEA8640
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
+          import shutil
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          path=source/'requirements.rst';path.write_text(path.read_text(encoding='utf-8').replace(':traces: LEAF_B',':traces: MISSING_A'),encoding='utf-8')
+          output=short_output/'html';result=build(source,output)
+          assert result.returncode!=0 and 'MISSING_A' in result.stderr
+          saved={script:script.read_bytes() for script in (output/'_static/stv/details').glob('*.js')}
+          for script in saved:script.unlink()
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+              root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+              assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
+              assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
+              inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',inspect);inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'Local detail asset unavailable' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+              wait.until(lambda d:not d.find_elements(By.CSS_SELECTOR,'.stv-detail'))
+              for script,content in saved.items():script.write_bytes(content)
+              inspect.send_keys(Keys.ENTER)
+              wait.until(lambda d:'formatted body' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_5C902A5F732E: cross page bundle
+--------------------------------------
+
+.. test_case:: cross page bundle
+   :id: STV_TC_5C902A5F732E
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_cross_page_bundle
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_001, STV_SHR_002, STV_SHR_013, STV_SHR_026, STV_SHR_048, STV_SWR_001, STV_SWR_002, STV_SWR_013, STV_SWR_026, STV_SYS_001
+   :executed_by: STV_TE_764956AD4834A5CE, STV_TE_7BF04875B87C2A7D
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_cross_page_bundle``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_cross_page_bundle" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_cross_page_bundle(tmp_path):
+          result = build(FIXTURE, tmp_path)
+          assert result.returncode == 0, result.stdout + result.stderr
+          html = (tmp_path / "index.html").read_text(encoding="utf-8")
+          assert "STV_PENDING" not in html
+          soup = BeautifulSoup(html, "html.parser")
+          roots = soup.select(".stv-view")
+          assert len(roots) == 2
+          assert json.loads(roots[0]["data-stv-seeds"]) == ["ROOT_A", "LEAF_B"]
+          assert json.loads(roots[1]["data-stv-seeds"]) == []
+          script = soup.select_one("script[data-stv-graph]")
+          assert (tmp_path / script["src"]).is_file()
+          fragments = list((tmp_path / "_static/stv/details").glob("*.js"))
+          assert len(fragments) == 2
+          assert any("formatted body" in p.read_text() for p in fragments)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_6C7A64E533AC: invalid seed source location
+-------------------------------------------------
+
+.. test_case:: invalid seed source location
+   :id: STV_TC_6C7A64E533AC
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
+   :executed_by: STV_TE_97AA7EB41C45F077, STV_TE_39301A83113F7C7D
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_seed_source_location[ROOT_A UNKNOWN]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_invalid_seed_source_location(tmp_path, seed):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          (source / "index.rst").write_text(f"Invalid\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: {seed}\n", encoding="utf-8")
+          with (source / "requirements.rst").open("a", encoding="utf-8") as stream:
+              stream.write("\n.. shr:: Hidden\n   :id: HIDDEN_A\n   :hide:\n")
+          result = build(source, tmp_path / "html")
+          assert result.returncode != 0
+          assert "index.rst:8" in result.stderr
+          assert "unknown or hidden starting ID" in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_7016FADA6FBA: alternate model geometry details and external
+------------------------------------------------------------------
+
+.. test_case:: alternate model geometry details and external
+   :id: STV_TC_7016FADA6FBA
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_008, STV_SHR_012, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_037, STV_SHR_041, STV_SHR_047, STV_SHR_048, STV_SWR_008, STV_SWR_012, STV_SWR_015, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_037, STV_SWR_041, STV_SWR_047, STV_SWR_048, STV_SWR_049, STV_SWR_050, STV_SYS_004, STV_SYS_005, STV_SYS_006, STV_SYS_010
+   :executed_by: STV_TE_61313CFB6F4999CF, STV_TE_80B3F0B64A8C7517
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_alternate_model_geometry_details_and_external(browser,short_output,protocol):
+          output=short_output/'html';result=build(FIXTURE.parent/'alternate_model',output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,30)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==3)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              assert browser.execute_script('''const n=arguments[0].querySelector('.stv-node').getBoundingClientRect(),v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect();return n.top>=v.top&&n.bottom<=v.bottom''',root)
+              def group(identity,direction):
+                  return root.find_element(By.CSS_SELECTOR,f'[aria-label="Expand Traces {"to" if direction=="outgoing" else "from"} ({direction}) for {identity}"]')
+              control=group('SOFTWARE_A','outgoing');browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              control=group('GOAL_A','outgoing');browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              boxes=browser.execute_script('''return Object.fromEntries([...arguments[0].querySelectorAll('.stv-nodes>.stv-node')].map(n=>[n.querySelector('.stv-id').textContent,{x:parseFloat(n.style.left),y:parseFloat(n.style.top),width:n.offsetWidth,height:n.offsetHeight}]))''',root)
+              assert len(boxes)==6
+              assert 'HIDDEN_A' not in boxes
+              for a,b in zip(['GOAL_A','HARDWARE_A','SYSTEM_A','SOFTWARE_A'],['HARDWARE_A','SYSTEM_A','SOFTWARE_A','MODULE_A']):assert boxes[a]['y']+boxes[a]['height']<boxes[b]['y']
+              assert boxes['CHECK_A']['x']>=max(v['x']+v['width'] for k,v in boxes.items() if k!='CHECK_A')+96
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==7
+              assert browser.execute_script('''const title=arguments[0].querySelector('[data-key*="GOAL_A"] .stv-title');return title.scrollHeight>title.clientHeight&&title.clientHeight<=2*parseFloat(getComputedStyle(title).lineHeight)+1''',root)
+              long_id=roots[1].find_element(By.CSS_SELECTOR,'[data-key*=LONG_IDENTIFIER] .stv-id')
+              assert long_id.get_attribute('textContent')=='LONG_IDENTIFIER_WITH_MANY_SEGMENTS_ABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789_ABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789'
+              assert browser.execute_script('return arguments[0].scrollWidth<=arguments[0].clientWidth',long_id)
+              assert len(roots[1].find_elements(By.CSS_SELECTOR,'.stv-unaccepted'))==2
+              # A part seed inspects the complete published containing Need.
+              part=roots[2].find_element(By.CSS_SELECTOR,'[aria-label="Details for GOAL_A.fragment"]')
+              browser.execute_script('arguments[0].focus()',part);part.send_keys(Keys.ENTER)
+              wait.until(lambda d:'Static widget text' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+              assert 'Fixture owner' in panel.text
+              assert 'Resource unavailable offline' in panel.text
+              assert not panel.find_elements(By.CSS_SELECTOR,'script,iframe,object,[onerror]')
+              assert not browser.execute_script('return window.STV_WIDGET_EXECUTED===true')
+              assert panel.find_element(By.CSS_SELECTOR,'img[data-stv-src]').get_attribute('complete')=='true'
+              assert browser.execute_script('return arguments[0].naturalWidth',panel.find_element(By.CSS_SELECTOR,'img[data-stv-src]'))>0
+              assert browser.execute_script('return arguments[0].naturalWidth',panel.find_element(By.CSS_SELECTOR,'.fixture-widget img'))>0
+              label=panel.find_element(By.CSS_SELECTOR,'label');field=panel.find_element(By.CSS_SELECTOR,'input')
+              assert label.get_attribute('for')==field.get_attribute('id')
+              assert field.get_attribute('id').startswith(panel.get_attribute('id'))
+              assert 'HIDDEN_A' not in panel.text
+              assert not browser.execute_script("return performance.getEntriesByType('resource').some(e=>e.name.includes('example.invalid'))")
+              assert browser.execute_script('return arguments[0].scrollHeight>arguments[0].clientHeight',panel)
+              browser.execute_script('arguments[0].focus()',panel);panel.send_keys(Keys.END)
+              wait.until(lambda d:browser.execute_script('return arguments[0].scrollTop>0',panel))
+              original=panel.find_element(By.CSS_SELECTOR,'a[href*="example.invalid/remote.png"]')
+              assert original.text=='Original resource'
+              panel.find_element(By.CSS_SELECTOR,'button').click()
+              external=roots[1].find_element(By.CSS_SELECTOR,'[aria-label="Details for EXTERNAL_A"]')
+              browser.execute_script('arguments[0].focus()',external);external.send_keys(Keys.ENTER)
+              wait.until(lambda d:'External owner' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              assert 'full body unavailable offline' in browser.find_element(By.CSS_SELECTOR,'.stv-detail').text
+              browser.find_element(By.CSS_SELECTOR,'.stv-detail button').click()
+              isolated=roots[1].find_element(By.CSS_SELECTOR,'.stv-unaccepted')
+              browser.execute_script('arguments[0].focus()',isolated.find_element(By.CSS_SELECTOR,'[data-focus="details"]'))
+              wait.until(lambda d:isolated.find_element(By.CSS_SELECTOR,'.stv-id').text=='ISOLATED_A')
+              assert isolated.find_element(By.CSS_SELECTOR,'.stv-id').text=='ISOLATED_A'
+              assert 'No relationships' in isolated.text
+              assert not isolated.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_7441DB459B14: usability smoke
+------------------------------------
+
+.. test_case:: usability smoke
+   :id: STV_TC_7441DB459B14
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_usability_smoke[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_015, STV_SHR_049, STV_SWR_050, STV_SWR_054, STV_SYS_006
+   :executed_by: STV_TE_5A3DAC2CD84CDE46, STV_TE_A92CAC9AEFDF41DE
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_usability_smoke[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_usability_smoke(browser, short_output, protocol):
+          """Viewport, hover lifecycle and explicit activation on both transports."""
+          output = short_output / 'usability'
+          result = build(FIXTURE, output)
+          assert result.returncode == 0, result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url)
+              _exercise_usability(browser)
+
+   **Interaction procedure and observable outcomes:**
+
+   .. code-block:: python
+
+      def _exercise_usability(browser):
+          wait = WebDriverWait(browser, 10)
+          wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]'))
+          root = browser.find_element(By.CSS_SELECTOR, '.stv-view')
+          viewport = root.find_element(By.CSS_SELECTOR, '.stv-viewport')
+          assert browser.execute_script('return getComputedStyle(arguments[0]).height', viewport) == '975px'
+          node = root.find_element(By.CSS_SELECTOR, '.stv-node')
+          details = node.find_element(By.CSS_SELECTOR, '[data-focus="details"]')
+          toolbar = root.find_element(By.CSS_SELECTOR, '.stv-toolbar button')
+          ActionChains(browser).move_to_element(node).perform()
+          time.sleep(.3)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          ActionChains(browser).move_to_element(toolbar).perform()
+          time.sleep(1.1)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          # Measure the actual deadline, independently of WebDriver command latency.
+          browser.execute_script("""
+            window.hoverTimes={};
+            arguments[0].addEventListener('mouseenter',()=>{hoverTimes.node=performance.now()},{once:true});
+            arguments[1].addEventListener('mouseenter',()=>{hoverTimes.button=performance.now()},{once:true});
+            const observer=new MutationObserver(()=>{if(document.querySelector('.stv-detail')){
+              hoverTimes.open=performance.now();observer.disconnect();}});
+            observer.observe(document.body,{childList:true});
+          """,node,details)
+          ActionChains(browser).move_to_element_with_offset(node,-node.size['width']/2+8,-node.size['height']/2+8).perform()
+          time.sleep(.5)
+          ActionChains(browser).move_to_element(details).perform()
+          wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+          times=browser.execute_script('return hoverTimes')
+          assert 950 <= times['open']-times['node'] < 1500, times
+          assert 0 <= times['open']-times['button'] < 850, times
+          # Hover did not focus the view: real Escape must still dismiss it.
+          browser.execute_script('document.body.tabIndex=-1;document.body.focus()')
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+          ActionChains(browser).move_to_element(toolbar).perform()
+          ActionChains(browser).move_to_element(node).perform()
+          time.sleep(.2)
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          time.sleep(1.1)
+          assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+          browser.execute_script('arguments[0].focus()', details)
+          details.send_keys(Keys.ENTER)
+          assert browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+          assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+          assert browser.switch_to.active_element == details
+          # Last, test each cancellation from the same reset viewport, with no
+          # pointer departure after the action masking whether it cancels the timer.
+          for selector in ('[aria-label="Pan right"]','.stv-groups button'):
+              browser.execute_script("arguments[0].querySelector('[aria-label=\"Reset viewport\"]').click()",root)
+              ActionChains(browser).move_to_element(toolbar).perform()
+              ActionChains(browser).move_to_element(node).perform()
+              time.sleep(.2)
+              browser.execute_script('arguments[0].querySelector(arguments[1]).click()',root,selector)
+              wait.until(lambda d:root.get_attribute('aria-busy')=='false')
+              time.sleep(1.1)
+              assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_7EDF1A472879: large project at visible capacity
+------------------------------------------------------
+
+.. test_case:: large project at visible capacity
+   :id: STV_TC_7EDF1A472879
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_capacity.py :: docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_043, STV_SHR_044, STV_SWR_043, STV_SWR_044, STV_SYS_008
+   :executed_by: STV_TE_010F955390602276, STV_TE_5FEC76D970E683E5
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_large_project_at_visible_capacity(browser,protocol):
+          output=Path(os.environ.get('STV_CAPACITY_OUTPUT','docs/_build/benchmark-v2/html')).resolve()
+          assert (output/'index.html').is_file(),'Run scripts/benchmark.py before capacity verification'
+          runs=[]
+          browser.set_script_timeout(35)
+          temporary=tempfile.TemporaryDirectory(prefix='stv-cap-') if protocol=='file' else None
+          if temporary:
+              assert Path(temporary.name).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+              # Full hash names need a short physical output root in Windows Firefox.
+              short=Path(temporary.name)/'html';shutil.copytree(output,short);output=short
+          try:
+              _measure_capacity(browser,output,protocol,runs)
+          finally:
+              if temporary:
+                  assert Path(temporary.name).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+                  temporary.cleanup()
+          result={'browser':browser.capabilities['browserVersion'],'geckodriver':browser.capabilities.get('moz:geckodriverVersion'),
+                  'memory_scope':'Sum of working sets of the isolated Firefox process tree, including content/GPU helpers; shared pages may be counted more than once',
+                  'runs':runs,'startup_median_ms':statistics.median(r['startup_ms'] for r in runs),
+                  'startup_max_ms':max(r['startup_ms'] for r in runs),
+                  'expansion_median_ms':statistics.median(v for r in runs for v in r['expansion_ms']),
+                  'expansion_max_ms':max(v for r in runs for v in r['expansion_ms'])}
+          target=Path(os.environ.get('STV_CAPACITY_METRICS','docs/_build/capacity-browser.json'));target.parent.mkdir(parents=True,exist_ok=True)
+          aggregate=json.loads(target.read_text(encoding='utf-8')) if target.exists() else {}
+          aggregate[protocol]=result
+          target.write_text(json.dumps(aggregate,indent=2),encoding='utf-8')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_85BBE1714F96: invalid mapping has entry path and location
+----------------------------------------------------------------
+
+.. test_case:: invalid mapping has entry path and location
+   :id: STV_TC_85BBE1714F96
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_036, STV_SWR_036
+   :executed_by: STV_TE_25353B9B728085D0, STV_TE_386D5C547F786FC8
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_invalid_mapping_has_entry_path_and_location(tmp_path):
+          source=tmp_path/'source';shutil.copytree(FIXTURE,source)
+          with (source/'conf.py').open('a',encoding='utf-8') as stream:
+              stream.write('\ntraceability_view_model["types"]["shr"]["level"]="unknown"\n')
+          result=build(source,tmp_path/'html')
+          assert result.returncode!=0
+          assert 'index.rst:8' in result.stderr
+          assert 'types.shr' in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_9A67DAACB2A4: seed selection release
+-------------------------------------------
+
+.. test_case:: seed selection release
+   :id: STV_TC_9A67DAACB2A4
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_003, STV_SHR_014, STV_SHR_026, STV_SHR_038, STV_SHR_047, STV_SHR_048, STV_SHR_052, STV_SHR_053, STV_SWR_003, STV_SWR_038, STV_SWR_048, STV_SWR_051, STV_SWR_052, STV_SWR_056, STV_SWR_057
+   :executed_by: STV_TE_DFBF01DD6EFAC659, STV_TE_04E3FD1C4E20AEF7
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_selection_release[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_selection_release(browser,short_output,protocol):
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          requirements='Requirements\n============\n\n'
+          for i in range(12):
+              requirements+=f'.. shr:: Goal {i}\n   :id: GOAL_{i:03}\n'
+              if i==0:
+                  requirements+='   :traces: '+', '.join(f'CHILD_{j}' for j in range(5))+'\n'
+              requirements+='\n'
+          requirements+='.. shr:: Secret hidden title\n   :id: HIDDEN_A\n   :hide:\n\n'
+          requirements+='\n'.join(f'.. swr:: Software child {j}\n   :id: CHILD_{j}\n' for j in range(5))
+          (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n\n.. traceability-view:: GOAL_000\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==[f'GOAL_{i:03}' for i in range(5)]
+              field.send_keys('software child')
+              assert root.get_attribute('data-stv-revision')=='0'
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]'))==5
+              field.send_keys(Keys.ESCAPE)
+              assert field.get_attribute('aria-expanded')=='false'
+              field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys('software child')
+              root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]')[2].click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['CHILD_2']
+              assert browser.switch_to.active_element==field
+              for invalid in ['', 'HIDDEN_A', 'Secret hidden', 'goal_000']:
+                  field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE)
+                  if invalid:field.send_keys(invalid)
+                  if invalid!='goal_000':
+                      assert not root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]')
+                  field.send_keys(Keys.ENTER)
+                  assert field.get_attribute('aria-invalid')=='true'
+                  assert root.get_attribute('data-stv-revision')=='1'
+              field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys(' GOAL_000 ');field.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['GOAL_000']
+              control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for GOAL_000"]')
+              browser.execute_script('arguments[0].click()',control)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='3')
+              boxes=browser.execute_script("""return Object.fromEntries([...arguments[0].querySelectorAll('.stv-node')].map(n=>[n.querySelector('.stv-id').textContent,{x:parseFloat(n.style.left),w:n.offsetWidth}]))""",root)
+              children=[boxes[f'CHILD_{i}'] for i in range(5)]
+              midpoint=(min(n['x'] for n in children)+max(n['x']+n['w'] for n in children))/2
+              assert abs(boxes['GOAL_000']['x']+boxes['GOAL_000']['w']/2-midpoint)<1
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='4')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-node'))==6
+              assert roots[1].get_attribute('data-stv-revision')=='0'
+              other=roots[1].find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              other.send_keys('CHILD_4');other.send_keys(Keys.ENTER)
+              wait.until(lambda d:roots[1].get_attribute('data-stv-revision')=='1')
+              assert root.get_attribute('data-stv-revision')=='4'
+              assert [n.text for n in roots[1].find_elements(By.CSS_SELECTOR,'.stv-id')]==['CHILD_4']
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_9E5477EFE2F1: async layout failure and stale completion
+--------------------------------------------------------------
+
+.. test_case:: async layout failure and stale completion
+   :id: STV_TC_9E5477EFE2F1
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_044, STV_SHR_047, STV_SWR_044, STV_SWR_052
+   :executed_by: STV_TE_D099D363BCFCAD31, STV_TE_5DCC25155978FEA9
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_async_layout_failure_and_stale_completion(browser,short_output,protocol):
+          project=Path(__file__).parents[1]
+          script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          assert result.returncode==0,result.stderr
+          (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
+          # Keep the host alive across all injected completions.
+          with published_url(short_output,protocol) as url:
+              browser.get(url)
+              _assert_async_layout(browser)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_A1747C52BC63: interactive seed smoke
+-------------------------------------------
+
+.. test_case:: interactive seed smoke
+   :id: STV_TC_A1747C52BC63
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_038, STV_SHR_052, STV_SHR_053, STV_SWR_038, STV_SWR_056, STV_SWR_057
+   :executed_by: STV_TE_23223A8584B5C6B5, STV_TE_4C07297DF2CE4C54
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_interactive_seed_smoke[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_interactive_seed_smoke(browser,short_output,protocol):
+          output=short_output/'seed-picker';result=build(FIXTURE,output)
+          assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              field.send_keys('missing');field.send_keys(Keys.ENTER)
+              assert field.get_attribute('aria-invalid')=='true'
+              assert root.get_attribute('data-stv-revision')=='0'
+              field.clear();field.send_keys('software detail')
+              wait.until(lambda d:root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').is_displayed())
+              assert 'LEAF_B' in root.find_element(By.CSS_SELECTOR,'.stv-seed-matches').text
+              field.send_keys(Keys.ARROW_DOWN);field.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['LEAF_B']
+              assert roots[1].get_attribute('data-stv-revision')=='0'
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-project'))==1
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['ROOT_A']
+              centers=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=>parseFloat(n.style.left)+n.offsetWidth/2)",root)
+              assert abs(centers[0]-centers[1])<1
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_A221103BC26C: invalid seed source location
+-------------------------------------------------
+
+.. test_case:: invalid seed source location
+   :id: STV_TC_A221103BC26C
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
+   :executed_by: STV_TE_DA7D6F5E8EF93887, STV_TE_0898010E7C9AF0A4
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_invalid_seed_source_location(tmp_path, seed):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          (source / "index.rst").write_text(f"Invalid\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: {seed}\n", encoding="utf-8")
+          with (source / "requirements.rst").open("a", encoding="utf-8") as stream:
+              stream.write("\n.. shr:: Hidden\n   :id: HIDDEN_A\n   :hide:\n")
+          result = build(source, tmp_path / "html")
+          assert result.returncode != 0
+          assert "index.rst:8" in result.stderr
+          assert "unknown or hidden starting ID" in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_A953C70E70B1: seed capacity at directive
+-----------------------------------------------
+
+.. test_case:: seed capacity at directive
+   :id: STV_TC_A953C70E70B1
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
+   :executed_by: STV_TE_686277C8A7C1D863, STV_TE_5EBB8A15272B4D9F
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_seed_capacity_at_directive[201-False]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_capacity_at_directive(tmp_path, count, success):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          ids = [f"NEED_{i:03}" for i in range(count)]
+          (source / "requirements.rst").write_text("Requirements\n============\n\n" + "\n".join(f".. shr:: Item {i}\n   :id: {identity}\n" for i, identity in enumerate(ids)), encoding="utf-8")
+          (source / "index.rst").write_text("Capacity\n========\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: " + " ".join(ids) + "\n", encoding="utf-8")
+          result = build(source, tmp_path / "html")
+          assert (result.returncode == 0) is success, result.stderr
+          if not success:
+              assert "index.rst:8" in result.stderr
+              assert "200 distinct starting IDs" in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_B5D550F17384: prior fatal exception is not replaced by bundle generation
+-------------------------------------------------------------------------------
+
+.. test_case:: prior fatal exception is not replaced by bundle generation
+   :id: STV_TC_B5D550F17384
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SWR_027
+   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_prior_fatal_exception_is_not_replaced_by_bundle_generation" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_prior_fatal_exception_is_not_replaced_by_bundle_generation(tmp_path):
+          from types import SimpleNamespace
+          from sphinx_traceability_view.directive.lifecycle import finish
+          page=tmp_path/'index.html';page.write_text('previous complete page',encoding='utf-8')
+          app=SimpleNamespace(_stv_graph={},outdir=str(tmp_path))
+          finish(app,RuntimeError('Earlier fatal failure'))
+          assert page.read_text(encoding='utf-8')=='previous complete page'
+          assert not (tmp_path/'_static').exists()
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_CFE6B0377595: project paging
+-----------------------------------
+
+.. test_case:: project paging
+   :id: STV_TC_CFE6B0377595
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_project_paging[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
+   :executed_by: STV_TE_8A63E99187C976E3, STV_TE_6723673D161CA9BA
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_project_paging[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_project_paging[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_project_paging(browser,short_output,protocol):
+          import shutil
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          (source/'requirements.rst').write_text('Requirements\n============\n\n'+'\n'.join(f'.. shr:: Stakeholder {i}\n   :id: GOAL_{i:03}\n' for i in range(201)),encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url)
+              _assert_project_pages(browser)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_D1A17B11B9C1: incremental body change hidden and deleted objects
+-----------------------------------------------------------------------
+
+.. test_case:: incremental body change hidden and deleted objects
+   :id: STV_TC_D1A17B11B9C1
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_018, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_015, STV_SWR_018, STV_SWR_048
+   :executed_by: STV_TE_A7840F205B45812E, STV_TE_1FEF2B44838D4155
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_incremental_body_change_hidden_and_deleted_objects(tmp_path):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          with (source / "requirements.rst").open("a", encoding="utf-8") as stream:
+              stream.write('\n.. shr:: Initially visible\n   :id: HIDDEN_LATER\n')
+          output = tmp_path / "html"
+          assert build(source, output).returncode == 0
+          old = manifest(output)
+          path = source / "requirements.rst"
+          path.write_text(path.read_text(encoding="utf-8").replace("formatted body", "changed rich body").replace(":id: HIDDEN_LATER", ":id: HIDDEN_LATER\n   :hide:"), encoding="utf-8")
+          assert build(source, output).returncode == 0
+          new = manifest(output)
+          assert new["identity"] != old["identity"]
+          assert new["details"]["ROOT_A"]["digest"] != old["details"]["ROOT_A"]["digest"]
+          assert "HIDDEN_LATER" not in new["objects"]
+          assert "HIDDEN_LATER" not in new["details"]
+          assert build(source, output).returncode == 0
+          assert manifest(output)["identity"] == new["identity"]
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_DB4FE4CDD257: host owns broken trace failure
+---------------------------------------------------
+
+.. test_case:: host owns broken trace failure
+   :id: STV_TC_DB4FE4CDD257
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_027, STV_SHR_028, STV_SWR_027, STV_SWR_028
+   :executed_by: STV_TE_89DB9F0DFA6EBD36, STV_TE_DC50B0D40735701B
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_host_owns_broken_trace_failure" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_host_owns_broken_trace_failure(tmp_path):
+          source = tmp_path / "source"
+          shutil.copytree(FIXTURE, source)
+          with (source / "conf.py").open("a", encoding="utf-8") as stream:
+              stream.write('\nneeds_report_dead_links = True\n')
+          path = source / "requirements.rst"
+          path.write_text(path.read_text(encoding="utf-8").replace(":traces: LEAF_B", ":traces: MISSING_A"), encoding="utf-8")
+          output = tmp_path / "html"
+          result = build(source, output)
+          assert result.returncode != 0
+          assert "MISSING_A" in result.stderr
+          assert "STV_PENDING" not in (output / "index.html").read_text(encoding="utf-8")
+          data = manifest(output)
+          assert ["ROOT_A", "traces", "MISSING_A"] in data["edges"]
+          assert "MISSING_A" not in data["objects"]
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_DE0C60E0BB97: seed selection release
+-------------------------------------------
+
+.. test_case:: seed selection release
+   :id: STV_TC_DE0C60E0BB97
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_003, STV_SHR_014, STV_SHR_026, STV_SHR_038, STV_SHR_047, STV_SHR_048, STV_SHR_052, STV_SHR_053, STV_SWR_003, STV_SWR_038, STV_SWR_048, STV_SWR_051, STV_SWR_052, STV_SWR_056, STV_SWR_057
+   :executed_by: STV_TE_56BF0F252E2B0681, STV_TE_2BE1C4B126B18F38
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_selection_release[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_selection_release(browser,short_output,protocol):
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          requirements='Requirements\n============\n\n'
+          for i in range(12):
+              requirements+=f'.. shr:: Goal {i}\n   :id: GOAL_{i:03}\n'
+              if i==0:
+                  requirements+='   :traces: '+', '.join(f'CHILD_{j}' for j in range(5))+'\n'
+              requirements+='\n'
+          requirements+='.. shr:: Secret hidden title\n   :id: HIDDEN_A\n   :hide:\n\n'
+          requirements+='\n'.join(f'.. swr:: Software child {j}\n   :id: CHILD_{j}\n' for j in range(5))
+          (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n\n.. traceability-view:: GOAL_000\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==[f'GOAL_{i:03}' for i in range(5)]
+              field.send_keys('software child')
+              assert root.get_attribute('data-stv-revision')=='0'
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]'))==5
+              field.send_keys(Keys.ESCAPE)
+              assert field.get_attribute('aria-expanded')=='false'
+              field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys('software child')
+              root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]')[2].click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['CHILD_2']
+              assert browser.switch_to.active_element==field
+              for invalid in ['', 'HIDDEN_A', 'Secret hidden', 'goal_000']:
+                  field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE)
+                  if invalid:field.send_keys(invalid)
+                  if invalid!='goal_000':
+                      assert not root.find_elements(By.CSS_SELECTOR,'.stv-seed-matches [role="option"]')
+                  field.send_keys(Keys.ENTER)
+                  assert field.get_attribute('aria-invalid')=='true'
+                  assert root.get_attribute('data-stv-revision')=='1'
+              field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys(' GOAL_000 ');field.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['GOAL_000']
+              control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for GOAL_000"]')
+              browser.execute_script('arguments[0].click()',control)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='3')
+              boxes=browser.execute_script("""return Object.fromEntries([...arguments[0].querySelectorAll('.stv-node')].map(n=>[n.querySelector('.stv-id').textContent,{x:parseFloat(n.style.left),w:n.offsetWidth}]))""",root)
+              children=[boxes[f'CHILD_{i}'] for i in range(5)]
+              midpoint=(min(n['x'] for n in children)+max(n['x']+n['w'] for n in children))/2
+              assert abs(boxes['GOAL_000']['x']+boxes['GOAL_000']['w']/2-midpoint)<1
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='4')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-node'))==6
+              assert roots[1].get_attribute('data-stv-revision')=='0'
+              other=roots[1].find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              other.send_keys('CHILD_4');other.send_keys(Keys.ENTER)
+              wait.until(lambda d:roots[1].get_attribute('data-stv-revision')=='1')
+              assert root.get_attribute('data-stv-revision')=='4'
+              assert [n.text for n in roots[1].find_elements(By.CSS_SELECTOR,'.stv-id')]==['CHILD_4']
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_DF0D9B21A92D: host default directional labels are used
+-------------------------------------------------------------
+
+.. test_case:: host default directional labels are used
+   :id: STV_TC_DF0D9B21A92D
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_045, STV_SWR_045
+   :executed_by: STV_TE_379307EDD1A87108, STV_TE_45E5FFF9B4722E84
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_host_default_directional_labels_are_used(tmp_path):
+          source=tmp_path/'source';shutil.copytree(FIXTURE,source)
+          with (source/'conf.py').open('a',encoding='utf-8') as stream:
+              stream.write('\nneeds_links={"traces":{}}\n')
+          output=tmp_path/'html';result=build(source,output)
+          assert result.returncode==0,result.stderr
+          assert manifest(output)['model']['relations']['traces']=={'incoming':'traces incoming','outgoing':'traces'}
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_E0AB07ABA378: offline exploration
+----------------------------------------
+
+.. test_case:: offline exploration
+   :id: STV_TC_E0AB07ABA378
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_offline_exploration[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_004, STV_SHR_008, STV_SHR_015, STV_SHR_016, STV_SHR_017, STV_SHR_018, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_034, STV_SHR_035, STV_SHR_038, STV_SHR_039, STV_SHR_040, STV_SWR_004, STV_SWR_008, STV_SWR_015, STV_SWR_016, STV_SWR_017, STV_SWR_018, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_034, STV_SWR_035, STV_SWR_038, STV_SWR_039, STV_SWR_040, STV_SWR_050, STV_SYS_003, STV_SYS_007
+   :executed_by: STV_TE_CFC88A8408D563AF, STV_TE_36AF6C6B39F1B4F5
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_offline_exploration[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_offline_exploration(browser, short_output, protocol):
+          tmp_path = short_output
+          output = tmp_path / "nested" / "documentation"
+          result = build(FIXTURE, output)
+          assert result.returncode == 0, result.stderr
+          server = None
+          try:
+              if protocol == "http":
+                  server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
+                  threading.Thread(target=server.serve_forever, daemon=True).start()
+                  url = f"http://127.0.0.1:{server.server_port}/nested/documentation/index.html"
+              else:
+                  url = (output / "index.html").as_uri()
+              browser.get(url)
+              wait = WebDriverWait(browser, 20)
+              wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
+              roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
+              assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+              assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+              root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
+              browser.execute_script("arguments[0].focus()", root_button)
+              root_button.send_keys(Keys.ENTER)
+              wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
+              assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+              assert roots[0].get_attribute("data-stv-revision") == "0"
+              inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
+              browser.execute_script("arguments[0].focus()", inspect)
+              inspect.send_keys(Keys.ENTER)
+              try:
+                  wait.until(lambda d: "formatted body" in d.find_element(By.CSS_SELECTOR, ".stv-detail").text)
+              except Exception:
+                  print(browser.find_element(By.CSS_SELECTOR, ".stv-detail").get_attribute("outerHTML"))
+                  raise
+              assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
+              browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+              wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
+              assert browser.switch_to.active_element == inspect
+              assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
+              assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node:not(.stv-unaccepted) .stv-id').text == 'ROOT_A'
+              # Pointer hover presents the same final host fragment; pointer travel
+              # into the interactive panel keeps it open beyond the dismissal grace.
+              ActionChains(browser).move_to_element(inspect).perform()
+              wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+              panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+              ActionChains(browser).move_to_element(panel).perform()
+              wait.until(lambda d: 'formatted body' in panel.text)
+              assert browser.execute_script('return arguments[0].getBoundingClientRect().right <= innerWidth',panel)
+              assert browser.execute_script('return arguments[0].getBoundingClientRect().bottom <= innerHeight',panel)
+              panel.find_element(By.CSS_SELECTOR,'button').click()
+              # View-local transforms are shared by edge and node layers.
+              other_transform=roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+              for label in ['Zoom in','Pan right','Pan down']:
+                  control=roots[0].find_element(By.CSS_SELECTOR,f'[aria-label="{label}"]')
+                  browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+              roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+              viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
+              scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
+              before_drag=scene.get_attribute('style')
+              x,y=browser.execute_script('const r=arguments[0].getBoundingClientRect();return [Math.min(r.right,innerWidth)-20,Math.min(r.bottom,innerHeight)-20]',viewport)
+              drag=ActionChains(browser)
+              drag.w3c_actions.pointer_action.move_to_location(x,y)
+              drag.click_and_hold().move_by_offset(-80,-60).release().perform()
+              wait.until(lambda d:scene.get_attribute('style')!=before_drag)
+              before_wheel=scene.get_attribute('style')
+              ActionChains(browser).scroll_from_origin(ScrollOrigin.from_element(viewport),0,-120).perform()
+              wait.until(lambda d:scene.get_attribute('style')!=before_wheel)
+              assert len(browser.window_handles)==1
+              assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+              roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+              group=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',group);group.send_keys(Keys.ENTER)
+              wait.until(lambda d: roots[0].get_attribute('data-stv-revision')=='1')
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-node'))==2
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+              reverse=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traced by (incoming) for LEAF_B"]')
+              browser.execute_script('arguments[0].focus()',reverse);reverse.send_keys(Keys.ENTER)
+              wait.until(lambda d:roots[0].get_attribute('data-stv-revision')=='2')
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+              original=roots[0].find_element(By.CSS_SELECTOR,'.stv-summary')
+              before=browser.current_window_handle
+              browser.execute_script('arguments[0].focus()',original);original.send_keys(Keys.ENTER)
+              wait.until(lambda d: len(d.window_handles)==2)
+              browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+              wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+              wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
+              assert browser.current_url.endswith('requirements.html#ROOT_A')
+              browser.close();browser.switch_to.window(before)
+              # The card background belongs to the original-object anchor; separate
+              # group/detail controls remain above that stretched hit region.
+              card=roots[0].find_element(By.CSS_SELECTOR,'[data-key*="ROOT_A"]')
+              ActionChains(browser).move_to_element_with_offset(card,-card.size['width']/2+3,-card.size['height']/2+3).click().perform()
+              wait.until(lambda d:len(d.window_handles)==2)
+              browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+              wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+              wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
+              assert browser.current_url.endswith('requirements.html#ROOT_A')
+              browser.close();browser.switch_to.window(before)
+              artifact = os.environ.get("STV_SCREENSHOTS")
+              if artifact:
+                  Path(artifact).mkdir(parents=True, exist_ok=True)
+                  browser.save_screenshot(str(Path(artifact) / f"{protocol}-example.png"))
+          finally:
+              if server:
+                  server.shutdown()
+                  server.server_close()
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_E23001FBE2A5: project paging
+-----------------------------------
+
+.. test_case:: project paging
+   :id: STV_TC_E23001FBE2A5
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_project_paging[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
+   :executed_by: STV_TE_CBBC2FACA177EA6A, STV_TE_8F519B08D780D32F
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_project_paging[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_project_paging[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_project_paging(browser,short_output,protocol):
+          import shutil
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          (source/'requirements.rst').write_text('Requirements\n============\n\n'+'\n'.join(f'.. shr:: Stakeholder {i}\n   :id: GOAL_{i:03}\n' for i in range(201)),encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url)
+              _assert_project_pages(browser)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_E2A064F091BE: async layout failure and stale completion
+--------------------------------------------------------------
+
+.. test_case:: async layout failure and stale completion
+   :id: STV_TC_E2A064F091BE
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_044, STV_SHR_047, STV_SWR_044, STV_SWR_052
+   :executed_by: STV_TE_3A7FDDC0E8DA0DCC, STV_TE_9DEB9C844A02AF74
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_async_layout_failure_and_stale_completion(browser,short_output,protocol):
+          project=Path(__file__).parents[1]
+          script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          assert result.returncode==0,result.stderr
+          (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
+          # Keep the host alive across all injected completions.
+          with published_url(short_output,protocol) as url:
+              browser.get(url)
+              _assert_async_layout(browser)
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_E66A443619C6: alternate model geometry details and external
+------------------------------------------------------------------
+
+.. test_case:: alternate model geometry details and external
+   :id: STV_TC_E66A443619C6
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_008, STV_SHR_012, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_037, STV_SHR_041, STV_SHR_047, STV_SHR_048, STV_SWR_008, STV_SWR_012, STV_SWR_015, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_037, STV_SWR_041, STV_SWR_047, STV_SWR_048, STV_SWR_049, STV_SWR_050, STV_SYS_004, STV_SYS_005, STV_SYS_006, STV_SYS_010
+   :executed_by: STV_TE_A7749A458DE50DB9, STV_TE_C45BE36EF5E5D893
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_alternate_model_geometry_details_and_external(browser,short_output,protocol):
+          output=short_output/'html';result=build(FIXTURE.parent/'alternate_model',output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,30)
+              wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==3)
+              roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root=roots[0]
+              assert browser.execute_script('''const n=arguments[0].querySelector('.stv-node').getBoundingClientRect(),v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect();return n.top>=v.top&&n.bottom<=v.bottom''',root)
+              def group(identity,direction):
+                  return root.find_element(By.CSS_SELECTOR,f'[aria-label="Expand Traces {"to" if direction=="outgoing" else "from"} ({direction}) for {identity}"]')
+              control=group('SOFTWARE_A','outgoing');browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              control=group('GOAL_A','outgoing');browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='2')
+              boxes=browser.execute_script('''return Object.fromEntries([...arguments[0].querySelectorAll('.stv-nodes>.stv-node')].map(n=>[n.querySelector('.stv-id').textContent,{x:parseFloat(n.style.left),y:parseFloat(n.style.top),width:n.offsetWidth,height:n.offsetHeight}]))''',root)
+              assert len(boxes)==6
+              assert 'HIDDEN_A' not in boxes
+              for a,b in zip(['GOAL_A','HARDWARE_A','SYSTEM_A','SOFTWARE_A'],['HARDWARE_A','SYSTEM_A','SOFTWARE_A','MODULE_A']):assert boxes[a]['y']+boxes[a]['height']<boxes[b]['y']
+              assert boxes['CHECK_A']['x']>=max(v['x']+v['width'] for k,v in boxes.items() if k!='CHECK_A')+96
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==7
+              assert browser.execute_script('''const title=arguments[0].querySelector('[data-key*="GOAL_A"] .stv-title');return title.scrollHeight>title.clientHeight&&title.clientHeight<=2*parseFloat(getComputedStyle(title).lineHeight)+1''',root)
+              long_id=roots[1].find_element(By.CSS_SELECTOR,'[data-key*=LONG_IDENTIFIER] .stv-id')
+              assert long_id.get_attribute('textContent')=='LONG_IDENTIFIER_WITH_MANY_SEGMENTS_ABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789_ABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789'
+              assert browser.execute_script('return arguments[0].scrollWidth<=arguments[0].clientWidth',long_id)
+              assert len(roots[1].find_elements(By.CSS_SELECTOR,'.stv-unaccepted'))==2
+              # A part seed inspects the complete published containing Need.
+              part=roots[2].find_element(By.CSS_SELECTOR,'[aria-label="Details for GOAL_A.fragment"]')
+              browser.execute_script('arguments[0].focus()',part);part.send_keys(Keys.ENTER)
+              wait.until(lambda d:'Static widget text' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+              assert 'Fixture owner' in panel.text
+              assert 'Resource unavailable offline' in panel.text
+              assert not panel.find_elements(By.CSS_SELECTOR,'script,iframe,object,[onerror]')
+              assert not browser.execute_script('return window.STV_WIDGET_EXECUTED===true')
+              assert panel.find_element(By.CSS_SELECTOR,'img[data-stv-src]').get_attribute('complete')=='true'
+              assert browser.execute_script('return arguments[0].naturalWidth',panel.find_element(By.CSS_SELECTOR,'img[data-stv-src]'))>0
+              assert browser.execute_script('return arguments[0].naturalWidth',panel.find_element(By.CSS_SELECTOR,'.fixture-widget img'))>0
+              label=panel.find_element(By.CSS_SELECTOR,'label');field=panel.find_element(By.CSS_SELECTOR,'input')
+              assert label.get_attribute('for')==field.get_attribute('id')
+              assert field.get_attribute('id').startswith(panel.get_attribute('id'))
+              assert 'HIDDEN_A' not in panel.text
+              assert not browser.execute_script("return performance.getEntriesByType('resource').some(e=>e.name.includes('example.invalid'))")
+              assert browser.execute_script('return arguments[0].scrollHeight>arguments[0].clientHeight',panel)
+              browser.execute_script('arguments[0].focus()',panel);panel.send_keys(Keys.END)
+              wait.until(lambda d:browser.execute_script('return arguments[0].scrollTop>0',panel))
+              original=panel.find_element(By.CSS_SELECTOR,'a[href*="example.invalid/remote.png"]')
+              assert original.text=='Original resource'
+              panel.find_element(By.CSS_SELECTOR,'button').click()
+              external=roots[1].find_element(By.CSS_SELECTOR,'[aria-label="Details for EXTERNAL_A"]')
+              browser.execute_script('arguments[0].focus()',external);external.send_keys(Keys.ENTER)
+              wait.until(lambda d:'External owner' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+              assert 'full body unavailable offline' in browser.find_element(By.CSS_SELECTOR,'.stv-detail').text
+              browser.find_element(By.CSS_SELECTOR,'.stv-detail button').click()
+              isolated=roots[1].find_element(By.CSS_SELECTOR,'.stv-unaccepted')
+              browser.execute_script('arguments[0].focus()',isolated.find_element(By.CSS_SELECTOR,'[data-focus="details"]'))
+              wait.until(lambda d:isolated.find_element(By.CSS_SELECTOR,'.stv-id').text=='ISOLATED_A')
+              assert isolated.find_element(By.CSS_SELECTOR,'.stv-id').text=='ISOLATED_A'
+              assert 'No relationships' in isolated.text
+              assert not isolated.find_elements(By.CSS_SELECTOR,'.stv-groups button')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_EB0F95BABF84: empty seed catalog
+---------------------------------------
+
+.. test_case:: empty seed catalog
+   :id: STV_TC_EB0F95BABF84
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_047, STV_SHR_053, STV_SWR_051, STV_SWR_052, STV_SWR_057
+   :executed_by: STV_TE_EAB2D41B5168D79C, STV_TE_F4B5B1B6C6055FE4
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_empty_seed_catalog(browser,short_output,protocol):
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          (source/'requirements.rst').write_text('Requirements\n============\n',encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+              root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              assert 'No stakeholder requirements.' in root.text
+              assert not root.find_elements(By.CSS_SELECTOR,'[data-focus="root"],[data-focus="Next"]')
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              field.send_keys('anything');field.send_keys(Keys.ARROW_UP);field.send_keys(Keys.ENTER)
+              assert field.get_attribute('aria-invalid')=='true'
+              assert field.get_attribute('aria-expanded')=='false'
+              assert root.get_attribute('data-stv-revision')=='0'
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-node'))==1
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_EFBBC00F61AC: large project at visible capacity
+------------------------------------------------------
+
+.. test_case:: large project at visible capacity
+   :id: STV_TC_EFBBC00F61AC
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_capacity.py :: docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_043, STV_SHR_044, STV_SWR_043, STV_SWR_044, STV_SYS_008
+   :executed_by: STV_TE_EA4C3D20E892A129, STV_TE_A62ED5B70EFE8DD0
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_large_project_at_visible_capacity(browser,protocol):
+          output=Path(os.environ.get('STV_CAPACITY_OUTPUT','docs/_build/benchmark-v2/html')).resolve()
+          assert (output/'index.html').is_file(),'Run scripts/benchmark.py before capacity verification'
+          runs=[]
+          browser.set_script_timeout(35)
+          temporary=tempfile.TemporaryDirectory(prefix='stv-cap-') if protocol=='file' else None
+          if temporary:
+              assert Path(temporary.name).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+              # Full hash names need a short physical output root in Windows Firefox.
+              short=Path(temporary.name)/'html';shutil.copytree(output,short);output=short
+          try:
+              _measure_capacity(browser,output,protocol,runs)
+          finally:
+              if temporary:
+                  assert Path(temporary.name).resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+                  temporary.cleanup()
+          result={'browser':browser.capabilities['browserVersion'],'geckodriver':browser.capabilities.get('moz:geckodriverVersion'),
+                  'memory_scope':'Sum of working sets of the isolated Firefox process tree, including content/GPU helpers; shared pages may be counted more than once',
+                  'runs':runs,'startup_median_ms':statistics.median(r['startup_ms'] for r in runs),
+                  'startup_max_ms':max(r['startup_ms'] for r in runs),
+                  'expansion_median_ms':statistics.median(v for r in runs for v in r['expansion_ms']),
+                  'expansion_max_ms':max(v for r in runs for v in r['expansion_ms'])}
+          target=Path(os.environ.get('STV_CAPACITY_METRICS','docs/_build/capacity-browser.json'));target.parent.mkdir(parents=True,exist_ok=True)
+          aggregate=json.loads(target.read_text(encoding='utf-8')) if target.exists() else {}
+          aggregate[protocol]=result
+          target.write_text(json.dumps(aggregate,indent=2),encoding='utf-8')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_F3892D8A1C98: seed layout replacement failure and staleness
+------------------------------------------------------------------
+
+.. test_case:: seed layout replacement failure and staleness
+   :id: STV_TC_F3892D8A1C98
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_044, STV_SHR_053, STV_SWR_044, STV_SWR_057
+   :executed_by: STV_TE_CDCABD8ACB9C2964, STV_TE_B65229E135C87272
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_seed_layout_replacement_failure_and_staleness(browser,short_output,protocol):
+          from pathlib import Path
+          project=Path(__file__).parents[1]
+          script="import{build}from'esbuild';await build({entryPoints:[process.argv[1]],bundle:true,format:'iife',outfile:process.argv[2]})"
+          result=subprocess.run(['node','--input-type=module','-e',script,str(project/'docs/test-scripts/fixtures/browser-harness.js'),str(short_output/'harness.js')],cwd=project/'frontend',capture_output=True,text=True)
+          assert result.returncode==0,result.stderr
+          (short_output/'index.html').write_text('<link rel="stylesheet" href="'+(project/'src/sphinx_traceability_view/static/stv.css').as_uri()+'"><div class="stv-view" id="test-view" data-stv-seeds=\'["A"]\'></div><script src="harness.js"></script>',encoding='utf-8')
+          with published_url(short_output,protocol) as url:
+              browser.get(url);_assert_async_layout(browser)
+              wait=WebDriverWait(browser,20);root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              previous=root.find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+              field.send_keys('B');field.send_keys(Keys.ENTER)
+              wait.until(lambda d:d.execute_script('return calls.length')==7)
+              browser.execute_script('calls[6].reject(Error("Seed layout failure"))')
+              wait.until(lambda d:'Seed layout failure' in root.find_element(By.CSS_SELECTOR,'.stv-status').text)
+              assert root.get_attribute('data-stv-revision')=='2'
+              assert root.find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')==previous
+              assert browser.switch_to.active_element==field
+              for identity,count in [('A',8),('B',9)]:
+                  field.send_keys(Keys.CONTROL,'a');field.send_keys(Keys.BACKSPACE);field.send_keys(identity);field.send_keys(Keys.ENTER)
+                  wait.until(lambda d:d.execute_script('return calls.length')==count)
+              browser.execute_script('stvHarness.compute(...calls[8].args).then(calls[8].resolve)')
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='3')
+              browser.execute_script('stvHarness.compute(...calls[7].args).then(calls[7].resolve)')
+              wait.until(lambda d:d.execute_script('return document.querySelectorAll(".stv-measure").length')==0)
+              assert root.get_attribute('data-stv-revision')=='3'
+              assert [n.text for n in root.find_elements(By.CSS_SELECTOR,'.stv-id')]==['B']
+              assert browser.switch_to.active_element==field
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_F6E0695BB399: offline exploration
+----------------------------------------
+
+.. test_case:: offline exploration
+   :id: STV_TC_F6E0695BB399
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_browser.py :: docs/test-scripts/test_browser.py::test_offline_exploration[http]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_004, STV_SHR_008, STV_SHR_015, STV_SHR_016, STV_SHR_017, STV_SHR_018, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_034, STV_SHR_035, STV_SHR_038, STV_SHR_039, STV_SHR_040, STV_SWR_004, STV_SWR_008, STV_SWR_015, STV_SWR_016, STV_SWR_017, STV_SWR_018, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_034, STV_SWR_035, STV_SWR_038, STV_SWR_039, STV_SWR_040, STV_SWR_050, STV_SYS_003, STV_SYS_007
+   :executed_by: STV_TE_CD6E815F9CAC0F7F, STV_TE_381A684E64CE327D
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_browser.py::test_offline_exploration[http]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_offline_exploration(browser, short_output, protocol):
+          tmp_path = short_output
+          output = tmp_path / "nested" / "documentation"
+          result = build(FIXTURE, output)
+          assert result.returncode == 0, result.stderr
+          server = None
+          try:
+              if protocol == "http":
+                  server = ThreadingHTTPServer(("127.0.0.1", 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
+                  threading.Thread(target=server.serve_forever, daemon=True).start()
+                  url = f"http://127.0.0.1:{server.server_port}/nested/documentation/index.html"
+              else:
+                  url = (output / "index.html").as_uri()
+              browser.get(url)
+              wait = WebDriverWait(browser, 20)
+              wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, '.stv-view[data-stv-revision="0"]')) == 2)
+              roots = browser.find_elements(By.CSS_SELECTOR, ".stv-view")
+              assert len(roots[0].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+              assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 2
+              root_button = roots[1].find_element(By.CSS_SELECTOR, '[data-focus="root"]')
+              browser.execute_script("arguments[0].focus()", root_button)
+              root_button.send_keys(Keys.ENTER)
+              wait.until(lambda d: roots[1].get_attribute("data-stv-revision") == "1")
+              assert len(roots[1].find_elements(By.CSS_SELECTOR, ".stv-node")) == 1
+              assert roots[0].get_attribute("data-stv-revision") == "0"
+              inspect = roots[0].find_element(By.CSS_SELECTOR, '[aria-label="Details for ROOT_A"]')
+              browser.execute_script("arguments[0].focus()", inspect)
+              inspect.send_keys(Keys.ENTER)
+              try:
+                  wait.until(lambda d: "formatted body" in d.find_element(By.CSS_SELECTOR, ".stv-detail").text)
+              except Exception:
+                  print(browser.find_element(By.CSS_SELECTOR, ".stv-detail").get_attribute("outerHTML"))
+                  raise
+              assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
+              browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+              wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
+              assert browser.switch_to.active_element == inspect
+              assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
+              assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node:not(.stv-unaccepted) .stv-id').text == 'ROOT_A'
+              # Pointer hover presents the same final host fragment; pointer travel
+              # into the interactive panel keeps it open beyond the dismissal grace.
+              ActionChains(browser).move_to_element(inspect).perform()
+              wait.until(lambda d: d.find_elements(By.CSS_SELECTOR, '.stv-detail'))
+              panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+              ActionChains(browser).move_to_element(panel).perform()
+              wait.until(lambda d: 'formatted body' in panel.text)
+              assert browser.execute_script('return arguments[0].getBoundingClientRect().right <= innerWidth',panel)
+              assert browser.execute_script('return arguments[0].getBoundingClientRect().bottom <= innerHeight',panel)
+              panel.find_element(By.CSS_SELECTOR,'button').click()
+              # View-local transforms are shared by edge and node layers.
+              other_transform=roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style')
+              for label in ['Zoom in','Pan right','Pan down']:
+                  control=roots[0].find_element(By.CSS_SELECTOR,f'[aria-label="{label}"]')
+                  browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+              assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+              roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+              viewport=roots[0].find_element(By.CSS_SELECTOR,'.stv-viewport')
+              scene=roots[0].find_element(By.CSS_SELECTOR,'.stv-scene')
+              before_drag=scene.get_attribute('style')
+              x,y=browser.execute_script('const r=arguments[0].getBoundingClientRect();return [Math.min(r.right,innerWidth)-20,Math.min(r.bottom,innerHeight)-20]',viewport)
+              drag=ActionChains(browser)
+              drag.w3c_actions.pointer_action.move_to_location(x,y)
+              drag.click_and_hold().move_by_offset(-80,-60).release().perform()
+              wait.until(lambda d:scene.get_attribute('style')!=before_drag)
+              before_wheel=scene.get_attribute('style')
+              ActionChains(browser).scroll_from_origin(ScrollOrigin.from_element(viewport),0,-120).perform()
+              wait.until(lambda d:scene.get_attribute('style')!=before_wheel)
+              assert len(browser.window_handles)==1
+              assert roots[1].find_element(By.CSS_SELECTOR,'.stv-scene').get_attribute('style') == other_transform
+              roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Reset viewport"]').click()
+              group=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+              browser.execute_script('arguments[0].focus()',group);group.send_keys(Keys.ENTER)
+              wait.until(lambda d: roots[0].get_attribute('data-stv-revision')=='1')
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-node'))==2
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+              reverse=roots[0].find_element(By.CSS_SELECTOR,'[aria-label="Expand Traced by (incoming) for LEAF_B"]')
+              browser.execute_script('arguments[0].focus()',reverse);reverse.send_keys(Keys.ENTER)
+              wait.until(lambda d:roots[0].get_attribute('data-stv-revision')=='2')
+              assert len(roots[0].find_elements(By.CSS_SELECTOR,'.stv-edges polyline'))==1
+              original=roots[0].find_element(By.CSS_SELECTOR,'.stv-summary')
+              before=browser.current_window_handle
+              browser.execute_script('arguments[0].focus()',original);original.send_keys(Keys.ENTER)
+              wait.until(lambda d: len(d.window_handles)==2)
+              browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+              wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+              wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
+              assert browser.current_url.endswith('requirements.html#ROOT_A')
+              browser.close();browser.switch_to.window(before)
+              # The card background belongs to the original-object anchor; separate
+              # group/detail controls remain above that stretched hit region.
+              card=roots[0].find_element(By.CSS_SELECTOR,'[data-key*="ROOT_A"]')
+              ActionChains(browser).move_to_element_with_offset(card,-card.size['width']/2+3,-card.size['height']/2+3).click().perform()
+              wait.until(lambda d:len(d.window_handles)==2)
+              browser.switch_to.window(next(handle for handle in browser.window_handles if handle!=before))
+              wait.until(lambda d:d.current_url.endswith('requirements.html#ROOT_A'))
+              wait.until(lambda d:d.find_elements(By.ID,'ROOT_A'))
+              assert browser.current_url.endswith('requirements.html#ROOT_A')
+              browser.close();browser.switch_to.window(before)
+              artifact = os.environ.get("STV_SCREENSHOTS")
+              if artifact:
+                  Path(artifact).mkdir(parents=True, exist_ok=True)
+                  browser.save_screenshot(str(Path(artifact) / f"{protocol}-example.png"))
+          finally:
+              if server:
+                  server.shutdown()
+                  server.server_close()
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_F988267D01C9: clean wheel host
+-------------------------------------
+
+.. test_case:: clean wheel host
+   :id: STV_TC_F988267D01C9
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_package.py :: docs/test-scripts/test_package.py::test_clean_wheel_host
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_042, STV_SHR_046, STV_SWR_042, STV_SWR_046, STV_SYS_009
+   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E
+   :last_result: passed
+
+   **Level:** System packaging integration.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_package.py::test_clean_wheel_host``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_package.py::test_clean_wheel_host" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_clean_wheel_host():
+          wheels=[Path(os.environ['STV_WHEEL'])] if os.environ.get('STV_WHEEL') else sorted((ROOT/'dist').glob('*.whl'))
+          assert wheels,'Build the wheel before packaging verification'
+          wheel=wheels[-1]
+          wheelhouse=ROOT/'docs/_build/wheelhouse'
+          assert wheelhouse.is_dir(),'Provision the runtime wheelhouse before offline packaging verification'
+          with zipfile.ZipFile(wheel) as archive:
+              names=archive.namelist()
+              for asset in ('stv.js','stv.css','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js'):
+                  assert f'sphinx_traceability_view/static/{asset}' in names
+              metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
+              assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
+          with tempfile.TemporaryDirectory(prefix='stv-wheel-') as directory:
+              root=Path(directory);envpath=root/'env'
+              assert root.resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+              subprocess.run([sys.executable,'-m','venv',str(envpath)],check=True,capture_output=True)
+              python=envpath/'Scripts/python.exe'
+              result=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),str(wheel)],capture_output=True,text=True)
+              assert result.returncode==0,result.stdout+result.stderr
+              source=root/'source';shutil.copytree(ROOT/'docs/test-scripts/fixtures/minimal',source)
+              env=dict(os.environ);env.pop('PYTHONPATH',None)
+              env['PATH']=str(envpath/'Scripts')+os.pathsep+str(Path(os.environ['SystemRoot'])/'System32')
+              result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)
+              assert result.returncode==0,result.stdout+result.stderr
+              assert 'STV_PENDING' not in (root/'html/index.html').read_text(encoding='utf-8')
+              probe=subprocess.run([str(python),'-c','import sphinx_traceability_view as s;print(s.__file__)'],env=env,cwd=root,capture_output=True,text=True,check=True)
+              assert str(envpath).lower() in probe.stdout.lower()
+              retained=os.environ.get('STV_CONSUMER_RECORD')
+              if retained:
+                  destination=Path(retained);destination.mkdir(parents=True,exist_ok=True)
+                  (destination/'build.log').write_text(result.stdout+result.stderr,encoding='utf-8')
+                  frozen=subprocess.run([str(python),'-m','pip','freeze'],capture_output=True,text=True,check=True)
+                  (destination/'environment.txt').write_text(frozen.stdout,encoding='utf-8')
+                  (destination/'identity.txt').write_text(probe.stdout+'\nPATH='+env['PATH']+'\n',encoding='utf-8')
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_FB72ADBCAE29: empty seed catalog
+---------------------------------------
+
+.. test_case:: empty seed catalog
+   :id: STV_TC_FB72ADBCAE29
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_release_seeds.py :: docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_047, STV_SHR_053, STV_SWR_051, STV_SWR_052, STV_SWR_057
+   :executed_by: STV_TE_F0A3E069E2F6967C, STV_TE_C419E178B9EBDAC3
+   :last_result: passed
+
+   **Level:** System/browser acceptance.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[file]" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_empty_seed_catalog(browser,short_output,protocol):
+          source=short_output/'source';shutil.copytree(FIXTURE,source)
+          (source/'requirements.rst').write_text('Requirements\n============\n',encoding='utf-8')
+          (source/'index.rst').write_text('Project\n=======\n\n.. toctree::\n\n   requirements\n\n.. traceability-view::\n',encoding='utf-8')
+          output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stderr
+          with published_url(output,protocol) as url:
+              browser.get(url);wait=WebDriverWait(browser,20)
+              wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+              root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+              assert 'No stakeholder requirements.' in root.text
+              assert not root.find_elements(By.CSS_SELECTOR,'[data-focus="root"],[data-focus="Next"]')
+              field=root.find_element(By.CSS_SELECTOR,'.stv-seed-picker input')
+              field.send_keys('anything');field.send_keys(Keys.ARROW_UP);field.send_keys(Keys.ENTER)
+              assert field.get_attribute('aria-invalid')=='true'
+              assert field.get_attribute('aria-expanded')=='false'
+              assert root.get_attribute('data-stv-revision')=='0'
+              root.find_element(By.XPATH,'.//button[text()="Project overview"]').click()
+              wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+              assert len(root.find_elements(By.CSS_SELECTOR,'.stv-node'))==1
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_FC50F6627767: unsupported builder fails clearly
+------------------------------------------------------
+
+.. test_case:: unsupported builder fails clearly
+   :id: STV_TC_FC50F6627767
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_build.py :: docs/test-scripts/test_build.py::test_unsupported_builder_fails_clearly
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_001, STV_SWR_001
+   :executed_by: STV_TE_B17272C4602B2A77, STV_TE_BE1ACFDE9841CB9D
+   :last_result: passed
+
+   **Level:** System integration through the public Sphinx build interface.
+
+   **Preconditions and inputs:** Use the pinned implementation environment,
+   fixture setup and parameter variant identified by the executable selector.
+   Browser cases require provisioned Firefox/geckodriver and both file/HTTP
+   variants where parameterized. Capacity cases require a freshly generated
+   30,000-Need/90,000-edge fixture; packaging requires the candidate wheel and
+   offline wheelhouse. The procedure below specifies test-specific inputs.
+
+   **Executable selector:** ``docs/test-scripts/test_build.py::test_unsupported_builder_fails_clearly``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest "docs/test-scripts/test_build.py::test_unsupported_builder_fails_clearly" -q``.
+
+   **Procedure and expected outcomes:** Execute the following existing test
+   procedure with its fixture helpers. Every assertion is a required observable
+   outcome; expected error cases must assert the specified diagnostic/state.
+   Links identify criterion portions exercised by this case, not a claim that
+   this individual case alone verifies every linked requirement in full.
+   Review the full case set and the release criterion assessment together.
+
+   .. code-block:: python
+
+      def test_unsupported_builder_fails_clearly(tmp_path):
+          result=build(FIXTURE,tmp_path,'-b','text')
+          assert result.returncode!=0
+          assert 'supports only the html builder' in result.stderr
+
+   **Evidence to retain:** Per-case execution result and timestamp, candidate
+   and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_OCC_019: Select separate occurrences
+-------------------------------------------
+
+.. test_case:: Select separate occurrences
+   :id: STV_TC_OCC_019
+   :status: accepted
+   :tags: release_later, test_system
+   :basis: documented
+   :evidence: docs/requirements-stakeholder.rst; docs/requirements-software.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_019, STV_SWR_019
+   :last_result: not_run
+
+   **Level/environment:** Planned browser acceptance, Windows/Firefox,
+   file and nested static HTTP output, network blocked.
+
+   **Preconditions/inputs:** Future occurrence-mode implementation; two
+   parents sharing one child with two disjoint nonempty relationship groups.
+
+   **Procedure:** Open a two-parent graph sharing one child. Select separate-occurrence mode, then shared mode.
+
+   **Expected outcomes:** Separate mode shows two child occurrences; shared mode shows one. The selector and visible mode agree.
+
+   Repeat with a cycle and a missing target to verify termination and visible
+   placeholder identity. Start at 199 visible occurrences and request two more:
+   the transition must be rejected atomically with the node-limit explanation.
+   A transition to exactly 200 succeeds. Attempt a mode switch producing 201:
+   retain mode, graph and exploration state and explain the limit.
+
+   **Execution/evidence:** No executable implementation exists in v0.2.0.
+   Retain per-case results, candidate identity and file/HTTP screenshots when
+   the future release implements this scope; no execution record is invented.
+
+STV_TC_OCC_021: Restore occurrence exploration
+----------------------------------------------
+
+.. test_case:: Restore occurrence exploration
+   :id: STV_TC_OCC_021
+   :status: accepted
+   :tags: release_later, test_system
+   :basis: documented
+   :evidence: docs/requirements-stakeholder.rst; docs/requirements-software.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_021, STV_SWR_021
+   :last_result: not_run
+
+   **Level/environment:** Planned browser acceptance, Windows/Firefox,
+   file and nested static HTTP output, network blocked.
+
+   **Preconditions/inputs:** Future occurrence-mode implementation; two
+   parents sharing one child with two disjoint nonempty relationship groups.
+
+   **Procedure:** In separate mode expand different groups in each occurrence. Switch to shared mode and back.
+
+   **Expected outcomes:** Each occurrence recovers its own expanded and collapsed groups without losing prior exploration.
+
+   Repeat with a cycle and a missing target to verify termination and visible
+   placeholder identity. Start at 199 visible occurrences and request two more:
+   the transition must be rejected atomically with the node-limit explanation.
+   A transition to exactly 200 succeeds. Attempt a mode switch producing 201:
+   retain mode, graph and exploration state and explain the limit.
+
+   **Execution/evidence:** No executable implementation exists in v0.2.0.
+   Retain per-case results, candidate identity and file/HTTP screenshots when
+   the future release implements this scope; no execution record is invented.
+
+STV_TC_OCC_022: Isolate occurrence expansion
+--------------------------------------------
+
+.. test_case:: Isolate occurrence expansion
+   :id: STV_TC_OCC_022
+   :status: accepted
+   :tags: release_later, test_system
+   :basis: documented
+   :evidence: docs/requirements-stakeholder.rst; docs/requirements-software.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_022, STV_SWR_022
+   :last_result: not_run
+
+   **Level/environment:** Planned browser acceptance, Windows/Firefox,
+   file and nested static HTTP output, network blocked.
+
+   **Preconditions/inputs:** Future occurrence-mode implementation; two
+   parents sharing one child with two disjoint nonempty relationship groups.
+
+   **Procedure:** In separate mode show two occurrences of one child through different parents. Expand a group on only the first.
+
+   **Expected outcomes:** Only the first occurrence changes; the other retains its original graph and expansion state.
+
+   Repeat with a cycle and a missing target to verify termination and visible
+   placeholder identity. Start at 199 visible occurrences and request two more:
+   the transition must be rejected atomically with the node-limit explanation.
+   A transition to exactly 200 succeeds. Attempt a mode switch producing 201:
+   retain mode, graph and exploration state and explain the limit.
+
+   **Execution/evidence:** No executable implementation exists in v0.2.0.
+   Retain per-case results, candidate identity and file/HTTP screenshots when
+   the future release implements this scope; no execution record is invented.
+
+STV_TC_OCC_023: Merge shared expansion sets
+-------------------------------------------
+
+.. test_case:: Merge shared expansion sets
+   :id: STV_TC_OCC_023
+   :status: accepted
+   :tags: release_later, test_system
+   :basis: documented
+   :evidence: docs/requirements-stakeholder.rst; docs/requirements-software.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_023, STV_SWR_023
+   :last_result: not_run
+
+   **Level/environment:** Planned browser acceptance, Windows/Firefox,
+   file and nested static HTTP output, network blocked.
+
+   **Preconditions/inputs:** Future occurrence-mode implementation; two
+   parents sharing one child with two disjoint nonempty relationship groups.
+
+   **Procedure:** In separate mode expand disjoint groups on two copies. Switch to shared mode.
+
+   **Expected outcomes:** One shared object remains with the union of both expanded groups and no duplicate canonical edges.
+
+   Repeat with a cycle and a missing target to verify termination and visible
+   placeholder identity. Start at 199 visible occurrences and request two more:
+   the transition must be rejected atomically with the node-limit explanation.
+   A transition to exactly 200 succeeds. Attempt a mode switch producing 201:
+   retain mode, graph and exploration state and explain the limit.
+
+   **Execution/evidence:** No executable implementation exists in v0.2.0.
+   Retain per-case results, candidate identity and file/HTTP screenshots when
+   the future release implements this scope; no execution record is invented.
+
+STV_TC_WINDOWS_PATH: Inspect details from a nested Windows checkout
+-------------------------------------------------------------------
+
+.. test_case:: Inspect details from a nested Windows checkout
+   :id: STV_TC_WINDOWS_PATH
+   :status: accepted
+   :tags: known_issue, test_system
+   :basis: documented
+   :evidence: docs/problem-tickets/STV_PR_006.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_018, STV_SYS_003, STV_SYS_006, STV_SWR_015, STV_SWR_017, STV_SWR_018
+   :last_result: not_run
+
+   **Level/environment:** Windows browser system acceptance; stable Firefox
+   with recorded version, direct file URLs and nested static HTTP hosting.
+   This planned regression preserves :need:`STV_PR_006` and is not part of the
+   currently implemented executable suite. No fresh result is inferred from
+   the report's earlier diagnostic evidence.
+
+   **Preconditions/inputs:** A nested checkout reproducing the report's old
+   generated detail paths beyond 260 characters, an existing generated local
+   detail asset and a requirement with published rich content. Include a root
+   documentation page and a page below the output root. Record actual absolute
+   asset-path lengths and browser/Windows versions. Preserve the old scheme's
+   failure evidence before testing an authorized correction.
+
+   **Procedure:** Build the exact candidate; open each page via file URL and
+   activate the requirement's Details control by pointer and keyboard. Compare
+   the displayed title, metadata and body with the original published object.
+   Check script-load/network errors. Repeat from a nested static HTTP prefix.
+   Remove one generated detail asset in an isolated fixture copy, activate its
+   control, restore it and exercise retry. Inspect shared-fragment registration
+   and graph references using two objects with identical detail fragments.
+
+   **Expected outcomes:** Existing detail assets load and show the correct
+   content in both transports and page depths, without the generic unavailable
+   message or unexpected script-load errors. Identical fragments retain shared
+   content identity and correct references. A genuinely missing asset produces
+   the accessible unavailable indication; retry after restoration succeeds.
+   Record the supported path boundary explicitly; do not claim arbitrary-depth
+   Windows paths work merely because filenames were shortened.
+
+   **Evidence:** Candidate/test identity, build and browser logs, measured path
+   lengths, before/after screenshots and the retained missing-asset/retry result.
+   Product correction and executable implementation remain outside the current
+   documentation-only increment. ``not_run`` is a known qualification gap.

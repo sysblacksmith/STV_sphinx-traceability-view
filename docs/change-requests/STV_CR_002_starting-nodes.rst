@@ -33,15 +33,15 @@ Verification remains not_assessed.
 Affected requirement objects
 -----------------------------
 
-stakeholder.rst:
+requirements-stakeholder.rst:
 
 :need:`STV_SHR_003`, :need:`STV_SHR_025`, :need:`STV_SHR_026`, :need:`STV_SHR_047`, :need:`STV_SHR_048`.
 
-system.rst:
+requirements-system.rst:
 
 :need:`STV_SYS_001`.
 
-software.rst:
+requirements-software.rst:
 
 :need:`STV_SWR_001`, :need:`STV_SWR_003`, :need:`STV_SWR_007`, :need:`STV_SWR_025`, :need:`STV_SWR_026`, :need:`STV_SWR_051`, :need:`STV_SWR_014`,
 :need:`STV_SWR_043`, :need:`STV_SWR_052`.

@@ -34,7 +34,7 @@ Problem 5: Order relationship controls by vertical direction
    **Affected artifacts:** :need:`STV_SHR_051`, :need:`STV_SWR_055`,
    :need:`STV_SWE_RENDER`. See :doc:`/change-requests/STV_CR_005_control-order`.
 
-   **Implementation:** ``frontend/src/groups.js`` and ``frontend/src/view.js``.
+   **Implementation:** ``frontend/src/render/groups.js`` and ``frontend/src/render/view.js``.
    No system responsibility, architecture boundary or behavioral transition
    changes. Verification and remaining review are recorded in the change record.
 

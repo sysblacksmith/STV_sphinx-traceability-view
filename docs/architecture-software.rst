@@ -1,8 +1,11 @@
 Architecture View for Software
 ==============================
 
-Component responsibilities and interfaces; file mappings are listed in
-:doc:`elements-software`.
+Component responsibilities and interfaces; :doc:`elements-software` identifies each
+canonical software element by its component directory, source filenames,
+colocated unit tests and boundary README. Directory names match the lowercase
+suffix of ``STV_SWE_*`` IDs. See :ref:`STV_ADR_007` for source organization.
+The nine-component topology and existing diagram links remain applicable.
 
 .. raw:: html
 

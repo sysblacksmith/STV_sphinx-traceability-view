@@ -13,9 +13,9 @@ Sphinx-Needs extension specification, architecture and supporting records.
    :maxdepth: 2
    :caption: Requirements
 
-   stakeholder
-   system
-   software
+   requirements-stakeholder
+   requirements-system
+   requirements-software
 
 .. toctree::
    :maxdepth: 2

@@ -32,7 +32,7 @@ after expansion, so the collapse control remains in place.
 Implementation and verification
 -------------------------------
 
-Source: ``frontend/src/groups.js`` and ``frontend/src/view.js``. Contracts and
+Source: ``frontend/src/render/groups.js`` and ``frontend/src/render/view.js``. Contracts and
 plans are maintained in :doc:`/internal-interfaces`, :doc:`/implementation-plan`
 and :doc:`/verification-plan`. No state/event/guard changes require a behavioral
 diagram update. Executable mappings remain in :doc:`/test-coverage`.

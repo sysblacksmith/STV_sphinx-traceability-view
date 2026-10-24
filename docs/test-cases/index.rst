@@ -1,16 +1,19 @@
 Test-case specification
 =======================
 
-Canonical cases link executable procedures and planned acceptance checks to
-requirements. Review status, latest result and requirement verification are
-independent. Existing release evidence is preserved without retroactive runs.
+Cases are organized by the verification boundary they exercise. System tests
+exercise the integrated tool through Sphinx, the browser or package installation.
+Software tests exercise individual implementation components. Classify by the
+procedure, not merely by the prefixes of linked requirements: one system test
+may also provide evidence for software requirements without being duplicated.
 
-.. needtable::
-   :filter: type == 'test_case'
-   :columns: id;title;status;verifies;last_result;executed_by
+Canonical IDs, requirement links, latest results and historical execution
+records are retained. A folder move does not imply a new run or acceptance.
+Software unit scripts live with their owning components; integrated system
+scripts remain under :doc:`../test-scripts/index`.
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :maxdepth: 2
 
-   STV_TC_*
+   system-tests
+   software-tests

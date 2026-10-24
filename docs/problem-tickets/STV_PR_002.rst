@@ -38,7 +38,7 @@ Problem 2: Direct readable routes
    Every link used an outer corridor. Clear segments now connect facing ports directly; blocked paths retain obstacle-avoiding detours.
 
    Affected artifacts: :need:`STV_SHR_050`, :need:`STV_SWR_053`.
-   Source: ``frontend/src/layout.js``.
+   Source: ``frontend/src/layout/layout.js``.
 
    **Verification and handover**
 

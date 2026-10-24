@@ -99,7 +99,8 @@ The official `Beautiful Soup documentation
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ describes this API.
 
 Use the pinned Sphinx-Needs ``SphinxNeedsData.get_needs_view()`` interface only
-inside the write phase. Confine this version-sensitive dependency to graph.py.
+inside the write phase. Confine this version-sensitive dependency to the ``graph/`` component
+(:need:`STV_SWE_GRAPH`).
 The installed 8.2.0 source confirms that calling it resolves and freezes data;
 calling it during read/collection would be incorrect. Public host references:
 `Sphinx application API <https://www.sphinx-doc.org/en/master/extdev/appapi.html>`_

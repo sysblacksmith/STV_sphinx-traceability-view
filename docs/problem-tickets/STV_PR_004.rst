@@ -32,7 +32,7 @@ Problem 4: Delay hover details
    Node entry opened details immediately. A cancellable 1000ms hover timer now delays opening; explicit Details activation remains immediate.
 
    Affected artifacts: :need:`STV_SHR_015`, :need:`STV_SYS_006`, :need:`STV_SWR_050`.
-   Source: ``frontend/src/inspect.js; frontend/src/view.js``.
+   Source: ``frontend/src/inspect/inspect.js; frontend/src/render/view.js``.
 
    **Verification and handover**
 
