@@ -1,0 +1,158 @@
+{
+  "steps": [
+    {
+      "step": [
+        "STV_SWR_001",
+        "derives_from",
+        "outgoing"
+      ],
+      "revision": 1
+    },
+    {
+      "step": [
+        "STV_SYS_001",
+        "derives_from",
+        "incoming"
+      ],
+      "revision": 2
+    },
+    {
+      "step": [
+        "STV_SWR_003",
+        "allocated_to",
+        "outgoing"
+      ],
+      "available_controls": [
+        "[\"STV_SWR_001\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SWR_001\",\"verifies\",\"incoming\"]",
+        "[\"STV_SWR_001\",\"allocated_to\",\"outgoing\"]",
+        "[\"STV_SYS_001\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SYS_001\",\"verifies\",\"incoming\"]",
+        "[\"STV_SYS_001\",\"allocated_to\",\"outgoing\"]",
+        "[\"STV_SYS_001\",\"derives_from\",\"incoming\"]",
+        "[\"STV_SWR_002\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SWR_002\",\"verifies\",\"incoming\"]",
+        "[\"STV_SWR_002\",\"allocated_to\",\"outgoing\"]",
+        "[\"STV_SWR_026\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SWR_026\",\"verifies\",\"incoming\"]",
+        "[\"STV_SWR_026\",\"allocated_to\",\"outgoing\"]",
+        "[\"STV_SWR_048\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SWR_048\",\"verifies\",\"incoming\"]",
+        "[\"STV_SWR_048\",\"allocated_to\",\"outgoing\"]",
+        "[\"STV_SWR_051\",\"derives_from\",\"outgoing\"]",
+        "[\"STV_SWR_051\",\"verifies\",\"incoming\"]",
+        "[\"STV_SWR_051\",\"allocated_to\",\"outgoing\"]"
+      ]
+    }
+  ],
+  "svg": {
+    "height": 850,
+    "lines": [
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            170,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      },
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            -158,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      },
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            498,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      },
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            826,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      },
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            -486,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      }
+    ],
+    "outside": [
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            -158,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      },
+      {
+        "label": "derives_from",
+        "points": [
+          [
+            -486,
+            590
+          ],
+          [
+            170,
+            350
+          ]
+        ]
+      }
+    ],
+    "overflow": "hidden",
+    "svgRect": {
+      "bottom": 699.6666564941406,
+      "height": 561.7999877929688,
+      "left": 806.36669921875,
+      "right": 1960.36669921875,
+      "top": 137.86666870117188,
+      "width": 1154,
+      "x": 806.36669921875,
+      "y": 137.86666870117188
+    },
+    "width": 1746
+  }
+}

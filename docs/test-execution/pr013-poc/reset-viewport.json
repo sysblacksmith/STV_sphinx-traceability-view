@@ -1,0 +1,38 @@
+{
+  "browser": "158.0.1",
+  "nodes": [
+    {
+      "id": "P",
+      "inside": true
+    },
+    {
+      "id": "Q",
+      "inside": true
+    },
+    {
+      "id": "A",
+      "inside": true
+    },
+    {
+      "id": "B",
+      "inside": true
+    },
+    {
+      "id": "C",
+      "inside": true
+    },
+    {
+      "id": "D",
+      "inside": true
+    },
+    {
+      "id": "E",
+      "inside": true
+    },
+    {
+      "id": "F",
+      "inside": true
+    }
+  ],
+  "result": "passed"
+}

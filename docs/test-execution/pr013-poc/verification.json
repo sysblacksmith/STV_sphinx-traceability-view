@@ -1,0 +1,52 @@
+{
+  "baseline": "a445aa64b61260fe9923648ff8a5a30bc4a27f99",
+  "recorded_at": "2026-10-24T16:03:57.206450+00:00",
+  "scope": "Owner-authorized PoC only; await confirmation before requirements/design/verification baseline updates",
+  "source_sha256": {
+    "frontend/src/layout/layout.js": "f0dcc45293bd3c930d4337081044562bc97dcd650883cec533dfd98df0aecd82",
+    "frontend/src/layout/stability.js": "689150083a4dcf9798d8a9c4306f15672bf6ea6b36880733a9e9c3340491885d",
+    "frontend/src/render/view.js": "b02054cd9a44cf3746e857fc6c353513f7b8f34d0e29f272b571ce3ecf5bd0ff",
+    "frontend/src/layout/tests/stability.test.js": "b8bd58edee731ef85b81c63e749289324357e2d40bb1731e41809e1980a53b88",
+    "docs/test-scripts/test_position_stability.py": "fdec17cf4e51c99c15b823c57924254e413ee6010250d2c14583837277116baf",
+    "src/sphinx_traceability_view/static/stv.js": "5b559fcd68544e9d6f304cc494e64cc2a8b1380c11b697b27fb6d9710c05d0f2"
+  },
+  "environment": {
+    "python": "3.13.17",
+    "node": "v24.21.0",
+    "Firefox": "158.0.1",
+    "geckodriver": "0.37.1",
+    "platform": "Windows"
+  },
+  "commands": [
+    "implementation-python -m pytest docs/test-scripts/test_position_stability.py -q (original shipped JS, before.xml)",
+    "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/pr013-poc/node.xml src/*/tests/*.test.js (cwd frontend)",
+    "node build.js (cwd frontend)",
+    "implementation-python -m pytest docs/test-scripts/test_position_stability.py -q (first PoC, after.xml)",
+    "implementation-python -m pytest docs/test-scripts/test_position_stability.py docs/test-scripts/test_browser.py -k \"poc_group or offline_exploration or alternate_model_geometry\" -q --junitxml=docs/test-execution/pr013-poc/browser-final.xml"
+  ],
+  "environment_variables": {
+    "STV_GECKODRIVER": "Provisioned geckodriver executable",
+    "STV_POSITION_RECORD": "docs/test-execution/pr013-poc/{before,after,final} per attempt"
+  },
+  "latest_scoped_results": {
+    "Node": 25,
+    "browser": 6,
+    "failed": 0
+  },
+  "before": {
+    "P_world_x_shift": 656,
+    "Q_world_x_shift": -328,
+    "P_screen_x_shift": 356.5333251953125,
+    "Q_screen_x_shift": -509.7166748046875
+  },
+  "after": {
+    "max_surviving_node_delta_world_or_screen": 0.0,
+    "expand_collapse_steps_per_transport": 4
+  },
+  "deferred": [
+    "Owner PoC confirmation",
+    "Requirement/design/ADR/test-case baseline refinement",
+    "Formal traceability allocation for PoC-only tests",
+    "Full regression/capacity/packaging/release qualification"
+  ]
+}

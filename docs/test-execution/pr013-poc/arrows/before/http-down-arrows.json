@@ -1,0 +1,21 @@
+{
+  "aligned": true,
+  "negative": 2,
+  "outside": [
+    [
+      -486,
+      422
+    ],
+    [
+      -158,
+      422
+    ]
+  ],
+  "paths": 5,
+  "viewBox": {
+    "height": 614,
+    "width": 1746,
+    "x": 0,
+    "y": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-24T16:25:31.980063+00:00",
+  "cause": "PR013 PoC regression: new negative graph coordinates fell outside the zero-origin SVG viewport; Firefox raster clipping truncated routes despite valid logical endpoints",
+  "scope": "Corrected PoC; owner liked position stability but reported broken arrows. Baseline documentation refinement remains pending.",
+  "source_sha256": {
+    "frontend/src/render/view.js": "349e7011691eb2587dd181fde464a21b7544350afeb1a0a4982d04ba99073d52",
+    "frontend/src/render/edge-viewport.js": "b2ef1caedd19671bb5f8305dc948a399e2e69d36e493cf552dc360a9644bef3d",
+    "frontend/src/render/tests/edge-viewport.test.js": "10e446c916b3282cc1033de77bce9d2757fa5dd0955ffda7bab4c6cab970c8a9",
+    "docs/test-scripts/test_position_stability.py": "455473155ff3ece3d94338ffba464a731f23cb0ee43cb46e4053241ef37d76e1",
+    "src/sphinx_traceability_view/static/stv.js": "7283559acaa57cb57fa8c5e02e7666e9a8f6a1412f804eaf61becf6ffaa84554"
+  },
+  "commands": [
+    "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/pr013-poc/arrows/node-final.xml src/*/tests/*.test.js (cwd frontend)",
+    "node build.js (cwd frontend)",
+    "implementation-python -m pytest docs/test-scripts/test_position_stability.py -q --junitxml=docs/test-execution/pr013-poc/arrows/after.xml",
+    "implementation-python -m pytest docs/test-scripts/test_browser.py -k \"offline_exploration or alternate_model_geometry\" -q --junitxml=docs/test-execution/pr013-poc/arrows/adjacent.xml"
+  ],
+  "environment": "Firefox 158.0.1 / geckodriver 0.37.1 / Windows; local source and loopback HTTP only",
+  "note": "An Edge driver was provisioned and its Microsoft Authenticode signature verified before owner identified Firefox. Edge was not used for these results. The final extrema loop is equivalent to the earlier passing browser-tested bounds calculation; final component tests and adjacent browser tests cover it."
+}

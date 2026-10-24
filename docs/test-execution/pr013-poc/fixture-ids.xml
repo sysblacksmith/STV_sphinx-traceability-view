@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="15.221" timestamp="2026-10-24T17:53:13.520086+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[file]" time="7.464"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: Running Sphinx v8.1.3&#10;  loading translations [en]... done&#10;  making output directory... done&#10;  building [mo]: targets for 0 po files that are out of date&#10;  writing output... &#10;  building [html]: targets for 2 source files that are out of date&#10;  updating environment: [new config] 2 added, 0 changed, 0 removed&#10;  reading sources... [ 50%] index&#10;  reading sources... [100%] requirements&#10;  &#10;  Copying static files for sphinx-data-viewer support&#10;  Copying static files for sphinx-needs datatables support&#10;  Copying static style files for sphinx-needs&#10;  looking for now-outdated files... none found&#10;  pickling environment... done&#10;  checking consistency... done&#10;  Schema validation completed with 0 warning(s) in 0.000 seconds. Validated 0 needs/s.&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:4: WARNING: Need could not be created: Given ID 'P' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:10: WARNING: Need could not be created: Given ID 'Q' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:16: WARNING: Need could not be created: Given ID 'A' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:21: WARNING: Need could not be created: Given ID 'B' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:26: WARNING: Need could not be created: Given ID 'C' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:31: WARNING: Need could not be created: Given ID 'D' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:36: WARNING: Need could not be created: Given ID 'E' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:41: WARNING: Need could not be created: Given ID 'F' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  &#10;  Sphinx error:&#10;  C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\index.rst:8: traceability-view: unknown or hidden starting ID 'P'&#10;  &#10;assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\...ragg\\AppData\\Local\\Temp\\stv-dmwvirps\\source\\index.rst:8: traceability-view: unknown or hidden starting ID 'P'\n&quot;).returncode">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="38547577-2f86-49c9-a91c-1437fd7cbcd6")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-dmwvirps')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        (source/'index.rst').write_text('Stable navigation\n=================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: P Q\n',encoding='utf-8')
+        requirements='Requirements\n============\n\n'
+        for parent,children in [('P',['A','B','C','D','E']),('Q',['F'])]:
+            requirements+=f'.. shr:: Parent {parent}\n   :id: {parent}\n   :traces: '+', '.join(children)+'\n\n   Parent content.\n\n'
+        for child in 'ABCDEF':requirements+=f'.. swr:: Child {child}\n   :id: {child}\n\n   Child content.\n\n'
+        (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+&gt;       output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Running Sphinx v8.1.3
+E         loading translations [en]... done
+E         making output directory... done
+E         building [mo]: targets for 0 po files that are out of date
+E         writing output... 
+E         building [html]: targets for 2 source files that are out of date
+E         updating environment: [new config] 2 added, 0 changed, 0 removed
+E         reading sources... [ 50%] index
+E         reading sources... [100%] requirements
+E         
+E         Copying static files for sphinx-data-viewer support
+E         Copying static files for sphinx-needs datatables support
+E         Copying static style files for sphinx-needs
+E         looking for now-outdated files... none found
+E         pickling environment... done
+E         checking consistency... done
+E         Schema validation completed with 0 warning(s) in 0.000 seconds. Validated 0 needs/s.
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:4: WARNING: Need could not be created: Given ID 'P' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:10: WARNING: Need could not be created: Given ID 'Q' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:16: WARNING: Need could not be created: Given ID 'A' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:21: WARNING: Need could not be created: Given ID 'B' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:26: WARNING: Need could not be created: Given ID 'C' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:31: WARNING: Need could not be created: Given ID 'D' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:36: WARNING: Need could not be created: Given ID 'E' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\requirements.rst:41: WARNING: Need could not be created: Given ID 'F' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         
+E         Sphinx error:
+E         C:\Users\fragg\AppData\Local\Temp\stv-dmwvirps\source\index.rst:8: traceability-view: unknown or hidden starting ID 'P'
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\...ragg\\AppData\\Local\\Temp\\stv-dmwvirps\\source\\index.rst:8: traceability-view: unknown or hidden starting ID 'P'\n").returncode
+
+docs\test-scripts\test_position_stability.py:29: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[http]" time="7.432"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: Running Sphinx v8.1.3&#10;  loading translations [en]... done&#10;  making output directory... done&#10;  building [mo]: targets for 0 po files that are out of date&#10;  writing output... &#10;  building [html]: targets for 2 source files that are out of date&#10;  updating environment: [new config] 2 added, 0 changed, 0 removed&#10;  reading sources... [ 50%] index&#10;  reading sources... [100%] requirements&#10;  &#10;  Copying static files for sphinx-data-viewer support&#10;  Copying static files for sphinx-needs datatables support&#10;  Copying static style files for sphinx-needs&#10;  looking for now-outdated files... none found&#10;  pickling environment... done&#10;  checking consistency... done&#10;  Schema validation completed with 0 warning(s) in 0.000 seconds. Validated 0 needs/s.&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:4: WARNING: Need could not be created: Given ID 'P' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:10: WARNING: Need could not be created: Given ID 'Q' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:16: WARNING: Need could not be created: Given ID 'A' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:21: WARNING: Need could not be created: Given ID 'B' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:26: WARNING: Need could not be created: Given ID 'C' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:31: WARNING: Need could not be created: Given ID 'D' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:36: WARNING: Need could not be created: Given ID 'E' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:41: WARNING: Need could not be created: Given ID 'F' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]&#10;  &#10;  Sphinx error:&#10;  C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\index.rst:8: traceability-view: unknown or hidden starting ID 'P'&#10;  &#10;assert 2 == 0&#10; +  where 2 = CompletedProcess(args=['D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\...ragg\\AppData\\Local\\Temp\\stv-6453cen5\\source\\index.rst:8: traceability-view: unknown or hidden starting ID 'P'\n&quot;).returncode">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="5eac4872-ce73-4a22-a3e8-19880ea3b84f")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-6453cen5')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        (source/'index.rst').write_text('Stable navigation\n=================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: P Q\n',encoding='utf-8')
+        requirements='Requirements\n============\n\n'
+        for parent,children in [('P',['A','B','C','D','E']),('Q',['F'])]:
+            requirements+=f'.. shr:: Parent {parent}\n   :id: {parent}\n   :traces: '+', '.join(children)+'\n\n   Parent content.\n\n'
+        for child in 'ABCDEF':requirements+=f'.. swr:: Child {child}\n   :id: {child}\n\n   Child content.\n\n'
+        (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+&gt;       output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Running Sphinx v8.1.3
+E         loading translations [en]... done
+E         making output directory... done
+E         building [mo]: targets for 0 po files that are out of date
+E         writing output... 
+E         building [html]: targets for 2 source files that are out of date
+E         updating environment: [new config] 2 added, 0 changed, 0 removed
+E         reading sources... [ 50%] index
+E         reading sources... [100%] requirements
+E         
+E         Copying static files for sphinx-data-viewer support
+E         Copying static files for sphinx-needs datatables support
+E         Copying static style files for sphinx-needs
+E         looking for now-outdated files... none found
+E         pickling environment... done
+E         checking consistency... done
+E         Schema validation completed with 0 warning(s) in 0.000 seconds. Validated 0 needs/s.
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:4: WARNING: Need could not be created: Given ID 'P' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:10: WARNING: Need could not be created: Given ID 'Q' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:16: WARNING: Need could not be created: Given ID 'A' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:21: WARNING: Need could not be created: Given ID 'B' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:26: WARNING: Need could not be created: Given ID 'C' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:31: WARNING: Need could not be created: Given ID 'D' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:36: WARNING: Need could not be created: Given ID 'E' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\requirements.rst:41: WARNING: Need could not be created: Given ID 'F' does not match configured regex '^[A-Z0-9_]{5,}' [needs.create_need]
+E         
+E         Sphinx error:
+E         C:\Users\fragg\AppData\Local\Temp\stv-6453cen5\source\index.rst:8: traceability-view: unknown or hidden starting ID 'P'
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\...ragg\\AppData\\Local\\Temp\\stv-6453cen5\\source\\index.rst:8: traceability-view: unknown or hidden starting ID 'P'\n").returncode
+
+docs\test-scripts\test_position_stability.py:29: AssertionError</failure></testcase></testsuite></testsuites>

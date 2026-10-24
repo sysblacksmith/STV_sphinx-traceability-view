@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-24T16:33:15.221301+00:00",
+  "scope": "Owner-requested minor initial ordering refinement during PR013 PoC review",
+  "policy": "Use natural numeric ID order when no relationship edges are expanded; retain previous geometry during group navigation",
+  "source_sha256": {
+    "frontend/src/layout/layout.js": "bbf106a66bc378b6a5e6731cbc64967371eed34cdcdbce86c5194ab267a6385c",
+    "frontend/src/layout/tests/stability.test.js": "6ae120259d3ede96406a17d27f8e224ea45590a5137e131571f5d4a9d2bae5e2",
+    "docs/test-scripts/test_position_stability.py": "ab9ef79115b2675216595f0e1fe7ac04296ef0e041c5c56387036358c2dc0571",
+    "src/sphinx_traceability_view/static/stv.js": "58583a691bf0a496cce3f62c04e17dbe2a9aa5a6569f3c65ad73736b2db14ff2"
+  },
+  "commands": [
+    "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/pr013-poc/ordering/node.xml src/*/tests/*.test.js (cwd frontend)",
+    "node build.js (cwd frontend)",
+    "implementation-python -m pytest docs/test-scripts/test_position_stability.py -k numeric_seed -q --junitxml=docs/test-execution/pr013-poc/ordering/browser.xml"
+  ]
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="6" time="54.559" timestamp="2026-10-24T18:18:43.690004+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[file]" time="8.114"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[http]" time="10.200"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_arrow_viewport_covers_negative_routes[down-file]" time="8.094"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_arrow_viewport_covers_negative_routes[down-http]" time="9.601"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_arrow_viewport_covers_negative_routes[up-file]" time="8.030"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: {'aligned': True, 'negative': 0, 'outside': [], 'paths': 1, ...}&#10;assert 0 &gt; 0">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="474369cd-ba5d-419d-a40e-47f8fe17556f")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-kqdbxejh')
+protocol = 'file', direction = 'up'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('direction',['down','up'])
+    def test_poc_arrow_viewport_covers_negative_routes(browser,short_output,protocol,direction):
+        source=short_output/'source';prepare_source(source)
+        parent='P'
+        if direction=='up':
+            (source/'index.rst').write_text('Upward stability\n================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: A B\n',encoding='utf-8')
+            with (source/'conf.py').open('a',encoding='utf-8') as stream:
+                stream.write("\nneeds_links.update({f'extra{i}': {'incoming': f'Extra {i}', 'outgoing': f'Extra {i}'} for i in range(7)})\n")
+            text=(source/'requirements.rst').read_text()
+            text=text.replace('   :traces: A, B, C, D, E','   :traces: A, B, C, D, E'+''.join(f'\n   :extra{i}: A, B' for i in range(7)),1)
+            (source/'requirements.rst').write_text(text)
+            parent='A'
+        result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,15)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            before=positions(browser)
+            browser.execute_script('const n=[...document.querySelectorAll(".stv-view .stv-node")].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[0]);[...n.querySelectorAll(".stv-groups button")].find(b=&gt;JSON.parse(b.dataset.focus)[1]==="traces").click()',parent)
+            wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view').get_attribute('data-stv-revision')=='1')
+            after=positions(browser)
+            assert all(abs(after[k][axis]-value)&lt;.5 for k,values in before.items() for axis,value in values.items())
+            observed=browser.execute_script("""const svg=document.querySelector('.stv-view svg.stv-edges');
+              const b=svg.hasAttribute('viewBox')?svg.viewBox.baseVal:{x:0,y:0,width:svg.width.baseVal.value,height:svg.height.baseVal.value};
+              const paths=[...svg.querySelectorAll('polyline')],pts=paths.flatMap(p=&gt;[...p.points]);
+              const negative=pts.filter(p=&gt;p.x&lt;0||p.y&lt;0).length;
+              const outside=pts.filter(p=&gt;p.x&lt;b.x||p.x&gt;b.x+b.width||p.y&lt;b.y||p.y&gt;b.y+b.height).map(p=&gt;[p.x,p.y]);
+              const boxes=[...document.querySelectorAll('.stv-view .stv-node')].map(n=&gt;n.getBoundingClientRect());
+              const boundary=p=&gt;boxes.some(r=&gt;(Math.abs(p.x-r.left)&lt;2||Math.abs(p.x-r.right)&lt;2)&amp;&amp;p.y&gt;=r.top-2&amp;&amp;p.y&lt;=r.bottom+2||(Math.abs(p.y-r.top)&lt;2||Math.abs(p.y-r.bottom)&lt;2)&amp;&amp;p.x&gt;=r.left-2&amp;&amp;p.x&lt;=r.right+2);
+              const matrix=svg.getScreenCTM();
+              const aligned=paths.every(p=&gt;[p.points[0],p.points[p.points.length-1]].every(v=&gt;boundary(new DOMPoint(v.x,v.y).matrixTransform(matrix))));
+              return {negative,outside,aligned,viewBox:{x:b.x,y:b.y,width:b.width,height:b.height},paths:paths.length};""")
+            record=os.environ.get('STV_POSITION_RECORD')
+            if record:
+                path=Path(record);path.mkdir(parents=True,exist_ok=True)
+                (path/(protocol+'-'+direction+'-arrows.json')).write_text(json.dumps(observed,indent=2),encoding='utf-8')
+&gt;           assert observed['negative']&gt;0,observed
+E           AssertionError: {'aligned': True, 'negative': 0, 'outside': [], 'paths': 1, ...}
+E           assert 0 &gt; 0
+
+docs\test-scripts\test_position_stability.py:97: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_arrow_viewport_covers_negative_routes[up-http]" time="10.214"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: {'aligned': True, 'negative': 0, 'outside': [], 'paths': 1, ...}&#10;assert 0 &gt; 0">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="a8fa2a82-0f4f-49f7-8545-80dcca2343a8")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-qj56ifc5')
+protocol = 'http', direction = 'up'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('direction',['down','up'])
+    def test_poc_arrow_viewport_covers_negative_routes(browser,short_output,protocol,direction):
+        source=short_output/'source';prepare_source(source)
+        parent='P'
+        if direction=='up':
+            (source/'index.rst').write_text('Upward stability\n================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: A B\n',encoding='utf-8')
+            with (source/'conf.py').open('a',encoding='utf-8') as stream:
+                stream.write("\nneeds_links.update({f'extra{i}': {'incoming': f'Extra {i}', 'outgoing': f'Extra {i}'} for i in range(7)})\n")
+            text=(source/'requirements.rst').read_text()
+            text=text.replace('   :traces: A, B, C, D, E','   :traces: A, B, C, D, E'+''.join(f'\n   :extra{i}: A, B' for i in range(7)),1)
+            (source/'requirements.rst').write_text(text)
+            parent='A'
+        result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,15)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            before=positions(browser)
+            browser.execute_script('const n=[...document.querySelectorAll(".stv-view .stv-node")].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[0]);[...n.querySelectorAll(".stv-groups button")].find(b=&gt;JSON.parse(b.dataset.focus)[1]==="traces").click()',parent)
+            wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view').get_attribute('data-stv-revision')=='1')
+            after=positions(browser)
+            assert all(abs(after[k][axis]-value)&lt;.5 for k,values in before.items() for axis,value in values.items())
+            observed=browser.execute_script("""const svg=document.querySelector('.stv-view svg.stv-edges');
+              const b=svg.hasAttribute('viewBox')?svg.viewBox.baseVal:{x:0,y:0,width:svg.width.baseVal.value,height:svg.height.baseVal.value};
+              const paths=[...svg.querySelectorAll('polyline')],pts=paths.flatMap(p=&gt;[...p.points]);
+              const negative=pts.filter(p=&gt;p.x&lt;0||p.y&lt;0).length;
+              const outside=pts.filter(p=&gt;p.x&lt;b.x||p.x&gt;b.x+b.width||p.y&lt;b.y||p.y&gt;b.y+b.height).map(p=&gt;[p.x,p.y]);
+              const boxes=[...document.querySelectorAll('.stv-view .stv-node')].map(n=&gt;n.getBoundingClientRect());
+              const boundary=p=&gt;boxes.some(r=&gt;(Math.abs(p.x-r.left)&lt;2||Math.abs(p.x-r.right)&lt;2)&amp;&amp;p.y&gt;=r.top-2&amp;&amp;p.y&lt;=r.bottom+2||(Math.abs(p.y-r.top)&lt;2||Math.abs(p.y-r.bottom)&lt;2)&amp;&amp;p.x&gt;=r.left-2&amp;&amp;p.x&lt;=r.right+2);
+              const matrix=svg.getScreenCTM();
+              const aligned=paths.every(p=&gt;[p.points[0],p.points[p.points.length-1]].every(v=&gt;boundary(new DOMPoint(v.x,v.y).matrixTransform(matrix))));
+              return {negative,outside,aligned,viewBox:{x:b.x,y:b.y,width:b.width,height:b.height},paths:paths.length};""")
+            record=os.environ.get('STV_POSITION_RECORD')
+            if record:
+                path=Path(record);path.mkdir(parents=True,exist_ok=True)
+                (path/(protocol+'-'+direction+'-arrows.json')).write_text(json.dumps(observed,indent=2),encoding='utf-8')
+&gt;           assert observed['negative']&gt;0,observed
+E           AssertionError: {'aligned': True, 'negative': 0, 'outside': [], 'paths': 1, ...}
+E           assert 0 &gt; 0
+
+docs\test-scripts\test_position_stability.py:97: AssertionError</failure></testcase></testsuite></testsuites>

@@ -5,13 +5,14 @@ import {compute} from '../layout/layout.js';
 import {inspector} from '../inspect/inspect.js';
 import {orderedGroups} from './groups.js';
 import {seedPicker} from './seeds.js';
+import {edgeViewport} from './edge-viewport.js';
 const nodeKey=id=>JSON.stringify(['need',id]);
 const rootKey=JSON.stringify(['project']);
 function element(tag,cls,text) {const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function button(text,action,label=text) {const b=element('button','',text);b.type='button';b.setAttribute('aria-label',label);b.onclick=action;return b;}
 export async function mount(root,graph,base,layout=compute) {
   if(graph.schema!==1)throw Error(`Unsupported STV schema ${graph.schema}`);
-  let state=initial(JSON.parse(root.dataset.stvSeeds)),request=0,home=zoomIdentity,hasCommitted=false;
+  let state=initial(JSON.parse(root.dataset.stvSeeds)),request=0,home=zoomIdentity,hasCommitted=false,committedGeometry;
   const toolbar=element('div','stv-toolbar'),status=element('p','stv-status');status.setAttribute('role','status');
   const viewport=element('div','stv-viewport');viewport.tabIndex=0;viewport.setAttribute('aria-label','Trace graph viewport');
   const scene=element('div','stv-scene'),nodesLayer=element('div','stv-nodes');
@@ -95,7 +96,9 @@ export async function mount(root,graph,base,layout=compute) {
     const boxes=new Map();
     for(const key of keys){const n=makeNode(key,result.state);n.style.position='relative';measure.append(n);staged.set(key,n);boxes.set(key,Math.ceil(n.getBoundingClientRect().height));}
     try {
-      const geometry=await layout(graph,result.graph,boxes);
+      const incremental=['group','root'].includes(command?.type);
+      const anchor=command?.type==='root'?rootKey:command?.id?nodeKey(command.id):null;
+      const geometry=await layout(graph,result.graph,boxes,incremental?{previous:committedGeometry,anchor}:{});
       if(ticket!==request)return;
       const active=document.activeElement;
       const ownPanel=active?.closest('.stv-detail')?.id.startsWith(root.id+'-detail-');
@@ -103,7 +106,7 @@ export async function mount(root,graph,base,layout=compute) {
       if(command?.type!=='page'&&root.contains(active)) {
         focusKey=active.closest('.stv-node')?.dataset.key;focusControl=active.dataset.focus;
       }
-      details.close();state=result.state;
+      details.close();state=result.state;committedGeometry=geometry;
       for(const [key,old] of nodeElements)if(!staged.has(key)){old.remove();nodeElements.delete(key);}
       for(const [key,n] of staged) {
         let target=nodeElements.get(key);
@@ -112,7 +115,10 @@ export async function mount(root,graph,base,layout=compute) {
         else {target=n;nodesLayer.append(target);nodeElements.set(key,target);}
         const box=geometry.nodes.get(key);Object.assign(target.style,{position:'absolute',left:`${box.x}px`,top:`${box.y}px`});
       }
-      svg.replaceChildren();svg.setAttribute('width',geometry.width);svg.setAttribute('height',geometry.height);
+      const edgeBox=edgeViewport(geometry);
+      svg.replaceChildren();svg.setAttribute('width',edgeBox.width);svg.setAttribute('height',edgeBox.height);
+      svg.setAttribute('viewBox',`${edgeBox.x} ${edgeBox.y} ${edgeBox.width} ${edgeBox.height}`);
+      Object.assign(svg.style,{left:`${edgeBox.x}px`,top:`${edgeBox.y}px`,width:`${edgeBox.width}px`,height:`${edgeBox.height}px`,maxWidth:'none'});
       const defs=document.createElementNS(svg.namespaceURI,'defs'),marker=document.createElementNS(svg.namespaceURI,'marker');
       marker.id=`${root.id}-arrow`;for(const [k,v] of Object.entries({viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'}))marker.setAttribute(k,v);
       const arrow=document.createElementNS(svg.namespaceURI,'path');arrow.setAttribute('d','M 0 0 L 10 5 L 0 10 z');arrow.setAttribute('fill','#536174');marker.append(arrow);defs.append(marker);svg.append(defs);
@@ -120,12 +126,12 @@ export async function mount(root,graph,base,layout=compute) {
       scene.style.width=`${geometry.width}px`;scene.style.height=`${geometry.height}px`;
       const minY=Math.min(...[...geometry.nodes.values()].map(n=>n.y));
       const scale=Math.max(.15,Math.min(1,(viewport.clientWidth-40)/geometry.width,(viewport.clientHeight-60)/(geometry.height-minY)));
-      home=zoomIdentity.translate((viewport.clientWidth-geometry.width*scale)/2,30-minY*scale).scale(scale);
+      home=zoomIdentity.translate((viewport.clientWidth-geometry.width*scale)/2-(geometry.x||0)*scale,30-minY*scale).scale(scale);
       if(!hasCommitted||['seed','overview','page'].includes(command?.type)){
         viewport.scrollLeft=0;viewport.scrollTop=0;select(viewport).call(zoomer.transform,home);hasCommitted=true;
       }
       root.dataset.stvRevision=String(state.revision);status.textContent=`${keys.length} visible ${keys.length===1?'node':'nodes'}`;retry.hidden=true;
-      if(focusKey&&restoreFocus){const owner=nodeElements.get(focusKey),initiator=nodeElements.get(initiatingKey);const match=owner&&[...owner.querySelectorAll('button,a')].find(e=>e.dataset.focus===focusControl&&!e.disabled);const fallback=initiator&&[...initiator.querySelectorAll('button,a')].find(e=>e.dataset.focus===initiatingControl&&!e.disabled);(match||owner?.querySelector('button,a')||fallback||toolbar.querySelector('button')).focus();}
+      if(focusKey&&restoreFocus){const owner=nodeElements.get(focusKey),initiator=nodeElements.get(initiatingKey);const match=owner&&[...owner.querySelectorAll('button,a')].find(e=>e.dataset.focus===focusControl&&!e.disabled);const fallback=initiator&&[...initiator.querySelectorAll('button,a')].find(e=>e.dataset.focus===initiatingControl&&!e.disabled);(match||owner?.querySelector('button,a')||fallback||toolbar.querySelector('button')).focus({preventScroll:true});}
     }catch(error){if(ticket===request){status.textContent=`Layout failed: ${error.message}`;retry.hidden=false;
       if(!nodeElements.size){let y=20;for(const [key,n]of staged){Object.assign(n.style,{position:'absolute',left:'20px',top:`${y}px`});y+=boxes.get(key)+20;nodesLayer.append(n);nodeElements.set(key,n);}}}}
     finally{measure.remove();if(ticket===request)root.setAttribute('aria-busy','false');}

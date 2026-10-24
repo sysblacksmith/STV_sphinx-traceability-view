@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="18.246" timestamp="2026-10-24T17:55:11.978821+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[file]" time="8.158"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: {'P': {'left': 356.5333251953125, 'top': 0.0, 'x': 656, 'y': 0}, 'Q': {'left': -509.7166748046875, 'top': 0.0, 'x': -328, 'y': 0}}&#10;assert False&#10; +  where False = all(&lt;generator object test_poc_group_navigation_keeps_existing_nodes_still.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002C82D9187C0&gt;)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="7adb8cd3-0a00-45e2-9183-4bba3c8684b7")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-on7fc44o')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        with (source/'conf.py').open('a',encoding='utf-8') as stream:stream.write("\nneeds_id_regex = r'^[A-Z]+$'\n")
+        (source/'index.rst').write_text('Stable navigation\n=================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: P Q\n',encoding='utf-8')
+        requirements='Requirements\n============\n\n'
+        for parent,children in [('P',['A','B','C','D','E']),('Q',['F'])]:
+            requirements+=f'.. shr:: Parent {parent}\n   :id: {parent}\n   :traces: '+', '.join(children)+'\n\n   Parent content.\n\n'
+        for child in 'ABCDEF':requirements+=f'.. swr:: Child {child}\n   :id: {child}\n\n   Child content.\n\n'
+        (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+        output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
+        observations=[]
+        with published_url(output,protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,15)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            try:
+                for revision,parent in enumerate(['P','Q','P','P'],1):
+                    before=positions(browser)
+                    control=browser.execute_script('return [...document.querySelectorAll(".stv-view .stv-node")].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[0]).querySelector(".stv-groups button")',parent)
+                    browser.execute_script('arguments[0].focus({preventScroll:true})',control)
+                    control.send_keys(Keys.ENTER)
+                    wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view').get_attribute('data-stv-revision')==str(revision))
+                    after=positions(browser)
+                    deltas={identity:{k:after[identity][k]-value[k] for k in value} for identity,value in before.items() if identity in after}
+                    observations.append({'parent':parent,'revision':revision,'before':before,'after':after,'deltas':deltas})
+&gt;                   assert all(abs(v)&lt;.5 for identity in ['P','Q'] for v in deltas[identity].values()),deltas
+E                   AssertionError: {'P': {'left': 356.5333251953125, 'top': 0.0, 'x': 656, 'y': 0}, 'Q': {'left': -509.7166748046875, 'top': 0.0, 'x': -328, 'y': 0}}
+E                   assert False
+E                    +  where False = all(&lt;generator object test_poc_group_navigation_keeps_existing_nodes_still.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002C82D9187C0&gt;)
+
+docs\test-scripts\test_position_stability.py:45: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_poc_group_navigation_keeps_existing_nodes_still[http]" time="9.742"><properties><property name="requirement_ids" value="" /></properties><failure message="AssertionError: {'P': {'left': 356.5333251953125, 'top': 0.0, 'x': 656, 'y': 0}, 'Q': {'left': -509.7166748046875, 'top': 0.0, 'x': -328, 'y': 0}}&#10;assert False&#10; +  where False = all(&lt;generator object test_poc_group_navigation_keeps_existing_nodes_still.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002C82D9196C0&gt;)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="8d84cf63-10f1-40c3-bb24-acbc3439d6c4")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-qgxhgxdq')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        with (source/'conf.py').open('a',encoding='utf-8') as stream:stream.write("\nneeds_id_regex = r'^[A-Z]+$'\n")
+        (source/'index.rst').write_text('Stable navigation\n=================\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: P Q\n',encoding='utf-8')
+        requirements='Requirements\n============\n\n'
+        for parent,children in [('P',['A','B','C','D','E']),('Q',['F'])]:
+            requirements+=f'.. shr:: Parent {parent}\n   :id: {parent}\n   :traces: '+', '.join(children)+'\n\n   Parent content.\n\n'
+        for child in 'ABCDEF':requirements+=f'.. swr:: Child {child}\n   :id: {child}\n\n   Child content.\n\n'
+        (source/'requirements.rst').write_text(requirements,encoding='utf-8')
+        output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
+        observations=[]
+        with published_url(output,protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,15)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            try:
+                for revision,parent in enumerate(['P','Q','P','P'],1):
+                    before=positions(browser)
+                    control=browser.execute_script('return [...document.querySelectorAll(".stv-view .stv-node")].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[0]).querySelector(".stv-groups button")',parent)
+                    browser.execute_script('arguments[0].focus({preventScroll:true})',control)
+                    control.send_keys(Keys.ENTER)
+                    wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view').get_attribute('data-stv-revision')==str(revision))
+                    after=positions(browser)
+                    deltas={identity:{k:after[identity][k]-value[k] for k in value} for identity,value in before.items() if identity in after}
+                    observations.append({'parent':parent,'revision':revision,'before':before,'after':after,'deltas':deltas})
+&gt;                   assert all(abs(v)&lt;.5 for identity in ['P','Q'] for v in deltas[identity].values()),deltas
+E                   AssertionError: {'P': {'left': 356.5333251953125, 'top': 0.0, 'x': 656, 'y': 0}, 'Q': {'left': -509.7166748046875, 'top': 0.0, 'x': -328, 'y': 0}}
+E                   assert False
+E                    +  where False = all(&lt;generator object test_poc_group_navigation_keeps_existing_nodes_still.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002C82D9196C0&gt;)
+
+docs\test-scripts\test_position_stability.py:45: AssertionError</failure></testcase></testsuite></testsuites>

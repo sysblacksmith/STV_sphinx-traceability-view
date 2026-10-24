@@ -1,5 +1,7 @@
 import ELK from 'elkjs/lib/elk.bundled.js';
+import {stabilize} from './stability.js';
 const elk = new ELK();
+const idOrder=new Intl.Collator('en',{numeric:true,sensitivity:'variant'});
 // Open rectangle intersection: touching a boundary does not obscure a box.
 export function crossesBox(p,q,n) {
   let low=0,high=1;
@@ -12,7 +14,7 @@ export function crossesBox(p,q,n) {
   return low<high && high>0 && low<1;
 }
 /** ELK proposes ordering; domain bands own final geometry. */
-export async function compute(graph, visible, boxes) {
+export async function compute(graph, visible, boxes, context={}) {
   const rootKey = JSON.stringify(['project']);
   const keys = visible.ids.map(id => JSON.stringify(['need', id]));
   const objects = new Map(visible.ids.map(id => [JSON.stringify(['need', id]), id]));
@@ -44,7 +46,11 @@ export async function compute(graph, visible, boxes) {
     const band=keys.filter(k=>ranks.get(k)===rank);
     const normal=band.filter(k=>graph.model.types[graph.objects[objects.get(k)]?.type]?.role!=='test');
     const tests=band.filter(k=>!normal.includes(k));
-    normal.sort((a,b)=>(suggestions.get(a)-suggestions.get(b)) || a.localeCompare(b));
+    // Before any relationships are expanded, crossing minimization provides no
+    // useful order. Present independent seed/project-entry rows by natural ID.
+    normal.sort((a,b)=>!visible.edges.length
+      ? idOrder.compare(objects.get(a)||a,objects.get(b)||b) || a.localeCompare(b,'en')
+      : (suggestions.get(a)-suggestions.get(b)) || a.localeCompare(b));
     let x=30, height=0;
     for(const key of normal) {const h=boxes.get(key)||160;nodes.set(key,{x,y,width:280,height:h});x+=328;height=Math.max(height,h);}
     bands.push({rank,y,normal,tests,height}); y+=Math.max(height,40)+100;
@@ -90,11 +96,13 @@ export async function compute(graph, visible, boxes) {
   // A stacked test lane can increase a band height; shift subsequent bands together.
   let shift=0;
   for(const band of bands) {
+    band.top=band.y+shift;
     for(const key of band.normal) nodes.get(key).y+=shift;
     let ty=band.y+shift;
     for(const key of band.tests.sort()) {const h=boxes.get(key)||160;nodes.set(key,{x:right,y:ty,width:280,height:h});ty+=h+24;}
     shift+=Math.max(0,ty-(band.y+shift)-24-band.height);
   }
+  stabilize(nodes,ranks,bands,context.previous,context.anchor);
   const maxRight=Math.max(...[...nodes.values()].map(n=>n.x+n.width));
   const rankBounds = new Map();
   for(const [key,node] of nodes) {
@@ -147,5 +155,6 @@ export async function compute(graph, visible, boxes) {
     for(const b of rectangles.slice(i+1)) if(a.x<b.x+b.width && a.x+a.width>b.x && a.y<b.y+b.height && a.y+a.height>b.y)
       throw Error('Layout produced overlapping nodes.');
   }
-  return {nodes,edges,width:maxRight+64+edges.length*12,height:Math.max(...rectangles.map(n=>n.y+n.height))+40};
+  const x=Math.min(...rectangles.map(n=>n.x))-30;
+  return {nodes,edges,ranks,bandTops:new Map(bands.map(b=>[b.rank,b.top])),x,width:maxRight-x+64+edges.length*12,height:Math.max(...rectangles.map(n=>n.y+n.height))+40};
 }
