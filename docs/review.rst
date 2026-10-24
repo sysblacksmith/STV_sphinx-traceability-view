@@ -312,3 +312,10 @@ The owner approved stable navigation after the arrow/ordering corrections and
 requested final concept creation, review and implementation. Scope and delegated
 acceptance are recorded in :doc:`concept-reviews/round-9`; implementation checks
 are linked through :doc:`test-execution/pr013-final/index`. No release is started.
+
+CR_013 nine-category evidence rows
+-----------------------------------
+
+The owner requested the concept/review/implementation sequence and chose a
+fallback row for ambiguous evidence. :ref:`STV_CR_013` records the amendment;
+:doc:`concept-reviews/round-10` owns review, acceptance and implementation gates.

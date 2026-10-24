@@ -82,6 +82,7 @@ export async function mount(root,graph,base,layout=compute) {
       node.onmouseenter=()=>details.hover(id,inspect);node.onmouseleave=details.schedule;
       node.append(inspect);
     }
+    if(object?.placement_fallback)node.append(element('p','stv-placement-warning','Unclassified test evidence'));
     return node;
   }
   async function update(command) {

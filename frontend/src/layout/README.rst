@@ -20,3 +20,6 @@ here when needed; this boundary record is not a fabricated detailed design.
 Navigation uses the committed-geometry contract in docs/internal-interfaces.rst
 and ADR 008; layout owns stable slots, rendering owns per-view snapshots and
 padded SVG bounds. Unit tests remain colocated under tests/.
+
+level.js supplies resolved object/type ranks to layout and render control order;
+classified evidence uses ordinary rows and only the legacy test role uses a lane.

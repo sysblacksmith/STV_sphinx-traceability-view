@@ -1,0 +1,238 @@
+{
+  "base_commit": "0cecafb4836ab252d9e30e4553ab901cbd8660b7",
+  "recorded_at": "2026-10-24T20:03:35.699203+02:00",
+  "accepted_need_ids": [
+    "STV_SHR_012",
+    "STV_SHR_054",
+    "STV_SYS_005",
+    "STV_SWR_012",
+    "STV_SWR_037",
+    "STV_SWR_055",
+    "STV_SWR_058",
+    "STV_SWR_061",
+    "STV_TC_SW_046",
+    "STV_TC_SW_047",
+    "STV_TC_SW_048",
+    "STV_TC_SY_061"
+  ],
+  "shared_method_sha256": "3617608841cd28c2892e62a02a3fd63ef9f99860c233537a43032faa19bad185",
+  "scope_note": "Scoped acceptance is defined in round 10; context preserves its existing state. Runtime/test identities are in the development record.",
+  "artifacts": [
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "sha256": "4b4472d53554aa58369cf7a4309cbbeca76f870b8708ea5183b10d67212e5321"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_007_component_directories.rst",
+      "sha256": "58a9bf379840e1838f105a19c17bf3538e20d1cc21d1e71aa6ce4227df15c363"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_008_stable_navigation.rst",
+      "sha256": "08beef9a6e1f8b6025bd90d13009cf94cb7a1739c6f70be2c88773757bf139e1"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_009_classified_evidence_rows.rst",
+      "sha256": "52720013bec333fb2441cc956c0833deb3d40c9b58bf01e790229129cb685b45"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "sha256": "2c773ae4613d7a55ec7d112b03f8c1fe4ba54865b112d2cfd1cf18cbe2e64117"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "sha256": "8e3276483be2c96bd55f588b3ddd5c7673d7107fb5c33dfe48afcdceff797d6f"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "sha256": "e73d1a6a637c86ef80cf8280ab2785e10341faf3a9643de689df335f05cc3274"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "sha256": "030ed3dc7220ab5f55e291d79565abcb422fc8dea581616e49bf0bc286359c78"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "sha256": "3999450ec92f35293c1f7e4dc69437657e29f1b085705a530286c58e4fa23c08"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "sha256": "79fd8417e4eae1b269e0415ef449dd5b3222e2170b2e94e5f9efed6c9158119b"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42"
+    },
+    {
+      "path": "docs/change-requests/STV_CR_013_artifact_vertical_target_position.rst",
+      "sha256": "bf59eda5b13015bf01a7bb1aa50ea3504dba851f196145f6b57aaf8289a4249d"
+    },
+    {
+      "path": "docs/change-requests/STV_CR_013_artifact_vertical_target_position.svg",
+      "sha256": "55119e337bc1dcd567b5046bf6f9259844f2c4b42b41a7c09c25f5cd2bf0bb8e"
+    },
+    {
+      "path": "docs/ci-and-provenance.rst",
+      "sha256": "33f569b6cf5102da27dd041b164486902b44482a5f7b516ee5525a6605a96b18"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "sha256": "d624de034a73e9e60191c43d18ef468bd10b269f9d13076638ef74ab2e096384"
+    },
+    {
+      "path": "docs/concept-reviews/round-10.rst",
+      "sha256": "161fac7bd8532d5b766a101303abc44861ccffd1521e8744fbce1c15b6db2504"
+    },
+    {
+      "path": "docs/conf.py",
+      "sha256": "8e885c7b87665ce6fed431d889667ec4709a5e0519bf981ed55941aebe0e8098"
+    },
+    {
+      "path": "docs/demo.rst",
+      "sha256": "438ad02a1742edc5fb96ed1da0afd966e7259042709e455435a4ce2deb6f1e23"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "sha256": "221c19cbce3946b9951363a32ad55a5e5c512acc16f55ce46271ce653ae8842c"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "sha256": "49f0cf1b9077eef4bcf67b1d3d448d38d9467072c6d1f8bcfbc9b62bd7f8a3a2"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "sha256": "ec6960d714e4b923b36ee290a3f142de9efbce4403758766702455188ee4fdb3"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "sha256": "ab8da1fe470dfaa5f715966665793cd6831355fd3bebba45eb9305f1065e687b"
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "d15c3beeb78b9b4ced21b9259e3a0e0ca5e459bfa202b935154cab30803431ef"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "sha256": "094025a8810632c2e2501aa1735ae400e294cbeee1f1850dd4d472225d301e18"
+    },
+    {
+      "path": "docs/licensing.rst",
+      "sha256": "bd48d203f3556317e32b0900112530e2b89550ebcf3e0a9a1c6fd4d0c6f4f215"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "sha256": "abfba9aa269ce40269288fe33640b249801bfb1a434f6fb67a43528b5da167e8"
+    },
+    {
+      "path": "docs/method.rst",
+      "sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3"
+    },
+    {
+      "path": "docs/project-metrics.rst",
+      "sha256": "94f0cbcc099afb4763a74c9797059a8ab2481a933f8a92b16d0a0ead058f6865"
+    },
+    {
+      "path": "docs/requirements-software.rst",
+      "sha256": "a3e60f532c7bb503cae180e73dcb7f0ec4343a2ca983411815b396224db191c7"
+    },
+    {
+      "path": "docs/requirements-stakeholder.rst",
+      "sha256": "0de20dc79c9cbd54cbde3a28768fb783aa607a7dc5d96e72802695fdaf2f64ef"
+    },
+    {
+      "path": "docs/requirements-system.rst",
+      "sha256": "ab88ce8383f819117434597ff24a4efa3f123bdb8800d256de4f88c1e9406168"
+    },
+    {
+      "path": "docs/review.rst",
+      "sha256": "21bf774b2b493cdfb31a67a4c0ec14671165b5631dc9d6aa1c7f839a94aa6ef3"
+    },
+    {
+      "path": "docs/sources.rst",
+      "sha256": "c3b90d9a2e8dca8c67ceffc13e250eefb8fcb18dde12fe392e8ab12637c663cd"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "sha256": "44b647403b0e176e37a90ea8934e112e29cf59ccad996b5ddbd892f307fa4465"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "sha256": "8d021d1c8a19bd3b3d1b949b5f2e98db21009f2cf0f58ebfd347aeb463ae35e4"
+    },
+    {
+      "path": "docs/test-cases/index.rst",
+      "sha256": "3373c3102a29bce2be71c96482475edeaf70fceb9e9c8ef924ee75dace013ecb"
+    },
+    {
+      "path": "docs/test-cases/software-tests.rst",
+      "sha256": "580f9c6e46f7ab11ccff18d0896c79537e994a18f6e5c8f32b57b3a07d89c771"
+    },
+    {
+      "path": "docs/test-cases/system-tests.rst",
+      "sha256": "532c7cc9db05e434cbef914f9e013af2cb6821020c5fc4d007e8f001ce1c0626"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "sha256": "0f8810959fd5849570b8dde2392172bd31b1abfe696323594d760ba277ae508e"
+    },
+    {
+      "path": "docs/test-execution/cr013-rows/cases.rst",
+      "sha256": "e4b0958810e4516249fed46b32c7d363acb0a79b5687f91ed7d0a83d47b66eb5"
+    },
+    {
+      "path": "docs/test-execution/cr013-rows/index.rst",
+      "sha256": "62573b15a256b55a5aa4a6b4345a8f7ae677785a29223ee9f6299af14d3b96d6"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "sha256": "38a3e1729c77ad0d82cd14fcdb0ef53ce89e9021c0fbf03e3b9b9c5b8fb3f452"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "48a67cbda5c6592371ff12e2001ce298a68157efa034976285eb128549427c4a"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "80ac47b3745d296c2f06c7195602b1a5ea307adbc19ec079d1d408f6a936080d"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "4c8677c69ea8b4a131005f2b2f34d689cc221c448b728b8f0e807c8ad4f07c7d"
+    }
+  ]
+}

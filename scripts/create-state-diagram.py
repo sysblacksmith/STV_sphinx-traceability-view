@@ -28,7 +28,7 @@ def edge(identity, source, target, title, points=()):
 
 
 box("collection", "BUILD: collected invocations\nsource locations + distinct seeds", 30, 40, "elements-software.html#STV_SWE_DIRECTIVE")
-box("pending", "BUILD: pending pages\nvalidated immutable snapshot", 490, 40, "elements-software.html#STV_SWE_GRAPH")
+box("pending", "BUILD: pending pages\nsnapshot + resolved evidence rows", 490, 40, "elements-software.html#STV_SWE_GRAPH")
 box("final", "BUILD: finalized bundle\ncontent-addressed graph + details", 950, 40, "elements-software.html#STV_SWE_BUNDLE")
 box("buildfailed", "BUILD: failed\nno finalized new view", 490, 230, color="#f8dfdf")
 edge("b1", "collection", "pending", "write-started\nvalid graph inputs")

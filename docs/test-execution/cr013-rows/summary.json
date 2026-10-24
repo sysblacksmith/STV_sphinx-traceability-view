@@ -1,0 +1,42 @@
+{
+  "latest_distinct": 134,
+  "latest_results": {
+    "passed": 134,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "reports": [
+    {
+      "report": "node.xml",
+      "total": 34,
+      "passed": 34
+    },
+    {
+      "report": "python.xml",
+      "total": 59,
+      "passed": 59
+    },
+    {
+      "report": "classification-scale.xml",
+      "total": 1,
+      "passed": 1
+    },
+    {
+      "report": "first-browser.xml",
+      "total": 2,
+      "passed": 2
+    },
+    {
+      "report": "browser.xml",
+      "total": 36,
+      "passed": 36
+    },
+    {
+      "report": "capacity.xml",
+      "total": 2,
+      "passed": 2
+    }
+  ],
+  "canonical_procedures": 4
+}

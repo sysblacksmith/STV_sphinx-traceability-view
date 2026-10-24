@@ -273,7 +273,7 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    separation. Empty semantic levels may keep an empty band so upward
    expansion does not invert level order. Fresh placement may reorder a band;
    incremental navigation preserves surviving ordinary slots.
-4. Put resolved test nodes in a separate lane at least 96 pixels beyond the
+4. Put explicit legacy test-role nodes in a separate lane at least 96 pixels beyond the
    rightmost ordinary artifact. Assign a shared test to the median rank of its
    connected artifacts, breaking ties upward; an unconnected test seed uses
    the first band. Stack tests within each band and increase its height to
@@ -454,3 +454,19 @@ negative horizontal origin and minimum node y. ``edge-viewport.js`` includes
 all route points and node corners with marker padding and positions the SVG at
 its matching viewBox origin. See :ref:`STV_ADR_008` and
 :doc:`internal-interfaces` for the ownership/failure contract.
+
+Classified-row implementation slice
+------------------------------------
+
+1. MODEL validates levels_by_tag, level_from and optional fallback_level.
+2. GRAPH resolves fixed/tag owners before one-hop derived records, indexing
+   actual published relationships once; serialize additive resolved fields.
+3. LAYOUT and RENDER use a shared resolved-level helper, preserving legacy-role
+   behavior. All classified nodes use ordinary horizontal slots and common row y.
+4. The project's host configuration selects nine categories plus fallback/problem
+   rows. No type duplication, ID-prefix inference, dependency or service is added.
+5. Verify model/graph normal and exceptional inputs, all-row geometry, browser
+   seeds and fallback labels, PR013 stability, legacy hosts and installed assets.
+
+:doc:`internal-interfaces` fixes field semantics and error ownership;
+:ref:`STV_ADR_009` records the policy and owner-selected fallback behavior.

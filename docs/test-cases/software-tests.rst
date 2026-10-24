@@ -2094,3 +2094,78 @@ STV_TC_SW_045: Natural ID ordering for fresh scenes
    **Expected:** Both modes produce 1,2,3,10,20 within the ordinary rank; synthetic
    root stays in its own band. Expansion preserves every original node position
    and does not insert-sort discovered nodes into occupied slots.
+
+STV_TC_SW_046: Validate classified placement configuration
+----------------------------------------------------------------
+
+.. test_case:: Validate classified placement configuration
+   :id: STV_TC_SW_046
+   :status: accepted
+   :tags: release_initial, test_software
+   :basis: documented
+   :evidence: src/sphinx_traceability_view/model/tests/test_model.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_061
+   :executed_by: STV_TE_D8595800FE3E197A
+   :last_result: passed
+
+   **Level/environment:** Software component; pinned Python implementation venv.
+   **Procedure:** Normalize renamed types with tag maps, owner maps, fixed levels
+   and legacy role. Mutate unknown/empty levels, conflicting selectors, relation
+   names, malformed tag/owner maps and fallback values; compare original inputs.
+   **Expected:** Valid models normalize without mutation; invalid configuration
+   fails with its field path. Owner maps only reference fixed/tag-resolved source
+   levels. Run pytest for model/tests/test_model.py.
+
+STV_TC_SW_047: Resolve stable classification and fallback records
+-----------------------------------------------------------------------
+
+.. test_case:: Resolve stable classification and fallback records
+   :id: STV_TC_SW_047
+   :status: accepted
+   :tags: release_initial, test_software
+   :basis: documented
+   :evidence: src/sphinx_traceability_view/graph/tests/test_graph.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_061
+   :executed_by: STV_TE_B40FEC4881589859
+   :last_result: passed
+
+   **Level/environment:** Graph component, pinned Python venv.
+   **Procedure:** Classify tagged system/software cases, cross-level verifies links,
+   multiple executions, renamed host types, conflicting/absent tags, no owners,
+   multiple same/mixed owners and hidden owners. Resolve 30,000 case/execution
+   records with 15,000 owner links. Compare reordered input records
+   and untouched original data. Repeat without configured fallback.
+   **Expected:** Fixed row per case/record, fallback with indication for ambiguity,
+   strict Need-located failure without fallback, deterministic output and no hidden
+   owner leakage. Classification uses the complete graph rather than visible paths.
+   Run pytest for graph/tests/test_graph.py.
+
+STV_TC_SW_048: Align classified rows through navigation
+-------------------------------------------------------------
+
+.. test_case:: Align classified rows through navigation
+   :id: STV_TC_SW_048
+   :status: accepted
+   :tags: release_initial, test_software
+   :basis: documented
+   :evidence: frontend/src/layout/tests/classified-rows.test.js
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_005, STV_SWR_012, STV_SWR_037, STV_SWR_055, STV_SWR_058
+   :executed_by: STV_TE_D249590313C5FFA4
+   :last_result: passed
+
+   **Level/environment:** Software component; pinned Node/frontend environment.
+   **Procedure:** Lay out all nine categories, two cases and executions in each
+   boundary, fallback and custom rows, plus a shared case verifying both requirement
+   levels. Expand/collapse from software/case/execution anchors; reorder input and
+   compare target-level control ordering. Exercise cycles, empty rows, 200 nodes and
+   existing legacy-role fixtures.
+   **Expected:** Declared row order and identical same-row y, finite nonoverlap and
+   safe ports, single shared identities, fixed classification across visible-set
+   changes, unchanged anchor/peer slots and semantic control ordering. Legacy tests
+   still use the right-hand lane. Run all frontend Node tests.

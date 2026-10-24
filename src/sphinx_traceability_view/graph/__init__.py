@@ -1,6 +1,7 @@
 """Adapt the completed NeedsView into deterministic, bidirectional graph data."""
 from urllib.parse import urlsplit
 from collections.abc import Mapping
+from .placement import resolve_placements
 
 
 def metadata_value(value):
@@ -48,6 +49,7 @@ def snapshot(needs, model, uri, project):
         adjacency[source]["outgoing"].setdefault(relation, []).append(target)
         if target in objects:
             adjacency[target]["incoming"].setdefault(relation, []).append(source)
+    resolve_placements({n.get("id_complete", n["id"]): n for n in records}, objects, adjacency, model)
     return {"schema": 1, "project": project, "model": model,
             "objects": dict(sorted(objects.items())), "edges": sorted(edges), "adjacency": adjacency,
             "entries": sorted(i for i, n in objects.items() if not n["parent"] and model["types"][n["type"]].get("role") == "stakeholder")}, hidden

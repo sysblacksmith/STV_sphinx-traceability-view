@@ -125,3 +125,32 @@ Further documentation
 
 The existing Requirements, Architecture, Verification and Validation,
 Miscellaneous and Utilities chapters remain available in the navigation.
+
+Classified evidence rows
+--------------------------
+
+The project's own demo separates system/software test cases and executions.
+For another host, configure ordered levels and per-type placement in
+``traceability_view_model``; see :doc:`internal-interfaces`. A test-case type
+can select a row by tags, and an execution type can inherit from its case::
+
+   "case": {
+       "levels_by_tag": {"test_system": "system_tests", "test_software": "software_tests"},
+       "fallback_level": "unclassified_tests",
+   },
+   "run": {
+       "level_from": {
+           "relation": "executed_by", "direction": "incoming",
+           "levels": {"system_tests": "system_executions", "software_tests": "software_executions"},
+       },
+       "fallback_level": "unclassified_tests",
+   },
+
+These entries belong in the model's ``types`` mapping; use your actual host type,
+tag and relationship names. Declare every referenced row in ``levels`` in the
+desired order. The project orders stakeholder, system, system tests, system
+executions, system architecture, software, software tests, software executions,
+software architecture, then unclassified evidence and problems. Classification
+uses all published relationships, so navigation never changes a test's boundary.
+Fallback nodes are labelled and retain normal links/details. Existing fixed-level
+mappings and explicitly selected ``role: test`` side lanes remain supported.

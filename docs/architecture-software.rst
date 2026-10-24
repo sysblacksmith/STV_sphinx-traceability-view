@@ -105,3 +105,12 @@ Layout owns facing ports, clear direct segments and obstacle detours. Rendering
 owns the 975px viewport; inspection owns delayed hover and cancellation.
 These refinements preserve existing component boundaries and selected libraries;
 see :doc:`change-requests/STV_CR_003_usability-problems` for the change scope.
+
+Classified evidence rows
+--------------------------
+
+MODEL validates configurable placement selectors; GRAPH resolves each evidence
+record against complete published metadata/links before bundling. LAYOUT and
+RENDER consume the resolved level; fallback records remain labelled and fully
+navigable. :ref:`STV_ADR_009` and :doc:`internal-interfaces` define the additive
+contract. Component boundaries and browser request-token transitions are unchanged.

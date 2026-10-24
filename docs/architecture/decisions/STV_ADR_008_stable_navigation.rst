@@ -7,7 +7,8 @@ Status: **accepted**. Date: 2026-10-24. Scope: browser layout and rendering.
 Decision owner: project owner through the scoped review recorded in
 :doc:`../../concept-reviews/round-9`.
 Supersedes: partially :ref:`STV_ADR_006` for repeated parent recentering on
-relationship/root toggles. Superseded by: none.
+relationship/root toggles. Superseded by: partially :ref:`STV_ADR_009`
+for classified test evidence; legacy-role and navigation decisions remain.
 
 Context and requirement paths
 -------------------------------------

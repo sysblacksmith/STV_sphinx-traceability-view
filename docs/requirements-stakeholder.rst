@@ -197,30 +197,35 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    **Acceptance criterion:** Expanding traces to software architecture objects places
    them below visible software requirements.
 
-.. shr:: Position test cases beside artifacts
+.. shr:: Position test evidence in classified vertical rows
    :id: STV_SHR_012
    :status: accepted
    :tags: feature_layout, release_initial
    :basis: owner
    :evidence: docs/sources.rst :: project owner discussion 2026-10-18
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
 
-   The system shall display test cases revealed through trace expansion to the right
-   of the artifacts to which they are traced.
+   The project shall place System Test Case and System Test Execution rows between
+   System Requirement and System Architecture, and Software Test Case and Software
+   Test Execution rows between Software Requirement and Software Architecture.
+   Objects in the same row share a top coordinate and do not overlap. Classification
+   follows the test's verification boundary, independently of the requirements it
+   verifies or the currently expanded traces. Shared tests and execution records
+   remain individually identifiable, with actual relationship endpoints preserved.
 
-   **Acceptance criterion:** Expanding an artifact's test-case relationship displays
-   the related test cases to its right, with the association identifiable.
+   **Acceptance criterion:** All nine categories in CR_013 appear in its stated
+   order from stakeholder through software architecture, including from software,
+   test-case and execution seeds. Multiple cases/executions align within their
+   category, remain single shared nodes and retain links during expansion/collapse.
+   Unclassified or conflicting test evidence remains navigable in a common fallback
+   row below Software Architecture and above Problem Tickets, with an explicit
+   unclassified indication. Missing intermediate categories do not reverse order.
 
-   In shared-node mode, a test case linked to multiple visible artifacts shall
-   appear once to the right of all those artifacts, with each revealed connection
-   visible. In separate-occurrence mode, each occurrence shall appear to the
-   right of its respective artifact.
-
-   **Acceptance criterion for shared test cases:** Expanding test traces from
-   two artifacts to the same test case displays one test node to the right of
-   both artifacts in shared-node mode, and one occurrence to the right of each
-   artifact in separate-occurrence mode.
+   **Compatibility:** Replacement models can still select explicit fixed levels or
+   the legacy right-hand test role. The project uses the classified vertical model.
+   **Revision evidence:** Owner implementation instruction for CR_013 and explicit
+   fallback-row decision, 2026-10-24; see :ref:`STV_CR_013`.
 
 .. shr:: Navigate relationships in both directions
    :id: STV_SHR_013
@@ -1090,12 +1095,13 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    Relationship expansion/collapse shall keep the activated node and its same-level
    surviving ordinary peers stationary. Existing ordinary nodes retain horizontal
    positions. Other levels may move vertically only to accommodate changed band
-   height without overlap; a shared test may change its associated level.
+   height without overlap; a legacy test-role node may change its associated level. Classified test
+   cases and executions retain their fixed semantic rows.
 
    **Acceptance criterion:** Repeated upward/downward expansions and collapse keep
    the clicked node's world and screen position and ordinary same-band peers stable,
    with the viewport unchanged. New nodes avoid occupied slots, shared tests remain
-   single and right of ordinary nodes, and all arrows reach their node boundaries,
+   single in their configured rows (or right-hand legacy lane), and all arrows reach their node boundaries,
    including routes at negative coordinates. Fresh navigation starts and explicit
    viewport reset remain usable without changing another view.
 

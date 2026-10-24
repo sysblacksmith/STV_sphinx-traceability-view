@@ -1,9 +1,7 @@
+import {levelIndex} from '../layout/level.js';
 /** Order controls by semantic target placement, independent of link authorship. */
 export function orderedGroups(graph,id) {
-  const level=target=> {
-    const type=graph.model.types[graph.objects[target]?.type];
-    return !type || type.role==='test' ? -1 : graph.model.levels.indexOf(type.level);
-  };
+  const level=target=>levelIndex(graph,target);
   const source=level(id),groups=[];
   for(const direction of ['outgoing','incoming']) {
     for(const [relation,targets] of Object.entries(graph.adjacency[id]?.[direction]||{})) {

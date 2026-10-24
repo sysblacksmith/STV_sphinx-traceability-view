@@ -3498,3 +3498,31 @@ STV_TC_SY_060: Natural seeded order survives expansion
    **Expected:** Initial left-to-right IDs are REQ_1, REQ_2, REQ_3, REQ_10, REQ_20;
    all existing world/screen coordinates remain within 0.5 px after expansion.
    Project-mode ordering is independently covered by STV_TC_SW_045.
+
+STV_TC_SY_061: Published nine-row evidence navigation
+-----------------------------------------------------------
+
+.. test_case:: Published nine-row evidence navigation
+   :id: STV_TC_SY_061
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_classified_rows.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_009, STV_SHR_010, STV_SHR_011, STV_SHR_012, STV_SHR_054, STV_SYS_002, STV_SYS_005, STV_SWR_012, STV_SWR_037, STV_SWR_055, STV_SWR_058, STV_SWR_061
+   :executed_by: STV_TE_17192149B6D99989
+   :last_result: passed
+
+   **Level/environment:** Windows Firefox/geckodriver; file and local HTTP with
+   external requests blocked; built package assets and isolated Sphinx host.
+   **Procedure:** Build all nine categories with same-row peers, multiple actual
+   execution identities, a cross-level shared case and fallback case/execution.
+   Start in turn at software, case and execution; expand all relevant groups,
+   record DOM/world coordinates, Reset to inspect complete scene and collapse.
+   **Expected:** Nine ordered rows and same-row top alignment; fallback below
+   software architecture, visible unclassified labels and valid endpoints. Shared
+   case appears once and does not switch row with visible requirements. Anchor and
+   surviving peers stay stationary. Original links/details, independent views,
+   natural seed order, project root and absent categories retain their contracts.
+   Run pytest docs/test-scripts/test_classified_rows.py with STV_GECKODRIVER.

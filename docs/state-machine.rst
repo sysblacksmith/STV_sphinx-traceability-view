@@ -222,3 +222,17 @@ Source entry points
 Transition tables distinguish code behavior from executed verification. A linked
 requirement or test source is not itself a passing result; consult the coverage
 and release execution records from :doc:`maturity`.
+
+Build-time placement classification
+------------------------------------
+
+At write-started, MODEL validates configured selectors before GRAPH resolves
+fixed/tag owners and one-hop execution placement. Invalid model configuration
+uses the existing build-failed transition; unclassified data uses the configured
+fallback row, or the same failed transition if fallback is absent. The immutable
+snapshot contains resolved levels. Browser expansions do not reclassify it.
+All existing layout/capacity/stale/failure commit transitions remain unchanged.
+Owners and criteria: :need:`STV_SWE_MODEL`, :need:`STV_SWE_GRAPH`,
+:need:`STV_SWR_061`; tests :need:`STV_TC_SW_046`, :need:`STV_TC_SW_047`,
+:need:`STV_TC_SY_061`. Source: model/__init__.py and graph/__init__.py under
+src/sphinx_traceability_view. The diagram refines the snapshot action only.

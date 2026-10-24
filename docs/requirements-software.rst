@@ -195,7 +195,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Acceptance criterion:** Expanding architecture preserves the required rank order.
 
-.. swr:: Place test nodes on the right
+.. swr:: Place classified test evidence in its resolved rows
    :id: STV_SWR_012
    :status: accepted
    :tags: release_initial
@@ -206,9 +206,18 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
-   The software shall place each revealed shared test node to the right of all visible artifacts connected to it by revealed test traces; later occurrence mode places each copy beside its source.
+   The software shall treat classified test cases and executions as ordinary nodes
+   in their resolved semantic row, sharing its top coordinate and horizontal
+   collision rules. Their ranks shall not depend on currently revealed neighbors.
+   The explicitly configured legacy test role shall continue to place shared tests
+   once to the right of associated ordinary artifacts, with median-rank stacking.
 
-   **Acceptance criterion:** A test linked to two ranks appears once beyond both artifact right bounds in shared mode.
+   **Acceptance criterion:** Nine-category, shared cross-level test and multiple
+   execution fixtures retain fixed classified rows, alignment, identity and safe
+   routes across expansion/collapse and different seeds. The owner-selected common
+   fallback row retains unclassified/conflicting evidence. Existing legacy-role
+   fixtures still satisfy their right-side/median-rank constraints. Later occurrence
+   mode remains deferred; this change does not claim to deliver it.
 
 .. swr:: Index both trace directions
    :id: STV_SWR_013
@@ -619,7 +628,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Acceptance criterion:** Malformed fixtures fail before asset generation while omitted optional colors and acceptance values receive defaults.
 
-.. swr:: Honor declared level ordering
+.. swr:: Honor resolved declared level ordering
    :id: STV_SWR_037
    :status: accepted
    :tags: release_initial
@@ -630,9 +639,15 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SYS_005
    :allocated_to: STV_SWE_LAYOUT
 
-   The software shall build rank order from the normalized ordered level list and map all host types to declared levels or the test role.
+   The software shall derive ranks from the normalized ordered level list, using
+   an object's resolved level when supplied and otherwise its fixed type placement.
+   Only explicit legacy test-role nodes use contextual median ranks and a side lane.
+   The synthetic project root stays above all configured rows; empty rows retain
+   spacing, and unrelated custom categories retain their declared placement.
 
-   **Acceptance criterion:** An added hardware level is placed at its declared index without code changes.
+   **Acceptance criterion:** Added hardware, nine classified categories, fallback
+   and problem rows respect the declared indices. Nodes in one classified row align
+   at their top edges; hidden/missing and legacy-role behavior remains usable.
 
 .. swr:: Scope state to view roots
    :id: STV_SWR_038
@@ -988,8 +1003,9 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :allocated_to: STV_SWE_RENDER
 
    The software shall order nonempty relationship controls by the normalized
-   levels of all targets relative to the source: wholly above, neutral, wholly
-   below. Mixed, same-level, unresolved and test-role groups are neutral.
+   resolved levels of all targets relative to the source: wholly above, neutral, wholly
+   below. Mixed, same-level, unresolved and legacy test-role groups are neutral.
+   Classified case/execution groups use their resolved semantic levels.
    Preserve the existing outgoing-then-incoming host order within each category,
    without changing group identities, labels, membership or expansion state.
 
@@ -1078,8 +1094,10 @@ Executable criteria and retained results: :doc:`test-coverage` and
    and activated node as an anchor. Preserve surviving ordinary x slots, anchor
    position and same-band ordinary y. Place newcomers in nearest available slots
    with 48 px separation; ties choose the leftmost slot. Preserve the test lane x
-   while any test survives and keep ordinary nodes at least 96 px to its left.
-   Retain test offsets when their rank is unchanged; append new or reranked tests
+   while any legacy test-role node survives and keep ordinary nodes at least
+   96 px to its left. Classified test cases/executions instead retain ordinary
+   slots in their fixed rows.
+   Retain legacy test offsets when their rank is unchanged; append new or reranked legacy tests
    without overlap. Anchor the activated band and move other bands only as needed
    for their measured height plus 100 px separation. Negative coordinates are valid.
 
@@ -1142,3 +1160,31 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Channeling rationale:** Row ordering is local to the existing layout component
    and needs no additional system requirement or boundary.
+
+.. swr:: Resolve configurable per-object placement at build time
+   :id: STV_SWR_061
+   :status: accepted
+   :tags: release_initial, classified_rows
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_013_artifact_vertical_target_position.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SYS_002, STV_SHR_012
+   :allocated_to: STV_SWE_MODEL, STV_SWE_GRAPH
+
+   Supplemental type placement shall support exactly one fixed level, legacy
+   test role, tag-to-level map, or one-hop relation-owner level map. Resolve
+   tag placements first and owner-derived placements next against the complete
+   published graph, never against visible edges or ID prefixes. Serialize the
+   resolved level with each classified object. A configured fallback level
+   retains missing/conflicting classifications and carries an unclassified
+   indication; without fallback, unresolved classification fails with Need ID.
+   Invalid model shape, unknown level or relation always fails with entry path.
+   Exclude hidden records before classification; never expose hidden owner IDs.
+
+   **Acceptance criterion:** Renamed host types/tags/relations, zero/one/conflicting
+   tags, orphan/multiple owners, mixed owner classes, hidden owners and execution
+   seeds produce their explicit row or configured fallback deterministically.
+   Owners already resolved to fixed/tag rows can supply execution placement;
+   chained owner-derived links are not inferred and use fallback/strict handling. Host data remains unmodified,
+   output is deterministic and classification requires O(N + E) indexing.

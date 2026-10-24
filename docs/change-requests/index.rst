@@ -21,3 +21,5 @@ acceptance records remain unchanged.
    STV_CR_010_consolidated-test-specifications
    STV_CR_011_mit-license
    STV_CR_012_release-cancellation-and-cleanup
+
+   STV_CR_013_artifact_vertical_target_position

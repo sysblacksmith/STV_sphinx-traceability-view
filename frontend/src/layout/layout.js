@@ -1,5 +1,6 @@
 import ELK from 'elkjs/lib/elk.bundled.js';
 import {stabilize} from './stability.js';
+import {levelIndex} from './level.js';
 const elk = new ELK();
 const idOrder=new Intl.Collator('en',{numeric:true,sensitivity:'variant'});
 // Open rectangle intersection: touching a boundary does not obscure a box.
@@ -29,7 +30,7 @@ export async function compute(graph, visible, boxes, context={}) {
   for(const key of keys) {
     const id=objects.get(key), object=graph.objects[id];
     if(key===rootKey) {ranks.set(key,-1);continue;}
-    if(object && graph.model.types[object.type].role!=='test') ranks.set(key,levels.indexOf(graph.model.types[object.type].level));
+    if(object && graph.model.types[object.type].role!=='test') ranks.set(key,levelIndex(graph,id));
   }
   for(const key of keys.filter(k=>!ranks.has(k))) {
     const id=objects.get(key), connected=[];

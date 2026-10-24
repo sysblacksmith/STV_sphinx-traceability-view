@@ -10,7 +10,7 @@
             <mxGeometry x="30" y="40" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="pending" label="BUILD: pending pages&#10;validated immutable snapshot" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
+        <object id="pending" label="BUILD: pending pages&#10;snapshot + resolved evidence rows" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="490" y="40" width="260" height="95" as="geometry" />
           </mxCell>

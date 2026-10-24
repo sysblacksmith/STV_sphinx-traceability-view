@@ -30,8 +30,33 @@ def normalize(host_types, host_links, supplied=None, project_mode=False):
         if not isinstance(placement, dict):
             raise ValueError(f"traceability_view_model.types.{name}: expected a mapping")
         role = placement.get("role")
-        if role not in (None, "stakeholder", "test") or (role == "test" and "level" in placement) or (role != "test" and placement.get("level") not in levels):
-            raise ValueError(f"traceability_view_model.types.{name}: invalid level/role placement")
+        selectors = [key for key in ("level", "levels_by_tag", "level_from") if key in placement]
+        path = f"traceability_view_model.types.{name}"
+        if role == "test":
+            if selectors or "fallback_level" in placement:
+                raise ValueError(f"{path}: legacy test role cannot have a level selector")
+        elif role not in (None, "stakeholder") or len(selectors) != 1:
+            raise ValueError(f"{path}: expected one level/role placement")
+        elif role == "stakeholder" and selectors != ["level"]:
+            raise ValueError(f"{path}: stakeholder role requires a fixed level")
+        elif selectors == ["level"]:
+            if placement["level"] not in levels or "fallback_level" in placement:
+                raise ValueError(f"{path}: invalid fixed level placement")
+        else:
+            selector = selectors[0]
+            value = placement[selector]
+            if selector == "level_from":
+                if (not isinstance(value, dict) or set(value) != {"relation", "direction", "levels"}
+                        or not isinstance(value["relation"], str)
+                        or value["direction"] not in ("incoming", "outgoing")):
+                    raise ValueError(f"{path}.level_from: expected relation, direction and levels")
+                value = value["levels"]
+            if (not isinstance(value, dict) or not value
+                    or any(not isinstance(key, str) or not key or not isinstance(target, str)
+                           or target not in levels for key, target in value.items())):
+                raise ValueError(f"{path}.{selector}: expected nonempty level mapping")
+            if "fallback_level" in placement and placement["fallback_level"] not in levels:
+                raise ValueError(f"{path}.fallback_level: unknown level")
         placement["color"] = host[name].get("color") or PALETTE[index % len(PALETTE)]
         placement["title"] = host[name].get("title", name)
     if project_mode and not any(t.get("role") == "stakeholder" for t in types.values()):
@@ -47,4 +72,17 @@ def normalize(host_types, host_links, supplied=None, project_mode=False):
                for direction in ("incoming", "outgoing")):
             raise ValueError(f"needs_links.{name}: incoming and outgoing labels are required")
         model["relations"][name] = {k: relation[k] for k in ("incoming", "outgoing")}
+    owner_levels = {p["level"] for p in types.values() if "level" in p}
+    owner_levels.update(level for p in types.values() for level in p.get("levels_by_tag", {}).values())
+    owner_levels.update(p["fallback_level"] for p in types.values()
+                        if "levels_by_tag" in p and "fallback_level" in p)
+    for name, placement in types.items():
+        if "level_from" not in placement:
+            continue
+        rule = placement["level_from"]
+        path = f"traceability_view_model.types.{name}.level_from"
+        if rule["relation"] not in model["relations"]:
+            raise ValueError(f"{path}.relation: unknown host relation")
+        if not set(rule["levels"]).issubset(owner_levels):
+            raise ValueError(f"{path}.levels: owners must use fixed/tag-resolved levels")
     return model

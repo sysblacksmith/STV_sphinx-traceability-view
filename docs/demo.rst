@@ -39,3 +39,13 @@ Software entry
 --------------
 
 .. traceability-view:: STV_SWR_001
+
+Evidence category rows
+-----------------------
+
+The project model follows :ref:`STV_CR_013`: system/software tests and their
+executions each have their own row between requirements and architecture.
+Tests keep their verification-boundary row even when they verify several
+requirement levels. Unclassified evidence uses a labelled fallback row beneath
+Software Architecture; Problem Tickets remain below it. Expand verified-by and
+executed-by links to explore these records, then Reset viewport to fit new content.

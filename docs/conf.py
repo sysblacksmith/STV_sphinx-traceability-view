@@ -34,14 +34,23 @@ needs_types = traceability_model.NEEDS_TYPES
 needs_links = traceability_model.NEEDS_LINKS
 needs_fields = traceability_model.NEEDS_FIELDS
 needs_build_json = True
-# Reports extend this documentation's host schema. The extension's default
-# five-level preset remains unchanged for existing consumer projects.
+# Project evidence rows; the reusable default/legacy models remain available.
 traceability_view_model = deepcopy(import_module('sphinx_traceability_view.model').DEFAULT)
-traceability_view_model['levels'].append('problems')
+traceability_view_model['levels'] = [
+    'stakeholder', 'system', 'system_tests', 'system_executions', 'system_arch',
+    'software', 'software_tests', 'software_executions', 'software_arch',
+    'unclassified_tests', 'problems',
+]
 traceability_view_model['types']['problem_report'] = {'level': 'problems'}
-traceability_view_model['types']['test_case'] = {'role': 'test'}
-traceability_view_model['levels'].append('executions')
-traceability_view_model['types']['test_execution'] = {'level': 'executions'}
+traceability_view_model['types']['test_case'] = {
+    'levels_by_tag': {'test_system': 'system_tests', 'test_software': 'software_tests'},
+    'fallback_level': 'unclassified_tests',
+}
+traceability_view_model['types']['test_execution'] = {
+    'level_from': {'relation': 'executed_by', 'direction': 'incoming',
+                   'levels': {'system_tests': 'system_executions', 'software_tests': 'software_executions'}},
+    'fallback_level': 'unclassified_tests',
+}
 html_theme = "sphinx_rtd_theme"
 html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
 html_css_files = ["wide-layout.css"]

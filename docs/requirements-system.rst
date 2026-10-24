@@ -85,9 +85,14 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SHR_009, STV_SHR_010, STV_SHR_011, STV_SHR_012, STV_SHR_037
    :allocated_to: STV_SE_BROWSER
 
-   The system shall preserve the input model's ordered artifact levels and place revealed tests to the right of their associated artifacts independently of the starting object.
+   The system shall preserve the configured artifact row order independently of
+   the starting object. Classified test cases and executions use the host model's
+   resolved rows; a configured legacy test role retains right-side placement.
 
-   **Acceptance criterion:** A software-seeded view reveals higher levels above it, an added hardware level respects its declared position, and shared tests remain right of every connected artifact.
+   **Acceptance criterion:** Software-, test- and execution-seeded views preserve
+   nine-category order and same-row top alignment. Custom hardware rows retain
+   their configured index. Shared identity, finite nonoverlap and endpoint identity
+   hold in both classified-row and legacy-role configurations.
 
 .. sysr:: Provide original-object inspection
    :id: STV_SYS_006

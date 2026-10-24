@@ -264,3 +264,13 @@ Firefox file/HTTP cases :need:`STV_TC_SY_058` / :need:`STV_TC_SY_059` /
 Existing stale/error/picker/independent-view cases remain regression gates.
 Development results are recorded in :doc:`test-execution/pr013-final/index`;
 this increment neither starts nor qualifies a release.
+
+CR_013 classified-row checks
+-----------------------------
+
+:need:`STV_TC_SW_046`, :need:`STV_TC_SW_047`, :need:`STV_TC_SW_048` and
+:need:`STV_TC_SY_061` cover classifier schema/errors, stable graph resolution,
+nine-row layout/control order and published Firefox navigation on file/HTTP.
+Retain existing explicit legacy-role and PR013 suites. Verify the host build
+through a clean installed development wheel as well as source tests. Concept
+acceptance does not set any implementation result. No release is started.

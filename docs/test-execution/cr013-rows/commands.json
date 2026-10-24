@@ -1,0 +1,92 @@
+[
+  {
+    "name": "node",
+    "cwd": "frontend",
+    "command": "node --test --test-reporter=junit --test-reporter-destination=../docs/_build/cr013-first-node.xml src/*/tests/*.test.js",
+    "report": "node.xml",
+    "note": "Retained copy preserves original report bytes and modification time.",
+    "report_completed_at": "2026-10-24T17:41:29.216331+00:00"
+  },
+  {
+    "name": "assets",
+    "cwd": "frontend",
+    "command": "node build.js"
+  },
+  {
+    "name": "package",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m build --no-isolation --outdir docs/_build/cr013-dist"
+  },
+  {
+    "name": "python",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest -m \"not browser\" -q --junitxml=docs/test-execution/cr013-rows/python.xml",
+    "report": "python.xml",
+    "environment": {
+      "STV_WHEEL": "docs/_build/cr013-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "STV_CONSUMER_RECORD": "docs/test-execution/cr013-rows/consumer",
+      "STV_SDIST_RECORD": "docs/test-execution/cr013-rows/sdist"
+    },
+    "report_completed_at": "2026-10-24T17:46:08.375244+00:00",
+    "started_at": "2026-10-24T19:45:05.644039+02:00"
+  },
+  {
+    "name": "classification-scale",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest src/sphinx_traceability_view/graph/tests/test_graph.py::test_large_classified_graph_resolves_every_execution_from_its_case -q --junitxml=docs/test-execution/cr013-rows/classification-scale.xml",
+    "report": "classification-scale.xml",
+    "report_completed_at": "2026-10-24T17:49:58.876538+00:00",
+    "started_at": "2026-10-24T19:49:58.563821+02:00"
+  },
+  {
+    "name": "new-browser",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_classified_rows.py -q --junitxml=docs/test-execution/cr013-rows/first-browser.xml",
+    "report": "first-browser.xml",
+    "environment": {
+      "STV_CLASSIFIED_RECORD": "docs/test-execution/cr013-rows/geometry",
+      "STV_GECKODRIVER": "C:/Users/fragg/.cache/selenium/geckodriver/win64/0.37.1/geckodriver.exe"
+    },
+    "report_completed_at": "2026-10-24T17:42:41.500620+00:00",
+    "started_at": "2026-10-24T19:42:20.358521+02:00"
+  },
+  {
+    "name": "browser",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest -m browser --ignore=docs/test-scripts/test_capacity.py --ignore=docs/test-scripts/test_classified_rows.py -q --junitxml=docs/test-execution/cr013-rows/browser.xml",
+    "report": "browser.xml",
+    "environment": {
+      "STV_GECKODRIVER": "C:/Users/fragg/.cache/selenium/geckodriver/win64/0.37.1/geckodriver.exe"
+    },
+    "report_completed_at": "2026-10-24T17:51:29.323682+00:00",
+    "started_at": "2026-10-24T19:45:30.365448+02:00"
+  },
+  {
+    "name": "benchmark",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe scripts/benchmark.py --directory docs/_build/cr013-benchmark"
+  },
+  {
+    "name": "capacity",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_capacity.py -q --junitxml=docs/test-execution/cr013-rows/capacity.xml",
+    "report": "capacity.xml",
+    "environment": {
+      "STV_CAPACITY_OUTPUT": "docs/_build/cr013-benchmark/html",
+      "STV_CAPACITY_METRICS": "docs/test-execution/cr013-rows/capacity-browser.json",
+      "STV_GECKODRIVER": "C:/Users/fragg/.cache/selenium/geckodriver/win64/0.37.1/geckodriver.exe"
+    },
+    "report_completed_at": "2026-10-24T17:54:38.715002+00:00",
+    "started_at": "2026-10-24T19:52:39.771269+02:00"
+  },
+  {
+    "name": "documentation",
+    "cwd": ".",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File build-docs.ps1"
+  },
+  {
+    "name": "coverage",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe scripts/check-coverage.py --strict"
+  }
+]

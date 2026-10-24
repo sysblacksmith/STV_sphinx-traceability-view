@@ -331,3 +331,11 @@ and numeric initial IDs, followed by explicit concept-creation/review/implementa
 instruction. See :need:`STV_PR_013`, :doc:`concept-reviews/round-9` and retained
 :doc:`test-execution/pr013-poc/index`. This revises fresh-versus-incremental
 centering intent; no external dependency/version assertion is introduced.
+
+CR_013 input and fallback decision
+-----------------------------------
+
+Owner-authored CR_013 RST/SVG and adjacent backup PPTX, 2026-10-24; explicit
+instruction to create/review/implement the concept and subsequent choice to keep
+unclassified evidence in a fallback row. See :ref:`STV_CR_013` and
+:doc:`concept-reviews/round-10`. The input is not prior runtime verification.

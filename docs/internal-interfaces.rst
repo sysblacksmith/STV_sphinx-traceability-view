@@ -46,7 +46,7 @@ whitespace. An omitted argument is equivalent to an empty seed list.
 The host's ``needs_types`` and ``needs_links`` remain authoritative. A single
 supplemental ``traceability_view_model`` configuration value contains ordered
 levels, a mapping from host type names to level names or a test role, and an
-optional accepted-status set. Example, using this project's host types::
+optional accepted-status set. Example for a five-type host::
 
    traceability_view_model = {
        "levels": ["stakeholder", "system", "system_arch", "software", "software_arch"],
@@ -67,7 +67,8 @@ types explicitly. Multiple stakeholder types are supported. Missing stakeholder
 designation is an entry-located model error only when project-root mode is used;
 zero matching visible Needs is valid. Project-root entry lists exclude parts.
 
-A host test type uses ``{"role": "test"}`` instead of ``level``. It must already
+An explicitly selected legacy test type uses ``{"role": "test"}`` instead of
+``level``; classified evidence uses the selectors specified below. It must already
 exist in the host schema. The five default levels/mappings are a supplied
 preset for this method, not a restriction on other projects. Replacement models
 provide explicit mappings for their host types. No separate title, tooltip or
@@ -259,7 +260,7 @@ Fresh placement follows :need:`STV_SWR_056` and :need:`STV_SWR_060`.
 Incremental placement follows :need:`STV_SWR_058`: preserve ordinary x slots,
 anchor the clicked band, retain same-rank test offsets, append reranked/new tests
 and open vertical space only where measured band heights require it. Ordinary
-ranks are immutable model levels; a test's median connected rank may change.
+ranks are immutable model levels; a legacy test-role node's median connected rank may change.
 The anchor's position wins over renewed centering; other bands may move in y.
 No-op/rejected commands preserve the committed snapshot. Explicit Reset viewport
 changes only D3's transform. Focus restoration uses ``preventScroll``.
@@ -270,3 +271,40 @@ match viewBox extents. Thus negative-world paths remain aligned to HTML nodes.
 The existing request-token, rollback and independent-view contracts remain.
 See :ref:`STV_ADR_008`. No component boundary, event, state or timer is added. The software view names
 the committed-geometry feedback and the state view refines the layout action.
+
+Classified test evidence placement
+-----------------------------------
+
+:ref:`STV_ADR_009` adds two mutually exclusive type placements to the existing
+fixed level and legacy test role. ``levels_by_tag`` maps nonempty host tag names
+to configured levels. ``level_from`` contains ``relation``, ``direction``
+(incoming/outgoing) and a ``levels`` owner-level-to-target-level map. Its owners
+must have fixed/tag placement; chained owner-derived data links are not inferred
+and use fallback (or a Need-located strict error if fallback is absent).
+``fallback_level`` is optional on either classifier and names a configured row.
+Malformed selectors, unknown levels/relations and invalid chaining fail model
+validation with a field path. No host type/tag/relation names are hard-coded.
+
+GRAPH first excludes hidden records and resolves all fixed/tag placements, then
+uses indexed published relations to resolve one-hop owner placements. Exactly
+one resulting level is required: no selected tags, conflicting tag levels,
+missing owners, unresolved owners or mixed owner levels choose the configured
+fallback, or fail with Need ID if no fallback exists. Same-class multiple owners
+are unambiguous. A fallback owner propagates fallback, rather than upgrading an
+execution to a known class based on only one of its other owners. Hidden owner
+identities are never published or included in diagnostics. Parts follow their
+published metadata and the same rules. No derived backlink is required.
+
+Schema 1 gains additive ``object.level`` and ``object.placement_fallback`` fields
+for classified records only. Fixed types and legacy-role graphs remain readable
+without them. Layout and directional controls use resolved level before fixed
+type level. Classified rows use ordinary same-row/top alignment and stable slots;
+only ``role: test`` retains the legacy lane. RENDER labels fallback nodes
+``Unclassified test evidence`` without disabling links/details/navigation.
+The synthetic root, cap, request tokens, world-coordinate SVG, focus and view
+independence contracts remain unchanged. Empty configured rows retain spacing.
+
+The project's model declares the nine CR_013 levels followed by unclassified
+and problem rows. Test cases use test_system/test_software tags; executions use
+incoming executed_by owners. Generic authors can select different names, fixed
+levels or legacy role; the default five-type preset is unchanged.

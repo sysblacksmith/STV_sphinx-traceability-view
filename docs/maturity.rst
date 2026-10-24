@@ -6,6 +6,19 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+CR_013 classified evidence rows implemented
+--------------------------------------------
+
+:ref:`STV_CR_013` is implemented with nine target rows and the owner's labelled
+fallback row. :doc:`concept-reviews/round-10` records the accepted concept and
+implementation re-review; :doc:`test-execution/cr013-rows/index` retains 134
+latest passing tests, including real Firefox file/HTTP and both 30,000-record
+classification and 200-visible-node capacity checks. Four new canonical case
+designs have actual aggregate executions. Existing legacy models, source-free
+wheel consumption, endpoint routing and PR013 stability passed regression.
+The project demo uses the new classified model. Release qualification remains
+a separate owner-started activity; unrelated security/hosted gates stay open.
+
 PR013 stable navigation finalized
 ---------------------------------
 

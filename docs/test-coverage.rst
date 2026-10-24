@@ -56,9 +56,13 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - Expanding architecture preserves the required rank order.
      - ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_012`
-     - A test linked to two ranks appears once beyond both artifact right bounds in shared mode.
+     - Nine-category, shared cross-level test and multiple execution fixtures retain fixed classified rows, alignment, identity and safe routes across expansion/collapse and different seeds. The owner-selected common fallback row retains unclassified/conflicting evidence. Existing legacy-role fixtures still satisfy their right-side/median-rank constraints. Later occurrence mode remains deferred; this change does not claim to deliver it.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``;
        ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_013`
      - A single authored relationship appears in both directional indexes with one canonical edge identity.
@@ -217,9 +221,13 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
        ``docs/test-scripts/test_build.py::test_invalid_mapping_has_entry_path_and_location``
    * - :need:`STV_SWR_037`
-     - An added hardware level is placed at its declared index without code changes.
+     - Added hardware, nine classified categories, fallback and problem rows respect the declared indices. Nodes in one classified row align at their top edges; hidden/missing and legacy-role behavior remains usable.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``;
        ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_038`
      - Two views remain independent after navigation and viewport commands; later selectors are independent too.
@@ -357,6 +365,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - Upward incoming and outgoing groups precede neutral and downward groups with stable ties. Replacement level mappings drive the order without relation-name assumptions. Expansion and collapse retain order and the existing keyboard/focus behavior.
      - ``docs/test-scripts/test_browser.py::test_control_order_smoke[file]``;
        ``docs/test-scripts/test_browser.py::test_control_order_smoke[http]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_055: controls use resolved case and execution rows``;
        ``frontend/src/render/tests/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship``;
        ``frontend/src/render/tests/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions``
    * - :need:`STV_SWR_056`
@@ -385,10 +396,13 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - Expansion, collapse, repeated identical input, upward band growth, shared-test reranking, project root toggles and a 200-node scene remain finite and nonoverlapping. Surviving ordinary horizontal slots and clicked node coordinates stay unchanged; unrelated views and viewport transforms stay unchanged. Failure/stale completion preserves the previous committed geometry. Fresh initialization, seed, overview and page commands omit prior geometry.
      - ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
        ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
        ``docs/test-scripts/test_position_stability.py::test_group_navigation_keeps_existing_nodes_still[file]``;
        ``docs/test-scripts/test_position_stability.py::test_group_navigation_keeps_existing_nodes_still[http]``;
        ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[file]``;
        ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[http]``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: expand and collapse preserve existing primary slots``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: existing test lane is stable while new primary nodes fit beside it``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: a growing earlier band makes room above the clicked lower band``;
@@ -408,6 +422,28 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``docs/test-scripts/test_position_stability.py::test_initial_numeric_seed_order[file]``;
        ``docs/test-scripts/test_position_stability.py::test_initial_numeric_seed_order[http]``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_060: initial seed and project rows use natural numeric ID order``
+   * - :need:`STV_SWR_061`
+     - Renamed host types/tags/relations, zero/one/conflicting tags, orphan/multiple owners, mixed owner classes, hidden owners and execution seeds produce their explicit row or configured fallback deterministically. Owners already resolved to fixed/tag rows can supply execution placement; chained owner-derived links are not inferred and use fallback/strict handling. Host data remains unmodified, output is deterministic and classification requires O(N + E) indexing.
+     - ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_classification_is_complete_graph_based_portable_and_deterministic``;
+       ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_unclassified_records_without_fallback_fail_with_need_identity[records0]``;
+       ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_unclassified_records_without_fallback_fail_with_need_identity[records1]``;
+       ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_outgoing_owner_mapping_and_malformed_tags_use_defined_policy``;
+       ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_large_classified_graph_resolves_every_execution_from_its_case``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_is_portable_and_does_not_mutate_input``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement0-levels_by_tag]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement1-levels_by_tag]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement2-levels_by_tag]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement3-types.case]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement4-types.case]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement5-types.case]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement6-fallback_level]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement7-level_from.relation]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement8-level_from]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement9-level_from]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement10-level_from.levels]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement11-fixed level]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
@@ -416,7 +452,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_build.py::test_invalid_seed_source_location[HIDDEN_A]``
    * - :need:`STV_SYS_002`
      - Two differently named host schemas generate correctly mapped views without duplicate type definitions; an unknown level or missing required mapping fails with its entry path.
-     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``
+     - ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``
    * - :need:`STV_SYS_003`
      - The same output supports navigation and local-object inspection under file URLs with networking disabled and under static HTTP hosting.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
@@ -429,9 +467,11 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[file]``;
        ``docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error[http]``
    * - :need:`STV_SYS_005`
-     - A software-seeded view reveals higher levels above it, an added hardware level respects its declared position, and shared tests remain right of every connected artifact.
+     - Software-, test- and execution-seeded views preserve nine-category order and same-row top alignment. Custom hardware rows retain their configured index. Shared identity, finite nonoverlap and endpoint identity hold in both classified-row and legacy-role configurations.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
+       ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``
    * - :need:`STV_SYS_006`
      - A locally rendered object on another page has equivalent displayed metadata/body in hover or keyboard details and opens at its original anchor from file and HTTP URLs. An external object without a local body shows metadata, its original link and the unavailable-details indication; widget-specific script behavior is not required. Uncached remote embedded media uses the owner-approved unavailable-offline indication and explicit resource link, without automatic retrieval; local bundled media remains available.
      - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
@@ -474,6 +514,7 @@ Executable sources
 * ``docs/test-scripts/test_build.py``
 * ``docs/test-scripts/test_capacity.py``
 * ``docs/test-scripts/test_ci_security.py``
+* ``docs/test-scripts/test_classified_rows.py``
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
@@ -484,6 +525,7 @@ Executable sources
 * ``docs/test-scripts/test_windows_paths.py``
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``
+* ``frontend/src/layout/tests/classified-rows.test.js``
 * ``frontend/src/layout/tests/layout.test.js``
 * ``frontend/src/layout/tests/stability.test.js``
 * ``frontend/src/render/tests/edge-viewport.test.js``

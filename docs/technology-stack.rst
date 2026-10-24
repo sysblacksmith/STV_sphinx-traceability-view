@@ -280,3 +280,12 @@ SVG viewBox/CSS origins cover negative extents. Natural numeric ID ordering uses
 the browser's English ``Intl.Collator`` with numeric comparison and variant
 sensitivity. No dependency or runtime network request is added. See
 :ref:`STV_ADR_008` for alternatives and constraints.
+
+Classified placement compatibility
+-----------------------------------
+
+CR_013 uses the existing Python model/graph components, pinned ELK ordering,
+custom semantic projection and native DOM/SVG. No dependency or version pin
+changes. Resolved object levels are additive schema-1 data; configured legacy
+test-role projects retain their lane and the five-type default remains available.
+See :ref:`STV_ADR_009`.

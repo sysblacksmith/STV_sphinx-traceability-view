@@ -10,12 +10,12 @@
             <mxGeometry x="600" y="50" width="300" height="100" as="geometry" />
           </mxCell>
         </object>
-        <object id="MODEL" label="Model normalization&#10;Host schema + supplemental mappings&#10;STV_SWE_MODEL" link="elements-software.html#STV_SWE_MODEL" linkTarget="_top">
+        <object id="MODEL" label="Model normalization&#10;Host schema + placement selectors&#10;STV_SWE_MODEL" link="elements-software.html#STV_SWE_MODEL" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="100" y="50" width="300" height="100" as="geometry" />
           </mxCell>
         </object>
-        <object id="GRAPH" label="Graph adapter&#10;Pinned NeedsView / canonical indexes&#10;STV_SWE_GRAPH" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
+        <object id="GRAPH" label="Graph adapter&#10;Canonical graph + resolved rows&#10;STV_SWE_GRAPH" link="elements-software.html#STV_SWE_GRAPH" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="600" y="300" width="300" height="100" as="geometry" />
           </mxCell>
@@ -107,7 +107,7 @@
             <mxPoint x="67" y="0" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="review-model" value="normalized host model" edge="1" parent="1" source="MODEL" target="GRAPH" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.16666666666666666;entryY=0;entryPerimeter=0;">
+        <mxCell id="review-model" value="validated placement model" edge="1" parent="1" source="MODEL" target="GRAPH" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.16666666666666666;entryY=0;entryPerimeter=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="250" y="250" />

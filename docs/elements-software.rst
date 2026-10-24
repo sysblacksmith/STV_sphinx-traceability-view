@@ -63,7 +63,9 @@ Software module responsibilities and containment within the product system eleme
    **Component directory:** ``src/sphinx_traceability_view/graph``. The folder name is the
    lowercase suffix of ``STV_SWE_GRAPH``.
 
-   **Implementation:** ``__init__.py``.
+   **Implementation:** ``__init__.py``; ``placement.py``.
+
+   Resolves configurable per-object evidence rows before publishing the graph.
 
    **Unit tests:** ``tests/test_graph.py``.
 
@@ -146,16 +148,16 @@ Software module responsibilities and containment within the product system eleme
    :verification_state: not_assessed
    :part_of: STV_SE_BROWSER
 
-   Uses ELK.js 0.10.0 for ordering suggestions then STV projection to rank by model levels with a separate synthetic project-root band, places tests to the right and routes edges including cycles without changing semantic graph data. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
+   Uses ELK.js 0.10.0 for ordering suggestions then STV projection to rank by model levels with a separate synthetic project-root band, places classified evidence in resolved rows and legacy-role tests to the right and routes edges including cycles without changing semantic graph data. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
 
    **Component directory:** ``frontend/src/layout``. The folder name is the
    lowercase suffix of ``STV_SWE_LAYOUT``.
 
-   **Implementation:** ``layout.js``; ``stability.js``.
+   **Implementation:** ``layout.js``; ``stability.js``; ``level.js``.
 
    Owns fresh placement and committed-slot stabilization; see :ref:`STV_ADR_008`.
 
-   **Unit tests:** ``tests/layout.test.js``; ``tests/stability.test.js``.
+   **Unit tests:** ``tests/layout.test.js``; ``tests/stability.test.js``; ``tests/classified-rows.test.js``.
 
    **Boundary:** ``README.rst``.
 
