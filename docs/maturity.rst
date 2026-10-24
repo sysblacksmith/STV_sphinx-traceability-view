@@ -8,21 +8,23 @@ status metadata remain authoritative for individual artifacts. The charts in
 
 .. _release-1-0-0-authority:
 
-v1.0.0 release authorized
+v1.0.0 released
 -----------------------------------
 
 The owner approved PRSA-001 through PRSA-005 remediation and PR015 final
-presentation on 2026-10-24. See :doc:`concept-reviews/round-14` and
-:ref:`release-1-0-0-authority`. Earlier pending-owner
+presentation on 2026-10-24. See :doc:`concept-reviews/round-14`. Earlier pending-owner
 statements below are historical and superseded for this exact scope.
 The owner requests v1.0.0 without visibility-specific release labels. Repository
 visibility is a separate setting and is unchanged. Runner improvements and
 hosted hardening are owner-accepted nonblocking deferrals; PRSA-006 remains open.
 This is a release authorization, not a requirements change request. The owner
 explicitly confirmed that release intent belongs here, not in the CR register.
-Fresh local candidate suites passed; final consolidation checks and the
-release disposition are in :doc:`test-execution/1.0.0-candidate-2/qualification`.
-No completed hosted release is inferred from local qualification.
+v1.0.0 was published on GitHub at 22:51:13 Europe/Berlin on 2026-10-24,
+with annotated tag commit ``77d52d82447db434cf5071c820c9a7135fa21caf``.
+All 122 Python and 36 JavaScript tests and final qualification gates passed.
+The exact wheel/source/checksum assets have verified hosted digests.
+See :doc:`test-execution/1.0.0-candidate-2/qualification` and
+:doc:`test-execution/1.0.0-candidate-2/post-release`.
 
 PR014 visible viewport boundary fixed
 ---------------------------------------

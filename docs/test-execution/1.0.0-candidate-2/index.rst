@@ -586,3 +586,11 @@ Release assessment
    :maxdepth: 1
 
    qualification
+
+Hosted release outcome
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   post-release

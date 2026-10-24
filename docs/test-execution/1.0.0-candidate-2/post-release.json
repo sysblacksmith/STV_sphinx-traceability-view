@@ -1,0 +1,111 @@
+{
+  "release_url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/tag/v1.0.0",
+  "tag": "v1.0.0",
+  "release_commit": "77d52d82447db434cf5071c820c9a7135fa21caf",
+  "published_at": "2026-10-24T20:51:13Z",
+  "verified_at": "2026-10-24T20:51:42.589703+00:00",
+  "repository_visibility_unchanged": true,
+  "assets": [
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 218,
+      "sha256": "cb7b9441370d15457c69fe9eff80776faf931aa10a45628a1fb3c4115f3df635",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.0.0/SHA256SUMS.txt"
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0-py3-none-any.whl",
+      "size": 1006193,
+      "sha256": "1905bebe38f24df37531004915f7b252489039df7e8e7ead5306880c8643a839",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.0.0/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0.tar.gz",
+      "size": 1032885,
+      "sha256": "63e8f1e68f07be31946e3e26546e3e7db05a07b8958ccba4485ce2afc41396b8",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.0.0/sphinx_traceability_view-1.0.0.tar.gz"
+    }
+  ],
+  "post_release_git_status": " M docs/change-requests/index.rst\n M docs/maturity.rst\n?? docs/change-requests/STV_CR_015_test-case-maturity-and-chart-size.rst\n",
+  "cleanup": "No caches, distributions, historical artifacts or evidence were deleted. Optional cache inventory remains a proposal.",
+  "post_release_cache_inventory": [
+    {
+      "path": ".pytest_cache",
+      "bytes": 14245
+    },
+    {
+      "path": "__pycache__",
+      "bytes": 5481
+    },
+    {
+      "path": "docs/test-scripts/__pycache__",
+      "bytes": 805760
+    },
+    {
+      "path": "scripts/__pycache__",
+      "bytes": 25693
+    },
+    {
+      "path": "src/sphinx_traceability_view/__pycache__",
+      "bytes": 1380
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/__pycache__",
+      "bytes": 4551
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/tests/__pycache__",
+      "bytes": 15150
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/__pycache__",
+      "bytes": 16727
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/tests/__pycache__",
+      "bytes": 36716
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/__pycache__",
+      "bytes": 20531
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/tests/__pycache__",
+      "bytes": 11821
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/__pycache__",
+      "bytes": 11479
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/tests/__pycache__",
+      "bytes": 29164
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/__pycache__",
+      "bytes": 12421
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/tests/__pycache__",
+      "bytes": 16395
+    }
+  ],
+  "cache_bytes_retained": 1027514,
+  "dist_retained": [
+    {
+      "name": "sphinx_traceability_view-0.2.0-py3-none-any.whl",
+      "bytes": 960359
+    },
+    {
+      "name": "sphinx_traceability_view-0.2.0.tar.gz",
+      "bytes": 2087118
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0-py3-none-any.whl",
+      "bytes": 1006193
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0.tar.gz",
+      "bytes": 1032885
+    }
+  ]
+}
