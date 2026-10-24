@@ -3526,3 +3526,32 @@ STV_TC_SY_061: Published nine-row evidence navigation
    surviving peers stay stationary. Original links/details, independent views,
    natural seed order, project root and absent categories retain their contracts.
    Run pytest docs/test-scripts/test_classified_rows.py with STV_GECKODRIVER.
+
+STV_TC_SY_062: Visible viewport boundary during graph navigation
+-----------------------------------------------------------------
+
+.. test_case:: Visible viewport boundary during graph navigation
+   :id: STV_TC_SY_062
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_viewport_boundary.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_056, STV_SWR_062
+   :executed_by: STV_TE_67ADF36ED5EF6CB3, STV_TE_13CB015D758DFB0E
+   :last_result: passed
+
+   **Level/environment:** Windows Firefox/geckodriver, file and local HTTP with
+   external network blocked; real packaged browser assets and a Sphinx fixture.
+   **Procedure:** Load two views, move ROOT_A up across the viewport edge using
+   Pan down and record actual clipping/hit tests. Inspect the visible marker,
+   zoom, resize between narrow/wide windows and apply a border-box host rule.
+   Check the 975 px client area and full-width separator after control wrapping.
+   Activate Reset and relationship expansion with the keyboard; check revision,
+   visible controls and unchanged second-view transform/state. Retain screenshots.
+   **Expected:** One solid 1 px grey line at the true clip boundary, node absent
+   above/on it and visible just below, line fixed under pan/zoom, no overlay
+   interception or content-area reduction, working controls and independent views.
+   **Selector:** ``test_viewport_boundary_tracks_clipping_and_controls`` in
+   ``docs/test-scripts/test_viewport_boundary.py``; pytest with STV_GECKODRIVER.

@@ -1120,3 +1120,22 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    **Acceptance criterion:** Shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 inputs appear
    as REQ_1, REQ_2, REQ_3, REQ_10, REQ_20. Expansion preserves existing positions;
    it does not reorder the row to insert discovered nodes.
+
+.. shr:: Make the graph clipping boundary visible
+   :id: STV_SHR_056
+   :status: accepted
+   :tags: release_initial, viewport
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.rst
+   :priority: unassigned
+   :verification_state: passed
+
+   The view shall display a thin grey separator between its controls/status
+   region and the region where graph nodes are visible. The separator shall
+   identify the actual upper clipping edge, including during resizing and graph
+   pan/zoom, without obscuring controls or changing navigation/clipping behavior.
+
+   **Acceptance criterion:** A partially clipped node meets a visible grey line
+   across the graph viewport's upper edge. The line follows viewport width and
+   control wrapping on resize, stays fixed while the graph moves, and leaves
+   graph controls and the existing usable content area intact.

@@ -444,6 +444,10 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/model/tests/test_model.py::test_classified_model_rejects_invalid_selectors[placement11-fixed level]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``
+   * - :need:`STV_SWR_062`
+     - Firefox file/HTTP checks reproduce a node crossing the real clip edge. Hit tests above/on the border exclude the node while a point just inside the content hits it. Pan/zoom retain the border's position, resize follows control wrapping/width, client height remains 975 px, and keyboard expansion/Reset and independent-view behavior remain usable.
+     - ``docs/test-scripts/test_viewport_boundary.py::test_viewport_boundary_tracks_clipping_and_controls[file]``;
+       ``docs/test-scripts/test_viewport_boundary.py::test_viewport_boundary_tracks_clipping_and_controls[http]``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
@@ -522,6 +526,7 @@ Executable sources
 * ``docs/test-scripts/test_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
+* ``docs/test-scripts/test_viewport_boundary.py``
 * ``docs/test-scripts/test_windows_paths.py``
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``

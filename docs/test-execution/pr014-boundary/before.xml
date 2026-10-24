@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="20.451" timestamp="2026-10-24T20:21:50.164495+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_viewport_boundary" name="test_viewport_boundary_tracks_clipping_and_controls[file]" time="8.601"><properties><property name="requirement_ids" value="STV_SWR_062" /></properties><failure message="AssertionError: {'aboveHit': None, 'borderColor': 'rgb(23, 35, 53)', 'borderHit': '[&quot;need&quot;,&quot;ROOT_A&quot;]', 'borderStyle': 'none', ...}&#10;assert (0 == 1)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="f0d98609-f009-4b0d-b36b-dd5641225675")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-77xen5n1')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_062')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_viewport_boundary_tracks_clipping_and_controls(browser,short_output,protocol):
+        result=build(FIXTURE,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        observations=[]
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(780,1100);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root,other=roots
+            other_before=browser.execute_script("return [arguments[0].dataset.stvRevision,arguments[0].querySelector('.stv-scene').style.transform]",other)
+            initial=geometry(browser,root)
+            # Public controls move a real node through the overflow boundary.
+            activate(browser,root,'Pan down');clipped=geometry(browser,root)
+            assert clipped['node']['top']&lt;clipped['clipTop']&lt;clipped['node']['bottom'],clipped
+            assert clipped['aboveHit'] is None and clipped['insideHit']==clipped['nodeKey'],clipped
+            observations.append({'stage':'clipped','geometry':clipped})
+            target=os.environ.get('STV_BOUNDARY_RECORD')
+            if target:
+                out=Path(target);out.mkdir(parents=True,exist_ok=True)
+                (out/(protocol+'.json')).write_text(json.dumps(observations,indent=2),encoding='utf-8')
+                browser.save_screenshot(str(out/(protocol+'.png')))
+&gt;           assert clipped['borderWidth']==1 and clipped['borderStyle']=='solid',clipped
+E           AssertionError: {'aboveHit': None, 'borderColor': 'rgb(23, 35, 53)', 'borderHit': '["need","ROOT_A"]', 'borderStyle': 'none', ...}
+E           assert (0 == 1)
+
+docs\test-scripts\test_viewport_boundary.py:52: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_viewport_boundary" name="test_viewport_boundary_tracks_clipping_and_controls[http]" time="11.518"><properties><property name="requirement_ids" value="STV_SWR_062" /></properties><failure message="AssertionError: {'aboveHit': None, 'borderColor': 'rgb(23, 35, 53)', 'borderHit': '[&quot;need&quot;,&quot;ROOT_A&quot;]', 'borderStyle': 'none', ...}&#10;assert (0 == 1)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="5b300674-80c2-4351-820c-ea2921a90325")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-6wajsrgz')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_062')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_viewport_boundary_tracks_clipping_and_controls(browser,short_output,protocol):
+        result=build(FIXTURE,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        observations=[]
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(780,1100);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            roots=browser.find_elements(By.CSS_SELECTOR,'.stv-view');root,other=roots
+            other_before=browser.execute_script("return [arguments[0].dataset.stvRevision,arguments[0].querySelector('.stv-scene').style.transform]",other)
+            initial=geometry(browser,root)
+            # Public controls move a real node through the overflow boundary.
+            activate(browser,root,'Pan down');clipped=geometry(browser,root)
+            assert clipped['node']['top']&lt;clipped['clipTop']&lt;clipped['node']['bottom'],clipped
+            assert clipped['aboveHit'] is None and clipped['insideHit']==clipped['nodeKey'],clipped
+            observations.append({'stage':'clipped','geometry':clipped})
+            target=os.environ.get('STV_BOUNDARY_RECORD')
+            if target:
+                out=Path(target);out.mkdir(parents=True,exist_ok=True)
+                (out/(protocol+'.json')).write_text(json.dumps(observations,indent=2),encoding='utf-8')
+                browser.save_screenshot(str(out/(protocol+'.png')))
+&gt;           assert clipped['borderWidth']==1 and clipped['borderStyle']=='solid',clipped
+E           AssertionError: {'aboveHit': None, 'borderColor': 'rgb(23, 35, 53)', 'borderHit': '["need","ROOT_A"]', 'borderStyle': 'none', ...}
+E           assert (0 == 1)
+
+docs\test-scripts\test_viewport_boundary.py:52: AssertionError</failure></testcase></testsuite></testsuites>

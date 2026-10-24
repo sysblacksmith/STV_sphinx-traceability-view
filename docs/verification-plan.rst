@@ -274,3 +274,12 @@ nine-row layout/control order and published Firefox navigation on file/HTTP.
 Retain existing explicit legacy-role and PR013 suites. Verify the host build
 through a clean installed development wheel as well as source tests. Concept
 acceptance does not set any implementation result. No release is started.
+
+PR014 viewport boundary regression
+-----------------------------------
+
+:need:`STV_TC_SY_062` covers :need:`STV_SHR_056` / :need:`STV_SWR_062` through
+real before/after Firefox clipping, responsive border position, host sizing,
+keyboard controls and independent views. Run adjacent usability/offline browser
+checks and clean distribution checks. Graph/layout/capacity algorithms do not
+change; a new full release qualification is outside this development increment.

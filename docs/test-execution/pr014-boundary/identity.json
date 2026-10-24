@@ -1,0 +1,24 @@
+{
+  "base_commit": "baf629a7d0c927f20658801f114235abc8f3edb5",
+  "dirty_worktree": true,
+  "kind": "CSS-only development fix; not release qualification",
+  "python": "3.13.17",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "source_hashes": {
+    "frontend/src/render/stv.css": "0ae946c9e1cd045e30c0b612188941540b67419b13fa83e1d0237469cfac1b47",
+    "src/sphinx_traceability_view/static/stv.css": "0ae946c9e1cd045e30c0b612188941540b67419b13fa83e1d0237469cfac1b47",
+    "docs/test-scripts/test_viewport_boundary.py": "a766282999826c7305f6a9da77041e84bea8defbd866b642d3f8c4675df7e553"
+  },
+  "artifacts": [
+    {
+      "name": "sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "sha256": "13691dae25243fa05dc45a2fc52a2fd84dd949bf9cb763dc6f8bd122fb98db67"
+    },
+    {
+      "name": "sphinx_traceability_view-1.0.0.dev0.tar.gz",
+      "sha256": "0d6f84c2d5e98f328cb5fbc041dc875a702ea0ebf4f784601d99f88c4f183679"
+    }
+  ],
+  "packaged_css_matches_source": true,
+  "javascript_unchanged": true
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "stage": "clipped",
+    "geometry": {
+      "aboveHit": null,
+      "borderColor": "rgb(153, 153, 153)",
+      "borderHit": null,
+      "borderStyle": "solid",
+      "borderWidth": 1,
+      "clientHeight": 975,
+      "clientWidth": 718,
+      "clipTop": 264.9666748046875,
+      "insideHit": "[\"need\",\"ROOT_A\"]",
+      "node": {
+        "bottom": 344.56666564941406,
+        "top": 194.96665954589844
+      },
+      "nodeKey": "[\"need\",\"ROOT_A\"]",
+      "statusBottom": 259.1666717529297,
+      "toolbarBottom": 234.76666259765625,
+      "viewport": {
+        "height": 976,
+        "width": 718,
+        "x": 31,
+        "y": 263.9666748046875
+      },
+      "world": [
+        "30px",
+        "170px"
+      ]
+    }
+  },
+  {
+    "stage": "width-1440-border-box",
+    "geometry": {
+      "aboveHit": null,
+      "borderColor": "rgb(153, 153, 153)",
+      "borderHit": null,
+      "borderStyle": "solid",
+      "borderWidth": 1,
+      "clientHeight": 975,
+      "clientWidth": 658,
+      "clipTop": 274.9666748046875,
+      "insideHit": null,
+      "node": {
+        "bottom": 252.6000061035156,
+        "top": 65.60000610351562
+      },
+      "nodeKey": "[\"need\",\"ROOT_A\"]",
+      "statusBottom": 269.1666717529297,
+      "toolbarBottom": 244.76666259765625,
+      "viewport": {
+        "height": 976,
+        "width": 658,
+        "x": 501,
+        "y": 273.9666748046875
+      },
+      "world": [
+        "30px",
+        "170px"
+      ]
+    }
+  },
+  {
+    "stage": "width-780-border-box",
+    "geometry": {
+      "aboveHit": null,
+      "borderColor": "rgb(153, 153, 153)",
+      "borderHit": null,
+      "borderStyle": "solid",
+      "borderWidth": 1,
+      "clientHeight": 975,
+      "clientWidth": 718,
+      "clipTop": 264.9666748046875,
+      "insideHit": null,
+      "node": {
+        "bottom": 242.6000061035156,
+        "top": 55.600006103515625
+      },
+      "nodeKey": "[\"need\",\"ROOT_A\"]",
+      "statusBottom": 259.1666717529297,
+      "toolbarBottom": 234.76666259765625,
+      "viewport": {
+        "height": 976,
+        "width": 718,
+        "x": 31,
+        "y": 263.9666748046875
+      },
+      "world": [
+        "30px",
+        "170px"
+      ]
+    }
+  }
+]

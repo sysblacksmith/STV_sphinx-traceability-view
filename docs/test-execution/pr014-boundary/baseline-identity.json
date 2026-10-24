@@ -1,0 +1,10 @@
+{
+  "base_commit": "baf629a7d0c927f20658801f114235abc8f3edb5",
+  "css_sha256": "eb5f020c7185a7703c414c5e116b721e62dd41412270781e6bf5d658086ff36b",
+  "static_css_sha256": "eb5f020c7185a7703c414c5e116b721e62dd41412270781e6bf5d658086ff36b",
+  "test_sha256": "a766282999826c7305f6a9da77041e84bea8defbd866b642d3f8c4675df7e553",
+  "case_id": "STV_TC_SY_062",
+  "execution_id": "STV_TE_67ADF36ED5EF6CB3",
+  "result": "failed",
+  "report_completed_at": "2026-10-24T18:22:10.614549+00:00"
+}

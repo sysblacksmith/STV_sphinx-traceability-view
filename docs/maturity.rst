@@ -6,6 +6,16 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+PR014 visible viewport boundary fixed
+---------------------------------------
+
+:need:`STV_PR_014` is fixed. :doc:`concept-reviews/round-11` records scoped
+concept acceptance and :doc:`test-execution/pr014-boundary/index` retains before/
+after reproduction, 70 passing development checks and installed asset evidence.
+The viewport has a fixed thin grey top border while retaining its 975 px client
+height and existing clipping/navigation. The normal demo is rebuilt. No graph,
+layout, state, dependency or version changes; no new capacity/release claim.
+
 CR_013 classified evidence rows implemented
 --------------------------------------------
 

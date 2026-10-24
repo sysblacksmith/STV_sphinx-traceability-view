@@ -1,0 +1,33 @@
+[
+  {
+    "stage": "clipped",
+    "geometry": {
+      "aboveHit": null,
+      "borderColor": "rgb(23, 35, 53)",
+      "borderHit": "[\"need\",\"ROOT_A\"]",
+      "borderStyle": "none",
+      "borderWidth": 0,
+      "clientHeight": 975,
+      "clientWidth": 718,
+      "clipTop": 263.9666748046875,
+      "insideHit": "[\"need\",\"ROOT_A\"]",
+      "node": {
+        "bottom": 343.56666564941406,
+        "top": 193.96665954589844
+      },
+      "nodeKey": "[\"need\",\"ROOT_A\"]",
+      "statusBottom": 259.1666717529297,
+      "toolbarBottom": 234.76666259765625,
+      "viewport": {
+        "height": 975,
+        "width": 718,
+        "x": 31,
+        "y": 263.9666748046875
+      },
+      "world": [
+        "30px",
+        "170px"
+      ]
+    }
+  }
+]

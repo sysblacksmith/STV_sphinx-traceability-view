@@ -1,0 +1,34 @@
+{
+  "latest_development_selection": {
+    "passed": 70,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "attempts": [
+    {
+      "report": "before.xml",
+      "total": 2,
+      "failed": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "report": "after.xml",
+      "total": 10,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "report": "python.xml",
+      "total": 60,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "canonical_case": "STV_TC_SY_062",
+  "before": "failed",
+  "after": "passed"
+}

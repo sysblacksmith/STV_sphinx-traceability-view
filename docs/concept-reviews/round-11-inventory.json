@@ -1,0 +1,208 @@
+{
+  "base_commit": "baf629a7d0c927f20658801f114235abc8f3edb5",
+  "reviewed_at": "2026-10-24T20:23:57.304954+02:00",
+  "accepted_need_ids": [
+    "STV_SHR_056",
+    "STV_SWR_062",
+    "STV_TC_SY_062"
+  ],
+  "unchanged_diagram_hashes": {
+    "docs/architecture/diagrams/software-architecture.drawio": "2c773ae4613d7a55ec7d112b03f8c1fe4ba54865b112d2cfd1cf18cbe2e64117",
+    "docs/architecture/diagrams/software-architecture.svg": "8e3276483be2c96bd55f588b3ddd5c7673d7107fb5c33dfe48afcdceff797d6f",
+    "docs/architecture/diagrams/state-machine.drawio": "e73d1a6a637c86ef80cf8280ab2785e10341faf3a9643de689df335f05cc3274",
+    "docs/architecture/diagrams/state-machine.svg": "030ed3dc7220ab5f55e291d79565abcb422fc8dea581616e49bf0bc286359c78",
+    "docs/architecture/diagrams/system-architecture.drawio": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+    "docs/architecture/diagrams/system-architecture.svg": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d"
+  },
+  "scope": "PR014 boundary only; all other artifacts retain prior review/verification states",
+  "artifacts": [
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "sha256": "4b4472d53554aa58369cf7a4309cbbeca76f870b8708ea5183b10d67212e5321"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_007_component_directories.rst",
+      "sha256": "58a9bf379840e1838f105a19c17bf3538e20d1cc21d1e71aa6ce4227df15c363"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_008_stable_navigation.rst",
+      "sha256": "08beef9a6e1f8b6025bd90d13009cf94cb7a1739c6f70be2c88773757bf139e1"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_009_classified_evidence_rows.rst",
+      "sha256": "52720013bec333fb2441cc956c0833deb3d40c9b58bf01e790229129cb685b45"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "sha256": "2c773ae4613d7a55ec7d112b03f8c1fe4ba54865b112d2cfd1cf18cbe2e64117"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "sha256": "8e3276483be2c96bd55f588b3ddd5c7673d7107fb5c33dfe48afcdceff797d6f"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "sha256": "e73d1a6a637c86ef80cf8280ab2785e10341faf3a9643de689df335f05cc3274"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "sha256": "030ed3dc7220ab5f55e291d79565abcb422fc8dea581616e49bf0bc286359c78"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "sha256": "3999450ec92f35293c1f7e4dc69437657e29f1b085705a530286c58e4fa23c08"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "sha256": "79fd8417e4eae1b269e0415ef449dd5b3222e2170b2e94e5f9efed6c9158119b"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42"
+    },
+    {
+      "path": "docs/ci-and-provenance.rst",
+      "sha256": "33f569b6cf5102da27dd041b164486902b44482a5f7b516ee5525a6605a96b18"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "sha256": "8299a43f166c5f8b34758a1c4a54b594310b27a87ab740df40f836fd44b62ccc"
+    },
+    {
+      "path": "docs/concept-reviews/round-11.rst",
+      "sha256": "c92bd3af475478313e35adcbd893ab8c574e496403b0644577478e1a25c75669"
+    },
+    {
+      "path": "docs/demo.rst",
+      "sha256": "9f84b13a6fdeef4ceb4aab7eb05fa2116575029b8b0f08162ccf2c9b7a9d4792"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "sha256": "221c19cbce3946b9951363a32ad55a5e5c512acc16f55ce46271ce653ae8842c"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "sha256": "49f0cf1b9077eef4bcf67b1d3d448d38d9467072c6d1f8bcfbc9b62bd7f8a3a2"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "sha256": "b4bdbf8c3e47fafbd5923d0e544798fcab37102eb2e2a75cb91a25f886c256cb"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "sha256": "ab8da1fe470dfaa5f715966665793cd6831355fd3bebba45eb9305f1065e687b"
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "d15c3beeb78b9b4ced21b9259e3a0e0ca5e459bfa202b935154cab30803431ef"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "sha256": "76d4ac0780f5e88f9809bb172c49b457b0a0e50d03daf29588b1f7c29bf04c05"
+    },
+    {
+      "path": "docs/licensing.rst",
+      "sha256": "bd48d203f3556317e32b0900112530e2b89550ebcf3e0a9a1c6fd4d0c6f4f215"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "sha256": "abfba9aa269ce40269288fe33640b249801bfb1a434f6fb67a43528b5da167e8"
+    },
+    {
+      "path": "docs/method.rst",
+      "sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3"
+    },
+    {
+      "path": "docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.rst",
+      "sha256": "933ec5de8d5ad71ac2b6f5d51e91394d959dd438b80d5b9e4d19a04196b075f6"
+    },
+    {
+      "path": "docs/project-metrics.rst",
+      "sha256": "94f0cbcc099afb4763a74c9797059a8ab2481a933f8a92b16d0a0ead058f6865"
+    },
+    {
+      "path": "docs/requirements-software.rst",
+      "sha256": "5131c22e1429e5d8c542844a6b5c32d67de460c9203bef875ac1fa78546ae1b3"
+    },
+    {
+      "path": "docs/requirements-stakeholder.rst",
+      "sha256": "6aed9b4271b3df2ac1aa432d15dea0f6b05486c762e4f20598c5ca396aa85f2e"
+    },
+    {
+      "path": "docs/requirements-system.rst",
+      "sha256": "ab88ce8383f819117434597ff24a4efa3f123bdb8800d256de4f88c1e9406168"
+    },
+    {
+      "path": "docs/review.rst",
+      "sha256": "c59e4554de7a35f30cd8f5a579b1ae90ae6dbf16250500a4b6572a14a38973e3"
+    },
+    {
+      "path": "docs/sources.rst",
+      "sha256": "5da038bdbcdf8dc031813a43e6610b9ff4b995ffedee76e7389baa07c4e69f46"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "sha256": "47e174ec4d55afc5ced501a69930f6dc85494966c98c5501e9cbb7e59161f800"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "sha256": "8d021d1c8a19bd3b3d1b949b5f2e98db21009f2cf0f58ebfd347aeb463ae35e4"
+    },
+    {
+      "path": "docs/test-cases/index.rst",
+      "sha256": "3373c3102a29bce2be71c96482475edeaf70fceb9e9c8ef924ee75dace013ecb"
+    },
+    {
+      "path": "docs/test-cases/software-tests.rst",
+      "sha256": "580f9c6e46f7ab11ccff18d0896c79537e994a18f6e5c8f32b57b3a07d89c771"
+    },
+    {
+      "path": "docs/test-cases/system-tests.rst",
+      "sha256": "f2b471d5c5fbaa6431d4962c4896cb82bbf26dbb7630d3b7efa1a28bf476c00f"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "sha256": "0f8810959fd5849570b8dde2392172bd31b1abfe696323594d760ba277ae508e"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "sha256": "422ecf23798c5c8b512f5b0142fdbad058a909f6b6f5a545a3877722c92ea62c"
+    }
+  ]
+}

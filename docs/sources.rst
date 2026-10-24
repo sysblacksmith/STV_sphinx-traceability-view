@@ -339,3 +339,12 @@ Owner-authored CR_013 RST/SVG and adjacent backup PPTX, 2026-10-24; explicit
 instruction to create/review/implement the concept and subsequent choice to keep
 unclassified evidence in a fallback row. See :ref:`STV_CR_013` and
 :doc:`concept-reviews/round-10`. The input is not prior runtime verification.
+
+PR014 owner evidence
+----------------------
+
+Owner-provided normalized RST and annotated PNG, 2026-10-24, requesting a thin
+grey marker at the existing graph clipping boundary, followed by explicit
+analysis/plan/full-V-cycle implementation instruction. The intake names an
+originating PPTX; only its exported evidence was supplied here. See
+:need:`STV_PR_014` and :doc:`concept-reviews/round-11`.

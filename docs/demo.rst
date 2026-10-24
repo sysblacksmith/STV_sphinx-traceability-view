@@ -49,3 +49,10 @@ Tests keep their verification-boundary row even when they verify several
 requirement levels. Unclassified evidence uses a labelled fallback row beneath
 Software Architecture; Problem Tickets remain below it. Expand verified-by and
 executed-by links to explore these records, then Reset viewport to fit new content.
+
+Viewport boundary
+-------------------
+
+A thin grey line below the controls and node count marks the upper edge of the
+visible graph region. Nodes remain clipped there during pan/zoom; use pan or
+Reset viewport to bring clipped content back into view.

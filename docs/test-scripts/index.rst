@@ -24,3 +24,5 @@ the installed wheel. Canonical test-case identities remain in
 * ``test_release_seeds.py``
 * ``test_position_stability.py``
 * ``test_classified_rows.py``
+
+* ``test_viewport_boundary.py``

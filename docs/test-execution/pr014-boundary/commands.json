@@ -1,0 +1,44 @@
+[
+  {
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_viewport_boundary.py -q --junitxml=docs/test-execution/pr014-boundary/before.xml",
+    "report": "before.xml",
+    "environment": {
+      "STV_BOUNDARY_RECORD": "docs/test-execution/pr014-boundary/before"
+    }
+  },
+  {
+    "cwd": "frontend",
+    "command": "node build.js"
+  },
+  {
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m build --no-isolation --outdir docs/_build/pr014-dist"
+  },
+  {
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_viewport_boundary.py docs/test-scripts/test_browser.py::test_usability_smoke docs/test-scripts/test_browser.py::test_offline_exploration docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes -q --junitxml=docs/test-execution/pr014-boundary/after.xml",
+    "report": "after.xml",
+    "environment": {
+      "STV_BOUNDARY_RECORD": "docs/test-execution/pr014-boundary/after"
+    }
+  },
+  {
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest -m \"not browser\" -q --junitxml=docs/test-execution/pr014-boundary/python.xml",
+    "report": "python.xml",
+    "environment": {
+      "STV_WHEEL": "docs/_build/pr014-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "STV_CONSUMER_RECORD": "docs/test-execution/pr014-boundary/consumer",
+      "STV_SDIST_RECORD": "docs/test-execution/pr014-boundary/sdist"
+    }
+  },
+  {
+    "cwd": ".",
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File build-docs.ps1"
+  },
+  {
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe scripts/check-coverage.py --strict"
+  }
+]

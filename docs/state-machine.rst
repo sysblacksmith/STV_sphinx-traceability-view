@@ -236,3 +236,13 @@ Owners and criteria: :need:`STV_SWE_MODEL`, :need:`STV_SWE_GRAPH`,
 :need:`STV_SWR_061`; tests :need:`STV_TC_SW_046`, :need:`STV_TC_SW_047`,
 :need:`STV_TC_SY_061`. Source: model/__init__.py and graph/__init__.py under
 src/sphinx_traceability_view. The diagram refines the snapshot action only.
+
+Viewport boundary presentation
+--------------------------------
+
+The clipping separator is CSS on the viewport container, outside the D3 scene.
+It follows normal document flow during resizing and stays fixed as existing
+pan/zoom transitions move the scene. No event, guard, action, ownership, timer or
+transition changes; the Draw.io/SVG state topology remains unchanged.
+Source: ``frontend/src/render/stv.css``; :need:`STV_SWR_062`,
+:need:`STV_TC_SY_062`. This presentation-only increment needs no diagram edits.

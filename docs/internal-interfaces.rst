@@ -308,3 +308,12 @@ The project's model declares the nine CR_013 levels followed by unclassified
 and problem rows. Test cases use test_system/test_software tags; executions use
 incoming executed_by owners. Generic authors can select different names, fixed
 levels or legacy role; the default five-type preset is unchanged.
+
+Viewport clipping marker
+--------------------------
+
+:need:`STV_SWR_062` places a 1 px solid grey top border on ``.stv-viewport``,
+not on ``.stv-scene``. The viewport owns overflow clipping and stays in normal
+flow after toolbar/status. Explicit content-box sizing retains 975 px client
+height under host themes. The border is outside the content clip area; no
+pseudo-element, overlay, handler, timer or extra focus target is introduced.

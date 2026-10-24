@@ -319,3 +319,11 @@ CR_013 nine-category evidence rows
 The owner requested the concept/review/implementation sequence and chose a
 fallback row for ambiguous evidence. :ref:`STV_CR_013` records the amendment;
 :doc:`concept-reviews/round-10` owns review, acceptance and implementation gates.
+
+PR014 boundary marker
+-----------------------
+
+The owner requested a visible grey marker at the existing clip edge, analysis
+and the full V-cycle fix. :need:`STV_PR_014` records the plan;
+:doc:`concept-reviews/round-11` owns scoped acceptance and
+:doc:`test-execution/pr014-boundary/index` retains actual execution evidence.

@@ -1188,3 +1188,29 @@ Executable criteria and retained results: :doc:`test-coverage` and
    Owners already resolved to fixed/tag rows can supply execution placement;
    chained owner-derived links are not inferred and use fallback/strict handling. Host data remains unmodified,
    output is deterministic and classification requires O(N + E) indexing.
+
+.. swr:: Mark the viewport clipping edge
+   :id: STV_SWR_062
+   :status: accepted
+   :tags: release_initial, viewport
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_056
+   :allocated_to: STV_SWE_RENDER
+
+   The renderer shall draw a 1 CSS-pixel solid neutral-grey top border on the
+   overflow-hidden viewport, after toolbar/status and outside the transformed
+   scene. Explicit content-box sizing shall preserve its 975 px client height
+   under content-box and border-box host themes. No overlay or extra input
+   handler shall be introduced; the border shall span the viewport width.
+
+   **Acceptance criterion:** Firefox file/HTTP checks reproduce a node crossing
+   the real clip edge. Hit tests above/on the border exclude the node while a
+   point just inside the content hits it. Pan/zoom retain the border's position,
+   resize follows control wrapping/width, client height remains 975 px, and
+   keyboard expansion/Reset and independent-view behavior remain usable.
+
+   **Channeling rationale:** A visible clipping marker is local renderer
+   presentation, adding no deployment, system interface or cross-boundary duty.

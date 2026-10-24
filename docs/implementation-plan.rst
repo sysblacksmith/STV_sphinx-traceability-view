@@ -470,3 +470,12 @@ Classified-row implementation slice
 
 :doc:`internal-interfaces` fixes field semantics and error ownership;
 :ref:`STV_ADR_009` records the policy and owner-selected fallback behavior.
+
+Viewport boundary presentation
+--------------------------------
+
+The renderer's ``stv.css`` owns the static upper clipping marker: a 1 px grey
+viewport top border with explicit content-box sizing. Rebuild assets with
+``node build.js`` from ``frontend``. Runtime graph geometry, transforms and
+commands are unchanged; verify actual clipping, responsive wrapping and control
+operation with :need:`STV_TC_SY_062`. No new dependency or ADR is needed.
