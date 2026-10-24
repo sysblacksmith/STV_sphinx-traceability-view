@@ -1,0 +1,20 @@
+[
+  [
+    "STV_TC_PUBLICATION_CLEAN",
+    "Clean rebuild retires obsolete publication files",
+    "test_clean_publication_removes_obsolete_assets",
+    "Build the real Sphinx fixture with two Needs, a retired page and a download. Remove one Need/page/download reference and seed an obsolete output file. Rebuild; require one current graph, no old graph/page/download, no public doctree cache, and a complete byte-verified manifest. Previous output must remain outside html."
+  ],
+  [
+    "STV_TC_PUBLICATION_FAIL",
+    "Failed documentation build preserves published bytes",
+    "test_failed_build_preserves_published_tree",
+    "Build successfully and snapshot every publication file. Introduce an unknown Sphinx directive. Require a nonzero build result and an identical published file/hash snapshot."
+  ],
+  [
+    "STV_TC_PUBLICATION_ROLLBACK",
+    "Failed directory promotion restores previous publication",
+    "test_failed_promotion_restores_previous_tree",
+    "Build successfully and snapshot all published files. Inject an OSError only for the fresh-stage-to-html rename after the prior output is moved. Require the failure to propagate and every previous publication file/hash to be restored."
+  ]
+]

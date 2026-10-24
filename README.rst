@@ -22,6 +22,13 @@ warnings as errors, and returns a nonzero exit code on failure. Successful outpu
 is written to ``docs/_build/html/index.html``. Virtual environment activation is
 not required.
 
+Each build uses a fresh staging directory. After success, it replaces the HTML
+tree and writes ``_stv-publication.json`` with file sizes and SHA-256 hashes.
+A failed build preserves the previous HTML tree. Earlier output and diagnostic
+staging are retained beside ``html`` under ``docs/_build/``; publish only the
+``html`` directory. Rebuilding into an existing output with a direct Sphinx
+command does not provide this clean-publication guarantee.
+
 The configuration imports the shared model, status-chart extension and styling
 directly, and includes the live central method. It discovers the shared skill
 under an ancestor's ``-agents/skills`` or ``~/.agents/skills``. To select another

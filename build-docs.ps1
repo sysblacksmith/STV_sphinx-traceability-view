@@ -6,13 +6,12 @@ param(
 $ErrorActionPreference = 'Stop'
 $python = Join-Path $PSScriptRoot '.venv/Scripts/python.exe'
 $source = Join-Path $PSScriptRoot 'docs'
-$output = Join-Path $source '_build/html'
 
 if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
     throw 'Missing .venv/Scripts/python.exe. Create the project virtual environment first.'
 }
 
-& $python -c 'import sys; sys.exit(0 if sys.version_info >= (3, 11) else "Documentation tooling requires Python 3.11 or newer.")'
+& $python -c "import sys; assert sys.version_info >= (3, 11), 'Documentation tooling requires Python 3.11 or newer.'"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 if ($InstallDependencies) {
@@ -26,7 +25,5 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-& $python -m sphinx -E -a -W --keep-going -b html $source $output
+& $python (Join-Path $PSScriptRoot 'scripts/build_docs.py') $source
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-Write-Host "Documentation built: $(Join-Path $output 'index.html')"

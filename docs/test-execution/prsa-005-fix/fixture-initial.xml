@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="1.630" timestamp="2026-10-24T16:48:48.198707+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_publication" name="test_clean_publication_removes_obsolete_assets" time="0.487"><properties><property name="requirement_ids" value="STV_SWR_017,STV_SWR_042,STV_SYS_003,STV_SYS_009" /></properties><failure message="AssertionError: assert 2 == 0&#10; +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_clean_publication_removes0/docs'))&#10; +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs">tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_clean_publication_removes0')
+
+    @pytest.mark.requirements('STV_SYS_003','STV_SYS_009','STV_SWR_017','STV_SWR_042')
+    def test_clean_publication_removes_obsolete_assets(tmp_path):
+        source=tmp_path/'docs';shutil.copytree(FIXTURE,source)
+        (source/'retired.rst').write_text('Retired\n=======\n\nFORMER_PUBLICATION_SENTINEL\n')
+        (source/'old.txt').write_text('OLD_DOWNLOAD_SENTINEL')
+        with (source/'index.rst').open('a') as stream:
+            stream.write('\n:download:`Former download &lt;old.txt&gt;`\n\n.. toctree::\n\n   retired\n')
+&gt;       assert builder.build_docs(source)==0
+E       AssertionError: assert 2 == 0
+E        +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_clean_publication_removes0/docs'))
+E        +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs
+
+docs\test-scripts\test_publication.py:35: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_publication" name="test_failed_build_preserves_published_tree" time="0.516"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SYS_009" /></properties><failure message="AssertionError: assert 2 == 0&#10; +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_build_preserves_pu0/docs'))&#10; +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs">tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_build_preserves_pu0')
+
+    @pytest.mark.requirements('STV_SYS_009','STV_SWR_042')
+    def test_failed_build_preserves_published_tree(tmp_path):
+        source=tmp_path/'docs';shutil.copytree(FIXTURE,source)
+&gt;       assert builder.build_docs(source)==0
+E       AssertionError: assert 2 == 0
+E        +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_build_preserves_pu0/docs'))
+E        +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs
+
+docs\test-scripts\test_publication.py:63: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_publication" name="test_failed_promotion_restores_previous_tree" time="0.500"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SYS_009" /></properties><failure message="AssertionError: assert 2 == 0&#10; +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_promotion_restores0/docs'))&#10; +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs">tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_promotion_restores0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000024AA44D9810&gt;
+
+    @pytest.mark.requirements('STV_SYS_009','STV_SWR_042')
+    def test_failed_promotion_restores_previous_tree(tmp_path,monkeypatch):
+        source=tmp_path/'docs';shutil.copytree(FIXTURE,source)
+&gt;       assert builder.build_docs(source)==0
+E       AssertionError: assert 2 == 0
+E        +  where 2 = &lt;function build_docs at 0x0000024AA4DC4400&gt;(WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-46/test_failed_promotion_restores0/docs'))
+E        +    where &lt;function build_docs at 0x0000024AA4DC4400&gt; = builder.build_docs
+
+docs\test-scripts\test_publication.py:74: AssertionError</failure></testcase></testsuite></testsuites>

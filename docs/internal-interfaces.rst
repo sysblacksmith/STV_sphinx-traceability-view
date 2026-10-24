@@ -223,3 +223,24 @@ external navigation links remain explicit reader actions. CSS transport accepts
 canonical quoted local ``url()`` values and rejects imports and escaped syntax.
 This closes :need:`STV_PR_007` within :need:`STV_SWR_015`, :need:`STV_SWR_017`
 and :need:`STV_SWR_018`. Graph state, events and timers are unchanged.
+
+Local documentation publication
+--------------------------------------------------------------------------------
+
+``build-docs.ps1`` delegates to ``scripts/build_docs.py`` after dependency checks.
+The helper builds into a new sibling staging directory with a separate Sphinx
+doctree cache. Only a successful warnings-as-errors build is promoted to
+``docs/_build/html``. Existing output is retained in a sibling previous-output
+directory; failed promotion attempts restore it. No recursive deletion occurs.
+Resolved rename targets must be direct children of the source's build directory;
+redirected HTML output paths are rejected before moving existing output.
+
+``_stv-publication.json`` inventories every staged publication file by relative
+path, byte count and SHA-256. It excludes its own entry and contains no local
+absolute paths. Only ``html`` is the publication tree; retained prior/failed
+builds and doctrees outside it are local diagnostics. This prevents carryover
+of obsolete graph/detail scripts, pages and downloads. It does not revoke
+already copied output or add automatic deployment. Direct incremental Sphinx
+commands remain suitable for development but are not the publication workflow.
+This maintenance boundary refines :need:`STV_PR_011`; extension graph state,
+timers and runtime behavior are unchanged, so no state diagram changes apply.

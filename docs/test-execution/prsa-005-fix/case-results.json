@@ -1,0 +1,56 @@
+[
+  {
+    "case": "STV_TC_PUBLICATION_CLEAN",
+    "execution": "STV_TE_D5D5C30CB3605726",
+    "report": "fixture-initial.xml",
+    "result": "failed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_FAIL",
+    "execution": "STV_TE_04F65BAA6CDB685B",
+    "report": "fixture-initial.xml",
+    "result": "failed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_ROLLBACK",
+    "execution": "STV_TE_257F51CA54DE5456",
+    "report": "fixture-initial.xml",
+    "result": "failed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_CLEAN",
+    "execution": "STV_TE_00DF8B8564A416AA",
+    "report": "first-pass.xml",
+    "result": "passed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_FAIL",
+    "execution": "STV_TE_057BEBB8A33EC7E4",
+    "report": "first-pass.xml",
+    "result": "passed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_ROLLBACK",
+    "execution": "STV_TE_D90868BD589779C5",
+    "report": "first-pass.xml",
+    "result": "passed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_CLEAN",
+    "execution": "STV_TE_0BA0673DB0572C62",
+    "report": "pytest.xml",
+    "result": "passed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_FAIL",
+    "execution": "STV_TE_4B16C75492B3457D",
+    "report": "pytest.xml",
+    "result": "passed"
+  },
+  {
+    "case": "STV_TC_PUBLICATION_ROLLBACK",
+    "execution": "STV_TE_E0C20537B8E451DF",
+    "report": "pytest.xml",
+    "result": "passed"
+  }
+]

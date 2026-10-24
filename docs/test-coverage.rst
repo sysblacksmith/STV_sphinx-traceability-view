@@ -245,6 +245,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - A clean Python 3.10 environment with pinned Sphinx dependencies installs the wheel and builds the fixture.
      - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
        ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
+       ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
+       ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
+       ``docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree``;
        ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SWR_043`
      - Candidate sizes 199 and 200 pass, 201 fails; 200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
@@ -419,6 +422,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - A built wheel installs into a clean host environment and produces an embedded HTML view without copying repository implementation files.
      - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
        ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
+       ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
+       ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
+       ``docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree``;
        ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SYS_010`
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
@@ -439,6 +445,7 @@ Executable sources
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
+* ``docs/test-scripts/test_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
 * ``docs/test-scripts/test_windows_paths.py``

@@ -3192,3 +3192,96 @@ STV_TC_SDIST_BOUNDARY: Actual source archive respects the distribution boundary
    member inventory in :doc:`../test-execution/prsa-004-fix/index`. The initial
    old-configuration failure is historical; the latest outcome is independent
    of owner acceptance and release readiness.
+
+STV_TC_PUBLICATION_CLEAN: Clean rebuild retires obsolete publication files
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: Clean rebuild retires obsolete publication files
+   :id: STV_TC_PUBLICATION_CLEAN
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_publication.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_D5D5C30CB3605726, STV_TE_00DF8B8564A416AA, STV_TE_0BA0673DB0572C62
+   :last_result: passed
+
+   **Level:** Maintainer/Sphinx publication integration.
+
+   **Preconditions and inputs:** Existing implementation environment and local
+   extension source. Use isolated temporary Sphinx source/build directories;
+   no installed public output or external service is modified by the case.
+
+   **Executable selector:** ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_publication.py -q``.
+
+   **Procedure and expected outcomes:** Build the real Sphinx fixture with two Needs, a retired page and a download. Remove one Need/page/download reference and seed an obsolete output file. Rebuild; require one current graph, no old graph/page/download, no public doctree cache, and a complete byte-verified manifest. Previous output must remain outside html.
+
+   **Evidence:** Retain actual JUnit/log outcomes, source hashes and relative
+   file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
+   review remains pending; these are not full release qualification cases.
+
+STV_TC_PUBLICATION_FAIL: Failed documentation build preserves published bytes
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: Failed documentation build preserves published bytes
+   :id: STV_TC_PUBLICATION_FAIL
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_publication.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_04F65BAA6CDB685B, STV_TE_057BEBB8A33EC7E4, STV_TE_4B16C75492B3457D
+   :last_result: passed
+
+   **Level:** Maintainer/Sphinx publication integration.
+
+   **Preconditions and inputs:** Existing implementation environment and local
+   extension source. Use isolated temporary Sphinx source/build directories;
+   no installed public output or external service is modified by the case.
+
+   **Executable selector:** ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_publication.py -q``.
+
+   **Procedure and expected outcomes:** Build successfully and snapshot every publication file. Introduce an unknown Sphinx directive. Require a nonzero build result and an identical published file/hash snapshot.
+
+   **Evidence:** Retain actual JUnit/log outcomes, source hashes and relative
+   file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
+   review remains pending; these are not full release qualification cases.
+
+STV_TC_PUBLICATION_ROLLBACK: Failed directory promotion restores previous publication
+------------------------------------------------------------------------------------------------------------------------
+
+.. test_case:: Failed directory promotion restores previous publication
+   :id: STV_TC_PUBLICATION_ROLLBACK
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_publication.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_257F51CA54DE5456, STV_TE_D90868BD589779C5, STV_TE_E0C20537B8E451DF
+   :last_result: passed
+
+   **Level:** Maintainer/Sphinx publication integration.
+
+   **Preconditions and inputs:** Existing implementation environment and local
+   extension source. Use isolated temporary Sphinx source/build directories;
+   no installed public output or external service is modified by the case.
+
+   **Executable selector:** ``docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_publication.py -q``.
+
+   **Procedure and expected outcomes:** Build successfully and snapshot all published files. Inject an OSError only for the fresh-stage-to-html rename after the prior output is moved. Require the failure to propagate and every previous publication file/hash to be restored.
+
+   **Evidence:** Retain actual JUnit/log outcomes, source hashes and relative
+   file inventory in :doc:`../test-execution/prsa-005-fix/index`. New design
+   review remains pending; these are not full release qualification cases.

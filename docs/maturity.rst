@@ -6,6 +6,16 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+PRSA-005 clean publication remediation
+--------------------------------------------------------------------------------
+
+:need:`STV_PR_011` records the authorized fresh-tree publication fix and
+:doc:`test-execution/prsa-005-fix/index` retains Sphinx cleanup and failure
+preservation/rollback evidence. Only the inventoried ``docs/_build/html`` tree
+is a publication input; previous output and diagnostics remain outside it.
+The revised workflow/interface and new case designs await owner review.
+Requirement verification is unchanged and no release is started.
+
 PRSA-004 source archive remediation
 --------------------------------------------------------------------------------
 
