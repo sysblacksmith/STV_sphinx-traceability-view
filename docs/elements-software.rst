@@ -151,9 +151,11 @@ Software module responsibilities and containment within the product system eleme
    **Component directory:** ``frontend/src/layout``. The folder name is the
    lowercase suffix of ``STV_SWE_LAYOUT``.
 
-   **Implementation:** ``layout.js``.
+   **Implementation:** ``layout.js``; ``stability.js``.
 
-   **Unit tests:** ``tests/layout.test.js``.
+   Owns fresh placement and committed-slot stabilization; see :ref:`STV_ADR_008`.
+
+   **Unit tests:** ``tests/layout.test.js``; ``tests/stability.test.js``.
 
    **Boundary:** ``README.rst``.
 
@@ -172,9 +174,9 @@ Software module responsibilities and containment within the product system eleme
    **Component directory:** ``frontend/src/render``. The folder name is the
    lowercase suffix of ``STV_SWE_RENDER``.
 
-   **Implementation:** ``index.js``; ``view.js``; ``groups.js``; ``seeds.js``; ``stv.css``.
+   **Implementation:** ``index.js``; ``view.js``; ``groups.js``; ``seeds.js``; ``edge-viewport.js``; ``stv.css``.
 
-   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``.
+   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``; ``tests/edge-viewport.test.js``.
 
    **Boundary:** ``README.rst``.
 

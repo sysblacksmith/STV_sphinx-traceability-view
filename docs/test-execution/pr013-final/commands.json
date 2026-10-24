@@ -1,0 +1,91 @@
+[
+  {
+    "name": "browser-assets",
+    "cwd": "frontend",
+    "command": "node build.js",
+    "environment": {
+      "STV_GECKODRIVER": "provisioned geckodriver 0.37.1 (local path supplied by environment)"
+    }
+  },
+  {
+    "name": "node",
+    "cwd": "frontend",
+    "command": "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/pr013-final/node.xml src/*/tests/*.test.js",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T17:06:59.766358+00:00"
+  },
+  {
+    "name": "distribution",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m build --no-isolation --outdir docs/_build/pr013-dist"
+  },
+  {
+    "name": "python",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest -m \"not browser\" -q --junitxml=docs/test-execution/pr013-final/python.xml",
+    "report": "python.xml",
+    "environment": {
+      "STV_WHEEL": "docs/_build/pr013-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "STV_CONSUMER_RECORD": "docs/test-execution/pr013-final/consumer",
+      "STV_SDIST_RECORD": "docs/test-execution/pr013-final/sdist"
+    },
+    "report_completed_at": "2026-10-24T17:09:09.154286+00:00",
+    "started_at": "2026-10-24T19:08:02.793494+02:00"
+  },
+  {
+    "name": "focused-browser",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_position_stability.py docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion -q --junitxml=docs/test-execution/pr013-final/focused-browser.xml",
+    "report": "focused-browser.xml",
+    "environment": {
+      "STV_GECKODRIVER": "provisioned geckodriver 0.37.1 (local path supplied by environment)"
+    },
+    "report_completed_at": "2026-10-24T17:09:51.186986+00:00",
+    "started_at": "2026-10-24T19:08:03.183982+02:00"
+  },
+  {
+    "name": "adjacent-browser",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest -m browser --ignore=docs/test-scripts/test_position_stability.py --ignore=docs/test-scripts/test_capacity.py -k \"not async_layout_failure_and_stale_completion\" -q --junitxml=docs/test-execution/pr013-final/adjacent-browser.xml",
+    "report": "adjacent-browser.xml",
+    "environment": {
+      "STV_GECKODRIVER": "provisioned geckodriver 0.37.1 (local path supplied by environment)"
+    },
+    "report_completed_at": "2026-10-24T17:14:42.322167+00:00",
+    "started_at": "2026-10-24T19:10:27.858586+02:00"
+  },
+  {
+    "name": "missing-recheck",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_browser.py::test_missing_placeholder_and_detail_error -q --junitxml=docs/test-execution/pr013-final/missing-recheck.xml",
+    "report": "missing-recheck.xml",
+    "environment": {
+      "STV_GECKODRIVER": "provisioned geckodriver 0.37.1 (local path supplied by environment)"
+    },
+    "report_completed_at": "2026-10-24T17:15:51.973207+00:00",
+    "started_at": "2026-10-24T19:15:32.934801+02:00"
+  },
+  {
+    "name": "capacity-fixture",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe scripts/benchmark.py --directory docs/_build/pr013-benchmark"
+  },
+  {
+    "name": "capacity",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_capacity.py -q --junitxml=docs/test-execution/pr013-final/capacity.xml",
+    "report": "capacity.xml",
+    "environment": {
+      "STV_CAPACITY_OUTPUT": "docs/_build/pr013-benchmark/html",
+      "STV_CAPACITY_METRICS": "docs/test-execution/pr013-final/capacity-browser.json",
+      "STV_GECKODRIVER": "provisioned geckodriver 0.37.1 (local path supplied by environment)"
+    },
+    "report_completed_at": "2026-10-24T17:18:27.167481+00:00",
+    "started_at": "2026-10-24T19:16:25.488875+02:00"
+  },
+  {
+    "name": "coverage",
+    "cwd": ".",
+    "command": ".venv-implementation/Scripts/python.exe scripts/check-coverage.py --strict"
+  }
+]

@@ -35,12 +35,12 @@
             <mxGeometry x="100" y="850" width="300" height="100" as="geometry" />
           </mxCell>
         </object>
-        <object id="LAYOUT" label="Semantic layout&#10;ELK.js 0.10.0 + STV constraints&#10;STV_SWE_LAYOUT" link="elements-software.html#STV_SWE_LAYOUT" linkTarget="_top">
+        <object id="LAYOUT" label="Semantic layout&#10;ELK.js 0.10.0 + stable slots&#10;STV_SWE_LAYOUT" link="elements-software.html#STV_SWE_LAYOUT" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="600" y="850" width="300" height="100" as="geometry" />
           </mxCell>
         </object>
-        <object id="RENDER" label="Accessible view&#10;HTML/SVG + D3 zoom 3.0.0&#10;STV_SWE_RENDER" link="elements-software.html#STV_SWE_RENDER" linkTarget="_top">
+        <object id="RENDER" label="Accessible view&#10;Committed geometry + SVG bounds&#10;STV_SWE_RENDER" link="elements-software.html#STV_SWE_RENDER" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="600" y="1100" width="300" height="100" as="geometry" />
           </mxCell>
@@ -127,6 +127,11 @@
               <mxPoint x="250" y="1150" />
             </Array>
             <mxPoint x="0" y="18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="navigation-context" value="previous geometry&#10;+ activated key" edge="1" parent="1" source="RENDER" target="LAYOUT" style="edgeStyle=none;html=0;endArrow=block;endFill=1;strokeColor=#425466;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.2;exitY=0;exitPerimeter=0;entryX=0.2;entryY=1;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-82" y="0" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>

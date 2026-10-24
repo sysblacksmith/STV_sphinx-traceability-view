@@ -109,7 +109,8 @@ The 200-node cap includes missing objects and the synthetic project root.
    * - Laying out / successful completion
      - Current request token; valid finite nonoverlapping geometry
      - Commit scene, page and expansion state together; close old details;
-       restore focus; committed state.
+       restore focus without scrolling; commit the matching geometry snapshot;
+       committed state.
        Preserve the current control within the view; fall back to the initiating
        surviving control if its focused descendant disappears. A late completion
        does not pull focus back after the user has moved outside that view.
@@ -133,10 +134,15 @@ The 200-node cap includes missing objects and the synthetic project root.
        native focus scrolling is folded into the same D3 transform.
      - :need:`STV_SWR_038`, :need:`STV_SWR_039`, :need:`STV_SWR_040`; browser cases
 
-Layout computes parent child-span centers after semantic rank projection,
-resolves same-band collisions without duplicating shared children, recomputes
-the right-hand test lane and routes final edges. Nonoverlap and semantic ranks
-take precedence over exact centering; see :need:`STV_SWR_056`.
+Fresh layout computes collision-aware parent centers; edge-free ordinary rows
+use natural ID ordering. Group/root commands supply committed geometry and an
+activated anchor, then preserve surviving slots and open vertical space only
+where required. Final routes are computed after placement and the SVG covers
+negative extents. Failed/stale completions do not replace the snapshot; viewport
+Reset does not relayout. See :need:`STV_SWR_056`, :need:`STV_SWR_058`,
+:need:`STV_SWR_059`, :need:`STV_SWR_060` and :ref:`STV_ADR_008`.
+No states, guards, events, timers or transition topology change; this refines the
+existing layout/commit actions. The adjacent Draw.io/SVG topology is unchanged.
 
 Inspection lifecycle
 --------------------

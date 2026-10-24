@@ -485,7 +485,7 @@ STV_TC_SW_010: clear facing ports and fan-in avoid outer detours
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_050, STV_SWR_053
-   :executed_by: STV_TE_2DAA1D42C7C13397, STV_TE_F3BAE266CA6E561A, STV_TE_17CA6B7FD2946014, STV_TE_93C98F38340108D0, STV_TE_593A1688E0921F1A, STV_TE_3D1F57656A674B4E, STV_TE_7F6D309D996C7031, STV_TE_60900E66F33E5858
+   :executed_by: STV_TE_2DAA1D42C7C13397, STV_TE_F3BAE266CA6E561A, STV_TE_17CA6B7FD2946014, STV_TE_93C98F38340108D0, STV_TE_593A1688E0921F1A, STV_TE_3D1F57656A674B4E, STV_TE_7F6D309D996C7031, STV_TE_60900E66F33E5858, STV_TE_E9D48EE5D838F9F2
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -537,7 +537,7 @@ STV_TC_SW_011: competing parents do not displace a separate centered parent
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_052, STV_SWR_056
-   :executed_by: STV_TE_9CD13938265B5C9A, STV_TE_9DE4CCD94806C011, STV_TE_FEE74F31B67BCA39, STV_TE_E62A5652646F52FB, STV_TE_8E323BAA20BAF0D0, STV_TE_A5D2097C40E4EB52, STV_TE_B9DC9334C4473799, STV_TE_836634DA96409E2F
+   :executed_by: STV_TE_9CD13938265B5C9A, STV_TE_9DE4CCD94806C011, STV_TE_FEE74F31B67BCA39, STV_TE_E62A5652646F52FB, STV_TE_8E323BAA20BAF0D0, STV_TE_A5D2097C40E4EB52, STV_TE_B9DC9334C4473799, STV_TE_836634DA96409E2F, STV_TE_112EF87FDDCC77C1
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1994,3 +1994,103 @@ STV_TC_SW_042: Restored CSS rejects unchecked resources
 
    **Evidence:** Retain actual JUnit results, commands and source identities in
    :doc:`../test-execution/prsa-002-fix/index`. Design review remains pending.
+
+STV_TC_SW_043: Stable navigation geometry and boundary cases
+------------------------------------------------------------
+
+.. test_case:: Stable navigation geometry and boundary cases
+   :id: STV_TC_SW_043
+   :status: accepted
+   :tags: release_initial, test_software, navigation_stability
+   :basis: documented
+   :evidence: frontend/src/layout/tests/stability.test.js
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_054, STV_SWR_058
+   :executed_by: STV_TE_5D39F79D9C4AC4CD
+   :last_result: passed
+
+   **Level/environment:** Software component: pinned frontend dependencies and Node built-in test runner.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector:** All stable-navigation cases in ``stability.test.js`` except the
+   natural-order case. Run ``node --test src/layout/tests/stability.test.js`` from
+   ``frontend``.
+
+   **Inputs/procedure:** P/Q parent seeds and A-F children; expand P, expand Q,
+   collapse P; repeat identical inputs. Add a shared test lane before inserting
+   ordinary nodes. Grow an earlier band with an 800 px test while anchoring the
+   lower band. Reassociate a shared test from a leaf to a parent/leaf median rank.
+   Exercise root collapse/reopen and a 200-node shared scene with mixed heights.
+
+   **Expected:** Surviving ordinary x slots and anchor position are identical;
+   same-band ordinary y is identical. Repeated inputs are deterministic. Lane x
+   stays fixed, tests stay unique, reranked tests join the correct band without
+   overlap and ordinary boxes remain at least 96 px left. Taller earlier bands
+   move upward without moving the anchor. Finite coordinates, safe route ports
+   and nonoverlap are enforced by compute's validation. Fresh centering is checked
+   separately by STV_TC_SW_010/011; no global freeze of all bands is expected.
+
+STV_TC_SW_044: Complete finite SVG bounds
+-----------------------------------------
+
+.. test_case:: Complete finite SVG bounds
+   :id: STV_TC_SW_044
+   :status: accepted
+   :tags: release_initial, test_software, navigation_stability
+   :basis: documented
+   :evidence: frontend/src/render/tests/edge-viewport.test.js
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_059
+   :executed_by: STV_TE_9660E9FDD3E534BF
+   :last_result: passed
+
+   **Level/environment:** Software component: pinned frontend dependencies and Node built-in test runner.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector/invocation:** Both ``edge-viewport.test.js`` cases;
+   ``node --test src/render/tests/edge-viewport.test.js`` from ``frontend``.
+
+   **Inputs/procedure:** Nodes and outer routes with negative x/y, positive extents,
+   and an empty scene. Compute the viewport and compare every point/corner against
+   its padded bounds; verify equal CSS/viewBox origins retain world coordinates.
+
+   **Expected:** All extents lie inside 24 px padding, origin cancellation is exact,
+   and empty bounds have finite positive width/height. Browser endpoint alignment
+   and reset behavior are independently covered by STV_TC_SY_059.
+
+STV_TC_SW_045: Natural ID ordering for fresh scenes
+---------------------------------------------------
+
+.. test_case:: Natural ID ordering for fresh scenes
+   :id: STV_TC_SW_045
+   :status: accepted
+   :tags: release_initial, test_software, navigation_stability
+   :basis: documented
+   :evidence: frontend/src/layout/tests/stability.test.js
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_055, STV_SWR_060
+   :executed_by: STV_TE_4ADD571D9D48391C
+   :last_result: passed
+
+   **Level/environment:** Software component: pinned frontend dependencies and Node built-in test runner.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector:** The natural numeric ID order case in ``stability.test.js``;
+   run that file with Node as above.
+
+   **Inputs/procedure:** Supply shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 in both
+   seeded and synthetic project modes without authored visible edges. Compare
+   left-to-right order, then expand REQ_2 to CHILD_A with committed context.
+
+   **Expected:** Both modes produce 1,2,3,10,20 within the ordinary rank; synthetic
+   root stays in its own band. Expansion preserves every original node position
+   and does not insert-sort discovered nodes into occupied slots.

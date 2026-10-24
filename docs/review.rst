@@ -304,3 +304,11 @@ Revision history
   and release allocations remain unassigned.
 
 - 2026-10-18: Converted the initial Markdown draft into canonical RST Needs, preserving all 12 IDs; added the shared-method documentation structure.
+
+PR013 approved PoC baseline refinement
+--------------------------------------
+
+The owner approved stable navigation after the arrow/ordering corrections and
+requested final concept creation, review and implementation. Scope and delegated
+acceptance are recorded in :doc:`concept-reviews/round-9`; implementation checks
+are linked through :doc:`test-execution/pr013-final/index`. No release is started.

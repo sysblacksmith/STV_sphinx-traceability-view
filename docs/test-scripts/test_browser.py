@@ -313,7 +313,7 @@ def _assert_project_pages(browser):
 
 
 @pytest.mark.browser
-@pytest.mark.requirements('STV_SWR_044','STV_SWR_052')
+@pytest.mark.requirements('STV_SWR_044','STV_SWR_052','STV_SWR_058')
 @pytest.mark.parametrize('protocol',['file','http'])
 def test_async_layout_failure_and_stale_completion(browser,short_output,protocol):
     project=Path(__file__).parents[2]
@@ -355,6 +355,7 @@ def _assert_async_layout(browser):
     control=browser.find_element(By.CSS_SELECTOR,'[aria-label="Collapse To (outgoing) for A"]')
     browser.execute_script('arguments[0].focus();arguments[0].click()',control)
     wait.until(lambda d:d.execute_script('return calls.length')==5)
+    assert browser.execute_script('return calls[4].args[3].previous.nodes.size===2 && calls[4].args[3].anchor===JSON.stringify(["need","A"])')
     browser.execute_script('calls[4].reject(Error("Controlled subsequent failure"))')
     wait.until(lambda d:'Controlled subsequent' in d.find_element(By.CSS_SELECTOR,'.stv-status').text)
     assert len(browser.find_elements(By.CSS_SELECTOR,'.stv-nodes > .stv-node'))==2
@@ -363,6 +364,7 @@ def _assert_async_layout(browser):
     control=browser.find_element(By.CSS_SELECTOR,'[aria-label="Collapse To (outgoing) for A"]')
     browser.execute_script('''arguments[0].focus();arguments[0].click();const outside=document.createElement('button');outside.id='outside-view';outside.textContent='Outside view';document.body.append(outside);outside.focus();''',control)
     wait.until(lambda d:d.execute_script('return calls.length')==6)
+    assert browser.execute_script('return calls[5].args[3].previous===calls[4].args[3].previous'), 'Failure must retain the last committed geometry snapshot'
     browser.execute_script('stvHarness.compute(...calls[5].args).then(calls[5].resolve)')
     wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'[data-stv-revision="2"]'))
     assert browser.switch_to.active_element.get_attribute('id')=='outside-view'
@@ -450,6 +452,12 @@ def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
         browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
         wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
         missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+        # Stable navigation can discover a node left of the current viewport.
+        # Check its identity, then explicitly fit before testing visible content.
+        assert 'MISSING_A' in missing.get_attribute('textContent')
+        geometry=browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)
+        browser.execute_script('[...arguments[0].querySelectorAll(".stv-toolbar button")].find(b=>b.textContent==="Reset viewport").click()',root)
+        assert browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)==geometry
         assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
         assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
         inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')

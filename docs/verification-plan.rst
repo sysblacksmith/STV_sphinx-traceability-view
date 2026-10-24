@@ -207,7 +207,7 @@ results established by this documentation update.
 Centered-layout and picker MVP checks
 -------------------------------------
 
-For :need:`STV_SWR_056`, verify exact centering of one parent over five children,
+For fresh layouts under :need:`STV_SWR_056`, verify exact centering of one parent over five children,
 reverse-authored lower/upper relationships, synthetic root entries, competing
 parents, shared children, isolated nodes and cycles. Assert finite nonoverlapping
 boxes, semantic ranks, right-side test placement, retained shared identity and
@@ -251,3 +251,16 @@ For :need:`STV_SWR_055`, ``frontend/src/render/tests/groups.test.js`` checks sem
 ordering, stable ties, mixed/same-level/test/missing targets, graph immutability
 and replacement mappings. ``test_control_order_smoke`` checks the rendered
 upward/downward controls and their retained order/state after expansion.
+
+Stable navigation increment
+----------------------------
+
+:need:`STV_SHR_052` remains covered by fresh-centering cases
+:need:`STV_TC_SW_010` / :need:`STV_TC_SW_011`. New navigation criteria use
+:need:`STV_TC_SW_043` / :need:`STV_TC_SW_044` / :need:`STV_TC_SW_045` and
+Firefox file/HTTP cases :need:`STV_TC_SY_058` / :need:`STV_TC_SY_059` /
+:need:`STV_TC_SY_060`. Exercise root toggles, shared-test reranking, band growth,
+200-node geometry, negative route extents, Reset, focus and natural initial order.
+Existing stale/error/picker/independent-view cases remain regression gates.
+Development results are recorded in :doc:`test-execution/pr013-final/index`;
+this increment neither starts nor qualifies a release.

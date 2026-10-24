@@ -244,3 +244,29 @@ already copied output or add automatic deployment. Direct incremental Sphinx
 commands remain suitable for development but are not the publication workflow.
 This maintenance boundary refines :need:`STV_PR_011`; extension graph state,
 timers and runtime behavior are unchanged, so no state diagram changes apply.
+
+Committed geometry and navigation layout
+-----------------------------------------
+
+``layout.compute(graph, visible, measuredBoxes, context={})`` returns final
+``nodes``, ``edges``, ``ranks``, ``bandTops``, horizontal origin ``x``, ``width``
+and ``height``. Node/rank/band maps are transient per-view layout data.
+``context={previous, anchor}`` is supplied only for group/root commands, using
+the last successful scene and the structured Need key or synthetic project key.
+The renderer never replaces this snapshot on a rejected/stale computation.
+
+Fresh placement follows :need:`STV_SWR_056` and :need:`STV_SWR_060`.
+Incremental placement follows :need:`STV_SWR_058`: preserve ordinary x slots,
+anchor the clicked band, retain same-rank test offsets, append reranked/new tests
+and open vertical space only where measured band heights require it. Ordinary
+ranks are immutable model levels; a test's median connected rank may change.
+The anchor's position wins over renewed centering; other bands may move in y.
+No-op/rejected commands preserve the committed snapshot. Explicit Reset viewport
+changes only D3's transform. Focus restoration uses ``preventScroll``.
+
+``render/edge-viewport.js`` computes bounds from all node corners and route
+points with 24 px padding. SVG CSS left/top equals viewBox x/y; width/height
+match viewBox extents. Thus negative-world paths remain aligned to HTML nodes.
+The existing request-token, rollback and independent-view contracts remain.
+See :ref:`STV_ADR_008`. No component boundary, event, state or timer is added. The software view names
+the committed-geometry feedback and the state view refines the layout action.

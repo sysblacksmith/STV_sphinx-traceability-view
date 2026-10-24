@@ -12,8 +12,11 @@ MVP exploration
 
 The :doc:`change-requests/STV_CR_006_centered-layout-and-interactive-seeds` increment
 has completed owner inspection and concept acceptance. The project overview immediately shows five stakeholder
-requirements; Previous and Next browse the remaining pages. Parents align over
-the span of their visible children, with overlap prevention taking priority.
+requirements; Previous and Next browse the remaining pages. Initial ordinary
+rows use numeric ID order. Fresh layouts center parents over visible children;
+expanding/collapsing links keeps existing horizontal positions and the clicked
+level stationary. Other levels move only when more vertical room is needed.
+Reset viewport fits the current scene without rearranging it.
 Use Starting Need in either view to search IDs or titles, select a suggestion
 with the arrow keys and Enter, or confirm an exact existing ID. Project overview
 returns that view to its first page. Invalid input keeps the current graph.

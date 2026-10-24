@@ -381,6 +381,33 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
        ``frontend/src/render/tests/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``;
        ``frontend/src/state/tests/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``
+   * - :need:`STV_SWR_058`
+     - Expansion, collapse, repeated identical input, upward band growth, shared-test reranking, project root toggles and a 200-node scene remain finite and nonoverlapping. Surviving ordinary horizontal slots and clicked node coordinates stay unchanged; unrelated views and viewport transforms stay unchanged. Failure/stale completion preserves the previous committed geometry. Fresh initialization, seed, overview and page commands omit prior geometry.
+     - ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
+       ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[http]``;
+       ``docs/test-scripts/test_position_stability.py::test_group_navigation_keeps_existing_nodes_still[file]``;
+       ``docs/test-scripts/test_position_stability.py::test_group_navigation_keeps_existing_nodes_still[http]``;
+       ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[file]``;
+       ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[http]``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: expand and collapse preserve existing primary slots``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: existing test lane is stable while new primary nodes fit beside it``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: a growing earlier band makes room above the clicked lower band``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: reranked shared tests remain unique and honor either anchor role``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: project root stays anchored through collapse and reopening``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: 200-node incremental geometry remains finite and stable``
+   * - :need:`STV_SWR_059`
+     - Firefox file/HTTP upward and downward negative-route fixtures contain every polyline point and align endpoints with node borders within 2 screen px. Empty geometry has finite positive SVG bounds. Reset fits the scene and focus does not move it; pan/zoom and independent views still work.
+     - ``docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes[down-file]``;
+       ``docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes[down-http]``;
+       ``docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes[up-file]``;
+       ``docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes[up-http]``;
+       ``frontend/src/render/tests/edge-viewport.test.js :: STV_SWR_059: SVG bounds include negative routes, detours and node boxes``;
+       ``frontend/src/render/tests/edge-viewport.test.js :: STV_SWR_059: an empty edge scene still has a finite SVG viewport``
+   * - :need:`STV_SWR_060`
+     - Shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 seeded and project-entry rows use natural order; expanding REQ_2 preserves all seed slots. Different ranks and the separate test lane remain intact.
+     - ``docs/test-scripts/test_position_stability.py::test_initial_numeric_seed_order[file]``;
+       ``docs/test-scripts/test_position_stability.py::test_initial_numeric_seed_order[http]``;
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_060: initial seed and project rows use natural numeric ID order``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
@@ -450,6 +477,7 @@ Executable sources
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
+* ``docs/test-scripts/test_position_stability.py``
 * ``docs/test-scripts/test_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
@@ -457,6 +485,8 @@ Executable sources
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``
 * ``frontend/src/layout/tests/layout.test.js``
+* ``frontend/src/layout/tests/stability.test.js``
+* ``frontend/src/render/tests/edge-viewport.test.js``
 * ``frontend/src/render/tests/groups.test.js``
 * ``frontend/src/render/tests/seeds.test.js``
 * ``frontend/src/state/tests/state.test.js``

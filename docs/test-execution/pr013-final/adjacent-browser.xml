@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="24" time="254.452" timestamp="2026-10-24T19:10:27.858586+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_browser" name="test_usability_smoke[file]" time="17.057"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_054,STV_SYS_006" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_usability_smoke[http]" time="19.155"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_054,STV_SYS_006" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_offline_exploration[file]" time="12.720"><properties><property name="requirement_ids" value="STV_SWR_004,STV_SWR_008,STV_SWR_015,STV_SWR_016,STV_SWR_017,STV_SWR_018,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_034,STV_SWR_035,STV_SWR_038,STV_SWR_039,STV_SWR_040,STV_SWR_050,STV_SYS_003,STV_SYS_007" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_offline_exploration[http]" time="14.860"><properties><property name="requirement_ids" value="STV_SWR_004,STV_SWR_008,STV_SWR_015,STV_SWR_016,STV_SWR_017,STV_SWR_018,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_034,STV_SWR_035,STV_SWR_038,STV_SWR_039,STV_SWR_040,STV_SWR_050,STV_SYS_003,STV_SYS_007" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_project_paging[file]" time="10.479"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_project_paging[http]" time="12.720"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_interactive_seed_smoke[file]" time="8.840"><properties><property name="requirement_ids" value="STV_SWR_038,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_interactive_seed_smoke[http]" time="10.158"><properties><property name="requirement_ids" value="STV_SWR_038,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_alternate_model_geometry_details_and_external[file]" time="9.419"><properties><property name="requirement_ids" value="STV_SWR_008,STV_SWR_012,STV_SWR_015,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_037,STV_SWR_041,STV_SWR_047,STV_SWR_048,STV_SWR_049,STV_SWR_050,STV_SYS_004,STV_SYS_005,STV_SYS_006,STV_SYS_010" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_alternate_model_geometry_details_and_external[http]" time="12.527"><properties><property name="requirement_ids" value="STV_SWR_008,STV_SWR_012,STV_SWR_015,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_037,STV_SWR_041,STV_SWR_047,STV_SWR_048,STV_SWR_049,STV_SWR_050,STV_SYS_004,STV_SYS_005,STV_SYS_006,STV_SYS_010" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_missing_placeholder_and_detail_error[file]" time="8.908"><properties><property name="requirement_ids" value="STV_SWR_027,STV_SWR_028,STV_SWR_029,STV_SYS_004" /></properties><failure message="assert ('MISSING_A' in 'Missing object')&#10; +  where 'Missing object' = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e6da99aa-f393-4828-ad29-97d655892254&quot;, element=&quot;beb1b294-8b6b-43df-8ea7-bab765f10c35&quot;)&gt;.text">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="e6da99aa-f393-4828-ad29-97d655892254")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ya6dtk1v')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_004','STV_SWR_027','STV_SWR_028','STV_SWR_029')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
+        import shutil
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        path=source/'requirements.rst';path.write_text(path.read_text(encoding='utf-8').replace(':traces: LEAF_B',':traces: MISSING_A'),encoding='utf-8')
+        output=short_output/'html';result=build(source,output)
+        assert result.returncode!=0 and 'MISSING_A' in result.stderr
+        saved={script:script.read_bytes() for script in (output/'_static/stv/details').glob('*.js')}
+        for script in saved:script.unlink()
+        with published_url(output,protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+            control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+            browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+            wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+            missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+&gt;           assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
+E           assert ('MISSING_A' in 'Missing object')
+E            +  where 'Missing object' = &lt;selenium.webdriver.remote.webelement.WebElement (session="e6da99aa-f393-4828-ad29-97d655892254", element="beb1b294-8b6b-43df-8ea7-bab765f10c35")&gt;.text
+
+docs\test-scripts\test_browser.py:455: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_browser" name="test_missing_placeholder_and_detail_error[http]" time="9.712"><properties><property name="requirement_ids" value="STV_SWR_027,STV_SWR_028,STV_SWR_029,STV_SYS_004" /></properties><failure message="assert ('MISSING_A' in 'Missing object')&#10; +  where 'Missing object' = &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;e7ce865e-5ad6-4901-ada2-26d94bc02b9a&quot;, element=&quot;b31992ec-1ba3-47d0-bb78-fbe015522838&quot;)&gt;.text">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="e7ce865e-5ad6-4901-ada2-26d94bc02b9a")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-m1wthuan')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_004','STV_SWR_027','STV_SWR_028','STV_SWR_029')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
+        import shutil
+        source=short_output/'source';shutil.copytree(FIXTURE,source)
+        path=source/'requirements.rst';path.write_text(path.read_text(encoding='utf-8').replace(':traces: LEAF_B',':traces: MISSING_A'),encoding='utf-8')
+        output=short_output/'html';result=build(source,output)
+        assert result.returncode!=0 and 'MISSING_A' in result.stderr
+        saved={script:script.read_bytes() for script in (output/'_static/stv/details').glob('*.js')}
+        for script in saved:script.unlink()
+        with published_url(output,protocol) as url:
+            browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            root=browser.find_element(By.CSS_SELECTOR,'.stv-view')
+            control=root.find_element(By.CSS_SELECTOR,'[aria-label="Expand Traces (outgoing) for ROOT_A"]')
+            browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
+            wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
+            missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+&gt;           assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
+E           assert ('MISSING_A' in 'Missing object')
+E            +  where 'Missing object' = &lt;selenium.webdriver.remote.webelement.WebElement (session="e7ce865e-5ad6-4901-ada2-26d94bc02b9a", element="b31992ec-1ba3-47d0-bb78-fbe015522838")&gt;.text
+
+docs\test-scripts\test_browser.py:455: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_browser" name="test_documentation_visuals" time="7.786"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_control_order_smoke[file]" time="7.559"><properties><property name="requirement_ids" value="STV_SWR_055" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_control_order_smoke[http]" time="7.714"><properties><property name="requirement_ids" value="STV_SWR_055" /></properties></testcase><testcase classname="docs.test-scripts.test_detail_transport" name="test_authored_transport_markers_stay_inert[file]" time="8.963"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SWR_049" /></properties></testcase><testcase classname="docs.test-scripts.test_detail_transport" name="test_authored_transport_markers_stay_inert[http]" time="11.199"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SWR_049" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_selection_release[file]" time="8.374"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_038,STV_SWR_048,STV_SWR_051,STV_SWR_052,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_selection_release[http]" time="10.218"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_038,STV_SWR_048,STV_SWR_051,STV_SWR_052,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_empty_seed_catalog[file]" time="8.102"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_empty_seed_catalog[http]" time="10.278"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_layout_replacement_failure_and_staleness[file]" time="7.296"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_layout_replacement_failure_and_staleness[http]" time="7.811"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_windows_paths" name="test_nested_windows_detail_loading_and_retry" time="12.175"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SYS_003,STV_SYS_006" /></properties></testcase></testsuite></testsuites>

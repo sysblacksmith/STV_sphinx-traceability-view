@@ -91,9 +91,11 @@ The authoritative input/state contracts are in :doc:`internal-interfaces`.
 Every view exposes local ID/title matching and exact seed confirmation through
 the renderer's ``seeds.js`` helper. STATE proposes fresh seed/overview states;
 the existing capacity/layout commit gate preserves prior exploration on failure.
-Project initialization opens the first five-entry page. LAYOUT centers parents
-toward visible child spans while retaining collision, rank and shared-identity
-constraints. Component connections and dependencies remain unchanged; the
+Project initialization opens the first five-entry page. Fresh LAYOUT scenes
+center parents toward visible child spans; edge-free rows use natural ID order.
+Group/root navigation instead preserves committed slots under :ref:`STV_ADR_008`,
+with final route bounds owned by RENDER. Collision, rank and shared-identity
+constraints remain. Component connections and dependencies remain unchanged; the
 prototype decision is :ref:`STV_ADR_006`.
 
 Usability routing and inspection

@@ -322,3 +322,12 @@ and delegates acceptance of the clean affected internal concept. The scoped
 review, requirement/ADR decisions and artifact identities are recorded in
 :doc:`concept-reviews/round-6`. It does not establish full implementation
 verification or authorize committing, tagging or publication.
+
+PR013 owner and design evidence
+-------------------------------
+
+2026-10-24: owner confirmation of stable-navigation PoC, corrected Firefox arrows
+and numeric initial IDs, followed by explicit concept-creation/review/implementation
+instruction. See :need:`STV_PR_013`, :doc:`concept-reviews/round-9` and retained
+:doc:`test-execution/pr013-poc/index`. This revises fresh-versus-incremental
+centering intent; no external dependency/version assertion is introduced.

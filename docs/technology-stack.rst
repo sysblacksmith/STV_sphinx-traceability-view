@@ -270,3 +270,13 @@ Hatch's generated package metadata and standard metadata files may accompany
 these inputs. :need:`STV_PR_010` and :need:`STV_TC_SY_051` retain the
 cause and actual archive/rebuilt-wheel regression evidence. Runtime behavior,
 state-machine transitions and accepted requirement meanings are unchanged.
+
+Navigation projection policy
+-----------------------------
+
+The existing pinned ELK.js supplies ordering suggestions. STV owns deterministic
+slot stabilization, semantic-band spacing and final route generation; native
+SVG viewBox/CSS origins cover negative extents. Natural numeric ID ordering uses
+the browser's English ``Intl.Collator`` with numeric comparison and variant
+sensitivity. No dependency or runtime network request is added. See
+:ref:`STV_ADR_008` for alternatives and constraints.

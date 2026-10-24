@@ -1,0 +1,255 @@
+[
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: expand and collapse preserve existing primary slots",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: existing test lane is stable while new primary nodes fit beside it",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: a growing earlier band makes room above the clicked lower band",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_045",
+    "execution_id": "STV_TE_4ADD571D9D48391C",
+    "selector": "STV_SWR_060: initial seed and project rows use natural numeric ID order",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: reranked shared tests remain unique and honor either anchor role",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: project root stays anchored through collapse and reopening",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_5D39F79D9C4AC4CD",
+    "selector": "STV_SWR_058: 200-node incremental geometry remains finite and stable",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_9660E9FDD3E534BF",
+    "selector": "STV_SWR_059: SVG bounds include negative routes, detours and node boxes",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_9660E9FDD3E534BF",
+    "selector": "STV_SWR_059: an empty edge scene still has a finite SVG viewport",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_group_navigation_keeps_existing_nodes_still[file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_group_navigation_keeps_existing_nodes_still[http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_E018DFA57A2EB582",
+    "selector": "test_arrow_viewport_covers_negative_routes[down-file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_E018DFA57A2EB582",
+    "selector": "test_arrow_viewport_covers_negative_routes[down-http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_E018DFA57A2EB582",
+    "selector": "test_arrow_viewport_covers_negative_routes[up-file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_E018DFA57A2EB582",
+    "selector": "test_arrow_viewport_covers_negative_routes[up-http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_873F1D2F001CA837",
+    "selector": "test_initial_numeric_seed_order[file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_873F1D2F001CA837",
+    "selector": "test_initial_numeric_seed_order[http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_project_root_preserves_anchor[file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_project_root_preserves_anchor[http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_async_layout_failure_and_stale_completion[file]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_BFC00DA35F1B2273",
+    "selector": "test_async_layout_failure_and_stale_completion[http]",
+    "report": "focused-browser.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:09:51.186986+00:00",
+    "aggregation": "Complete canonical procedure; actual runner subtest retained"
+  },
+  {
+    "case_id": "STV_TC_SY_003",
+    "execution_id": "STV_TE_6AA25FA7CA5F5192",
+    "selector": "test_missing_placeholder_and_detail_error[file]",
+    "report": "adjacent-browser.xml",
+    "result": "failed",
+    "executed_at": "2026-10-24T17:14:42.322167+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_012",
+    "execution_id": "STV_TE_F9FF69F5AF8B80F1",
+    "selector": "test_missing_placeholder_and_detail_error[http]",
+    "report": "adjacent-browser.xml",
+    "result": "failed",
+    "executed_at": "2026-10-24T17:14:42.322167+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_003",
+    "execution_id": "STV_TE_CECBFB91BF01D342",
+    "selector": "test_missing_placeholder_and_detail_error[file]",
+    "report": "missing-recheck.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:15:51.973207+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_012",
+    "execution_id": "STV_TE_64C890A655FDC0CE",
+    "selector": "test_missing_placeholder_and_detail_error[http]",
+    "report": "missing-recheck.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:15:51.973207+00:00"
+  },
+  {
+    "case_id": "STV_TC_SW_011",
+    "execution_id": "STV_TE_112EF87FDDCC77C1",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: competing parents do not displace a separate centered parent",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00"
+  },
+  {
+    "case_id": "STV_TC_SW_010",
+    "execution_id": "STV_TE_E9D48EE5D838F9F2",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "report": "node.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:06:59.766358+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_017",
+    "execution_id": "STV_TE_FC0887B66F8AAE1A",
+    "selector": "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[file]",
+    "report": "capacity.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:18:27.167481+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_035",
+    "execution_id": "STV_TE_1B0FA04DA16E3401",
+    "selector": "docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]",
+    "report": "capacity.xml",
+    "result": "passed",
+    "executed_at": "2026-10-24T17:18:27.167481+00:00"
+  }
+]

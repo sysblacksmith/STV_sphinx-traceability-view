@@ -84,7 +84,8 @@ replaceable without a second application-state implementation:
      - Immutable graph, current state and structured command
      - Candidate visible graph/new state or unchanged state with diagnostic.
    * - layout.compute
-     - Candidate visible graph, normalized ranks and measured boxes
+     - Candidate visible graph, normalized ranks, measured boxes and optional
+       previous committed geometry/activated key for group/root commands
      - Promise of final boxes, edge polylines and bounds; stale revision results discarded.
    * - view.render
      - Root, committed state, geometry and command dispatcher
@@ -262,14 +263,16 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    Build the visible ELK graph with actual width/height and the canonical
    edges. Run layered layout with DOWN direction and fixed random seed 1.
 2. Sort each semantic rank's nodes by their suggested ELK x coordinate, with
-   Need ID as the stable tie-breaker. Ignore ELK's y coordinates and edge
+   Need ID as the stable tie-breaker. With no authored visible edges, use
+   natural numeric full-ID order within each ordinary rank instead. Ignore ELK's y coordinates and edge
    routes after this step. This is intentional: ELK graph-theoretic layers do
    not substitute for the host's semantic level order.
 3. Place a visible synthetic project root in a separate band above every
    configured level; retain normal level order and test lanes. Assign ordered horizontal rank bands using measured maximum heights and
    at least 80-pixel inter-band gaps; place nodes with 48-pixel horizontal
    separation. Empty semantic levels may keep an empty band so upward
-   expansion does not invert level order. Reordering within a band is allowed.
+   expansion does not invert level order. Fresh placement may reorder a band;
+   incremental navigation preserves surviving ordinary slots.
 4. Put resolved test nodes in a separate lane at least 96 pixels beyond the
    rightmost ordinary artifact. Assign a shared test to the median rank of its
    connected artifacts, breaking ties upward; an unconnected test seed uses
@@ -283,7 +286,13 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    squared displacement; unrelated parents retain their exact child-span centers.
    Same-rank and test-role links do not drive centering. Recompute the test lane
    after horizontal movement; semantic bands and nonoverlap take precedence.
-6. Try a direct segment between facing ports first: top-to-bottom upward,
+6. For group/root toggles, apply ``layout/stability.js`` to the fresh proposal
+   before routing: preserve ordinary x, anchor band y, retain test-lane x and
+   same-rank test offsets, allocate nearest free 48 px slots (leftmost tie),
+   append reranked/new tests with 24 px spacing and reserve 100 px between bands.
+   New ordinary boxes stay 96 px left of a retained test lane. Allow negative
+   coordinates and gaps after collapse. Other fresh commands omit this context.
+7. Try a direct segment between facing ports first: top-to-bottom upward,
    bottom-to-top downward, and facing sides for overlapping vertical ranges.
    Test against open box interiors. Only blocked routes and self-links use
    empty inter-band corridors and numbered outer lanes beyond all nodes.
@@ -291,7 +300,7 @@ ELK performs general ordering; STV enforces the domain rules explicitly:
    blocked links use the gap below that band.
    Reserve separate lanes for self-links. Recompute routes after semantic
    projection rather than drawing stale ELK paths through moved nodes.
-7. Assert finite coordinates, nonoverlapping node rectangles, rank order,
+8. Assert finite coordinates, nonoverlapping node rectangles, rank order,
    correct test-side placement and edge endpoints on their owning nodes.
    Geometry failure keeps the previous view and produces a diagnostic.
 
@@ -434,3 +443,14 @@ root path, using tagged root identity plus occurrence path for keys. Ancestor
 cycle detection remains path-local; shared-mode deduplication remains by Need
 identity. Existing later-mode deferrals are unchanged; no occurrence runtime is
 claimed implemented.
+
+Navigation geometry delivery
+-----------------------------
+
+The renderer retains geometry only on a successful current-token scene commit.
+Group/root toggles reuse it; initialization, confirmed seed/overview and paging
+start fresh. D3's transform is retained on toggles. Fit/Reset accounts for the
+negative horizontal origin and minimum node y. ``edge-viewport.js`` includes
+all route points and node corners with marker padding and positions the SVG at
+its matching viewBox origin. See :ref:`STV_ADR_008` and
+:doc:`internal-interfaces` for the ownership/failure contract.

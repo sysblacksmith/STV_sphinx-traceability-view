@@ -1038,9 +1038,9 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: passed
 
-   The view shall center each parent over the horizontal span of its visible
+   On fresh layout, the view shall center each parent over the horizontal span of its visible
    children where this can be achieved without overlapping nodes or changing
    semantic levels. Collision avoidance takes precedence where shared children
    or competing parents prevent simultaneous exact centering.
@@ -1049,6 +1049,11 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    above the middle child. Multiple-parent and shared-child fixtures retain one
    node per Need, nonoverlapping boxes and semantic levels; constrained parents
    remain as near their child-span centers as collision avoidance permits.
+
+   Relationship/root toggles prioritize the stable-navigation policy of
+   :need:`STV_SHR_054` / :need:`STV_SWR_058` over renewed parent centering.
+   Initialization, seed replacement, overview return and page changes use fresh
+   placement. Reset viewport changes only the transform, never node positions.
 
 .. shr:: Select a starting object interactively in every view
    :id: STV_SHR_053
@@ -1072,3 +1077,40 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    hidden IDs and unmatched text leave its committed exploration unchanged.
    Returning to overview shows the project plus its first five stakeholder
    requirements and leaves other views unchanged.
+
+.. shr:: Keep navigation positions stable
+   :id: STV_SHR_054
+   :status: accepted
+   :tags: release_initial, navigation_stability
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_013.rst
+   :priority: unassigned
+   :verification_state: passed
+
+   Relationship expansion/collapse shall keep the activated node and its same-level
+   surviving ordinary peers stationary. Existing ordinary nodes retain horizontal
+   positions. Other levels may move vertically only to accommodate changed band
+   height without overlap; a shared test may change its associated level.
+
+   **Acceptance criterion:** Repeated upward/downward expansions and collapse keep
+   the clicked node's world and screen position and ordinary same-band peers stable,
+   with the viewport unchanged. New nodes avoid occupied slots, shared tests remain
+   single and right of ordinary nodes, and all arrows reach their node boundaries,
+   including routes at negative coordinates. Fresh navigation starts and explicit
+   viewport reset remain usable without changing another view.
+
+.. shr:: Order initial ordinary nodes naturally by ID
+   :id: STV_SHR_055
+   :status: accepted
+   :tags: release_initial, navigation_stability
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_013.rst
+   :priority: unassigned
+   :verification_state: passed
+
+   Fresh unexpanded seed and project-entry rows shall display ordinary nodes in
+   natural numeric ID order from left to right within each semantic level.
+
+   **Acceptance criterion:** Shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 inputs appear
+   as REQ_1, REQ_2, REQ_3, REQ_10, REQ_20. Expansion preserves existing positions;
+   it does not reorder the row to insert discovered nodes.

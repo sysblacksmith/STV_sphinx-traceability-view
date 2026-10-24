@@ -1012,7 +1012,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SHR_052
    :allocated_to: STV_SWE_LAYOUT
 
-   After semantic rank projection, layout shall derive each normal parent's
+   On fresh layout after semantic rank projection, layout shall derive each normal parent's
    desired horizontal center from the leftmost and rightmost boxes of its
    visible lower-level children, including synthetic project-entry children.
    It shall resolve competing desired positions deterministically with at least
@@ -1025,6 +1025,11 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Channeling rationale:** Horizontal placement is local to the existing
    browser layout responsibility and adds no system interface or boundary.
+
+   Relationship/root toggles prioritize the stable-navigation policy of
+   :need:`STV_SHR_054` / :need:`STV_SWR_058` over renewed parent centering.
+   Initialization, seed replacement, overview return and page changes use fresh
+   placement. Reset viewport changes only the transform, never node positions.
 
 .. swr:: Confirm local interactive seeds and restore project overview
    :id: STV_SWR_057
@@ -1057,3 +1062,83 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Channeling rationale:** Selection and reset operate within the existing
    browser state/renderer and immutable graph, adding no system obligation.
+
+.. swr:: Stabilize committed navigation geometry
+   :id: STV_SWR_058
+   :status: accepted
+   :tags: release_initial, navigation_stability
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_013.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_054
+   :allocated_to: STV_SWE_LAYOUT, STV_SWE_RENDER
+
+   For group/root toggles, layout shall use the last committed per-view geometry
+   and activated node as an anchor. Preserve surviving ordinary x slots, anchor
+   position and same-band ordinary y. Place newcomers in nearest available slots
+   with 48 px separation; ties choose the leftmost slot. Preserve the test lane x
+   while any test survives and keep ordinary nodes at least 96 px to its left.
+   Retain test offsets when their rank is unchanged; append new or reranked tests
+   without overlap. Anchor the activated band and move other bands only as needed
+   for their measured height plus 100 px separation. Negative coordinates are valid.
+
+   **Acceptance criterion:** Expansion, collapse, repeated identical input, upward
+   band growth, shared-test reranking, project root toggles and a 200-node scene
+   remain finite and nonoverlapping. Surviving ordinary horizontal slots and clicked
+   node coordinates stay unchanged; unrelated views and viewport transforms stay
+   unchanged. Failure/stale completion preserves the previous committed geometry.
+   Fresh initialization, seed, overview and page commands omit prior geometry.
+
+   **Channeling rationale:** This is software-local layout/render state within the
+   existing browser boundary; no system interface or deployment obligation changes.
+
+.. swr:: Render complete edge bounds at any graph origin
+   :id: STV_SWR_059
+   :status: accepted
+   :tags: release_initial, navigation_stability
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_013.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_054
+   :allocated_to: STV_SWE_RENDER
+
+   The renderer shall derive SVG bounds from all final node corners and route
+   points with 24 px marker padding. Apply equal SVG CSS and viewBox origins so
+   negative coordinates retain the same world-to-screen mapping as HTML nodes.
+   Accumulate extrema without spreading route arrays. Restore focus without native
+   scrolling. Initial fitting and explicit Reset viewport shall include negative
+   node extents; toggles shall preserve the current D3 transform.
+
+   **Acceptance criterion:** Firefox file/HTTP upward and downward negative-route
+   fixtures contain every polyline point and align endpoints with node borders
+   within 2 screen px. Empty geometry has finite positive SVG bounds. Reset fits
+   the scene and focus does not move it; pan/zoom and independent views still work.
+
+   **Channeling rationale:** SVG clipping/focus are local presentation concerns;
+   no new system boundary, transport or external service is introduced.
+
+.. swr:: Use natural ID order for fresh unexpanded rows
+   :id: STV_SWR_060
+   :status: accepted
+   :tags: release_initial, navigation_stability
+   :basis: owner
+   :evidence: docs/problem-tickets/STV_PR_013.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_055
+   :allocated_to: STV_SWE_LAYOUT
+
+   When the fresh visible graph has no authored relationship edges, sort ordinary
+   nodes within each semantic rank by the full Need ID using English numeric
+   collation, case-sensitive variant comparison and a deterministic lexical tie.
+   Synthetic entry links do not disable this policy. With authored edges use ELK
+   ordering and fresh parent centering; incremental navigation preserves old slots.
+
+   **Acceptance criterion:** Shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 seeded and
+   project-entry rows use natural order; expanding REQ_2 preserves all seed slots.
+   Different ranks and the separate test lane remain intact.
+
+   **Channeling rationale:** Row ordering is local to the existing layout component
+   and needs no additional system requirement or boundary.

@@ -1,0 +1,28 @@
+{
+  "browser": "158.0.1",
+  "views": 2,
+  "checks": [
+    {
+      "revision": 1,
+      "deltas": {
+        "[\"need\",\"STV_SWR_001\"]": {
+          "left": 0.0,
+          "top": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "revision": 2,
+      "deltas": {
+        "[\"need\",\"STV_SWR_001\"]": {
+          "left": 0.0,
+          "top": 0.0,
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""PR013 PoC: reader-visible anchor and peer stability during group navigation."""
+"""PR013 regression: reader-visible anchor and peer stability during group navigation."""
 import json
 import os
 from pathlib import Path
@@ -29,7 +29,8 @@ def prepare_source(source):
 
 @pytest.mark.browser
 @pytest.mark.parametrize('protocol',['file','http'])
-def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
+@pytest.mark.requirements('STV_SWR_058')
+def test_group_navigation_keeps_existing_nodes_still(browser,short_output,protocol):
     source=short_output/'source';prepare_source(source)
     output=short_output/'html';result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
     observations=[]
@@ -60,7 +61,8 @@ def test_poc_group_navigation_keeps_existing_nodes_still(browser,short_output,pr
 @pytest.mark.browser
 @pytest.mark.parametrize('protocol',['file','http'])
 @pytest.mark.parametrize('direction',['down','up'])
-def test_poc_arrow_viewport_covers_negative_routes(browser,short_output,protocol,direction):
+@pytest.mark.requirements('STV_SWR_059')
+def test_arrow_viewport_covers_negative_routes(browser,short_output,protocol,direction):
     source=short_output/'source';prepare_source(source)
     parent='P'
     if direction=='up':
@@ -103,10 +105,20 @@ def test_poc_arrow_viewport_covers_negative_routes(browser,short_output,protocol
         assert observed['outside']==[],observed
         assert observed['aligned'],observed
 
+        # Reset changes only the D3 transform and includes negative node extents.
+        world={k:{axis:v[axis] for axis in ['x','y']} for k,v in positions(browser).items()}
+        browser.execute_script("[...document.querySelector('.stv-toolbar').querySelectorAll('button')].find(b=>b.textContent==='Reset viewport').click()")
+        fitted=browser.execute_script("""const v=document.querySelector('.stv-viewport').getBoundingClientRect();
+          return [...document.querySelectorAll('.stv-view .stv-node')].every(n=>{
+            const r=n.getBoundingClientRect();return r.left>=v.left-2&&r.right<=v.right+2&&r.top>=v.top-2&&r.bottom<=v.bottom+2;});""")
+        assert fitted,'Reset must fit this negative-coordinate scene'
+        assert {k:{axis:v[axis] for axis in ['x','y']} for k,v in positions(browser).items()}==world
+
 
 @pytest.mark.browser
 @pytest.mark.parametrize('protocol',['file','http'])
-def test_poc_initial_numeric_seed_order(browser,short_output,protocol):
+@pytest.mark.requirements('STV_SWR_060')
+def test_initial_numeric_seed_order(browser,short_output,protocol):
     source=short_output/'source';shutil.copytree(FIXTURE,source)
     ids=['REQ_20','REQ_10','REQ_3','REQ_2','REQ_1']
     (source/'index.rst').write_text('Numeric seeds\n=============\n\n.. toctree::\n\n   requirements\n\n.. traceability-view:: '+ ' '.join(ids)+'\n',encoding='utf-8')
@@ -132,3 +144,25 @@ def test_poc_initial_numeric_seed_order(browser,short_output,protocol):
         if record:
             path=Path(record);path.mkdir(parents=True,exist_ok=True)
             (path/(protocol+'-numeric-order.json')).write_text(json.dumps({'order':order,'old_nodes_unchanged':True},indent=2),encoding='utf-8')
+
+
+@pytest.mark.browser
+@pytest.mark.requirements('STV_SWR_058')
+@pytest.mark.parametrize('protocol',['file','http'])
+def test_project_root_preserves_anchor(browser,short_output,protocol):
+    source=short_output/'source';prepare_source(source)
+    index=source/'index.rst'
+    index.write_text(index.read_text(encoding='utf-8').replace('.. traceability-view:: P Q','.. traceability-view::'),encoding='utf-8')
+    result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+    with published_url(short_output/'html',protocol) as url:
+        browser.get(url);wait=WebDriverWait(browser,15)
+        wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+        root_before=positions(browser)['undefined']
+        for revision,count in [(1,1),(2,3)]:
+            button=browser.find_element(By.CSS_SELECTOR,'[data-focus="root"]')
+            browser.execute_script('arguments[0].focus({preventScroll:true})',button)
+            button.send_keys(Keys.ENTER)
+            wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view').get_attribute('data-stv-revision')==str(revision))
+            assert len(browser.find_elements(By.CSS_SELECTOR,'.stv-view .stv-node'))==count
+            assert all(abs(positions(browser)['undefined'][k]-v)<.5 for k,v in root_before.items())
+            assert browser.execute_script('return document.activeElement.dataset.focus')=='root'

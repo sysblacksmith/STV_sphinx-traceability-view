@@ -8,7 +8,8 @@ Decision owner: project owner through delegated concept review; see
 :doc:`../../concept-reviews/round-6`.
 Supersedes: partially
 :ref:`STV_ADR_005` for page size, initial root expansion and runtime seed
-mutability. Superseded by: none.
+mutability. Superseded by: partially :ref:`STV_ADR_008` for repeated
+parent recentering during group/root navigation; all other decisions remain.
 
 Related requirements: :need:`STV_SHR_003`, :need:`STV_SHR_047`,
 :need:`STV_SHR_052`, :need:`STV_SHR_053`, :need:`STV_SWR_003`,

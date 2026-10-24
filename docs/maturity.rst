@@ -6,6 +6,24 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+PR013 stable navigation finalized
+---------------------------------
+
+:need:`STV_PR_013` is fixed. :doc:`concept-reviews/round-9` records the scoped
+accepted concept, partial ADR supersession and test-design re-review.
+:doc:`test-execution/pr013-final/index` retains 111 distinct latest passing
+component, integration, Firefox file/HTTP, capacity and clean-package outcomes.
+Six new accepted test designs cover stable slots, negative SVG bounds and
+natural initial order. Fresh centering remains separately verified. Two initial
+placeholder visibility assertions failed; explicit viewport fitting corrected
+the test procedure and both retests passed without product changes.
+
+Ordinary x slots and the clicked band stay fixed during group/root navigation;
+other bands can move for height and shared tests can change associated ranks.
+The normal documentation/demo is rebuilt. This completes the development fix,
+not a release; the canceled candidate stays canceled and the next release
+requires the owner's explicit instruction. Unrelated PRSA gates remain below.
+
 PRSA-006 local preparation; hosted hardening pending
 --------------------------------------------------------------------------------
 

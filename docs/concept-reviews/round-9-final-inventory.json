@@ -1,0 +1,523 @@
+{
+  "base_commit": "4ad8fcefdf95ee6987478a9d632d5f33624aa673",
+  "recorded_at": "2026-10-24T19:24:15.220264+02:00",
+  "accepted_need_ids": [
+    "STV_SHR_052",
+    "STV_SHR_054",
+    "STV_SHR_055",
+    "STV_SWR_056",
+    "STV_SWR_058",
+    "STV_SWR_059",
+    "STV_SWR_060",
+    "STV_TC_SW_043",
+    "STV_TC_SW_044",
+    "STV_TC_SW_045",
+    "STV_TC_SY_058",
+    "STV_TC_SY_059",
+    "STV_TC_SY_060"
+  ],
+  "reaffirmed_case_ids": [
+    "STV_TC_SY_003",
+    "STV_TC_SY_012",
+    "STV_TC_SW_010",
+    "STV_TC_SW_011"
+  ],
+  "note": "Scoped acceptance only; context preserves its pre-existing acceptance/draft state. Runtime identity is in the development source-hash records.",
+  "artifacts": [
+    {
+      "path": "build-docs.ps1",
+      "sha256": "55816be5ee151a8074a1dc6e4b749ddcd3b9be9996614d3abfedca679160cbe5",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "sha256": "4b4472d53554aa58369cf7a4309cbbeca76f870b8708ea5183b10d67212e5321",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_007_component_directories.rst",
+      "sha256": "58a9bf379840e1838f105a19c17bf3538e20d1cc21d1e71aa6ce4227df15c363",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_008_stable_navigation.rst",
+      "sha256": "bf7e219dc4ef2a226a461a2187eadc7e4ae17716853dc00ce3fe8a01372c3cf4",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "sha256": "228753e564af2f64ea7b4f5500e9543b2fddc191c73d54339fb3eb57082b1322",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "sha256": "134568a6b85bc3dacb2d7b292fd4be494cc2a50b07813ac3e8d58190d3bfd2f0",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "sha256": "e4fec4922179e7b7640ceedafcf9eec9d5fff19930aa1e04cb9eafc2d08cee8c",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "sha256": "aa370eb7f96ff69c6da9043d5017f4591c60cfc16f93a54265a867951df83913",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "sha256": "d4ee92dbee3bb250ea62206e2ab2c9f4b7c0a79914b25226ffb74793f4e3ac52",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "sha256": "0a91de2bf40efb6bb5315e7cb9939a9c72b5d98642eb35cbb92f46f5ad7c4486",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/ci-and-provenance.rst",
+      "sha256": "33f569b6cf5102da27dd041b164486902b44482a5f7b516ee5525a6605a96b18",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "sha256": "ffc95779b2d314de0a3b7306e5e124e2112482b250c590f917ea4ff65249fcdf",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/concept-reviews/round-9.rst",
+      "sha256": "96380a3d7b87d41f4a45c426b473cf6ec8db7dfca50cc4bef77137f188b40eaa",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/conf.py",
+      "sha256": "ea721e816efa8c9deb4af35b966406eb5d5138dc4f50e30a927ff64cbf2f6534",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/demo.rst",
+      "sha256": "7fd251f1a695adf09248fcd0ec844e11e28713b7c0ce576bf6321116ea4a4eec",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "sha256": "8fc2967b0665bec55306d02c6260303fdd92ee77649fbd1e311b7711f48e4143",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "sha256": "1129110c8c96e7a08ee877bfb4ffc529d63b6d674420d002c10329e1230d5e1d",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "sha256": "a8283eab1e49f69358a77c39242aaf611d482ff6685cf02fe55c32131e4c85f5",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "sha256": "ab8da1fe470dfaa5f715966665793cd6831355fd3bebba45eb9305f1065e687b",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "d15c3beeb78b9b4ced21b9259e3a0e0ca5e459bfa202b935154cab30803431ef",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "sha256": "7d0ebfb0a9890c4ca67a6a5d8f1fd1ab6fe81a9ceae2f6e1520b3270d824ae04",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/licensing.rst",
+      "sha256": "bd48d203f3556317e32b0900112530e2b89550ebcf3e0a9a1c6fd4d0c6f4f215",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "sha256": "d3b36d4321dd08a43bb41b7302de20a663ba587e333f6ee32b38085c5ca8aa43",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/method.rst",
+      "sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/project-metrics.rst",
+      "sha256": "94f0cbcc099afb4763a74c9797059a8ab2481a933f8a92b16d0a0ead058f6865",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/requirements-software.rst",
+      "sha256": "2b0d74f0a7465d2fbcbc07681b6ff871f82aa5ccf6132a9da10e17451bf9d644",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/requirements-stakeholder.rst",
+      "sha256": "721d458a7d1a8919d0637774706a84e2ec83bca6af046129bc05d465f87c758c",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/requirements-system.rst",
+      "sha256": "1ef5a3f8dd7539cdb127a04ae42de6939139d01b10c4b6d888571f37b2f5c8a0",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/review.rst",
+      "sha256": "bb3c6c28fef04ace2d0c049caa1e04cef2105829f00b741e6a9412ff0dc7d61a",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/sources.rst",
+      "sha256": "1f75a28d325c06d642f51cef848d5126cd82ab47626bafb4667622d34cc5210e",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "sha256": "cc6c51002ba9ee07d55134c278c066967fe71fdb6a2b47877052ab9506bbdba2",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "sha256": "8e66b7ee1054870db3f16e8eba0e63fbe5da791fd6a8431a97becbb85b73b08d",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/test-cases/index.rst",
+      "sha256": "3373c3102a29bce2be71c96482475edeaf70fceb9e9c8ef924ee75dace013ecb",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/test-cases/software-tests.rst",
+      "sha256": "112cf9eda5caa903631b54633f95d056883b4d3ad14362c3b1144fca9f9c16d7",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/test-cases/system-tests.rst",
+      "sha256": "96785e8ed7ee0864ae7d2d0cfd500a19b483fdf3d5f869242b35eb283560ae4c",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "sha256": "416339c4f8875b65f215be9b8fecf7b33545750af0ae2dc1ba6efdc463607cac",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "sha256": "741d95cd4bd1f9c5346988885a737fe9d781bbbb89f39098a1a3008a413cca9c",
+      "scope": "PR013 reviewed change"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "sha256": "48a67cbda5c6592371ff12e2001ce298a68157efa034976285eb128549427c4a",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "80ac47b3745d296c2f06c7195602b1a5ea307adbc19ec079d1d408f6a936080d",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "4c8677c69ea8b4a131005f2b2f34d689cc221c448b728b8f0e807c8ad4f07c7d",
+      "scope": "retained context; prior acceptance/draft state preserved"
+    },
+    {
+      "path": "docs/concept-reviews/round-1.rst",
+      "sha256": "976020305247eaaf8e74b6c680ab3a460dd16f5d92d4dfaf9448fa8b33914b64",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-2.rst",
+      "sha256": "727e5a7e94243f860e90e1f4815bfa6db346db319496adb34acf28c2f7add755",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-3.rst",
+      "sha256": "e411596fd77548dce2f74439cfbd6303dd5b2c3e8fcf886818fdcbf433da7680",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-4.rst",
+      "sha256": "d4818a73471da00218bc68478e31587cdab7bd6b351077bb477e4986499b765c",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-5.rst",
+      "sha256": "eb9926e77f4b2685f92ef7929425c290f97241134594fbc55333b332b5baf8b7",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-6.rst",
+      "sha256": "8b4cddad640ea17a93211aa27587869ff542f957e97bdfd957da37f71819558e",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-7.rst",
+      "sha256": "61d908aa7cf6477a55b61207898c9d2eff2059a76317656cdf14d1bab58db0ca",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/concept-reviews/round-8.rst",
+      "sha256": "992d471a544184c8478f1f0783d2063f2c4101b3e5bdbdda43d5a3aac1a79fe7",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-candidate-1/index.rst",
+      "sha256": "c292a9df0c044ac05c5e5f09195a10cd4e961314c6611775d4def896ef2a8360",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-candidate-1/publication.rst",
+      "sha256": "14dd4399f81a98417e850a8e7fe67efde104e7b6d416a61907d7e65fc96c373b",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-candidate-2/index.rst",
+      "sha256": "299045b780e6398413ce7bcac30ba40c80856f26e837303aeaf154de98f11856",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-candidate-3/index.rst",
+      "sha256": "21d976431e22a7ca7099f7bdd8e3516270167be279dd7d677c3499265f0990f8",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-candidate-4/index.rst",
+      "sha256": "69cc96895ed39516ce373abd5d590b049486daef32c5a930d41e0661181f9b55",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.1.0-final/index.rst",
+      "sha256": "4422fb342d50ff6822cfed2265db1ef6eab6e18850e71bca240db46d3571bece",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-candidate-1/index.rst",
+      "sha256": "b08eb025705f1a3a8d9152d318b050d64e9caa7f364b44265ee6544cfea7ebff",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-candidate-2/index.rst",
+      "sha256": "3b57b08cc888d41933cd61f19c141c0eed1c6d912ab6f722057068ba5809add7",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-candidate-3/index.rst",
+      "sha256": "a4d9f302ab705b34268c0728cc427cd84fa412e17cc9c253e69d1c27495116fd",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-candidate-4/index.rst",
+      "sha256": "57aaaf70fcee438459edeeea93b764907b4104932c2db673133d0c697633f7bf",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-candidate-5/index.rst",
+      "sha256": "fa8db6358f3d380f72834ef72ee85b6445889530c2e2c4ecef72290773db8809",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-final/index.rst",
+      "sha256": "0f3c3c956339ef6aa32550259da649e5a97c556d1655c3e5e6ae3822d2255065",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-method-1/cases.rst",
+      "sha256": "fb3cf1a0343995032d9b1b47da8eac52fd181d01cb465531803649be1492e7e1",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-method-1/index.rst",
+      "sha256": "7e86ae44e6e8c0c909f5266e7241a0a9e252cf8a7e72ba64f6bbab31deb89aea",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-method-2/cases.rst",
+      "sha256": "7c688403abe5d30585e0217f5040a5304f12ebc3f0a9f230c06d2381b78bb2a5",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/0.2.0-method-2/index.rst",
+      "sha256": "cceb60443bb60e5455d657a939c9c182adc590c0ce66470cda98b7d628207ae5",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/1.0.0-canceled.rst",
+      "sha256": "4db648a158322c60c5343ecac8f00e48357e522714beb789ad3c163c62363252",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/1.0.0-candidate-1/cases.rst",
+      "sha256": "49167be72491b00679440b0a60739a1ab3dc36e20057f5eb4c4273f26f392e6f",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/1.0.0-candidate-1/cleanup-review.rst",
+      "sha256": "f7cacfae8e84c672825fe131db8efa4df4fe967f578e7fcf20de101d6ea1ef5d",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/1.0.0-candidate-1/index.rst",
+      "sha256": "30528fc8b70ebdca5c1b63c5fa75bada2857056575af14f7e72a31334d5a7f70",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/1.0.0-candidate-1/qualification.rst",
+      "sha256": "d35ef3691c0292aa83a141678ebf677dcd7500b078f3dded2307219ff5085dfb",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/index.rst",
+      "sha256": "49728dba6fed8d3a12f0d6eaca931b0e60533e1adc11fef10cefc869bc38d702",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/maintenance-2026-10-24/cases.rst",
+      "sha256": "2382b5d6317e4521e08efbd31455d7510dc62103638e7ba4d8aba88f90d9d76b",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/maintenance-2026-10-24/dependency-audit.rst",
+      "sha256": "46742b3bcb4acb37f39edd2fd4ad6e8318c5196990f97d8e5386c602ea97f976",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/maintenance-2026-10-24/index.rst",
+      "sha256": "c3bb6e842eab0443f04b8f98bb043e95f1f4af7fa8825dbdc3e88d75900b42e2",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/method-migration-handover.rst",
+      "sha256": "723d58df3950046ae211ffe1a1f61222e826ee13fb8d92ff9cd807481f136658",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/pr013-poc/index.rst",
+      "sha256": "b372da463214ace0787f632af8d6f32606c64fe7da6032cd535b115f5926f589",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-001-003-fix/cases.rst",
+      "sha256": "188456e47634d4db111a68a1e4cd198c828d4f12afe3bfedc4a2b22ac9aa50ce",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-001-003-fix/index.rst",
+      "sha256": "935b97299c464294ff4755140d87afa980331bc437f7cbfd78b8546aea98069e",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-002-fix/cases.rst",
+      "sha256": "9c11b2138b100fa381e370e36ed92768e7e6ba1d1d42bb5ec2b08888d62df507",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-002-fix/index.rst",
+      "sha256": "e234462710138ae21f3f4073195bf8408ae291447a32a74bfc8147bc5795a3e0",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-004-fix/cases.rst",
+      "sha256": "8e0c6345f29a633fd2ef5bd99b0684a3f147491142b6e3c4122c7f7e57e81273",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-004-fix/index.rst",
+      "sha256": "679fc9552e1e4884add49227f38692e2e4dfccfdadf39f4ad1e17b709543c29a",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-005-fix/cases.rst",
+      "sha256": "cf193b599dfc9b9c10f56cdd915e7b67441fd31e647e0fdfb966cd405d6ae77c",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-005-fix/index.rst",
+      "sha256": "55f65f0e056d0a95e5fac3bc8591f407f3a5c92bd574d13994cb08fde26ae34a",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-006-fix/cases.rst",
+      "sha256": "672f1b89a7c8375cff97ab2eddc9c7d2f11836936caa6fecd5fb043c5f53bbfc",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/test-execution/prsa-006-fix/index.rst",
+      "sha256": "2bc6203dc0d92d117bfec2f9803390bcf7062e23cdde08a2f7ca3f759ea6fe82",
+      "scope": "retained historical context; not newly accepted"
+    },
+    {
+      "path": "docs/problem-tickets/STV_PR_013.rst",
+      "sha256": "0e8b3cd5a2ae93f8e8657d7f25fc8f299ecd045948f5e2c7fc3ada51fe9c05a8",
+      "scope": "PR013 final implementation/evidence review"
+    },
+    {
+      "path": "docs/test-scripts/index.rst",
+      "sha256": "df1a10be87230a3294a955fc74e35bd2594fff7bf567f5c7317c2ebbfda8d991",
+      "scope": "PR013 final implementation/evidence review"
+    },
+    {
+      "path": "docs/test-execution/pr013-final/index.rst",
+      "sha256": "18523b029d4f638851aa6888e3ae78d2775ad8b9b86c2d3fa43b0ef4e8d8a0cb",
+      "scope": "PR013 final implementation/evidence review"
+    },
+    {
+      "path": "docs/test-execution/pr013-final/cases.rst",
+      "sha256": "fefd76c936b8b5a7e14fbdbcd8d40832964e5cc976a30662b777e486c7d9851c",
+      "scope": "PR013 final implementation/evidence review"
+    }
+  ]
+}

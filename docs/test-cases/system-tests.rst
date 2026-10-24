@@ -204,7 +204,7 @@ STV_TC_SY_003: missing placeholder and detail error
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
-   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08, STV_TE_B71B51810DD8B805, STV_TE_98FA5AFD1CF5BE75, STV_TE_0B004B872559B017
+   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08, STV_TE_B71B51810DD8B805, STV_TE_98FA5AFD1CF5BE75, STV_TE_0B004B872559B017, STV_TE_6AA25FA7CA5F5192, STV_TE_CECBFB91BF01D342
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -245,6 +245,12 @@ STV_TC_SY_003: missing placeholder and detail error
               browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
               wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
               missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+              # Stable navigation can discover a node left of the current viewport.
+              # Check its identity, then explicitly fit before testing visible content.
+              assert 'MISSING_A' in missing.get_attribute('textContent')
+              geometry=browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)
+              browser.execute_script('[...arguments[0].querySelectorAll(".stv-toolbar button")].find(b=>b.textContent==="Reset viewport").click()',root)
+              assert browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)==geometry
               assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
               assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
               inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
@@ -756,7 +762,7 @@ STV_TC_SY_012: missing placeholder and detail error
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
-   :executed_by: STV_TE_69D0670DBA913348, STV_TE_7FB8F491ACEA8640, STV_TE_134FB6EFA234AE0A, STV_TE_C907D3DAAB33A698, STV_TE_F460306704A9DB56
+   :executed_by: STV_TE_69D0670DBA913348, STV_TE_7FB8F491ACEA8640, STV_TE_134FB6EFA234AE0A, STV_TE_C907D3DAAB33A698, STV_TE_F460306704A9DB56, STV_TE_F9FF69F5AF8B80F1, STV_TE_64C890A655FDC0CE
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -797,6 +803,12 @@ STV_TC_SY_012: missing placeholder and detail error
               browser.execute_script('arguments[0].focus()',control);control.send_keys(Keys.ENTER)
               wait.until(lambda d:root.get_attribute('data-stv-revision')=='1')
               missing=root.find_element(By.CSS_SELECTOR,'.stv-missing')
+              # Stable navigation can discover a node left of the current viewport.
+              # Check its identity, then explicitly fit before testing visible content.
+              assert 'MISSING_A' in missing.get_attribute('textContent')
+              geometry=browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)
+              browser.execute_script('[...arguments[0].querySelectorAll(".stv-toolbar button")].find(b=>b.textContent==="Reset viewport").click()',root)
+              assert browser.execute_script('return [...arguments[0].querySelectorAll(".stv-node")].map(n=>[n.dataset.key,n.style.left,n.style.top])',root)==geometry
               assert 'MISSING_A' in missing.text and 'Missing object' in missing.text
               assert not missing.find_elements(By.CSS_SELECTOR,'a,button')
               inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
@@ -1141,7 +1153,7 @@ STV_TC_SY_017: large project at visible capacity
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_043, STV_SHR_044, STV_SWR_043, STV_SWR_044, STV_SYS_008
-   :executed_by: STV_TE_010F955390602276, STV_TE_5FEC76D970E683E5, STV_TE_3A0908374B1E6391
+   :executed_by: STV_TE_010F955390602276, STV_TE_5FEC76D970E683E5, STV_TE_3A0908374B1E6391, STV_TE_FC0887B66F8AAE1A
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2339,7 +2351,7 @@ STV_TC_SY_035: large project at visible capacity
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_043, STV_SHR_044, STV_SWR_043, STV_SWR_044, STV_SYS_008
-   :executed_by: STV_TE_EA4C3D20E892A129, STV_TE_A62ED5B70EFE8DD0, STV_TE_8DB38CDB318CBFBD
+   :executed_by: STV_TE_EA4C3D20E892A129, STV_TE_A62ED5B70EFE8DD0, STV_TE_8DB38CDB318CBFBD, STV_TE_1B0FA04DA16E3401
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -3387,3 +3399,102 @@ STV_TC_SY_057: CI runtime command imports the installed Python 3.10 package
    **Evidence:** Retain actual reports, commands and source/artifact identities
    in :doc:`../test-execution/prsa-006-fix/index`. Case design review is pending;
    local verification does not prove a hosted run or attestation occurred.
+
+STV_TC_SY_058: Stable keyboard navigation and project root toggles
+------------------------------------------------------------------
+
+.. test_case:: Stable keyboard navigation and project root toggles
+   :id: STV_TC_SY_058
+   :status: accepted
+   :tags: release_initial, test_system, navigation_stability
+   :basis: documented
+   :evidence: docs/test-scripts/test_position_stability.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_054, STV_SWR_058
+   :executed_by: STV_TE_BFC00DA35F1B2273
+   :last_result: passed
+
+   **Level/environment:** System browser integration: Windows, Firefox/geckodriver, both file and loopback HTTP, external network blocked.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector/invocation:** ``test_group_navigation_keeps_existing_nodes_still``
+   and ``test_project_root_preserves_anchor`` in ``test_position_stability.py``;
+   also ``test_async_layout_failure_and_stale_completion`` in ``test_browser.py``;
+   run with pytest using STV_GECKODRIVER.
+
+   **Inputs/procedure:** Build isolated P/Q seeds, A-F children; focus and activate
+   P,Q,P,P controls with Enter, recording all before/after world and screen boxes.
+   Repeat for a seedless project root with collapsed/reopened stakeholder entries.
+
+   **Expected:** All surviving nodes in the simple unchanged-height fixture move
+   less than 0.5 px, clicked focus is restored without native scrolling, revision
+   advances once per successful toggle and root coordinates remain stationary.
+   The async harness additionally asserts last-successful snapshot identity after
+   failure/stale work; independent-view cases remain complementary gates.
+
+STV_TC_SY_059: Negative route rendering and viewport reset
+----------------------------------------------------------
+
+.. test_case:: Negative route rendering and viewport reset
+   :id: STV_TC_SY_059
+   :status: accepted
+   :tags: release_initial, test_system, navigation_stability
+   :basis: documented
+   :evidence: docs/test-scripts/test_position_stability.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_054, STV_SWR_059
+   :executed_by: STV_TE_E018DFA57A2EB582
+   :last_result: passed
+
+   **Level/environment:** System browser integration: Windows, Firefox/geckodriver, both file and loopback HTTP, external network blocked.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector/invocation:** ``test_arrow_viewport_covers_negative_routes`` in
+   ``test_position_stability.py`` with pytest and STV_GECKODRIVER.
+
+   **Inputs/procedure:** Expand downward P to five children (negative x), and upward
+   A to P then R with a wrapping relation label (negative y). Read final SVG route
+   points, viewBox and screen CTM. Record retained node positions. Activate Reset
+   viewport and inspect fitted node boxes; repeat on file and HTTP.
+
+   **Expected:** At least one negative point in each configured direction fixture,
+   every route point inside the padded viewBox, and first/last route endpoints on
+   node boundaries within 2 screen px. Surviving nodes do not move on toggles.
+   Reset fits all node boxes inside the viewport without changing world positions;
+   markers and paths remain visible. Pan/zoom and focus have existing adjacent cases.
+
+STV_TC_SY_060: Natural seeded order survives expansion
+------------------------------------------------------
+
+.. test_case:: Natural seeded order survives expansion
+   :id: STV_TC_SY_060
+   :status: accepted
+   :tags: release_initial, test_system, navigation_stability
+   :basis: documented
+   :evidence: docs/test-scripts/test_position_stability.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_055, STV_SWR_060
+   :executed_by: STV_TE_873F1D2F001CA837
+   :last_result: passed
+
+   **Level/environment:** System browser integration: Windows, Firefox/geckodriver, both file and loopback HTTP, external network blocked.
+
+   **Preconditions:** Rebuilt local browser asset and isolated fixtures. Current
+   development identity is retained separately from historical PoC evidence.
+
+   **Selector/invocation:** ``test_initial_numeric_seed_order`` in
+   ``test_position_stability.py`` with pytest and STV_GECKODRIVER.
+
+   **Inputs/procedure:** Build shuffled REQ_20, REQ_10, REQ_3, REQ_2, REQ_1 seeds,
+   read actual DOM/world x ordering and expand REQ_2 to CHILD_A.
+
+   **Expected:** Initial left-to-right IDs are REQ_1, REQ_2, REQ_3, REQ_10, REQ_20;
+   all existing world/screen coordinates remain within 0.5 px after expansion.
+   Project-mode ordering is independently covered by STV_TC_SW_045.

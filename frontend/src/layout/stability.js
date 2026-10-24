@@ -1,4 +1,6 @@
-// PR013 proof of concept: preserve surviving slots instead of recentering them.
+// Preserve committed navigation slots after fresh semantic placement (ADR 008).
+// Only the clicked band is anchored in y; other bands make room for growth.
+// Shared tests may change median rank and are appended in their new band.
 export function stabilize(nodes,ranks,bands,previous,anchor) {
   if(!previous?.nodes?.has(anchor)||!nodes.has(anchor)||!previous.bandTops)return;
   const oldAnchor=previous.nodes.get(anchor),freshAnchor=nodes.get(anchor);
