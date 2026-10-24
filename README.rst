@@ -8,7 +8,7 @@ Project maturity and review records are maintained in ``docs/maturity.rst``.
 Build documentation
 -------------------
 
-Run the PowerShell script using the project's existing ``.venv`` (Python 3.10+).
+Run the PowerShell script using the project's existing ``.venv`` (Python 3.11+ for documentation tooling).
 On the first run, install the pinned documentation dependencies and build::
 
    .\build-docs.ps1 -InstallDependencies
@@ -240,3 +240,12 @@ the release runner derive their versions from it. The private frontend build
 is unversioned. Replace the validator example's ``<major.minor>`` with the
 documentation version. Historical release/review records and dependency versions
 are immutable evidence, not values to update during a version bump.
+
+Historical distributions
+------------------------
+
+Retained historical archives require the license supplement in
+``docs/licensing/historical/`` (project MIT license, full third-party notices,
+source references and archive hashes). Keep those materials with any copy.
+Historical artifacts remain evidence; their original bytes are unchanged and
+current documentation no longer offers them as binary downloads.

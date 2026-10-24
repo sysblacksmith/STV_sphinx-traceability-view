@@ -1,0 +1,357 @@
+[
+  {
+    "name": "Jinja2",
+    "version": "3.1.6",
+    "advisories": []
+  },
+  {
+    "name": "MarkupSafe",
+    "version": "3.0.4",
+    "advisories": []
+  },
+  {
+    "name": "PySocks",
+    "version": "1.7.1",
+    "advisories": []
+  },
+  {
+    "name": "PyYAML",
+    "version": "6.0.3",
+    "advisories": []
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0",
+    "advisories": []
+  },
+  {
+    "name": "Sphinx",
+    "version": "8.1.3",
+    "advisories": []
+  },
+  {
+    "name": "alabaster",
+    "version": "1.0.0",
+    "advisories": []
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "advisories": []
+  },
+  {
+    "name": "babel",
+    "version": "2.18.0",
+    "advisories": []
+  },
+  {
+    "name": "beautifulsoup4",
+    "version": "4.13.5",
+    "advisories": []
+  },
+  {
+    "name": "build",
+    "version": "1.3.0",
+    "advisories": []
+  },
+  {
+    "name": "certifi",
+    "version": "2026.10.23",
+    "advisories": []
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1",
+    "advisories": []
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.2",
+    "advisories": []
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "advisories": []
+  },
+  {
+    "name": "contourpy",
+    "version": "1.4.0",
+    "advisories": []
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "advisories": []
+  },
+  {
+    "name": "docutils",
+    "version": "0.21.2",
+    "advisories": []
+  },
+  {
+    "name": "fonttools",
+    "version": "4.67.0",
+    "advisories": []
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "advisories": []
+  },
+  {
+    "name": "hatchling",
+    "version": "1.27.0",
+    "advisories": []
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "advisories": []
+  },
+  {
+    "name": "imagesize",
+    "version": "2.0.1",
+    "advisories": []
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "advisories": []
+  },
+  {
+    "name": "jsonschema_rs",
+    "version": "0.37.4",
+    "advisories": []
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "advisories": []
+  },
+  {
+    "name": "markdown-it-py",
+    "version": "3.0.0",
+    "advisories": []
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.10.8",
+    "advisories": []
+  },
+  {
+    "name": "mdit-py-plugins",
+    "version": "0.6.1",
+    "advisories": []
+  },
+  {
+    "name": "mdurl",
+    "version": "0.1.2",
+    "advisories": []
+  },
+  {
+    "name": "minijinja",
+    "version": "2.24.0",
+    "advisories": []
+  },
+  {
+    "name": "myst-parser",
+    "version": "4.0.1",
+    "advisories": []
+  },
+  {
+    "name": "numpy",
+    "version": "2.5.4",
+    "advisories": []
+  },
+  {
+    "name": "outcome",
+    "version": "1.3.0.post0",
+    "advisories": []
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "advisories": []
+  },
+  {
+    "name": "pathspec",
+    "version": "1.1.1",
+    "advisories": []
+  },
+  {
+    "name": "pillow",
+    "version": "13.0.0",
+    "advisories": []
+  },
+  {
+    "name": "pip",
+    "version": "26.2.2",
+    "advisories": []
+  },
+  {
+    "name": "pluggy",
+    "version": "1.7.0",
+    "advisories": []
+  },
+  {
+    "name": "pycparser",
+    "version": "3.12",
+    "advisories": []
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "advisories": []
+  },
+  {
+    "name": "pyproject_hooks",
+    "version": "1.3.3",
+    "advisories": []
+  },
+  {
+    "name": "pytest",
+    "version": "9.1.1",
+    "advisories": []
+  },
+  {
+    "name": "python-dateutil",
+    "version": "3.0.0",
+    "advisories": []
+  },
+  {
+    "name": "requests",
+    "version": "2.34.2",
+    "advisories": []
+  },
+  {
+    "name": "requests-file",
+    "version": "2.1.0",
+    "advisories": []
+  },
+  {
+    "name": "selenium",
+    "version": "4.35.0",
+    "advisories": []
+  },
+  {
+    "name": "setuptools",
+    "version": "84.2.1",
+    "advisories": []
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "advisories": []
+  },
+  {
+    "name": "sniffio",
+    "version": "1.3.1",
+    "advisories": []
+  },
+  {
+    "name": "snowballstemmer",
+    "version": "3.1.1",
+    "advisories": []
+  },
+  {
+    "name": "sortedcontainers",
+    "version": "2.4.0",
+    "advisories": []
+  },
+  {
+    "name": "soupsieve",
+    "version": "3.0.4",
+    "advisories": []
+  },
+  {
+    "name": "sphinx-data-viewer",
+    "version": "0.1.5",
+    "advisories": []
+  },
+  {
+    "name": "sphinx-needs",
+    "version": "8.2.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinx_rtd_theme",
+    "version": "3.1.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-applehelp",
+    "version": "2.0.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-devhelp",
+    "version": "2.0.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-htmlhelp",
+    "version": "2.1.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-jquery",
+    "version": "4.1",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-jsmath",
+    "version": "2.0.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-qthelp",
+    "version": "2.0.0",
+    "advisories": []
+  },
+  {
+    "name": "sphinxcontrib-serializinghtml",
+    "version": "2.0.0",
+    "advisories": []
+  },
+  {
+    "name": "trio",
+    "version": "0.30.0",
+    "advisories": []
+  },
+  {
+    "name": "trio-websocket",
+    "version": "0.12.2",
+    "advisories": []
+  },
+  {
+    "name": "trove-classifiers",
+    "version": "2026.9.21.13",
+    "advisories": []
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.14.1",
+    "advisories": []
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.5",
+    "advisories": []
+  },
+  {
+    "name": "urllib3",
+    "version": "2.8.0",
+    "advisories": []
+  },
+  {
+    "name": "websocket-client",
+    "version": "1.8.0",
+    "advisories": []
+  },
+  {
+    "name": "wsproto",
+    "version": "1.3.2",
+    "advisories": []
+  }
+]

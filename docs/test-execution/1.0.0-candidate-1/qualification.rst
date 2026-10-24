@@ -66,7 +66,7 @@ Supplemental evidence and handover drafts
 * :download:`Package inspection <package-review.json>`
 * :download:`Shared tool hashes <shared-tool-hashes.json>`
 * :download:`Preparation and importer identity <preparation.json>`
-* :download:`Tested source archive <artifacts/sphinx_traceability_view-1.0.0.tar.gz>`
+* Historical tested source archive ``artifacts/sphinx_traceability_view-1.0.0.tar.gz``; :doc:`license supplement <../../licensing/historical/index>`
 * :download:`Proposed preparation commit <commit-message.txt>`
 * :download:`Conditional tag template <tag-release.ps1.txt>`
 * :download:`Draft GitHub release notes <github-release-notes.md.txt>`

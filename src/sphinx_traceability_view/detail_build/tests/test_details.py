@@ -54,3 +54,21 @@ def test_active_embed_urls_are_not_retained_as_navigation():
     result=BeautifulSoup(transform(markup,'page.html',set()),'html.parser')
     assert not result.find_all(['iframe','script','object','a'])
     assert result.img['src']=='data:image/png;base64,AAAA'
+
+
+@pytest.mark.requirements('STV_SWR_015','STV_SWR_017','STV_SWR_018')
+def test_reserved_transport_attributes_are_never_copied_from_authored_html():
+    markup='''<div data-stv-style="background: url(https://example.invalid/x)">
+    <a data-stv-href="javascript:window.auditMarker=1">inert</a>
+    <img data-stv-src="https://example.invalid/x" data-stv-srcset="https://example.invalid/y 1x">
+    <style data-stv-css="@import url(https://example.invalid/z)"></style>
+    <img src="images/local.png" data-stv-src="https://example.invalid/forged">
+    <a href="other.html#A" data-stv-href="javascript:bad()">valid</a></div>'''
+    result=BeautifulSoup(transform(markup,'index.html',set()),'html.parser')
+    assert not result.find('a',string='inert').has_attr('data-stv-href')
+    assert not result.div.has_attr('data-stv-style')
+    assert not result.find_all(attrs={'data-stv-srcset':True})
+    assert 'example.invalid' not in str(result)
+    assert 'javascript:' not in str(result)
+    assert result.find('img',src='images/local.png')['data-stv-src']=='images/local.png'
+    assert result.find('a',string='valid')['data-stv-href']=='other.html#A'

@@ -12,6 +12,9 @@ if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
     throw 'Missing .venv/Scripts/python.exe. Create the project virtual environment first.'
 }
 
+& $python -c 'import sys; sys.exit(0 if sys.version_info >= (3, 11) else "Documentation tooling requires Python 3.11 or newer.")'
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
 if ($InstallDependencies) {
     & $python -m pip install -r (Join-Path $PSScriptRoot 'requirements-docs.txt')
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

@@ -1,0 +1,4 @@
+# Shared patched bootstrap / HTTPS tooling for development and qualification.
+pip==26.2.2
+setuptools==84.2.1
+certifi==2026.10.23

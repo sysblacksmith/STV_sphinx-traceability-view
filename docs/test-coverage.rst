@@ -75,15 +75,19 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html``;
        ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
        ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
-       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
+       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``
    * - :need:`STV_SWR_016`
      - Activation from file and HTTP output opens the correct cross-page object and preserves exploration.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
@@ -95,12 +99,17 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html``;
        ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
        ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
-       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
+       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``
    * - :need:`STV_SWR_018`
      - The same nested-page bundle works below a non-root HTTP prefix and through file URLs.
      - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
@@ -108,10 +117,14 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_portable_paths_preserve_queries_and_fragments``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
        ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
-       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root``
    * - :need:`STV_SWR_019`
      - A two-parent fixture changes between one shared node and two occurrences using the selector.
      - Deferred occurrence-mode release; no runtime delivered.
@@ -289,7 +302,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
+       ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``
    * - :need:`STV_SWR_050`
      - A visible object exposes equivalent information through hover and keyboard Details activation. The panel permits keyboard scrolling and dismissal with focus restored to its trigger; new-tab node navigation remains a separate action.
      - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
@@ -418,11 +433,13 @@ Executable sources
 * ``docs/test-scripts/test_browser.py``
 * ``docs/test-scripts/test_build.py``
 * ``docs/test-scripts/test_capacity.py``
+* ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_windows_paths.py``
 * ``frontend/src/inspect/tests/inspect.test.js``
+* ``frontend/src/inspect/tests/urls.test.js``
 * ``frontend/src/layout/tests/layout.test.js``
 * ``frontend/src/render/tests/groups.test.js``
 * ``frontend/src/render/tests/seeds.test.js``

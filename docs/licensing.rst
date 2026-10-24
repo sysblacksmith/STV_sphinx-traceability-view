@@ -41,3 +41,16 @@ EPL-1.0 material. ``vendor/ELK-INVENTORY.json`` travels with generated views.
 The build rejects a changed ELK binary/version or changed audited legal inputs
 until the inventory is deliberately renewed. This scope covers STV's shipped
 browser assets; it does not assert a bit-for-bit rebuild of upstream ELK.
+
+Historical versions
+--------------------------------------------------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   licensing/historical/index
+
+The supplement supplies missing license/source context for retained historical
+archives by exact hash. Keep it with those archives when redistributing them.
+Historical binary download links have been retired without changing their
+original test results or stored bytes.

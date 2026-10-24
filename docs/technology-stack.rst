@@ -243,3 +243,16 @@ and Xbase/Xtend (EPL-2.0); Babel/Browserify wrappers and the browser Worker shim
 have separate notices. See :doc:`licensing` and the source/hash inventory in
 ``frontend/legal/elk-inventory.json``. Frontend notices derive npm dependencies
 from actual esbuild inputs and append maintained compiled-dependency notices.
+
+Patched maintainer tooling
+--------------------------------------------------------------------------------
+
+Package runtime remains Python 3.10+. Documentation and implementation tooling
+use Python 3.11+ so the patched Pillow release can be installed. Direct versions
+are maintained in ``requirements-docs.txt``, the implementation requirements,
+and shared ``requirements-tooling.txt``. The latter pins patched pip,
+setuptools and certifi for both environments and offline consumer bootstrap.
+Pillow is a documentation/plotting dependency, not a base runtime dependency.
+The Python 3.10-compatible runtime wheelhouse is refreshed separately and
+checked through an offline installed-wheel host. Historical environment logs
+remain evidence rather than being updated to the new package versions.

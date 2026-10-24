@@ -1,0 +1,25 @@
+{
+  "baseline": "4b1199e1156cb95404cd0365f7dce27d7891ee7f",
+  "scope": "PRSA-002 development fix; no release build or qualification",
+  "commands": {
+    "pytest": ".venv-implementation/Scripts/python.exe -m pytest src/sphinx_traceability_view/detail_build/tests docs/test-scripts/test_detail_transport.py docs/test-scripts/test_browser.py -k \"details or transport_markers or offline_exploration\" -q --junitxml=docs/test-execution/prsa-002-fix/pytest.xml",
+    "node": "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/prsa-002-fix/node.xml src/*/tests/*.test.js (cwd: frontend)"
+  },
+  "environment": {
+    "python": "Python 3.10.9",
+    "node": "v24.21.0",
+    "browser": "Firefox 158.0.1",
+    "driver": "geckodriver 0.37.1",
+    "platform": "Windows",
+    "driver_configuration": "STV_GECKODRIVER explicitly set to provisioned driver"
+  },
+  "sha256": {
+    "src/sphinx_traceability_view/detail_build/__init__.py": "4f6eeb92abe69cc7b84fd956fe43c0f1beb7c4d2b98c32f4c2fe879e1c804a53",
+    "frontend/src/inspect/inspect.js": "ab368bb8bf0d45d6f09c60fa6548ab0a4144b6b8d75d062a8b8d4d7b1d368820",
+    "frontend/src/inspect/urls.js": "bfdba0ab7a67d12508e5343902b6c28520bb786995a0d3cf5e89c040b5e7d1df",
+    "src/sphinx_traceability_view/static/stv.js": "05f85d7e3c415a17db21c11e65cebd3fb06b91ccf30862208548421afbcb2f53",
+    "src/sphinx_traceability_view/detail_build/tests/test_details.py": "a85e490dbb36059e8507127dd9161345fb5295fdd75f2eb7d5c07202cb3bd9ca",
+    "frontend/src/inspect/tests/urls.test.js": "d3eeffd87210b9c8c2c53c2dfe00c4380f1d4f3337fa6d7233ce81c3703a3b6c",
+    "docs/test-scripts/test_detail_transport.py": "5d7ef18076836969ce1f7b68b92a79b64b7e2257aec66d877d48bb86e8b4d74f"
+  }
+}

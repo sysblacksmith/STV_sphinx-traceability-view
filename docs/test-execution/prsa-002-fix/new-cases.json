@@ -1,0 +1,42 @@
+[
+  [
+    "STV_TC_TRANSPORT_ATTRS",
+    "Reserved authored transport attributes are discarded",
+    "software",
+    "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "STV_SWR_015, STV_SWR_017, STV_SWR_018",
+    "Transform forged href, image, srcset and CSS markers alongside genuine local attributes. Require forged values absent and valid markers regenerated."
+  ],
+  [
+    "STV_TC_DETAIL_URLS",
+    "Restored URLs obey the output-local policy",
+    "software",
+    "frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "STV_SWR_017, STV_SWR_018",
+    "Resolve local image paths under file and HTTP roots. Reject active schemes, remote, absolute, escaping and encoded-separator paths. Permit raster data images only for image resources."
+  ],
+  [
+    "STV_TC_DETAIL_CSS",
+    "Restored CSS rejects unchecked resources",
+    "software",
+    "frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "STV_SWR_015, STV_SWR_017",
+    "Require canonical local CSS URLs to resolve; remote URLs become none. Imports, unquoted URLs and escaped syntax are rejected."
+  ],
+  [
+    "STV_TC_TRANSPORT_FILE",
+    "Authored transport markers remain inert over file",
+    "system",
+    "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]",
+    "STV_SWR_015, STV_SWR_017, STV_SWR_018, STV_SWR_049",
+    "Build and open the real fixture in Firefox over file. Open details and click the inert link; require no marker execution or loopback beacon requests, no forged src/srcset, and preserved local images, srcset, navigation, CSS and table."
+  ],
+  [
+    "STV_TC_TRANSPORT_HTTP",
+    "Authored transport markers remain inert over HTTP",
+    "system",
+    "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]",
+    "STV_SWR_015, STV_SWR_017, STV_SWR_018, STV_SWR_049",
+    "Repeat the file regression over a loopback HTTP server, with the same expected outcomes and explicit external navigation link retained without activation."
+  ]
+]

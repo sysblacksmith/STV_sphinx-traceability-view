@@ -210,3 +210,16 @@ and references its digest and URL; fragment registration remains keyed by that
 same full digest. No digest is truncated. Windows file-URL consumers still need
 an output root short enough that the complete asset path fits their browser's
 path support; arbitrary-depth output roots are not promised.
+
+Detail transport marker ownership
+---------------------------------
+
+``data-stv-*`` attributes are reserved for the detail extractor. Remove all
+such attributes from authored HTML before generating transport markers from
+validated ordinary attributes. The inspector independently restores only
+output-local relative paths or permitted raster data images; it rejects active
+schemes, remote/absolute paths, traversal and escaped separators. Ordinary
+external navigation links remain explicit reader actions. CSS transport accepts
+canonical quoted local ``url()`` values and rejects imports and escaped syntax.
+This closes :need:`STV_PR_007` within :need:`STV_SWR_015`, :need:`STV_SWR_017`
+and :need:`STV_SWR_018`. Graph state, events and timers are unchanged.

@@ -1,0 +1,4 @@
+2026-10-24 initial development browser attempt:
+Command: .venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_detail_transport.py docs/test-scripts/test_browser.py -k "transport_markers or offline_exploration" -q
+Result: 2 failed, 2 passed, 15 deselected in 48.95s.
+Both new cases failed at the same fixture assertion: Selenium get_attribute('srcset') returned the DOM property empty string for an absent attribute, rather than None. Changed to get_dom_attribute to check absence directly. The fixture also omitted publication of its raw HTML pixel resource; added html_extra_path. The existing file and HTTP offline exploration cases passed. This is a retained summary of tool output, not a reconstructed JUnit report. Final evidence is retained separately.

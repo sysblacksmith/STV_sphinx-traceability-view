@@ -71,7 +71,7 @@ def transform(markup, page, hidden, relation_names=()):
                 tag.decompose()
                 continue
         for attr in list(tag.attrs):
-            if attr.lower().startswith("on"):
+            if attr.lower().startswith(("on", "data-stv-")):
                 del tag[attr]
         resources = []
         for attr in ("href", "xlink:href", "src", "poster"):

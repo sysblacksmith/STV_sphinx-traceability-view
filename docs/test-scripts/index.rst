@@ -15,6 +15,7 @@ the installed wheel. Canonical test-case identities remain in
 
 * ``test_browser.py``
 * ``test_build.py``
+* ``test_detail_transport.py``
 * ``test_capacity.py``
 * ``test_package.py``
 * ``test_release_seeds.py``

@@ -265,7 +265,7 @@ Retained evidence
 * :download:`capacity-browser.json <capacity-browser.json>`
 * :download:`capacity-host.log <capacity-host.log>`
 * :download:`traceability.csv <traceability.csv>`
-* :download:`Tested wheel <artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl>`
+* Historical tested wheel ``artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl``; :doc:`license supplement <../../licensing/historical/index>`
 
 Browser screenshots
 -------------------

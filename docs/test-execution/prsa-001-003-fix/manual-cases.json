@@ -1,0 +1,16 @@
+[
+  [
+    "STV_TC_HISTORICAL_LICENSES",
+    "Retained historical archives carry a complete licensing supplement",
+    "scripts/historical-licenses.py",
+    "Check every available historical Git archive and retained canonical archive. Require the audited upstream ELK fingerprint and byte-identical complete supplement materials; retain immutable artifact hashes.",
+    "historical-licenses.log"
+  ],
+  [
+    "STV_TC_RUNTIME310",
+    "Patched offline distribution remains usable on Python 3.10",
+    "docs/test-execution/prsa-001-003-fix/check-runtime310.py",
+    "Create a Python 3.10 environment, install patched bootstrap tools and the development wheel from the offline wheelhouse, run pip check, build the minimal Sphinx host, and verify installed module identity and copied inventory.",
+    "runtime310.json"
+  ]
+]

@@ -6,6 +6,29 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+PRSA-001 and PRSA-003 remediation
+--------------------------------------------------------------------------------
+
+The owner authorized historical licensing remediation and patched maintainer
+tooling environments. :need:`STV_PR_008` and :need:`STV_PR_009` record scope,
+implementation and checks. :doc:`licensing/historical/index` supplies the
+historical supplement without changing archive bytes or Git history.
+:doc:`test-execution/prsa-001-003-fix/index` records development compatibility
+checks and current advisory results. The package runtime remains Python 3.10+;
+documentation/test tooling requires Python 3.11+. Changed tooling documentation,
+the supplement, new cases and refined offline bootstrap procedure await owner
+review. No release is started.
+
+PRSA-002 security fix awaiting owner review
+-------------------------------------------
+
+The owner authorized remediation of the detail transport-marker bypass.
+:need:`STV_PR_007` links the affected interface and regression evidence in
+:doc:`test-execution/prsa-002-fix/index`. New test designs and the interface
+refinement await owner review. Prior acceptance history is retained; these
+scoped development checks do not qualify a release or change requirement
+verification fields. Later audit findings await individual proposal approval.
+
 Release canceled; maintenance fixes accepted
 ------------------------------------------------
 

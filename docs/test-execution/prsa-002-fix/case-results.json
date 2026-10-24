@@ -1,0 +1,266 @@
+[
+  {
+    "case": "STV_TC_D43DE71AF846",
+    "execution": "STV_TE_8536695936990C4C",
+    "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_8023D1B4838C",
+    "execution": "STV_TE_6F94CA59B5459021",
+    "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_portable_paths_preserve_queries_and_fragments",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_ABB4E85E5F66",
+    "execution": "STV_TE_B76640E82BB4B08E",
+    "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_E6FA25320A8F",
+    "execution": "STV_TE_53E7284FA72B47C2",
+    "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_TRANSPORT_ATTRS",
+    "execution": "STV_TE_CCA62B765D254F7C",
+    "selector": "src/sphinx_traceability_view/detail_build/tests/test_details.py::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_TRANSPORT_FILE",
+    "execution": "STV_TE_55377E9CDFC887DC",
+    "selector": "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_TRANSPORT_HTTP",
+    "execution": "STV_TE_5DD66163012116DE",
+    "selector": "docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_E0AB07ABA378",
+    "execution": "STV_TE_536E631428F4AA4A",
+    "selector": "docs/test-scripts/test_browser.py::test_offline_exploration[file]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_F6E0695BB399",
+    "execution": "STV_TE_CC11AD7C6E64725A",
+    "selector": "docs/test-scripts/test_browser.py::test_offline_exploration[http]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_7016FADA6FBA",
+    "execution": "STV_TE_6C0CA12C41B4B075",
+    "selector": "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_E66A443619C6",
+    "execution": "STV_TE_4BC4C1C6145FF78B",
+    "selector": "docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]",
+    "result": "passed",
+    "report": "pytest.xml",
+    "completed_at": "2026-10-24T14:13:35.940375+00:00"
+  },
+  {
+    "case": "STV_TC_DETAIL_CACHE",
+    "execution": "STV_TE_D8968AC012EF26E9",
+    "selector": "frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_DETAIL_RETRY",
+    "execution": "STV_TE_0B8617656709E9E7",
+    "selector": "frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_DETAIL_URLS",
+    "execution": "STV_TE_0207DD89AED15B7F",
+    "selector": "frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_DETAIL_CSS",
+    "execution": "STV_TE_2CC2981234F683C2",
+    "selector": "frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_2EE2AB9ECAE3",
+    "execution": "STV_TE_8E323BAA20BAF0D0",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: competing parents do not displace a separate centered parent",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_D22785EE6859",
+    "execution": "STV_TE_5B622E47C33C1574",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_08AC936D55F9",
+    "execution": "STV_TE_ED6D5DD283C93A17",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: parent and project center over five visible children",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_880A2E13BCE9",
+    "execution": "STV_TE_64AE754BAA3C5AC3",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_0CAAF47BBD14",
+    "execution": "STV_TE_94927250063F593D",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_2BC87902D1FD",
+    "execution": "STV_TE_593A1688E0921F1A",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_97667EB28A11",
+    "execution": "STV_TE_370AE80A6C4B4504",
+    "selector": "frontend/src/layout/tests/layout.test.js :: STV_SWR_053: blocked skipped-level edges retain safe detours",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_B2EF591B7F1E",
+    "execution": "STV_TE_6AB41CB66F1E96FF",
+    "selector": "frontend/src/render/tests/groups.test.js :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_1BFD0971844A",
+    "execution": "STV_TE_21B8D1B032B99F13",
+    "selector": "frontend/src/render/tests/groups.test.js :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_EB472A6879CF",
+    "execution": "STV_TE_6B60D25F47A795F4",
+    "selector": "frontend/src/render/tests/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_4E68C09504E8",
+    "execution": "STV_TE_E21E322E82331DFB",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_6FE4CFC63C95",
+    "execution": "STV_TE_66A1FC1A7161CC09",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_07D369AD0A2F",
+    "execution": "STV_TE_1BA0A2DFA0FC176E",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_156E45252AF4",
+    "execution": "STV_TE_8C80497400903584",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_024: self-loop terminates and collapse restores the only seed",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_35E510D6991A",
+    "execution": "STV_TE_270215C9234DEAE2",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_AEF53EABA753",
+    "execution": "STV_TE_7DC9B129D46082C8",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_0C2F9B7BE8A7",
+    "execution": "STV_TE_85864291E80152CE",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  },
+  {
+    "case": "STV_TC_1E00212E164D",
+    "execution": "STV_TE_64346932C3231DE0",
+    "selector": "frontend/src/state/tests/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration",
+    "result": "passed",
+    "report": "node.xml",
+    "completed_at": "2026-10-24T14:12:47.559647+00:00"
+  }
+]

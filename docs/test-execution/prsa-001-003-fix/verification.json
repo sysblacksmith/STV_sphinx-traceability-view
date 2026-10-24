@@ -1,0 +1,39 @@
+{
+  "scope": "Development remediation; no new release",
+  "baseline": "4b1199e1156cb95404cd0365f7dce27d7891ee7f",
+  "source_sha256": {
+    "requirements-tooling.txt": "2757691f85b83c49dac755e1a7131be3591899f1bc0ca0092a72c7555d414df6",
+    "requirements-docs.txt": "00f9925b3daa1f9a5c0cd076b1d85afde92b22a0352697178fdb6d5e4b3e2ef7",
+    "docs/architecture/implementation/requirements-implementation.txt": "c813cfeb9a9785d32be0cc4764dc15b803a310055b5a17921378cf5c7e2690c0",
+    "build-docs.ps1": "47236a8d884ea39f8cb35a79e54a0bc2475bce486a141e90a6d4f65cf234f9de",
+    "docs/test-scripts/test_package.py": "c61cb75dd842e52ae7d8172d7af186b78f9290866c2f705f5587765f058992af",
+    "scripts/historical-licenses.py": "f5eef9e3b7d10cfb409d16631b0ac490bcb0a0f24be3f2d6194730f3b83a0ccc",
+    "src/sphinx_traceability_view/static/stv.js": "05f85d7e3c415a17db21c11e65cebd3fb06b91ccf30862208548421afbcb2f53",
+    "src/sphinx_traceability_view/detail_build/__init__.py": "4f6eeb92abe69cc7b84fd956fe43c0f1beb7c4d2b98c32f4c2fe879e1c804a53",
+    "frontend/src/inspect/inspect.js": "ab368bb8bf0d45d6f09c60fa6548ab0a4144b6b8d75d062a8b8d4d7b1d368820",
+    "frontend/src/inspect/urls.js": "bfdba0ab7a67d12508e5343902b6c28520bb786995a0d3cf5e89c040b5e7d1df"
+  },
+  "artifacts": [
+    {
+      "file": "sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+      "sha256": "ca8c4e3f43e7307e549ec42da7ed1d04ceb84d52517dc5672099522256ffbf83"
+    },
+    {
+      "file": "sphinx_traceability_view-1.0.0.dev0.tar.gz",
+      "sha256": "ad2a8635e5b984159d360aa0b331d0af537fb5200ba674798702388439ef5693"
+    }
+  ],
+  "commands": {
+    "python": ".venv-implementation/Scripts/python.exe -m pytest --ignore=docs/test-scripts/test_capacity.py -q --junitxml=docs/test-execution/prsa-001-003-fix/pytest.xml",
+    "node": "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/prsa-001-003-fix/node.xml src/*/tests/*.test.js (cwd frontend)",
+    "build": ".venv-implementation/Scripts/python.exe -m build --no-isolation --outdir docs/_build/prsa003-dist",
+    "runtime310": ".venv-implementation/Scripts/python.exe docs/test-execution/prsa-001-003-fix/check-runtime310.py --python310 <existing Python 3.10 executable>",
+    "history": ".venv-implementation/Scripts/python.exe scripts/historical-licenses.py",
+    "docs": ".venv/Scripts/python.exe -m sphinx -E -a -W --keep-going -b html docs docs/_build/html"
+  },
+  "environment_configuration": {
+    "STV_GECKODRIVER": "Provisioned geckodriver 0.37.1; Firefox 158.0.1",
+    "STV_WHEEL": "docs/_build/prsa003-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+    "STV_CONSUMER_RECORD": "docs/test-execution/prsa-001-003-fix/consumer313"
+  }
+}

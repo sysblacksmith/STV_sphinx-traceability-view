@@ -1,0 +1,11 @@
+{
+  "historical_binary_downloads": [],
+  "rendered_supplement_download_sha256": {
+    "LICENSE.txt": "363726635411461a4f16c757930343bb8d9ab969ba1a41e66d47aee096058929",
+    "THIRD_PARTY_NOTICES.txt": "a960714473502ebd05284a8eec9914a84397ebcbe2eb8b1da81b7fd2c8e9c109",
+    "ELK-SOURCE.txt": "bb1827072b40c849822fdbf1f597201a2a857700dd8643e70f588bdac8ad811b",
+    "ELK-INVENTORY.json": "63edf3a9f3ca0cdb45c4ad32fed7df99ba45c12eb7c09189444774896cfa5b84",
+    "artifacts.json": "0377e749af9247795aba86108e4083b743014b9ca35dfb0c2ac40a83a12c1ad6"
+  },
+  "linked_supplement_files_verified": 5
+}

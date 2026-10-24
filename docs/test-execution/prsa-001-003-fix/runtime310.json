@@ -1,0 +1,72 @@
+{
+  "wheel_sha256": "ca8c4e3f43e7307e549ec42da7ed1d04ceb84d52517dc5672099522256ffbf83",
+  "checks": [
+    {
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse",
+        "-r",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\requirements-tooling.txt"
+      ],
+      "returncode": 0,
+      "stdout": "Looking in links: d:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\nRequirement already satisfied: pip==26.2.2 in .\\lib\\site-packages (from -r D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\requirements-tooling.txt (line 2)) (26.2.2)\nRequirement already satisfied: setuptools==84.2.1 in .\\lib\\site-packages (from -r D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\requirements-tooling.txt (line 3)) (84.2.1)\nRequirement already satisfied: certifi==2026.10.23 in .\\lib\\site-packages (from -r D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\requirements-tooling.txt (line 4)) (2026.10.23)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa003-dist\\sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "stdout": "Looking in links: d:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa003-dist\\sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\beautifulsoup4-4.13.5-py3-none-any.whl (from sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinx_needs-8.2.0-py3-none-any.whl (from sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinx-8.1.3-py3-none-any.whl (from sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\soupsieve-3.0.4-py3-none-any.whl (from beautifulsoup4==4.13.5->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\typing_extensions-4.16.0-py3-none-any.whl (from beautifulsoup4==4.13.5->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_applehelp-2.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_devhelp-2.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_jsmath-2.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_qthelp-2.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\jinja2-3.1.6-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\pygments-2.21.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\docutils-0.21.2-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\snowballstemmer-3.1.1-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\babel-2.18.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\alabaster-1.0.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\imagesize-2.0.1-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\requests-2.34.2-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\packaging-26.3-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\tomli-2.5.0-py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\colorama-0.4.6-py2.py3-none-any.whl (from sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\requests_file-2.1.0-py2.py3-none-any.whl (from sphinx-needs==8.2.0->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\jsonschema_rs-0.37.4-cp310-abi3-win_amd64.whl (from sphinx-needs==8.2.0->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinx_data_viewer-0.1.5-py3-none-any.whl (from sphinx-needs==8.2.0->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\sphinxcontrib_jquery-4.1-py2.py3-none-any.whl (from sphinx-needs==8.2.0->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\minijinja-2.24.0-cp38-abi3-win_amd64.whl (from sphinx-needs==8.2.0->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\charset_normalizer-3.5.2-cp310-cp310-win_amd64.whl (from requests>=2.30.0->sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\idna-3.20-py3-none-any.whl (from requests>=2.30.0->sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\urllib3-2.8.0-py3-none-any.whl (from requests>=2.30.0->sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nRequirement already satisfied: certifi>=2023.5.7 in .\\lib\\site-packages (from requests>=2.30.0->sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0) (2026.10.23)\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\markupsafe-3.0.4-cp310-cp310-win_amd64.whl (from Jinja2>=3.1->sphinx==8.1.3->sphinx-traceability-view==1.0.0.dev0)\nINFO: pip is looking at multiple versions of soupsieve to determine which version is compatible with other requirements. This could take a while.\nProcessing D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse\\soupsieve-2.10-py3-none-any.whl (from beautifulsoup4==4.13.5->sphinx-traceability-view==1.0.0.dev0)\nInstalling collected packages: urllib3, typing-extensions, tomli, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, soupsieve, snowballstemmer, Pygments, packaging, minijinja, MarkupSafe, jsonschema-rs, imagesize, idna, docutils, colorama, charset_normalizer, babel, alabaster, requests, Jinja2, beautifulsoup4, sphinx, requests-file, sphinxcontrib-jquery, sphinx-data-viewer, sphinx-needs, sphinx-traceability-view\n\nSuccessfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 Pygments-2.21.0 alabaster-1.0.0 babel-2.18.0 beautifulsoup4-4.13.5 charset_normalizer-3.5.2 colorama-0.4.6 docutils-0.21.2 idna-3.20 imagesize-2.0.1 jsonschema-rs-0.37.4 minijinja-2.24.0 packaging-26.3 requests-2.34.2 requests-file-2.1.0 snowballstemmer-3.1.1 soupsieve-2.10 sphinx-8.1.3 sphinx-data-viewer-0.1.5 sphinx-needs-8.2.0 sphinx-traceability-view-1.0.0.dev0 sphinxcontrib-applehelp-2.0.0 sphinxcontrib-devhelp-2.0.0 sphinxcontrib-htmlhelp-2.1.0 sphinxcontrib-jquery-4.1 sphinxcontrib-jsmath-2.0.0 sphinxcontrib-qthelp-2.0.0 sphinxcontrib-serializinghtml-2.0.0 tomli-2.5.0 typing-extensions-4.16.0 urllib3-2.8.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\Scripts\\python.exe",
+        "-m",
+        "sphinx",
+        "-W",
+        "-b",
+        "html",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-source",
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html"
+      ],
+      "returncode": 0,
+      "stdout": "Running Sphinx v8.1.3\nloading translations [en]... done\nmaking output directory... done\nbuilding [mo]: targets for 0 po files that are out of date\nwriting output... \nbuilding [html]: targets for 2 source files that are out of date\nupdating environment: [new config] 2 added, 0 changed, 0 removed\nreading sources... [ 50%] index\nreading sources... [100%] requirements\n\nCopying static files for sphinx-data-viewer support\nCopying static files for sphinx-needs datatables support\nCopying static style files for sphinx-needs\nlooking for now-outdated files... none found\npickling environment... done\nchecking consistency... done\nSchema validation completed with 0 warning(s) in 0.000 seconds. Validated 5718 needs/s.\npreparing documents... done\ncopying assets... \ncopying static files... \nWriting evaluated template result to D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html\\_static\\basic.css\nWriting evaluated template result to D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html\\_static\\documentation_options.js\nWriting evaluated template result to D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html\\_static\\language_data.js\nWriting evaluated template result to D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html\\_static\\alabaster.css\ncopying static files: done\ncopying extra files... \ncopying extra files: done\ncopying assets: done\nwriting output... [ 50%] index\nwriting output... [100%] requirements\n\ngenerating indices... genindex done\nwriting additional pages... search done\ndumping search index in English (code: en)... done\ndumping object inventory... done\nbuild succeeded.\n\nThe HTML pages are in ..\\runtime310-html.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\Scripts\\python.exe",
+        "-c",
+        "import sys,importlib.metadata as m,sphinx_traceability_view as s; assert sys.version_info[:2]==(3,10); assert m.version(\"certifi\")==\"2026.10.23\"; assert m.version(\"pip\")==\"26.2.2\"; assert m.version(\"setuptools\")==\"84.2.1\"; print(sys.version);print(s.__file__);print(s.__version__);print(\"certifi\",m.version(\"certifi\"))"
+      ],
+      "returncode": 0,
+      "stdout": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]\nD:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003\\lib\\site-packages\\sphinx_traceability_view\\__init__.py\n1.0.0.dev0\ncertifi 2026.10.23\n",
+      "stderr": ""
+    }
+  ]
+}

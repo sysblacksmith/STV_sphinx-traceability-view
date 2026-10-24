@@ -22,3 +22,6 @@ dist/
 .mypy_cache/
 .tox/
 .nox/
+
+# Keep local security audit reports out of publication.
+/_security-audits/
