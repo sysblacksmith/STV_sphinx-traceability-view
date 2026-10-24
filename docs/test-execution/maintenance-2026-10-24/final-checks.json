@@ -1,0 +1,73 @@
+[
+  {
+    "suite": "documentation-final",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "sphinx",
+      "-E",
+      "-a",
+      "-b",
+      "html",
+      "-W",
+      "--keep-going",
+      "docs",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:52:49.599894+00:00",
+    "finished": "2026-10-24T12:53:03.643915+00:00",
+    "returncode": 0,
+    "log": "documentation-final.log"
+  },
+  {
+    "suite": "traceability-final",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+      "docs/_build/html/needs.json",
+      "--version",
+      "1.0",
+      "--repo-root",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+      "--require-test-coverage",
+      "--csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\traceability-final.csv",
+      "--test-csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\test-traceability-final.csv"
+    ],
+    "started": "2026-10-24T12:53:03.643915+00:00",
+    "finished": "2026-10-24T12:53:03.746019+00:00",
+    "returncode": 0,
+    "log": "traceability-final.log"
+  },
+  {
+    "suite": "diagram-links-final",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\normalize-diagram-links.py",
+      "--diagram-dir",
+      "docs/architecture/diagrams",
+      "--published-dir",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:53:03.746019+00:00",
+    "finished": "2026-10-24T12:53:03.844746+00:00",
+    "returncode": 0,
+    "log": "diagram-links-final.log"
+  },
+  {
+    "suite": "diff-final",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started": "2026-10-24T12:53:03.844746+00:00",
+    "finished": "2026-10-24T12:53:03.917484+00:00",
+    "returncode": 0,
+    "log": "diff-final.log"
+  }
+]

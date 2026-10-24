@@ -32,7 +32,7 @@ location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
 After building, run the shared validator (replace ``<shared-skill>`` with the
 selected reverse-engineer-requirements skill directory)::
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 1.0 --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
+   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version <major.minor> --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
 
 The internal specification includes conventional and channeled derivation paths,
 allocations and containment. Graph validation establishes structural checks;
@@ -275,3 +275,13 @@ The Sphinx documentation includes a Licensing page with the MIT text,
 third-party notices and upstream source-availability information. This license
 selection does not assert employer approval or resolve employment-related IP
 ownership; those questions remain separate from the repository license.
+
+Version maintenance
+-------------------
+
+The sole maintained STV version is ``src/sphinx_traceability_view/_version.py``.
+Hatch reads it for distributions; Sphinx configuration, extension metadata and
+the release runner derive their versions from it. The private frontend build
+is unversioned. Replace the validator example's ``<major.minor>`` with the
+documentation version. Historical release/review records and dependency versions
+are immutable evidence, not values to update during a version bump.

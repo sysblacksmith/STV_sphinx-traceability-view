@@ -6,6 +6,28 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+Release canceled; maintenance fixes accepted
+------------------------------------------------
+
+The owner canceled the release preparation and requested the underlying fixes,
+version centralization, regression tests and acceptance review before another
+release begins. See :doc:`change-requests/STV_CR_012_release-cancellation-and-cleanup`
+and :doc:`test-execution/1.0.0-canceled`. The sole maintained version is now in
+``src/sphinx_traceability_view/_version.py`` and identifies development work.
+No replacement release is started.
+
+The Windows-path report :need:`STV_PR_006` is fixed at its scoped regression
+level. The pinned ELK compiled-dependency notice audit is complete; ADR 007,
+the two inspector cases and the new path/build-guard case designs are accepted
+under :doc:`concept-reviews/round-8`. Latest development outcomes are 79 passing
+distinct cases (59 Python, 20 JavaScript); two capacity cases await future
+release qualification. Existing requirement verification is not promoted.
+
+:doc:`test-execution/maintenance-2026-10-24/index` retains before/after Windows
+path evidence, development regressions and the dependency audit.
+:doc:`concept-reviews/round-8` records the scoped acceptance review. Historical
+release verification is preserved and does not qualify the changed inputs.
+
 1.0.0 release preparation, 2026-10-24
 -------------------------------------
 
@@ -37,8 +59,8 @@ extension setup and generated asset locations remain stable.
 
 :doc:`change-requests/STV_CR_008_component-directories` records scope,
 path migration and actual development verification. The source-organization
-ADR (:ref:`STV_ADR_007`) and two new inspector case designs remain
-proposed/draft pending review. This refactor does not update requirement
+ADR (:ref:`STV_ADR_007`) and two new inspector case designs were initially
+proposed/draft; their scoped acceptance is now recorded in round 8. This refactor does not update requirement
 verification or supersede historical release execution results.
 
 Requirement filenames and test levels, 2026-10-24

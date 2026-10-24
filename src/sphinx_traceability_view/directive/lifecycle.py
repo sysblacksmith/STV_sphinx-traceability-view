@@ -8,6 +8,7 @@ from sphinx.errors import SphinxError
 from sphinx.util.osutil import relative_uri
 from sphinx_needs.data import SphinxNeedsData
 from .directives import TraceabilityView, ViewNode, visit_html
+from .._version import __version__
 from ..model import normalize
 from ..graph import snapshot
 from ..detail_build import extract
@@ -56,7 +57,7 @@ def prepare(app, builder):
         raise SphinxError(f"{location}: traceability-view: {error}") from error
     target = Path(app.outdir) / "_static" / "stv"
     target.mkdir(parents=True, exist_ok=True)
-    for name in ("stv.js", "stv.css", "LICENSE.txt", "THIRD_PARTY_NOTICES.txt", "vendor/ELK-SOURCE.txt"):
+    for name in ("stv.js", "stv.css", "LICENSE.txt", "THIRD_PARTY_NOTICES.txt", "vendor/ELK-SOURCE.txt", "vendor/ELK-INVENTORY.json"):
         source = Path(__file__).parents[1] / "static" / name
         if not source.is_file():
             raise SphinxError(f"Missing packaged STV asset {name}; maintainers must build frontend assets")
@@ -105,4 +106,4 @@ def setup(app):
     app.connect("write-started", prepare, priority=800)
     app.connect("html-page-context", context)
     app.connect("build-finished", finish, priority=900)
-    return {"version": "1.0.0", "parallel_read_safe": False, "parallel_write_safe": False}
+    return {"version": __version__, "parallel_read_safe": False, "parallel_write_safe": False}

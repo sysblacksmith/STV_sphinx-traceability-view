@@ -195,8 +195,8 @@ stale/missing bundle output as a build failure. See
 Dependency notices accompany both the wheel and generated documentation.
 The owner selected MIT for STV-owned code and documentation on 2026-10-24,
 with copyright attributed to Henning Heikes. Bundled libraries retain their
-MIT/ISC/BSD-3-Clause/EPL-2.0 terms. See :doc:`licensing` for the license text,
-notices, source availability and remaining redistribution-audit limits.
+MIT/ISC/BSD-3-Clause/Apache-2.0/EPL-1.0/EPL-2.0 terms. See :doc:`licensing` for the license text,
+notices, source availability and the completed pinned-bundle audit scope.
 The package metadata uses a combined SPDX expression for these bundled
 components and explicitly includes their legal files. Source-availability
 notices identify both ELK.js and the underlying Java ELK project; the generated
@@ -233,3 +233,13 @@ html.parser located all 113 current rendered Need objects across five output
 pages and retained their ID text and requirement acceptance-criterion content.
 This is evidence for extraction on this document set, not proof of every
 cross-page resource rewrite or third-party layout.
+
+Compiled ELK dependency notices
+-------------------------------
+
+ELK's own EPL-2.0 declaration does not describe all of its generated code.
+The pinned upstream build compiles GWT/Guava (Apache-2.0), EMF-GWT (EPL-1.0)
+and Xbase/Xtend (EPL-2.0); Babel/Browserify wrappers and the browser Worker shim
+have separate notices. See :doc:`licensing` and the source/hash inventory in
+``frontend/legal/elk-inventory.json``. Frontend notices derive npm dependencies
+from actual esbuild inputs and append maintained compiled-dependency notices.

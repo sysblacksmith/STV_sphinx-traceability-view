@@ -199,3 +199,14 @@ Inspection owns one pending 1000 ms hover timer per view; node departure,
 Escape, scene commit and viewport movement cancel it. Explicit Details
 activation bypasses it. Moving onto the Details button retains the node timer.
 Escape is observed even when keyboard focus is outside the hovered view.
+
+Detail asset path contract
+--------------------------
+
+Each transformed detail fragment uses its full SHA-256 content digest as the
+filename, ``_static/stv/details/<content-hash>.js``. Objects with identical
+fragments share one immutable asset. The manifest retains per-object identity
+and references its digest and URL; fragment registration remains keyed by that
+same full digest. No digest is truncated. Windows file-URL consumers still need
+an output root short enough that the complete asset path fits their browser's
+path support; arbitrary-depth output roots are not promised.

@@ -20,3 +20,4 @@ acceptance records remain unchanged.
    STV_CR_009_requirement-filenames-and-test-levels
    STV_CR_010_consolidated-test-specifications
    STV_CR_011_mit-license
+   STV_CR_012_release-cancellation-and-cleanup

@@ -3,11 +3,11 @@ Problem 6: Detail tooltips fail on long Windows paths
 
 .. problem_report:: Detail tooltips fail on long Windows paths
    :id: STV_PR_006
-   :status: analyzed
+   :status: fixed
    :basis: owner
    :evidence: docs/problem-tickets/STV_PR_006.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    **Reporter/date:** Project owner, 2026-10-19.
 
@@ -95,7 +95,29 @@ Problem 6: Detail tooltips fail on long Windows paths
       their prerequisites available. Record supported path limits explicitly;
       shortening filenames does not guarantee arbitrary-depth paths work.
 
-   **Disposition:** Analyzed; awaiting the proper master-branch implementation,
+   **Original diagnostic disposition (historical):** Analyzed; awaiting the proper master-branch implementation,
    regression verification and integration decision. Preserve the local
    before/after evidence when implementing the fix. Do not mark this report
    fixed solely because the diagnostic working-tree change succeeds locally.
+
+   **Maintenance closure, 2026-10-24:** The owner authorized the proper fix,
+   regression and acceptance review while canceling release preparation; see
+   :doc:`../change-requests/STV_CR_012_release-cancellation-and-cleanup`.
+   ``bundle.emit`` now uses the complete fragment content hash alone. It
+   preserves registration/manifest identity and deduplicates identical content.
+
+   The real system regression :need:`STV_TC_WINDOWS_PATH` reproduced the old
+   failure in Firefox 158.0.1 at a 298-character local asset path, then passed
+   at 233 characters after the fix. Root and nested pages were checked over
+   file and HTTP, including missing-asset failure and successful restoration/
+   reopening. :need:`STV_TC_COMPACT_PATHS` verifies full 64-character digests,
+   graph references, shared fragments and registration. Applicable component,
+   host/browser and installed-wheel regressions are retained in
+   :doc:`../test-execution/maintenance-2026-10-24/index`, including all failures
+   and corrections. :doc:`../concept-reviews/round-8` records design acceptance.
+
+   **Current disposition:** Fixed and verified for the report's scoped Windows/
+   Firefox/path/recovery criteria. Arbitrary-depth Windows paths and other
+   browsers/machines are not claimed. Requirement verification fields and
+   release readiness are not promoted from these development checks; a future
+   release still needs its separately authorized qualification.

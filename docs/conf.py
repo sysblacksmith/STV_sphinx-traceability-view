@@ -4,10 +4,11 @@ from copy import deepcopy
 import os
 from pathlib import Path
 import sys
+import runpy
 
 project = "STV Sphinx Traceability View"
-version = "1.0"
-release = "1.0.0"
+release = runpy.run_path(str(Path(__file__).resolve().parents[1] / "src/sphinx_traceability_view/_version.py"))["__version__"]
+version = ".".join(release.split(".")[:2])
 root_doc = "index"
 exclude_patterns = ["test-scripts/fixtures/**", "_build", "test-execution/0.1.0-candidate-1/index.rst"]
 

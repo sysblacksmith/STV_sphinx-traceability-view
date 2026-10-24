@@ -21,7 +21,7 @@ STV_TC_07D369AD0A2F: reverse traversal has no depth cutoff
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_006, STV_SHR_013, STV_SWR_006, STV_SWR_013
-   :executed_by: STV_TE_9AAE7A231EC567CE, STV_TE_0FC214543C57C70A, STV_TE_E0CF04631EACB0BB
+   :executed_by: STV_TE_9AAE7A231EC567CE, STV_TE_0FC214543C57C70A, STV_TE_E0CF04631EACB0BB, STV_TE_99108B0AAB32B836
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -69,7 +69,7 @@ STV_TC_08AC936D55F9: parent and project center over five visible children
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_052, STV_SWR_056
-   :executed_by: STV_TE_6F0E729E437E98D5, STV_TE_CBC21862BB4E7279, STV_TE_038FB86D0B4FF754
+   :executed_by: STV_TE_6F0E729E437E98D5, STV_TE_CBC21862BB4E7279, STV_TE_038FB86D0B4FF754, STV_TE_5F793CB29D9FD1EA
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -119,7 +119,7 @@ STV_TC_0C2F9B7BE8A7: page boundaries, root capacity and independent views
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_043, STV_SHR_044, STV_SHR_047, STV_SWR_043, STV_SWR_044, STV_SWR_051, STV_SWR_052
-   :executed_by: STV_TE_E9F99C0B9172AA5A, STV_TE_F98D479E1C9FFFB9, STV_TE_784AE4C8A06E13DD
+   :executed_by: STV_TE_E9F99C0B9172AA5A, STV_TE_F98D479E1C9FFFB9, STV_TE_784AE4C8A06E13DD, STV_TE_3CDAC35C33F90156
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -177,7 +177,7 @@ STV_TC_0CAAF47BBD14: semantic bands and shared test lane
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_009, STV_SHR_010, STV_SHR_011, STV_SHR_012, STV_SHR_037, STV_SHR_050, STV_SWR_009, STV_SWR_010, STV_SWR_011, STV_SWR_012, STV_SWR_037, STV_SWR_053
-   :executed_by: STV_TE_22893BEF95C2D437, STV_TE_7BEDB835EBAB2E01, STV_TE_5449E1B08D8C1283
+   :executed_by: STV_TE_22893BEF95C2D437, STV_TE_7BEDB835EBAB2E01, STV_TE_5449E1B08D8C1283, STV_TE_40219C3E9A991A6B
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -246,7 +246,7 @@ STV_TC_11FDDB8E8864: external original url rejects executable or nonportable nav
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_047
-   :executed_by: STV_TE_815863A689BE2AD9, STV_TE_94297309B20E6054, STV_TE_0685322F3437B886
+   :executed_by: STV_TE_815863A689BE2AD9, STV_TE_94297309B20E6054, STV_TE_0685322F3437B886, STV_TE_9586EC686DEFABC6
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -292,7 +292,7 @@ STV_TC_156E45252AF4: self-loop terminates and collapse restores the only seed
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_024, STV_SWR_024
-   :executed_by: STV_TE_BDF4F05162263B81, STV_TE_1F7FB1C9CC36B859, STV_TE_E7F108DBEC658BCC
+   :executed_by: STV_TE_BDF4F05162263B81, STV_TE_1F7FB1C9CC36B859, STV_TE_E7F108DBEC658BCC, STV_TE_813CCAABA945A63F
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -338,7 +338,7 @@ STV_TC_1BFD0971844A: replacement level mappings drive ordering without relation-
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_051, STV_SWR_055
-   :executed_by: STV_TE_9194AED2292281DA, STV_TE_53D40C67F7FFB70F, STV_TE_41AA85A0707188AB
+   :executed_by: STV_TE_9194AED2292281DA, STV_TE_53D40C67F7FFB70F, STV_TE_41AA85A0707188AB, STV_TE_BE7CCBCF64651401
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -386,7 +386,7 @@ STV_TC_1E00212E164D: runtime reseeding is atomic and clears exploration
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_053, STV_SWR_057
-   :executed_by: STV_TE_AEF4AE7CB966E22D, STV_TE_221D15B62302934C, STV_TE_54BD88CB892D57F4
+   :executed_by: STV_TE_AEF4AE7CB966E22D, STV_TE_221D15B62302934C, STV_TE_54BD88CB892D57F4, STV_TE_F0CDBA310548A24A
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -433,7 +433,7 @@ STV_TC_287ABDA90FE3: host normalization
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_030, STV_SHR_032, STV_SHR_036, STV_SHR_045, STV_SWR_014, STV_SWR_030, STV_SWR_032, STV_SWR_036, STV_SWR_045
-   :executed_by: STV_TE_A60F3752BE7FF7A8, STV_TE_10A7B4170F40F4B9, STV_TE_4922233CB5454C2F
+   :executed_by: STV_TE_A60F3752BE7FF7A8, STV_TE_10A7B4170F40F4B9, STV_TE_4922233CB5454C2F, STV_TE_BA00F16C25D5FA7C
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -485,7 +485,7 @@ STV_TC_2BC87902D1FD: clear facing ports and fan-in avoid outer detours
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_050, STV_SWR_053
-   :executed_by: STV_TE_2DAA1D42C7C13397, STV_TE_F3BAE266CA6E561A, STV_TE_17CA6B7FD2946014
+   :executed_by: STV_TE_2DAA1D42C7C13397, STV_TE_F3BAE266CA6E561A, STV_TE_17CA6B7FD2946014, STV_TE_93C98F38340108D0
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -537,7 +537,7 @@ STV_TC_2EE2AB9ECAE3: competing parents do not displace a separate centered paren
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_052, STV_SWR_056
-   :executed_by: STV_TE_9CD13938265B5C9A, STV_TE_9DE4CCD94806C011, STV_TE_FEE74F31B67BCA39
+   :executed_by: STV_TE_9CD13938265B5C9A, STV_TE_9DE4CCD94806C011, STV_TE_FEE74F31B67BCA39, STV_TE_E62A5652646F52FB
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -589,7 +589,7 @@ STV_TC_35E510D6991A: project pages preserve independent expansion and collapsed 
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
-   :executed_by: STV_TE_1A1C394699F9D584, STV_TE_F28DB7D6EB428CD7, STV_TE_55E2928A35CA955C
+   :executed_by: STV_TE_1A1C394699F9D584, STV_TE_F28DB7D6EB428CD7, STV_TE_55E2928A35CA955C, STV_TE_E5C4BDFF76CA4A30
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -644,7 +644,7 @@ STV_TC_3DF9A4D8CF8D: invalid directional labels
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SHR_045, STV_SWR_036, STV_SWR_045
-   :executed_by: STV_TE_2047EEEFB40ABA89, STV_TE_070D31B0EE50B234, STV_TE_161477ADA8E2E117
+   :executed_by: STV_TE_2047EEEFB40ABA89, STV_TE_070D31B0EE50B234, STV_TE_161477ADA8E2E117, STV_TE_595FE00110891E59
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -688,7 +688,7 @@ STV_TC_4594B1E01BC7: classic registration treats prototype keys and script text 
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_017, STV_SHR_018, STV_SHR_027, STV_SWR_017, STV_SWR_018, STV_SWR_027
-   :executed_by: STV_TE_8527B889B584DDFF, STV_TE_99F2816427D87384, STV_TE_A82455C6EA4E4D5B
+   :executed_by: STV_TE_8527B889B584DDFF, STV_TE_99F2816427D87384, STV_TE_A82455C6EA4E4D5B, STV_TE_1B628A5DEFCC6526, STV_TE_0D638C0275A29724
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -738,7 +738,7 @@ STV_TC_4E68C09504E8: rooted diamond and isolated cycle
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_003, STV_SHR_007, STV_SHR_020, STV_SHR_024, STV_SHR_025, STV_SWR_003, STV_SWR_007, STV_SWR_020, STV_SWR_024, STV_SWR_025
-   :executed_by: STV_TE_D1CE8AF2895E7ACF, STV_TE_D9F3EFAD94A6631B, STV_TE_4BF1F510953BAB2C
+   :executed_by: STV_TE_D1CE8AF2895E7ACF, STV_TE_D9F3EFAD94A6631B, STV_TE_4BF1F510953BAB2C, STV_TE_807FE5FC51606B02
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -790,7 +790,7 @@ STV_TC_51B932282614: invalid model
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_DF127AF868F08300, STV_TE_5D000FDBD5095F74, STV_TE_165E497AE726E67B
+   :executed_by: STV_TE_DF127AF868F08300, STV_TE_5D000FDBD5095F74, STV_TE_165E497AE726E67B, STV_TE_49642C98E5C0FA07
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -834,7 +834,7 @@ STV_TC_5D3C07D3C5DE: invalid model
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_2D9B53D73A5690DD, STV_TE_0AA4273D7D0FBA0D, STV_TE_D13BBDBFFAD6771A
+   :executed_by: STV_TE_2D9B53D73A5690DD, STV_TE_0AA4273D7D0FBA0D, STV_TE_D13BBDBFFAD6771A, STV_TE_0984B66A1B7BF510
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -878,7 +878,7 @@ STV_TC_6FE4CFC63C95: 199/200/201 atomic capacity
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_005, STV_SHR_043, STV_SHR_044, STV_SWR_005, STV_SWR_043, STV_SWR_044
-   :executed_by: STV_TE_C6A6C8EBC162B1F5, STV_TE_DCC7C845C33BEC31, STV_TE_7E6053F382882EBE
+   :executed_by: STV_TE_C6A6C8EBC162B1F5, STV_TE_DCC7C845C33BEC31, STV_TE_7E6053F382882EBE, STV_TE_B199E3E92412F17A
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -927,7 +927,7 @@ STV_TC_734CF1BFE372: external original url rejects executable or nonportable nav
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_047
-   :executed_by: STV_TE_BDAB8D43008687EA, STV_TE_6997C226C3551E52, STV_TE_8B7F9A6C49E172E8
+   :executed_by: STV_TE_BDAB8D43008687EA, STV_TE_6997C226C3551E52, STV_TE_8B7F9A6C49E172E8, STV_TE_F73049B2F90A96A6
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -973,7 +973,7 @@ STV_TC_7D1212345072: external original url rejects executable or nonportable nav
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_047
-   :executed_by: STV_TE_55945317445CADCF, STV_TE_DBC98E1C3F428FD5, STV_TE_C9C094F9DC4456D6
+   :executed_by: STV_TE_55945317445CADCF, STV_TE_DBC98E1C3F428FD5, STV_TE_C9C094F9DC4456D6, STV_TE_58267D1CD6C96C16
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1019,7 +1019,7 @@ STV_TC_8023D1B4838C: portable paths preserve queries and fragments
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_018, STV_SWR_018
-   :executed_by: STV_TE_F70474F79A404DAF, STV_TE_AF1BE3C13C2A4CCF, STV_TE_FEC5F73D3E70860C
+   :executed_by: STV_TE_F70474F79A404DAF, STV_TE_AF1BE3C13C2A4CCF, STV_TE_FEC5F73D3E70860C, STV_TE_3E753C0867424736
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1064,7 +1064,7 @@ STV_TC_880A2E13BCE9: shared children keep unique nodes and conflicting parents d
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_052, STV_SWR_056
-   :executed_by: STV_TE_E8DFFB544A7B6399, STV_TE_AF727DC17FAA905E, STV_TE_90A435895DB5B8A7
+   :executed_by: STV_TE_E8DFFB544A7B6399, STV_TE_AF727DC17FAA905E, STV_TE_90A435895DB5B8A7, STV_TE_053CFF28DE8DA59B
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1111,7 +1111,7 @@ STV_TC_9316CE9A1843: invalid directional labels
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SHR_045, STV_SWR_036, STV_SWR_045
-   :executed_by: STV_TE_B108463658646910, STV_TE_AF99E6C634F37385, STV_TE_AA244AF9DE24C294
+   :executed_by: STV_TE_B108463658646910, STV_TE_AF99E6C634F37385, STV_TE_AA244AF9DE24C294, STV_TE_106F45573009D68A
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1155,7 +1155,7 @@ STV_TC_97667EB28A11: blocked skipped-level edges retain safe detours
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_050, STV_SWR_053
-   :executed_by: STV_TE_8D4E22707578AAA4, STV_TE_0423659C27E9D570, STV_TE_4FCE6C0AB09DA55B
+   :executed_by: STV_TE_8D4E22707578AAA4, STV_TE_0423659C27E9D570, STV_TE_4FCE6C0AB09DA55B, STV_TE_15036384B14F8D9D
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1213,7 +1213,7 @@ STV_TC_ABB4E85E5F66: srcset data images and css resources
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_018, STV_SWR_015, STV_SWR_017, STV_SWR_018
-   :executed_by: STV_TE_367E43ED7CBDD4CE, STV_TE_40FEA9EAFED075AB, STV_TE_A530D2F64C21F5AD
+   :executed_by: STV_TE_367E43ED7CBDD4CE, STV_TE_40FEA9EAFED075AB, STV_TE_A530D2F64C21F5AD, STV_TE_F974F952B4BAF9DF
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1262,7 +1262,7 @@ STV_TC_AEF53EABA753: cross-page targets do not acquire synthetic root edges
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
-   :executed_by: STV_TE_94B6CEC834B13181, STV_TE_B25D7DAF9A7087F9, STV_TE_E1663EE6C8753590
+   :executed_by: STV_TE_94B6CEC834B13181, STV_TE_B25D7DAF9A7087F9, STV_TE_E1663EE6C8753590, STV_TE_7C87AC31B6F3DFD0
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1309,7 +1309,7 @@ STV_TC_B2EF591B7F1E: upward controls precede neutral and downward controls regar
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_051, STV_SWR_055
-   :executed_by: STV_TE_11785768416ABA6F, STV_TE_E359F9744218B058, STV_TE_00DD9E3EE6863E8F
+   :executed_by: STV_TE_11785768416ABA6F, STV_TE_E359F9744218B058, STV_TE_00DD9E3EE6863E8F, STV_TE_66DFBB4B6CD7B08E
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1362,7 +1362,7 @@ STV_TC_C747492F203E: invalid model
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_BF297B5EC0FB0880, STV_TE_6E19373786A4491D, STV_TE_09BC3D1A4FC558CB
+   :executed_by: STV_TE_BF297B5EC0FB0880, STV_TE_6E19373786A4491D, STV_TE_09BC3D1A4FC558CB, STV_TE_FF8A5C765D35F850
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1406,7 +1406,7 @@ STV_TC_D00DA9F2CD10: hidden parts external and missing targets
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_013, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_027, STV_SHR_047, STV_SHR_048, STV_SWR_013, STV_SWR_027, STV_SWR_047, STV_SWR_048
-   :executed_by: STV_TE_23341FA7B89F3170, STV_TE_CCFEC1B7BFDE5043, STV_TE_94153BE8C066BF21
+   :executed_by: STV_TE_23341FA7B89F3170, STV_TE_CCFEC1B7BFDE5043, STV_TE_94153BE8C066BF21, STV_TE_814A1F12A1BBC13A
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1470,7 +1470,7 @@ STV_TC_D22785EE6859: cyclic shared geometry with isolated nodes remains determin
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_052, STV_SWR_056
-   :executed_by: STV_TE_2335851ACD891F20, STV_TE_B1A1720DB22526B3, STV_TE_8B2F8D37BF18C51C
+   :executed_by: STV_TE_2335851ACD891F20, STV_TE_B1A1720DB22526B3, STV_TE_8B2F8D37BF18C51C, STV_TE_D95EABFECD32D345
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1529,7 +1529,7 @@ STV_TC_D31601FDD080: invalid directional labels
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SHR_045, STV_SWR_036, STV_SWR_045
-   :executed_by: STV_TE_1F3FC164F20CBC3B, STV_TE_BA7C0491342D931D, STV_TE_7DBBDB40959A3B42
+   :executed_by: STV_TE_1F3FC164F20CBC3B, STV_TE_BA7C0491342D931D, STV_TE_7DBBDB40959A3B42, STV_TE_B9734B73BC2CD60C
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1573,7 +1573,7 @@ STV_TC_D43DE71AF846: static details and remote fallback
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_018, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_015, STV_SWR_017, STV_SWR_018, STV_SWR_048, STV_SWR_049
-   :executed_by: STV_TE_9154BFB3C32BE8B9, STV_TE_3CD78CD1E4C013B1, STV_TE_A4B2E03C91E03A13
+   :executed_by: STV_TE_9154BFB3C32BE8B9, STV_TE_3CD78CD1E4C013B1, STV_TE_A4B2E03C91E03A13, STV_TE_B4CE8AA762593317
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1631,14 +1631,14 @@ STV_TC_DETAIL_CACHE: Concurrent build-scoped detail loading
 
 .. test_case:: Concurrent build-scoped detail loading
    :id: STV_TC_DETAIL_CACHE
-   :status: draft
+   :status: accepted
    :tags: test_software
    :basis: documented
    :evidence: frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SWR_015, STV_SWR_017
-   :executed_by: STV_TE_BABAA403FE6F654E
+   :executed_by: STV_TE_BABAA403FE6F654E, STV_TE_7A6933AA0FFCDB59
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1662,14 +1662,14 @@ STV_TC_DETAIL_RETRY: Retry local detail loading after failure
 
 .. test_case:: Retry local detail loading after failure
    :id: STV_TC_DETAIL_RETRY
-   :status: draft
+   :status: accepted
    :tags: test_software
    :basis: documented
    :evidence: frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SWR_015, STV_SWR_017
-   :executed_by: STV_TE_F1DDDEB16B95B513
+   :executed_by: STV_TE_F1DDDEB16B95B513, STV_TE_69B410A9F2C8E6AF
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1700,7 +1700,7 @@ STV_TC_E6FA25320A8F: active embed urls are not retained as navigation
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SWR_015, STV_SWR_017, STV_SWR_049
-   :executed_by: STV_TE_03DA151E5608D061, STV_TE_0AD15AF696631D27, STV_TE_8FBDA9692228CD04
+   :executed_by: STV_TE_03DA151E5608D061, STV_TE_0AD15AF696631D27, STV_TE_8FBDA9692228CD04, STV_TE_4B5C6B8F24B1A098
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1746,7 +1746,7 @@ STV_TC_EB472A6879CF: local suggestions match IDs and titles and bound results
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_053, STV_SWR_057
-   :executed_by: STV_TE_8B87A6B6D7C31F3B, STV_TE_E31F5DC01B22D239, STV_TE_3369468B8AA5C219
+   :executed_by: STV_TE_8B87A6B6D7C31F3B, STV_TE_E31F5DC01B22D239, STV_TE_3369468B8AA5C219, STV_TE_69D755969013BB9F
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1795,7 +1795,7 @@ STV_TC_F549DE4D0BF4: invalid directional labels
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SHR_045, STV_SWR_036, STV_SWR_045
-   :executed_by: STV_TE_C452883EA129E707, STV_TE_58457F28951040F2, STV_TE_B89B43AAD8E09B63
+   :executed_by: STV_TE_C452883EA129E707, STV_TE_58457F28951040F2, STV_TE_B89B43AAD8E09B63, STV_TE_F0B33AD9A3EDBAB8
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1839,7 +1839,7 @@ STV_TC_FBDDCC607412: invalid model
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_D04E415D80AE0EE6, STV_TE_538006C1339D10B4, STV_TE_C8516CEEDA5EE7D1
+   :executed_by: STV_TE_D04E415D80AE0EE6, STV_TE_538006C1339D10B4, STV_TE_C8516CEEDA5EE7D1, STV_TE_8E482B9F158BC396
    :last_result: passed
 
    **Level:** Software component unit test.
@@ -1870,3 +1870,34 @@ STV_TC_FBDDCC607412: invalid model
 
    **Evidence to retain:** Per-case execution result and timestamp, candidate
    and test identities, environment, invocation and linked JUnit/log evidence.
+
+STV_TC_COMPACT_PATHS: Compact immutable detail assets
+-----------------------------------------------------
+
+.. test_case:: Compact immutable detail assets
+   :id: STV_TC_COMPACT_PATHS
+   :status: accepted
+   :tags: release_initial, test_software
+   :basis: documented
+   :evidence: src/sphinx_traceability_view/bundle/tests/test_bundle.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_015, STV_SWR_017, STV_SWR_018
+   :executed_by: STV_TE_B2B66F9BDF1CFFBB, STV_TE_228B20B2EF813704
+   :last_result: passed
+
+   **Level:** Software component unit test.
+
+   **Executable selector:** ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths``.
+
+   **Preconditions/inputs:** Three object identities; two identical rich
+   fragments and one different fragment. Use a fresh output directory.
+
+   **Procedure and expected outcomes:** Emit the actual graph/detail assets.
+   Require exactly two detail files, full 64-character digest stems, identical
+   manifest records for equal fragments, a different record for changed
+   content, and registration of each full digest in the referenced asset.
+   Inspect the graph by parsing its generated JSON registration payload.
+
+   **Evidence:** Actual JUnit outcome, source identity and maintenance log;
+   the system Windows-path case covers real browser/path/retry behavior.

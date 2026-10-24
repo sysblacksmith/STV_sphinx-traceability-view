@@ -134,7 +134,7 @@ Write outputs through sibling temporary files and rename only when complete.
 Regenerate graph and detail manifests together to prevent stale seed/link data.
 At finalization, hash each transformed detail fragment, then hash the canonical
 manifest payload containing those detail URLs (excluding its own identity
-field). Emit detail files, then the graph script named by that manifest hash.
+field). Emit deduplicated detail files named only by the full content digest, then the graph script named by that manifest hash.
 Finally patch only STV-owned tagged graph-script src attributes and view-root
 build-identity attributes in generated view pages to reference the final graph.
 Preserve unrelated host markup. A view page is not finalized while its placeholder

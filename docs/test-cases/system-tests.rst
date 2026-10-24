@@ -21,7 +21,7 @@ STV_TC_025DB3F44E8E: usability smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_049, STV_SWR_050, STV_SWR_054, STV_SYS_006
-   :executed_by: STV_TE_EDDA1B963CE797B3, STV_TE_E61ABF83926193AC, STV_TE_4C69746CC553D7A0
+   :executed_by: STV_TE_EDDA1B963CE797B3, STV_TE_E61ABF83926193AC, STV_TE_4C69746CC553D7A0, STV_TE_8791048E05CC01B1
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -133,7 +133,7 @@ STV_TC_06CC5EE46517: control order smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_051, STV_SWR_055
-   :executed_by: STV_TE_E9DF4EB84C2C809D, STV_TE_48E662C1225F4525, STV_TE_42F89514387F2644
+   :executed_by: STV_TE_E9DF4EB84C2C809D, STV_TE_48E662C1225F4525, STV_TE_42F89514387F2644, STV_TE_3EA3780EE4C691D4
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -204,7 +204,7 @@ STV_TC_0EBE5120F168: missing placeholder and detail error
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
-   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08, STV_TE_B71B51810DD8B805
+   :executed_by: STV_TE_1E7C90AF591203FD, STV_TE_01014AFFA8103E08, STV_TE_B71B51810DD8B805, STV_TE_98FA5AFD1CF5BE75
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -271,7 +271,7 @@ STV_TC_136FE8B1A097: failed finalization retains pending page and previous asset
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_027, STV_SWR_015, STV_SWR_017, STV_SWR_027
-   :executed_by: STV_TE_2FE927B84AC573F5, STV_TE_5428B57695F57556, STV_TE_370A22653A3C61D1
+   :executed_by: STV_TE_2FE927B84AC573F5, STV_TE_5428B57695F57556, STV_TE_370A22653A3C61D1, STV_TE_AB3AB31683DE7C64, STV_TE_35ACFC65C5B99B80
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -327,7 +327,7 @@ STV_TC_25803A2B9F90: seed layout replacement failure and staleness
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_053, STV_SWR_044, STV_SWR_057
-   :executed_by: STV_TE_3B3E61D7DFC99D73, STV_TE_0EEADCA1406FD6ED, STV_TE_776A0D0F470417C5
+   :executed_by: STV_TE_3B3E61D7DFC99D73, STV_TE_0EEADCA1406FD6ED, STV_TE_776A0D0F470417C5, STV_TE_938B27916A316D0E
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -397,7 +397,7 @@ STV_TC_3B0D9F21166C: alternate host schema external metadata and parts
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_036, STV_SHR_045, STV_SHR_047, STV_SHR_048, STV_SWR_014, STV_SWR_036, STV_SWR_045, STV_SWR_047, STV_SWR_048, STV_SYS_002
-   :executed_by: STV_TE_19C8684FFE688A1D, STV_TE_CECCD71A1F7BD48C, STV_TE_AA534A6986BCE95B
+   :executed_by: STV_TE_19C8684FFE688A1D, STV_TE_CECCD71A1F7BD48C, STV_TE_AA534A6986BCE95B, STV_TE_8105F93F757B5B04
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -450,7 +450,7 @@ STV_TC_3B2659FB2D0A: documentation visuals
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_017, STV_SHR_018, STV_SYS_003
-   :executed_by: STV_TE_22DE49BBDDE7EC3B, STV_TE_281E939E541ADC21, STV_TE_C9B10F63B52B82BE
+   :executed_by: STV_TE_22DE49BBDDE7EC3B, STV_TE_281E939E541ADC21, STV_TE_C9B10F63B52B82BE, STV_TE_8D236D778E5397B0
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -517,7 +517,7 @@ STV_TC_41F176801699: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_55AFED6304CFE81F, STV_TE_93AFE98F3EE60BE8, STV_TE_785BF58793290B0E
+   :executed_by: STV_TE_55AFED6304CFE81F, STV_TE_93AFE98F3EE60BE8, STV_TE_785BF58793290B0E, STV_TE_C6840C674379E70A
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -568,7 +568,7 @@ STV_TC_535022565896: control order smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_051, STV_SWR_055
-   :executed_by: STV_TE_193BABCE01804ECD, STV_TE_D54F9EC1B8C3DC2D, STV_TE_89DA2BE17EC0FB60
+   :executed_by: STV_TE_193BABCE01804ECD, STV_TE_D54F9EC1B8C3DC2D, STV_TE_89DA2BE17EC0FB60, STV_TE_97A2EA6B2A2DFFD8
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -639,7 +639,7 @@ STV_TC_5652621CFF4A: interactive seed smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_038, STV_SHR_052, STV_SHR_053, STV_SWR_038, STV_SWR_056, STV_SWR_057
-   :executed_by: STV_TE_542E4BF583AB9821, STV_TE_E5587901B2158B26, STV_TE_BC32CB88DE8FEAB6
+   :executed_by: STV_TE_542E4BF583AB9821, STV_TE_E5587901B2158B26, STV_TE_BC32CB88DE8FEAB6, STV_TE_E7F31A178D716764
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -704,7 +704,7 @@ STV_TC_59537D3F286A: seed capacity at directive
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
-   :executed_by: STV_TE_A5B37D2B297444D4, STV_TE_10B3E6446E94D385, STV_TE_B88FABBBBA1DB23F
+   :executed_by: STV_TE_A5B37D2B297444D4, STV_TE_10B3E6446E94D385, STV_TE_B88FABBBBA1DB23F, STV_TE_BE6098AB231764A5
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -756,7 +756,7 @@ STV_TC_59C06D617036: missing placeholder and detail error
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SHR_029, STV_SWR_027, STV_SWR_028, STV_SWR_029, STV_SYS_004
-   :executed_by: STV_TE_69D0670DBA913348, STV_TE_7FB8F491ACEA8640, STV_TE_134FB6EFA234AE0A
+   :executed_by: STV_TE_69D0670DBA913348, STV_TE_7FB8F491ACEA8640, STV_TE_134FB6EFA234AE0A, STV_TE_C907D3DAAB33A698
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -823,7 +823,7 @@ STV_TC_5C902A5F732E: cross page bundle
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_002, STV_SHR_013, STV_SHR_026, STV_SHR_048, STV_SWR_001, STV_SWR_002, STV_SWR_013, STV_SWR_026, STV_SYS_001
-   :executed_by: STV_TE_764956AD4834A5CE, STV_TE_7BF04875B87C2A7D, STV_TE_4B3E601321BA8924
+   :executed_by: STV_TE_764956AD4834A5CE, STV_TE_7BF04875B87C2A7D, STV_TE_4B3E601321BA8924, STV_TE_226A0A5469B1E2C8
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -879,7 +879,7 @@ STV_TC_6C7A64E533AC: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_97AA7EB41C45F077, STV_TE_39301A83113F7C7D, STV_TE_9EBE4F77A19E95FE
+   :executed_by: STV_TE_97AA7EB41C45F077, STV_TE_39301A83113F7C7D, STV_TE_9EBE4F77A19E95FE, STV_TE_D18E0A7F3567D77B
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -930,7 +930,7 @@ STV_TC_7016FADA6FBA: alternate model geometry details and external
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_008, STV_SHR_012, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_037, STV_SHR_041, STV_SHR_047, STV_SHR_048, STV_SWR_008, STV_SWR_012, STV_SWR_015, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_037, STV_SWR_041, STV_SWR_047, STV_SWR_048, STV_SWR_049, STV_SWR_050, STV_SYS_004, STV_SYS_005, STV_SYS_006, STV_SYS_010
-   :executed_by: STV_TE_61313CFB6F4999CF, STV_TE_80B3F0B64A8C7517, STV_TE_F3C4E90AA84CED2E
+   :executed_by: STV_TE_61313CFB6F4999CF, STV_TE_80B3F0B64A8C7517, STV_TE_F3C4E90AA84CED2E, STV_TE_FFFF8323BE7629F1
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1029,7 +1029,7 @@ STV_TC_7441DB459B14: usability smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_049, STV_SWR_050, STV_SWR_054, STV_SYS_006
-   :executed_by: STV_TE_5A3DAC2CD84CDE46, STV_TE_A92CAC9AEFDF41DE, STV_TE_28071DAEB935E86B
+   :executed_by: STV_TE_5A3DAC2CD84CDE46, STV_TE_A92CAC9AEFDF41DE, STV_TE_28071DAEB935E86B, STV_TE_281973898519845F
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1208,7 +1208,7 @@ STV_TC_85BBE1714F96: invalid mapping has entry path and location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_036, STV_SWR_036
-   :executed_by: STV_TE_25353B9B728085D0, STV_TE_386D5C547F786FC8, STV_TE_1BA15C05B4E308DA
+   :executed_by: STV_TE_25353B9B728085D0, STV_TE_386D5C547F786FC8, STV_TE_1BA15C05B4E308DA, STV_TE_62AC4B0AB9B248F8
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1257,7 +1257,7 @@ STV_TC_9A67DAACB2A4: seed selection release
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_003, STV_SHR_014, STV_SHR_026, STV_SHR_038, STV_SHR_047, STV_SHR_048, STV_SHR_052, STV_SHR_053, STV_SWR_003, STV_SWR_038, STV_SWR_048, STV_SWR_051, STV_SWR_052, STV_SWR_056, STV_SWR_057
-   :executed_by: STV_TE_DFBF01DD6EFAC659, STV_TE_04E3FD1C4E20AEF7, STV_TE_FD08039E2FB58CC9
+   :executed_by: STV_TE_DFBF01DD6EFAC659, STV_TE_04E3FD1C4E20AEF7, STV_TE_FD08039E2FB58CC9, STV_TE_E78BA064DCE82BD6
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1354,7 +1354,7 @@ STV_TC_9E5477EFE2F1: async layout failure and stale completion
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_047, STV_SWR_044, STV_SWR_052
-   :executed_by: STV_TE_D099D363BCFCAD31, STV_TE_5DCC25155978FEA9, STV_TE_B72094ADA2795468
+   :executed_by: STV_TE_D099D363BCFCAD31, STV_TE_5DCC25155978FEA9, STV_TE_B72094ADA2795468, STV_TE_DDA147A234F1EB90
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1405,7 +1405,7 @@ STV_TC_A1747C52BC63: interactive seed smoke
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_038, STV_SHR_052, STV_SHR_053, STV_SWR_038, STV_SWR_056, STV_SWR_057
-   :executed_by: STV_TE_23223A8584B5C6B5, STV_TE_4C07297DF2CE4C54, STV_TE_63082524BD2D8904
+   :executed_by: STV_TE_23223A8584B5C6B5, STV_TE_4C07297DF2CE4C54, STV_TE_63082524BD2D8904, STV_TE_633C7D44A74AC0EC
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1470,7 +1470,7 @@ STV_TC_A221103BC26C: invalid seed source location
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_026, STV_SWR_048, STV_SYS_001
-   :executed_by: STV_TE_DA7D6F5E8EF93887, STV_TE_0898010E7C9AF0A4, STV_TE_2CDA237388E56731
+   :executed_by: STV_TE_DA7D6F5E8EF93887, STV_TE_0898010E7C9AF0A4, STV_TE_2CDA237388E56731, STV_TE_72C2FBE6E1A2D120
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1521,7 +1521,7 @@ STV_TC_A953C70E70B1: seed capacity at directive
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SHR_026, STV_SHR_043, STV_SHR_048, STV_SWR_001, STV_SWR_026, STV_SWR_043
-   :executed_by: STV_TE_686277C8A7C1D863, STV_TE_5EBB8A15272B4D9F, STV_TE_8F17CFA55BF7EBA1
+   :executed_by: STV_TE_686277C8A7C1D863, STV_TE_5EBB8A15272B4D9F, STV_TE_8F17CFA55BF7EBA1, STV_TE_649684CCAC6F8A53
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1573,7 +1573,7 @@ STV_TC_B5D550F17384: prior fatal exception is not replaced by bundle generation
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SWR_027
-   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273, STV_TE_13B11B8AE03CF870
+   :executed_by: STV_TE_B273D034597B28B8, STV_TE_D2AD87B422D36273, STV_TE_13B11B8AE03CF870, STV_TE_10081046B1450184, STV_TE_05C8C8194E3C5F0D
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1622,7 +1622,7 @@ STV_TC_CFE6B0377595: project paging
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
-   :executed_by: STV_TE_8A63E99187C976E3, STV_TE_6723673D161CA9BA, STV_TE_0BE55BC5BDF3AC65
+   :executed_by: STV_TE_8A63E99187C976E3, STV_TE_6723673D161CA9BA, STV_TE_0BE55BC5BDF3AC65, STV_TE_21BB65233C33EB7E
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1672,7 +1672,7 @@ STV_TC_D1A17B11B9C1: incremental body change hidden and deleted objects
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_014, STV_SHR_015, STV_SHR_018, STV_SHR_026, STV_SHR_047, STV_SHR_048, STV_SWR_015, STV_SWR_018, STV_SWR_048
-   :executed_by: STV_TE_A7840F205B45812E, STV_TE_1FEF2B44838D4155, STV_TE_AD072603469BA90E
+   :executed_by: STV_TE_A7840F205B45812E, STV_TE_1FEF2B44838D4155, STV_TE_AD072603469BA90E, STV_TE_8447E3E24802A7A4
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1731,7 +1731,7 @@ STV_TC_DB4FE4CDD257: host owns broken trace failure
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_027, STV_SHR_028, STV_SWR_027, STV_SWR_028
-   :executed_by: STV_TE_89DB9F0DFA6EBD36, STV_TE_DC50B0D40735701B, STV_TE_93C0D8BF6B430F32
+   :executed_by: STV_TE_89DB9F0DFA6EBD36, STV_TE_DC50B0D40735701B, STV_TE_93C0D8BF6B430F32, STV_TE_C22DE139B2E5DF52
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1787,7 +1787,7 @@ STV_TC_DE0C60E0BB97: seed selection release
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_003, STV_SHR_014, STV_SHR_026, STV_SHR_038, STV_SHR_047, STV_SHR_048, STV_SHR_052, STV_SHR_053, STV_SWR_003, STV_SWR_038, STV_SWR_048, STV_SWR_051, STV_SWR_052, STV_SWR_056, STV_SWR_057
-   :executed_by: STV_TE_56BF0F252E2B0681, STV_TE_2BE1C4B126B18F38, STV_TE_BB04E44583D97C0D
+   :executed_by: STV_TE_56BF0F252E2B0681, STV_TE_2BE1C4B126B18F38, STV_TE_BB04E44583D97C0D, STV_TE_AD1513DB7BEF1B53
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -1884,7 +1884,7 @@ STV_TC_DF0D9B21A92D: host default directional labels are used
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_045, STV_SWR_045
-   :executed_by: STV_TE_379307EDD1A87108, STV_TE_45E5FFF9B4722E84, STV_TE_C1E476628B443676
+   :executed_by: STV_TE_379307EDD1A87108, STV_TE_45E5FFF9B4722E84, STV_TE_C1E476628B443676, STV_TE_CFF8782DE1D60572
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -1932,7 +1932,7 @@ STV_TC_E0AB07ABA378: offline exploration
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_004, STV_SHR_008, STV_SHR_015, STV_SHR_016, STV_SHR_017, STV_SHR_018, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_034, STV_SHR_035, STV_SHR_038, STV_SHR_039, STV_SHR_040, STV_SWR_004, STV_SWR_008, STV_SWR_015, STV_SWR_016, STV_SWR_017, STV_SWR_018, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_034, STV_SWR_035, STV_SWR_038, STV_SWR_039, STV_SWR_040, STV_SWR_050, STV_SYS_003, STV_SYS_007
-   :executed_by: STV_TE_CFC88A8408D563AF, STV_TE_36AF6C6B39F1B4F5, STV_TE_387407E224540198
+   :executed_by: STV_TE_CFC88A8408D563AF, STV_TE_36AF6C6B39F1B4F5, STV_TE_387407E224540198, STV_TE_4A72E96BA6DE2E1E
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2079,7 +2079,7 @@ STV_TC_E23001FBE2A5: project paging
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SWR_051, STV_SWR_052
-   :executed_by: STV_TE_CBBC2FACA177EA6A, STV_TE_8F519B08D780D32F, STV_TE_9C2EF2AAB951A88F
+   :executed_by: STV_TE_CBBC2FACA177EA6A, STV_TE_8F519B08D780D32F, STV_TE_9C2EF2AAB951A88F, STV_TE_92C56796616E739A
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2129,7 +2129,7 @@ STV_TC_E2A064F091BE: async layout failure and stale completion
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_047, STV_SWR_044, STV_SWR_052
-   :executed_by: STV_TE_3A7FDDC0E8DA0DCC, STV_TE_9DEB9C844A02AF74, STV_TE_BC7B47354D524871
+   :executed_by: STV_TE_3A7FDDC0E8DA0DCC, STV_TE_9DEB9C844A02AF74, STV_TE_BC7B47354D524871, STV_TE_9D6EBF6A6F0743F7
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2180,7 +2180,7 @@ STV_TC_E66A443619C6: alternate model geometry details and external
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_008, STV_SHR_012, STV_SHR_014, STV_SHR_015, STV_SHR_017, STV_SHR_026, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_037, STV_SHR_041, STV_SHR_047, STV_SHR_048, STV_SWR_008, STV_SWR_012, STV_SWR_015, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_037, STV_SWR_041, STV_SWR_047, STV_SWR_048, STV_SWR_049, STV_SWR_050, STV_SYS_004, STV_SYS_005, STV_SYS_006, STV_SYS_010
-   :executed_by: STV_TE_A7749A458DE50DB9, STV_TE_C45BE36EF5E5D893, STV_TE_0B94DF5EA07D94A1
+   :executed_by: STV_TE_A7749A458DE50DB9, STV_TE_C45BE36EF5E5D893, STV_TE_0B94DF5EA07D94A1, STV_TE_5479348C2D1ACE13
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2279,7 +2279,7 @@ STV_TC_EB0F95BABF84: empty seed catalog
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SHR_053, STV_SWR_051, STV_SWR_052, STV_SWR_057
-   :executed_by: STV_TE_EAB2D41B5168D79C, STV_TE_F4B5B1B6C6055FE4, STV_TE_CD508D01E393339D
+   :executed_by: STV_TE_EAB2D41B5168D79C, STV_TE_F4B5B1B6C6055FE4, STV_TE_CD508D01E393339D, STV_TE_DA00E9FE56E5A125
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2406,7 +2406,7 @@ STV_TC_F3892D8A1C98: seed layout replacement failure and staleness
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_044, STV_SHR_053, STV_SWR_044, STV_SWR_057
-   :executed_by: STV_TE_CDCABD8ACB9C2964, STV_TE_B65229E135C87272, STV_TE_0A999588B6A1920C
+   :executed_by: STV_TE_CDCABD8ACB9C2964, STV_TE_B65229E135C87272, STV_TE_0A999588B6A1920C, STV_TE_F0A444E2D30EB34A
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2476,7 +2476,7 @@ STV_TC_F6E0695BB399: offline exploration
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_004, STV_SHR_008, STV_SHR_015, STV_SHR_016, STV_SHR_017, STV_SHR_018, STV_SHR_029, STV_SHR_031, STV_SHR_033, STV_SHR_034, STV_SHR_035, STV_SHR_038, STV_SHR_039, STV_SHR_040, STV_SWR_004, STV_SWR_008, STV_SWR_015, STV_SWR_016, STV_SWR_017, STV_SWR_018, STV_SWR_029, STV_SWR_031, STV_SWR_033, STV_SWR_034, STV_SWR_035, STV_SWR_038, STV_SWR_039, STV_SWR_040, STV_SWR_050, STV_SYS_003, STV_SYS_007
-   :executed_by: STV_TE_CD6E815F9CAC0F7F, STV_TE_381A684E64CE327D, STV_TE_2FF9EA5FEF88B39F
+   :executed_by: STV_TE_CD6E815F9CAC0F7F, STV_TE_381A684E64CE327D, STV_TE_2FF9EA5FEF88B39F, STV_TE_F0C2845AEA49F292
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2623,7 +2623,7 @@ STV_TC_F988267D01C9: clean wheel host
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_042, STV_SHR_046, STV_SWR_042, STV_SWR_046, STV_SYS_009
-   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD
+   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD, STV_TE_23CFB2E2F59258A0, STV_TE_7BEB3B1B6625A5DC, STV_TE_01F92BEF833F1EDE, STV_TE_E9C945EDF4A0769F
    :last_result: passed
 
    **Level:** System packaging integration.
@@ -2657,11 +2657,13 @@ STV_TC_F988267D01C9: clean wheel host
           with zipfile.ZipFile(wheel) as archive:
               names=archive.namelist()
               assert not any("/tests/" in name for name in names), "Unit tests must not ship in the runtime wheel"
-              for asset in ('stv.js','stv.css','LICENSE.txt','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js','vendor/ELK-SOURCE.txt'):
+              for asset in ('stv.js','stv.css','LICENSE.txt','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js','vendor/ELK-SOURCE.txt','vendor/ELK-INVENTORY.json'):
                   assert f'sphinx_traceability_view/static/{asset}' in names
+              packaged_inventory=json.loads(archive.read('sphinx_traceability_view/static/vendor/ELK-INVENTORY.json'))
+              assert hashlib.sha256(archive.read('sphinx_traceability_view/static/vendor/elk.bundled.js')).hexdigest()==packaged_inventory['elkjs']['sha256']
               metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
               assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
-              assert 'License-Expression: MIT AND ISC AND BSD-3-Clause AND EPL-2.0' in metadata
+              assert 'License-Expression: MIT AND ISC AND BSD-3-Clause AND Apache-2.0 AND EPL-1.0 AND EPL-2.0' in metadata
               assert 'Copyright (c) 2026 Henning Heikes' in archive.read('sphinx_traceability_view/static/LICENSE.txt').decode()
               license_members=[name for name in names if '.dist-info/licenses/' in name]
               assert any(name.endswith('/LICENSE') for name in license_members)
@@ -2692,9 +2694,14 @@ STV_TC_F988267D01C9: clean wheel host
               assert 'https://github.com/kieler/elkjs/tree/0.10.0' in (static/'vendor/ELK-SOURCE.txt').read_text(encoding='utf-8')
               notices=(static/'THIRD_PARTY_NOTICES.txt').read_text(encoding='utf-8')
               assert 'Eclipse Public License' in notices
+              assert 'Apache License' in notices
+              assert 'EMF-GWT common/ecore' in notices
+              inventory=json.loads((static/'vendor/ELK-INVENTORY.json').read_text())
+              assert inventory==packaged_inventory
+              assert {x['license'] for x in inventory['compiled_dependencies']} >= {'Apache-2.0','EPL-1.0','EPL-2.0','MIT'}
               assert 'https://github.com/eclipse-elk/elk/tree/v0.10.0' in notices
 
-              probe=subprocess.run([str(python),'-c','import sphinx_traceability_view as s;print(s.__file__)'],env=env,cwd=root,capture_output=True,text=True,check=True)
+              probe=subprocess.run([str(python),'-c','import sphinx_traceability_view as s;from importlib.metadata import version;assert s.__version__==version("sphinx-traceability-view");print(s.__file__);print(s.__version__)'],env=env,cwd=root,capture_output=True,text=True,check=True)
               assert str(envpath).lower() in probe.stdout.lower()
               retained=os.environ.get('STV_CONSUMER_RECORD')
               if retained:
@@ -2719,7 +2726,7 @@ STV_TC_FB72ADBCAE29: empty seed catalog
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_047, STV_SHR_053, STV_SWR_051, STV_SWR_052, STV_SWR_057
-   :executed_by: STV_TE_F0A3E069E2F6967C, STV_TE_C419E178B9EBDAC3, STV_TE_52CF8B9BF7AA0812
+   :executed_by: STV_TE_F0A3E069E2F6967C, STV_TE_C419E178B9EBDAC3, STV_TE_52CF8B9BF7AA0812, STV_TE_0055C4B135295D6D
    :last_result: passed
 
    **Level:** System/browser acceptance.
@@ -2779,7 +2786,7 @@ STV_TC_FC50F6627767: unsupported builder fails clearly
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_001, STV_SWR_001
-   :executed_by: STV_TE_B17272C4602B2A77, STV_TE_BE1ACFDE9841CB9D, STV_TE_DB3A63198D744D1A
+   :executed_by: STV_TE_B17272C4602B2A77, STV_TE_BE1ACFDE9841CB9D, STV_TE_DB3A63198D744D1A, STV_TE_5D5D6764322F0A1B
    :last_result: passed
 
    **Level:** System integration through the public Sphinx build interface.
@@ -2954,44 +2961,66 @@ STV_TC_WINDOWS_PATH: Inspect details from a nested Windows checkout
 .. test_case:: Inspect details from a nested Windows checkout
    :id: STV_TC_WINDOWS_PATH
    :status: accepted
-   :tags: known_issue, test_system
+   :tags: release_initial, test_system
    :basis: documented
    :evidence: docs/problem-tickets/STV_PR_006.rst
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_015, STV_SHR_017, STV_SHR_018, STV_SYS_003, STV_SYS_006, STV_SWR_015, STV_SWR_017, STV_SWR_018
-   :last_result: not_run
+   :executed_by: STV_TE_1EA0D25151D74A7C, STV_TE_8691313C00B21F3E, STV_TE_3E9F0CC9AE6D1527, STV_TE_ADB1B05CE41E118B
+   :last_result: passed
 
    **Level/environment:** Windows browser system acceptance; stable Firefox
    with recorded version, direct file URLs and nested static HTTP hosting.
-   This planned regression preserves :need:`STV_PR_006` and is not part of the
-   currently implemented executable suite. No fresh result is inferred from
-   the report's earlier diagnostic evidence.
 
-   **Preconditions/inputs:** A nested checkout reproducing the report's old
-   generated detail paths beyond 260 characters, an existing generated local
-   detail asset and a requirement with published rich content. Include a root
-   documentation page and a page below the output root. Record actual absolute
-   asset-path lengths and browser/Windows versions. Preserve the old scheme's
-   failure evidence before testing an authorized correction.
+   **Executable selector:** ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``.
 
-   **Procedure:** Build the exact candidate; open each page via file URL and
-   activate the requirement's Details control by pointer and keyboard. Compare
-   the displayed title, metadata and body with the original published object.
-   Check script-load/network errors. Repeat from a nested static HTTP prefix.
-   Remove one generated detail asset in an isolated fixture copy, activate its
-   control, restore it and exercise retry. Inspect shared-fragment registration
-   and graph references using two objects with identical detail fragments.
+   **Preconditions/inputs:** The fixture computes a nested output root where
+   old two-hash asset paths exceed 260 characters and compact paths fit. Retain
+   the actual measured lengths and the failed pre-fix attempt. Root and nested
+   view pages display ROOT_A's formatted body, table and source links.
 
-   **Expected outcomes:** Existing detail assets load and show the correct
-   content in both transports and page depths, without the generic unavailable
-   message or unexpected script-load errors. Identical fragments retain shared
-   content identity and correct references. A genuinely missing asset produces
-   the accessible unavailable indication; retry after restoration succeeds.
-   Record the supported path boundary explicitly; do not claim arbitrary-depth
-   Windows paths work merely because filenames were shortened.
+   **Procedure:** Build the host using the actual implementation. Open both
+   pages over file and HTTP, activate Details with keyboard, compare rich
+   content and links, then reload to clear fragment memory. Temporarily rename
+   the detail asset, activate Details by pointer and require the unavailable
+   error. Restore the asset, dismiss/reopen and require successful recovery.
 
-   **Evidence:** Candidate/test identity, build and browser logs, measured path
-   lengths, before/after screenshots and the retained missing-asset/retry result.
-   Product correction and executable implementation remain outside the current
-   documentation-only increment. ``not_run`` is a known qualification gap.
+   **Expected outcomes:** All four page/transport combinations display the
+   correct body and retry successfully. The old path exceeds 260 characters,
+   compact assets exist and fit below that threshold. The companion compact
+   asset software case verifies full digest identity and deduplication.
+
+   **Evidence:** Per-case JUnit/log, before/after path observations and rendered
+   screenshots in the maintenance execution record. No arbitrary-depth path,
+   other browser or other-machine support is inferred.
+
+STV_TC_LEGAL_GUARD: Reject unaudited distribution inputs
+--------------------------------------------------------
+
+.. test_case:: Reject unaudited distribution inputs
+   :id: STV_TC_LEGAL_GUARD
+   :status: accepted
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_legal_guard.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042
+   :executed_by: STV_TE_7F0E0FAA905ACCA8, STV_TE_FA10CBBD5A653BBA, STV_TE_B143FA7927D35E75, STV_TE_506DA5166F4226E8
+   :last_result: passed
+
+   **Level:** System build/distribution interface.
+
+   **Executable selector:** ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``.
+
+   **Preconditions:** Pinned Node/esbuild installation and maintained legal
+   inventory; use an isolated copy for dependency/legal inputs.
+
+   **Procedure and expected outcomes:** Invoke the real frontend build against
+   a changed ELK version, changed binary, modified legal text and missing EPL
+   notice. Each must fail with its specific audit/input diagnostic before
+   distributing browser output. Preserve installed dependencies unchanged.
+
+   **Evidence:** Per-case JUnit and command log. The clean installed-wheel case
+   separately verifies the successful shipping path and notice inventory.

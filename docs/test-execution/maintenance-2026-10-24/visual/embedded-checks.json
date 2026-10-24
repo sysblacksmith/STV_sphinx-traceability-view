@@ -1,0 +1,26 @@
+[
+  {
+    "page": "architecture-system",
+    "data": "file:///D:/Dropbox/MikroContr_Projects/STV_sphinx-traceability-view/docs/_build/html/system-architecture.svg",
+    "size": {
+      "height": 955.5999755859376,
+      "width": 520.0
+    }
+  },
+  {
+    "page": "architecture-software",
+    "data": "file:///D:/Dropbox/MikroContr_Projects/STV_sphinx-traceability-view/docs/_build/html/software-architecture.svg",
+    "size": {
+      "height": 1235.550048828125,
+      "width": 1396.433349609375
+    }
+  },
+  {
+    "page": "state-machine",
+    "data": "file:///D:/Dropbox/MikroContr_Projects/STV_sphinx-traceability-view/docs/_build/html/state-machine.svg",
+    "size": {
+      "height": 1417.9166259765625,
+      "width": 1396.433349609375
+    }
+  }
+]

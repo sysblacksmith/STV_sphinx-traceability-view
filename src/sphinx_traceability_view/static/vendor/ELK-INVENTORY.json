@@ -1,0 +1,102 @@
+{
+  "elkjs": {
+    "version": "0.10.0",
+    "sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+    "integrity": "sha512-v/3r+3Bl2NMrWmVoRTMBtHtWvRISTix/s9EfnsfEWApNrsmNjqgqJOispCGg46BPwIFdkag3N/HYSxJczvCm6w==",
+    "source": "https://github.com/kieler/elkjs/tree/0.10.0"
+  },
+  "compiled_dependencies": [
+    {
+      "name": "GWT runtime/emulation",
+      "version": "2.11.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Guava / Guava-GWT",
+      "version": "31.1-jre",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "EMF-GWT common/ecore",
+      "version": "2.12.4",
+      "license": "EPL-1.0"
+    },
+    {
+      "name": "Xbase / Xtend runtime",
+      "version": "2.28.0",
+      "license": "EPL-2.0"
+    },
+    {
+      "name": "Babel inline helpers / Browserify prelude",
+      "version": "upstream build tools; exact resolved versions not supplied in npm distribution",
+      "license": "MIT"
+    },
+    {
+      "name": "web-worker browser shim",
+      "version": "1.4.1",
+      "license": "Apache-2.0"
+    }
+  ],
+  "source_archives": [
+    {
+      "archive": "emf-common-2.12.4-sources.jar",
+      "sha256": "8dfc4e97ca8eee5474927e2b0c5f3bdbd9a52dcd5dff8c0b433b1e938b843bbe",
+      "unique_headers": 14
+    },
+    {
+      "archive": "emf-ecore-2.12.4-sources.jar",
+      "sha256": "dd3b8c1c3bd0a27c1fbba908bcf0ff21a999148da4e68b3546bcde1dbce7b13a",
+      "unique_headers": 29
+    },
+    {
+      "archive": "guava-31.1-jre-sources.jar",
+      "sha256": "8ab1853cdaf936ec88be80c17302b7c20abafbd4f54d4fb54d7011c529e3a44a",
+      "unique_headers": 37
+    },
+    {
+      "archive": "guava-gwt-31.1-jre-sources.jar",
+      "sha256": "d7e52f41ac6ea010787b5b3c8db7ffb54375d8d0c39c98c2badc9c38de7bf14b",
+      "unique_headers": 34
+    },
+    {
+      "archive": "gwt-user-2.11.0-sources.jar",
+      "sha256": "3aa2b0f566dc1252f745b26654bc10287fced95991777af304567cb069965768",
+      "unique_headers": 35
+    },
+    {
+      "archive": "org.eclipse.xtend.lib-2.28.0-sources.jar",
+      "sha256": "899f1ffb8d761f11bb5f7b74e46cdd790bd8f9bc398221cd62524eea9344d926",
+      "unique_headers": 5
+    },
+    {
+      "archive": "org.eclipse.xtend.lib.macro-2.28.0-sources.jar",
+      "sha256": "3a587f4e719c5508f54bbffdf47f2ba5360a460fc3c1f7d082d5ae43dfba9cc1",
+      "unique_headers": 4
+    },
+    {
+      "archive": "org.eclipse.xtext.xbase.lib-2.28.0-sources.jar",
+      "sha256": "2b35e9ccd4308f605e213371bb26f458b6a84bbd1e3a13cecaac0eba607db69f",
+      "unique_headers": 14
+    }
+  ],
+  "notice_files": [
+    "Apache-2.0.txt",
+    "babel-MIT.txt",
+    "browser-pack-MIT.txt",
+    "browserify-MIT.txt",
+    "ELK-COMPILED-ATTRIBUTIONS.txt",
+    "EPL-1.0.txt",
+    "GWT-COPYING.txt",
+    "web-worker-license.txt"
+  ],
+  "notice_sha256": {
+    "Apache-2.0.txt": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+    "babel-MIT.txt": "8103e28c0306648eb68f2b2701f5285316bf8f7646eafd3135fa7c0806c4c919",
+    "browser-pack-MIT.txt": "a9ecf3da3825b3e7232f29c970a2869bb1752c900bd75ba7cbabeb69b8f032b4",
+    "browserify-MIT.txt": "caca01d7b80e7e038267e66765cf079d6172b23c7dd47242803b9e988c47c916",
+    "ELK-COMPILED-ATTRIBUTIONS.txt": "98cc71c09a856f82627254b1a601dc1c7fe7544a438c8229f980922475b6826a",
+    "EPL-1.0.txt": "e405dbaad569a80ff077ea728af4a2a44f561200b7daa7e7862530e9bd9568d2",
+    "GWT-COPYING.txt": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc",
+    "web-worker-license.txt": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+  }
+}

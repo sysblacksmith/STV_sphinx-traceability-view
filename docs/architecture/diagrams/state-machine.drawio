@@ -62,36 +62,36 @@
         <mxCell id="v2" value="valid complete candidate" source="candidate" target="layout" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="v3" value="reject / retain graph, page + focus" source="candidate" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="v3" value="reject / retain graph, page + focus" source="candidate" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.8;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="620" y="610" />
-              <mxPoint x="160" y="610" />
+              <mxPoint x="238" y="610" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v4" value="current result / commit; fit initial, seed, overview or page" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="v4" value="current result / commit; fit initial, seed, overview or page" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.35;exitY=1;entryX=0.5;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1080" y="670" />
+              <mxPoint x="1041" y="670" />
               <mxPoint x="160" y="670" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v5" value="failure / preserve scene + announce retry" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="v5" value="failure / preserve scene + announce retry" source="layout" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.75;exitY=1;entryX=0.2;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1080" y="730" />
-              <mxPoint x="160" y="730" />
+              <mxPoint x="1145" y="730" />
+              <mxPoint x="82" y="730" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v6" value="pan / zoom / focus&#10;shared transform" source="committed" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+        <mxCell id="v6" value="pan / zoom / focus&#10;shared transform" source="committed" target="committed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.2;entryX=0.5;entryY=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="340" y="497" />
-              <mxPoint x="340" y="370" />
-              <mxPoint x="160" y="370" />
+              <mxPoint x="360" y="469" />
+              <mxPoint x="360" y="350" />
+              <mxPoint x="160" y="350" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -139,10 +139,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dh3" value="1000 ms or explicit Details" source="hover" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="dh3" value="1000 ms or explicit Details" source="hover" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="620" y="1207" />
+              <mxPoint x="1300" y="1207" />
+              <mxPoint x="1300" y="820" />
+              <mxPoint x="620" y="820" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -152,19 +154,19 @@
         <mxCell id="d2" value="current token&#10;fragment or error" source="loading" target="open" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d3" value="Escape, Close, departure, scene or viewport change" source="open" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="d3" value="Escape, Close, departure, scene or viewport change" source="open" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.8;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="1070" />
-              <mxPoint x="160" y="1070" />
+              <mxPoint x="238" y="1070" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="d4" value="dismiss / invalidate pending completion" source="loading" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
+        <mxCell id="d4" value="dismiss / invalidate pending completion" source="loading" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.95;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="620" y="1020" />
-              <mxPoint x="160" y="1020" />
+              <mxPoint x="277" y="1020" />
             </Array>
           </mxGeometry>
         </mxCell>

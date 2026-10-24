@@ -15,8 +15,8 @@ condition to the standard MIT license.
 Bundled third-party code
 ------------------------
 
-The package combines STV-owned MIT code with MIT, ISC, BSD-3-Clause and
-EPL-2.0 browser components. Its SPDX expression describes the combined archive;
+The package combines STV-owned MIT code with MIT, ISC, BSD-3-Clause,
+Apache-2.0, EPL-1.0 and EPL-2.0 browser components. Its SPDX expression describes the combined archive;
 it does not relicense the third-party components. Python dependencies installed
 separately by pip retain their own licenses.
 
@@ -33,7 +33,11 @@ ELK source availability
 .. literalinclude:: ../src/sphinx_traceability_view/static/vendor/ELK-SOURCE.txt
    :language: text
 
-Source/build provenance and transitive dependencies of the generated ELK/GWT
-code still warrant a dedicated redistribution audit before external rollout;
-this page is not a claim of completed legal or employer approval. Historical
-release artifacts retain the licensing materials present when they were built.
+The engineering redistribution audit is recorded in
+:doc:`test-execution/maintenance-2026-10-24/dependency-audit`. It verifies the
+exact upstream bundle against npm integrity, identifies the compiled dependency
+families, retains source/notice evidence and includes missing Apache-2.0 and
+EPL-1.0 material. ``vendor/ELK-INVENTORY.json`` travels with generated views.
+The build rejects a changed ELK binary/version or changed audited legal inputs
+until the inventory is deliberately renewed. This scope covers STV's shipped
+browser assets; it does not assert a bit-for-bit rebuild of upstream ELK.

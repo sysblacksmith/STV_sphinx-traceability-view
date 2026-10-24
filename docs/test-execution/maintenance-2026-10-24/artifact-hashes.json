@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/_build/maintenance-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+    "bytes": 1001212,
+    "sha256": "558ffe75a7fd2550660713e6cd472dc9f4d7d9d6034f5e1cd017e3b55ce9095d"
+  },
+  {
+    "path": "docs/_build/maintenance-dist/sphinx_traceability_view-1.0.0.dev0.tar.gz",
+    "bytes": 2157706,
+    "sha256": "65bc6639ea31559ebd34b5f8e3c49283f7ac17af1a912c0588e8a2dfeab1246d"
+  },
+  {
+    "path": "docs/_build/maintenance-dist-2/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+    "bytes": 1001226,
+    "sha256": "82fcd6689ad4f743b6cb277142159f4767277344820c2fc87c61a8f71c6966a2"
+  },
+  {
+    "path": "docs/_build/maintenance-dist-2/sphinx_traceability_view-1.0.0.dev0.tar.gz",
+    "bytes": 2164256,
+    "sha256": "94f2829879678ba75a947a82a038a58bb1f52f1878e8055eecf3290b91444953"
+  },
+  {
+    "path": "docs/_build/maintenance-dist-3/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+    "bytes": 1001300,
+    "sha256": "4d0788ac57431020b9769c6722dbbf19063d6c66c510cbcdcc64aed135260aef"
+  },
+  {
+    "path": "docs/_build/maintenance-dist-3/sphinx_traceability_view-1.0.0.dev0.tar.gz",
+    "bytes": 2175542,
+    "sha256": "32acbd6f8208a4ab8ecd00fe36078288c09411cfad6b7c38e99b46af41f861bd"
+  }
+]

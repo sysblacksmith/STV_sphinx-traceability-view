@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="19.999" timestamp="2026-10-24T14:35:44.204915+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_package" name="test_clean_wheel_host" time="19.925"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SWR_046,STV_SYS_009" /></properties><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fragg\\AppData\\Local\\Temp\\stv-wheel-4icum5ji\\html\\_static\\stv\\vendor\\ELK-INVENTORY.json'">@pytest.mark.requirements('STV_SYS_009','STV_SWR_042','STV_SWR_046')
+    def test_clean_wheel_host():
+        wheels=[Path(os.environ['STV_WHEEL'])] if os.environ.get('STV_WHEEL') else sorted((ROOT/'dist').glob('*.whl'))
+        assert wheels,'Build the wheel before packaging verification'
+        wheel=wheels[-1]
+        wheelhouse=ROOT/'docs/_build/wheelhouse'
+        assert wheelhouse.is_dir(),'Provision the runtime wheelhouse before offline packaging verification'
+        with zipfile.ZipFile(wheel) as archive:
+            names=archive.namelist()
+            assert not any("/tests/" in name for name in names), "Unit tests must not ship in the runtime wheel"
+            for asset in ('stv.js','stv.css','LICENSE.txt','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js','vendor/ELK-SOURCE.txt','vendor/ELK-INVENTORY.json'):
+                assert f'sphinx_traceability_view/static/{asset}' in names
+            metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
+            assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
+            assert 'License-Expression: MIT AND ISC AND BSD-3-Clause AND Apache-2.0 AND EPL-1.0 AND EPL-2.0' in metadata
+            assert 'Copyright (c) 2026 Henning Heikes' in archive.read('sphinx_traceability_view/static/LICENSE.txt').decode()
+            license_members=[name for name in names if '.dist-info/licenses/' in name]
+            assert any(name.endswith('/LICENSE') for name in license_members)
+            assert any(name.endswith('/THIRD_PARTY_NOTICES.txt') for name in license_members)
+            assert any(name.endswith('/ELK-SOURCE.txt') for name in license_members)
+        source_archive=wheel.parent/(wheel.name.split('-py3-')[0]+'.tar.gz')
+        with tarfile.open(source_archive,'r:gz') as archive:
+            names=archive.getnames()
+            assert any(name.endswith('/LICENSE') for name in names)
+            assert any(name.endswith('/static/THIRD_PARTY_NOTICES.txt') for name in names)
+            assert any(name.endswith('/static/vendor/ELK-SOURCE.txt') for name in names)
+    
+        with tempfile.TemporaryDirectory(prefix='stv-wheel-') as directory:
+            root=Path(directory);envpath=root/'env'
+            assert root.resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
+            subprocess.run([sys.executable,'-m','venv',str(envpath)],check=True,capture_output=True)
+            python=envpath/'Scripts/python.exe'
+            result=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),str(wheel)],capture_output=True,text=True)
+            assert result.returncode==0,result.stdout+result.stderr
+            source=root/'source';shutil.copytree(ROOT/'docs/test-scripts/fixtures/minimal',source)
+            env=dict(os.environ);env.pop('PYTHONPATH',None)
+            env['PATH']=str(envpath/'Scripts')+os.pathsep+str(Path(os.environ['SystemRoot'])/'System32')
+            result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)
+            assert result.returncode==0,result.stdout+result.stderr
+            assert 'STV_PENDING' not in (root/'html/index.html').read_text(encoding='utf-8')
+            static=root/'html/_static/stv'
+            assert (static/'LICENSE.txt').read_bytes()==(ROOT/'LICENSE').read_bytes()
+            assert 'https://github.com/kieler/elkjs/tree/0.10.0' in (static/'vendor/ELK-SOURCE.txt').read_text(encoding='utf-8')
+            notices=(static/'THIRD_PARTY_NOTICES.txt').read_text(encoding='utf-8')
+            assert 'Eclipse Public License' in notices
+            assert 'Apache License' in notices
+            assert 'EMF-GWT common/ecore' in notices
+            import json, hashlib
+&gt;           inventory=json.loads((static/'vendor/ELK-INVENTORY.json').read_text())
+
+docs\test-scripts\test_package.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\fragg\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1134: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-wheel-4icum5ji/html/_static/stv/vendor/ELK-INVENTORY.json')
+mode = 'r', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return self._accessor.open(self, mode, buffering, encoding, errors,
+                                   newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\fragg\\AppData\\Local\\Temp\\stv-wheel-4icum5ji\\html\\_static\\stv\\vendor\\ELK-INVENTORY.json'
+
+C:\Users\fragg\AppData\Local\Programs\Python\Python310\lib\pathlib.py:1119: FileNotFoundError</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,122 @@
+[
+  {
+    "suite": "development-package",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist"
+    ],
+    "started": "2026-10-24T12:30:03.425663+00:00",
+    "finished": "2026-10-24T12:30:08.111019+00:00",
+    "returncode": 0,
+    "log": "development-package.log"
+  },
+  {
+    "suite": "regression",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--ignore=docs/test-scripts/test_capacity.py",
+      "--junitxml=D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\regression.xml",
+      "--requirement-map=D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\test-map.json"
+    ],
+    "started": "2026-10-24T12:30:08.112525+00:00",
+    "finished": "2026-10-24T12:34:54.143377+00:00",
+    "returncode": 1,
+    "log": "regression.log"
+  },
+  {
+    "suite": "node-regression",
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=junit",
+      "frontend/src/*/tests/*.test.js"
+    ],
+    "started": "2026-10-24T12:34:54.143377+00:00",
+    "finished": "2026-10-24T12:34:54.489405+00:00",
+    "returncode": 0,
+    "log": "node-regression.log"
+  },
+  {
+    "suite": "development-package-2",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "docs/_build/maintenance-dist-2"
+    ],
+    "started": "2026-10-24T12:37:45.929220+00:00",
+    "finished": "2026-10-24T12:37:50.795203+00:00",
+    "returncode": 0,
+    "log": "development-package-2.log"
+  },
+  {
+    "suite": "affected-retest",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "src/sphinx_traceability_view/directive/tests",
+      "docs/test-scripts/test_package.py",
+      "docs/test-scripts/test_windows_paths.py",
+      "docs/test-scripts/test_legal_guard.py",
+      "--junitxml=D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\affected-retest.xml"
+    ],
+    "started": "2026-10-24T12:37:50.795203+00:00",
+    "finished": "2026-10-24T12:38:25.334736+00:00",
+    "returncode": 0,
+    "log": "affected-retest.log"
+  },
+  {
+    "suite": "development-package-3",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "docs/_build/maintenance-dist-3"
+    ],
+    "started": "2026-10-24T12:43:06.588560+00:00",
+    "finished": "2026-10-24T12:43:11.388736+00:00",
+    "returncode": 0,
+    "log": "development-package-3.log"
+  },
+  {
+    "suite": "package-final",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "docs/test-scripts/test_package.py",
+      "docs/test-scripts/test_legal_guard.py",
+      "--junitxml=D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\maintenance-2026-10-24\\package-final.xml"
+    ],
+    "started": "2026-10-24T12:43:11.388736+00:00",
+    "finished": "2026-10-24T12:43:32.334402+00:00",
+    "returncode": 0,
+    "log": "package-final.log"
+  }
+]

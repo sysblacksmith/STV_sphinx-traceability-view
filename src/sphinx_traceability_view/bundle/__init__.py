@@ -24,7 +24,7 @@ def emit(graph, fragments, output):
     files = {}
     for identity, fragment in fragments.items():
         content_hash = digest(fragment)
-        name = f"_static/stv/details/{digest(identity)}-{content_hash}.js"
+        name = f"_static/stv/details/{content_hash}.js"
         graph["details"][identity] = {"url": name, "digest": content_hash}
         files[name] = 'globalThis.__STV_DATA__ ||= {graphs:{},fragments:{}};globalThis.__STV_DATA__.fragments[' + encoded(content_hash) + '] = ' + encoded(fragment) + ';'
     identity = digest(encoded(graph))

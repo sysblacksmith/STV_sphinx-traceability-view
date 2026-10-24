@@ -16,3 +16,36 @@ The upstream ELK.js README and build.gradle describe the Java/GWT build and
 its dependencies. The generated bundled JavaScript is not a substitute for
 the preferred source form. Preserve this notice and the EPL text in
 THIRD_PARTY_NOTICES.txt when redistributing generated STV documentation.
+
+
+Compiled dependency source and license inventory
+----------------------------------------------
+The adjacent ELK-INVENTORY.json pins the exact upstream bundle SHA-256,
+npm archive integrity, compiled dependency families and source archive hashes.
+THIRD_PARTY_NOTICES.txt contains their license texts and source attributions.
+
+GWT runtime/emulation 2.11.0 (Apache-2.0):
+https://repo.maven.apache.org/maven2/org/gwtproject/gwt-user/2.11.0/gwt-user-2.11.0-sources.jar
+Guava / Guava-GWT 31.1-jre (Apache-2.0):
+https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar
+https://repo.maven.apache.org/maven2/com/google/guava/guava-gwt/31.1-jre/guava-gwt-31.1-jre-sources.jar
+EMF-GWT common and ecore 2.12.4 (EPL-1.0):
+https://repo.maven.apache.org/maven2/com/genmymodel/emf/gwt/emf-common/2.12.4/emf-common-2.12.4-sources.jar
+https://repo.maven.apache.org/maven2/com/genmymodel/emf/gwt/emf-ecore/2.12.4/emf-ecore-2.12.4-sources.jar
+Xbase / Xtend runtime 2.28.0 (EPL-2.0):
+https://repo.maven.apache.org/maven2/org/eclipse/xtext/org.eclipse.xtext.xbase.lib/2.28.0/org.eclipse.xtext.xbase.lib-2.28.0-sources.jar
+https://repo.maven.apache.org/maven2/org/eclipse/xtend/org.eclipse.xtend.lib/2.28.0/org.eclipse.xtend.lib-2.28.0-sources.jar
+https://repo.maven.apache.org/maven2/org/eclipse/xtend/org.eclipse.xtend.lib.macro/2.28.0/org.eclipse.xtend.lib.macro-2.28.0-sources.jar
+Babel helpers and Browserify runtime prelude (MIT):
+https://github.com/babel/babel
+https://github.com/browserify/browserify
+https://github.com/browserify/browser-pack
+web-worker browser shim 1.4.1 (Apache-2.0):
+https://registry.npmjs.org/web-worker/-/web-worker-1.4.1.tgz
+
+The upstream npm distribution does not provide the exact resolved compiler
+lock. Its pinned binary is used unmodified and verified against npm integrity;
+this inventory does not claim a bit-for-bit rebuild of ELK's upstream compiler.
+Compiler-only tooling and ELK demo/model/native-libavoid distributions are not
+included in STV's browser bundle. The copied browser shim exports Worker;
+Node worker_threads implementation is not included in the browser bundle.

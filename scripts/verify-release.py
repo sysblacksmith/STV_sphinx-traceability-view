@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import platform
 import re
+import runpy
 import shutil
 import subprocess
 import sys
@@ -23,9 +24,9 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def candidate_sources():
     files=[]
-    for directory in ('src','frontend/src','docs/test-scripts','scripts'):
+    for directory in ('src','frontend/src','frontend/legal','docs/test-scripts','scripts'):
         files.extend(path for path in (ROOT/directory).rglob('*') if path.is_file() and '__pycache__' not in path.parts and not path.is_symlink())
-    files.extend(ROOT/name for name in ('pyproject.toml','conftest.py','hatch_build.py','frontend/package.json','frontend/package-lock.json'))
+    files.extend(ROOT/name for name in ('pyproject.toml','conftest.py','hatch_build.py','frontend/package.json','frontend/package-lock.json','frontend/build.js','docs/conf.py'))
     files.extend(ROOT/'docs'/name for name in ('requirements-stakeholder.rst','requirements-system.rst','requirements-software.rst','internal-interfaces.rst','implementation-plan.rst','verification-plan.rst'))
     files.extend((ROOT/'docs/architecture/decisions').glob('*.rst'))
     return {path.relative_to(ROOT).as_posix():sha(path) for path in sorted(set(files))}
@@ -41,7 +42,7 @@ def junit_cases(path):
 
 def main():
     parser=argparse.ArgumentParser()
-    version=re.search(r'^version = "([^"]+)"', (ROOT/'pyproject.toml').read_text(encoding='utf-8'), re.M)[1]
+    version=runpy.run_path(str(ROOT/"src/sphinx_traceability_view/_version.py"))["__version__"]
     parser.add_argument('--record',default=version+'-candidate-1')
     parser.add_argument('--driver',required=True,type=Path)
     parser.add_argument('--reuse-capacity-from',help='Reuse an unchanged, verified host fixture; browser capacity tests still run')

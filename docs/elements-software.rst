@@ -20,6 +20,9 @@ Software module responsibilities and containment within the product system eleme
 
    **Implementation:** ``lifecycle.py``; ``directives.py``; ``__init__.py``.
 
+   The public setup/version shims in ``src/sphinx_traceability_view/__init__.py``
+   and ``src/sphinx_traceability_view/_version.py`` belong to this component.
+
    **Unit tests:** ``tests/test_lifecycle.py``.
 
    **Boundary:** ``README.rst``.
@@ -107,6 +110,10 @@ Software module responsibilities and containment within the product system eleme
    **Unit tests:** ``tests/test_bundle.py``.
 
    **Boundary:** ``README.rst``.
+
+   Maintainer delivery helpers ``frontend/build.js`` and ``frontend/legal/``
+   own audited npm/compiled-library notices and generated package assets for
+   this delivery boundary; they introduce no additional runtime element.
 
 .. swe:: Exploration state engine
    :id: STV_SWE_STATE

@@ -1,0 +1,105 @@
+{
+  "bugs": {
+    "url": "https://github.com/developit/web-worker/issues"
+  },
+  "dist": {
+    "shasum": "894e71a8f6fce059dc175864fcdf9e633eb7cc6b",
+    "tarball": "https://registry.npmjs.org/web-worker/-/web-worker-1.4.1.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-bEYkHEaeUTjiWscVoW7UBLmAV1S9v0AELr9+3B94Ps1G6E5N/jmSth1e5RZoWbLZWqkI/eyb7KT3sto0ugRpLg==",
+    "signatures": [
+      {
+        "sig": "MEUCIGzLyzTvVx5ed43AqMHXF632zk2KCEn7b+e0I4mtz62KAiEA0y5kV906QYcPyu6bAqVY8u7oM/GYUyIuJAhZPx6ifRc=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 30062
+  },
+  "main": "./dist/browser/index.cjs",
+  "name": "web-worker",
+  "type": "module",
+  "types": "./types/index.d.cts",
+  "authors": [],
+  "browser": "./dist/browser/index.cjs",
+  "exports": {
+    "import": {
+      "bun": "./src/browser/index.js",
+      "types": "./types/index.d.ts",
+      "browser": "./src/browser/index.js",
+      "default": "./src/node/index.js"
+    },
+    "module": {
+      "bun": "./src/browser/index.js",
+      "types": "./types/index.d.ts",
+      "browser": "./src/browser/index.js",
+      "default": "./src/node/index.js"
+    },
+    "default": {
+      "bun": "./dist/browser/index.cjs",
+      "types": "./types/index.d.cts",
+      "browser": "./dist/browser/index.cjs",
+      "default": "./dist/node/index.cjs"
+    }
+  },
+  "gitHead": "1fda46ca4529fd40274c1e5bbe899a138a158f10",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "eslint '*.js' test && node --experimental-modules ./node_modules/.bin/ava",
+    "prepare": "tsup"
+  },
+  "_npmUser": {
+    "name": "developit",
+    "email": "jason@developit.ca"
+  },
+  "homepage": "https://github.com/developit/web-worker",
+  "keywords": [
+    "worker",
+    "worker_threads",
+    "webworker",
+    "web worker",
+    "web-worker",
+    "threads"
+  ],
+  "repository": {
+    "url": "git+https://github.com/developit/web-worker.git",
+    "type": "git"
+  },
+  "_npmVersion": "10.9.2",
+  "description": "Consistent Web Workers in browser and Node.",
+  "directories": {},
+  "maintainers": [
+    {
+      "name": "developit",
+      "email": "jason@developit.ca"
+    },
+    {
+      "name": "cwmma",
+      "email": "calvin.metcalf@gmail.com"
+    },
+    {
+      "name": "guybedford",
+      "email": "guybedford@gmail.com"
+    }
+  ],
+  "_nodeVersion": "23.5.0",
+  "eslintConfig": {
+    "rules": {
+      "no-console": 0
+    },
+    "extends": "developit"
+  },
+  "_hasShrinkwrap": false,
+  "devDependencies": {
+    "ava": "^6.2.0",
+    "tsup": "^8.0.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-compat": "^4.2.0",
+    "eslint-config-developit": "^1.2.0"
+  },
+  "_npmOperationalInternal": {
+    "tmp": "tmp/web-worker_1.4.1_1738343763495_0.09611426658122513",
+    "host": "s3://npm-registry-packages-npm-production"
+  },
+  "_id": "web-worker@1.4.1",
+  "version": "1.4.1"
+}

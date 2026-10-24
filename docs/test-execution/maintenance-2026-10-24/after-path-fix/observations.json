@@ -1,0 +1,48 @@
+{
+  "browser": "158.0.1",
+  "old_path_length": 298,
+  "actual_path_length": 233,
+  "output": "C:\\Users\\fragg\\AppData\\Local\\Temp\\pytest-of-fragg\\pytest-37\\test_nested_windows_detail_loa0\\nested-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "checks": [
+    {
+      "protocol": "file",
+      "page": "index.html",
+      "result": "passed"
+    },
+    {
+      "protocol": "file",
+      "page": "index.html",
+      "retry": "passed"
+    },
+    {
+      "protocol": "file",
+      "page": "nested/index.html",
+      "result": "passed"
+    },
+    {
+      "protocol": "file",
+      "page": "nested/index.html",
+      "retry": "passed"
+    },
+    {
+      "protocol": "http",
+      "page": "index.html",
+      "result": "passed"
+    },
+    {
+      "protocol": "http",
+      "page": "index.html",
+      "retry": "passed"
+    },
+    {
+      "protocol": "http",
+      "page": "nested/index.html",
+      "result": "passed"
+    },
+    {
+      "protocol": "http",
+      "page": "nested/index.html",
+      "retry": "passed"
+    }
+  ]
+}

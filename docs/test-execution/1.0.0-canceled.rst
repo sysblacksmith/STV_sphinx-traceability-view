@@ -1,0 +1,15 @@
+Canceled release preparation
+============================
+
+On 2026-10-24 the owner canceled the first official release preparation and
+requested dependency-notice fixes, centralized version metadata, the Windows
+path regression fix and acceptance review before another release is started.
+
+The preparation commit is ``17cafd9``. Its
+:doc:`1.0.0-candidate-1/index` and distributions are historical, unqualified
+artifacts. Do not publish or tag them as the first stable release. Existing
+results and checksums remain unchanged. The agent created no release tag.
+
+Current work is development-only; see
+:doc:`maintenance-2026-10-24/index`. A future release needs a separate explicit
+start and fresh qualification against its final inputs.

@@ -1,0 +1,7 @@
+# Audited inputs and vendor binaries must retain their verified byte identity.
+/frontend/legal/*.txt -text
+/src/sphinx_traceability_view/static/vendor/elk.bundled.js -text
+/src/sphinx_traceability_view/static/stv.js -text
+# Keep the project license and its generated copy consistent across platforms.
+/LICENSE text eol=lf
+/src/sphinx_traceability_view/static/LICENSE.txt text eol=lf

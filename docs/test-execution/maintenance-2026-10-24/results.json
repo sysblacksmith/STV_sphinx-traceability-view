@@ -1,0 +1,42 @@
+{
+  "suite_totals": {
+    "before-path-fix.xml": {
+      "failed": 1
+    },
+    "path-fix.xml": {
+      "passed": 3
+    },
+    "regression.xml": {
+      "passed": 57,
+      "failed": 1
+    },
+    "node-regression.log": {
+      "passed": 20
+    },
+    "package-retest.xml": {
+      "failed": 1
+    },
+    "legal-guard.xml": {
+      "passed": 1
+    },
+    "affected-retest.xml": {
+      "passed": 5
+    },
+    "package-final.xml": {
+      "passed": 2
+    },
+    "legal-guard-final.xml": {
+      "passed": 1
+    }
+  },
+  "attempts": 92,
+  "distinct_cases": 79,
+  "latest_outcomes": {
+    "passed": 79,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "base_revision": "17cafd95a11491fdef1ea02a07776eff5a5765b1",
+  "scope": "Development maintenance; excludes two capacity cases and all new release qualification. Four occurrence-mode cases remain planned."
+}

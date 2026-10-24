@@ -1,0 +1,105 @@
+{
+  "bugs": {
+    "url": "https://github.com/kieler/elkjs/issues"
+  },
+  "dist": {
+    "shasum": "abe2aa6cb25e7439b708fab873b2448d26ed33a1",
+    "tarball": "https://registry.npmjs.org/elkjs/-/elkjs-0.10.0.tgz",
+    "fileCount": 12,
+    "integrity": "sha512-v/3r+3Bl2NMrWmVoRTMBtHtWvRISTix/s9EfnsfEWApNrsmNjqgqJOispCGg46BPwIFdkag3N/HYSxJczvCm6w==",
+    "signatures": [
+      {
+        "sig": "MEQCIBmn5xiBYbwCBS7P0O1I6fvbPKeTEOX+F5mxNe8hbN0iAiBkOqycUflwxdJ/plMP3OmR9go8HoaNFIm3dFYN6wg8Vg==",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 7915096
+  },
+  "main": "lib/main",
+  "name": "elkjs",
+  "types": "lib/main",
+  "author": {
+    "name": "Ulf R\u00fcegg",
+    "email": "uruurumail@gmail.com"
+  },
+  "gitHead": "8a4fc2e11c1a184daa156cf563961bd860980c5f",
+  "license": "EPL-2.0",
+  "scripts": {
+    "cp": "cp build/js/elk-worker*.js lib/ && cp build/js/main-node.js lib/main.js && cp typings/*.d.ts lib/",
+    "js": "npm run babel && npm run browserify && npm run cp",
+    "test": "mocha test/mocha",
+    "babel": "babel src/js/ -d build/js/",
+    "build": "npm run gradle && npm run js",
+    "clean": "./gradlew clean && rm -r lib",
+    "gradle": "./gradlew lib",
+    "browserify": "mkdirp lib && npm run browserifyApi && npm run browserifyBundle",
+    "browserifyApi": "browserify build/js/main-api.js -s ELK --outfile lib/elk-api.js",
+    "setDevVersion": "npm version --no-git-tag-version \"$(node -p \"require('./package.json').version\")-dev-$(date '+%Y%m%d')\"",
+    "browserifyBundle": "browserify build/js/main-node.js -s ELK --outfile lib/elk.bundled.js"
+  },
+  "_npmUser": {
+    "name": "eddykasp",
+    "email": "maxkasperowski@outlook.com"
+  },
+  "homepage": "https://github.com/kieler/elkjs#readme",
+  "keywords": [
+    "graph",
+    "layout",
+    "layered",
+    "ports",
+    "dataflow"
+  ],
+  "repository": {
+    "url": "git+https://github.com/kieler/elkjs.git",
+    "type": "git"
+  },
+  "_npmVersion": "8.19.4",
+  "description": "Automatic graph layout based on Sugiyama's algorithm. Specialized for data flow diagrams and ports.",
+  "directories": {},
+  "maintainers": [
+    {
+      "name": "uruuru",
+      "email": "uruurumail@gmail.com"
+    },
+    {
+      "name": "spoenemann",
+      "email": "miro.spoenemann@typefox.io"
+    },
+    {
+      "name": "eddykasp",
+      "email": "maxkasperowski@outlook.com"
+    },
+    {
+      "name": "sdo-inf",
+      "email": "sdo@informatik.uni-kiel.de"
+    },
+    {
+      "name": "rt-kieler",
+      "email": "rt-kieler@email.uni-kiel.de"
+    }
+  ],
+  "_nodeVersion": "16.20.2",
+  "publishConfig": {
+    "tag": "next",
+    "access": "public"
+  },
+  "_hasShrinkwrap": false,
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^10.3.0",
+    "mkdirp": "^0.5.0",
+    "@babel/cli": "^7.26.4",
+    "browserify": "^14.4.0",
+    "web-worker": "1.4.1",
+    "@babel/core": "^7.26.4",
+    "chai-as-promised": "^7.1.1",
+    "@babel/preset-env": "^7.26.4"
+  },
+  "_npmOperationalInternal": {
+    "tmp": "tmp/elkjs_0.10.0_1741874702668_0.007598485227736429",
+    "host": "s3://npm-registry-packages-npm-production"
+  },
+  "_id": "elkjs@0.10.0",
+  "version": "0.10.0"
+}

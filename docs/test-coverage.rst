@@ -71,7 +71,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_build.py::test_alternate_host_schema_external_metadata_and_parts``
    * - :need:`STV_SWR_015`
      - A cross-page Need with custom metadata, formatted body and local images has equivalent information in details; hidden internal fields are not exposed. Remote media/CSS fixtures show the fallback and preserve the original URL without automatic network requests.
-     - ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
+     - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``;
        ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
@@ -80,6 +81,7 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
    * - :need:`STV_SWR_016`
@@ -89,23 +91,27 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
    * - :need:`STV_SWR_017`
      - With network disabled, file-URL output supports expansion, details and local links with no missing runtime assets.
      - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
+       ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_active_embed_urls_are_not_retained_as_navigation``;
        ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py::test_failed_finalization_retains_pending_page_and_previous_assets``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
    * - :need:`STV_SWR_018`
      - The same nested-page bundle works below a non-root HTTP prefix and through file URLs.
      - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
+       ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_static_details_and_remote_fallback``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_portable_paths_preserve_queries_and_fragments``;
        ``src/sphinx_traceability_view/detail_build/tests/test_details.py::test_srcset_data_images_and_css_resources``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
-       ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``
+       ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``
    * - :need:`STV_SWR_019`
      - A two-parent fixture changes between one shared node and two occurrences using the selector.
      - Deferred occurrence-mode release; no runtime delivered.
@@ -224,7 +230,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
    * - :need:`STV_SWR_042`
      - A clean Python 3.10 environment with pinned Sphinx dependencies installs the wheel and builds the fixture.
-     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
+       ``docs/test-scripts/test_package.py::test_clean_wheel_host``
    * - :need:`STV_SWR_043`
      - Candidate sizes 199 and 200 pass, 201 fails; 200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
      - ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``;
@@ -364,7 +371,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
    * - :need:`STV_SYS_003`
      - The same output supports navigation and local-object inspection under file URLs with networking disabled and under static HTTP hosting.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
-       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``
    * - :need:`STV_SYS_004`
      - A cross-document chain can be followed from either end; a missing target appears as a placeholder and host validation determines overall build failure.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
@@ -380,7 +388,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
        ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``
    * - :need:`STV_SYS_007`
      - Expanding, zooming and panning one of two views leaves the other unchanged.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
@@ -391,7 +400,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_capacity.py::test_large_project_at_visible_capacity[http]``
    * - :need:`STV_SYS_009`
      - A built wheel installs into a clean host environment and produces an embedded HTML view without copying repository implementation files.
-     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
+       ``docs/test-scripts/test_package.py::test_clean_wheel_host``
    * - :need:`STV_SYS_010`
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
@@ -408,8 +418,10 @@ Executable sources
 * ``docs/test-scripts/test_browser.py``
 * ``docs/test-scripts/test_build.py``
 * ``docs/test-scripts/test_capacity.py``
+* ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
 * ``docs/test-scripts/test_release_seeds.py``
+* ``docs/test-scripts/test_windows_paths.py``
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/layout/tests/layout.test.js``
 * ``frontend/src/render/tests/groups.test.js``

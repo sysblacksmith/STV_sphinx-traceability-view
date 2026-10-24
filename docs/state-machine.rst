@@ -24,7 +24,9 @@ Owners: :need:`STV_SWE_DIRECTIVE`, :need:`STV_SWE_GRAPH`,
 source and unit-test paths are listed in :doc:`elements-software`. Initial state is collected
 invocations; terminal states are finalized output or failed build. Hidden Needs
 and their incident edges never enter the snapshot. Published detail fragments
-are keyed by content hash; manifests name the required revision explicitly.
+are keyed and named by the full content hash; identical fragments share one
+asset. Manifests name the required revision explicitly. This naming change
+does not change build, exploration or inspection states or transitions.
 Copied host relationship wrappers lose hidden-target references; deliberately
 published prose and ordinary author links are preserved. Executable URL schemes
 are rejected, including active data URLs in replaced embeds; permitted data

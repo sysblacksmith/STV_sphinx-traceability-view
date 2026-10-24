@@ -14,3 +14,20 @@ def test_classic_registration_treats_prototype_keys_and_script_text_as_data(tmp_
     assert result.returncode==0,result.stderr
     data=json.loads(result.stdout)
     assert data=={'ids':['__proto__'],'prototype':None,'missing':'undefined','title':graph['objects']['__proto__']['title']}
+
+
+@pytest.mark.requirements('STV_SWR_015','STV_SWR_017','STV_SWR_018')
+def test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths(tmp_path):
+    from sphinx_traceability_view.bundle import digest
+    fragment='<p>Identical published content</p>'
+    _,path=emit({'objects':{}},{'A':fragment,'B':fragment,'C':'<p>Other</p>'},tmp_path)
+    assets=list((tmp_path/'_static/stv/details').glob('*.js'))
+    assert len(assets)==2
+    assert all(len(p.stem)==64 for p in assets)
+    assert (tmp_path/'_static/stv/details'/(digest(fragment)+'.js')).is_file()
+    encoded=json.loads((tmp_path/path).read_text().rsplit('JSON.parse(',1)[1].split(',(_,v)=>',1)[0])
+    graph=json.loads(encoded)
+    assert graph['details']['A']==graph['details']['B']
+    assert graph['details']['A']!=graph['details']['C']
+    for detail in graph['details'].values():
+        assert detail['digest'] in (tmp_path/detail['url']).read_text()

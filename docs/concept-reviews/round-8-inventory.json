@@ -1,0 +1,157 @@
+[
+  {
+    "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+    "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+    "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+    "sha256": "43a609ae6acd1c966a0698324c1f3170b6577731d84aaa563f8574811441e2d5",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+    "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+    "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+    "sha256": "d6b1e8b3e4b4d24e7cadf14d22a94cd7bb4020efc4a2ec88c22896f70872d08f",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/decisions/STV_ADR_007_component_directories.rst",
+    "sha256": "58a9bf379840e1838f105a19c17bf3538e20d1cc21d1e71aa6ce4227df15c363",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/architecture/diagrams/software-architecture.drawio",
+    "sha256": "a952999f9cef4df1996fd0611dd1212f036eda9c386edc605ba2d9a482eaa315",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/diagrams/software-architecture.svg",
+    "sha256": "018b59cb2b49870f25f4ce98604ac37dd369f497fbdaa9325795efa334bf2b64",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/diagrams/state-machine.drawio",
+    "sha256": "1f24681cf6e7882ae23850eac9f3a99fb020cba3509ed66810db05fd08736708",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/architecture/diagrams/state-machine.svg",
+    "sha256": "1732627d46a28ae6e5df090b0b2cb040dae690621908e747ee89e9757590ea16",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/architecture/diagrams/system-architecture.drawio",
+    "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture/diagrams/system-architecture.svg",
+    "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture-software.rst",
+    "sha256": "3bb7a0a7bfa5b4e3f1c93179e4c3b30b231fd4a7c822b908a74aee3fdd6f326e",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/architecture-system.rst",
+    "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/conf.py",
+    "sha256": "ea721e816efa8c9deb4af35b966406eb5d5138dc4f50e30a927ff64cbf2f6534",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/elements-software.rst",
+    "sha256": "eab417e40ac91c85def5d7318d16100f230f75a3f5262f605dd637919e16279f",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/elements-system.rst",
+    "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/implementation-plan.rst",
+    "sha256": "3e8dca23848b8425983f66a0dc51f56f0cb7eb08d36af10a4d89d93214bb0c87",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/internal-interfaces.rst",
+    "sha256": "c16a9ab26001a8b7219b2c9fb772be9b15883a37100d0f06fac2c1da6260fb09",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/licensing.rst",
+    "sha256": "ba12876a800c91b8079785bd39e4c54406d6cf6e7d4a660ea599c8ab0ad97d0a",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/requirements-software.rst",
+    "sha256": "81e0dea9fe527819ea2db8cdb3e6b575729e1dfff75685c5d951dc5ca080da39",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/requirements-stakeholder.rst",
+    "sha256": "95d208de839a32e5d4977de23ef59ae3d57a3bca22c7ee57e33326c367bc4c52",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/requirements-system.rst",
+    "sha256": "1ef5a3f8dd7539cdb127a04ae42de6939139d01b10c4b6d888571f37b2f5c8a0",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/state-machine.rst",
+    "sha256": "412f5fab258db2fe8fd2c56a8b75ff5b93551f0e71569815709ee35db85bb956",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/technology-stack.rst",
+    "sha256": "cbf5142be04488118236cefe61ea5322bab6ae87e997813d74cadd120927260b",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/test-cases/software-tests.rst",
+    "sha256": "155959e0c0f20e92e491d52922a598cebd395945ff6cea1dd205a788af2149be",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/test-cases/system-tests.rst",
+    "sha256": "387ba977265a26ed57d6475cc83d7ca0f8b72e738d11a6db90218195d374e50a",
+    "assessment": "Scoped acceptance: reviewed changed design/test/delivery content"
+  },
+  {
+    "path": "docs/test-coverage.rst",
+    "sha256": "9d6291277e7c3f0455abca252c0d33e0dca3c0c172938c35a2fa3e376b5d426d",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/traceability.rst",
+    "sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  },
+  {
+    "path": "docs/verification-plan.rst",
+    "sha256": "ba670e8a4d12ad443c65253a02b7d56a4c057eb3332ed00f1cec707d95d1ff84",
+    "assessment": "Prior acceptance retained; assessed as context/impact neighborhood (not a new blanket baseline review)"
+  }
+]

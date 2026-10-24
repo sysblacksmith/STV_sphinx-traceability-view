@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="23.594" timestamp="2026-10-24T14:24:58.856531+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_windows_paths" name="test_nested_windows_detail_loading_and_retry" time="23.261"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SYS_003,STV_SYS_006" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="80e84d63-4c48-4a2d-adc0-e6357aee1238")&gt;
+tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-36/test_nested_windows_detail_loa0')
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_003','STV_SYS_006','STV_SWR_015','STV_SWR_017','STV_SWR_018')
+    def test_nested_windows_detail_loading_and_retry(browser, tmp_path):
+        source=tmp_path/'source';shutil.copytree(FIXTURE,source)
+        (source/'nested').mkdir()
+        (source/'nested/index.rst').write_text('Nested view\n===========\n\n.. traceability-view:: ROOT_A LEAF_B\n',encoding='utf-8')
+        with (source/'index.rst').open('a',encoding='utf-8') as stream:stream.write('\n.. toctree::\n\n   nested/index\n')
+        # Guarantee that old two-hash names exceed MAX_PATH, while compact full
+        # content hashes fit. Do not depend on a particular checkout/user name.
+        output=tmp_path/('nested-'+('x'*max(1,145-len(str(tmp_path))-8)))
+        result=build(source,output);assert result.returncode==0,result.stdout+result.stderr
+        graph=manifest(output);detail=graph['details']['ROOT_A'];asset=output/detail['url']
+        old_path=asset.parent/('0'*64+'-'+detail['digest']+'.js')
+        assert len(str(old_path))&gt;260
+        assert asset.is_file()
+        record=Path(os.environ['STV_PATH_RECORD']) if os.environ.get('STV_PATH_RECORD') else None
+        observations={'browser':browser.capabilities['browserVersion'],'old_path_length':len(str(old_path)),
+                      'actual_path_length':len(str(asset)),'output':str(output),'checks':[]}
+        wait=WebDriverWait(browser,15)
+        saved=asset.read_bytes()
+        try:
+            for protocol in ('file','http'):
+                with published_url(output,protocol) as root_url:
+                    for page in ('index.html','nested/index.html'):
+                        url=root_url.rsplit('/',1)[0]+'/'+page
+                        browser.get(url)
+                        wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+                        control=browser.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
+                        browser.execute_script('arguments[0].focus()',control)
+                        control.send_keys(Keys.ENTER)
+&gt;                       wait.until(lambda d:'formatted body' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
+
+docs\test-scripts\test_windows_paths.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="80e84d63-4c48-4a2d-adc0-e6357aee1238")&gt;
+method = &lt;function test_nested_windows_detail_loading_and_retry.&lt;locals&gt;.&lt;lambda&gt; at 0x000001E907594550&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase></testsuite></testsuites>

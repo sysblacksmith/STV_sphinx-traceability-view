@@ -21,3 +21,5 @@ Historical candidate results; no deployment or release approval is implied.
    0.2.0-method-1/index
    0.2.0-method-2/index
    1.0.0-candidate-1/index
+   1.0.0-canceled
+   maintenance-2026-10-24/index
