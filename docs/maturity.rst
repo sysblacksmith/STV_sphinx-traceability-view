@@ -6,6 +6,24 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+.. _release-1-0-0-authority:
+
+v1.0.0 release authorized
+-----------------------------------
+
+The owner approved PRSA-001 through PRSA-005 remediation and PR015 final
+presentation on 2026-10-24. See :doc:`concept-reviews/round-14` and
+:ref:`release-1-0-0-authority`. Earlier pending-owner
+statements below are historical and superseded for this exact scope.
+The owner requests v1.0.0 without visibility-specific release labels. Repository
+visibility is a separate setting and is unchanged. Runner improvements and
+hosted hardening are owner-accepted nonblocking deferrals; PRSA-006 remains open.
+This is a release authorization, not a requirements change request. The owner
+explicitly confirmed that release intent belongs here, not in the CR register.
+Fresh local candidate suites passed; final consolidation checks and the
+release disposition are in :doc:`test-execution/1.0.0-candidate-2/qualification`.
+No completed hosted release is inferred from local qualification.
+
 PR014 visible viewport boundary fixed
 ---------------------------------------
 
@@ -290,6 +308,7 @@ Review and lifecycle records
    :maxdepth: 2
 
    concept-review
+   concept-reviews/round-14
    concept-reviews/documentation-reorganization
    implementation-review
 

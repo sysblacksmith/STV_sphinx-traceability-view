@@ -38,3 +38,4 @@ Historical candidate results; no deployment or release approval is implied.
    cr014-details/index
 
    pr015-details/index
+   1.0.0-candidate-2/index

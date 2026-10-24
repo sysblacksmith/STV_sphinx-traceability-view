@@ -1,0 +1,6 @@
+Prepare the v1.0.0 release
+
+    - Record owner acceptance so the current product can be released as v1.0.0.
+    - Accept the scoped security remediation and final details presentation.
+    - Set the canonical package version to 1.0.0 and retain fresh qualification evidence.
+    - Keep release-runner improvements and hosted hardening explicitly deferred.

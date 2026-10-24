@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-24T20:26:45.338117+00:00",
+  "revision": "9d3b793928eef76c0043185d0ee2aff3968b5fb5",
+  "dirty_worktree": " M docs/change-requests/index.rst\n M docs/concept-reviews/round-13.rst\n M docs/maturity.rst\n M docs/review.rst\n M docs/sources.rst\n M docs/test-cases/software-tests.rst\n M docs/test-cases/system-tests.rst\n M docs/test-execution/index.rst\n M src/sphinx_traceability_view/_version.py\n?? docs/change-requests/STV_CR_015_private-1-0-0-release.rst\n?? docs/concept-reviews/round-14.rst\n?? docs/test-execution/1.0.0-private-candidate-1/\n?? scripts/prepare-private-release.py\n",
+  "source_identity": "7a32f3997d3567898119a56fef6fc743c1f00f5540e1757b4b036d3107337235",
+  "wheel": "sphinx_traceability_view-1.0.0-py3-none-any.whl",
+  "wheel_sha256": "1905bebe38f24df37531004915f7b252489039df7e8e7ead5306880c8643a839",
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\1.0.0-private-candidate-1\\html"
+}

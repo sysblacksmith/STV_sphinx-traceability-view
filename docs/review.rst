@@ -344,3 +344,10 @@ The owner requested doubled detail width, folded metadata with working arrows
 and actual artifact navigation from header IDs. :need:`STV_PR_015` and
 :doc:`concept-reviews/round-13` record the scope and technical review. No new
 stakeholder scope or release authorization is inferred.
+
+v1.0.0 release acceptance
+----------------------------
+
+On 2026-10-24 the owner approved PRSA-001 through PRSA-005 and final PR015
+presentation. :doc:`concept-reviews/round-14` records the scoped acceptance;
+:ref:`release-1-0-0-authority` authorizes v1.0.0 with runner/hosted work deferred.

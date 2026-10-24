@@ -1,0 +1,3 @@
+# After the final preparation commit exists and all recorded gates pass:
+# Replace the placeholder with that exact commit hash.
+git tag -a v1.0.0 <final-release-commit> -m "v1.0.0 release"

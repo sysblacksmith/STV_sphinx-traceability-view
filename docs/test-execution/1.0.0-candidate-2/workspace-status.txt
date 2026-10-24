@@ -1,0 +1,37 @@
+ M docs/change-requests/index.rst
+ M docs/concept-reviews/round-13.rst
+ M docs/maturity.rst
+ M docs/requirements-software.rst
+ M docs/requirements-system.rst
+ M docs/review.rst
+ M docs/sources.rst
+ M docs/test-cases/software-tests.rst
+ M docs/test-cases/system-tests.rst
+ M docs/test-execution/index.rst
+ M src/sphinx_traceability_view/_version.py
+?? docs/change-requests/STV_CR_015_test-case-maturity-and-chart-size.rst
+?? docs/concept-reviews/round-14.rst
+?? docs/test-execution/1.0.0-candidate-2/
+!! .pytest_cache/
+!! .venv-implementation/
+!! .venv/
+!! __pycache__/
+!! _security-audits/
+!! dist/
+!! docs/_build/
+!! docs/change-requests/STV_CR_013_artifact_vertical_target_position.pptx
+!! docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.pptx
+!! docs/test-scripts/__pycache__/
+!! frontend/node_modules/
+!! scripts/__pycache__/
+!! src/sphinx_traceability_view/__pycache__/
+!! src/sphinx_traceability_view/bundle/__pycache__/
+!! src/sphinx_traceability_view/bundle/tests/__pycache__/
+!! src/sphinx_traceability_view/detail_build/__pycache__/
+!! src/sphinx_traceability_view/detail_build/tests/__pycache__/
+!! src/sphinx_traceability_view/directive/__pycache__/
+!! src/sphinx_traceability_view/directive/tests/__pycache__/
+!! src/sphinx_traceability_view/graph/__pycache__/
+!! src/sphinx_traceability_view/graph/tests/__pycache__/
+!! src/sphinx_traceability_view/model/__pycache__/
+!! src/sphinx_traceability_view/model/tests/__pycache__/

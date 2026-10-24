@@ -366,3 +366,15 @@ initially folded status/tags and other secondary attributes, a working fold arro
 and correct original-artifact navigation from the Need ID. The owner noted that
 other links work. :need:`STV_PR_015` is the corrected-language normalized intake;
 :doc:`concept-reviews/round-13` owns scoped refinement/review.
+
+v1.0.0 release instruction, 2026-10-24
+----------------------------------------
+
+Owner conversation: "ok, i give my go for number 1 and 2. 3 and 4 remain for
+later. right now i want to release v1.0.0 without setting the repo to public,
+yet." Numbering refers to the preceding readiness assessment. See
+:ref:`release-1-0-0-authority` and :doc:`concept-reviews/round-14`.
+
+The owner clarified that the release must not be labelled private and may
+become publicly visible later. Remaining security findings are accepted as
+nonblocking deferred work for v1.0.0. No visibility change is requested now.

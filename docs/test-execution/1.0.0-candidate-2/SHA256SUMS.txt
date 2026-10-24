@@ -1,0 +1,2 @@
+1905bebe38f24df37531004915f7b252489039df7e8e7ead5306880c8643a839  sphinx_traceability_view-1.0.0-py3-none-any.whl
+63e8f1e68f07be31946e3e26546e3e7db05a07b8958ccba4485ce2afc41396b8  sphinx_traceability_view-1.0.0.tar.gz

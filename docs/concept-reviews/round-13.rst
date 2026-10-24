@@ -84,3 +84,11 @@ The framed normal demo was visually inspected with two boxes; the separator is
 continuous and the first card has a clean inset. Sphinx and complete evidence
 validation pass for the follow-up (115 canonical cases, 809 executions). The
 completion inventory now includes this state-neutral refinement.
+
+Owner acceptance
+------------------
+
+The owner explicitly approved readiness item 2 on 2026-10-24, accepting this
+final presentation and pane-frame follow-up. :doc:`round-14` records the
+decision. Earlier pending-owner statements above remain historical. No new
+manual retest execution is inferred.

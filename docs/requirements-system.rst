@@ -51,7 +51,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_017, STV_SHR_018
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 
@@ -101,7 +101,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_015, STV_SHR_016, STV_SHR_033
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 

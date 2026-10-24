@@ -1,0 +1,14 @@
+Looking in links: d:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\wheelhouse
+Processing d:\dropbox\mikrocontr_projects\stv_sphinx-traceability-view\docs\_build\wheelhouse\pip-26.2.2-py3-none-any.whl
+Processing d:\dropbox\mikrocontr_projects\stv_sphinx-traceability-view\docs\_build\wheelhouse\setuptools-84.2.1-py3-none-any.whl
+Processing d:\dropbox\mikrocontr_projects\stv_sphinx-traceability-view\docs\_build\wheelhouse\certifi-2026.10.23-py3-none-any.whl
+Installing collected packages: setuptools, pip, certifi
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 65.5.0
+    Uninstalling setuptools-65.5.0:
+      Successfully uninstalled setuptools-65.5.0
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3.1
+    Uninstalling pip-22.3.1:
+      Successfully uninstalled pip-22.3.1
+Successfully installed certifi-2026.10.23 pip-26.2.2 setuptools-84.2.1

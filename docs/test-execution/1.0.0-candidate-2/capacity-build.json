@@ -1,0 +1,22 @@
+{
+  "fixture_version": 1,
+  "needs": 30000,
+  "authored_edges": 90000,
+  "seconds": 263.8037223999854,
+  "returncode": 0,
+  "command": [
+    "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+    "-m",
+    "sphinx",
+    "-b",
+    "html",
+    "-W",
+    "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\1.0.0-private-candidate-1\\source",
+    "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\1.0.0-private-candidate-1\\html"
+  ],
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.13.17",
+  "graph_bytes": 32947965,
+  "detail_bytes": 147393890,
+  "total_bytes": 412632920
+}

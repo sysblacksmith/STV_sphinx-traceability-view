@@ -1,0 +1,19 @@
+{
+  "sphinx_traceability_view/__init__.py": "13d29642d47c33f167b564d4e2433bcaf06c5dda17f5ddb71aa0d2edad804147",
+  "sphinx_traceability_view/_version.py": "8e9d50b465bb77123ec0e49a65df08643f8b9ed4265654199e5b1e2a8ec46cae",
+  "sphinx_traceability_view/bundle/__init__.py": "a2d0feb4746f31e7e6d3210da78aa84149ac5758e9692ac07b6e93d339ca858d",
+  "sphinx_traceability_view/detail_build/__init__.py": "4f6eeb92abe69cc7b84fd956fe43c0f1beb7c4d2b98c32f4c2fe879e1c804a53",
+  "sphinx_traceability_view/directive/__init__.py": "307423fc344c9cae73bb82aecb09ab43ae5a0107c152b99eebe3a8099fdae2a4",
+  "sphinx_traceability_view/directive/directives.py": "9f153db2276001c59488009edfd044e1b7fd00915b795123a0a5171bd6816833",
+  "sphinx_traceability_view/directive/lifecycle.py": "9afbeec90be1e8c3507c98dea782e286b4e75e8d54a58e6ca0f91e3a306590d9",
+  "sphinx_traceability_view/graph/__init__.py": "2347906f55fc6d5ea5d8cc8ad5ec9e0db15f572006fdfcec619b0447176c286b",
+  "sphinx_traceability_view/graph/placement.py": "96f4d4169a678e010604d065bdf3ff239b37f6b96a9433c834050977c8352f65",
+  "sphinx_traceability_view/model/__init__.py": "2eaddbe79f6fc9e04d0e3ff31fba88a58788ec9eabbbbdab2c061916a2e4254f",
+  "sphinx_traceability_view/static/LICENSE.txt": "363726635411461a4f16c757930343bb8d9ab969ba1a41e66d47aee096058929",
+  "sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt": "a960714473502ebd05284a8eec9914a84397ebcbe2eb8b1da81b7fd2c8e9c109",
+  "sphinx_traceability_view/static/stv.css": "dd78a2a9742270037776938909e32249b80706c2d99ffbd8438f14aa8d5758dd",
+  "sphinx_traceability_view/static/stv.js": "40cd2d3feca961688df75f54928dc5dd21de41cc0dae8dd11cb5a690409fed11",
+  "sphinx_traceability_view/static/vendor/ELK-INVENTORY.json": "b98e87a326cd87e136958579b343d466bb84b856cfdf9313d4be62f2e4f5f3d6",
+  "sphinx_traceability_view/static/vendor/ELK-SOURCE.txt": "bb1827072b40c849822fdbf1f597201a2a857700dd8643e70f588bdac8ad811b",
+  "sphinx_traceability_view/static/vendor/elk.bundled.js": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf"
+}

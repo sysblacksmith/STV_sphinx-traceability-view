@@ -1,0 +1,4 @@
+{
+  "record": "1.0.0-candidate-2",
+  "reason": "Owner requested visibility-independent release naming after execution. Original command receipts and tested archive hashes are preserved unchanged. The one-off preparation helper is retained outside maintained sources; no runtime/build/test implementation changed."
+}

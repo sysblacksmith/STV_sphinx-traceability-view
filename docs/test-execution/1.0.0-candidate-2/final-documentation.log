@@ -1,0 +1,1124 @@
+Running Sphinx v8.1.3
+loading translations [en]... done
+myst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: all of 0 po files
+writing output... 
+building [html]: all source files
+updating environment: [new config] 138 added, 0 changed, 0 removed
+reading sources... [  1%] architecture-decisions
+reading sources... [  1%] architecture-software
+reading sources... [  2%] architecture-system
+reading sources... [  3%] architecture/decisions/STV_ADR_001_static_extension
+reading sources... [  4%] architecture/decisions/STV_ADR_002_portable_bundle
+reading sources... [  4%] architecture/decisions/STV_ADR_003_state_layout
+reading sources... [  5%] architecture/decisions/STV_ADR_004_dependencies
+reading sources... [  6%] architecture/decisions/STV_ADR_005_starting_nodes
+reading sources... [  7%] architecture/decisions/STV_ADR_006_interactive_overview
+reading sources... [  7%] architecture/decisions/STV_ADR_007_component_directories
+reading sources... [  8%] architecture/decisions/STV_ADR_008_stable_navigation
+reading sources... [  9%] architecture/decisions/STV_ADR_009_classified_evidence_rows
+reading sources... [  9%] architecture/decisions/STV_ADR_010_persistent_details
+reading sources... [ 10%] change-requests/STV_CR_001_initial-project-request
+reading sources... [ 11%] change-requests/STV_CR_002_starting-nodes
+reading sources... [ 12%] change-requests/STV_CR_003_usability-problems
+reading sources... [ 12%] change-requests/STV_CR_004_problem-report-handover
+reading sources... [ 13%] change-requests/STV_CR_005_control-order
+reading sources... [ 14%] change-requests/STV_CR_006_centered-layout-and-interactive-seeds
+reading sources... [ 14%] change-requests/STV_CR_007_record-folder-layout
+reading sources... [ 15%] change-requests/STV_CR_008_component-directories
+reading sources... [ 16%] change-requests/STV_CR_009_requirement-filenames-and-test-levels
+reading sources... [ 17%] change-requests/STV_CR_010_consolidated-test-specifications
+reading sources... [ 17%] change-requests/STV_CR_011_mit-license
+reading sources... [ 18%] change-requests/STV_CR_012_release-cancellation-and-cleanup
+reading sources... [ 19%] change-requests/STV_CR_013_artifact_vertical_target_position
+reading sources... [ 20%] change-requests/STV_CR_014_persistent-right-side-details
+reading sources... [ 20%] change-requests/index
+reading sources... [ 21%] ci-and-provenance
+reading sources... [ 22%] concept-review
+reading sources... [ 22%] concept-reviews/documentation-reorganization
+reading sources... [ 23%] concept-reviews/round-1
+reading sources... [ 24%] concept-reviews/round-10
+reading sources... [ 25%] concept-reviews/round-11
+reading sources... [ 25%] concept-reviews/round-12
+reading sources... [ 26%] concept-reviews/round-13
+reading sources... [ 27%] concept-reviews/round-14
+reading sources... [ 28%] concept-reviews/round-2
+reading sources... [ 28%] concept-reviews/round-3
+reading sources... [ 29%] concept-reviews/round-4
+reading sources... [ 30%] concept-reviews/round-5
+reading sources... [ 30%] concept-reviews/round-6
+reading sources... [ 31%] concept-reviews/round-7
+reading sources... [ 32%] concept-reviews/round-8
+reading sources... [ 33%] concept-reviews/round-9
+reading sources... [ 33%] demo
+reading sources... [ 34%] elements-software
+reading sources... [ 35%] elements-system
+reading sources... [ 36%] getting-started
+reading sources... [ 36%] implementation-plan
+reading sources... [ 37%] implementation-review
+reading sources... [ 38%] index
+reading sources... [ 38%] internal-interfaces
+reading sources... [ 39%] licensing
+reading sources... [ 40%] licensing/historical/index
+reading sources... [ 41%] maturity
+reading sources... [ 41%] method
+reading sources... [ 42%] problem-tickets/STV_PR_001
+reading sources... [ 43%] problem-tickets/STV_PR_002
+reading sources... [ 43%] problem-tickets/STV_PR_003
+reading sources... [ 44%] problem-tickets/STV_PR_004
+reading sources... [ 45%] problem-tickets/STV_PR_005
+reading sources... [ 46%] problem-tickets/STV_PR_006
+reading sources... [ 46%] problem-tickets/STV_PR_007
+reading sources... [ 47%] problem-tickets/STV_PR_008
+reading sources... [ 48%] problem-tickets/STV_PR_009
+reading sources... [ 49%] problem-tickets/STV_PR_010
+reading sources... [ 49%] problem-tickets/STV_PR_011
+reading sources... [ 50%] problem-tickets/STV_PR_012
+reading sources... [ 51%] problem-tickets/STV_PR_013
+reading sources... [ 51%] problem-tickets/STV_PR_014_node_disappears_behind_invisible_line
+reading sources... [ 52%] problem-tickets/STV_PR_015_detail-presentation
+reading sources... [ 53%] problem-tickets/index
+reading sources... [ 54%] project-metrics
+reading sources... [ 54%] requirements-software
+reading sources... [ 55%] requirements-stakeholder
+reading sources... [ 56%] requirements-system
+reading sources... [ 57%] review
+reading sources... [ 57%] sources
+reading sources... [ 58%] state-machine
+reading sources... [ 59%] technology-stack
+reading sources... [ 59%] test-cases/index
+reading sources... [ 60%] test-cases/software-tests
+reading sources... [ 61%] test-cases/system-tests
+reading sources... [ 62%] test-coverage
+reading sources... [ 62%] test-execution/0.1.0-candidate-1/publication
+reading sources... [ 63%] test-execution/0.1.0-candidate-2/index
+reading sources... [ 64%] test-execution/0.1.0-candidate-3/index
+reading sources... [ 64%] test-execution/0.1.0-candidate-4/index
+reading sources... [ 65%] test-execution/0.1.0-final/index
+reading sources... [ 66%] test-execution/0.2.0-candidate-1/index
+reading sources... [ 67%] test-execution/0.2.0-candidate-2/index
+reading sources... [ 67%] test-execution/0.2.0-candidate-3/index
+reading sources... [ 68%] test-execution/0.2.0-candidate-4/index
+reading sources... [ 69%] test-execution/0.2.0-candidate-5/index
+reading sources... [ 70%] test-execution/0.2.0-final/index
+reading sources... [ 70%] test-execution/0.2.0-method-1/cases
+reading sources... [ 71%] test-execution/0.2.0-method-1/index
+reading sources... [ 72%] test-execution/0.2.0-method-2/cases
+reading sources... [ 72%] test-execution/0.2.0-method-2/index
+reading sources... [ 73%] test-execution/1.0.0-canceled
+reading sources... [ 74%] test-execution/1.0.0-candidate-1/cases
+reading sources... [ 75%] test-execution/1.0.0-candidate-1/cleanup-review
+reading sources... [ 75%] test-execution/1.0.0-candidate-1/index
+reading sources... [ 76%] test-execution/1.0.0-candidate-1/qualification
+reading sources... [ 77%] test-execution/1.0.0-candidate-2/cases
+reading sources... [ 78%] test-execution/1.0.0-candidate-2/cleanup-review
+reading sources... [ 78%] test-execution/1.0.0-candidate-2/index
+reading sources... [ 79%] test-execution/1.0.0-candidate-2/qualification
+reading sources... [ 80%] test-execution/cr013-rows/cases
+reading sources... [ 80%] test-execution/cr013-rows/index
+reading sources... [ 81%] test-execution/cr014-details/cases
+reading sources... [ 82%] test-execution/cr014-details/index
+reading sources... [ 83%] test-execution/index
+reading sources... [ 83%] test-execution/maintenance-2026-10-24/cases
+reading sources... [ 84%] test-execution/maintenance-2026-10-24/dependency-audit
+reading sources... [ 85%] test-execution/maintenance-2026-10-24/index
+reading sources... [ 86%] test-execution/method-migration-handover
+reading sources... [ 86%] test-execution/pr013-final/cases
+reading sources... [ 87%] test-execution/pr013-final/index
+reading sources... [ 88%] test-execution/pr013-poc/index
+reading sources... [ 88%] test-execution/pr014-boundary/cases
+reading sources... [ 89%] test-execution/pr014-boundary/index
+reading sources... [ 90%] test-execution/pr015-details/cases
+reading sources... [ 91%] test-execution/pr015-details/index
+reading sources... [ 91%] test-execution/prsa-001-003-fix/cases
+reading sources... [ 92%] test-execution/prsa-001-003-fix/index
+reading sources... [ 93%] test-execution/prsa-002-fix/cases
+reading sources... [ 93%] test-execution/prsa-002-fix/index
+reading sources... [ 94%] test-execution/prsa-004-fix/cases
+reading sources... [ 95%] test-execution/prsa-004-fix/index
+reading sources... [ 96%] test-execution/prsa-005-fix/cases
+reading sources... [ 96%] test-execution/prsa-005-fix/index
+reading sources... [ 97%] test-execution/prsa-006-fix/cases
+reading sources... [ 98%] test-execution/prsa-006-fix/index
+reading sources... [ 99%] test-scripts/index
+reading sources... [ 99%] traceability
+reading sources... [100%] verification-plan
+
+Copying static files for sphinx-data-viewer support
+Copying static files for sphinx-needs datatables support
+Copying static style files for sphinx-needs
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+Schema validation completed with 0 warning(s) in 0.050 seconds. Validated 23894 needs/s.
+preparing documents... done
+copying assets... 
+copying downloadable files... [  0%] ../../../../concept-reviews/round-10-inventory.json
+copying downloadable files... [  0%] ../../../../concept-reviews/round-10-final-inventory.json
+copying downloadable files... [  0%] ../../../../concept-reviews/round-11-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-11-final-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-12-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-12-completion.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-13-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-7-test-map.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-7-recheck-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-7-inventory.json
+copying downloadable files... [  1%] ../../../../concept-reviews/round-8-inventory.json
+copying downloadable files... [  2%] ../../../../concept-reviews/round-9-inventory.json
+copying downloadable files... [  2%] ../../../../concept-reviews/round-9-final-inventory.json
+copying downloadable files... [  2%] ../../../../licensing/historical/LICENSE.txt
+copying downloadable files... [  2%] ../../../../licensing/historical/THIRD_PARTY_NOTICES.txt
+copying downloadable files... [  2%] ../../../../licensing/historical/ELK-SOURCE.txt
+copying downloadable files... [  2%] ../../../../licensing/historical/ELK-INVENTORY.json
+copying downloadable files... [  2%] ../../../../licensing/historical/artifacts.json
+copying downloadable files... [  2%] ../../../../problem-tickets/report.rst.template
+copying downloadable files... [  3%] ../../../../test-cases/id-migration.json
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/browser-assets.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/python-package.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/coverage.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/diagram-links-source.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/documentation.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/capacity-build.log
+copying downloadable files... [  3%] ../../../../test-execution/0.1.0-candidate-1/pytest.log
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/node-tests.log
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/traceability.log
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/diagram-links-published.log
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/candidate.json
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/source-hashes.json
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/commands.json
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/environment.txt
+copying downloadable files... [  4%] ../../../../test-execution/0.1.0-candidate-1/runtime-wheel-hashes.json
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/test-map.json
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/pytest.xml
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/node.xml
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/results.json
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/capacity-build.json
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/capacity-browser.json
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/capacity-host.log
+copying downloadable files... [  5%] ../../../../test-execution/0.1.0-candidate-1/traceability.csv
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/screenshots/file-example.png
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/screenshots/http-example.png
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/screenshots/project-demo.png
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/screenshots/state-diagram.png
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/screenshots/state-page.png
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-1/index.rst
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-2/browser-assets.log
+copying downloadable files... [  6%] ../../../../test-execution/0.1.0-candidate-2/python-package.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/coverage.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/diagram-links-source.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/documentation.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/capacity-build.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/pytest.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/node-tests.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/traceability.log
+copying downloadable files... [  7%] ../../../../test-execution/0.1.0-candidate-2/diagram-links-published.log
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/candidate.json
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/source-hashes.json
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/commands.json
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/environment.txt
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/runtime-wheel-hashes.json
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/test-map.json
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/pytest.xml
+copying downloadable files... [  8%] ../../../../test-execution/0.1.0-candidate-2/node.xml
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/results.json
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/capacity-build.json
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/capacity-browser.json
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/capacity-host.log
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/traceability.csv
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/consumer/build.log
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/consumer/environment.txt
+copying downloadable files... [  9%] ../../../../test-execution/0.1.0-candidate-2/consumer/identity.txt
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-2/screenshots/file-example.png
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-2/screenshots/http-example.png
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-2/screenshots/project-demo.png
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-2/screenshots/state-diagram.png
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-2/screenshots/state-page.png
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-3/browser-assets.log
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-3/python-package.log
+copying downloadable files... [ 10%] ../../../../test-execution/0.1.0-candidate-3/coverage.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/diagram-links-source.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/documentation.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/capacity-build.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/pytest.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/node-tests.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/traceability.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/diagram-links-published.log
+copying downloadable files... [ 11%] ../../../../test-execution/0.1.0-candidate-3/candidate.json
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/source-hashes.json
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/commands.json
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/environment.txt
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/runtime-wheel-hashes.json
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/test-map.json
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/pytest.xml
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/node.xml
+copying downloadable files... [ 12%] ../../../../test-execution/0.1.0-candidate-3/results.json
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/capacity-build.json
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/capacity-browser.json
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/capacity-host.log
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/traceability.csv
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/consumer/build.log
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/consumer/environment.txt
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/consumer/identity.txt
+copying downloadable files... [ 13%] ../../../../test-execution/0.1.0-candidate-3/screenshots/file-example.png
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-3/screenshots/http-example.png
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-3/screenshots/project-demo.png
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-3/screenshots/state-diagram.png
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-3/screenshots/state-page.png
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-4/browser-assets.log
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-4/python-package.log
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-4/coverage.log
+copying downloadable files... [ 14%] ../../../../test-execution/0.1.0-candidate-4/diagram-links-source.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/documentation.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/capacity-build.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/pytest.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/node-tests.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/traceability.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/diagram-links-published.log
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/candidate.json
+copying downloadable files... [ 15%] ../../../../test-execution/0.1.0-candidate-4/source-hashes.json
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/commands.json
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/environment.txt
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/runtime-wheel-hashes.json
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/test-map.json
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/pytest.xml
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/node.xml
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/results.json
+copying downloadable files... [ 16%] ../../../../test-execution/0.1.0-candidate-4/capacity-build.json
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/capacity-browser.json
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/capacity-host.log
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/traceability.csv
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/consumer/build.log
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/consumer/environment.txt
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/consumer/identity.txt
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/screenshots/file-example.png
+copying downloadable files... [ 17%] ../../../../test-execution/0.1.0-candidate-4/screenshots/http-example.png
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-candidate-4/screenshots/project-demo.png
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-candidate-4/screenshots/state-diagram.png
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-candidate-4/screenshots/state-page.png
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-final/documentation-retest.log
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-final/documentation-retest-2.log
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-final/publication-results.json
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-final/finalize.py
+copying downloadable files... [ 18%] ../../../../test-execution/0.1.0-final/visual-publication.xml
+copying downloadable files... [ 19%] ../../../../test-execution/0.1.0-final/coverage-final.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.1.0-final/documentation-final.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.1.0-final/visual-publication.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.1.0-final/traceability-final.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.1.0-final/diagram-publication-final.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.2.0-candidate-1/browser-assets.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.2.0-candidate-1/python-package.log
+copying downloadable files... [ 19%] ../../../../test-execution/0.2.0-candidate-1/coverage.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/diagram-links-source.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/documentation.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/capacity-build.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/pytest.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/node-tests.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/traceability.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/diagram-links-published.log
+copying downloadable files... [ 20%] ../../../../test-execution/0.2.0-candidate-1/candidate.json
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/source-hashes.json
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/commands.json
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/environment.txt
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/runtime-wheel-hashes.json
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/test-map.json
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/pytest.xml
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/node.xml
+copying downloadable files... [ 21%] ../../../../test-execution/0.2.0-candidate-1/results.json
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/capacity-build.json
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/capacity-browser.json
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/capacity-host.log
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/traceability.csv
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/consumer/build.log
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/consumer/environment.txt
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/consumer/identity.txt
+copying downloadable files... [ 22%] ../../../../test-execution/0.2.0-candidate-1/screenshots/architecture-software-page.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/architecture-system-page.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/project-demo.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/software-architecture.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/state-diagram.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/state-page.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-1/screenshots/system-architecture.png
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-2/browser-assets.log
+copying downloadable files... [ 23%] ../../../../test-execution/0.2.0-candidate-2/python-package.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/coverage.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/diagram-links-source.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/documentation.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/capacity-build.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/pytest.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/node-tests.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/traceability.log
+copying downloadable files... [ 24%] ../../../../test-execution/0.2.0-candidate-2/diagram-links-published.log
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/candidate.json
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/source-hashes.json
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/commands.json
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/environment.txt
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/runtime-wheel-hashes.json
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/test-map.json
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/pytest.xml
+copying downloadable files... [ 25%] ../../../../test-execution/0.2.0-candidate-2/node.xml
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/results.json
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/capacity-build.json
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/capacity-browser.json
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/capacity-host.log
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/traceability.csv
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/consumer/build.log
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/consumer/environment.txt
+copying downloadable files... [ 26%] ../../../../test-execution/0.2.0-candidate-2/consumer/identity.txt
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/architecture-software-page.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/architecture-system-page.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/file-example.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/http-example.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/project-demo.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/software-architecture.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/state-diagram.png
+copying downloadable files... [ 27%] ../../../../test-execution/0.2.0-candidate-2/screenshots/state-page.png
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-2/screenshots/system-architecture.png
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-3/candidate.json
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-3/source-hashes.json
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-3/commands.json
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-3/pytest.log
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-3/capacity-reuse.json
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-4/browser-assets.log
+copying downloadable files... [ 28%] ../../../../test-execution/0.2.0-candidate-4/python-package.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/coverage.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/diagram-links-source.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/documentation.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/capacity-build.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/pytest.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/node-tests.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/traceability.log
+copying downloadable files... [ 29%] ../../../../test-execution/0.2.0-candidate-4/diagram-links-published.log
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/candidate.json
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/source-hashes.json
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/commands.json
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/environment.txt
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/runtime-wheel-hashes.json
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/test-map.json
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/pytest.xml
+copying downloadable files... [ 30%] ../../../../test-execution/0.2.0-candidate-4/node.xml
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/results.json
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/capacity-build.json
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/capacity-browser.json
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/capacity-host.log
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/traceability.csv
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/consumer/build.log
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/consumer/environment.txt
+copying downloadable files... [ 31%] ../../../../test-execution/0.2.0-candidate-4/consumer/identity.txt
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/architecture-software-page.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/architecture-system-page.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/file-example.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/project-demo.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/software-architecture.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/state-diagram.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/state-page.png
+copying downloadable files... [ 32%] ../../../../test-execution/0.2.0-candidate-4/screenshots/system-architecture.png
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/browser-assets.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/python-package.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/coverage.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/diagram-links-source.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/documentation.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/capacity-fixture-reuse.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/pytest.log
+copying downloadable files... [ 33%] ../../../../test-execution/0.2.0-candidate-5/node-tests.log
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/traceability.log
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/diagram-links-published.log
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/candidate.json
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/source-hashes.json
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/commands.json
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/environment.txt
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/runtime-wheel-hashes.json
+copying downloadable files... [ 34%] ../../../../test-execution/0.2.0-candidate-5/test-map.json
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/pytest.xml
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/node.xml
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/results.json
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/capacity-build.json
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/capacity-reuse.json
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/capacity-browser.json
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/capacity-host.log
+copying downloadable files... [ 35%] ../../../../test-execution/0.2.0-candidate-5/traceability.csv
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/consumer/build.log
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/consumer/environment.txt
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/consumer/identity.txt
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/screenshots/architecture-software-page.png
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/screenshots/architecture-system-page.png
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/screenshots/file-example.png
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/screenshots/http-example.png
+copying downloadable files... [ 36%] ../../../../test-execution/0.2.0-candidate-5/screenshots/project-demo.png
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-candidate-5/screenshots/software-architecture.png
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-candidate-5/screenshots/state-diagram.png
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-candidate-5/screenshots/state-page.png
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-candidate-5/screenshots/system-architecture.png
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-final/wheel-source-check.json
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-final/seed-preflight-1.xml
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-final/seed-preflight-2.xml
+copying downloadable files... [ 37%] ../../../../test-execution/0.2.0-final/http-diagnostic.xml
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-final/http-repeat-1.xml
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-final/http-repeat-2.xml
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-final/http-repeat-3.xml
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-final/closure.json
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-final/publication.xml
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-method-1/candidate.json
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-method-1/commands.json
+copying downloadable files... [ 38%] ../../../../test-execution/0.2.0-method-1/pytest.xml
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/node.xml
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/browser-assets.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/python-package.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/coverage.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/diagram-links-source.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/documentation.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/capacity-build.log
+copying downloadable files... [ 39%] ../../../../test-execution/0.2.0-method-1/pytest.log
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/node-tests.log
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/traceability.log
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/diagram-links-published.log
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/source-hashes.json
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/environment.txt
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/runtime-wheel-hashes.json
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/test-map.json
+copying downloadable files... [ 40%] ../../../../test-execution/0.2.0-method-1/results.json
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/capacity-build.json
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/capacity-browser.json
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/capacity-host.log
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/traceability.csv
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/consumer/build.log
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/consumer/environment.txt
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/consumer/identity.txt
+copying downloadable files... [ 41%] ../../../../test-execution/0.2.0-method-1/screenshots/architecture-software-page.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/architecture-system-page.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/file-example.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/http-example.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/project-demo.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/software-architecture.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/state-diagram.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/state-page.png
+copying downloadable files... [ 42%] ../../../../test-execution/0.2.0-method-1/screenshots/system-architecture.png
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-1/case-results.json
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/candidate.json
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/commands.json
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/pytest.xml
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/node.xml
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/browser-assets.log
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/python-package.log
+copying downloadable files... [ 43%] ../../../../test-execution/0.2.0-method-2/coverage.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/diagram-links-source.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/documentation.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/capacity-fixture-reuse.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/pytest.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/node-tests.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/traceability.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/diagram-links-published.log
+copying downloadable files... [ 44%] ../../../../test-execution/0.2.0-method-2/source-hashes.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/environment.txt
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/runtime-wheel-hashes.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/test-map.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/results.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/capacity-build.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/capacity-reuse.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/capacity-browser.json
+copying downloadable files... [ 45%] ../../../../test-execution/0.2.0-method-2/capacity-host.log
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/traceability.csv
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/consumer/build.log
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/consumer/environment.txt
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/consumer/identity.txt
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/screenshots/architecture-software-page.png
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/screenshots/architecture-system-page.png
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/screenshots/file-example.png
+copying downloadable files... [ 46%] ../../../../test-execution/0.2.0-method-2/screenshots/http-example.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/screenshots/project-demo.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/screenshots/software-architecture.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/screenshots/state-diagram.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/screenshots/state-page.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/screenshots/system-architecture.png
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/case-results.json
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/verification-disposition.json
+copying downloadable files... [ 47%] ../../../../test-execution/0.2.0-method-2/cleanup-proposal.json
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/qualification.json
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/allocation-traces.csv
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/test-execution-traces.csv
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/shared-model-tests.log
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/final-documentation.log
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/final-traceability.log
+copying downloadable files... [ 48%] ../../../../test-execution/0.2.0-method-2/final-published-diagrams.log
+copying downloadable files... [ 48%] ../../../../test-execution/1.0.0-candidate-1/candidate.json
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/commands.json
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/pytest.xml
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/node.xml
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/cleanup-proposal.json
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/cleanup-result.json
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/browser-assets.log
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/python-package.log
+copying downloadable files... [ 49%] ../../../../test-execution/1.0.0-candidate-1/coverage.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/diagram-links-source.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/documentation.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/capacity-build.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/pytest.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/node-tests.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/traceability.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/diagram-links-published.log
+copying downloadable files... [ 50%] ../../../../test-execution/1.0.0-candidate-1/source-hashes.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/environment.txt
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/runtime-wheel-hashes.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/test-map.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/results.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/capacity-build.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/capacity-browser.json
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/capacity-host.log
+copying downloadable files... [ 51%] ../../../../test-execution/1.0.0-candidate-1/traceability.csv
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/consumer/build.log
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/consumer/environment.txt
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/consumer/identity.txt
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/screenshots/architecture-software-page.png
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/screenshots/architecture-system-page.png
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/screenshots/file-example.png
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/screenshots/http-example.png
+copying downloadable files... [ 52%] ../../../../test-execution/1.0.0-candidate-1/screenshots/project-demo.png
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/screenshots/software-architecture.png
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/screenshots/state-diagram.png
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/screenshots/state-page.png
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/screenshots/system-architecture.png
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/case-results.json
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/requirement-scope.json
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/SHA256SUMS.txt
+copying downloadable files... [ 53%] ../../../../test-execution/1.0.0-candidate-1/package-review.json
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-1/shared-tool-hashes.json
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-1/preparation.json
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-1/commit-message.txt
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-1/tag-release.ps1.txt
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-1/github-release-notes.md.txt
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-2/case-results.json
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-2/node.xml
+copying downloadable files... [ 54%] ../../../../test-execution/1.0.0-candidate-2/pytest.xml
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/historical-check.json
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/supplement-commands.json
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/cleanup-inventory.json
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/workspace-status.txt
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/browser-assets.log
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/python-package.log
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/coverage.log
+copying downloadable files... [ 55%] ../../../../test-execution/1.0.0-candidate-2/diagram-links-source.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/documentation.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/capacity-build.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/pytest.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/node-tests.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/traceability.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/diagram-links-published.log
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/candidate.json
+copying downloadable files... [ 56%] ../../../../test-execution/1.0.0-candidate-2/source-hashes.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/commands.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/environment.txt
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/runtime-wheel-hashes.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/test-map.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/results.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/capacity-build.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/capacity-browser.json
+copying downloadable files... [ 57%] ../../../../test-execution/1.0.0-candidate-2/capacity-host.log
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/traceability.csv
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/artifacts/sphinx_traceability_view-1.0.0-py3-none-any.whl
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/consumer/build.log
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/consumer/environment.txt
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/consumer/identity.txt
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/screenshots/architecture-software-page.png
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/screenshots/architecture-system-page.png
+copying downloadable files... [ 58%] ../../../../test-execution/1.0.0-candidate-2/screenshots/file-example.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/http-example.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/project-demo.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/software-architecture.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/state-diagram.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/state-page.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/screenshots/system-architecture.png
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/SHA256SUMS.txt
+copying downloadable files... [ 59%] ../../../../test-execution/1.0.0-candidate-2/sdist-members.json
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/wheel-members.json
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/runtime-equivalence.json
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/runtime310-identity.log
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/runtime310-host.log
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/commit-message.txt
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/tag-release.ps1.txt
+copying downloadable files... [ 60%] ../../../../test-execution/1.0.0-candidate-2/github-release-notes.md.txt
+copying downloadable files... [ 60%] ../../../../test-execution/cr013-rows/case-results.json
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/python.xml
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/node.xml
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/first-browser.xml
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/commands.json
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/identity.json
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/summary.json
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/classification-scale.xml
+copying downloadable files... [ 61%] ../../../../test-execution/cr013-rows/browser.xml
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/capacity.xml
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/geometry/file.json
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/geometry/http.json
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/geometry/file.png
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/geometry/http.png
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/capacity-browser.json
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/benchmark-metrics.json
+copying downloadable files... [ 62%] ../../../../test-execution/cr013-rows/consumer/identity.txt
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/consumer/environment.txt
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/sdist/members.json
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/sdist/artifacts.json
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/package-final.log
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/cr013-concept-build.log
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/cr013-concept-build-recheck.log
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/cr013-concept-traceability.log
+copying downloadable files... [ 63%] ../../../../test-execution/cr013-rows/cr013-diagram-export.log
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/executable-coverage.log
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/final-build.log
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/final-traceability.log
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/traceability.csv
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/test-coverage.csv
+copying downloadable files... [ 64%] ../../../../test-execution/cr013-rows/diagram-links.log
+copying downloadable files... [ 64%] ../../../../test-execution/cr014-details/case-results.json
+copying downloadable files... [ 64%] ../../../../test-execution/cr014-details/focused.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/focused-recheck.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/browser-regression.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/node.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/python.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/focused-final.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/usability-recheck.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/capacity.xml
+copying downloadable files... [ 65%] ../../../../test-execution/cr014-details/capacity-metrics.json
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/identity.json
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/commands.json
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/coverage.log
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/consumer/identity.txt
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/sdist/members.json
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/visual/3-file-wide.png
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/visual-final/3-file.png
+copying downloadable files... [ 66%] ../../../../test-execution/cr014-details/visual/3-file.json
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/diagrams.log
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/concept-build.log
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/concept-traceability.log
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/first-focused.log
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/focused-layout.xml
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/visual.xml
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/final-build.log
+copying downloadable files... [ 67%] ../../../../test-execution/cr014-details/traceability.log
+copying downloadable files... [ 68%] ../../../../test-execution/cr014-details/traceability.csv
+copying downloadable files... [ 68%] ../../../../test-execution/cr014-details/test-coverage.csv
+copying downloadable files... [ 68%] ../../../../test-execution/cr014-details/coverage-final.log
+copying downloadable files... [ 68%] ../../../../test-execution/cr014-details/persistent-diagram.png
+copying downloadable files... [ 68%] ../../../../test-execution/cr014-details/persistent-embedded.png
+copying downloadable files... [ 68%] ../../../../test-execution/maintenance-2026-10-24/before-path-fix.xml
+copying downloadable files... [ 68%] ../../../../test-execution/maintenance-2026-10-24/path-fix.xml
+copying downloadable files... [ 68%] ../../../../test-execution/maintenance-2026-10-24/regression.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/node-regression.log
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/package-retest.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/legal-guard.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/affected-retest.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/package-final.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/legal-guard-final.xml
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/before-path-fix.log
+copying downloadable files... [ 69%] ../../../../test-execution/maintenance-2026-10-24/path-fix.log
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/regression.log
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/package-retest.log
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/legal-guard.log
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/commands.json
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/upstream-downloads.json
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/results.json
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/case-results.json
+copying downloadable files... [ 70%] ../../../../test-execution/maintenance-2026-10-24/affected-retest.log
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/package-final.log
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/artifact-hashes.json
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/source-hashes.json
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/source-hashes-at-regression.json
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/environment.txt
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/paths-final/observations.json
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/visual/architecture-system-embedded.png
+copying downloadable files... [ 71%] ../../../../test-execution/maintenance-2026-10-24/visual/architecture-software-embedded.png
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/visual/state-machine-embedded.png
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/visual/state-machine-before.png
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/visual/embedded-checks.json
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/elkjs-build.gradle
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/ElkJs.gwt.xml
+copying downloadable files... [ 72%] ../../../../test-execution/maintenance-2026-10-24/elk-NOTICE.md.txt
+copying downloadable files... [ 72%] ../../../../test-execution/pr013-final/adjacent-browser.xml
+copying downloadable files... [ 72%] ../../../../test-execution/pr013-final/missing-recheck.xml
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/node.xml
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/capacity.xml
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/case-results.json
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/focused-browser.xml
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/build-identity.json
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/source-hashes.json
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/source-hashes-final.json
+copying downloadable files... [ 73%] ../../../../test-execution/pr013-final/commands.json
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/summary.json
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/python.xml
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/adjacent-browser.log
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/missing-recheck.log
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/benchmark-metrics.json
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/capacity-browser.json
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/consumer/identity.txt
+copying downloadable files... [ 74%] ../../../../test-execution/pr013-final/consumer/build.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/sdist/members.json
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/sdist/artifacts.json
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/package-build.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/concept-build.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/accepted-concept-build.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/diagram-export.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/diagram-export-recheck.log
+copying downloadable files... [ 75%] ../../../../test-execution/pr013-final/diagram-links.log
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/executable-coverage.log
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/completion-build.log
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/traceability-final.log
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/traceability-final-recheck.log
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/traceability-final.csv
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-final/test-coverage-final.csv
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-poc/verification.json
+copying downloadable files... [ 76%] ../../../../test-execution/pr013-poc/fixture-initial.log
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/fixture-ids.log
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/before.log
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/before.xml
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/before/file.json
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/before/http.json
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/after.log
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/after.xml
+copying downloadable files... [ 77%] ../../../../test-execution/pr013-poc/node.xml
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/browser-final.log
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/browser-final.xml
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/final/file.json
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/final/http.json
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/reset-viewport.json
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/demo-build.log
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/demo-build-initial.log
+copying downloadable files... [ 78%] ../../../../test-execution/pr013-poc/poc-demo.png
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/project-demo.json
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/documentation.log
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/verification.json
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/firefox-before.json
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/firefox-before.png
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/firefox-viewport-probe.png
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/before.xml
+copying downloadable files... [ 79%] ../../../../test-execution/pr013-poc/arrows/before.log
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/first-after.xml
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/first-after.log
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/after.xml
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/after.log
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/node-final.xml
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/final/file-down-arrows.json
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/final/file-up-arrows.json
+copying downloadable files... [ 80%] ../../../../test-execution/pr013-poc/arrows/final/http-down-arrows.json
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/arrows/final/http-up-arrows.json
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/arrows/firefox-after.json
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/arrows/firefox-after.png
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/arrows/adjacent.xml
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/arrows/adjacent.log
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/ordering/verification.json
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/ordering/node.xml
+copying downloadable files... [ 81%] ../../../../test-execution/pr013-poc/ordering/browser.xml
+copying downloadable files... [ 82%] ../../../../test-execution/pr013-poc/ordering/browser.log
+copying downloadable files... [ 82%] ../../../../test-execution/pr013-poc/ordering/file-numeric-order.json
+copying downloadable files... [ 82%] ../../../../test-execution/pr013-poc/ordering/http-numeric-order.json
+copying downloadable files... [ 82%] ../../../../test-execution/pr014-boundary/before.xml
+copying downloadable files... [ 82%] ../../../../test-execution/pr014-boundary/after.xml
+copying downloadable files... [ 82%] ../../../../test-execution/pr014-boundary/before.log
+copying downloadable files... [ 82%] ../../../../test-execution/pr014-boundary/before/file.json
+copying downloadable files... [ 82%] ../../../../test-execution/pr014-boundary/before/file.png
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/python.xml
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/after/file.png
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/after/file.json
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/identity.json
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/commands.json
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/summary.json
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/consumer/identity.txt
+copying downloadable files... [ 83%] ../../../../test-execution/pr014-boundary/sdist/members.json
+copying downloadable files... [ 84%] ../../../../test-execution/pr014-boundary/coverage.log
+copying downloadable files... [ 84%] ../../../../test-execution/pr014-boundary/final-build.log
+copying downloadable files... [ 84%] ../../../../test-execution/pr014-boundary/final-traceability.log
+copying downloadable files... [ 84%] ../../../../test-execution/pr014-boundary/final-traceability.csv
+copying downloadable files... [ 84%] ../../../../test-execution/pr014-boundary/final-test-coverage.csv
+copying downloadable files... [ 84%] ../../../../test-execution/pr015-details/case-results.json
+copying downloadable files... [ 84%] ../../../../test-execution/pr015-details/before.xml
+copying downloadable files... [ 84%] ../../../../test-execution/pr015-details/node.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/python.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/focused.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/adjacent.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/metadata-recheck.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/pane-frame/results.xml
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/before.log
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/identity.json
+copying downloadable files... [ 85%] ../../../../test-execution/pr015-details/commands.json
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/consumer/identity.txt
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/sdist/members.json
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/visual/file.png
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/visual/file.json
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/diagrams.log
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/normal-demo-folded.png
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/normal-demo-expanded.png
+copying downloadable files... [ 86%] ../../../../test-execution/pr015-details/normal-demo.json
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/visual-final/file-folded-wide.png
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/visual-final/file.png
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/metadata-diagram.png
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/metadata-embedded.png
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/normal-build.log
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/coverage.log
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/traceability.log
+copying downloadable files... [ 87%] ../../../../test-execution/pr015-details/traceability.csv
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/test-coverage.csv
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/results.log
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/identity.json
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/normal-demo.png
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/normal-demo.json
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/build.log
+copying downloadable files... [ 88%] ../../../../test-execution/pr015-details/pane-frame/traceability.log
+copying downloadable files... [ 88%] ../../../../test-execution/prsa-001-003-fix/verification.json
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/pytest.xml
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/node.xml
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/historical-licenses.log
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/runtime310.json
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/environments.json
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/wheelhouse.json
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/advisories.json
+copying downloadable files... [ 89%] ../../../../test-execution/prsa-001-003-fix/python-provenance.json
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/retired-downloads.json
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/install-implementation.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/install-implementation-retry.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/install-docs.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/wheelhouse-download.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/wheelhouse-runtime310.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/wheelhouse-runtime313.log
+copying downloadable files... [ 90%] ../../../../test-execution/prsa-001-003-fix/runtime310-initial.json
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/development-build.log
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/pytest.log
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/sphinx-initial.log
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/case-results.json
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/sphinx.log
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/traceability.log
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/publication-checks.json
+copying downloadable files... [ 91%] ../../../../test-execution/prsa-001-003-fix/historical-frontend-locks.json
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/verification.json
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/pytest.xml
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/node.xml
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/pytest.log
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/initial-attempt.txt
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/case-results.json
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/sphinx.log
+copying downloadable files... [ 92%] ../../../../test-execution/prsa-002-fix/traceability.log
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-002-fix/sphinx-initial.log
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-002-fix/traceability-initial.log
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/before.xml
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/after.xml
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/package.xml
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/verification.json
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/before.log
+copying downloadable files... [ 93%] ../../../../test-execution/prsa-004-fix/before-members.json
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/after.log
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/archive-check/members.json
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/archive-check/artifacts.json
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/build.log
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/actual-archive.json
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/package.log
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/consumer/identity.txt
+copying downloadable files... [ 94%] ../../../../test-execution/prsa-004-fix/consumer/environment.txt
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-004-fix/case-results.json
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-004-fix/sphinx.log
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-004-fix/traceability.log
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-005-fix/fixture-initial.xml
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-005-fix/first-pass.xml
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-005-fix/pytest.xml
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-005-fix/fixture-initial.log
+copying downloadable files... [ 95%] ../../../../test-execution/prsa-005-fix/first-pass.log
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/pytest.log
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/before-publication.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/observations/clean-rebuild.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/observations/failed-build.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/observations/failed-promotion.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/verification.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/case-results.json
+copying downloadable files... [ 96%] ../../../../test-execution/prsa-005-fix/project-build-initial.log
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-005-fix/project-build.log
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-005-fix/project-publication.json
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-005-fix/traceability.log
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-006-fix/first-pytest.xml
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-006-fix/first-node.xml
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-006-fix/checksum-initial.xml
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-006-fix/security-first-pass.xml
+copying downloadable files... [ 97%] ../../../../test-execution/prsa-006-fix/pytest.xml
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/node.xml
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/security.xml
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/runtime.log
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/github-state.json
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/action-pins.json
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/actionlint-provenance.json
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/actionlint.log
+copying downloadable files... [ 98%] ../../../../test-execution/prsa-006-fix/local-ci-first.log
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/local-ci.log
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/environment.txt
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/checksum-initial.log
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/security.log
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/runtime-install.log
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/SHA256SUMS
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/build-info.json
+copying downloadable files... [ 99%] ../../../../test-execution/prsa-006-fix/verification.json
+copying downloadable files... [100%] ../../../../test-execution/prsa-006-fix/ci-source-hashes.json
+copying downloadable files... [100%] ../../../../test-execution/prsa-006-fix/case-results.json
+copying downloadable files... [100%] ../../../../test-execution/prsa-006-fix/documentation.log
+copying downloadable files... [100%] ../../../../test-execution/prsa-006-fix/traceability.log
+
+copying static files... 
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_static\basic.css
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_static\documentation_options.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_static\language_data.js
+Writing evaluated template result to D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_static\js\versions.js
+copying static files: done
+copying extra files... 
+copying extra files: done
+copying assets: done
+writing output... [  1%] architecture-decisions
+writing output... [  1%] architecture-software
+writing output... [  2%] architecture-system
+writing output... [  3%] architecture/decisions/STV_ADR_001_static_extension
+writing output... [  4%] architecture/decisions/STV_ADR_002_portable_bundle
+writing output... [  4%] architecture/decisions/STV_ADR_003_state_layout
+writing output... [  5%] architecture/decisions/STV_ADR_004_dependencies
+writing output... [  6%] architecture/decisions/STV_ADR_005_starting_nodes
+writing output... [  7%] architecture/decisions/STV_ADR_006_interactive_overview
+writing output... [  7%] architecture/decisions/STV_ADR_007_component_directories
+writing output... [  8%] architecture/decisions/STV_ADR_008_stable_navigation
+writing output... [  9%] architecture/decisions/STV_ADR_009_classified_evidence_rows
+writing output... [  9%] architecture/decisions/STV_ADR_010_persistent_details
+writing output... [ 10%] change-requests/STV_CR_001_initial-project-request
+writing output... [ 11%] change-requests/STV_CR_002_starting-nodes
+writing output... [ 12%] change-requests/STV_CR_003_usability-problems
+writing output... [ 12%] change-requests/STV_CR_004_problem-report-handover
+writing output... [ 13%] change-requests/STV_CR_005_control-order
+writing output... [ 14%] change-requests/STV_CR_006_centered-layout-and-interactive-seeds
+writing output... [ 14%] change-requests/STV_CR_007_record-folder-layout
+writing output... [ 15%] change-requests/STV_CR_008_component-directories
+writing output... [ 16%] change-requests/STV_CR_009_requirement-filenames-and-test-levels
+writing output... [ 17%] change-requests/STV_CR_010_consolidated-test-specifications
+writing output... [ 17%] change-requests/STV_CR_011_mit-license
+writing output... [ 18%] change-requests/STV_CR_012_release-cancellation-and-cleanup
+writing output... [ 19%] change-requests/STV_CR_013_artifact_vertical_target_position
+writing output... [ 20%] change-requests/STV_CR_014_persistent-right-side-details
+writing output... [ 20%] change-requests/index
+writing output... [ 21%] ci-and-provenance
+writing output... [ 22%] concept-review
+writing output... [ 22%] concept-reviews/documentation-reorganization
+writing output... [ 23%] concept-reviews/round-1
+writing output... [ 24%] concept-reviews/round-10
+writing output... [ 25%] concept-reviews/round-11
+writing output... [ 25%] concept-reviews/round-12
+writing output... [ 26%] concept-reviews/round-13
+writing output... [ 27%] concept-reviews/round-14
+writing output... [ 28%] concept-reviews/round-2
+writing output... [ 28%] concept-reviews/round-3
+writing output... [ 29%] concept-reviews/round-4
+writing output... [ 30%] concept-reviews/round-5
+writing output... [ 30%] concept-reviews/round-6
+writing output... [ 31%] concept-reviews/round-7
+writing output... [ 32%] concept-reviews/round-8
+writing output... [ 33%] concept-reviews/round-9
+writing output... [ 33%] demo
+writing output... [ 34%] elements-software
+writing output... [ 35%] elements-system
+writing output... [ 36%] getting-started
+writing output... [ 36%] implementation-plan
+writing output... [ 37%] implementation-review
+writing output... [ 38%] index
+writing output... [ 38%] internal-interfaces
+writing output... [ 39%] licensing
+writing output... [ 40%] licensing/historical/index
+writing output... [ 41%] maturity
+writing output... [ 41%] method
+writing output... [ 42%] problem-tickets/STV_PR_001
+writing output... [ 43%] problem-tickets/STV_PR_002
+writing output... [ 43%] problem-tickets/STV_PR_003
+writing output... [ 44%] problem-tickets/STV_PR_004
+writing output... [ 45%] problem-tickets/STV_PR_005
+writing output... [ 46%] problem-tickets/STV_PR_006
+writing output... [ 46%] problem-tickets/STV_PR_007
+writing output... [ 47%] problem-tickets/STV_PR_008
+writing output... [ 48%] problem-tickets/STV_PR_009
+writing output... [ 49%] problem-tickets/STV_PR_010
+writing output... [ 49%] problem-tickets/STV_PR_011
+writing output... [ 50%] problem-tickets/STV_PR_012
+writing output... [ 51%] problem-tickets/STV_PR_013
+writing output... [ 51%] problem-tickets/STV_PR_014_node_disappears_behind_invisible_line
+writing output... [ 52%] problem-tickets/STV_PR_015_detail-presentation
+writing output... [ 53%] problem-tickets/index
+writing output... [ 54%] project-metrics
+writing output... [ 54%] requirements-software
+writing output... [ 55%] requirements-stakeholder
+writing output... [ 56%] requirements-system
+writing output... [ 57%] review
+writing output... [ 57%] sources
+writing output... [ 58%] state-machine
+writing output... [ 59%] technology-stack
+writing output... [ 59%] test-cases/index
+writing output... [ 60%] test-cases/software-tests
+writing output... [ 61%] test-cases/system-tests
+writing output... [ 62%] test-coverage
+writing output... [ 62%] test-execution/0.1.0-candidate-1/publication
+writing output... [ 63%] test-execution/0.1.0-candidate-2/index
+writing output... [ 64%] test-execution/0.1.0-candidate-3/index
+writing output... [ 64%] test-execution/0.1.0-candidate-4/index
+writing output... [ 65%] test-execution/0.1.0-final/index
+writing output... [ 66%] test-execution/0.2.0-candidate-1/index
+writing output... [ 67%] test-execution/0.2.0-candidate-2/index
+writing output... [ 67%] test-execution/0.2.0-candidate-3/index
+writing output... [ 68%] test-execution/0.2.0-candidate-4/index
+writing output... [ 69%] test-execution/0.2.0-candidate-5/index
+writing output... [ 70%] test-execution/0.2.0-final/index
+writing output... [ 70%] test-execution/0.2.0-method-1/cases
+writing output... [ 71%] test-execution/0.2.0-method-1/index
+writing output... [ 72%] test-execution/0.2.0-method-2/cases
+writing output... [ 72%] test-execution/0.2.0-method-2/index
+writing output... [ 73%] test-execution/1.0.0-canceled
+writing output... [ 74%] test-execution/1.0.0-candidate-1/cases
+writing output... [ 75%] test-execution/1.0.0-candidate-1/cleanup-review
+writing output... [ 75%] test-execution/1.0.0-candidate-1/index
+writing output... [ 76%] test-execution/1.0.0-candidate-1/qualification
+writing output... [ 77%] test-execution/1.0.0-candidate-2/cases
+writing output... [ 78%] test-execution/1.0.0-candidate-2/cleanup-review
+writing output... [ 78%] test-execution/1.0.0-candidate-2/index
+writing output... [ 79%] test-execution/1.0.0-candidate-2/qualification
+writing output... [ 80%] test-execution/cr013-rows/cases
+writing output... [ 80%] test-execution/cr013-rows/index
+writing output... [ 81%] test-execution/cr014-details/cases
+writing output... [ 82%] test-execution/cr014-details/index
+writing output... [ 83%] test-execution/index
+writing output... [ 83%] test-execution/maintenance-2026-10-24/cases
+writing output... [ 84%] test-execution/maintenance-2026-10-24/dependency-audit
+writing output... [ 85%] test-execution/maintenance-2026-10-24/index
+writing output... [ 86%] test-execution/method-migration-handover
+writing output... [ 86%] test-execution/pr013-final/cases
+writing output... [ 87%] test-execution/pr013-final/index
+writing output... [ 88%] test-execution/pr013-poc/index
+writing output... [ 88%] test-execution/pr014-boundary/cases
+writing output... [ 89%] test-execution/pr014-boundary/index
+writing output... [ 90%] test-execution/pr015-details/cases
+writing output... [ 91%] test-execution/pr015-details/index
+writing output... [ 91%] test-execution/prsa-001-003-fix/cases
+writing output... [ 92%] test-execution/prsa-001-003-fix/index
+writing output... [ 93%] test-execution/prsa-002-fix/cases
+writing output... [ 93%] test-execution/prsa-002-fix/index
+writing output... [ 94%] test-execution/prsa-004-fix/cases
+writing output... [ 95%] test-execution/prsa-004-fix/index
+writing output... [ 96%] test-execution/prsa-005-fix/cases
+writing output... [ 96%] test-execution/prsa-005-fix/index
+writing output... [ 97%] test-execution/prsa-006-fix/cases
+writing output... [ 98%] test-execution/prsa-006-fix/index
+writing output... [ 99%] test-scripts/index
+writing output... [ 99%] traceability
+writing output... [100%] verification-plan
+
+generating indices... genindex done
+writing additional pages... search done
+copying images... [ 10%] change-requests/STV_CR_013_artifact_vertical_target_position.svg
+copying images... [ 20%] problem-tickets/STV_PR_001.png
+copying images... [ 30%] problem-tickets/STV_PR_002.png
+copying images... [ 40%] problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.png
+copying images... [ 50%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_problem_report.svg
+copying images... [ 60%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_shr.svg
+copying images... [ 70%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_sysr.svg
+copying images... [ 80%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_swr.svg
+copying images... [ 90%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_syse.svg
+copying images... [100%] D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj\_images\status_swe.svg
+
+dumping search index in English (code: en)... done
+dumping object inventory... done
+Needs successfully exported
+build succeeded.
+
+The HTML pages are in docs\_build\release-source\1.0.0\docs\_build\.html-stage-if8ynmzj.
+Documentation built: D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\html\index.html
+Publication inventory: D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\_build\release-source\1.0.0\docs\_build\html\_stv-publication.json
