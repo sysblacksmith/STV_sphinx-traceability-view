@@ -32,7 +32,7 @@ location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
 After building, run the shared validator (replace ``<shared-skill>`` with the
 selected reverse-engineer-requirements skill directory)::
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 0.2 --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
+   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version 1.0 --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
 
 The internal specification includes conventional and channeled derivation paths,
 allocations and containment. Graph validation establishes structural checks;

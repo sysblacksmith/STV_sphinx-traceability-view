@@ -1,0 +1,8 @@
+Prepare the 1.0.0 release candidate and qualification evidence
+
+    - Prepare the first stable GitHub release while keeping unresolved release gates visible.
+    - Align package, frontend, extension and documentation versions at 1.0.0.
+    - Repair result import for consolidated test specifications and require traceability coverage.
+    - Retain distribution checksums, 78 passing cases and full Windows/Firefox qualification evidence.
+    - Record pending path regression, design review and redistribution audit.
+    - Remove only the 14 cache directories explicitly approved by the owner.

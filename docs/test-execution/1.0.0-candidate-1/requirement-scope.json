@@ -1,0 +1,722 @@
+[
+  {
+    "id": "STV_SHR_001",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_002",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_003",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_004",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_005",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_006",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_007",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_008",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_009",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_010",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_011",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_012",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_013",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_014",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_015",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_016",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_017",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_018",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_019",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SHR_020",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_021",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SHR_022",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SHR_023",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SHR_024",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_025",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_026",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_027",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_028",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_029",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_030",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_031",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_032",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_033",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_034",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_035",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_036",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_037",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_038",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_039",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_040",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_041",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_042",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_043",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_044",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_045",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_046",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_047",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_048",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_050",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_049",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_051",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_052",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SHR_053",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_001",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_002",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_003",
+    "acceptance": "accepted",
+    "verification_state": "partial",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_004",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_005",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_006",
+    "acceptance": "accepted",
+    "verification_state": "partial",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_007",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_008",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_009",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SYS_010",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_001",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_002",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_003",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_004",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_005",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_006",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_007",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_008",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_009",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_010",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_011",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_012",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_013",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_014",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_015",
+    "acceptance": "accepted",
+    "verification_state": "partial",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_016",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_017",
+    "acceptance": "accepted",
+    "verification_state": "partial",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_018",
+    "acceptance": "accepted",
+    "verification_state": "partial",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_019",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SWR_020",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_021",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SWR_022",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SWR_023",
+    "acceptance": "accepted",
+    "verification_state": "not_assessed",
+    "deferred": true
+  },
+  {
+    "id": "STV_SWR_024",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_025",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_026",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_027",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_028",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_029",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_030",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_031",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_032",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_033",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_034",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_035",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_036",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_037",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_038",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_039",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_040",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_041",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_042",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_043",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_044",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_045",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_046",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_047",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_048",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_049",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_050",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_051",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_052",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_053",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_054",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_055",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_056",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  },
+  {
+    "id": "STV_SWR_057",
+    "acceptance": "accepted",
+    "verification_state": "passed",
+    "deferred": false
+  }
+]

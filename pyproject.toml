@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sphinx-traceability-view"
-version = "0.2.0"
+version = "1.0.0"
 description = "Offline interactive views of a Sphinx-Needs traceability graph"
 requires-python = ">=3.10"
 authors = [{name = "Henning Heikes"}]

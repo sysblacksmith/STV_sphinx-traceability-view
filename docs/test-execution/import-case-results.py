@@ -25,8 +25,21 @@ def main():
         parser.error('execution records already exist; do not overwrite history')
     metadata = json.loads((record/'candidate.json').read_text(encoding='utf-8'))
     commands = {item['suite']: item for item in json.loads((record/'commands.json').read_text(encoding='utf-8'))}
-    mapping = json.loads((ROOT/'docs/concept-reviews/round-7-test-map.json').read_text(encoding='utf-8'))
-    by_selector = {case['selector']: case for case in mapping if case['selector']}
+    # Current consolidated specifications own selectors; historical review maps
+    # retain their original paths and must not drive a new release import.
+    by_selector = {}
+    case_sources = {}
+    for source in (ROOT/'docs/test-cases').glob('*.rst'):
+        for block in re.split(r'(?=^\.\. test_case::)', source.read_text(encoding='utf-8'), flags=re.M)[1:]:
+            identity = re.search(r'^   :id: (\S+)', block, re.M)[1]
+            match = re.search(r'\*\*Executable selector:\*\* ``([^`]+)``(?: in\s+``([^`]+)``)?', block)
+            if not match:
+                continue  # Planned/manual cases have no executable result to import.
+            selector = match[1] if not match[2] else match[2]+' :: '+match[1]
+            if selector in by_selector:
+                raise RuntimeError('Duplicate executable selector: '+selector)
+            by_selector[selector] = {'id': identity}
+            case_sources[identity] = source
     imported = []
     lines = ['Per-case execution records', '='*80, '',
              'Results below come from this run\'s retained JUnit reports. Timestamps are',
@@ -69,14 +82,21 @@ def main():
         raise RuntimeError('Expected exactly one actual result for every modeled executable')
     target.write_text('\n'.join(lines), encoding='utf-8')
     for item in imported:
-        source = ROOT/'docs/test-cases'/(item['case_id']+'.rst')
+        source = case_sources[item['case_id']]
         text = source.read_text(encoding='utf-8')
-        text = re.sub(r'(:last_result:) \S+', r'\1 '+item['result'], text)
-        if ':executed_by:' in text:
-            text = re.sub(r'(:executed_by: [^\n]+)', r'\1, '+item['execution_id'], text)
+        blocks = re.split(r'(?=^\.\. test_case::)', text, flags=re.M)
+        for index, block in enumerate(blocks):
+            if re.search(r'^   :id: '+re.escape(item['case_id'])+r'$', block, re.M):
+                block = re.sub(r'(:last_result:) \S+', r'\1 '+item['result'], block)
+                if ':executed_by:' in block:
+                    block = re.sub(r'(:executed_by: [^\n]+)', r'\1, '+item['execution_id'], block)
+                else:
+                    block = block.replace('   :last_result:', '   :executed_by: '+item['execution_id']+'\n   :last_result:')
+                blocks[index] = block
+                break
         else:
-            text = text.replace('   :last_result:', '   :executed_by: '+item['execution_id']+'\n   :last_result:')
-        source.write_text(text, encoding='utf-8')
+            raise RuntimeError('Canonical case missing: '+item['case_id'])
+        source.write_text(''.join(blocks), encoding='utf-8')
     (record/'case-results.json').write_text(json.dumps(imported,indent=2)+'\n',encoding='utf-8')
     with (record/'index.rst').open('a',encoding='utf-8') as stream:
         stream.write('\nCanonical case results\n'+('-'*80)+'\n\n.. toctree::\n   :maxdepth: 1\n\n   cases\n\n* :download:`Case-result mapping <case-results.json>`\n')

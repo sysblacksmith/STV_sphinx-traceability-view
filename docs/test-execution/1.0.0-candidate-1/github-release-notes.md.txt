@@ -1,0 +1,24 @@
+# STV 1.0.0 (draft)
+
+First stable release candidate of the offline Sphinx-Needs traceability viewer. This candidate is not yet qualified for final publication.
+
+- Explore explicit starting Needs or a paged project overview, with local ID/title search.
+- Expand and collapse traces in a semantic graph with shared node identity, zoom/pan, keyboard controls and rich static details.
+- Use complete generated HTML directly from disk or static HTTP hosting without an application server.
+- STV-owned code and documentation use MIT; bundled libraries retain their own licenses.
+
+Install the prepared wheel in the consuming documentation environment:
+
+```powershell
+python -m pip install ./sphinx_traceability_view-1.0.0-py3-none-any.whl
+```
+
+Add `sphinx_traceability_view` to the existing Sphinx extensions list and use `.. traceability-view::` in RST. Python 3.10+ is required; runtime dependencies pin Sphinx 8.1.3, Sphinx-Needs 8.2.0 and Beautiful Soup 4.13.5. Node is required only to rebuild browser assets.
+
+Validation: 78 passed (58 Python, 20 JavaScript), zero failures/errors/skips, on Windows with Python 3.10.9, Firefox 158.0.1 and geckodriver 0.37.1. File and static HTTP workflows, isolated installed-wheel use, warnings-as-errors documentation, traceability coverage, diagram links and a real 30,000-Need/90,000-edge capacity fixture passed. The 200-visible-node cap was exercised on both transports.
+
+[Execution record](https://github.com/sysforger/STV_sphinx-traceability-view/blob/main/docs/test-execution/1.0.0-candidate-1/index.rst). This link requires the preparation changes to be committed and made available in the repository before publication. Checksums are retained in that record; no assets have been uploaded by this preparation.
+
+Release gates still open: STV_PR_006 nested Windows file-path regression (its specified system case remains unexecuted); acceptance review of ADR 007 and the two new inspector test designs; the documented ELK/GWT redistribution audit. Existing partial requirement verification remains unchanged.
+
+Limits and deferrals: use short Windows output paths for direct Firefox file access; each view is limited to 200 visible nodes. Separate-occurrence mode is deferred. Other browsers/platforms and touch interactions are not qualified by this run. Numeric performance budgets remain unagreed; retained timings and memory are measurements, not a performance guarantee. Interactive parity of third-party embedded widgets is outside the static-detail contract.

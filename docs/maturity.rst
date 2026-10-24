@@ -6,6 +6,26 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+1.0.0 release preparation, 2026-10-24
+-------------------------------------
+
+The owner requested the first official GitHub release based on commit
+``2960b25721df9eb727ae070317e4c2f4746bb909``. Version metadata is aligned at
+1.0.0. The fresh :doc:`test-execution/1.0.0-candidate-1/index` records 78
+passing executable cases (58 Python, 20 JavaScript), no failures/errors/skips,
+Windows/Firefox file and HTTP capacity runs, isolated installed-wheel use,
+artifact checksums and all supporting gates. All actual cases have new
+execution links; prior attempts and acceptance states remain preserved.
+
+:doc:`test-execution/1.0.0-candidate-1/qualification` records **incomplete final
+qualification**: the nested Windows-path system case remains unexecuted,
+ADR 007 and two inspector test designs still need acceptance review, and the
+documented ELK/GWT redistribution audit remains open. Requirement verification
+states are unchanged. Occurrence mode and other agreed limits remain visible.
+No release commit, tag or publication is implied. The owner approved removal
+of the 14 listed cache directories; all were removed. The post-release review
+remains due when publication is known.
+
 Component source organization, 2026-10-24
 -----------------------------------------
 

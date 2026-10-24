@@ -1,0 +1,179 @@
+{
+  "at": "2026-10-24T12:07:52.542551+00:00",
+  "status": "proposed; no files deleted",
+  "total_bytes": 209992,
+  "candidates": [
+    {
+      "path": ".pytest_cache",
+      "bytes": 7785,
+      "reason": "Reproducible pytest cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "__pycache__",
+      "bytes": 2798,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "docs/test-scripts/__pycache__",
+      "bytes": 137700,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/__pycache__",
+      "bytes": 16283,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/__pycache__",
+      "bytes": 1817,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/tests/__pycache__",
+      "bytes": 2308,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/__pycache__",
+      "bytes": 5627,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/tests/__pycache__",
+      "bytes": 9263,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/__pycache__",
+      "bytes": 7829,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/tests/__pycache__",
+      "bytes": 4064,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/__pycache__",
+      "bytes": 3261,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/tests/__pycache__",
+      "bytes": 4857,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/__pycache__",
+      "bytes": 3336,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/tests/__pycache__",
+      "bytes": 3064,
+      "reason": "Reproducible Python bytecode cache",
+      "consequence": "Cache recreated on the next test/import; no product source or retained evidence is removed"
+    }
+  ],
+  "inventory_bytes": {
+    ".gitignore": 371,
+    "build-docs.ps1": 1025,
+    "conftest.py": 977,
+    "hatch_build.py": 826,
+    "LICENSE": 1071,
+    "pyproject.toml": 1190,
+    "README.rst": 13261,
+    "requirements-docs.txt": 189,
+    ".pytest_cache/.gitignore": 39,
+    ".pytest_cache/CACHEDIR.TAG": 191,
+    ".pytest_cache/README.md": 310,
+    ".pytest_cache/v": 7245,
+    ".venv/.gitignore": 2,
+    ".venv/pyvenv.cfg": 119,
+    ".venv/Lib": 216846426,
+    ".venv/Scripts": 4561459,
+    ".venv/share": 5601,
+    ".venv-implementation/pyvenv.cfg": 119,
+    ".venv-implementation/Lib": 254158318,
+    ".venv-implementation/Scripts": 5321271,
+    ".venv-implementation/share": 5601,
+    "dist/sphinx_traceability_view-0.2.0-py3-none-any.whl": 960359,
+    "dist/sphinx_traceability_view-0.2.0.tar.gz": 2087118,
+    "dist/sphinx_traceability_view-1.0.0-py3-none-any.whl": 960376,
+    "dist/sphinx_traceability_view-1.0.0.tar.gz": 2087874,
+    "docs/architecture-decisions.rst": 851,
+    "docs/architecture-software.rst": 5603,
+    "docs/architecture-system.rst": 2915,
+    "docs/concept-review.rst": 493,
+    "docs/conf.py": 2861,
+    "docs/demo.rst": 1709,
+    "docs/elements-software.rst": 7593,
+    "docs/elements-system.rst": 1393,
+    "docs/getting-started.rst": 27,
+    "docs/implementation-plan.rst": 27257,
+    "docs/implementation-review.rst": 13404,
+    "docs/index.rst": 986,
+    "docs/internal-interfaces.rst": 11247,
+    "docs/licensing.rst": 1522,
+    "docs/maturity.rst": 11093,
+    "docs/method.rst": 291,
+    "docs/requirements-software.rst": 49249,
+    "docs/requirements-stakeholder.rst": 50189,
+    "docs/requirements-system.rst": 8095,
+    "docs/review.rst": 16175,
+    "docs/sources.rst": 18202,
+    "docs/state-machine.rst": 11109,
+    "docs/technology-stack.rst": 10190,
+    "docs/test-coverage.rst": 39904,
+    "docs/traceability.rst": 2085,
+    "docs/verification-plan.rst": 14675,
+    "docs/architecture": 1198776,
+    "docs/change-requests": 43647,
+    "docs/concept-reviews": 226400,
+    "docs/problem-tickets": 66901,
+    "docs/test-cases": 296383,
+    "docs/test-execution": 25028854,
+    "docs/test-scripts": 209470,
+    "docs/_build": 543774460,
+    "frontend/build.js": 1914,
+    "frontend/package-lock.json": 20432,
+    "frontend/package.json": 461,
+    "frontend/node_modules": 19708822,
+    "frontend/src": 57519,
+    "scripts/benchmark.py": 2977,
+    "scripts/check-coverage.py": 3845,
+    "scripts/create-state-diagram.py": 4948,
+    "scripts/export-architecture.ps1": 1176,
+    "scripts/normalize-diagram-links.py": 2583,
+    "scripts/verify-release.py": 15328,
+    "src/sphinx_traceability_view": 3246744,
+    "__pycache__/conftest.cpython-310-pytest-8.4.2.pyc": 1660,
+    "__pycache__/hatch_build.cpython-310.pyc": 1138
+  },
+  "retained": [
+    "dist/ (all versions)",
+    "docs/test-execution/ (all candidate histories and artifacts)",
+    ".venv/",
+    ".venv-implementation/",
+    "frontend/node_modules/",
+    "docs/_build/wheelhouse/",
+    "docs/_build/html/",
+    "docs/_build/release-benchmark/1.0.0-candidate-1/ (current measured fixture)"
+  ],
+  "uncertain": "Other processes were not terminated or assumed disposable. No benchmark, temporary installation, backup, or loose log is proposed for manual deletion. Existing test-managed temporary-directory lifecycles were left unchanged.",
+  "references_review": "Checked Git status including ignored files, staged/unstaged diffs, packaging exclusions, test collection, release runner, README and evidence download references. Proposed cache directories are interpreter/pytest output, not referenced delivery inputs. The qualification runner has finished; no release run is using the proposed caches.",
+  "post_release": "Repeat inventory and status/diff review after actual release completion."
+}

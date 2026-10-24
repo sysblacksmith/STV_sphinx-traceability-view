@@ -6,8 +6,8 @@ from pathlib import Path
 import sys
 
 project = "STV Sphinx Traceability View"
-version = "0.2"
-release = "0.2.0"
+version = "1.0"
+release = "1.0.0"
 root_doc = "index"
 exclude_patterns = ["test-scripts/fixtures/**", "_build", "test-execution/0.1.0-candidate-1/index.rst"]
 

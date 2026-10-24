@@ -1,0 +1,200 @@
+[
+  {
+    "suite": "final-documentation",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-m",
+      "sphinx",
+      "-E",
+      "-a",
+      "-b",
+      "html",
+      "-W",
+      "--keep-going",
+      "docs",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:08:32.080819+00:00",
+    "finished": "2026-10-24T12:08:47.234219+00:00",
+    "returncode": 1,
+    "log": "final-documentation.log"
+  },
+  {
+    "suite": "final-traceability",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+      "docs/_build/html/needs.json",
+      "--version",
+      "1.0",
+      "--repo-root",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+      "--require-test-coverage",
+      "--csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-traceability.csv",
+      "--test-csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-test-traceability.csv"
+    ],
+    "started": "2026-10-24T12:08:47.234219+00:00",
+    "finished": "2026-10-24T12:08:47.333377+00:00",
+    "returncode": 0,
+    "log": "final-traceability.log"
+  },
+  {
+    "suite": "final-diagram-links",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\normalize-diagram-links.py",
+      "--diagram-dir",
+      "docs/architecture/diagrams",
+      "--published-dir",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:08:47.333377+00:00",
+    "finished": "2026-10-24T12:08:47.433433+00:00",
+    "returncode": 0,
+    "log": "final-diagram-links.log"
+  },
+  {
+    "suite": "final-diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started": "2026-10-24T12:08:47.433433+00:00",
+    "finished": "2026-10-24T12:08:47.477671+00:00",
+    "returncode": 0,
+    "log": "final-diff-check.log"
+  },
+  {
+    "suite": "final-documentation-2",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-m",
+      "sphinx",
+      "-E",
+      "-a",
+      "-b",
+      "html",
+      "-W",
+      "--keep-going",
+      "docs",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:09:31.550902+00:00",
+    "finished": "2026-10-24T12:09:46.171733+00:00",
+    "returncode": 0,
+    "log": "final-documentation-2.log"
+  },
+  {
+    "suite": "final-traceability-2",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+      "docs/_build/html/needs.json",
+      "--version",
+      "1.0",
+      "--repo-root",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+      "--require-test-coverage",
+      "--csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-traceability-2.csv",
+      "--test-csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-test-traceability-2.csv"
+    ],
+    "started": "2026-10-24T12:09:46.174108+00:00",
+    "finished": "2026-10-24T12:09:46.254657+00:00",
+    "returncode": 0,
+    "log": "final-traceability-2.log"
+  },
+  {
+    "suite": "final-diagram-links-2",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\normalize-diagram-links.py",
+      "--diagram-dir",
+      "docs/architecture/diagrams",
+      "--published-dir",
+      "docs/_build/html"
+    ],
+    "started": "2026-10-24T12:09:46.254657+00:00",
+    "finished": "2026-10-24T12:09:46.355064+00:00",
+    "returncode": 0,
+    "log": "final-diagram-links-2.log"
+  },
+  {
+    "suite": "final-diff-check-2",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "started": "2026-10-24T12:09:46.355064+00:00",
+    "finished": "2026-10-24T12:09:46.396963+00:00",
+    "returncode": 0,
+    "log": "final-diff-check-2.log"
+  },
+  {
+    "suite": "final-documentation-3",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "sphinx",
+      "-b",
+      "html",
+      "-W",
+      "--keep-going",
+      "docs",
+      "docs/_build/html"
+    ],
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started": "2026-10-24T12:12:19.154526+00:00",
+    "finished": "2026-10-24T12:12:32.236945+00:00",
+    "returncode": 0,
+    "log": "final-documentation-3.log"
+  },
+  {
+    "suite": "final-traceability-3",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "-B",
+      "D:\\Dropbox\\MikroContr_Projects\\-agents\\skills\\reverse-engineer-requirements\\scripts\\validate_traceability.py",
+      "docs/_build/html/needs.json",
+      "--version",
+      "1.0",
+      "--repo-root",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+      "--require-test-coverage",
+      "--csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-traceability-3.csv",
+      "--test-csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.0.0-candidate-1\\final-test-traceability-3.csv"
+    ],
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started": "2026-10-24T12:12:32.236945+00:00",
+    "finished": "2026-10-24T12:12:32.333745+00:00",
+    "returncode": 0,
+    "log": "final-traceability-3.log"
+  },
+  {
+    "suite": "final-diff-check-3",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "started": "2026-10-24T12:12:32.333745+00:00",
+    "finished": "2026-10-24T12:12:32.370763+00:00",
+    "returncode": 0,
+    "log": "final-diff-check-3.log"
+  }
+]

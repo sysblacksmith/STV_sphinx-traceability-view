@@ -1,0 +1,58 @@
+{
+  "artifacts": [
+    {
+      "path": "dist/sphinx_traceability_view-1.0.0-py3-none-any.whl",
+      "bytes": 960376,
+      "sha256": "2fa0f670297e953a76b896836f4c64d55f0251984188ee9f77dfc43df6affad3"
+    },
+    {
+      "path": "dist/sphinx_traceability_view-1.0.0.tar.gz",
+      "bytes": 2087874,
+      "sha256": "64be216ffc2fa2fc14b3af92b0704480ecd831994762e3e4942984d813f18f58"
+    }
+  ],
+  "wheel_members": [
+    "sphinx_traceability_view/__init__.py",
+    "sphinx_traceability_view/bundle/__init__.py",
+    "sphinx_traceability_view/detail_build/__init__.py",
+    "sphinx_traceability_view/directive/__init__.py",
+    "sphinx_traceability_view/directive/directives.py",
+    "sphinx_traceability_view/directive/lifecycle.py",
+    "sphinx_traceability_view/graph/__init__.py",
+    "sphinx_traceability_view/model/__init__.py",
+    "sphinx_traceability_view/static/LICENSE.txt",
+    "sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt",
+    "sphinx_traceability_view/static/stv.css",
+    "sphinx_traceability_view/static/stv.js",
+    "sphinx_traceability_view/static/vendor/ELK-SOURCE.txt",
+    "sphinx_traceability_view/static/vendor/elk.bundled.js",
+    "sphinx_traceability_view-1.0.0.dist-info/METADATA",
+    "sphinx_traceability_view-1.0.0.dist-info/WHEEL",
+    "sphinx_traceability_view-1.0.0.dist-info/licenses/LICENSE",
+    "sphinx_traceability_view-1.0.0.dist-info/licenses/src/sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt",
+    "sphinx_traceability_view-1.0.0.dist-info/licenses/src/sphinx_traceability_view/static/vendor/ELK-SOURCE.txt",
+    "sphinx_traceability_view-1.0.0.dist-info/RECORD"
+  ],
+  "checked_source_members": [
+    "sphinx_traceability_view/__init__.py",
+    "sphinx_traceability_view/bundle/__init__.py",
+    "sphinx_traceability_view/detail_build/__init__.py",
+    "sphinx_traceability_view/directive/__init__.py",
+    "sphinx_traceability_view/directive/directives.py",
+    "sphinx_traceability_view/directive/lifecycle.py",
+    "sphinx_traceability_view/graph/__init__.py",
+    "sphinx_traceability_view/model/__init__.py",
+    "sphinx_traceability_view/static/LICENSE.txt",
+    "sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt",
+    "sphinx_traceability_view/static/stv.css",
+    "sphinx_traceability_view/static/stv.js",
+    "sphinx_traceability_view/static/vendor/ELK-SOURCE.txt",
+    "sphinx_traceability_view/static/vendor/elk.bundled.js"
+  ],
+  "source_mismatches": [],
+  "ships_unit_tests": false,
+  "version_metadata": true,
+  "python_requirement": true,
+  "metadata": "Metadata-Version: 2.4\nName: sphinx-traceability-view\nVersion: 1.0.0\nSummary: Offline interactive views of a Sphinx-Needs traceability graph\nAuthor: Henning Heikes\nLicense-Expression: MIT AND ISC AND BSD-3-Clause AND EPL-2.0\nLicense-File: LICENSE\nLicense-File: src/sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt\nLicense-File: src/sphinx_traceability_view/static/vendor/ELK-SOURCE.txt\nRequires-Python: >=3.10\nRequires-Dist: beautifulsoup4==4.13.5\nRequires-Dist: sphinx-needs==8.2.0\nRequires-Dist: sphinx==8.1.3\n",
+  "scope": "Source suites and rendered fixture builds use checkout code. All runtime wheel members were compared byte-for-byte to those source inputs; isolated installed-wheel host test is a separate required gate."
+}

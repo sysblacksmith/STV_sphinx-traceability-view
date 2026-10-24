@@ -1,0 +1,2 @@
+# Template only: do not run until all release gates are closed and the final release commit exists.
+git tag -a v1.0.0 '<FINAL_QUALIFIED_RELEASE_COMMIT>' -m 'STV 1.0.0'

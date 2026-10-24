@@ -145,7 +145,7 @@ def main():
     run('pytest',[sys.executable,'-m','pytest','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
     run('node-tests',['node','--test','--test-reporter=junit','frontend/src/*/tests/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
-    run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--csv',str(record/'traceability.csv')])
+    run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--require-test-coverage','--test-csv',str(record/'test-traceability.csv'),'--csv',str(record/'traceability.csv')])
     run('diagram-links-published',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
     cases=junit_cases(record/'pytest.xml')+junit_cases(record/'node.xml')
     for case in cases:

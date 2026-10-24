@@ -1,0 +1,77 @@
+﻿{
+    "at":  "2026-10-24T12:11:52.5201316+00:00",
+    "authorization":  "Owner approved exactly the 14 listed cache directories",
+    "preflight":  "Initial conservative check stopped before any deletion on a Dropbox cloud reparse point. Inspection confirmed cloud tag 0x9000601a, no link target. All approved paths and descendants were checked for link redirection before retry.",
+    "results":  [
+                    {
+                        "path":  ".pytest_cache",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "docs/test-scripts/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/bundle/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/bundle/tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/detail_build/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/detail_build/tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/directive/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/directive/tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/graph/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/graph/tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/model/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    },
+                    {
+                        "path":  "src/sphinx_traceability_view/model/tests/__pycache__",
+                        "removed":  true,
+                        "error":  null
+                    }
+                ]
+}

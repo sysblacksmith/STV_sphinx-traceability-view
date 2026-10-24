@@ -1,0 +1,25 @@
+{
+  "purpose": "Supplement the runner identity with release tooling and documentation configuration. Result importer repair is evidence-only and excluded from both runtime packages and the source archive.",
+  "sha256": {
+    "docs/test-execution/import-case-results.py": "fb78401a693c9bf2e8b5186c459edcc48ebe5bf0aebcb8b70f839fd1dc6be7ba",
+    "docs/conf.py": "5831ee1e52ca2be4b35243ad0395a21d2f57008967ea007b62e3610f3aba847f",
+    "README.rst": "701a48044bf688a061ed553637245d08181fd7c5b8b6445935a93c548dee0560",
+    "build-docs.ps1": "aa9e520335f627c96c9b5500806096ea773b2526e713a5f3c2ff25cb5c97b740",
+    "requirements-docs.txt": "3ff1c96cc3ad476f82bbfb4f4eb13c31b68dab5578adfdbaaa1ec53f51436d07",
+    "docs/architecture/implementation/requirements-implementation.txt": "e773332c782d0741e1aa07517e85a77cd365be32ff53b851e8baa50e280e6e7e"
+  },
+  "early_attempts": [
+    {
+      "action": "Update release metadata using sandboxed command",
+      "outcome": "PermissionError before any file was modified"
+    },
+    {
+      "action": "Start sandboxed runner",
+      "outcome": "PermissionError creating record directory; no build/test began"
+    },
+    {
+      "action": "Repeat authorized local operations with escalation",
+      "outcome": "Allowed; candidate-1 is the first actual suite execution"
+    }
+  ]
+}
