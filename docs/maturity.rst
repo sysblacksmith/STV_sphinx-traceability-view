@@ -31,6 +31,16 @@ execution records are retained. :doc:`test-cases/system-tests` contains
 whole-tool checks; :doc:`test-cases/software-tests` contains component checks.
 This organization does not infer new verification results or acceptance.
 
+MIT licensing decision, 2026-10-24
+----------------------------------
+
+The owner selected MIT and supplied Henning Heikes as the copyright holder.
+See :doc:`licensing` and :doc:`change-requests/STV_CR_011_mit-license`.
+The repository license, package metadata and generated-view legal materials
+are aligned. Third-party licenses remain separate; an ELK/GWT transitive-source
+redistribution audit and employer/IP questions are not claimed resolved.
+Historical release artifacts and verification states remain unchanged.
+
 Current release increment
 ----------------------------------------
 
@@ -131,7 +141,8 @@ documentation retest passed; the consolidated record is
 fields are updated against those actual results and the criterion review in
 :doc:`implementation-review`. Stakeholder verification and concept acceptance
 remain independent; no owner release approval or external publication is implied.
-Project licensing and numeric performance budgets remain explicitly deferred;
+Project licensing was subsequently resolved as MIT on 2026-10-24 (see
+:doc:`licensing`); numeric performance budgets remain explicitly deferred;
 separate-occurrence mode, touch and additional platforms are later scope.
 Implementation checks are specified in :doc:`verification-plan`; scope decisions
 and their original owner evidence remain in :doc:`review` and :doc:`sources`.

@@ -19,3 +19,4 @@ acceptance records remain unchanged.
    STV_CR_008_component-directories
    STV_CR_009_requirement-filenames-and-test-levels
    STV_CR_010_consolidated-test-specifications
+   STV_CR_011_mit-license

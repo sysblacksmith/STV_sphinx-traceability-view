@@ -8,6 +8,7 @@ Sphinx-Needs extension specification, architecture and supporting records.
    :caption: Getting started
 
    Getting started <getting-started>
+   licensing
 
 .. toctree::
    :maxdepth: 2

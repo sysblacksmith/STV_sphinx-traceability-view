@@ -1,3 +1,18 @@
-ELK.js 0.10.0, unmodified bundled JavaScript source.
-EPL-2.0; upstream source: https://github.com/kieler/elkjs/tree/v0.10.0
-The adjacent elk.bundled.js is the unmodified distributed source used by this runtime.
+ELK.js 0.10.0 is distributed under EPL-2.0, not the STV MIT license.
+The bundled ELK.js library is unmodified upstream distribution code.
+
+Corresponding upstream sources and build instructions are available under
+EPL-2.0 from these projects:
+
+ELK.js 0.10.0:
+https://github.com/kieler/elkjs/tree/0.10.0
+https://github.com/kieler/elkjs/archive/refs/tags/0.10.0.tar.gz
+
+Underlying Eclipse Layout Kernel 0.10.0:
+https://github.com/eclipse-elk/elk/tree/v0.10.0
+https://github.com/eclipse-elk/elk/archive/refs/tags/v0.10.0.tar.gz
+
+The upstream ELK.js README and build.gradle describe the Java/GWT build and
+its dependencies. The generated bundled JavaScript is not a substitute for
+the preferred source form. Preserve this notice and the EPL text in
+THIRD_PARTY_NOTICES.txt when redistributing generated STV documentation.

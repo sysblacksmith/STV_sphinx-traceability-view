@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+import tarfile
 import pytest
 
 ROOT=Path(__file__).parents[2]
@@ -21,10 +22,23 @@ def test_clean_wheel_host():
     with zipfile.ZipFile(wheel) as archive:
         names=archive.namelist()
         assert not any("/tests/" in name for name in names), "Unit tests must not ship in the runtime wheel"
-        for asset in ('stv.js','stv.css','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js'):
+        for asset in ('stv.js','stv.css','LICENSE.txt','THIRD_PARTY_NOTICES.txt','vendor/elk.bundled.js','vendor/ELK-SOURCE.txt'):
             assert f'sphinx_traceability_view/static/{asset}' in names
         metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
         assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
+        assert 'License-Expression: MIT AND ISC AND BSD-3-Clause AND EPL-2.0' in metadata
+        assert 'Copyright (c) 2026 Henning Heikes' in archive.read('sphinx_traceability_view/static/LICENSE.txt').decode()
+        license_members=[name for name in names if '.dist-info/licenses/' in name]
+        assert any(name.endswith('/LICENSE') for name in license_members)
+        assert any(name.endswith('/THIRD_PARTY_NOTICES.txt') for name in license_members)
+        assert any(name.endswith('/ELK-SOURCE.txt') for name in license_members)
+    source_archive=wheel.parent/(wheel.name.split('-py3-')[0]+'.tar.gz')
+    with tarfile.open(source_archive,'r:gz') as archive:
+        names=archive.getnames()
+        assert any(name.endswith('/LICENSE') for name in names)
+        assert any(name.endswith('/static/THIRD_PARTY_NOTICES.txt') for name in names)
+        assert any(name.endswith('/static/vendor/ELK-SOURCE.txt') for name in names)
+
     with tempfile.TemporaryDirectory(prefix='stv-wheel-') as directory:
         root=Path(directory);envpath=root/'env'
         assert root.resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
@@ -38,6 +52,13 @@ def test_clean_wheel_host():
         result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)
         assert result.returncode==0,result.stdout+result.stderr
         assert 'STV_PENDING' not in (root/'html/index.html').read_text(encoding='utf-8')
+        static=root/'html/_static/stv'
+        assert (static/'LICENSE.txt').read_bytes()==(ROOT/'LICENSE').read_bytes()
+        assert 'https://github.com/kieler/elkjs/tree/0.10.0' in (static/'vendor/ELK-SOURCE.txt').read_text(encoding='utf-8')
+        notices=(static/'THIRD_PARTY_NOTICES.txt').read_text(encoding='utf-8')
+        assert 'Eclipse Public License' in notices
+        assert 'https://github.com/eclipse-elk/elk/tree/v0.10.0' in notices
+
         probe=subprocess.run([str(python),'-c','import sphinx_traceability_view as s;print(s.__file__)'],env=env,cwd=root,capture_output=True,text=True,check=True)
         assert str(envpath).lower() in probe.stdout.lower()
         retained=os.environ.get('STV_CONSUMER_RECORD')

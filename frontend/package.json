@@ -17,5 +17,7 @@
   },
   "scripts": {
     "test": "node --test src/*/tests/*.test.js"
-  }
+  },
+  "license": "MIT",
+  "author": "Henning Heikes"
 }

@@ -185,8 +185,7 @@ supported when a traceability view is present. Each view supports up to 200
 visible graph nodes. On Windows, use a short HTML output path when opening
 files directly in Firefox.
 
-No project license has been assigned; resolve that decision before external
-distribution.
+STV-owned code and documentation are licensed under MIT; see Licensing below.
 
 User issue handover
 -------------------
@@ -216,8 +215,7 @@ For Firefox verification set ``STV_GECKODRIVER`` to an explicitly provisioned
 driver and run ``pytest docs/test-scripts/test_browser.py`` in the implementation environment.
 The packaging test needs a built wheel and an offline runtime wheelhouse at
 ``docs/_build/wheelhouse``. Source tests, release results and deferred criteria
-are linked from the central maturity page. No project license has been assigned;
-the owner must resolve that decision before external distribution.
+are linked from the central maturity page.
 
 The documentation's ``test-cases/index`` specifies canonical cases and their
 requirement links. Per-case execution records retain actual attempts, while
@@ -256,3 +254,24 @@ through its component and test naming conventions. Run all Python tests with ``p
 and browser-component unit tests with ``node --test frontend/src/*/tests/*.test.js``.
 Host integration, browser and release checks remain in ``docs/test-scripts/``.
 Component tests are excluded from the installed wheel.
+
+
+Licensing
+---------
+
+Copyright (c) 2026 Henning Heikes. STV-owned code and documentation are licensed
+under the MIT License. The standard terms are in the repository-root ``LICENSE``
+file and in the package license files. Credit to Henning Heikes and STV is
+appreciated; this is a request, not an additional license condition.
+
+Bundled third-party code retains its own licenses: Floating UI uses MIT,
+D3 components use ISC/BSD-3-Clause, and ELK.js uses EPL-2.0. The distribution's
+combined SPDX expression reflects these bundled components; it does not change
+the MIT license of STV-owned code. See ``THIRD_PARTY_NOTICES.txt`` and
+``vendor/ELK-SOURCE.txt`` in the packaged static assets. Generated views copy
+these notices and ``LICENSE.txt`` alongside their browser assets.
+
+The Sphinx documentation includes a Licensing page with the MIT text,
+third-party notices and upstream source-availability information. This license
+selection does not assert employer approval or resolve employment-related IP
+ownership; those questions remain separate from the repository license.

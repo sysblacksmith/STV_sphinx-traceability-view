@@ -56,10 +56,11 @@ def prepare(app, builder):
         raise SphinxError(f"{location}: traceability-view: {error}") from error
     target = Path(app.outdir) / "_static" / "stv"
     target.mkdir(parents=True, exist_ok=True)
-    for name in ("stv.js", "stv.css", "THIRD_PARTY_NOTICES.txt"):
+    for name in ("stv.js", "stv.css", "LICENSE.txt", "THIRD_PARTY_NOTICES.txt", "vendor/ELK-SOURCE.txt"):
         source = Path(__file__).parents[1] / "static" / name
         if not source.is_file():
             raise SphinxError(f"Missing packaged STV asset {name}; maintainers must build frontend assets")
+        (target / name).parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, target / name)
 
 

@@ -21,4 +21,7 @@ for(const folder of await readdir('node_modules')) {
 await writeFile(`${output}/THIRD_PARTY_NOTICES.txt`,notices.join('\n\n'));
 await mkdir(`${output}/vendor`,{recursive:true});
 await writeFile(`${output}/vendor/elk.bundled.js`,await readFile('node_modules/elkjs/lib/elk.bundled.js'));
-await writeFile(`${output}/vendor/ELK-SOURCE.txt`, 'ELK.js 0.10.0, unmodified bundled JavaScript source.\nEPL-2.0; upstream source: https://github.com/kieler/elkjs/tree/v0.10.0\nThe adjacent elk.bundled.js is the unmodified distributed source used by this runtime.\n');
+// Legal inputs are maintained with the project, not regenerated as a source claim.
+await writeFile(`${output}/LICENSE.txt`,await readFile('../LICENSE'));
+const sourceNotice=await readFile(`${output}/vendor/ELK-SOURCE.txt`,'utf8');
+await writeFile(`${output}/THIRD_PARTY_NOTICES.txt`,notices.join('\n\n')+'\n\n'+sourceNotice);

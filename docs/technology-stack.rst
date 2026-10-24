@@ -193,15 +193,15 @@ stale/missing bundle output as a build failure. See
 `Hatch build artifacts <https://hatch.pypa.io/1.13/config/build/#artifacts>`_.
 
 Dependency notices accompany both the wheel and generated documentation.
-Include the pinned ELK source archive and EPL text in the redistribution
-materials, preserve its notices, and avoid modifying vendored ELK source.
-Include MIT/ISC/BSD-3-Clause notices for bundled libraries and transitive components from
-the lock. This records the engineering distribution plan; no project license
-has been selected on behalf of the owner. The owner explicitly deferred that
-decision on 2026-10-18; implementation can proceed with it unset, and selection
-remains a gate before external distribution. The selected package metadata is
-the source for versions/licenses, not an assertion that every future version
-has the same terms.
+The owner selected MIT for STV-owned code and documentation on 2026-10-24,
+with copyright attributed to Henning Heikes. Bundled libraries retain their
+MIT/ISC/BSD-3-Clause/EPL-2.0 terms. See :doc:`licensing` for the license text,
+notices, source availability and remaining redistribution-audit limits.
+The package metadata uses a combined SPDX expression for these bundled
+components and explicitly includes their legal files. Source-availability
+notices identify both ELK.js and the underlying Java ELK project; the generated
+JavaScript is not described as the preferred source form. No legal or employer
+approval is inferred from selecting the project license.
 
 Feasibility evidence and limits
 -----------------------------------

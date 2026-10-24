@@ -504,3 +504,23 @@ version(s), and exceptions or additional permissions here}.”
 > look for such a notice.
 >
 > You may add additional accurate notices of copyright ownership.
+
+
+ELK.js 0.10.0 is distributed under EPL-2.0, not the STV MIT license.
+The bundled ELK.js library is unmodified upstream distribution code.
+
+Corresponding upstream sources and build instructions are available under
+EPL-2.0 from these projects:
+
+ELK.js 0.10.0:
+https://github.com/kieler/elkjs/tree/0.10.0
+https://github.com/kieler/elkjs/archive/refs/tags/0.10.0.tar.gz
+
+Underlying Eclipse Layout Kernel 0.10.0:
+https://github.com/eclipse-elk/elk/tree/v0.10.0
+https://github.com/eclipse-elk/elk/archive/refs/tags/v0.10.0.tar.gz
+
+The upstream ELK.js README and build.gradle describe the Java/GWT build and
+its dependencies. The generated bundled JavaScript is not a substitute for
+the preferred source form. Preserve this notice and the EPL text in
+THIRD_PARTY_NOTICES.txt when redistributing generated STV documentation.
