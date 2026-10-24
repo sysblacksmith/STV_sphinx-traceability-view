@@ -1139,3 +1139,31 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    across the graph viewport's upper edge. The line follows viewport width and
    control wrapping on resize, stays fixed while the graph moves, and leaves
    graph controls and the existing usable content area intact.
+
+.. shr:: Keep explicitly opened artifact details available
+   :id: STV_SHR_057
+   :status: accepted
+   :tags: release_initial, persistent_details
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
+   :priority: unassigned
+   :verification_state: passed
+
+   Each view shall keep explicitly opened artifact details in an independent
+   right-side vertical stack, below the graph on narrow screens. Reopening an
+   artifact focuses its existing box without changing age. New boxes append at
+   the bottom. Boxes survive hover, graph navigation, seed/overview/page changes
+   and loss of their artifact from the visible graph, until own Close, view-local
+   Close all details or oldest-first capacity eviction. Normal document navigation
+   or reload clears them; session persistence is not required.
+
+   The author shall configure a positive maximum through
+   traceability_view_details_limit in conf.py, default 10 per view. Opening a new
+   distinct artifact at capacity closes the oldest still-open box. Focus or reuse
+   never refreshes age. Close all is right-aligned in the graph control row.
+   Hover tooltips retain their current behavior and use no persistent slot.
+
+   **Acceptance criterion:** Independent views, reuse, FIFO eviction, manual close,
+   Close all, default 10 and a smaller configured limit work with keyboard and
+   pointer. Boxes remain readable/scrollable at wide/narrow widths, with visible
+   focus and original content/links/offline policy intact; hover stays independent.

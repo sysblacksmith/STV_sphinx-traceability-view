@@ -575,7 +575,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SYS_006
    :allocated_to: STV_SWE_INSPECT
 
-   The software shall position details inside the viewport with overflow scrolling and retain them while the pointer moves from trigger to overlay or remains over either.
+   The software shall position transient hover details inside the browser viewport with overflow scrolling and retain them while the pointer moves from trigger to overlay or remains over either.
 
    **Acceptance criterion:** A long object at a viewport corner remains readable and scrollable without closing.
 
@@ -870,7 +870,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    **Review note:** This does not remove STV's own keyboard, scrolling or link
    interactions. Widget-specific JavaScript behavior in details is deferred.
 
-.. swr:: Open details through hover or keyboard activation
+.. swr:: Separate transient hover and explicit persistent details
    :id: STV_SWR_050
    :status: accepted
    :tags: release_initial
@@ -881,23 +881,21 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :derives_from: STV_SYS_006, STV_SHR_034, STV_SHR_015
    :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
 
-   The software shall open the same full-detail panel when the reader hovers
-   over a node or activates its keyboard-accessible Details control, without
-   navigating away from the view.
+   Hover shall open a transient node-anchored panel after 1000 ms. Departure,
+   Escape, scene commit and viewport movement cancel pending hover; entering the
+   Details button shall retain its timer. Explicit Details activation shall bypass
+   the delay and open/focus the persistent collection of STV_SWR_063/064 instead.
+   Both paths shall show equivalent full information through the same safe detail
+   transport/restoration, without navigating away. Hover never consumes collection
+   capacity; explicit activation cancels the current hover without closing boxes.
 
-   **Acceptance criterion:** A visible object exposes equivalent information
-   through hover and keyboard Details activation. The panel permits keyboard
-   scrolling and dismissal with focus restored to its trigger; new-tab node
-   navigation remains a separate action.
+   **Acceptance criterion:** Sustained/brief hover, pointer travel and scrolling,
+   viewport-edge placement, Escape cancellation and immediate keyboard Details
+   pass independently. Both show equivalent static content; persistent boxes survive
+   graph changes while hover retains its dismissal behavior.
 
-   **Rationale:** The system parent carries full-object inspection; direct
-   channeling from STV_SHR_034 refines keyboard interaction and from STV_SHR_015
-   refines hover timing. These software-local interactions add no system
-   responsibility or interface, so no new system obligation is needed.
-
-   Hover activation shall wait 1000 ms. Leaving the node, dismissal, a scene commit or viewport movement shall cancel pending activation; moving from the node onto its Details button shall not restart the delay. Explicit Details activation shall bypass the delay.
-
-   **Additional acceptance criterion:** No panel appears after a brief hover/departure; one appears after sustained hover. Keyboard activation opens immediately and Escape cancels a pending hover.
+   **Rationale:** SYS 006 owns original-object inspection; direct SHR 034/015 paths
+   refine keyboard/timing locally without an additional system boundary.
 
 .. swr:: Provide the artificial project entry node
    :id: STV_SWR_051
@@ -1067,7 +1065,8 @@ Executable criteria and retained results: :doc:`test-coverage` and
    checks before replacing only that view's committed scene and exploration.
    Invalid input or failed layout shall preserve the previous scene/state
    with a diagnostic. Stale layout completions shall be discarded without
-   overwriting the newer request's state or diagnostic. Successful replacement shall close old details, clear prior
+   overwriting the newer request's state or diagnostic. Successful replacement shall close transient hover details, retain persistent
+   detail boxes, clear prior
    expansions/page memory and reset that view's viewport; focus shall remain in
    its initiating picker control. Unconfirmed typing shall not change the graph.
 
@@ -1214,3 +1213,92 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
    **Channeling rationale:** A visible clipping marker is local renderer
    presentation, adding no deployment, system interface or cross-boundary duty.
+
+.. swr:: Own a per-view persistent detail collection
+   :id: STV_SWR_063
+   :status: accepted
+   :tags: release_initial, persistent_details
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_057
+   :allocated_to: STV_SWE_INSPECT
+
+   Maintain an insertion-ordered collection keyed by Need ID, separate from hover
+   and exploration state. Reuse/focus does not reorder. On new insertion at the
+   configured capacity remove the oldest live entry, then append the new entry.
+   Manual close removes only its entry; Close all clears only this view. Scene,
+   viewport, seed, page and overview operations do not clear it. Async completion
+   may update only the same still-live entry; closed/evicted/reopened entries must
+   not receive stale content. Loading/error remain identifiable and closable;
+   close/reopen retries failed transport using the existing cache policy.
+
+   **Acceptance criterion:** Default/override/one-slot capacity, reuse versus reopen,
+   FIFO after focus, independent close/all, independent views, delayed completion,
+   eviction/close races, explicit failure/retry and graph replacement pass.
+   **Channeling rationale:** Inspection state is browser-local with no new system
+   interface, persistence service or domain graph mutation.
+
+.. swr:: Present and focus persistent detail boxes
+   :id: STV_SWR_064
+   :status: accepted
+   :tags: release_initial, persistent_details
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst; docs/problem-tickets/STV_PR_015_detail-presentation.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SHR_057, STV_SHR_034
+   :allocated_to: STV_SWE_RENDER, STV_SWE_INSPECT
+
+   Render a per-view dock beside the graph at widths above 1120 CSS px; below it
+   at narrower container widths. Target dock width is 720 px, with independent
+   vertical stack scrolling and bounded scrollable boxes. A 1 CSS-pixel solid
+   neutral-grey frame shall mark all four pane edges. In side-by-side layout its
+   top and full outer height align with the graph viewport; retain inset padding
+   and shadow-free cards so the first box has a clean, distinct top edge.
+   Identify every artifact
+   and retain original links and safe rich-body restoration with unique IDs/IDREFs.
+   Place a view-local Close all details control at the right end of the toolbar.
+   Explicit open/reuse focuses its Close control and reveals it without changing
+   D3 graph geometry. Manual close restores the current artifact trigger if it
+   exists, else Close all; eviction must not leave focus on removed content.
+   Async content must not steal focus. Escape dismisses hover only. Reset computes
+   fit from current viewport dimensions, including an open dock.
+
+   Copied Need metadata starts folded in both hover and persistent details. Its
+   own arrow toggles only that copy by pointer, Enter or Space, with focusable
+   button semantics and accurate expanded/controls associations. Reusing a box
+   preserves its disclosure state. The artifact-ID header link opens the actual
+   source document/Need in a new tab; ordinary body anchors remain local where
+   appropriate. No host document-ready script is required for copied controls.
+
+   **Acceptance criterion:** Keyboard traversal/read/scroll/close, responsive layout,
+   long bodies/stack, unique fragment IDs, fallback focus after artifact removal,
+   non-stealing async content, surviving collection during graph changes and a
+   current-width Reset, folded metadata/toggle keyboard behavior and canonical
+   header-ID navigation pass on file/HTTP. No modal focus trap or graph overlay.
+   **Channeling rationale:** Presentation and focus remain within renderer/inspector
+   responsibilities, without new deployment or system boundary.
+
+.. swr:: Validate and publish the persistent details limit
+   :id: STV_SWR_065
+   :status: accepted
+   :tags: release_initial, persistent_details
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
+   :priority: unassigned
+   :verification_state: passed
+   :derives_from: STV_SYS_002, STV_SHR_057
+   :allocated_to: STV_SWE_DIRECTIVE, STV_SWE_MODEL
+
+   Register traceability_view_details_limit as a Sphinx author setting, default 10.
+   Accept positive integers up to 9007199254740991 (the exact JavaScript integer
+   range); reject booleans, nonintegers, zero, negatives and larger values with a
+   source/config-located diagnostic before publishing graph data. Publish the
+   validated value in additive schema-1 graph.details_limit; older graphs without
+   this optional field use 10. Every view enforces its own collection limit.
+
+   **Acceptance criterion:** Default, 1 and 3 serialize and drive actual eviction;
+   invalid types/bounds fail clearly. Rebuilds reflect changed configuration.
+   The runtime does not require Node, a service or reader-side configuration.

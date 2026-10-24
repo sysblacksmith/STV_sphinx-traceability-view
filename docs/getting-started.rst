@@ -154,3 +154,23 @@ software architecture, then unclassified evidence and problems. Classification
 uses all published relationships, so navigation never changes a test's boundary.
 Fallback nodes are labelled and retain normal links/details. Existing fixed-level
 mappings and explicitly selected ``role: test`` side lanes remain supported.
+
+Keep details beside the graph
+-------------------------------
+
+Details opens a persistent box in that view's right-hand stack (below the graph
+on narrow screens). Reopening an artifact focuses its existing box. Close a box
+individually or use Close all details at the right of the control row. Graph
+navigation does not clear the stack; hover inspection remains temporary.
+
+Authors can configure capacity in conf.py::
+
+   traceability_view_details_limit = 10
+
+The positive integer limit applies independently to every view. A new artifact
+at capacity replaces the oldest open box; focusing/reusing it does not renew age.
+
+
+Detail boxes target a width of 720 px. Metadata such as status and tags starts
+folded; use the little arrow (or focus it and press Enter/Space) to reveal it.
+The artifact ID in the copied heading opens the original artifact in a new tab.

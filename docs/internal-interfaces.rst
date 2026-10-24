@@ -150,7 +150,7 @@ Unconfirmed typing and invalid/hidden IDs cannot change graph state. Keyboard
 Up/Down selects a suggestion; Enter confirms; Escape dismisses suggestions.
 Project overview proposes fresh project mode with page zero open. Both commands
 clear previous expansions/page memory only on successful capacity/layout commit,
-reset that view's viewport and close old details. Preserve picker focus and
+reset that view's viewport and close transient hover details and retain persistent boxes. Preserve picker focus and
 other instances. Failed/stale transitions preserve the committed scene/state.
 No runtime graph fetching, source edit or rebuild is involved.
 
@@ -317,3 +317,67 @@ not on ``.stv-scene``. The viewport owns overflow clipping and stays in normal
 flow after toolbar/status. Explicit content-box sizing retains 975 px client
 height under host themes. The border is outside the content clip area; no
 pseudo-element, overlay, handler, timer or extra focus target is introduced.
+
+Persistent detail collection contract
+--------------------------------------
+
+``traceability_view_details_limit = 10`` in conf.py is a positive safe integer;
+MODEL validates it, DIRECTIVE publishes optional ``graph.details_limit`` before
+BUNDLE emission. Missing fields in older graphs use 10. This presentation
+setting is separate from the host type/relationship mapping; authors need not
+replace that model to configure capacity.
+
+INSPECT separates hover from persistent entries. ``content.js`` owns cached
+classic-script transport and safe fragment/URL/IDREF restoration. ``inspect.js``
+keeps Floating UI hover timers and dismissal. ``collection.js`` is an ordered
+per-view Need-ID map; ``persistent.js`` owns labelled entry DOM, loading/error,
+current-entry completion guards, reuse/FIFO/close/all and trigger associations.
+RENDER owns the dock and right-aligned Close all, refreshes live trigger links
+after node-control replacement and computes Reset against current viewport size.
+
+A new ID is created once, oldest live entry is evicted if full, then the new
+entry is appended. Reuse leaves order intact. Closed/reopened IDs get a new
+entry identity; old completions cannot insert. Transport cache survives entry
+removal. Entry errors remain readable; close/reopen retries transport failures.
+Graph/seed/overview/page commits and Escape affect hover only, not the collection.
+Document pagehide clears entries without focus restoration, including cache
+suspension; navigation/reload drops page-local state. No storage or graph mutation.
+
+The dock is 720 px beside graph containers wider than 1120 px. Below that
+threshold it follows the graph, aligned right and bounded to the available width
+and 720 px, retaining usable graph space.
+Stack height is bounded and scrollable; boxes have bounded own scrolling and
+unique namespaced body IDs. Open/reuse focuses/reveals its Close control; async
+content never focuses. Close resolves a fresh visible node trigger, else the
+view's Close all. The empty Close all remains focusable. Native layout reserves
+graph space; it does not overlay nodes. Graph coordinates/D3 transform are not
+changed merely by opening/closing a box; explicit Reset uses the new dimensions.
+
+
+Copied Need metadata controls
+-------------------------------
+
+``inspect/content.js`` initializes only copied ``.needs_collapse`` controls.
+Decode their host row-class list before replacing the control ID; resolve rows
+within the same containing Need table. Generate unique control/row IDs, keep
+button role, tabindex, aria-expanded and aria-controls in sync, and start folded.
+Click, Enter and Space toggle those rows and the host right/down icons together.
+Each new fragment owns its handlers; reuse preserves current state. No host
+jQuery/document-ready callback or arbitrary widget script is executed. Unknown
+controls without matching rows are hidden, rather than left as dead arrows.
+
+Artifact-ID header anchors under ``.needs-id`` retain their restored canonical
+source URL and open with noopener/noreferrer in a new tab. They are excluded
+from copied-body fragment rebasing. Other same-document anchors keep namespaced
+local destinations; other restored links/resources retain the safe URL policy.
+
+
+Detail pane boundary
+-----------------------
+
+RENDER gives the visible stack a 1 px solid #999 border inside its 720 px
+border-box width. Its side-by-side outer height is 976 px, matching the graph's
+975 px client area plus top border. Keep 8 px inner padding and no persistent
+card shadow so the pane top/separator remain crisp. The narrow container's
+existing 60vh maximum still bounds the below-graph stack. Hidden stacks do not
+render the frame. No exploration or inspection state transition changes.

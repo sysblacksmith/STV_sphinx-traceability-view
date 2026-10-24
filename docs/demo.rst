@@ -56,3 +56,11 @@ Viewport boundary
 A thin grey line below the controls and node count marks the upper edge of the
 visible graph region. Nodes remain clipped there during pan/zoom; use pan or
 Reset viewport to bring clipped content back into view.
+
+Persistent Details
+--------------------
+
+Use an artifact's Details button to keep its body in the right-side stack.
+Open several artifacts, reuse one, and compare them while navigating the graph.
+Close all details clears only that view. On narrow screens the stack appears
+below the graph. Hover remains a separate temporary inspection.

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="9" time="56.990" timestamp="2026-10-24T21:18:32.170530+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[None]" time="2.334"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[1]" time="1.141"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[3]" time="1.145"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]" time="8.175"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="97174f67-3ad6-4b21-97b5-5f2a43ae025e")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-z5t2nbxj')
+protocol = 'file', limit = None
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+&gt;           ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+docs\test-scripts\test_persistent_details.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F2E94C9400&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (627, -238) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]" time="10.880"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -165) is out of bounds of viewport dimensions (1600, 1115)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="76ae6d49-2c2b-46a1-97d8-c87acab7d11d")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ctsc0js8')
+protocol = 'http', limit = None
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+&gt;           ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+docs\test-scripts\test_persistent_details.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F2E970D090&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (627, -165) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -165) is out of bounds of viewport dimensions (1600, 1115)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]" time="8.051"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="bcbd64f9-bdbf-44fb-a6e7-889bd0f5a1bb")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-7kkklw4z')
+protocol = 'file', limit = 3
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+&gt;           ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+docs\test-scripts\test_persistent_details.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F2E970EC10&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (627, -238) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]" time="10.218"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="9b17f089-81ca-46f6-bf53-0ceb65301081")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-wvnzrv7b')
+protocol = 'http', limit = 3
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+&gt;           ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+docs\test-scripts\test_persistent_details.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F2E96BC640&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (627, -238) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (627, -238) is out of bounds of viewport dimensions (1600, 1115)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[file]" time="7.004"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[http]" time="7.436"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase></testsuite></testsuites>

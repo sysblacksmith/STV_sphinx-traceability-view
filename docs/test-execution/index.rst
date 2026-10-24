@@ -34,3 +34,7 @@ Historical candidate results; no deployment or release approval is implied.
    cr013-rows/index
 
    pr014-boundary/index
+
+   cr014-details/index
+
+   pr015-details/index

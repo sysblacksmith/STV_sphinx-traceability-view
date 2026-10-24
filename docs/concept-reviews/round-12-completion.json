@@ -1,0 +1,209 @@
+{
+  "base_commit": "740c35ce234ec26b16c76a0b77463b273f84863c",
+  "completed_at": "2026-10-24T19:35:11.650304+00:00",
+  "concept_gate": "round-12-inventory.json",
+  "runtime_record": "docs/test-execution/cr014-details/index.rst",
+  "scope": "CR014, including configurable default-10 capacity; unchanged artifacts retain their prior acceptance/draft states",
+  "artifacts": [
+    {
+      "path": "docs/architecture/decisions/STV_ADR_001_static_extension.rst",
+      "sha256": "df61e6a0507bf2ca1f2a3da03bab841de2293323f91c6daf4d52f9c66ad41e91"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_002_portable_bundle.rst",
+      "sha256": "4a5e396b61e42daae49a976c6d9eb995ad04aceb6cdaae5badd77e397802f66d"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_003_state_layout.rst",
+      "sha256": "1331c69b12ca89f55481d0a51edfa1a3ebe3095b849be4a799056d546d79eddc"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_004_dependencies.rst",
+      "sha256": "03fc636b6ae2dbbba9e6393f8a481485a87867adfa630d90b5d0e0524bcb47b6"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_005_starting_nodes.rst",
+      "sha256": "52d15b27fafb04de66fa254dcb7f74da2d790f818c19e39c6e6635677c327fba"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_006_interactive_overview.rst",
+      "sha256": "4b4472d53554aa58369cf7a4309cbbeca76f870b8708ea5183b10d67212e5321"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_007_component_directories.rst",
+      "sha256": "58a9bf379840e1838f105a19c17bf3538e20d1cc21d1e71aa6ce4227df15c363"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_008_stable_navigation.rst",
+      "sha256": "08beef9a6e1f8b6025bd90d13009cf94cb7a1739c6f70be2c88773757bf139e1"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_009_classified_evidence_rows.rst",
+      "sha256": "52720013bec333fb2441cc956c0833deb3d40c9b58bf01e790229129cb685b45"
+    },
+    {
+      "path": "docs/architecture/decisions/STV_ADR_010_persistent_details.rst",
+      "sha256": "6486622b0ad24645e536aa8a5c8daad36398dc3b0dc8bdbb8bd57c92e355d021"
+    },
+    {
+      "path": "docs/architecture/diagrams/persistent-details.drawio",
+      "sha256": "751d29b8d67c372d374fb58c65dbefc100b7d91930579e205e73a5dc0c56d0f8"
+    },
+    {
+      "path": "docs/architecture/diagrams/persistent-details.svg",
+      "sha256": "4fdacad213c53b744520e766becf16d5deb11212789347a2abfe32a55991d80b"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.drawio",
+      "sha256": "dc76e00a87a4a98d17f9af5cb1f748a40fd5a70bf4ca45bcb8a9fe508fa64fd9"
+    },
+    {
+      "path": "docs/architecture/diagrams/software-architecture.svg",
+      "sha256": "c1ceedb5c113a073c7d00f39c081e30679f2bec3e010f74049ec78913e9ac454"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.drawio",
+      "sha256": "7b668de521dcd32c6e4a5552d1be58c3edc7ab02616d330e9688969297560d62"
+    },
+    {
+      "path": "docs/architecture/diagrams/state-machine.svg",
+      "sha256": "567bc80964ce81cdafde53939956afe765f6551ef7e7c8f931f3cf67fd02e15c"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.drawio",
+      "sha256": "511fae6bfbd5ed0d8dec26f4838b7933cc009bab147a9d0a6669db487c9b69a1"
+    },
+    {
+      "path": "docs/architecture/diagrams/system-architecture.svg",
+      "sha256": "fe394549a5e26b06a7080389d26762fc30896ec9477daaf9ce6099a20f39d77d"
+    },
+    {
+      "path": "docs/architecture-decisions.rst",
+      "sha256": "8d38b31836ec6d2fe8e3916a783f6bdfeea4b2ccfaab8a7b663a437e17ff966b"
+    },
+    {
+      "path": "docs/architecture-software.rst",
+      "sha256": "19a4e98040af835bb542d69cb4924e2411a967600abf28ff1e0b84006c15110c"
+    },
+    {
+      "path": "docs/architecture-system.rst",
+      "sha256": "8962eb822058a272beeac4c909e6f9f1708b31d3e89504fa0a5389f05ee14a42"
+    },
+    {
+      "path": "docs/change-requests/STV_CR_014_persistent-right-side-details.rst",
+      "sha256": "0d8f83dc30554cb9b50f2010313512b1d8a5b5862d40e85767c228e71582aad9"
+    },
+    {
+      "path": "docs/ci-and-provenance.rst",
+      "sha256": "33f569b6cf5102da27dd041b164486902b44482a5f7b516ee5525a6605a96b18"
+    },
+    {
+      "path": "docs/concept-review.rst",
+      "sha256": "a39067c916bbc5ab5b05fece79db5c1c2a9dcc59bfd9c96cf063a223e126d371"
+    },
+    {
+      "path": "docs/concept-reviews/round-12.rst",
+      "sha256": "0b4975cb16e55d7bf6553f0469598e6a961c060609ba668720b65551c492fe36"
+    },
+    {
+      "path": "docs/demo.rst",
+      "sha256": "ebfa1cb9d1f4372ea29c30f1a5d76ddca357bfc82c9f6bb32f3e8603aeeb5d03"
+    },
+    {
+      "path": "docs/elements-software.rst",
+      "sha256": "1891f87de75a3081fd109aa0b6430b9d6ea98c353d610f76911dd2c636500dcd"
+    },
+    {
+      "path": "docs/elements-system.rst",
+      "sha256": "0a272985e0155f9b96a3f62103b6f4e05c718c7d4071f88ff82fc723f3760aff"
+    },
+    {
+      "path": "docs/getting-started.rst",
+      "sha256": "138ed476a09c19289ff0ed5aa665b3efbb28044bf7a8b7455c498bec1ab664ef"
+    },
+    {
+      "path": "docs/implementation-plan.rst",
+      "sha256": "3db487dbe0e75c22095a664ba3a01c71880c9114022a4224fa7aa06631593a3f"
+    },
+    {
+      "path": "docs/implementation-review.rst",
+      "sha256": "74aa0bb9538e70d81235f654f32b7040f19b492476f51f0b11961c86e3908e78"
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "d15c3beeb78b9b4ced21b9259e3a0e0ca5e459bfa202b935154cab30803431ef"
+    },
+    {
+      "path": "docs/internal-interfaces.rst",
+      "sha256": "1e312e112acac9707a1cab0fad5d3bf11c798844fa4a561f0f7829a569870b5c"
+    },
+    {
+      "path": "docs/licensing.rst",
+      "sha256": "bd48d203f3556317e32b0900112530e2b89550ebcf3e0a9a1c6fd4d0c6f4f215"
+    },
+    {
+      "path": "docs/maturity.rst",
+      "sha256": "9531a018e665844a1aa921ee77e448cca85ee5bf1c3df29154be55ae4851e5ec"
+    },
+    {
+      "path": "docs/method.rst",
+      "sha256": "2d5230399c6e535193791f44b34724e4c59b53a1b1bfcfe3d4d855440f1fcdc3"
+    },
+    {
+      "path": "docs/project-metrics.rst",
+      "sha256": "94f0cbcc099afb4763a74c9797059a8ab2481a933f8a92b16d0a0ead058f6865"
+    },
+    {
+      "path": "docs/requirements-software.rst",
+      "sha256": "85f95a997247bf4c4dc17194d990f2479561259fb8e2986c69c458c6553ae74e"
+    },
+    {
+      "path": "docs/requirements-stakeholder.rst",
+      "sha256": "b16fd6404c07c9b400e325292ac6e1570a07aa8aaf4342cc3ae39c4162dc2548"
+    },
+    {
+      "path": "docs/requirements-system.rst",
+      "sha256": "ab88ce8383f819117434597ff24a4efa3f123bdb8800d256de4f88c1e9406168"
+    },
+    {
+      "path": "docs/review.rst",
+      "sha256": "abce300f97b7c46374fdb09a6eb83cf62fec683962f807203bc38fdac1b3a021"
+    },
+    {
+      "path": "docs/sources.rst",
+      "sha256": "278009d16b7709e689487a26592d91150e2dbcf16679324f4d7605d52e77e98b"
+    },
+    {
+      "path": "docs/state-machine.rst",
+      "sha256": "872e6630969947156b80a92eeb19151b869b6c20b603373924fe8cd31b5a0764"
+    },
+    {
+      "path": "docs/technology-stack.rst",
+      "sha256": "df3cfeb85af3c3cd3dbb33c94002a616402e4b65d8b33da7dc352ba4e0fcc0fe"
+    },
+    {
+      "path": "docs/test-cases/index.rst",
+      "sha256": "3373c3102a29bce2be71c96482475edeaf70fceb9e9c8ef924ee75dace013ecb"
+    },
+    {
+      "path": "docs/test-cases/software-tests.rst",
+      "sha256": "567dbf0850f95bff95ac0232a3521cf9113a948df2e8b86a9875dee811948fae"
+    },
+    {
+      "path": "docs/test-cases/system-tests.rst",
+      "sha256": "daeeea125f9cdfb320b65948deff34ffb4489dedacf555624e8c777b5922cc1f"
+    },
+    {
+      "path": "docs/test-coverage.rst",
+      "sha256": "f19796f12dcdcacb65911a8fe00be3d550ceb84f2d97f1de6d90121631c422ae"
+    },
+    {
+      "path": "docs/traceability.rst",
+      "sha256": "99c217456ae9286723496b5388b0b9610b06faeba684bfbf972d26fafa0858b0"
+    },
+    {
+      "path": "docs/verification-plan.rst",
+      "sha256": "8251d7c07a489157734015f002837f62f774640fdb84bfa3e55cb73d1373fb7d"
+    }
+  ]
+}

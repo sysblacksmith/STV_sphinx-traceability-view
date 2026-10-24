@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="40" time="399.816" timestamp="2026-10-24T21:21:52.225492+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_browser" name="test_usability_smoke[file]" time="13.346"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_054,STV_SYS_006" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (916, -111) is out of bounds of viewport dimensions (1440, 1015)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="2ff3197f-9e7c-45b8-bb51-9e678c234673")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-2k9agg4y')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_usability_smoke(browser, short_output, protocol):
+        """Viewport, hover lifecycle and explicit activation on both transports."""
+        output = short_output / 'usability'
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        with published_url(output,protocol) as url:
+            browser.get(url)
+&gt;           _exercise_usability(browser)
+
+docs\test-scripts\test_browser.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+docs\test-scripts\test_browser.py:89: in _exercise_usability
+    ActionChains(browser).move_to_element(toolbar).perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000021859DD5160&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (916, -111) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (916, -111) is out of bounds of viewport dimensions (1440, 1015)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_browser" name="test_usability_smoke[http]" time="15.701"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_054,STV_SYS_006" /></properties><failure message="selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (916, -111) is out of bounds of viewport dimensions (1440, 1015)&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5&#10;assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11&#10;#assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17&#10;receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="ed86605e-a729-4c85-b7da-0fc636a22e46")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-z2bks7hh')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_006', 'STV_SWR_050', 'STV_SWR_054')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_usability_smoke(browser, short_output, protocol):
+        """Viewport, hover lifecycle and explicit activation on both transports."""
+        output = short_output / 'usability'
+        result = build(FIXTURE, output)
+        assert result.returncode == 0, result.stderr
+        with published_url(output,protocol) as url:
+            browser.get(url)
+&gt;           _exercise_usability(browser)
+
+docs\test-scripts\test_browser.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+docs\test-scripts\test_browser.py:89: in _exercise_usability
+    ActionChains(browser).move_to_element(toolbar).perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\action_chains.py:93: in perform
+    self.w3c_actions.perform()
+.venv-implementation\Lib\site-packages\selenium\webdriver\common\actions\action_builder.py:168: in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000021859D33890&gt;
+response = {'status': 500, 'value': '{"value":{"error":"move target out of bounds","message":"Move target (916, -111) is out of b...sys.mjs:63:17\\nreceiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message")
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: Move target (916, -111) is out of bounds of viewport dimensions (1440, 1015)
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       MoveTargetOutOfBoundsError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:488:5
+E       assertTargetInViewPort@chrome://remote/content/shared/webdriver/Actions.sys.mjs:3280:11
+E       #assertInViewPort@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:63:17
+E       receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:187:42
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: MoveTargetOutOfBoundsException</failure></testcase><testcase classname="docs.test-scripts.test_browser" name="test_offline_exploration[file]" time="12.620"><properties><property name="requirement_ids" value="STV_SWR_004,STV_SWR_008,STV_SWR_015,STV_SWR_016,STV_SWR_017,STV_SWR_018,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_034,STV_SWR_035,STV_SWR_038,STV_SWR_039,STV_SWR_040,STV_SWR_050,STV_SYS_003,STV_SYS_007" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_offline_exploration[http]" time="14.780"><properties><property name="requirement_ids" value="STV_SWR_004,STV_SWR_008,STV_SWR_015,STV_SWR_016,STV_SWR_017,STV_SWR_018,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_034,STV_SWR_035,STV_SWR_038,STV_SWR_039,STV_SWR_040,STV_SWR_050,STV_SYS_003,STV_SYS_007" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_project_paging[file]" time="10.260"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_project_paging[http]" time="12.074"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_interactive_seed_smoke[file]" time="8.802"><properties><property name="requirement_ids" value="STV_SWR_038,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_interactive_seed_smoke[http]" time="10.754"><properties><property name="requirement_ids" value="STV_SWR_038,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_async_layout_failure_and_stale_completion[file]" time="7.663"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_052,STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_async_layout_failure_and_stale_completion[http]" time="7.945"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_052,STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_alternate_model_geometry_details_and_external[file]" time="9.568"><properties><property name="requirement_ids" value="STV_SWR_008,STV_SWR_012,STV_SWR_015,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_037,STV_SWR_041,STV_SWR_047,STV_SWR_048,STV_SWR_049,STV_SWR_050,STV_SYS_004,STV_SYS_005,STV_SYS_006,STV_SYS_010" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_alternate_model_geometry_details_and_external[http]" time="12.547"><properties><property name="requirement_ids" value="STV_SWR_008,STV_SWR_012,STV_SWR_015,STV_SWR_029,STV_SWR_031,STV_SWR_033,STV_SWR_037,STV_SWR_041,STV_SWR_047,STV_SWR_048,STV_SWR_049,STV_SWR_050,STV_SYS_004,STV_SYS_005,STV_SYS_006,STV_SYS_010" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_missing_placeholder_and_detail_error[file]" time="9.580"><properties><property name="requirement_ids" value="STV_SWR_027,STV_SWR_028,STV_SWR_029,STV_SYS_004" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_missing_placeholder_and_detail_error[http]" time="11.379"><properties><property name="requirement_ids" value="STV_SWR_027,STV_SWR_028,STV_SWR_029,STV_SYS_004" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_documentation_visuals" time="7.560"><properties><property name="requirement_ids" value="" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_control_order_smoke[file]" time="7.121"><properties><property name="requirement_ids" value="STV_SWR_055" /></properties></testcase><testcase classname="docs.test-scripts.test_browser" name="test_control_order_smoke[http]" time="9.438"><properties><property name="requirement_ids" value="STV_SWR_055" /></properties></testcase><testcase classname="docs.test-scripts.test_classified_rows" name="test_published_classified_rows_and_fallback_navigation[file]" time="9.120"><properties><property name="requirement_ids" value="STV_SWR_012,STV_SWR_037,STV_SWR_055,STV_SWR_058,STV_SWR_061,STV_SYS_002,STV_SYS_005" /></properties></testcase><testcase classname="docs.test-scripts.test_classified_rows" name="test_published_classified_rows_and_fallback_navigation[http]" time="11.358"><properties><property name="requirement_ids" value="STV_SWR_012,STV_SWR_037,STV_SWR_055,STV_SWR_058,STV_SWR_061,STV_SYS_002,STV_SYS_005" /></properties></testcase><testcase classname="docs.test-scripts.test_detail_transport" name="test_authored_transport_markers_stay_inert[file]" time="8.859"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SWR_049" /></properties></testcase><testcase classname="docs.test-scripts.test_detail_transport" name="test_authored_transport_markers_stay_inert[http]" time="10.840"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SWR_049" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_group_navigation_keeps_existing_nodes_still[file]" time="8.145"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_group_navigation_keeps_existing_nodes_still[http]" time="10.394"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[down-file]" time="8.044"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[down-http]" time="10.215"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[up-file]" time="10.926"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[up-http]" time="9.834"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_initial_numeric_seed_order[file]" time="8.195"><properties><property name="requirement_ids" value="STV_SWR_060" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_initial_numeric_seed_order[http]" time="10.242"><properties><property name="requirement_ids" value="STV_SWR_060" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_project_root_preserves_anchor[file]" time="8.170"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_project_root_preserves_anchor[http]" time="9.814"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_selection_release[file]" time="8.295"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_038,STV_SWR_048,STV_SWR_051,STV_SWR_052,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_selection_release[http]" time="10.137"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_038,STV_SWR_048,STV_SWR_051,STV_SWR_052,STV_SWR_056,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_empty_seed_catalog[file]" time="8.284"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_empty_seed_catalog[http]" time="10.117"><properties><property name="requirement_ids" value="STV_SWR_051,STV_SWR_052,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_layout_replacement_failure_and_staleness[file]" time="7.306"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_release_seeds" name="test_seed_layout_replacement_failure_and_staleness[http]" time="7.794"><properties><property name="requirement_ids" value="STV_SWR_044,STV_SWR_057" /></properties></testcase><testcase classname="docs.test-scripts.test_viewport_boundary" name="test_viewport_boundary_tracks_clipping_and_controls[file]" time="8.558"><properties><property name="requirement_ids" value="STV_SWR_062" /></properties></testcase><testcase classname="docs.test-scripts.test_viewport_boundary" name="test_viewport_boundary_tracks_clipping_and_controls[http]" time="10.742"><properties><property name="requirement_ids" value="STV_SWR_062" /></properties></testcase><testcase classname="docs.test-scripts.test_windows_paths" name="test_nested_windows_detail_loading_and_retry" time="12.900"><properties><property name="requirement_ids" value="STV_SWR_015,STV_SWR_017,STV_SWR_018,STV_SYS_003,STV_SYS_006" /></properties></testcase></testsuite></testsuites>

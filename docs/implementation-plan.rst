@@ -338,7 +338,8 @@ The viewport height is 975 CSS pixels. Continuous hover waits 1000 ms before
 opening details; departure cancels the pending timer. Explicit mouse or
 keyboard Details activation opens immediately. Escape, scene commit and
 viewport movement cancel pending hover. Node-to-button movement retains the
-same timer. Hover and keyboard Details open the same nonmodal detail panel. Floating UI
+same timer. Hover opens the node-anchored nonmodal panel; explicit Details opens/focuses
+the separate persistent dock described below. Floating UI
 positions it relative to the node using offset/flip/shift/size; use fixed
 positioning and available viewport dimensions. Keep it open while either trigger
 or panel is hovered/focused, with a short dismissal grace period for pointer
@@ -423,7 +424,7 @@ check again defensively. A first visit starts with no open Need groups. Changing
 page while root-collapsed is unavailable; reopening restores the current page.
 Previous/Next buttons have accessible names, disabled boundary states, and a
 live Page i of n / total stakeholder count. Successful paging keeps focus on
-the initiating paging control, closes any old detail panel and pans that
+the initiating paging control, closes the transient hover panel while retaining persistent boxes and pans that
 control into view. Errors retain prior graph, page and focus. The root uses a
 neutral project style without a Need ID, status border, Details button or
 original-object link; its full project title remains accessible without clipping.
@@ -479,3 +480,18 @@ viewport top border with explicit content-box sizing. Rebuild assets with
 ``node build.js`` from ``frontend``. Runtime graph geometry, transforms and
 commands are unchanged; verify actual clipping, responsive wrapping and control
 operation with :need:`STV_TC_SY_062`. No new dependency or ADR is needed.
+
+Persistent-details slice
+-------------------------
+
+1. Validate/publish the author capacity setting (default 10) before graph output.
+2. Extract shared safe content transport/restoration, preserving hover behavior.
+3. Add ordered collection and guarded per-entry DOM lifecycle in INSPECT.
+4. Mount a responsive per-view dock and right-aligned Close all in RENDER; wire
+   explicit Details to it and keep Escape/scene/viewport dismissal hover-only.
+5. Keep graph replacement focus in persistent content; refresh live trigger ARIA
+   links after commits and calculate Reset from current viewport dimensions.
+6. Verify collection/config boundaries, real file/HTTP persistence/FIFO/focus,
+   responsive scrolling, deferred races and unchanged hover/security/package flows.
+
+See :ref:`STV_ADR_010` and :doc:`internal-interfaces`. No dependency changes.

@@ -3,6 +3,7 @@ import {zoom,zoomIdentity} from 'd3-zoom';
 import {initial,visible,transition,groupKey,PAGE_SIZE} from '../state/state.js';
 import {compute} from '../layout/layout.js';
 import {inspector} from '../inspect/inspect.js';
+import {persistentDetails} from '../inspect/persistent.js';
 import {orderedGroups} from './groups.js';
 import {seedPicker} from './seeds.js';
 import {edgeViewport} from './edge-viewport.js';
@@ -17,7 +18,9 @@ export async function mount(root,graph,base,layout=compute) {
   const viewport=element('div','stv-viewport');viewport.tabIndex=0;viewport.setAttribute('aria-label','Trace graph viewport');
   const scene=element('div','stv-scene'),nodesLayer=element('div','stv-nodes');
   const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('stv-edges');svg.setAttribute('aria-hidden','true');
-  scene.append(svg,nodesLayer);viewport.append(scene);root.replaceChildren(toolbar,status,viewport);
+  const workspace=element('div','stv-workspace'),stack=element('section','stv-details-stack');
+  stack.id=`${root.id}-persistent-details`;stack.setAttribute('aria-label','Artifact details');
+  scene.append(svg,nodesLayer);viewport.append(scene);workspace.append(viewport,stack);root.replaceChildren(toolbar,status,workspace);
   const details=inspector(root,graph,base),nodeElements=new Map();
   // Pointer hover does not move keyboard focus into this root.
   document.addEventListener('keydown',e=>{if(e.key==='Escape')details.close();});
@@ -27,8 +30,11 @@ export async function mount(root,graph,base,layout=compute) {
   for(const [label,action] of [['Zoom in',()=>select(viewport).call(zoomer.scaleBy,1.25)],['Zoom out',()=>select(viewport).call(zoomer.scaleBy,0.8)],
     ['Pan left',()=>select(viewport).call(zoomer.translateBy,100,0)],['Pan right',()=>select(viewport).call(zoomer.translateBy,-100,0)],
     ['Pan up',()=>select(viewport).call(zoomer.translateBy,0,100)],['Pan down',()=>select(viewport).call(zoomer.translateBy,0,-100)]])toolbar.append(button(label,action));
-  toolbar.append(button('Reset viewport',()=>select(viewport).call(zoomer.transform,home)));
+  toolbar.append(button('Reset viewport',()=>{home=fitGeometry(committedGeometry);select(viewport).call(zoomer.transform,home);}));
   const retry=button('Retry layout',()=>update(null));retry.hidden=true;toolbar.append(retry);
+  const closeAll=button('Close all details',()=>persistent.clear());closeAll.className='stv-close-all';closeAll.setAttribute('aria-controls',stack.id);toolbar.append(closeAll);
+  const persistent=persistentDetails(root,graph,base,{stack,findTrigger:id=>nodeElements.get(nodeKey(id))?.querySelector('[data-focus=details]'),fallback:closeAll,changed:size=>{stack.hidden=!size;workspace.classList.toggle('stv-has-details',size>0);}});
+  window.addEventListener('pagehide',()=>persistent.clear(false));
   toolbar.prepend(seedPicker(root,graph,id=>update({type:'seed',id}),()=>update({type:'overview'})));
   viewport.addEventListener('focusin',e=> {
     // Native Tab focus can scroll an overflow-hidden element. Fold that motion
@@ -76,7 +82,7 @@ export async function mount(root,graph,base,layout=compute) {
       }
       if(!controls.children.length)controls.append(element('span','','No relationships'));
       node.append(controls);
-      const inspect=button('Details',()=>details.open(id,inspect,true),`Details for ${id}`);inspect.dataset.focus='details';
+      const inspect=button('Details',()=>{details.close();persistent.open(id);},`Details for ${id}`);inspect.dataset.focus='details';
       inspect.onmouseenter=()=>details.hover(id,inspect);
       inspect.onkeydown=e=>{if(e.key==='Escape')details.close(true);};
       node.onmouseenter=()=>details.hover(id,inspect);node.onmouseleave=details.schedule;
@@ -84,6 +90,12 @@ export async function mount(root,graph,base,layout=compute) {
     }
     if(object?.placement_fallback)node.append(element('p','stv-placement-warning','Unclassified test evidence'));
     return node;
+  }
+  function fitGeometry(geometry) {
+    if(!geometry)return zoomIdentity;
+    const minY=Math.min(...[...geometry.nodes.values()].map(n=>n.y));
+    const scale=Math.max(.15,Math.min(1,(viewport.clientWidth-40)/geometry.width,(viewport.clientHeight-60)/(geometry.height-minY)));
+    return zoomIdentity.translate((viewport.clientWidth-geometry.width*scale)/2-(geometry.x||0)*scale,30-minY*scale).scale(scale);
   }
   async function update(command) {
     const result=command?transition(graph,state,command):{state,graph:visible(graph,state)};
@@ -116,6 +128,7 @@ export async function mount(root,graph,base,layout=compute) {
         else {target=n;nodesLayer.append(target);nodeElements.set(key,target);}
         const box=geometry.nodes.get(key);Object.assign(target.style,{position:'absolute',left:`${box.x}px`,top:`${box.y}px`});
       }
+      persistent.sync();
       const edgeBox=edgeViewport(geometry);
       svg.replaceChildren();svg.setAttribute('width',edgeBox.width);svg.setAttribute('height',edgeBox.height);
       svg.setAttribute('viewBox',`${edgeBox.x} ${edgeBox.y} ${edgeBox.width} ${edgeBox.height}`);
@@ -125,9 +138,7 @@ export async function mount(root,graph,base,layout=compute) {
       const arrow=document.createElementNS(svg.namespaceURI,'path');arrow.setAttribute('d','M 0 0 L 10 5 L 0 10 z');arrow.setAttribute('fill','#536174');marker.append(arrow);defs.append(marker);svg.append(defs);
       for(const edge of geometry.edges){const path=document.createElementNS(svg.namespaceURI,'polyline');path.setAttribute('points',edge.points.map(p=>p.join(',')).join(' '));path.setAttribute('marker-end',`url(#${marker.id})`);const title=document.createElementNS(svg.namespaceURI,'title');title.textContent=edge.edge[1];path.append(title);svg.append(path);}
       scene.style.width=`${geometry.width}px`;scene.style.height=`${geometry.height}px`;
-      const minY=Math.min(...[...geometry.nodes.values()].map(n=>n.y));
-      const scale=Math.max(.15,Math.min(1,(viewport.clientWidth-40)/geometry.width,(viewport.clientHeight-60)/(geometry.height-minY)));
-      home=zoomIdentity.translate((viewport.clientWidth-geometry.width*scale)/2-(geometry.x||0)*scale,30-minY*scale).scale(scale);
+      home=fitGeometry(geometry);
       if(!hasCommitted||['seed','overview','page'].includes(command?.type)){
         viewport.scrollLeft=0;viewport.scrollTop=0;select(viewport).call(zoomer.transform,home);hasCommitted=true;
       }

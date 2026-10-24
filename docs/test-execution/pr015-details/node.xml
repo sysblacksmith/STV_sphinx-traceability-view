@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="STV_SWR_063: persistent collection reuses identity without refreshing FIFO age" time="0.000825" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\collection.test.js"/>
+	<testcase name="STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity" time="0.000360" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\collection.test.js"/>
+	<testcase name="STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity" time="0.000895" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\inspect.test.js"/>
+	<testcase name="STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection" time="0.000558" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\inspect.test.js"/>
+	<testcase name="STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root" time="0.000843" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\urls.test.js"/>
+	<testcase name="STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths" time="0.000304" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\inspect\tests\urls.test.js"/>
+	<testcase name="STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation" time="0.120014" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\classified-rows.test.js"/>
+	<testcase name="STV_SWR_055: controls use resolved case and execution rows" time="0.000293" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\classified-rows.test.js"/>
+	<testcase name="STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes" time="0.090014" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\classified-rows.test.js"/>
+	<testcase name="STV_SWR_056: competing parents do not displace a separate centered parent" time="0.053793" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated" time="0.047865" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_056: parent and project center over five visible children" time="0.014694" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap" time="0.008643" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane" time="0.034043" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_053: clear facing ports and fan-in avoid outer detours" time="0.005873" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_053: blocked skipped-level edges retain safe detours" time="0.032455" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\layout.test.js"/>
+	<testcase name="STV_SWR_058: expand and collapse preserve existing primary slots" time="0.164362" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_058: existing test lane is stable while new primary nodes fit beside it" time="0.027840" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_058: a growing earlier band makes room above the clicked lower band" time="0.047772" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_060: initial seed and project rows use natural numeric ID order" time="0.061022" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_058: reranked shared tests remain unique and honor either anchor role" time="0.078722" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_058: project root stays anchored through collapse and reopening" time="0.055879" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_058: 200-node incremental geometry remains finite and stable" time="0.120909" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\layout\tests\stability.test.js"/>
+	<testcase name="STV_SWR_059: SVG bounds include negative routes, detours and node boxes" time="0.000742" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\render\tests\edge-viewport.test.js"/>
+	<testcase name="STV_SWR_059: an empty edge scene still has a finite SVG viewport" time="0.000121" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\render\tests\edge-viewport.test.js"/>
+	<testcase name="STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship" time="0.000987" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\render\tests\groups.test.js"/>
+	<testcase name="STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions" time="0.000121" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\render\tests\groups.test.js"/>
+	<testcase name="STV_SWR_057: local suggestions match IDs and titles and bound results" time="0.005545" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\render\tests\seeds.test.js"/>
+	<testcase name="STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle" time="0.001774" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity" time="0.001286" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff" time="0.000355" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_024: self-loop terminates and collapse restores the only seed" time="0.000108" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root" time="0.001020" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges" time="0.000125" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views" time="0.002227" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<testcase name="STV_SWR_057: runtime reseeding is atomic and clears exploration" time="0.000176" classname="test" file="D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\frontend\src\state\tests\state.test.js"/>
+	<!-- tests 36 -->
+	<!-- suites 0 -->
+	<!-- pass 36 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 705.1558 -->
+</testsuites>

@@ -1,0 +1,76 @@
+{
+  "interpreter": ".venv-implementation/Scripts/python.exe",
+  "browser_environment": {
+    "STV_GECKODRIVER": "Provisioned geckodriver 0.37.1",
+    "network": "External requests blocked; loopback allowed"
+  },
+  "commands": [
+    {
+      "suite": "node",
+      "command": "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/cr014-details/node.xml src/*/tests/*.test.js",
+      "environment": {
+        "cwd": "frontend"
+      },
+      "finished": "2026-10-24T19:20:58.629081+00:00"
+    },
+    {
+      "suite": "python",
+      "command": "python -m pytest -m \"not browser\" -q --junitxml=docs/test-execution/cr014-details/python.xml",
+      "environment": {
+        "STV_WHEEL": "docs/_build/cr014-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+        "STV_CONSUMER_RECORD": "docs\\test-execution\\cr014-details\\consumer",
+        "STV_SDIST_RECORD": "docs\\test-execution\\cr014-details\\sdist"
+      },
+      "finished": "2026-10-24T19:21:14.699132+00:00"
+    },
+    {
+      "suite": "focused",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py -q --junitxml=docs/test-execution/cr014-details/focused-final.xml",
+      "environment": {
+        "STV_PERSISTENT_RECORD": "docs\\test-execution\\cr014-details\\visual"
+      },
+      "finished": "2026-10-24T19:24:17.337976+00:00"
+    },
+    {
+      "suite": "browser",
+      "command": "python -m pytest docs/test-scripts -m browser --ignore=docs/test-scripts/test_capacity.py --ignore=docs/test-scripts/test_persistent_details.py -q --junitxml=docs/test-execution/cr014-details/browser-regression.xml",
+      "environment": {},
+      "finished": "2026-10-24T19:28:32.052319+00:00"
+    },
+    {
+      "suite": "usability recheck",
+      "command": "python -m pytest docs/test-scripts/test_browser.py -k usability_smoke -q --junitxml=docs/test-execution/cr014-details/usability-recheck.xml",
+      "environment": {},
+      "finished": "2026-10-24T19:30:15.139639+00:00"
+    },
+    {
+      "suite": "capacity",
+      "command": "python -m pytest docs/test-scripts/test_capacity.py -q --junitxml=docs/test-execution/cr014-details/capacity.xml",
+      "environment": {
+        "STV_CAPACITY_OUTPUT": "docs/_build/cr014-benchmark/html",
+        "STV_CAPACITY_METRICS": "docs\\test-execution\\cr014-details\\capacity-metrics.json"
+      },
+      "finished": "2026-10-24T19:27:09.059934+00:00"
+    },
+    {
+      "suite": "visual framing",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py -k \"3-file\" -q --junitxml=docs/test-execution/cr014-details/visual.xml",
+      "environment": {
+        "STV_PERSISTENT_RECORD": "docs\\test-execution\\cr014-details\\visual-final"
+      },
+      "finished": "2026-10-24T19:28:18.560243+00:00"
+    }
+  ],
+  "preparation": [
+    "node build.js (frontend)",
+    "python -m build --no-isolation --outdir docs/_build/cr014-dist",
+    "python scripts/benchmark.py --directory docs/_build/cr014-benchmark",
+    "python scripts/check-coverage.py --strict"
+  ],
+  "retained_diagnostics": [
+    "first-focused: test collection syntax error, no procedure executed",
+    "focused/focused-recheck: hover visibility and narrow-host fixture assumptions",
+    "browser-regression: two off-screen toolbar actions, followed by usability-recheck"
+  ],
+  "phase_notes": "Product source unchanged across successful suites. Fixture geometry and explicit-Escape procedures were corrected; final screenshot-only framing adjustment occurred after focused-final. Usability recheck changes only document scrolling before pointer actions."
+}

@@ -182,7 +182,7 @@ Software module responsibilities and containment within the product system eleme
 
    **Boundary:** ``README.rst``.
 
-.. swe:: Detail overlay and original links
+.. swe:: Hover, persistent details and original links
    :id: STV_SWE_INSPECT
    :status: accepted
    :tags: release_initial
@@ -192,13 +192,15 @@ Software module responsibilities and containment within the product system eleme
    :verification_state: not_assessed
    :part_of: STV_SE_BROWSER
 
-   Uses Floating UI DOM 1.7.4 to position final rendered fragments in bounded scrollable overlays and retains original-object new-tab links for real Needs, excluding artificial project roots. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
+   Uses Floating UI DOM 1.7.4 for transient hover and a separate bounded per-view
+   persistent collection (:ref:`STV_ADR_010`). Restores final rendered fragments in scrollable panels and retains original-object new-tab links for real Needs, excluding artificial project roots. See :ref:`STV_ADR_001`, :ref:`STV_ADR_002`, :ref:`STV_ADR_003` and :ref:`STV_ADR_004`.
 
    **Component directory:** ``frontend/src/inspect``. The folder name is the
    lowercase suffix of ``STV_SWE_INSPECT``.
 
-   **Implementation:** ``inspect.js``.
+   **Implementation:** ``inspect.js`` (hover), ``content.js`` (shared safe content),
+   ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus).
 
-   **Unit tests:** ``tests/inspect.test.js``.
+   **Unit tests:** ``tests/inspect.test.js`` and ``tests/collection.test.js``.
 
    **Boundary:** ``README.rst``.

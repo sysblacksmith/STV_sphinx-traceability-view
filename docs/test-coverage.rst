@@ -95,7 +95,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
    * - :need:`STV_SWR_016`
      - Activation from file and HTTP output opens the correct cross-page object and preserves exploration.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
-       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``
+       ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[http]``
    * - :need:`STV_SWR_017`
      - With network disabled, file-URL output supports expansion, details and local links with no missing runtime assets.
      - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
@@ -127,6 +129,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_build.py::test_incremental_body_change_hidden_and_deleted_objects``;
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[http]``;
        ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
        ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root``
    * - :need:`STV_SWR_019`
@@ -321,13 +325,17 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``
    * - :need:`STV_SWR_050`
-     - A visible object exposes equivalent information through hover and keyboard Details activation. The panel permits keyboard scrolling and dismissal with focus restored to its trigger; new-tab node navigation remains a separate action.
+     - Sustained/brief hover, pointer travel and scrolling, viewport-edge placement, Escape cancellation and immediate keyboard Details pass independently. Both show equivalent static content; persistent boxes survive graph changes while hover retains its dismissal behavior.
      - ``docs/test-scripts/test_browser.py::test_usability_smoke[file]``;
        ``docs/test-scripts/test_browser.py::test_usability_smoke[http]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
        ``docs/test-scripts/test_browser.py::test_offline_exploration[http]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
-       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+       ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``
    * - :need:`STV_SWR_051`
      - A seedless fixture initially displays the project node and first stakeholder entries through the project-page contract of STV_SWR_052 while retaining the existing 200-node capacity limit. The project node remains visible during collapse, counts toward the visible-node limit and is distinguished from real Needs without a fabricated original-Need link. Replacing the input model's stakeholder type names does not require source-code changes.
      - ``docs/test-scripts/test_browser.py::test_project_paging[file]``;
@@ -448,6 +456,44 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - Firefox file/HTTP checks reproduce a node crossing the real clip edge. Hit tests above/on the border exclude the node while a point just inside the content hits it. Pan/zoom retain the border's position, resize follows control wrapping/width, client height remains 975 px, and keyboard expansion/Reset and independent-view behavior remain usable.
      - ``docs/test-scripts/test_viewport_boundary.py::test_viewport_boundary_tracks_clipping_and_controls[file]``;
        ``docs/test-scripts/test_viewport_boundary.py::test_viewport_boundary_tracks_clipping_and_controls[http]``
+   * - :need:`STV_SWR_063`
+     - Default/override/one-slot capacity, reuse versus reopen, FIFO after focus, independent close/all, independent views, delayed completion, eviction/close races, explicit failure/retry and graph replacement pass. **Channeling rationale:** Inspection state is browser-local with no new system interface, persistence service or domain graph mutation.
+     - ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_completion_identity_eviction_and_retry[file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_completion_identity_eviction_and_retry[http]``;
+       ``frontend/src/inspect/tests/collection.test.js :: STV_SWR_063: persistent collection reuses identity without refreshing FIFO age``;
+       ``frontend/src/inspect/tests/collection.test.js :: STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity``
+   * - :need:`STV_SWR_064`
+     - Keyboard traversal/read/scroll/close, responsive layout, long bodies/stack, unique fragment IDs, fallback focus after artifact removal, non-stealing async content, surviving collection during graph changes and a current-width Reset, folded metadata/toggle keyboard behavior and canonical header-ID navigation pass on file/HTTP. No modal focus trap or graph overlay. **Channeling rationale:** Presentation and focus remain within renderer/inspector responsibilities, without new deployment or system boundary.
+     - ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_completion_identity_eviction_and_retry[file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_completion_identity_eviction_and_retry[http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_detail_metadata_controls_width_and_artifact_navigation[http]``
+   * - :need:`STV_SWR_065`
+     - Default, 1 and 3 serialize and drive actual eviction; invalid types/bounds fail clearly. Rebuilds reflect changed configuration. The runtime does not require Node, a service or reader-side configuration.
+     - ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_defaults_and_exact_bounds``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[0]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[-1]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[True]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[False]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[3]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[1.0]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[None]``;
+       ``src/sphinx_traceability_view/model/tests/test_model.py::test_details_limit_rejects_invalid_author_values[9007199254740992]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_limit_is_published_by_real_host[None]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_limit_is_published_by_real_host[1]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_limit_is_published_by_real_host[3]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]``;
+       ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
@@ -522,12 +568,14 @@ Executable sources
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
+* ``docs/test-scripts/test_persistent_details.py``
 * ``docs/test-scripts/test_position_stability.py``
 * ``docs/test-scripts/test_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
 * ``docs/test-scripts/test_viewport_boundary.py``
 * ``docs/test-scripts/test_windows_paths.py``
+* ``frontend/src/inspect/tests/collection.test.js``
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``
 * ``frontend/src/layout/tests/classified-rows.test.js``

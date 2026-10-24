@@ -348,3 +348,21 @@ grey marker at the existing graph clipping boundary, followed by explicit
 analysis/plan/full-V-cycle implementation instruction. The intake names an
 originating PPTX; only its exported evidence was supplied here. See
 :need:`STV_PR_014` and :doc:`concept-reviews/round-11`.
+
+CR014 owner decisions
+------------------------
+
+2026-10-24: owner-authored CR014, explicit complete-V-cycle instruction, answers
+choosing reuse without age refresh, independent stacks and retention across
+seed/overview/page changes, followed by the configurable-capacity request. See
+:ref:`STV_CR_014` and :doc:`concept-reviews/round-12`. No runtime result is inferred.
+
+
+PR015 owner acceptance findings, 2026-10-24
+--------------------------------------------
+
+Conversation evidence: the owner requested twice the detail-view width,
+initially folded status/tags and other secondary attributes, a working fold arrow
+and correct original-artifact navigation from the Need ID. The owner noted that
+other links work. :need:`STV_PR_015` is the corrected-language normalized intake;
+:doc:`concept-reviews/round-13` owns scoped refinement/review.

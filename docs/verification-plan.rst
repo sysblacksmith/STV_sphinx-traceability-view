@@ -283,3 +283,25 @@ real before/after Firefox clipping, responsive border position, host sizing,
 keyboard controls and independent views. Run adjacent usability/offline browser
 checks and clean distribution checks. Graph/layout/capacity algorithms do not
 change; a new full release qualification is outside this development increment.
+
+CR014 persistent details verification
+--------------------------------------
+
+:need:`STV_TC_SW_049` / :need:`STV_TC_SW_050` cover ordered capacity and author
+configuration. :need:`STV_TC_SY_063` / :need:`STV_TC_SY_064` cover actual file/HTTP
+docks, navigation retention, default/override eviction, focus, scrolling and
+async removal/reopen. Preserve hover-Escape checks; revise explicit activation
+checks to require retention on Escape and dismissal by its Close control.
+Retain safe content/URL/cache, missing-asset retry, alternate-model and installed
+package regression coverage. No release qualification is implied.
+
+
+PR015 acceptance correction
+-----------------------------
+
+:need:`STV_TC_SY_065` reproduces the narrow dock, inert metadata arrow and
+self-localized artifact-ID link before the fix, then checks their actual rendered
+resolution in file/HTTP. Rerun persistent collection/race procedures, affected
+rich-content/hover/transport/nested-path regressions, frontend units and clean
+wheel/source-package checks. Capacity and complete release qualification remain
+outside this presentation correction; retain prior results as historical.

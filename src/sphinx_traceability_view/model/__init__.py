@@ -86,3 +86,13 @@ def normalize(host_types, host_links, supplied=None, project_mode=False):
         if not set(rule["levels"]).issubset(owner_levels):
             raise ValueError(f"{path}.levels: owners must use fixed/tag-resolved levels")
     return model
+
+
+DETAILS_LIMIT_DEFAULT = 10
+
+
+def validate_details_limit(value=DETAILS_LIMIT_DEFAULT):
+    """Keep author capacity exact across Python and the JavaScript consumer."""
+    if type(value) is not int or not 1 <= value <= 9007199254740991:
+        raise ValueError("traceability_view_details_limit: expected a positive integer no greater than 9007199254740991")
+    return value

@@ -23,3 +23,5 @@ acceptance records remain unchanged.
    STV_CR_012_release-cancellation-and-cleanup
 
    STV_CR_013_artifact_vertical_target_position
+
+   STV_CR_014_persistent-right-side-details

@@ -221,3 +221,34 @@ Final outcomes and artifact identities are in
 against the full passing candidate and this criterion review; acceptance remains
 independent. Browser/platform, occurrence-mode, widget-interaction, numeric
 performance-budget and external-distribution licensing limits above still apply.
+
+CR014 development criterion review
+------------------------------------
+
+:doc:`test-execution/cr014-details/index` records the implemented persistent
+collection and author capacity setting against round 12. The new software and
+system cases pass normal, boundary, negative and asynchronous recovery paths.
+Hover timing/cancellation and safe URL/content transport regressions pass;
+explicit-Escape procedures now assert persistent preservation and use Close.
+Seed/page replacement, keyboard focus, narrow/wide docking and current-width
+Reset pass with the default ten and overridden three-box collections. Shared
+loading tests cover one-slot eviction, out-of-order completion, retry and clear.
+The repeated capacity, clean-wheel and source-archive checks pass. These results
+support the changed requirements' verification fields, without changing unrelated
+partial/deferred verification or constituting release approval.
+
+
+PR015 detail acceptance correction review
+-------------------------------------------
+
+The owner's findings are resolved within existing INSPECT/RENDER boundaries;
+:doc:`test-execution/pr015-details/index` retains the actual failing baseline,
+127 distinct passing selected checks and refined icon/ID repeat. The 720 px dock
+and 1120 px responsive boundary preserve usable graph space. Metadata defaults
+folded; pointer, Enter and Space update only its copied table with consistent
+icons and ARIA state. New boxes reset disclosure, reuse retains it. The artifact
+ID opens its real source Need; local body fragments retain their namespace.
+The actual normal demo and metadata state diagram/HTML embedding were visually
+reviewed. No arbitrary host/widget script is initialized and adjacent safe
+transport/offline/race/hover/package checks pass. Owner acceptance retest is
+pending; no release qualification or new capacity result is claimed.

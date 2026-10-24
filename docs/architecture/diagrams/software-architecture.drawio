@@ -45,7 +45,7 @@
             <mxGeometry x="600" y="1100" width="300" height="100" as="geometry" />
           </mxCell>
         </object>
-        <object id="INSPECT" label="Object inspection&#10;Floating UI DOM 1.7.4&#10;STV_SWE_INSPECT" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
+        <object id="INSPECT" label="Object inspection&#10;Hover + persistent details / safe content&#10;STV_SWE_INSPECT" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
           <mxCell style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=14;spacing=12;" vertex="1" parent="1">
             <mxGeometry x="1100" y="1100" width="300" height="100" as="geometry" />
           </mxCell>

@@ -1,0 +1,11 @@
+{
+  "input": "Commit 740c35ce234ec26b16c76a0b77463b273f84863c plus current uncommitted CR014/PR015 correction; CSS-only product follow-up",
+  "executed_at": "2026-10-24T20:12:30.493324+00:00",
+  "environment": "Windows 11 / Firefox 158.0.1 / geckodriver 0.37.1; file and loopback HTTP; external requests blocked",
+  "files": {
+    "frontend\\src\\render\\stv.css": "dd78a2a9742270037776938909e32249b80706c2d99ffbd8438f14aa8d5758dd",
+    "src\\sphinx_traceability_view\\static\\stv.css": "dd78a2a9742270037776938909e32249b80706c2d99ffbd8438f14aa8d5758dd",
+    "src\\sphinx_traceability_view\\static\\stv.js": "40cd2d3feca961688df75f54928dc5dd21de41cc0dae8dd11cb5a690409fed11",
+    "docs\\test-scripts\\test_persistent_details.py": "7c89f9821c0af1c71a3f62af1939526c7b34e2c5352eb92132c61dae3c2c2d7c"
+  }
+}

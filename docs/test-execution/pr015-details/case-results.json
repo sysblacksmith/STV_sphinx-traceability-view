@@ -1,0 +1,1154 @@
+[
+  {
+    "case_id": "STV_TC_SW_049",
+    "selector": "test :: STV_SWR_063: persistent collection reuses identity without refreshing FIFO age",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_E6769F977A5C938E"
+  },
+  {
+    "case_id": "STV_TC_SW_049",
+    "selector": "test :: STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_E6769F977A5C938E"
+  },
+  {
+    "case_id": "STV_TC_SW_033",
+    "selector": "test :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_30D102279FA03DCD"
+  },
+  {
+    "case_id": "STV_TC_SW_034",
+    "selector": "test :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_BD28ACAA421E60FD"
+  },
+  {
+    "case_id": "STV_TC_SW_041",
+    "selector": "test :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_93EFC6311B037774"
+  },
+  {
+    "case_id": "STV_TC_SW_042",
+    "selector": "test :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_FE11C6C077BD35D3"
+  },
+  {
+    "case_id": "STV_TC_SW_048",
+    "selector": "test :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_74F720037134C4D8"
+  },
+  {
+    "case_id": "STV_TC_SW_048",
+    "selector": "test :: STV_SWR_055: controls use resolved case and execution rows",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_74F720037134C4D8"
+  },
+  {
+    "case_id": "STV_TC_SW_048",
+    "selector": "test :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_74F720037134C4D8"
+  },
+  {
+    "case_id": "STV_TC_SW_011",
+    "selector": "test :: STV_SWR_056: competing parents do not displace a separate centered parent",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_80F9D0020FD4A1EF"
+  },
+  {
+    "case_id": "STV_TC_SW_030",
+    "selector": "test :: STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_3AC61368127D7E0B"
+  },
+  {
+    "case_id": "STV_TC_SW_002",
+    "selector": "test :: STV_SWR_056: parent and project center over five visible children",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_2479F8F9E250029D"
+  },
+  {
+    "case_id": "STV_TC_SW_022",
+    "selector": "test :: STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_E0244D82E35F5792"
+  },
+  {
+    "case_id": "STV_TC_SW_004",
+    "selector": "test :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_166ECAC3CAC8F468"
+  },
+  {
+    "case_id": "STV_TC_SW_010",
+    "selector": "test :: STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_40408661E7793853"
+  },
+  {
+    "case_id": "STV_TC_SW_024",
+    "selector": "test :: STV_SWR_053: blocked skipped-level edges retain safe detours",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_79AC51774200FFA8"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: expand and collapse preserve existing primary slots",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: existing test lane is stable while new primary nodes fit beside it",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: a growing earlier band makes room above the clicked lower band",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_045",
+    "selector": "test :: STV_SWR_060: initial seed and project rows use natural numeric ID order",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_B18E8FBC1506C7AF"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: reranked shared tests remain unique and honor either anchor role",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: project root stays anchored through collapse and reopening",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_043",
+    "selector": "test :: STV_SWR_058: 200-node incremental geometry remains finite and stable",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_F11AE1D7CD766947"
+  },
+  {
+    "case_id": "STV_TC_SW_044",
+    "selector": "test :: STV_SWR_059: SVG bounds include negative routes, detours and node boxes",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_5A92D88825368637"
+  },
+  {
+    "case_id": "STV_TC_SW_044",
+    "selector": "test :: STV_SWR_059: an empty edge scene still has a finite SVG viewport",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_5A92D88825368637"
+  },
+  {
+    "case_id": "STV_TC_SW_027",
+    "selector": "test :: STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_4A64A7BDEB85F44F"
+  },
+  {
+    "case_id": "STV_TC_SW_007",
+    "selector": "test :: STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_84546978101B80F8"
+  },
+  {
+    "case_id": "STV_TC_SW_036",
+    "selector": "test :: STV_SWR_057: local suggestions match IDs and titles and bound results",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_15F0FE381A98DF9B"
+  },
+  {
+    "case_id": "STV_TC_SW_015",
+    "selector": "test :: STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_9307005E3D0B273B"
+  },
+  {
+    "case_id": "STV_TC_SW_018",
+    "selector": "test :: STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_D780BD35766A1210"
+  },
+  {
+    "case_id": "STV_TC_SW_001",
+    "selector": "test :: STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_D8D6286B43CA7F7A"
+  },
+  {
+    "case_id": "STV_TC_SW_006",
+    "selector": "test :: STV_SWR_024: self-loop terminates and collapse restores the only seed",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_2D6B0A527D87B007"
+  },
+  {
+    "case_id": "STV_TC_SW_012",
+    "selector": "test :: STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_6FB10B253FCC301A"
+  },
+  {
+    "case_id": "STV_TC_SW_026",
+    "selector": "test :: STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_734E500A8F63BBFD"
+  },
+  {
+    "case_id": "STV_TC_SW_003",
+    "selector": "test :: STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_7C3CE68C41DB5A44"
+  },
+  {
+    "case_id": "STV_TC_SW_008",
+    "selector": "test :: STV_SWR_057: runtime reseeding is atomic and clears exploration",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-24T19:53:07.000889+00:00",
+    "execution_id": "STV_TE_61F7AFA2972F5D22"
+  },
+  {
+    "case_id": "STV_TC_SW_014",
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle :: test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_6D32A7FA52E459DF"
+  },
+  {
+    "case_id": "STV_TC_SW_039",
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle :: test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_25FBF6C55EE17919"
+  },
+  {
+    "case_id": "STV_TC_SW_032",
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details :: test_static_details_and_remote_fallback",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_3A5115E267930D83"
+  },
+  {
+    "case_id": "STV_TC_SW_021",
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details :: test_portable_paths_preserve_queries_and_fragments",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_752F53F8893397D4"
+  },
+  {
+    "case_id": "STV_TC_SW_025",
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details :: test_srcset_data_images_and_css_resources",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_AA519069620D699A"
+  },
+  {
+    "case_id": "STV_TC_SW_035",
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details :: test_active_embed_urls_are_not_retained_as_navigation",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5C4999D56759A7BA"
+  },
+  {
+    "case_id": "STV_TC_SW_040",
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details :: test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_DD45AD462E8D86DB"
+  },
+  {
+    "case_id": "STV_TC_SY_004",
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle :: test_failed_finalization_retains_pending_page_and_previous_assets",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_78CA1963DFC5C470"
+  },
+  {
+    "case_id": "STV_TC_SY_024",
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle :: test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_16A66D205D4A455E"
+  },
+  {
+    "case_id": "STV_TC_SW_029",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_hidden_parts_external_and_missing_targets",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_28C7CF1F7DA0A925"
+  },
+  {
+    "case_id": "STV_TC_SW_005",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_C14C574604D3B6DB"
+  },
+  {
+    "case_id": "STV_TC_SW_020",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_DA3DECE907EE45E0"
+  },
+  {
+    "case_id": "STV_TC_SW_019",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_520A1B065FCE1C0B"
+  },
+  {
+    "case_id": "STV_TC_SW_047",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_classification_is_complete_graph_based_portable_and_deterministic",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4A78AC1DB6BC6CA2"
+  },
+  {
+    "case_id": "STV_TC_SW_047",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_unclassified_records_without_fallback_fail_with_need_identity[records0]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4A78AC1DB6BC6CA2"
+  },
+  {
+    "case_id": "STV_TC_SW_047",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_unclassified_records_without_fallback_fail_with_need_identity[records1]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4A78AC1DB6BC6CA2"
+  },
+  {
+    "case_id": "STV_TC_SW_047",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_outgoing_owner_mapping_and_malformed_tags_use_defined_policy",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4A78AC1DB6BC6CA2"
+  },
+  {
+    "case_id": "STV_TC_SW_047",
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph :: test_large_classified_graph_resolves_every_execution_from_its_case",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4A78AC1DB6BC6CA2"
+  },
+  {
+    "case_id": "STV_TC_SW_009",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_host_normalization",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_A4EB2E079C21CC64"
+  },
+  {
+    "case_id": "STV_TC_SW_016",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_model[change0-levels]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_55AB47186E75BC00"
+  },
+  {
+    "case_id": "STV_TC_SW_028",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_model[change1-types.goal]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_C3ECEDE6FCD95285"
+  },
+  {
+    "case_id": "STV_TC_SW_017",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_model[change2-types]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_69AC31EAE7814169"
+  },
+  {
+    "case_id": "STV_TC_SW_038",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_model[change3-accepted_statuses]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_E282DA1A8B18A2B2"
+  },
+  {
+    "case_id": "STV_TC_SW_013",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_directional_labels[]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_2CC559FF74264E0B"
+  },
+  {
+    "case_id": "STV_TC_SW_023",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_directional_labels[ ]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_8B33DD3A33704E75"
+  },
+  {
+    "case_id": "STV_TC_SW_037",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_directional_labels[None]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_113B43F198D2CDAD"
+  },
+  {
+    "case_id": "STV_TC_SW_031",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_invalid_directional_labels[1]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_FD4E4162F7EE6E3D"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_is_portable_and_does_not_mutate_input",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement0-levels_by_tag]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement1-levels_by_tag]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement2-levels_by_tag]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement3-types.case]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement4-types.case]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement5-types.case]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement6-fallback_level]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement7-level_from.relation]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement8-level_from]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement9-level_from]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement10-level_from.levels]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_046",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_classified_model_rejects_invalid_selectors[placement11-fixed level]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_EE23BA8C9C6BA4B0"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_defaults_and_exact_bounds",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[0]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[-1]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[True]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[False]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[3]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[1.0]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[None]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "src.sphinx_traceability_view.model.tests.test_model :: test_details_limit_rejects_invalid_author_values[9007199254740992]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SY_013",
+    "selector": "docs.test-scripts.test_build :: test_cross_page_bundle",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_91450CBE45F118C0"
+  },
+  {
+    "case_id": "STV_TC_SY_008",
+    "selector": "docs.test-scripts.test_build :: test_invalid_seed_source_location[UNKNOWN]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_DC1671A02F1BF34C"
+  },
+  {
+    "case_id": "STV_TC_SY_014",
+    "selector": "docs.test-scripts.test_build :: test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_4B035E2310E4BEDD"
+  },
+  {
+    "case_id": "STV_TC_SY_022",
+    "selector": "docs.test-scripts.test_build :: test_invalid_seed_source_location[HIDDEN_A]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_36E150FE90219288"
+  },
+  {
+    "case_id": "STV_TC_SY_027",
+    "selector": "docs.test-scripts.test_build :: test_host_owns_broken_trace_failure",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_1E1AE11AF532DD50"
+  },
+  {
+    "case_id": "STV_TC_SY_026",
+    "selector": "docs.test-scripts.test_build :: test_incremental_body_change_hidden_and_deleted_objects",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_99A255B5C7BF621D"
+  },
+  {
+    "case_id": "STV_TC_SY_011",
+    "selector": "docs.test-scripts.test_build :: test_seed_capacity_at_directive[200-True]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_D470B949B372D93E"
+  },
+  {
+    "case_id": "STV_TC_SY_023",
+    "selector": "docs.test-scripts.test_build :: test_seed_capacity_at_directive[201-False]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_F3BA1217F938D9A8"
+  },
+  {
+    "case_id": "STV_TC_SY_006",
+    "selector": "docs.test-scripts.test_build :: test_alternate_host_schema_external_metadata_and_parts",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_FF1EC92330C20220"
+  },
+  {
+    "case_id": "STV_TC_SY_018",
+    "selector": "docs.test-scripts.test_build :: test_invalid_mapping_has_entry_path_and_location",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_2AB9CFA572A3DF86"
+  },
+  {
+    "case_id": "STV_TC_SY_040",
+    "selector": "docs.test-scripts.test_build :: test_unsupported_builder_fails_clearly",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_C5624120CB94333D"
+  },
+  {
+    "case_id": "STV_TC_SY_029",
+    "selector": "docs.test-scripts.test_build :: test_host_default_directional_labels_are_used",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5947EEBE87470746"
+  },
+  {
+    "case_id": "STV_TC_SY_055",
+    "selector": "docs.test-scripts.test_ci_security :: test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_F2713590E26C7C17"
+  },
+  {
+    "case_id": "STV_TC_SY_056",
+    "selector": "docs.test-scripts.test_ci_security :: test_candidate_checksums_detect_changed_artifact_bytes",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_344E841C199397BF"
+  },
+  {
+    "case_id": "STV_TC_SY_046",
+    "selector": "docs.test-scripts.test_legal_guard :: test_build_rejects_unaudited_elk_and_missing_notices",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_9CD44AB8FBFD9395"
+  },
+  {
+    "case_id": "STV_TC_SY_038",
+    "selector": "docs.test-scripts.test_package :: test_clean_wheel_host",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_74C98DE9CE271275"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[None]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[1]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[3]",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SY_052",
+    "selector": "docs.test-scripts.test_publication :: test_clean_publication_removes_obsolete_assets",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_D23981CC1C16F468"
+  },
+  {
+    "case_id": "STV_TC_SY_053",
+    "selector": "docs.test-scripts.test_publication :: test_failed_build_preserves_published_tree",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_739298E2F0564C1A"
+  },
+  {
+    "case_id": "STV_TC_SY_054",
+    "selector": "docs.test-scripts.test_publication :: test_failed_promotion_restores_previous_tree",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_378DA6459376DA86"
+  },
+  {
+    "case_id": "STV_TC_SY_051",
+    "selector": "docs.test-scripts.test_sdist :: test_sdist_excludes_local_evidence_and_rebuilds_wheel",
+    "result": "passed",
+    "report": "python.xml",
+    "report_completed_at": "2026-10-24T19:54:36.927432+00:00",
+    "execution_id": "STV_TE_1E2008932F39C18B"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[None]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[1]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SW_050",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_limit_is_published_by_real_host[3]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_5B31A460D4422B27"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_C0D48B92F4736549"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_C0D48B92F4736549"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_C0D48B92F4736549"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_C0D48B92F4736549"
+  },
+  {
+    "case_id": "STV_TC_SY_064",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_completion_identity_eviction_and_retry[file]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_44FC2520374671F3"
+  },
+  {
+    "case_id": "STV_TC_SY_064",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_completion_identity_eviction_and_retry[http]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_44FC2520374671F3"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_21D8D7E0E61848CF"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "result": "passed",
+    "report": "focused.xml",
+    "report_completed_at": "2026-10-24T19:52:46.817941+00:00",
+    "execution_id": "STV_TE_21D8D7E0E61848CF"
+  },
+  {
+    "case_id": "STV_TC_SY_016",
+    "selector": "docs.test-scripts.test_browser :: test_usability_smoke[file]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_3EE36C9CEB398919"
+  },
+  {
+    "case_id": "STV_TC_SY_001",
+    "selector": "docs.test-scripts.test_browser :: test_usability_smoke[http]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_3715FF748298BF10"
+  },
+  {
+    "case_id": "STV_TC_SY_030",
+    "selector": "docs.test-scripts.test_browser :: test_offline_exploration[file]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_FF3A07585B18457D"
+  },
+  {
+    "case_id": "STV_TC_SY_037",
+    "selector": "docs.test-scripts.test_browser :: test_offline_exploration[http]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_5616686CDB8D1B9C"
+  },
+  {
+    "case_id": "STV_TC_SY_015",
+    "selector": "docs.test-scripts.test_browser :: test_alternate_model_geometry_details_and_external[file]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_2FC3770F257B1187"
+  },
+  {
+    "case_id": "STV_TC_SY_033",
+    "selector": "docs.test-scripts.test_browser :: test_alternate_model_geometry_details_and_external[http]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_A92276531D812B43"
+  },
+  {
+    "case_id": "STV_TC_SY_003",
+    "selector": "docs.test-scripts.test_browser :: test_missing_placeholder_and_detail_error[file]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_8F9660805C1BF3D1"
+  },
+  {
+    "case_id": "STV_TC_SY_012",
+    "selector": "docs.test-scripts.test_browser :: test_missing_placeholder_and_detail_error[http]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_9EE2D06816C8EA7C"
+  },
+  {
+    "case_id": "STV_TC_SY_047",
+    "selector": "docs.test-scripts.test_detail_transport :: test_authored_transport_markers_stay_inert[file]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_0A29394EF7EFB513"
+  },
+  {
+    "case_id": "STV_TC_SY_048",
+    "selector": "docs.test-scripts.test_detail_transport :: test_authored_transport_markers_stay_inert[http]",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_8226DEA4BD51290F"
+  },
+  {
+    "case_id": "STV_TC_SY_045",
+    "selector": "docs.test-scripts.test_windows_paths :: test_nested_windows_detail_loading_and_retry",
+    "result": "passed",
+    "report": "adjacent.xml",
+    "report_completed_at": "2026-10-24T19:55:12.377639+00:00",
+    "execution_id": "STV_TE_E6F98C2085D7A915"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "result": "failed",
+    "report": "before.xml",
+    "report_completed_at": "2026-10-24T19:50:29.338025+00:00",
+    "execution_id": "STV_TE_587EE20025A702C6"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "result": "failed",
+    "report": "before.xml",
+    "report_completed_at": "2026-10-24T19:50:29.338025+00:00",
+    "execution_id": "STV_TE_587EE20025A702C6"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_9A90B66E37D26235",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "result": "passed",
+    "report": "metadata-recheck.xml",
+    "report_completed_at": "2026-10-24T19:59:01.714704+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_9A90B66E37D26235",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "result": "passed",
+    "report": "metadata-recheck.xml",
+    "report_completed_at": "2026-10-24T19:59:01.714704+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_6629368094D691E7",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_6629368094D691E7",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_6629368094D691E7",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_6629368094D691E7",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_0FAB92819C2C6B5E",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_completion_identity_eviction_and_retry[file]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_0FAB92819C2C6B5E",
+    "selector": "docs.test-scripts.test_persistent_details :: test_persistent_completion_identity_eviction_and_retry[http]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_04D19E7C66068621",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_04D19E7C66068621",
+    "selector": "docs.test-scripts.test_persistent_details :: test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_7F7FF76154519BAE",
+    "selector": "docs.test-scripts.test_viewport_boundary :: test_viewport_boundary_tracks_clipping_and_controls[file]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  },
+  {
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_7F7FF76154519BAE",
+    "selector": "docs.test-scripts.test_viewport_boundary :: test_viewport_boundary_tracks_clipping_and_controls[http]",
+    "result": "passed",
+    "report": "pane-frame/results.xml",
+    "report_completed_at": "2026-10-24T20:12:30.493324+00:00"
+  }
+]

@@ -289,3 +289,12 @@ custom semantic projection and native DOM/SVG. No dependency or version pin
 changes. Resolved object levels are additive schema-1 data; configured legacy
 test-role projects retain their lane and the five-type default remains available.
 See :ref:`STV_ADR_009`.
+
+Persistent and hover inspection placement
+------------------------------------------
+
+Floating UI continues to position transient hover panels. Persistent boxes use
+native CSS grid/container queries, scrolling and semantic regions, with a
+per-view ordered Map and guarded async content. Shared transport/URL restoration
+retains the installed dependency versions and offline policy; no new library is
+introduced. See :ref:`STV_ADR_010`.

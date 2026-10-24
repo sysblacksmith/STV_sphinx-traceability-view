@@ -114,3 +114,13 @@ record against complete published metadata/links before bundling. LAYOUT and
 RENDER consume the resolved level; fallback records remain labelled and fully
 navigable. :ref:`STV_ADR_009` and :doc:`internal-interfaces` define the additive
 contract. Component boundaries and browser request-token transitions are unchanged.
+
+Persistent artifact inspection
+--------------------------------
+
+INSPECT separates transient hover positioning from a per-view, insertion-ordered
+persistent collection. Both presentations share cached fragment transport and safe
+content restoration; they own separate DOM identities and cancellation lifetimes.
+RENDER owns the responsive dock and keeps it outside graph commits. MODEL and
+DIRECTIVE validate and publish the author capacity setting, default 10. See
+:ref:`STV_ADR_010`, :doc:`internal-interfaces` and :doc:`state-machine`.

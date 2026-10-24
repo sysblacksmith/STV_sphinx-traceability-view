@@ -1,0 +1,15 @@
+{
+  "limit": 10,
+  "order_before_clear": [
+    "BOX_04",
+    "BOX_05",
+    "BOX_06",
+    "BOX_07",
+    "BOX_08",
+    "BOX_09",
+    "BOX_10",
+    "BOX_02",
+    "BOX_01"
+  ],
+  "browser": "158.0.1"
+}

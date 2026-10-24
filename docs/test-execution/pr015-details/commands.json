@@ -1,0 +1,73 @@
+{
+  "interpreter": ".venv-implementation/Scripts/python.exe",
+  "browser": "Firefox 158.0.1 / geckodriver 0.37.1, external requests blocked",
+  "commands": [
+    {
+      "suite": "before",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py -k metadata_controls -q --junitxml=docs/test-execution/pr015-details/before.xml",
+      "environment": {},
+      "report": "before.xml",
+      "completed_at": "2026-10-24T19:50:29.338025+00:00"
+    },
+    {
+      "suite": "focused",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py -q --junitxml=docs/test-execution/pr015-details/focused.xml",
+      "environment": {
+        "STV_METADATA_RECORD": "docs\\test-execution\\pr015-details\\visual"
+      },
+      "report": "focused.xml",
+      "completed_at": "2026-10-24T19:52:46.817941+00:00"
+    },
+    {
+      "suite": "adjacent",
+      "command": "python -m pytest docs/test-scripts/test_browser.py docs/test-scripts/test_detail_transport.py docs/test-scripts/test_windows_paths.py -m browser -k \"usability_smoke or offline_exploration or alternate_model or missing_placeholder or authored_transport or nested_windows\" -q --junitxml=docs/test-execution/pr015-details/adjacent.xml",
+      "environment": {},
+      "report": "adjacent.xml",
+      "completed_at": "2026-10-24T19:55:12.377639+00:00"
+    },
+    {
+      "suite": "node",
+      "command": "node --test --test-reporter=junit --test-reporter-destination=../docs/test-execution/pr015-details/node.xml src/*/tests/*.test.js",
+      "environment": {
+        "cwd": "frontend"
+      },
+      "report": "node.xml",
+      "completed_at": "2026-10-24T19:53:07.000889+00:00"
+    },
+    {
+      "suite": "python",
+      "command": "python -m pytest -m \"not browser\" -q --junitxml=docs/test-execution/pr015-details/python.xml",
+      "environment": {
+        "STV_WHEEL": "docs/_build/pr015-dist/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl",
+        "STV_CONSUMER_RECORD": "docs\\test-execution\\pr015-details\\consumer",
+        "STV_SDIST_RECORD": "docs\\test-execution\\pr015-details\\sdist"
+      },
+      "report": "python.xml",
+      "completed_at": "2026-10-24T19:54:36.927432+00:00"
+    },
+    {
+      "suite": "metadata icon/ID refinement",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py -k metadata_controls -q --junitxml=docs/test-execution/pr015-details/metadata-recheck.xml",
+      "environment": {
+        "STV_METADATA_RECORD": "docs\\test-execution\\pr015-details\\visual-final"
+      },
+      "report": "metadata-recheck.xml",
+      "completed_at": "2026-10-24T19:59:01.714704+00:00"
+    },
+    {
+      "suite": "pane frame follow-up",
+      "command": "python -m pytest docs/test-scripts/test_persistent_details.py docs/test-scripts/test_viewport_boundary.py -m browser -q --junitxml=docs/test-execution/pr015-details/pane-frame/results.xml",
+      "environment": {
+        "STV_METADATA_RECORD": "docs\\test-execution\\pr015-details\\pane-frame\\visual"
+      },
+      "report": "pane-frame/results.xml",
+      "completed_at": "2026-10-24T20:12:30.493324+00:00",
+      "preparation": "node build.js from frontend"
+    }
+  ],
+  "preparation": [
+    "node build.js (frontend)",
+    "python -m build --no-isolation --outdir docs/_build/pr015-dist"
+  ],
+  "notes": "Product code unchanged across all after-fix suites. Adjacent metadata test procedures explicitly open the now-folded rows before checking their contents."
+}

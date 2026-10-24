@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="metadata" name="Metadata disclosure">
+    <mxGraphModel page="1" pageWidth="1100" pageHeight="380">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="folded" label="FOLDED (initial per copy)&#10;metadata hidden; right arrow" link="requirements-software.html#STV_SWR_064" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="40" y="120" width="320" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="expanded" label="EXPANDED&#10;metadata visible; down arrow" link="requirements-software.html#STV_SWR_064" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="700" y="120" width="320" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="show" source="folded" target="expanded" value="Click / Enter / Space&#10;show own rows; expanded=true" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="60" />
+              <mxPoint x="860" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hide" source="expanded" target="folded" value="Click / Enter / Space&#10;hide own rows; expanded=false" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="300" />
+              <mxPoint x="200" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

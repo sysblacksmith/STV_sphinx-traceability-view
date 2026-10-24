@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="persistent-details" name="Persistent details">
+    <mxGraphModel page="1" pageWidth="1400" pageHeight="850">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="empty" label="COLLECTION: empty&#10;per-view; configured capacity" link="requirements-software.html#STV_SWR_063" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="40" y="40" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="active" label="COLLECTION: active&#10;Need-ID insertion order; age fixed" link="requirements-software.html#STV_SWR_063" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="700" y="40" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="open" source="empty" target="active" value="new Details / append and load" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="clear" source="active" target="empty" value="Close all, last Close or pagehide&#10;remove entries" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="300" />
+              <mxPoint x="190" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="retain" source="active" target="active" value="reuse: focus, retain age&#10;new: evict oldest if full, append" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.8;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="90" />
+              <mxPoint x="1190" y="230" />
+              <mxPoint x="940" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object id="loading" label="ENTRY: loading&#10;fresh identity, safe shared transport" link="requirements-software.html#STV_SWR_063" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="40" y="510" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="ready" label="ENTRY: ready or error&#10;current live entry only; no focus theft" link="requirements-software.html#STV_SWR_063" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="510" y="510" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="removed" label="ENTRY: removed&#10;late completions ignored" link="requirements-software.html#STV_SWR_063" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
+            <mxGeometry x="1040" y="510" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="loaded" source="loading" target="ready" value="same entry live&#10;content or error" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="remove" source="ready" target="removed" value="Close, eviction or Close all" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cancel" source="loading" target="removed" value="remove while loading / invalidate entry" edge="1" parent="1" style="edgeStyle=none;html=0;endArrow=block;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="770" />
+              <mxPoint x="1190" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -9,7 +9,7 @@ from sphinx.util.osutil import relative_uri
 from sphinx_needs.data import SphinxNeedsData
 from .directives import TraceabilityView, ViewNode, visit_html
 from .._version import __version__
-from ..model import normalize
+from ..model import normalize, validate_details_limit, DETAILS_LIMIT_DEFAULT
 from ..graph import snapshot
 from ..detail_build import extract
 from ..bundle import emit, atomic
@@ -39,6 +39,7 @@ def prepare(app, builder):
     records = [record for entries in views.values() for record in entries]
     location = f'{records[0]["source"]}:{records[0]["line"]}'
     try:
+        details_limit = validate_details_limit(app.config.traceability_view_details_limit)
         needs = SphinxNeedsData(app.env).get_needs_view()
         declared = {t["directive"] for t in app._stv_declared_types}
         used = {n["type"] for n in needs.values()}
@@ -48,6 +49,7 @@ def prepare(app, builder):
                           any(not r["seeds"] for r in records))
         graph, hidden = snapshot(needs, model,
                                  builder.get_target_uri, app.config.project)
+        graph["details_limit"] = details_limit
         for record in records:
             for seed in record["seeds"]:
                 if seed not in graph["objects"]:
@@ -98,6 +100,7 @@ def finish(app, exception):
 def setup(app):
     app.setup_extension("sphinx_needs")
     app.add_config_value("traceability_view_model", None, "env", types=[dict, type(None)])
+    app.add_config_value("traceability_view_details_limit", DETAILS_LIMIT_DEFAULT, "env", types=[int])
     app.add_directive("traceability-view", TraceabilityView)
     app.add_node(ViewNode, html=(visit_html, None))
     app.connect("builder-inited", initialize)

@@ -1,0 +1,8 @@
+{
+  "limit": 3,
+  "order_before_clear": [
+    "BOX_09",
+    "BOX_01"
+  ],
+  "browser": "158.0.1"
+}

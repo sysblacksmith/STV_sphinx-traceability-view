@@ -108,7 +108,7 @@ The 200-node cap includes missing objects and the synthetic project root.
      - :need:`STV_SWR_043`, :need:`STV_SWR_044`; capacity Node case
    * - Laying out / successful completion
      - Current request token; valid finite nonoverlapping geometry
-     - Commit scene, page and expansion state together; close old details;
+     - Commit scene, page and expansion state together; close hover details; retain persistent boxes;
        restore focus without scrolling; commit the matching geometry snapshot;
        committed state.
        Preserve the current control within the view; fall back to the initiating
@@ -144,16 +144,16 @@ Reset does not relayout. See :need:`STV_SWR_056`, :need:`STV_SWR_058`,
 No states, guards, events, timers or transition topology change; this refines the
 existing layout/commit actions. The adjacent Draw.io/SVG topology is unchanged.
 
-Inspection lifecycle
---------------------
+Hover inspection lifecycle
+----------------------------
 
 Owner: ``frontend/src/inspect/inspect.js``. Initial and terminal state is closed.
 Each open increments a token; late fragment/position completions cannot insert
 into a different inspection. Promises cache by build identity and Need ID.
 The project root and missing targets never request details.
 Escape cancellation is observed at document scope for each view: pointer hover
-need not move keyboard focus into the view. Existing Details controls retain
-their local focus-restoring dismissal behavior.
+need not move keyboard focus into the view. Explicit Details activation cancels hover and opens/focuses the independent
+persistent collection. Escape affects hover only.
 
 .. list-table:: Inspection transitions
    :header-rows: 1
@@ -176,11 +176,10 @@ their local focus-restoring dismissal behavior.
      - Same connected trigger, no cancellation
      - Open details; loading state.
      - :need:`STV_SWR_050`; ``test_usability_smoke``
-   * - Closed or hover pending / explicit Details activation
-     - Resolved real Need
-     - ``open`` creates labeled nonmodal panel and loading message;
-       Floating UI owns position/listeners; loading state.
-     - :need:`STV_SWR_033`, :need:`STV_SWR_050`; ``test_offline_exploration``
+   * - Closed, pending or open / explicit Details activation
+     - Resolved Need; separate collection
+     - Cancel hover; persistent manager opens/focuses its box immediately.
+     - :need:`STV_SWR_063`; persistent details browser cases
    * - Loading / script registered
      - Current inspection token
      - Rebase URLs, namespace IDs and IDREFs, insert static host fragment;
@@ -246,3 +245,102 @@ pan/zoom transitions move the scene. No event, guard, action, ownership, timer o
 transition changes; the Draw.io/SVG state topology remains unchanged.
 Source: ``frontend/src/render/stv.css``; :need:`STV_SWR_062`,
 :need:`STV_TC_SY_062`. This presentation-only increment needs no diagram edits.
+
+Persistent inspection lifecycle
+--------------------------------
+
+Owner: ``frontend/src/inspect/persistent.js`` and ``collection.js``; renderer
+owns the dock/control wiring. Initial collection is empty; it is page-local and
+independent per view. Entry state is loading, ready/error or removed. Hover's
+timer/token/position listeners are not collection state.
+
+.. raw:: html
+
+   <object type="image/svg+xml" data="persistent-details.svg" style="width:100%;height:auto;aspect-ratio:1400/850" aria-label="Persistent detail collection and entry lifecycle">
+     <a href="persistent-details.svg">Open persistent details state diagram</a>
+   </object>
+
+.. list-table:: Persistent detail transitions
+   :header-rows: 1
+   :widths: 24 26 50
+
+   * - Event / guard
+     - Owner
+     - Action and destination
+   * - Details / ID already open
+     - Collection/inspector
+     - Focus and reveal existing Close; keep age and content; active collection.
+   * - Details / new ID, capacity available
+     - Inspector
+     - Append fresh entry, loading body and focus; active collection.
+   * - Details / new ID, full
+     - Collection/inspector
+     - Remove oldest live entry, append new entry; focus new Close. Old async
+       completion cannot insert because its entry identity is no longer live.
+   * - Close / live entry
+     - Inspector
+     - Remove only this entry; focus fresh node trigger or Close all if absent.
+   * - Close all
+     - Renderer/inspector
+     - Clear this collection, invalidate all live entries; focus Close all; empty.
+   * - Content completion / same live entry
+     - Inspector/content
+     - Restore safe unique-ID body, or explicit error; retain focus; ready/error.
+   * - Late completion / entry removed or replaced
+     - Inspector
+     - Ignore; do not insert, revive or focus any panel.
+   * - Graph commit, seed/overview/page, pan/zoom or Escape
+     - Renderer
+     - Close/cancel hover only; persistent collection stays unchanged. Commits
+       refresh associations with newly rendered Details triggers.
+   * - Document navigation/reload / pagehide
+     - Renderer/browser document
+     - Clear entries without restoring focus, including back-forward cache
+       suspension; late completions are ignored. Unload discards page-local state.
+
+Coverage: :need:`STV_TC_SW_049`, :need:`STV_TC_SW_050`, :need:`STV_TC_SY_063`,
+:need:`STV_TC_SY_064`. Source contracts: :need:`STV_SWR_063`,
+:need:`STV_SWR_064`, :need:`STV_SWR_065` and :ref:`STV_ADR_010`.
+
+
+Copied metadata disclosure
+----------------------------
+
+Owner: ``initializeMetadata`` in ``frontend/src/inspect/content.js``. Every new
+hover or persistent fragment starts **folded**. State is per copied Need table,
+independent from collection order, hover cancellation and other copies. Box reuse
+keeps this DOM and its current disclosure state; removal discards the handlers.
+
+.. raw:: html
+
+   <object type="image/svg+xml" data="detail-metadata.svg" style="width:100%;height:auto;aspect-ratio:1100/380" aria-label="Copied Need metadata disclosure">
+     <a href="detail-metadata.svg">Open metadata disclosure diagram</a>
+   </object>
+
+.. list-table:: Metadata disclosure transitions
+   :header-rows: 1
+   :widths: 20 30 50
+
+   * - State/event
+     - Guard
+     - Action/destination
+   * - New restored fragment
+     - Control has matching rows in its own Need table
+     - Assign unique IDs/ARIA; hide metadata, show right arrow; folded.
+   * - Folded / click, Enter or Space
+     - Owned control
+     - Show only this table's metadata, show down arrow, expanded=true; expanded.
+   * - Expanded / click, Enter or Space
+     - Owned control
+     - Hide only this table's metadata, show right arrow, expanded=false; folded.
+   * - Box reuse
+     - Existing entry
+     - Keep disclosure state and focus the box's Close control.
+   * - Fragment removal
+     - Hover closes or persistent entry is removed
+     - Discard DOM/handlers; a later new fragment starts folded.
+
+No matching rows means no actionable arrow is published. Header artifact-ID
+navigation uses its source URL and opens a new tab; ordinary copied-body
+fragment navigation remains local. Source: :need:`STV_SWR_064`,
+:need:`STV_SWR_016`; rendered verification: :need:`STV_TC_SY_065`.

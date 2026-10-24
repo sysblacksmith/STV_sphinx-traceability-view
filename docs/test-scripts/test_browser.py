@@ -76,10 +76,13 @@ def _exercise_usability(browser):
     assert not browser.find_elements(By.CSS_SELECTOR,'.stv-detail')
     browser.execute_script('arguments[0].focus()', details)
     details.send_keys(Keys.ENTER)
-    assert browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
+    assert browser.find_elements(By.CSS_SELECTOR, '.stv-persistent-detail')
     browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+    assert browser.find_elements(By.CSS_SELECTOR, '.stv-persistent-detail')
+    browser.find_element(By.CSS_SELECTOR,'.stv-persistent-detail button').send_keys(Keys.ENTER)
     assert not browser.find_elements(By.CSS_SELECTOR, '.stv-detail')
     assert browser.switch_to.active_element == details
+    browser.execute_script('arguments[0].scrollIntoView({block:"start"})',root)
     # Last, test each cancellation from the same reset viewport, with no
     # pointer departure after the action masking whether it cancels the timer.
     for selector in ('[aria-label="Pan right"]','.stv-groups button'):
@@ -174,6 +177,8 @@ def test_offline_exploration(browser, short_output, protocol):
             raise
         assert browser.find_elements(By.CSS_SELECTOR, ".stv-detail table")
         browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+        assert browser.find_elements(By.CSS_SELECTOR,'.stv-persistent-detail')
+        browser.find_element(By.CSS_SELECTOR,'.stv-persistent-detail button').send_keys(Keys.ENTER)
         wait.until(lambda d: not d.find_elements(By.CSS_SELECTOR, ".stv-detail"))
         assert browser.switch_to.active_element == inspect
         assert roots[0].find_element(By.CSS_SELECTOR, '.stv-node.stv-unaccepted .stv-id').text == 'LEAF_B'
@@ -402,6 +407,9 @@ def test_alternate_model_geometry_details_and_external(browser,short_output,prot
         browser.execute_script('arguments[0].focus()',part);part.send_keys(Keys.ENTER)
         wait.until(lambda d:'Static widget text' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
         panel=browser.find_element(By.CSS_SELECTOR,'.stv-detail')
+        metadata=panel.find_element(By.CSS_SELECTOR,'.needs_collapse')
+        assert metadata.get_attribute('aria-expanded')=='false'
+        browser.execute_script('arguments[0].click()',metadata)
         assert 'Fixture owner' in panel.text
         assert 'Resource unavailable offline' in panel.text
         assert not panel.find_elements(By.CSS_SELECTOR,'script,iframe,object,[onerror]')
@@ -463,7 +471,7 @@ def test_missing_placeholder_and_detail_error(browser,short_output,protocol):
         inspect=root.find_element(By.CSS_SELECTOR,'[aria-label="Details for ROOT_A"]')
         browser.execute_script('arguments[0].focus()',inspect);inspect.send_keys(Keys.ENTER)
         wait.until(lambda d:'Local detail asset unavailable' in d.find_element(By.CSS_SELECTOR,'.stv-detail').text)
-        browser.switch_to.active_element.send_keys(Keys.ESCAPE)
+        browser.find_element(By.CSS_SELECTOR,'.stv-persistent-detail button').send_keys(Keys.ENTER)
         wait.until(lambda d:not d.find_elements(By.CSS_SELECTOR,'.stv-detail'))
         for script,content in saved.items():script.write_bytes(content)
         inspect.send_keys(Keys.ENTER)

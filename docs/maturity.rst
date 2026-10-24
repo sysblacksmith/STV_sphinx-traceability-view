@@ -315,3 +315,35 @@ not_assessed. Executable definitions and results are linked from
 .. needtable::
    :filter: type in ['sysr', 'swr']
    :columns: id;title;verification_state;tags
+
+CR014 persistent details
+--------------------------
+
+The owner accepted the persistent per-view details amendment and clarified
+reuse, lifetime and configurable capacity. Concept round 12 and ADR 010 are
+accepted. The implementation passes all 156 distinct executable checks,
+including file/HTTP default/override capacity, loading races and the rebuilt
+30,000-record capacity fixture. The fresh wheel/source distribution passes
+clean-consumer checks. See :doc:`test-execution/cr014-details/index` for actual
+attempts, criterion review, source identity and retained failures. No release
+is started; unrelated draft designs, occurrence-mode deferral and publication
+gates retain their existing states.
+
+
+PR015 detail acceptance corrections
+--------------------------------------
+
+The owner reported narrow boxes, inert/unfolded metadata controls and a copied
+artifact-ID link returning to the view. :need:`STV_PR_015` records the causes and
+fix. Round 13 accepts the scoped design correction and regression case;
+:doc:`test-execution/pr015-details/index` retains the failing baseline and 127
+passing distinct development checks. The dock is now 720 px, copied metadata
+starts folded and toggles accessibly, and header IDs open actual source Needs.
+Owner acceptance retest is pending. Capacity and release qualification remain
+outside this correction; earlier results remain historical.
+
+
+The PR015 pane-frame follow-up marks the open dock's full boundary with a thin
+grey line and removes card shadows. Ten affected Firefox file/HTTP procedures
+pass; the current normal demo is rebuilt for owner retest. This CSS-only change
+does not imply a new full regression, capacity or release qualification.

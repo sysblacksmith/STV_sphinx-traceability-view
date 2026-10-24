@@ -327,3 +327,20 @@ The owner requested a visible grey marker at the existing clip edge, analysis
 and the full V-cycle fix. :need:`STV_PR_014` records the plan;
 :doc:`concept-reviews/round-11` owns scoped acceptance and
 :doc:`test-execution/pr014-boundary/index` retains actual execution evidence.
+
+CR014 persistent details decisions
+------------------------------------
+
+The owner selected per-view reuse/FIFO, persistence through graph changes and an
+author-configurable limit. :ref:`STV_CR_014` records the amendment;
+:doc:`concept-reviews/round-12` owns scoped concept acceptance and implementation
+feedback. Earlier hover and content obligations remain regression constraints.
+
+
+PR015 acceptance findings
+---------------------------
+
+The owner requested doubled detail width, folded metadata with working arrows
+and actual artifact navigation from header IDs. :need:`STV_PR_015` and
+:doc:`concept-reviews/round-13` record the scope and technical review. No new
+stakeholder scope or release authorization is inferred.

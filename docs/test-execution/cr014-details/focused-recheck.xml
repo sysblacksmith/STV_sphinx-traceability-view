@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="9" time="63.439" timestamp="2026-10-24T21:19:51.562305+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[None]" time="1.173"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[1]" time="1.104"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[3]" time="1.111"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]" time="10.032"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="assert False&#10; +  where False = execute_script(&quot;const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1&quot;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;acc78dd0-7a86-469f-9696-4f32ba68901d&quot;, element=&quot;b71f3837-5d7f-419f-91a8-aab2fa04b212&quot;)&gt;)&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;acc78dd0-7a86-469f-9696-4f32ba68901d&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="acc78dd0-7a86-469f-9696-4f32ba68901d")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ejlvezwk')
+protocol = 'file', limit = None
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+            toolbar(browser,root,'Reset viewport');browser.execute_script('arguments[0].scrollIntoView({block:"center"})',node);ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            assert panel_ids(browser,root)==IDS[:3]
+            ids=browser.execute_script("return [...document.querySelectorAll('[id]')].map(n=&gt;n.id)");assert len(ids)==len(set(ids))
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE);assert not browser.find_elements(By.CSS_SELECTOR,'.stv-hover-detail')
+            assert panel_ids(browser,root)==IDS[:3]
+            panel(browser,root,IDS[1]).find_element(By.CSS_SELECTOR,'button').send_keys(Keys.ENTER)
+            open_box(browser,root,IDS[3]);assert panel_ids(browser,root)==[IDS[0],IDS[2],IDS[3]]
+            for id in IDS[4:]:open_box(browser,root,id)
+            expected=IDS[2:] if limit is None else IDS[9:]
+            assert panel_ids(browser,root)==expected
+            panel(browser,root,expected[0]).find_element(By.CSS_SELECTOR,'button').click()
+            # Manual close frees one slot; reopening appends without evicting.
+            open_box(browser,root,expected[0]);expected=expected[1:]+expected[:1];assert panel_ids(browser,root)==expected
+            browser.execute_script('arguments[0].focus()',panel(browser,root,expected[0]));open_box(browser,root,IDS[1]);expected=expected[1:]+[IDS[1]]
+            assert panel_ids(browser,root)==expected
+            assert browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)==world
+            assert browser.execute_script("const r=arguments[0].getBoundingClientRect(),b=arguments[0].querySelector('.stv-close-all').getBoundingClientRect();return r.right-b.right&lt;20&amp;&amp;b.right&lt;=r.right",root)
+&gt;           assert browser.execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1",root)
+E           assert False
+E            +  where False = execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1", &lt;selenium.webdriver.remote.webelement.WebElement (session="acc78dd0-7a86-469f-9696-4f32ba68901d", element="b71f3837-5d7f-419f-91a8-aab2fa04b212")&gt;)
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="acc78dd0-7a86-469f-9696-4f32ba68901d")&gt;.execute_script
+
+docs\test-scripts\test_persistent_details.py:96: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]" time="12.199"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="assert False&#10; +  where False = execute_script(&quot;const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1&quot;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;af999819-64d4-4782-b09d-79e835f1cffa&quot;, element=&quot;1ace1783-c8a0-4d32-8e25-7f7a345491e5&quot;)&gt;)&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;af999819-64d4-4782-b09d-79e835f1cffa&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="af999819-64d4-4782-b09d-79e835f1cffa")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-tgynfctl')
+protocol = 'http', limit = None
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+            toolbar(browser,root,'Reset viewport');browser.execute_script('arguments[0].scrollIntoView({block:"center"})',node);ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            assert panel_ids(browser,root)==IDS[:3]
+            ids=browser.execute_script("return [...document.querySelectorAll('[id]')].map(n=&gt;n.id)");assert len(ids)==len(set(ids))
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE);assert not browser.find_elements(By.CSS_SELECTOR,'.stv-hover-detail')
+            assert panel_ids(browser,root)==IDS[:3]
+            panel(browser,root,IDS[1]).find_element(By.CSS_SELECTOR,'button').send_keys(Keys.ENTER)
+            open_box(browser,root,IDS[3]);assert panel_ids(browser,root)==[IDS[0],IDS[2],IDS[3]]
+            for id in IDS[4:]:open_box(browser,root,id)
+            expected=IDS[2:] if limit is None else IDS[9:]
+            assert panel_ids(browser,root)==expected
+            panel(browser,root,expected[0]).find_element(By.CSS_SELECTOR,'button').click()
+            # Manual close frees one slot; reopening appends without evicting.
+            open_box(browser,root,expected[0]);expected=expected[1:]+expected[:1];assert panel_ids(browser,root)==expected
+            browser.execute_script('arguments[0].focus()',panel(browser,root,expected[0]));open_box(browser,root,IDS[1]);expected=expected[1:]+[IDS[1]]
+            assert panel_ids(browser,root)==expected
+            assert browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)==world
+            assert browser.execute_script("const r=arguments[0].getBoundingClientRect(),b=arguments[0].querySelector('.stv-close-all').getBoundingClientRect();return r.right-b.right&lt;20&amp;&amp;b.right&lt;=r.right",root)
+&gt;           assert browser.execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1",root)
+E           assert False
+E            +  where False = execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1", &lt;selenium.webdriver.remote.webelement.WebElement (session="af999819-64d4-4782-b09d-79e835f1cffa", element="1ace1783-c8a0-4d32-8e25-7f7a345491e5")&gt;)
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="af999819-64d4-4782-b09d-79e835f1cffa")&gt;.execute_script
+
+docs\test-scripts\test_persistent_details.py:96: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]" time="10.051"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="assert False&#10; +  where False = execute_script(&quot;const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1&quot;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;b18bde23-b052-40b2-ba0d-38b7b6a560bf&quot;, element=&quot;dff725cb-ee50-4768-82af-461bc5d183b0&quot;)&gt;)&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;b18bde23-b052-40b2-ba0d-38b7b6a560bf&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="b18bde23-b052-40b2-ba0d-38b7b6a560bf")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-5u2hw5rd')
+protocol = 'file', limit = 3
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+            toolbar(browser,root,'Reset viewport');browser.execute_script('arguments[0].scrollIntoView({block:"center"})',node);ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            assert panel_ids(browser,root)==IDS[:3]
+            ids=browser.execute_script("return [...document.querySelectorAll('[id]')].map(n=&gt;n.id)");assert len(ids)==len(set(ids))
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE);assert not browser.find_elements(By.CSS_SELECTOR,'.stv-hover-detail')
+            assert panel_ids(browser,root)==IDS[:3]
+            panel(browser,root,IDS[1]).find_element(By.CSS_SELECTOR,'button').send_keys(Keys.ENTER)
+            open_box(browser,root,IDS[3]);assert panel_ids(browser,root)==[IDS[0],IDS[2],IDS[3]]
+            for id in IDS[4:]:open_box(browser,root,id)
+            expected=IDS[2:] if limit is None else IDS[9:]
+            assert panel_ids(browser,root)==expected
+            panel(browser,root,expected[0]).find_element(By.CSS_SELECTOR,'button').click()
+            # Manual close frees one slot; reopening appends without evicting.
+            open_box(browser,root,expected[0]);expected=expected[1:]+expected[:1];assert panel_ids(browser,root)==expected
+            browser.execute_script('arguments[0].focus()',panel(browser,root,expected[0]));open_box(browser,root,IDS[1]);expected=expected[1:]+[IDS[1]]
+            assert panel_ids(browser,root)==expected
+            assert browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)==world
+            assert browser.execute_script("const r=arguments[0].getBoundingClientRect(),b=arguments[0].querySelector('.stv-close-all').getBoundingClientRect();return r.right-b.right&lt;20&amp;&amp;b.right&lt;=r.right",root)
+&gt;           assert browser.execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1",root)
+E           assert False
+E            +  where False = execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1", &lt;selenium.webdriver.remote.webelement.WebElement (session="b18bde23-b052-40b2-ba0d-38b7b6a560bf", element="dff725cb-ee50-4768-82af-461bc5d183b0")&gt;)
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="b18bde23-b052-40b2-ba0d-38b7b6a560bf")&gt;.execute_script
+
+docs\test-scripts\test_persistent_details.py:96: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]" time="12.330"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties><failure message="assert False&#10; +  where False = execute_script(&quot;const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1&quot;, &lt;selenium.webdriver.remote.webelement.WebElement (session=&quot;4677007b-c555-477c-9a58-31000804f43a&quot;, element=&quot;24441b41-3d16-4530-b524-44b4f848d3de&quot;)&gt;)&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;4677007b-c555-477c-9a58-31000804f43a&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="4677007b-c555-477c-9a58-31000804f43a")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-pbvp7sfk')
+protocol = 'http', limit = 3
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_050','STV_SWR_063','STV_SWR_064','STV_SWR_065')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    @pytest.mark.parametrize('limit',[None,3])
+    def test_persistent_stack_fifo_scope_navigation_and_responsive_layout(browser,short_output,protocol,limit):
+        source=short_output/'source';prepare_source(source,limit);result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(1600,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))==2)
+            root,other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')
+            world=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)
+            for id in IDS[:3]:open_box(browser,root,id)
+            wait.until(lambda d:'Long rendered' in panel(browser,root,IDS[0]).text)
+            first=panel(browser,root,IDS[0]);identity=first.get_attribute('id');open_box(browser,root,IDS[0])
+            assert panel(browser,root,IDS[0]).get_attribute('id')==identity
+            assert panel_ids(browser,root)==IDS[:3]
+            assert browser.execute_script("return document.activeElement.closest('.stv-persistent-detail').dataset.needId")==IDS[0]
+            # Hover has its own timer/panel and consumes no persistent slot.
+            node=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].find(n=&gt;JSON.parse(n.dataset.key)[1]===arguments[1])",root,IDS[0])
+            toolbar(browser,root,'Reset viewport');browser.execute_script('arguments[0].scrollIntoView({block:"center"})',node);ActionChains(browser).move_to_element(node).perform();wait.until(lambda d:d.find_elements(By.CSS_SELECTOR,'.stv-hover-detail input'))
+            assert panel_ids(browser,root)==IDS[:3]
+            ids=browser.execute_script("return [...document.querySelectorAll('[id]')].map(n=&gt;n.id)");assert len(ids)==len(set(ids))
+            browser.switch_to.active_element.send_keys(Keys.ESCAPE);assert not browser.find_elements(By.CSS_SELECTOR,'.stv-hover-detail')
+            assert panel_ids(browser,root)==IDS[:3]
+            panel(browser,root,IDS[1]).find_element(By.CSS_SELECTOR,'button').send_keys(Keys.ENTER)
+            open_box(browser,root,IDS[3]);assert panel_ids(browser,root)==[IDS[0],IDS[2],IDS[3]]
+            for id in IDS[4:]:open_box(browser,root,id)
+            expected=IDS[2:] if limit is None else IDS[9:]
+            assert panel_ids(browser,root)==expected
+            panel(browser,root,expected[0]).find_element(By.CSS_SELECTOR,'button').click()
+            # Manual close frees one slot; reopening appends without evicting.
+            open_box(browser,root,expected[0]);expected=expected[1:]+expected[:1];assert panel_ids(browser,root)==expected
+            browser.execute_script('arguments[0].focus()',panel(browser,root,expected[0]));open_box(browser,root,IDS[1]);expected=expected[1:]+[IDS[1]]
+            assert panel_ids(browser,root)==expected
+            assert browser.execute_script("return [...arguments[0].querySelectorAll('.stv-node')].map(n=&gt;[n.dataset.key,n.style.left,n.style.top])",root)==world
+            assert browser.execute_script("const r=arguments[0].getBoundingClientRect(),b=arguments[0].querySelector('.stv-close-all').getBoundingClientRect();return r.right-b.right&lt;20&amp;&amp;b.right&lt;=r.right",root)
+&gt;           assert browser.execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1",root)
+E           assert False
+E            +  where False = execute_script("const v=arguments[0].querySelector('.stv-viewport').getBoundingClientRect(),s=arguments[0].querySelector('.stv-details-stack').getBoundingClientRect();return s.left&gt;=v.right-1", &lt;selenium.webdriver.remote.webelement.WebElement (session="4677007b-c555-477c-9a58-31000804f43a", element="24441b41-3d16-4530-b524-44b4f848d3de")&gt;)
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="4677007b-c555-477c-9a58-31000804f43a")&gt;.execute_script
+
+docs\test-scripts\test_persistent_details.py:96: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[file]" time="7.649"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[http]" time="7.456"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase></testsuite></testsuites>

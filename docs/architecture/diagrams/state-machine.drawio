@@ -108,22 +108,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <object id="closed" label="DETAILS: closed&#10;no panel or position listeners" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
+        <object id="closed" label="HOVER: closed&#10;no panel or position listeners" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="30" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="loading" label="DETAILS: loading&#10;local classic script; build-keyed cache" link="requirements-software.html#STV_SWR_017" linkTarget="_top">
+        <object id="loading" label="HOVER: loading&#10;local classic script; build-keyed cache" link="requirements-software.html#STV_SWR_017" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="490" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="open" label="DETAILS: open or error&#10;static rich body / explicit failure" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
+        <object id="open" label="HOVER: open or error&#10;static rich body / explicit failure" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="950" y="880" width="260" height="95" as="geometry" />
           </mxCell>
         </object>
-        <object id="hover" label="DETAILS: hover pending&#10;1000 ms continuous node hover" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
+        <object id="hover" label="HOVER: hover pending&#10;1000 ms continuous node hover" link="requirements-software.html#STV_SWR_050" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dceaf7;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="30" y="1160" width="260" height="95" as="geometry" />
           </mxCell>
@@ -139,7 +139,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dh3" value="1000 ms or explicit Details" source="hover" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+        <mxCell id="dh3" value="1000 ms continuous hover" source="hover" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1300" y="1207" />
@@ -148,13 +148,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="d1" value="explicit Details / immediate" source="closed" target="loading" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="d2" value="current token&#10;fragment or error" source="loading" target="open" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d3" value="Escape, Close, departure, scene or viewport change" source="open" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.8;entryY=1;">
+        <mxCell id="d3" value="Escape, Close, departure, scene, viewport&#10;or explicit Details" source="open" target="closed" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=13;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.8;entryY=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1080" y="1070" />

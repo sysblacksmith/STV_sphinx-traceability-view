@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="19.274" timestamp="2026-10-24T21:50:10.067116+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_persistent_details" name="test_detail_metadata_controls_width_and_artifact_navigation[file]" time="8.130"><properties><property name="requirement_ids" value="STV_SWR_016,STV_SWR_018,STV_SWR_064" /></properties><failure message="AssertionError: {'width': 360, 'initially_folded': False, 'artifact_href': 'file:///C:/Users/fragg/AppData/Local/Temp/stv-2mcdvlph/htm...-BOX_00', 'original_href': 'file:///C:/Users/fragg/AppData/Local/Temp/stv-2mcdvlph/html/requirements.html#BOX_00', ...}&#10;assert (360 == 720)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="f25f6bd4-dbeb-4dc6-ac70-668a121210f3")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-2mcdvlph')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_016','STV_SWR_018','STV_SWR_064')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_detail_metadata_controls_width_and_artifact_navigation(browser,short_output,protocol):
+        source=short_output/'source';prepare_source(source)
+        needs=source/'requirements.rst';needs.write_text(needs.read_text().replace(':status: accepted',':status: accepted\n   :tags: acceptance'),encoding='utf-8')
+        result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(2200,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            root=wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            open_box(browser,root,IDS[0]);p=wait.until(lambda d:panel(d,root,IDS[0]))
+            wait.until(lambda d:p.find_elements(By.CSS_SELECTOR,'table.need .needs_collapse'))
+            row=p.find_element(By.CSS_SELECTOR,'tr.meta');toggle=p.find_element(By.CSS_SELECTOR,'.needs_collapse')
+            header=p.find_element(By.CSS_SELECTOR,'.needs-id a')
+            original=p.find_element(By.CSS_SELECTOR,':scope&gt;a').get_attribute('href')
+            observed={'width':browser.execute_script('return arguments[0].querySelector(".stv-details-stack").getBoundingClientRect().width',root),'initially_folded':not row.is_displayed(),'artifact_href':header.get_attribute('href'),'original_href':original}
+            browser.execute_script('arguments[0].click()',toggle);observed['opens']=row.is_displayed()
+            browser.execute_script('arguments[0].click()',toggle);observed['closes']=not row.is_displayed()
+&gt;           assert observed['width']==720 and observed['initially_folded'] and observed['opens'] and observed['closes'] and observed['artifact_href']==original,observed
+E           AssertionError: {'width': 360, 'initially_folded': False, 'artifact_href': 'file:///C:/Users/fragg/AppData/Local/Temp/stv-2mcdvlph/htm...-BOX_00', 'original_href': 'file:///C:/Users/fragg/AppData/Local/Temp/stv-2mcdvlph/html/requirements.html#BOX_00', ...}
+E           assert (360 == 720)
+
+docs\test-scripts\test_persistent_details.py:193: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_detail_metadata_controls_width_and_artifact_navigation[http]" time="10.797"><properties><property name="requirement_ids" value="STV_SWR_016,STV_SWR_018,STV_SWR_064" /></properties><failure message="AssertionError: {'width': 360, 'initially_folded': False, 'artifact_href': 'http://127.0.0.1:65169/html/index.html#stv-1bc04b5291c26a4...b0476b85bfbdfc6e6-0-persistent-1-BOX_00', 'original_href': 'http://127.0.0.1:65169/html/requirements.html#BOX_00', ...}&#10;assert (360 == 720)">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="4285ea5d-fecc-4b9d-a4fe-d2224777f138")&gt;
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-lj0clqkw')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_016','STV_SWR_018','STV_SWR_064')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_detail_metadata_controls_width_and_artifact_navigation(browser,short_output,protocol):
+        source=short_output/'source';prepare_source(source)
+        needs=source/'requirements.rst';needs.write_text(needs.read_text().replace(':status: accepted',':status: accepted\n   :tags: acceptance'),encoding='utf-8')
+        result=build(source,short_output/'html');assert result.returncode==0,result.stdout+result.stderr
+        with published_url(short_output/'html',protocol) as url:
+            browser.set_window_size(2200,1200);browser.get(url);wait=WebDriverWait(browser,20)
+            root=wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-view[data-stv-revision="0"]'))
+            open_box(browser,root,IDS[0]);p=wait.until(lambda d:panel(d,root,IDS[0]))
+            wait.until(lambda d:p.find_elements(By.CSS_SELECTOR,'table.need .needs_collapse'))
+            row=p.find_element(By.CSS_SELECTOR,'tr.meta');toggle=p.find_element(By.CSS_SELECTOR,'.needs_collapse')
+            header=p.find_element(By.CSS_SELECTOR,'.needs-id a')
+            original=p.find_element(By.CSS_SELECTOR,':scope&gt;a').get_attribute('href')
+            observed={'width':browser.execute_script('return arguments[0].querySelector(".stv-details-stack").getBoundingClientRect().width',root),'initially_folded':not row.is_displayed(),'artifact_href':header.get_attribute('href'),'original_href':original}
+            browser.execute_script('arguments[0].click()',toggle);observed['opens']=row.is_displayed()
+            browser.execute_script('arguments[0].click()',toggle);observed['closes']=not row.is_displayed()
+&gt;           assert observed['width']==720 and observed['initially_folded'] and observed['opens'] and observed['closes'] and observed['artifact_href']==original,observed
+E           AssertionError: {'width': 360, 'initially_folded': False, 'artifact_href': 'http://127.0.0.1:65169/html/index.html#stv-1bc04b5291c26a4...b0476b85bfbdfc6e6-0-persistent-1-BOX_00', 'original_href': 'http://127.0.0.1:65169/html/requirements.html#BOX_00', ...}
+E           assert (360 == 720)
+
+docs\test-scripts\test_persistent_details.py:193: AssertionError</failure></testcase></testsuite></testsuites>

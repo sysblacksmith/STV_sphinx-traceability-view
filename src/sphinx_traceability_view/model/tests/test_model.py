@@ -75,3 +75,17 @@ def test_classified_model_rejects_invalid_selectors(placement,path):
     # Remove the other owner map when it would depend on the removed tag map.
     model['types']['run']={'level':'software_runs'}
     with pytest.raises(ValueError,match=path):normalize(CLASSIFIED_TYPES,CLASSIFIED_LINKS,model)
+
+
+from sphinx_traceability_view.model import validate_details_limit, DETAILS_LIMIT_DEFAULT
+
+@pytest.mark.requirements('STV_SWR_065')
+def test_details_limit_defaults_and_exact_bounds():
+    assert DETAILS_LIMIT_DEFAULT==10 and validate_details_limit()==10
+    for value in [1,3,10,9007199254740991]:assert validate_details_limit(value)==value
+
+@pytest.mark.requirements('STV_SWR_065')
+@pytest.mark.parametrize('value',[0,-1,True,False,'3',1.0,None,9007199254740992])
+def test_details_limit_rejects_invalid_author_values(value):
+    with pytest.raises(ValueError,match='traceability_view_details_limit'):
+        validate_details_limit(value)

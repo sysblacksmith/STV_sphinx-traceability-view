@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.160" timestamp="2026-10-24T21:15:36.752685+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="" name="docs.test-scripts.test_persistent_details" time="0.000"><error message="collection failure">.venv-implementation\Lib\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+.venv-implementation\Lib\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+docs\_build\tooling\python313\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1404: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1369: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1340: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv-implementation\Lib\site-packages\_pytest\assertion\rewrite.py:179: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-implementation\Lib\site-packages\_pytest\assertion\rewrite.py:348: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+docs\_build\tooling\python313\Lib\ast.py:50: in parse
+    return compile(source, filename, mode, flags,
+E     File "D:\Dropbox\MikroContr_Projects\STV_sphinx-traceability-view\docs\test-scripts\test_persistent_details.py", line 145
+E       browser.execute_script('persistentHarness.calls[1].resolve('&lt;label for="field"&gt;New A&lt;/label&gt;&lt;input id="field"&gt;&lt;p&gt;READY NEW A&lt;/p&gt;')')
+E                                                                             ^
+E   SyntaxError: invalid syntax</error></testcase></testsuite></testsuites>
