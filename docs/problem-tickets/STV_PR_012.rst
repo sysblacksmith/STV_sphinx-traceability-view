@@ -1,5 +1,5 @@
-Problem 12: Limited automated validation and artifact provenance
-================================================================================
+STV_PR_012: Limited automated validation and artifact provenance
+================================================================
 
 .. problem_report:: Limited automated validation and artifact provenance
    :id: STV_PR_012

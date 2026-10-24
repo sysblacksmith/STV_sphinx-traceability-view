@@ -1,5 +1,5 @@
-Problem 6: Detail tooltips fail on long Windows paths
-================================================================================
+STV_PR_006: Detail tooltips fail on long Windows paths
+======================================================
 
 .. problem_report:: Detail tooltips fail on long Windows paths
    :id: STV_PR_006

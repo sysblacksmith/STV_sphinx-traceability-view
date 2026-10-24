@@ -28,6 +28,14 @@ installation and a minimal integration example.
 
 .. toctree::
    :maxdepth: 2
+   :caption: Scope management
+
+   Change Requests <change-requests/index>
+   Problem Tickets <problem-tickets/index>
+   Project Metrics <project-metrics>
+
+.. toctree::
+   :maxdepth: 2
    :caption: Requirements
 
    requirements-stakeholder

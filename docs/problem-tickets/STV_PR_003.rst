@@ -1,5 +1,5 @@
-Problem 3: Increase view height
-===============================
+STV_PR_003: Increase view height
+================================
 
 .. problem_report:: Increase view height
    :id: STV_PR_003

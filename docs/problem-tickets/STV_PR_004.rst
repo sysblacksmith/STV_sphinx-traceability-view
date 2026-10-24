@@ -1,5 +1,5 @@
-Problem 4: Delay hover details
-==============================
+STV_PR_004: Delay hover details
+===============================
 
 .. problem_report:: Delay hover details
    :id: STV_PR_004

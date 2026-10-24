@@ -1,4 +1,4 @@
-Change requests
+Change Requests
 ===============
 
 Records use stable project-prefixed sequence numbers in original request order,

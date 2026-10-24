@@ -1,5 +1,5 @@
-Problem 5: Order relationship controls by vertical direction
-================================================================================
+STV_PR_005: Order relationship controls by vertical direction
+=============================================================
 
 .. problem_report:: Order relationship controls by vertical direction
    :id: STV_PR_005

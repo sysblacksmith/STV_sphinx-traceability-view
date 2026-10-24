@@ -1,5 +1,5 @@
-Problem 2: Direct readable routes
-=================================
+STV_PR_002: Direct readable routes
+==================================
 
 .. problem_report:: Direct readable routes
    :id: STV_PR_002

@@ -1,8 +1,8 @@
-{{REPORT_TITLE}}
-{{REPORT_TITLE_UNDERLINE}}
+{{REPORT_ID}}: {{REPORT_TITLE}}
+{{REPORT_CHAPTER_UNDERLINE}}
 
 .. problem_report:: {{REPORT_TITLE}}
-   :id: STV_PR_{{NEXT_UNUSED_NUMBER}}
+   :id: {{REPORT_ID}}
    :status: new
    :basis: owner
    :evidence: docs/problem-tickets/{{REPORT_ID}}.rst

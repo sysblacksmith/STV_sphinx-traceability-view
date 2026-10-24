@@ -1,5 +1,5 @@
-Problem 7: Authored detail transport attributes bypass resource policy
-======================================================================
+STV_PR_007: Authored detail transport attributes bypass resource policy
+=======================================================================
 
 .. problem_report:: Authored detail transport attributes bypass resource policy
    :id: STV_PR_007

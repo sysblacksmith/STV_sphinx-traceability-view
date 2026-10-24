@@ -1,5 +1,5 @@
-Problem 11: Incremental output retains obsolete published data
-================================================================================
+STV_PR_011: Incremental output retains obsolete published data
+==============================================================
 
 .. problem_report:: Incremental output retains obsolete published data
    :id: STV_PR_011

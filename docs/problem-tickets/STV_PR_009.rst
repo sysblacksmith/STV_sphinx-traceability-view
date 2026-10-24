@@ -1,5 +1,5 @@
-Problem 9: Build and test environments contain advisory-matched dependencies
-====================================================================================================
+STV_PR_009: Build and test environments contain advisory-matched dependencies
+=============================================================================
 
 .. problem_report:: Build and test environments contain advisory-matched dependencies
    :id: STV_PR_009

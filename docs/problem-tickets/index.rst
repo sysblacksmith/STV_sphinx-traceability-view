@@ -1,5 +1,5 @@
-User problem reports
-====================
+Problem Tickets
+===============
 
 This folder, ``docs/problem-tickets/``, is the canonical handover location for user
 issues. Add a report named ``STV_PR_<NNN>.rst`` and keep screenshots/logs

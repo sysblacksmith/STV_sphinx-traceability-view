@@ -1,5 +1,5 @@
-Problem 10: Source archives include execution logs despite exclusion
-================================================================================
+STV_PR_010: Source archives include execution logs despite exclusion
+====================================================================
 
 .. problem_report:: Source archives include execution logs despite exclusion
    :id: STV_PR_010

@@ -1,5 +1,5 @@
-Problem 8: Historical distributions omit complete license materials
-====================================================================================================
+STV_PR_008: Historical distributions omit complete license materials
+====================================================================
 
 .. problem_report:: Historical distributions omit complete license materials
    :id: STV_PR_008

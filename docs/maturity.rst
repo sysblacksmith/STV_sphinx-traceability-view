@@ -3,8 +3,8 @@ Project maturity
 
 This is the single location for the current project maturity summary and
 links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
-status metadata remain authoritative for individual artifacts; the charts
-below read those fields rather than duplicating them in prose.
+status metadata remain authoritative for individual artifacts. The charts in
+:doc:`project-metrics` read those fields directly.
 
 PRSA-006 local preparation; hosted hardening pending
 --------------------------------------------------------------------------------
@@ -242,58 +242,6 @@ separate-occurrence mode, touch and additional platforms are later scope.
 Implementation checks are specified in :doc:`verification-plan`; scope decisions
 and their original owner evidence remain in :doc:`review` and :doc:`sources`.
 
-Requirement status
-------------------
-
-Status counts are calculated from the requirements on each documentation build.
-
-.. container:: requirement-status-charts
-
-   .. container:: requirement-status-card
-
-      **Stakeholder requirements**
-
-      .. status-pie:: shr
-
-      **Total:** :need_count:`type == 'shr'`
-
-   .. container:: requirement-status-card
-
-      **System requirements**
-
-      .. status-pie:: sysr
-
-      **Total:** :need_count:`type == 'sysr'`
-
-   .. container:: requirement-status-card
-
-      **Software requirements**
-
-      .. status-pie:: swr
-
-      **Total:** :need_count:`type == 'swr'`
-
-Architecture element status
----------------------------
-
-.. container:: requirement-status-charts architecture-status-charts
-
-   .. container:: requirement-status-card
-
-      **System elements**
-
-      .. status-pie:: syse
-
-      **Total:** :need_count:`type == 'syse'`
-
-   .. container:: requirement-status-card
-
-      **Software elements**
-
-      .. status-pie:: swe
-
-      **Total:** :need_count:`type == 'swe'`
-
 Review and lifecycle records
 -----------------------------
 
@@ -302,8 +250,6 @@ Review and lifecycle records
 
    concept-review
    concept-reviews/documentation-reorganization
-   change-requests/index
-   problem-tickets/index
    implementation-review
 
 Maintenance rule
