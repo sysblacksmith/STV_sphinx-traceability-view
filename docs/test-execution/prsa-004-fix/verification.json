@@ -1,0 +1,17 @@
+{
+  "baseline": "82448c98ed4d13db8ef5f9be7def375fc7662f8a",
+  "scope": "PRSA-004 development remediation; no release",
+  "source_sha256": {
+    "pyproject.toml": "4c8677c69ea8b4a131005f2b2f34d689cc221c448b728b8f0e807c8ad4f07c7d",
+    "hatch_build.py": "b83ab07b7e059223c9c01788efed3c3ed135c1d897ab9b0f6642fd41a89bf8e1",
+    "docs/test-scripts/test_sdist.py": "992b14c538f482e0563e065d0a26e0ac71d6376f3b3172f84532d5822cb98e37",
+    "docs/test-scripts/test_package.py": "c61cb75dd842e52ae7d8172d7af186b78f9290866c2f705f5587765f058992af"
+  },
+  "commands": [
+    ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_sdist.py -q --junitxml=docs/test-execution/prsa-004-fix/before.xml (before configuration fix)",
+    ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_sdist.py -q --junitxml=docs/test-execution/prsa-004-fix/after.xml (with STV_SDIST_RECORD=docs/test-execution/prsa-004-fix/archive-check)",
+    ".venv-implementation/Scripts/python.exe -m build --no-isolation --outdir docs/_build/prsa004-dist",
+    ".venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_package.py -q --junitxml=docs/test-execution/prsa-004-fix/package.xml (with STV_WHEEL=the rebuilt development wheel and STV_CONSUMER_RECORD=docs/test-execution/prsa-004-fix/consumer)"
+  ],
+  "environment": "Existing patched implementation Python 3.13.17, Hatchling 1.27.0 and pytest 9.1.1; offline runtime wheelhouse retained from PRSA-003"
+}

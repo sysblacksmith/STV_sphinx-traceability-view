@@ -256,3 +256,17 @@ Pillow is a documentation/plotting dependency, not a base runtime dependency.
 The Python 3.10-compatible runtime wheelhouse is refreshed separately and
 checked through an offline installed-wheel host. Historical environment logs
 remain evidence rather than being updated to the new package versions.
+
+Source distribution boundary
+--------------------------------------------------------------------------------
+
+The sdist allowlist in ``pyproject.toml`` selects implementation and browser
+sources, prepared runtime assets, audited notices, lockfiles and build inputs.
+Hatch ignores VCS file-selection rules for this target, so log-retention
+negations cannot widen the archive. Python caches/bytecode are excluded within
+selected directories. Engineering documentation and execution evidence remain
+in the repository; source packages are for rebuilding the installable extension.
+Hatch's generated package metadata and standard metadata files may accompany
+these inputs. :need:`STV_PR_010` and :need:`STV_TC_SDIST_BOUNDARY` retain the
+cause and actual archive/rebuilt-wheel regression evidence. Runtime behavior,
+state-machine transitions and accepted requirement meanings are unchanged.

@@ -6,6 +6,15 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts; the charts
 below read those fields rather than duplicating them in prose.
 
+PRSA-004 source archive remediation
+--------------------------------------------------------------------------------
+
+:need:`STV_PR_010` records the authorized source-archive boundary fix.
+:doc:`test-execution/prsa-004-fix/index` retains the before-fix leaked-log
+reproduction, passing actual-archive regression and offline rebuilt-wheel host
+check. The revised packaging policy and new test design await owner review;
+requirement verification is unchanged. No release is started.
+
 PRSA-001 and PRSA-003 remediation
 --------------------------------------------------------------------------------
 

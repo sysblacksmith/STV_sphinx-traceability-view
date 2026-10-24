@@ -2623,7 +2623,7 @@ STV_TC_F988267D01C9: clean wheel host
    :priority: unassigned
    :verification_state: not_assessed
    :verifies: STV_SHR_042, STV_SHR_046, STV_SWR_042, STV_SWR_046, STV_SYS_009
-   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD, STV_TE_23CFB2E2F59258A0, STV_TE_7BEB3B1B6625A5DC, STV_TE_01F92BEF833F1EDE, STV_TE_E9C945EDF4A0769F, STV_TE_9AFC30AFCB2544CA
+   :executed_by: STV_TE_78A7F282F37C6E00, STV_TE_61BD7D777495C79E, STV_TE_46FCDBE70FFEE8BD, STV_TE_23CFB2E2F59258A0, STV_TE_7BEB3B1B6625A5DC, STV_TE_01F92BEF833F1EDE, STV_TE_E9C945EDF4A0769F, STV_TE_9AFC30AFCB2544CA, STV_TE_8C0DFF558A66DCA0
    :last_result: passed
 
    **Level:** System packaging integration.
@@ -3154,3 +3154,41 @@ STV_TC_RUNTIME310: Patched offline distribution remains usable on Python 3.10
 
    **Evidence:** Actual result in ``runtime310.json`` and source/environment identity
    in :doc:`../test-execution/prsa-001-003-fix/index`. Design review is pending.
+
+STV_TC_SDIST_BOUNDARY: Actual source archive respects the distribution boundary
+================================================================================
+
+.. test_case:: Actual source archive respects the distribution boundary
+   :id: STV_TC_SDIST_BOUNDARY
+   :status: draft
+   :tags: release_initial, test_system
+   :basis: documented
+   :evidence: docs/test-scripts/test_sdist.py
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SYS_009, STV_SWR_042, STV_SWR_046
+   :executed_by: STV_TE_053E27C9576BC49A, STV_TE_3F0DEB05F990600D
+   :last_result: passed
+
+   **Level:** Packaging integration.
+
+   **Preconditions and inputs:** Existing implementation environment and
+   frontend/legal assets. The test copies build inputs to an isolated source
+   tree and seeds local-only evidence/cache/tool files, including execution
+   logs subject to root and nested ignore negations.
+
+   **Executable selector:** ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``.
+
+   **Invocation:** ``.venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_sdist.py -q``.
+
+   **Procedure and expected outcomes:** Build the actual source archive and
+   its wheel using the normal build frontend. Inspect tar members and content;
+   require no seeded evidence or local-only sentinel bytes, and require source,
+   legal and build inputs. Compare rebuilt wheel browser assets and notices
+   byte-for-byte with their source archive members. The separate existing
+   installed-wheel case verifies an isolated offline consumer.
+
+   **Evidence:** Retain JUnit/log results, source identity, artifact hashes and
+   member inventory in :doc:`../test-execution/prsa-004-fix/index`. The initial
+   old-configuration failure is historical; the latest outcome is independent
+   of owner acceptance and release readiness.

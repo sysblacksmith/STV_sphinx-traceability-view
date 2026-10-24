@@ -244,7 +244,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
    * - :need:`STV_SWR_042`
      - A clean Python 3.10 environment with pinned Sphinx dependencies installs the wheel and builds the fixture.
      - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
-       ``docs/test-scripts/test_package.py::test_clean_wheel_host``
+       ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
+       ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SWR_043`
      - Candidate sizes 199 and 200 pass, 201 fails; 200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
      - ``docs/test-scripts/test_build.py::test_seed_capacity_at_directive[200-True]``;
@@ -274,7 +275,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_build.py::test_host_default_directional_labels_are_used``
    * - :need:`STV_SWR_046`
      - A separate project enables the installed module and renders a seeded view without repository imports.
-     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``
+     - ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
+       ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SWR_047`
      - With external networking disabled, an external Need without local full content has inspectable metadata and the indication. Its original link is available, but opening that external destination is not represented as an offline capability. No external page download is attempted.
      - ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
@@ -416,7 +418,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
    * - :need:`STV_SYS_009`
      - A built wheel installs into a clean host environment and produces an embedded HTML view without copying repository implementation files.
      - ``docs/test-scripts/test_legal_guard.py::test_build_rejects_unaudited_elk_and_missing_notices``;
-       ``docs/test-scripts/test_package.py::test_clean_wheel_host``
+       ``docs/test-scripts/test_package.py::test_clean_wheel_host``;
+       ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SYS_010`
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
@@ -437,6 +440,7 @@ Executable sources
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_package.py``
 * ``docs/test-scripts/test_release_seeds.py``
+* ``docs/test-scripts/test_sdist.py``
 * ``docs/test-scripts/test_windows_paths.py``
 * ``frontend/src/inspect/tests/inspect.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="5.887" timestamp="2026-10-24T16:39:48.425720+02:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_sdist" name="test_sdist_excludes_local_evidence_and_rebuilds_wheel" time="5.837"><properties><property name="requirement_ids" value="STV_SWR_042,STV_SWR_046,STV_SYS_009" /></properties><failure message="assert not True&#10; +  where True = any(&lt;generator object test_sdist_excludes_local_evidence_and_rebuilds_wheel.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000131FDA40790&gt;)">tmp_path = WindowsPath('C:/Users/fragg/AppData/Local/Temp/pytest-of-fragg/pytest-44/test_sdist_excludes_local_evid0')
+
+    @pytest.mark.requirements('STV_SYS_009','STV_SWR_042','STV_SWR_046')
+    def test_sdist_excludes_local_evidence_and_rebuilds_wheel(tmp_path):
+        source=tmp_path/'source';source.mkdir()
+        for name in ('src','frontend'):
+            shutil.copytree(ROOT/name,source/name,ignore=shutil.ignore_patterns('node_modules','__pycache__','*.pyc'))
+        for name in ('pyproject.toml','hatch_build.py','README.rst','LICENSE','requirements-tooling.txt','requirements-docs.txt','.gitignore'):
+            shutil.copyfile(ROOT/name,source/name)
+        # The checked-in VCS negation and nested negation must not widen the tar.
+        payloads=('docs/test-execution/private/probe.log','docs/_build/probe.log',
+                  '_security-audits/probe.txt','.venv/probe.txt','frontend/node_modules/probe.js',
+                  'src/sphinx_traceability_view/__pycache__/probe.pyc')
+        for name in payloads:
+            path=source/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('STV_LOCAL_ONLY_SENTINEL')
+        nested=source/'docs/test-execution/.gitignore';nested.write_text('!**/*.log\n')
+        output=tmp_path/'dist'
+        result=subprocess.run([sys.executable,'-m','build','--no-isolation','--outdir',str(output),str(source)],capture_output=True,text=True)
+        assert result.returncode==0,result.stdout+result.stderr
+        sdist=next(output.glob('*.tar.gz'))
+        with tarfile.open(sdist,'r:gz') as archive:
+            members={m.name.split('/',1)[1]:archive.extractfile(m).read() for m in archive.getmembers() if m.isfile()}
+&gt;       assert not any(name in members for name in payloads)
+E       assert not True
+E        +  where True = any(&lt;generator object test_sdist_excludes_local_evidence_and_rebuilds_wheel.&lt;locals&gt;.&lt;genexpr&gt; at 0x00000131FDA40790&gt;)
+
+docs\test-scripts\test_sdist.py:34: AssertionError</failure></testcase></testsuite></testsuites>

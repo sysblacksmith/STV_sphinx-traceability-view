@@ -1,0 +1,23 @@
+[
+  {
+    "case": "STV_TC_SDIST_BOUNDARY",
+    "execution": "STV_TE_053E27C9576BC49A",
+    "report": "before.xml",
+    "result": "failed",
+    "completed_at": "2026-10-24T14:39:54.392761+00:00"
+  },
+  {
+    "case": "STV_TC_SDIST_BOUNDARY",
+    "execution": "STV_TE_3F0DEB05F990600D",
+    "report": "after.xml",
+    "result": "passed",
+    "completed_at": "2026-10-24T14:40:25.945287+00:00"
+  },
+  {
+    "case": "STV_TC_F988267D01C9",
+    "execution": "STV_TE_8C0DFF558A66DCA0",
+    "report": "package.xml",
+    "result": "passed",
+    "completed_at": "2026-10-24T14:41:42.683929+00:00"
+  }
+]

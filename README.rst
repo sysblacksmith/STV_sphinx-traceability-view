@@ -249,3 +249,14 @@ Retained historical archives require the license supplement in
 source references and archive hashes). Keep those materials with any copy.
 Historical artifacts remain evidence; their original bytes are unchanged and
 current documentation no longer offers them as binary downloads.
+
+Source archive contents
+------------------------
+
+The source distribution uses an explicit file allowlist in ``pyproject.toml``.
+It contains the Python implementation, prepared browser assets, editable browser
+sources, audited legal inputs, frontend lock/build files and Python build inputs.
+A wheel can be rebuilt from this archive without Node. Engineering documentation,
+execution history and local build/tool environments remain in the repository;
+they are not source-package inputs. Archive selection ignores VCS negations so
+retaining execution logs in Git cannot accidentally publish them in a package.
