@@ -209,7 +209,7 @@ case designs, covering all 120 requirements structurally. Seventy-six have
 existing executables; four occurrence-mode procedures and the known long-path
 regression remain planned and unexecuted. Existing requirement and architecture
 acceptance is preserved.
-The shared method now resolves from the renamed ``-agents`` repository.
+The shared method now resolves from the renamed the historical tooling repository repository.
 
 This migration changes documentation and records. Product code is unchanged.
 The known nested-Windows detail-loading report :need:`STV_PR_006` remains
@@ -368,3 +368,28 @@ The PR015 pane-frame follow-up marks the open dock's full boundary with a thin
 grey line and removes card shadows. Ten affected Firefox file/HTTP procedures
 pass; the current normal demo is rebuilt for owner retest. This CSS-only change
 does not imply a new full regression, capacity or release qualification.
+
+
+
+Independent method tooling, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner requested independent publication and authorized implementation of a
+portable method package and explicit import workflow. STV now keeps method package
+1.0.0, including its model, charts, CSS and validators, under tools/method.
+Documentation and release tools resolve only local files; no skill registration
+or separate tooling checkout is a build requirement.
+
+This is a documentation/tooling migration. It does not change product requirements,
+canonical IDs, acceptance flags, verification states or historical execution results.
+Importer regression checks and existing graph-validator checks passed in the cloud.
+Full Sphinx, package and Windows/browser qualification are not claimed by those
+checks; PR CI records the applicable build results. Historical raw attachments
+remain in the checkout and are excluded from the public website, as described in
+:doc:`ci-and-provenance`.
+
+
+.. note::
+
+   Publication copy: private tooling locations are omitted. The unchanged original
+   is retained under engineering-history/pre-portable-method in the checkout.

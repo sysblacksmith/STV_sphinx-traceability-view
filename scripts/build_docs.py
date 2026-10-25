@@ -28,6 +28,10 @@ def build_docs(source):
     if result.returncode:
         print(f'Build failed; published output retained. Diagnostic staging: {stage}',file=sys.stderr)
         return result.returncode
+    audit=subprocess.run([sys.executable,str(Path(__file__).with_name('check-method-package.py')),'--published',str(stage)])
+    if audit.returncode:
+        print(f'Publication audit failed; previous output retained. Staging: {stage}',file=sys.stderr)
+        return audit.returncode
     if (stage/MANIFEST).exists():
         raise ValueError('Source output collides with the reserved publication manifest')
     files={}
@@ -64,3 +68,4 @@ def main():
 
 
 if __name__=='__main__':sys.exit(main())
+

@@ -19,7 +19,7 @@ STV_CR_007: Record folder layout
    requirement-changes to change-requests and give its records distinct prefixes
    in original request order. Rename problems to problem-tickets and give those
    records clear prefixes too. Update all relations and references so the
-   documentation still builds. Adapt the shared data model and skills in -agents
+   documentation still builds. Adapt the shared data model and skills in the historical tooling repository
    so new projects initialize this structure during stakeholder elicitation and
    create change-request files from the initial user prompts.
 
@@ -67,3 +67,10 @@ STV_CR_007: Record folder layout
      claimed for this refactor.
 
    These checks do not update historical release results or verification states.
+
+
+
+.. note::
+
+   Publication copy: private tooling locations are omitted. The unchanged original
+   is retained under engineering-history/pre-portable-method in the checkout.

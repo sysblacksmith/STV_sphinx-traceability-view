@@ -156,11 +156,11 @@ STV_CONCEPT_REVIEW_002 and is excluded from self-referential hashing.
 
 Shared governing/review inputs (SHA-256):
 
-* ``#agents/method.md``: ``2c62de645f8161149dcdfa777cbd83f03483629c9dc042dcc304dcbded313794``.
-* ``#agents/skills/concept-creation/SKILL.md``: ``c111ab62c5a21f48abb0036732f098c702962b6f6debe7036ccb4d909fbe330f``.
-* ``#agents/skills/concept-creation/references/implementation-readiness.md``: ``adc32423ae34d8634f0e2bc9eb8fbf89ed57a94adbf0cd467935d47dd9e25e55``.
-* ``#agents/skills/concept-review/SKILL.md``: ``f3e4ab6572ae9afbdbaf28c5764937f9254df314857ff9d606c573a53d594fe8``.
-* ``#agents/skills/concept-review/references/review-checklist.md``: ``cca3152ccc94a1e2e5b6e8f39cad1feb38aaafd075d027cbad2b4aa3af0dde86``.
+* the historical tooling repository/method.md``: ``2c62de645f8161149dcdfa777cbd83f03483629c9dc042dcc304dcbded313794``.
+* the historical tooling repository/skills/concept-creation/SKILL.md``: ``c111ab62c5a21f48abb0036732f098c702962b6f6debe7036ccb4d909fbe330f``.
+* the historical tooling repository/skills/concept-creation/references/implementation-readiness.md``: ``adc32423ae34d8634f0e2bc9eb8fbf89ed57a94adbf0cd467935d47dd9e25e55``.
+* the historical tooling repository/skills/concept-review/SKILL.md``: ``f3e4ab6572ae9afbdbaf28c5764937f9254df314857ff9d606c573a53d594fe8``.
+* the historical tooling repository/skills/concept-review/references/review-checklist.md``: ``cca3152ccc94a1e2e5b6e8f39cad1feb38aaafd075d027cbad2b4aa3af0dde86``.
 
 
 Record relocation
@@ -193,3 +193,10 @@ Elements Software:
 
 
 The diagram correction additionally assessed every element link: :need:`STV_SE_BUILD`, :need:`STV_SE_BROWSER`, :need:`STV_SWE_DIRECTIVE`, :need:`STV_SWE_MODEL`, :need:`STV_SWE_GRAPH`, :need:`STV_SWE_DETAIL_BUILD`, :need:`STV_SWE_BUNDLE`, :need:`STV_SWE_STATE`, :need:`STV_SWE_LAYOUT`, :need:`STV_SWE_RENDER`, :need:`STV_SWE_INSPECT`.
+
+
+
+.. note::
+
+   Publication copy: private tooling locations are omitted. The unchanged original
+   is retained under engineering-history/pre-portable-method in the checkout.

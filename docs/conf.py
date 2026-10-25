@@ -1,4 +1,4 @@
-"""Project documentation using the live shared requirements method."""
+"""Project documentation using a versioned local requirements method."""
 from importlib import import_module
 from copy import deepcopy
 import os
@@ -12,24 +12,16 @@ version = ".".join(release.split(".")[:2])
 root_doc = "index"
 exclude_patterns = ["test-scripts/fixtures/**", "_build", "test-execution/0.1.0-candidate-1/index.rst"]
 
-# Select the shared reverse-engineering skill without storing a machine path.
-configured = os.environ.get("REQUIREMENTS_SKILL_DIR")
-candidates = [Path(configured)] if configured else [
-    parent / "-agents" / "skills" / "reverse-engineer-requirements"
-    for parent in Path(__file__).resolve().parents
-] + [Path.home() / ".agents" / "skills" / "reverse-engineer-requirements"]
-skill_dir = next((p for p in candidates if
-                 (p / "scripts" / "traceability_model.py").is_file()
-                 and (p.parent.parent / "method.md").is_file()), None)
-if skill_dir is None:
-    raise RuntimeError("Set REQUIREMENTS_SKILL_DIR to the shared reverse-engineer-requirements skill directory (with its central method.md).")
+# All engineering tooling is versioned in this checkout.
+method_dir = Path(__file__).resolve().parents[1] / 'tools' / 'method'
+sys.path.insert(0, str(method_dir / 'tooling'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
+traceability_model = import_module('traceability_model')
 
-sys.path.insert(0, str(skill_dir / "scripts"))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-# The selected shared skill is resolved at runtime, outside this workspace.
-traceability_model = import_module("traceability_model")
-
-extensions = ["sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts", "sphinx_traceability_view"]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+html_copy_source = False
+html_show_sourcelink = False
+extensions = ["_publication", "sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts", "sphinx_traceability_view"]
 needs_types = traceability_model.NEEDS_TYPES
 needs_links = traceability_model.NEEDS_LINKS
 needs_fields = traceability_model.NEEDS_FIELDS
@@ -53,18 +45,8 @@ traceability_view_model['types']['test_execution'] = {
     'fallback_level': 'unclassified_tests',
 }
 html_theme = "sphinx_rtd_theme"
-html_static_path = [str(skill_dir / "assets" / "sphinx" / "_static")]
+html_static_path = [str(method_dir / "static")]
 html_css_files = ["wide-layout.css"]
 # Publish linked Draw.io SVGs as standalone interactive documents.
 html_extra_path = ["architecture/diagrams"]
 
-
-def include_shared_method(app, docname, source):
-    if docname == "method":
-        master = skill_dir.parent.parent / "method.md"
-        relative = os.path.relpath(master, app.srcdir).replace(os.sep, "/")
-        source[0] = source[0].replace("@SHARED_REQUIREMENTS_METHOD@", relative)
-
-
-def setup(app):
-    app.connect("source-read", include_shared_method)
