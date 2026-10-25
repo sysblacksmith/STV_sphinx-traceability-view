@@ -83,6 +83,34 @@ records. Use language-appropriate source/build layouts for product code
 and frontend tests rather than imposing Python on every project. Keep
 test-source naming references discoverable from the script index.
 
+Landing-page project version
+----------------------------
+
+Show the full project/tool version directly below the landing-page title with
+``**Project version:** |release|``. Use Sphinx's built-in ``release`` substitution,
+including development/pre-release suffixes, rather than copying a version string
+into RST. Set ``release`` in ``conf.py`` by reading the project's existing single
+authoritative version file at build time. Keep the short ``version`` setting
+separate where other tooling needs a major/minor release series.
+
+For a Python project whose authoritative file defines ``__version__``, adapt
+this example to the actual package path::
+
+   from pathlib import Path
+   import runpy
+
+   project_root = Path(__file__).resolve().parents[1]
+   release = runpy.run_path(
+       str(project_root / "src" / "your_package" / "_version.py")
+   )["__version__"]
+   version = ".".join(release.split(".")[:2])
+
+For other project types, read their actual authoritative manifest instead.
+Do not create a second version authority or use the shared method package's
+version as the project version. If no project version exists yet, explicitly
+render ``Not versioned yet`` until one is established; do not invent a number.
+Verify the rendered landing-page value against the file used by the build.
+
 Chapter groups and ordering
 ---------------------------
 
@@ -235,6 +263,30 @@ rebuild; adding the two cards to an existing project’s metrics page
 requires updating its project source within the authorized scope. Do not
 change canonical statuses, coverage, execution history or acceptance
 claims to populate charts.
+
+Clean HTML publication
+----------------------
+
+Build into a fresh staging tree with a fresh temporary doctree directory.
+Use a full Sphinx build with warnings as errors (for example ``-E -a -W``),
+then run the project's publication checks before replacing current HTML.
+Replace the complete output tree so deleted pages, downloads and generated
+assets cannot survive from an older build. Keep staging on the same filesystem
+when directory renames are used for promotion.
+
+Keep current HTML unchanged if rendering or validation fails. During promotion,
+retain the previous tree only as a temporary rollback copy. Restore it if
+promotion fails; remove it once promotion succeeds. If rollback itself fails,
+preserve the last good copy and report its exact recovery path instead of
+removing it during cleanup.
+
+Clean up this invocation's staging and doctree directories on success, failure
+and exceptions. Normal completed builds leave only current HTML; they do not
+accumulate previous sites or caches. Do not sweep unrelated or active build
+output. Retain needed diagnostics through captured logs or explicit execution
+evidence outside disposable build trees, rather than retaining every failed
+site. Verify both obsolete-file removal and failure/rollback behavior when
+implementing or changing the project's build runner.
 
 Validation
 ----------
