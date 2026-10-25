@@ -496,7 +496,15 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``
    * - :need:`STV_SWR_066`
      - Multiple seeds, interactive reseeding, shared paths/cycles, empty/fewer-than-five project entries and a previously closed entry group reset to their defined initial states. Returning to another project page cannot restore old expansions. Other views and persistent entries/order are unchanged. Repeated resets remain valid within the existing 200-node limit.
-     - ``docs/test-scripts/test_view_controls.py::test_collapse_all_keeps_current_roots_and_open_details[file]``;
+     - ``docs/test-scripts/test_extended_controls.py::test_reset_stale_layout_failure_retry_and_independent_views[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_stale_layout_failure_retry_and_independent_views[http]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_overview_boundaries_and_page_restoration_cache[0]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_overview_boundaries_and_page_restoration_cache[3]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_overview_boundaries_and_page_restoration_cache[12]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[http]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_extended_reset_command_sequences``;
+       ``docs/test-scripts/test_view_controls.py::test_collapse_all_keeps_current_roots_and_open_details[file]``;
        ``docs/test-scripts/test_view_controls.py::test_collapse_all_keeps_current_roots_and_open_details[http]``;
        ``frontend/src/state/tests/collapse-all.test.js :: STV_SWR_066 reset retains current roots and clears every restoration cache``
    * - :need:`STV_SWR_067`
@@ -510,28 +518,48 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[inf]``;
        ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]``;
        ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_independent_font_scales_remain_exact``;
+       ``docs/test-scripts/test_extended_controls.py::test_typography_nested_units_late_children_and_repeat_scaling``;
+       ``docs/test-scripts/test_extended_controls.py::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_font_settings_defaults_identity_and_named_build_errors``;
        ``docs/test-scripts/test_view_controls.py::test_font_scales_are_independent_and_applied_once``
    * - :need:`STV_SWR_068`
      - At identical browser zoom, representative text computed sizes are 0.7 times their scale-1.0 baselines within 0.5 CSS px rounding. Independent overrides affect only the intended presentation. Reuse, reopen and delayed content do not compound scaling; scrolling, disclosure and visible focus remain usable.
-     - ``docs/test-scripts/test_view_controls.py::test_font_scales_are_independent_and_applied_once``;
+     - ``docs/test-scripts/test_extended_controls.py::test_typography_nested_units_late_children_and_repeat_scaling``;
+       ``docs/test-scripts/test_extended_controls.py::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[http]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_font_settings_defaults_identity_and_named_build_errors``;
+       ``docs/test-scripts/test_view_controls.py::test_font_scales_are_independent_and_applied_once``;
        ``frontend/src/inspect/tests/typography.test.js :: STV_SWR_068 descendant typography is scaled once from unmodified baselines``
    * - :need:`STV_SWR_069`
      - Mixed open/closed sections, several types, out-of-viewport Needs and absent metadata behave deterministically. Repeated initialization adds no duplicate controls/handlers. Pointer and Enter/Space work, titles/body stay visible, and host individual toggles still work after either bulk operation. Pages without rendered host Needs have no bulk controls; Needs without metadata retain disabled controls and an explanation.
-     - ``docs/test-scripts/test_view_controls.py::test_page_metadata_without_a_graph[file]``;
+     - ``docs/test-scripts/test_extended_controls.py::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]``;
+       ``docs/test-scripts/test_extended_controls.py::test_page_metadata_excludes_copies_and_handles_empty_pages``;
+       ``docs/test-scripts/test_view_controls.py::test_page_metadata_without_a_graph[file]``;
        ``docs/test-scripts/test_view_controls.py::test_page_metadata_without_a_graph[http]``;
        ``docs/test-scripts/test_view_controls.py::test_page_controls_disclose_unsupported_markup_without_partial_success``;
        ``docs/test-scripts/test_view_controls.py::test_page_controls_disclose_missing_host_handler_dependency``;
        ``frontend/src/render/tests/page-metadata.test.js :: STV_SWR_069 bulk state normalizes mixed rows and repeated actions never invert them``
    * - :need:`STV_SWR_070`
      - A panned graph with clipped nodes, scrolled long cards, folded attributes, narrow stacked layout and a visible transient tooltip exports the same visible crop. XML parses, SVG reopens independently in Firefox, and script/event/form behavior and graph datasets are absent. A concurrent layout commit cannot mix revisions; a new attempt captures the new revision.
-     - ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+     - ``docs/test-scripts/test_extended_controls.py::test_snapshot_clipping_immutable_text_resources_and_readiness``;
+       ``docs/test-scripts/test_extended_controls.py::test_export_pointer_snapshot_cancel_keyboard_and_serialization_recovery``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[http]``;
+       ``docs/test-scripts/test_extended_controls.py::test_export_resource_retry_and_pending_fonts_refuse_capture``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``;
        ``frontend/src/export/tests/snapshot.test.js :: STV_SWR_070 visible crop intersects screen and never invents dimensions``
    * - :need:`STV_SWR_071`
      - Location-prompt mode allows saving to a chosen folder or cancelling. Automatic download mode is identified in user guidance without claiming that the app can force a dialog or detect completion. Export failure preserves the live view and permits retry; repeated exports and pagehide do not leak object URLs.
-     - ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+     - ``docs/test-scripts/test_extended_controls.py::test_download_expiry_pagehide_and_error_ownership``;
+       ``docs/test-scripts/test_extended_controls.py::test_export_pointer_snapshot_cancel_keyboard_and_serialization_recovery``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``;
@@ -543,6 +571,22 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_inline_detail_font_faces_embed_local_bytes``;
        ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_svg_entity_declarations_are_rejected_before_parsing[utf-8]``;
        ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_svg_entity_declarations_are_rejected_before_parsing[utf-16]``;
+       ``docs/test-scripts/test_extended_controls.py::test_snapshot_clipping_immutable_text_resources_and_readiness``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[file]``;
+       ``docs/test-scripts/test_extended_controls.py::test_real_font_and_selected_local_media_are_self_contained[http]``;
+       ``docs/test-scripts/test_extended_controls.py::test_export_resource_retry_and_pending_fonts_refuse_capture``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_svg_resource_escape_and_remote_targets_never_read_outside[../outside.png]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_svg_resource_escape_and_remote_targets_never_read_outside[%2e%2e/outside.png]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_svg_resource_escape_and_remote_targets_never_read_outside[https://example.invalid/beacon.png]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_svg_resource_escape_and_remote_targets_never_read_outside[//example.invalid/beacon.png]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_svg_resource_escape_and_remote_targets_never_read_outside[javascript:alert(1)]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_real_symlink_escape_does_not_read_target``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_nested_svg_cycles_are_explicit_failures``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_active_svg_elements_attributes_and_imports_are_rejected[<script/>]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_active_svg_elements_attributes_and_imports_are_rejected[<foreignObject/>]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_active_svg_elements_attributes_and_imports_are_rejected[<rect onclick="alert(1)"/>]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_active_svg_elements_attributes_and_imports_are_rejected[<style>@import "remote.css";</style>]``;
+       ``docs/test-scripts/test_extended_export_resources.py::test_css_import_cycle_encoded_names_srcset_fonts_and_deterministic_records``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
        ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
@@ -628,6 +672,8 @@ Executable sources
 * ``docs/test-scripts/test_ci_security.py``
 * ``docs/test-scripts/test_classified_rows.py``
 * ``docs/test-scripts/test_detail_transport.py``
+* ``docs/test-scripts/test_extended_controls.py``
+* ``docs/test-scripts/test_extended_export_resources.py``
 * ``docs/test-scripts/test_legal_guard.py``
 * ``docs/test-scripts/test_method_publication.py``
 * ``docs/test-scripts/test_package.py``
