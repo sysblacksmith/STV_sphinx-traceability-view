@@ -19,8 +19,9 @@ def test_ordinary_output_with_zip_signature_is_scanned_as_content(tmp_path,monke
 
 
 def test_archive_members_are_checked_for_private_tooling_references(tmp_path,monkeypatch):
-    with zipfile.ZipFile(tmp_path/'download.zip','w') as archive:
+    with zipfile.ZipFile(tmp_path/'download.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
         archive.writestr('README.txt','private tooling: '+'-'+'agents')
+    assert not audit.FORBIDDEN.search((tmp_path/'download.zip').read_bytes())
     monkeypatch.setattr(sys,'argv',['audit','--published',str(tmp_path)])
     with pytest.raises(ValueError,match='Private tooling reference'):
         audit.main()
