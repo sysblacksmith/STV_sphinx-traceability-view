@@ -9,6 +9,7 @@ import zipfile
 import tarfile
 import json
 import hashlib
+from email.parser import Parser
 import pytest
 
 ROOT=Path(__file__).parents[2]
@@ -29,6 +30,15 @@ def test_clean_wheel_host():
         packaged_inventory=json.loads(archive.read('sphinx_traceability_view/static/vendor/ELK-INVENTORY.json'))
         assert hashlib.sha256(archive.read('sphinx_traceability_view/static/vendor/elk.bundled.js')).hexdigest()==packaged_inventory['elkjs']['sha256']
         metadata=archive.read(next(name for name in names if name.endswith('.dist-info/METADATA'))).decode()
+        parsed_metadata = Parser().parsestr(metadata)
+        description = (ROOT / 'PYPI.rst').read_text(encoding='utf-8')
+        assert parsed_metadata['Description-Content-Type'] == 'text/x-rst'
+        assert parsed_metadata.get_payload().strip() == description.strip()
+        assert set(parsed_metadata.get_all('Project-URL')) == {
+            'Documentation, https://sysblacksmith.github.io/STV_sphinx-traceability-view/',
+            'Source, https://github.com/sysblacksmith/STV_sphinx-traceability-view',
+            'Issues, https://github.com/sysblacksmith/STV_sphinx-traceability-view/issues',
+        }
         assert not any('Requires-Dist: '+name in metadata for name in ('pytest','selenium','esbuild'))
         assert 'License-Expression: MIT AND ISC AND BSD-3-Clause AND Apache-2.0 AND EPL-1.0 AND EPL-2.0' in metadata
         assert 'Copyright (c) 2026 Henning Heikes' in archive.read('sphinx_traceability_view/static/LICENSE.txt').decode()
@@ -40,6 +50,11 @@ def test_clean_wheel_host():
     with tarfile.open(source_archive,'r:gz') as archive:
         names=archive.getnames()
         assert any(name.endswith('/LICENSE') for name in names)
+        readme = next(name for name in names if name.endswith('/PYPI.rst'))
+        assert archive.extractfile(readme).read().decode('utf-8').strip() == description.strip()
+        package_info = Parser().parsestr(archive.extractfile(next(name for name in names if name.endswith('/PKG-INFO'))).read().decode('utf-8'))
+        assert package_info['Description-Content-Type'] == 'text/x-rst'
+        assert package_info.get_payload().strip() == description.strip()
         assert any(name.endswith('/static/THIRD_PARTY_NOTICES.txt') for name in names)
         assert any(name.endswith('/static/vendor/ELK-SOURCE.txt') for name in names)
 
