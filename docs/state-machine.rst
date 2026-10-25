@@ -344,3 +344,21 @@ No matching rows means no actionable arrow is published. Header artifact-ID
 navigation uses its source URL and opens a new tab; ordinary copied-body
 fragment navigation remains local. Source: :need:`STV_SWR_064`,
 :need:`STV_SWR_016`; rendered verification: :need:`STV_TC_SY_065`.
+
+Collapse-all and export commands
+--------------------------------
+
+Collapse-all is an atomic STATE transition from any committed shared exploration
+state to initial (current roots), clearing every expanded group and page cache.
+Project mode restores page zero and its initial entry group. A new revision
+invalidates old layout generations; successful fresh layout commits/fits, failure
+retains the last committed presentation for retry. Persistent collection state
+is orthogonal and unchanged. This command does not enable deferred occurrence mode.
+
+Export has per-view idle -> captured -> serializing -> download-requested -> idle
+states, with capture/resource/serialization failure returning to idle with a
+readable error. Pointer cancellation before activation discards its snapshot.
+No export state writes exploration or collection state. A separate URL-lease
+registry survives a completed request until cleanup expiry/pagehide; browser
+completion/cancellation is not observable as a product success state. Page-wide
+metadata commands have no graph-state transition. See :doc:`internal-interfaces`.

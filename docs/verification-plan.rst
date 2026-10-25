@@ -305,3 +305,23 @@ resolution in file/HTTP. Rerun persistent collection/race procedures, affected
 rich-content/hover/transport/nested-path regressions, frontend units and clean
 wheel/source-package checks. Capacity and complete release qualification remain
 outside this presentation correction; retain prior results as historical.
+
+CR015-018 verification increment
+--------------------------------
+
+STV_TC_SY_066 through STV_TC_SY_069 and STV_TC_SW_051 through STV_TC_SW_055 define
+explicit criterion coverage for the four added stakeholder requirements,
+STV_SYS_011 and STV_SWR_066 through STV_SWR_072. They are unexecuted designs,
+not extensions of historical passing results. The affected accepted detail,
+keyboard, offline, capacity and navigation obligations remain regression scope
+using their existing cases plus the new interaction scenarios.
+
+Record both file and HTTP Firefox results, exact browser/tool versions, input
+fixtures/configuration, standalone SVG files/digests, network observations and
+paired capture/reopened screenshots. Check saved files without the original
+output tree. Test location-prompt and automatic-download modes separately; only
+the browser can report the disk-save outcome. Source/serialization inspection
+must supplement visual comparisons for inactive XML and outside-root protection.
+Use actual DOM styles/host handlers rather than mocks for presentation claims.
+Component tests may mock save APIs only for deterministic cleanup/error paths.
+Full release qualification and optional mobile/browser extensions remain separate.

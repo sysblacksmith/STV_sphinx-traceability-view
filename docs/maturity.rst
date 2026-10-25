@@ -6,6 +6,78 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+CR015-018 concept increment, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner explicitly reviewed and accepted :need:`STV_CR_015` through
+:need:`STV_CR_018` and :need:`STV_SHR_058` through :need:`STV_SHR_061` on
+2026-10-25, then invoked concept creation. Their canonical states are accepted;
+verification remains not_assessed. The owner also approved browser-managed
+Save As with documented location-prompt settings. :doc:`sources` records the
+approval and :doc:`review` the resolved scope. This does not accept later
+internal drafts or authorize product implementation, staging or committing.
+
+Input identity: prepared stakeholder/CR working-tree revisions based on
+633bee2a1fb569f5366bdf6a93ec96ed9fbcb04d. At the owner's request, work moved to
+main after a safe fast-forward to 8dbbe79; all uncommitted amendments were retained.
+Repository: https://github.com/sysblacksmith/STV_sphinx-traceability-view.
+Prior accepted reviews/ADRs/results retain their historical identities.
+
+The concept adds draft :need:`STV_SYS_011`, :need:`STV_SWR_066` through
+:need:`STV_SWR_072`, :need:`STV_SWE_EXPORT` and proposed :ref:`STV_ADR_011`.
+Changed component revisions DIRECTIVE, MODEL, DETAIL_BUILD, BUNDLE, STATE,
+RENDER and INSPECT reopen to draft/not_assessed because their contracts expand;
+unchanged GRAPH/LAYOUT and all other accepted requirements remain unchanged.
+No accepted ADR is superseded. The new SVG path is a companion Draw.io/SVG
+architecture view with real Need links, not a replacement of the retained core.
+
+Nine canonical cases :need:`STV_TC_SY_066` through :need:`STV_TC_SY_069` and
+:need:`STV_TC_SW_051` through :need:`STV_TC_SW_055` cover all new requirements.
+They are draft/not_run without execution links. Existing relevant offline,
+security, keyboard, capacity and persistent-detail cases remain regression scope;
+historical passing executions do not verify this increment. Font configuration,
+reset/cache semantics, page scope, export crop/resources/save/error contracts,
+packaging and staged delivery are in :doc:`internal-interfaces`,
+:doc:`implementation-plan` and :doc:`verification-plan`.
+
+Feasibility checks: installed Draw.io exported view-export.drawio to its adjacent
+SVG, and the standard normalizer verified its five linked component targets.
+Headless installed Firefox opened a standalone SVG fixture combining XHTML
+foreignObject, styled text, nested scroll clipping and vector line geometry;
+exit 0 and screenshot inspection confirmed the intended text/clip rendering.
+The new architecture SVG was also rendered and visually inspected: five arrows
+have separate routing space, clear labels and no unrelated-box crossings.
+Temporary fixture/screenshots/profiles remain ignored under
+``docs/_build/concept-feasibility``. These are native-API feasibility observations,
+not product test executions or proof of arbitrary host snapshot fidelity.
+No new third-party dependency is introduced; primary API limitations are cited
+in ADR011. Full resource/style/capture integration is the first implementation
+slice and requires the specified tests before claiming runtime correctness.
+
+Creation-stage checks: the shared validator with --require-test-coverage and
+--repo-root . passed for the generated increment: 18 CRs, 61 SHRs, 11 SYS,
+72 SWR, ten software elements and 124 cases; all 920 historical executions
+remain unchanged. Complete derivation and test CSV matrices were exported to
+``docs/_build/cr015-018-concept-traceability.csv`` and
+``docs/_build/cr015-018-concept-test-traceability.csv``. A strict Sphinx pass
+initially identified short heading underlines in newly added sections; these
+were corrected before the final rebuild. The final strict Sphinx/publication
+build passed; strict graph/evidence/test coverage and all published diagram
+links passed on that completed output. The new diagram was inspected both as
+standalone SVG and embedded in the generated architecture page. Canonical-state
+checks confirmed accepted stakeholder input, draft/not_assessed internal
+requirements, and draft/not_run cases with no fabricated executions.
+``git diff --check`` passed; no source/frontend/package input was changed.
+No runtime product tests were executed or invented.
+
+The concept has selected ownership, APIs, serialization/resource boundaries,
+error policies, configuration and staged exit criteria. It is ready for scoped
+concept review and implementation planning; acceptance remains outstanding.
+The first export vertical slice must validate full integration fidelity before
+implementation acceptance. Implementation-ready design does not mean
+implemented or verified software.
+
+
 .. _release-1-0-0-authority:
 
 v1.0.0 released

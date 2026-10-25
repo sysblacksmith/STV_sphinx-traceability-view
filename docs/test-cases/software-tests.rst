@@ -2213,3 +2213,127 @@ STV_TC_SW_050: Persistent limit configuration validation
    with override 3 and verify published limit and live collection behavior.
    **Expected:** Clear setting-named errors for invalid configuration, exact
    validated integers and independent per-view enforcement without new runtime deps.
+
+.. test_case:: Reset state, page caches and stale layout ownership
+   :id: STV_TC_SW_051
+   :status: draft
+   :tags: change_increment, test_software
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_066
+   :last_result: not_run
+
+   **Level/environment:** Software component.
+   Node state tests and renderer command harness with cyclic/shared adjacency,
+   multiple seed IDs, cached project-page groups and deferred layout promises.
+
+   **Procedure:** Apply reset after each command class; compare input/current/output identities;
+   resolve old generations and reject a new layout. Enumerate empty/small/maximal
+   entry and cap fixtures, plus independently allocated view state.
+
+   **Expected:** Fresh sets/maps, retained seed identities, defined initial project state,
+   revision increment, cleared page restoration and rooted bounded visibility.
+   Inputs and unrelated view/card collections do not mutate. Only the current
+   successful layout generation commits; rejected work is recoverable.
+
+.. test_case:: Validate font configuration and avoid compounded scaling
+   :id: STV_TC_SW_052
+   :status: draft
+   :tags: change_increment, test_software
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_067, STV_SWR_068
+   :last_result: not_run
+
+   **Level/environment:** Software component.
+   Python MODEL/DIRECTIVE serialization tests plus real DOM typography harness
+   using the installed host styles and actual browser computed values.
+
+   **Procedure:** Try absent/default, 1.0, 0.8/0.6, bool/string/zero/negative/NaN/infinite input;
+   compare graph digests. Measure parent/child px/em/rem typography in both
+   presentations; reuse fragments and complete delayed content/fonts.
+
+   **Expected:** Independent explicit new defaults, legacy fallback 1.0, setting-named build
+   rejection, identity invalidation and exactly-once scaling. Relative hierarchy
+   is retained within 0.5 CSS px; no host page or node summary side effects.
+
+.. test_case:: Snapshot XML, clip geometry and download lifecycle
+   :id: STV_TC_SW_053
+   :status: draft
+   :tags: change_increment, test_software
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_070, STV_SWR_071
+   :last_result: not_run
+
+   **Level/environment:** Software component.
+   EXPORT component tests with DOM fixtures plus browser computed-style harness;
+   fake URL/anchor interfaces and controlled visual viewport/scroll/revisions.
+
+   **Procedure:** Capture nested clips, negative scene origins, D3 transform, partially visible
+   cards/text, pseudo-elements, namespaces and non-ASCII/markup-like titles.
+   Mutate live presentation after capture. Exercise pointer cancel, keyboard,
+   busy layout, serializer exceptions, repeated downloads, timer and pagehide.
+
+   **Expected:** Immutable coherent descriptor, exact crop/scroll transforms, parseable inert
+   XML with escaped content and internal IDREFs; no live mutation or graph data.
+   One in-flight job per view, safe bounded .svg filename, correct MIME, temporary
+   nodes removed, and URL leases revoked on expiry/pagehide (immediately on error).
+   No premature URL revocation or success claim about disk completion.
+
+.. test_case:: Scope bulk metadata commands and preserve individual host behavior
+   :id: STV_TC_SW_054
+   :status: draft
+   :tags: change_increment, test_software
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_069
+   :last_result: not_run
+
+   **Level/environment:** Software component.
+   RENDER page-controller tests with actual Sphinx-Needs control markup,
+   mixed metadata states, nested/copied tables, hidden rows and host click handlers.
+
+   **Procedure:** Initialize twice, bulk-set both states twice, individually toggle, remove a
+   table, add view/card copies before initialization and use pages without roots
+   or without metadata; introduce unmatched/unsupported control encodings.
+
+   **Expected:** Idempotent group/handlers, closest-table row ownership, explicit state setting
+   through existing host handlers with synchronized ARIA/icons, no toggling of
+   copied STV content and no hiding title/body. Disabled/no-group policy and
+   explanatory failure match the interface contract.
+
+.. test_case:: Embed only safe output-local export resources
+   :id: STV_TC_SW_055
+   :status: draft
+   :tags: change_increment, test_software
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_072
+   :last_result: not_run
+
+   **Level/environment:** Software component.
+   Python DETAIL_BUILD/BUNDLE tests and EXPORT resource decoder; temporary output
+   roots with raster/SVG/font/CSS/srcset dependencies, symlinks and an outside
+   sentinel that must never be read. Runtime networking is blocked.
+
+   **Procedure:** Resolve relative/encoded/non-ASCII paths and nested resources, test path
+   escape, symlink escape, malformed MIME, active SVG, cyclic dependencies,
+   absent local files, allowed raster data and remote URLs. Decode the generated
+   classic-script record and select only captured currentSrc/font dependencies.
+
+   **Expected:** Deterministic content identities and self-contained selected resources for
+   valid fixtures, no outside read/runtime fetch or active execution. Missing
+   required visible resources return typed failures; existing remote placeholders
+   remain. JSON/script delimiters are safely escaped and no hidden Need data or
+   unselected resource inventory enters the downloaded SVG.

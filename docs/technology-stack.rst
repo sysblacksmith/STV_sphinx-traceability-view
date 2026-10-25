@@ -298,3 +298,22 @@ native CSS grid/container queries, scrolling and semantic regions, with a
 per-view ordered Map and guarded async content. Shared transport/URL restoration
 retains the installed dependency versions and offline policy; no new library is
 introduced. See :ref:`STV_ADR_010`.
+
+CR015-018 browser presentation and export
+-----------------------------------------
+
+No new npm/Python dependency is selected. Existing pinned manifests/locks,
+Sphinx 8.1.3, Sphinx-Needs 8.2.0, Beautiful Soup 4.13.5 and the frontend esbuild
+0.25.12 build remain authoritative. The new EXPORT module is project MIT code;
+existing bundled/local media and fonts retain their original licenses/notices.
+Resource embedding must not strip required attribution or infer a license from
+file type. Preserve the existing distribution notices and inventory checks.
+
+Native DOM/computed styles, SVG foreignObject, XMLSerializer, Blob, HTML download
+and object URLs run in the supported reader browser, with no service or fetched
+script. The compatibility policy follows the retained Windows Firefox desktop
+baseline, tested under file and static HTTP. API documentation alone is not
+proof of snapshot fidelity. No requirement is added for universal vector-editor
+foreignObject support or browser-native filesystem pickers. Browser/OS managed
+Save As and prompt settings are the owner-approved location interface. See
+:ref:`STV_ADR_011` for alternatives, primary API evidence and limitations.

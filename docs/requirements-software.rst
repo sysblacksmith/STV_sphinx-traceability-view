@@ -1302,3 +1302,182 @@ Executable criteria and retained results: :doc:`test-coverage` and
    **Acceptance criterion:** Default, 1 and 3 serialize and drive actual eviction;
    invalid types/bounds fail clearly. Rebuilds reflect changed configuration.
    The runtime does not require Node, a service or reader-side configuration.
+
+.. swr:: Reset view-local exploration to current roots
+   :id: STV_SWR_066
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_058
+   :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
+
+   The software shall handle collapse-all as one atomic view-local transition
+   using the current mode and seeds, clearing expanded groups and all stored
+   project-page expansion sets. In project mode it shall restore page zero and
+   the initially open entry group. It shall advance the revision to invalidate
+   stale layout results, preserve persistent cards, and retain keyboard focus
+   on the command. A fresh fit shall use the actual graph viewport dimensions.
+
+   **Acceptance criterion:** Multiple seeds, interactive reseeding, shared paths/cycles, empty/fewer-than-five
+   project entries and a previously closed entry group reset to their defined
+   initial states. Returning to another project page cannot restore old expansions.
+   Other views and persistent entries/order are unchanged. Repeated resets remain
+   valid within the existing 200-node limit.
+
+   **Channeling rationale:** This is a browser presentation/session or author
+   presentation-setting obligation within the existing extension boundary; it
+   adds no separate cross-system service, deployment or interface obligation.
+
+.. swr:: Validate and serialize independent detail font scales
+   :id: STV_SWR_067
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_060
+   :allocated_to: STV_SWE_MODEL, STV_SWE_DIRECTIVE
+
+   The software shall accept author settings traceability_view_tooltip_font_scale
+   and traceability_view_details_font_scale, each defaulting to 0.7. Values shall
+   be finite positive numbers, excluding booleans. Invalid values shall fail the
+   build with the setting name. It shall serialize both settings as graph
+   presentation fields without modifying the host Need model.
+
+   **Acceptance criterion:** Default, 1.0 and independent 0.8/0.6 values are published unchanged. Zero,
+   negative, boolean, string, NaN and infinite values fail deterministically.
+   Missing presentation fields in older bundles mean 1.0, preserving their
+   pre-change appearance; new builds always publish explicit defaults.
+
+   **Channeling rationale:** This is a browser presentation/session or author
+   presentation-setting obligation within the existing extension boundary; it
+   adds no separate cross-system service, deployment or interface obligation.
+
+.. swr:: Scale copied detail typography once per presentation
+   :id: STV_SWR_068
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_060
+   :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
+
+   The software shall apply the effective font scale independently to each hover
+   or persistent detail copy, against that presentation's unscaled computed
+   typography. It shall scale nested headings, metadata, tables and code exactly
+   once, preserve relative hierarchy and browser zoom, and leave original Need
+   pages and graph summaries unchanged.
+
+   **Acceptance criterion:** At identical browser zoom, representative text computed sizes are 0.7 times
+   their scale-1.0 baselines within 0.5 CSS px rounding. Independent overrides
+   affect only the intended presentation. Reuse, reopen and delayed content do
+   not compound scaling; scrolling, disclosure and visible focus remain usable.
+
+   **Channeling rationale:** This is a browser presentation/session or author
+   presentation-setting obligation within the existing extension boundary; it
+   adds no separate cross-system service, deployment or interface obligation.
+
+.. swr:: Control rendered page metadata through scoped bulk actions
+   :id: STV_SWR_069
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SHR_061
+   :allocated_to: STV_SWE_RENDER, STV_SWE_DIRECTIVE
+
+   The software shall initialize one page-level pair of Collapse all / Expand all
+   controls on pages with rendered host Needs. When no collapsible metadata
+   exists, both controls shall be disabled with a no-attributes explanation. Actions shall
+   set every eligible host disclosure explicitly rather than blindly toggling,
+   synchronize row visibility, icons and ARIA, and preserve individual controls.
+   It shall exclude STV view subtrees and copied detail overlays.
+
+   **Acceptance criterion:** Mixed open/closed sections, several types, out-of-viewport Needs and absent
+   metadata behave deterministically. Repeated initialization adds no duplicate
+   controls/handlers. Pointer and Enter/Space work, titles/body stay visible,
+   and host individual toggles still work after either bulk operation. Pages
+   without rendered host Needs have no bulk controls; Needs without metadata
+   retain disabled controls and an explanation.
+
+   **Channeling rationale:** This is a browser presentation/session or author
+   presentation-setting obligation within the existing extension boundary; it
+   adds no separate cross-system service, deployment or interface obligation.
+
+.. swr:: Capture a clipped inert visible-area SVG snapshot
+   :id: STV_SWR_070
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_011
+   :allocated_to: STV_SWE_EXPORT
+
+   The software shall freeze a committed per-view presentation, crop its graph
+   viewport and visible detail regions to the screen-visible workspace bounds,
+   and serialize an inert SVG containing the current geometry, computed styles,
+   clipping and scroll state. It shall exclude toolbar/status controls, other
+   views and off-screen regions. It shall copy rather than mutate live DOM.
+
+   **Acceptance criterion:** A panned graph with clipped nodes, scrolled long cards, folded attributes,
+   narrow stacked layout and a visible transient tooltip exports the same visible
+   crop. XML parses, SVG reopens independently in Firefox, and script/event/form
+   behavior and graph datasets are absent. A concurrent layout commit cannot
+   mix revisions; a new attempt captures the new revision.
+
+.. swr:: Save and release SVG downloads without changing exploration
+   :id: STV_SWR_071
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_011
+   :allocated_to: STV_SWE_EXPORT, STV_SWE_RENDER
+
+   The software shall offer a keyboard-accessible Save as SVG control and deliver
+   successful snapshots as image/svg+xml Blob downloads with a safe .svg filename.
+   Browser-managed Save As and documented browser download settings shall provide
+   location choice. It shall prevent duplicate concurrent exports per view,
+   announce errors, and release temporary nodes/object URLs without altering
+   graph, detail collection, focus ownership or stored state.
+
+   **Acceptance criterion:** Location-prompt mode allows saving to a chosen folder or cancelling. Automatic
+   download mode is identified in user guidance without claiming that the app can
+   force a dialog or detect completion. Export failure preserves the live view
+   and permits retry; repeated exports and pagehide do not leak object URLs.
+
+.. swr:: Bundle safe export resources for offline snapshots
+   :id: STV_SWR_072
+   :status: draft
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :derives_from: STV_SYS_011
+   :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_BUNDLE, STV_SWE_EXPORT
+
+   The software shall embed required output-local detail images and fonts in
+   content-addressed export resource records during bundle finalization. It shall
+   resolve resources only inside the final output root, preserve the existing
+   unavailable-remote-media policy, and rewrite snapshot resources to validated
+   self-contained data or inline SVG. It shall not fetch resources during export
+   or copy active external resources into the saved SVG.
+
+   **Acceptance criterion:** Local PNG/SVG, srcset selection, CSS image/font resources and paths containing
+   non-ASCII characters work under file and HTTP. Traversal, remote URLs, active
+   SVG and malformed resources cannot execute or access outside files. Missing
+   required visible resources fail visibly; off-screen content is not loaded for
+   capture. Hidden Needs and transport/graph data are not export payloads.

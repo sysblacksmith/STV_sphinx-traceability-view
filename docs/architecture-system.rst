@@ -56,3 +56,12 @@ bundled. Node/npm, esbuild, Hatchling, pytest, Selenium and geckodriver are
 maintainer or verification tools, not required reader services. Versions,
 licenses and boundary allocations are in :doc:`technology-stack`.
 The complete handover is :doc:`implementation-plan`.
+
+Visible-area SVG output boundary
+--------------------------------
+
+STV_SYS_011 adds a reader-generated standalone SVG output to the existing static
+bundle/browser boundary. The build prepares safe local resource bytes; the
+browser captures presentation and requests an OS/browser download. No external
+service or new system element is introduced. File location and cancellation
+belong to browser settings and the OS dialog, not STV filesystem privileges.

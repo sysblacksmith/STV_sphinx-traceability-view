@@ -5,7 +5,8 @@ Component responsibilities and interfaces; :doc:`elements-software` identifies e
 canonical software element by its component directory, source filenames,
 colocated unit tests and boundary README. Directory names match the lowercase
 suffix of ``STV_SWE_*`` IDs. See :ref:`STV_ADR_007` for source organization.
-The nine-component topology and existing diagram links remain applicable.
+The existing nine-component core diagram is retained; the companion export
+view below documents the added tenth component.
 
 .. raw:: html
 
@@ -124,3 +125,24 @@ content restoration; they own separate DOM identities and cancellation lifetimes
 RENDER owns the responsive dock and keeps it outside graph commits. MODEL and
 DIRECTIVE validate and publish the author capacity setting, default 10. See
 :ref:`STV_ADR_010`, :doc:`internal-interfaces` and :doc:`state-machine`.
+
+View controls, page controls and SVG output
+-------------------------------------------
+
+The nine core components remain; :need:`STV_SWE_EXPORT` extends the software
+architecture to ten. The existing diagram shows the retained core topology;
+this companion view shows the new capture/resource path and its ownership.
+
+.. raw:: html
+
+   <object type="image/svg+xml" data="view-export.svg" style="width:100%;height:auto;aspect-ratio:1200/740" aria-label="SVG capture architecture and ownership">
+     <a href="view-export.svg">Open linked SVG capture architecture</a>
+   </object>
+
+Diagram source: ``architecture/diagrams/view-export.drawio``. RENDER supplies
+committed geometry and commands; INSPECT supplies visible immutable detail
+presentation; DETAIL_BUILD/BUNDLE supply safe local resource records; EXPORT
+composes an inert snapshot and requests the browser download. Page metadata is
+separately scoped host-document behavior in RENDER. Font configuration crosses
+MODEL/DIRECTIVE into BUNDLE, then INSPECT. :ref:`STV_ADR_011` and
+:doc:`internal-interfaces` define lifecycle, serialization and failure ownership.

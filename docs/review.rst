@@ -351,3 +351,22 @@ v1.0.0 release acceptance
 On 2026-10-24 the owner approved PRSA-001 through PRSA-005 and final PR015
 presentation. :doc:`concept-reviews/round-14` records the scoped acceptance;
 :ref:`release-1-0-0-authority` authorizes v1.0.0 with runner/hosted work deferred.
+
+CR015-018 concept increment, 2026-10-25
+---------------------------------------
+
+The owner explicitly accepted CR015-018 and STV_SHR_058-061 and requested concept
+creation. The later save clarification resolves location selection as
+browser-managed Save As with documented settings. This is not internal concept
+acceptance. Proposed ADR011, draft STV_SYS_011/STV_SWR_066-072 and nine draft
+canonical cases supply the scoped handover; :doc:`maturity` holds actual checks
+and current readiness. The font configuration design uses independent author
+scales, defaults 0.7; export captures only the visible workspace, excluding
+controls, with activation-time hover semantics in :doc:`internal-interfaces`.
+
+Retained scope includes Firefox desktop, offline/static hosting, independent
+views, current seed identities, hidden exclusions, node capacity and persistent
+card lifecycle. Full graph export, mandatory filesystem pickers, vector-editor
+portability and new mobile/touch qualification are excluded. Product execution
+and formal concept review/acceptance remain separate gates. Historical accepted
+reviews and hashes are not rewritten for these new revisions.

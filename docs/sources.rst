@@ -378,3 +378,18 @@ yet." Numbering refers to the preceding readiness assessment. See
 The owner clarified that the release must not be labelled private and may
 become publicly visible later. Remaining security findings are accepted as
 nonblocking deferred work for v1.0.0. No visibility change is requested now.
+
+CR015-018 acceptance and Save As clarification, 2026-10-25
+----------------------------------------------------------
+
+Owner conversation (language-corrected): "I have reviewed the stakeholder
+requirements and the CRs and accept their content. Please proceed with
+concept-creation." This approves the four prepared CRs and STV_SHR_058-061, not
+new internal requirements, ADRs, implementation or a release. The earlier request
+and current-seed/visible-area/page-scope answers remain in the canonical CRs.
+
+Owner clarification: use browser-managed Save As with documented settings,
+including enabling a location prompt when automatic downloads otherwise select
+a default folder. This resolves the open location-interface question in CR016.
+The owner also requested working on main; the local branch was safely updated
+to origin/main at 8dbbe79 and all uncommitted concept work was retained.

@@ -1167,3 +1167,101 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    Close all, default 10 and a smaller configured limit work with keyboard and
    pointer. Boxes remain readable/scrollable at wide/narrow widths, with visible
    focus and original content/links/offline policy intact; hover stays independent.
+
+.. shr:: Collapse all relationships to the current starting objects
+   :id: STV_SHR_058
+   :status: accepted
+   :tags: feature_navigation, change_pending
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Each traceability view shall offer a Collapse all nodes button that clears
+   all ordinary relationship expansions and returns to its current starting
+   objects, including any interactively selected starting objects. It shall
+   not restore the author's original seed selection or affect another view.
+   Persistent detail cards shall remain open under their existing lifecycle.
+
+   **Acceptance criterion:** After exploring several branches, including shared
+   paths and cycles, activating the button leaves only the current seeds with
+   no ordinary relationship expanded. Repeating it is harmless, and subsequent
+   exploration works without resurrecting cleared expansions. All current seeds
+   remain in a multi-seed view. A seedless project overview returns to its initial
+   first page of at most five visible stakeholder entries with ordinary traces
+   collapsed, preserving the artificial-entry exception in STV_SHR_047.
+   Another view and open persistent cards are unchanged. The button is keyboard
+   operable with visible focus.
+
+.. shr:: Save the currently visible view as SVG
+   :id: STV_SHR_059
+   :status: accepted
+   :tags: feature_export, change_pending
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Each traceability view shall offer a Save as SVG button to save its currently
+   visible graph and visible opened detail information as an SVG file, allowing
+   the reader to choose the save location. The export shall reflect the current
+   pan, zoom, clipping, typography and visible attribute state, rather than
+   exporting the entire expanded graph or off-screen detail content. Saving or
+   cancelling shall preserve the live exploration and open cards.
+
+   **Acceptance criterion:** With a panned/zoomed graph and open, scrolled side
+   cards, the saved SVG reproduces the visible graph/detail region and its
+   clipping, excluding off-screen graph and card content. The reader can choose
+   where the file is saved, or cancel without changing the view. The SVG can be
+   opened independently of the original page. Export works within the retained
+   offline/static-host constraints without fetching unavailable remote media or
+   exposing hidden Needs. The control is keyboard operable. Location choice uses browser-managed Save As with documented prompt settings
+   per the owner clarification in the linked CR. Capture scope and transient-hover
+   timing are refined in the internal interface contract.
+
+.. shr:: Configure smaller text in both detail presentations
+   :id: STV_SHR_060
+   :status: accepted
+   :tags: feature_inspection, change_pending
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   The view shall use detail text approximately 70% of its previous default size
+   in both hover tooltips and persistent side cards, and shall provide configurable
+   font sizing for both presentations. This shall preserve readable, scrollable
+   full detail content and browser zoom without changing ordinary graph labels
+   or original Need page typography.
+
+   **Acceptance criterion:** The same representative detail content displayed
+   with default configuration is approximately 70% of its pre-change size in
+   both presentations. A valid non-default configuration visibly changes font
+   sizing in both presentations. Headings, tables, code, metadata and links
+   remain usable and available, with keyboard focus, scrolling and containment
+   retained. Independent author-side presentation settings are defined in the internal
+   refinement; no reader settings panel is required.
+
+.. shr:: Expand or collapse all Need attributes on a page
+   :id: STV_SHR_061
+   :status: accepted
+   :tags: feature_inspection, change_pending
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Each documentation page containing rendered Sphinx-Needs elements shall offer
+   Collapse all and Expand all buttons for their detailed attributes. The buttons
+   shall affect all rendered Need elements on that page, including those outside
+   the current viewport, while preserving titles, IDs, body content, original
+   navigation and individual attribute controls. Copied STV detail presentations
+   and graph relationship expansion shall remain unchanged.
+
+   **Acceptance criterion:** On a page with several Needs in mixed attribute
+   fold states, Collapse all folds every detailed-attribute section; Expand all
+   unfolds them all. Each action can be repeated and followed by individual
+   toggles. Need bodies remain visible and a page without rendered Need elements
+   needs no bulk controls. Both buttons support keyboard activation and visible
+   focus under file URLs and static HTTP hosting without exposing hidden Needs
+   or changing any embedded graph or open STV detail card.
