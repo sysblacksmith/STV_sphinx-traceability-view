@@ -394,3 +394,12 @@ remain in the checkout and are excluded from the public website, as described in
    The documentation/tooling restructuring took place in commit
    ``a807a1b8300151fc1dfc2e64a792d24a48d46f38``. Earlier documentation
    can be found in Git history.
+
+
+Additional browser smoke check, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner reported a minimal manual STV smoke test using Microsoft Edge. This
+provides additional browser confidence; browser/OS versions and individual
+procedures were not recorded. It does not extend the formal release qualification
+or establish full Edge coverage.

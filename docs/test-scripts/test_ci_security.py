@@ -56,3 +56,19 @@ def test_candidate_checksums_detect_changed_artifact_bytes(tmp_path):
     assert subprocess.run([verifier,'--strict','--check','SHA256SUMS'],cwd=tmp_path,capture_output=True).returncode!=0
     (tmp_path/'extra-2.whl').write_bytes(b'extra')
     with pytest.raises(ValueError):ci.write_checksums(tmp_path)
+
+
+def test_pages_policy_rejects_publication_and_permission_drift():
+    pages=yaml.safe_load((ROOT/'.github/workflows/pages.yml').read_text())
+    policy.validate('pages',pages)
+    mutations=[
+        lambda w: w['on']['workflow_dispatch']['inputs']['publish'].update(default=True),
+        lambda w: w['jobs']['deploy'].update({'if': 'always()'}),
+        lambda w: w['jobs']['deploy']['steps'].append({'run': 'python project.py'}),
+        lambda w: w['jobs']['build'].update(permissions={'contents': 'write'}),
+        lambda w: w['jobs']['build']['steps'][-1]['with'].update(path='.'),
+        lambda w: w['jobs']['deploy'].update(needs='unrelated'),
+    ]
+    for mutate in mutations:
+        bad=copy.deepcopy(pages);mutate(bad)
+        with pytest.raises(ValueError):policy.validate('pages',bad)
