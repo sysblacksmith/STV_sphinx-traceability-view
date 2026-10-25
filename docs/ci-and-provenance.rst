@@ -94,3 +94,44 @@ This publication policy does not rewrite previous hashes, outcomes or acceptance
 It does not remove any material from Git history or qualify a public repository
 visibility change. The final HTML tree and downloadable archives are scanned before
 publication; a private tooling reference fails the check.
+
+
+GitHub Pages publication
+--------------------------------------------------------------------------------
+
+``.github/workflows/pages.yml`` is manual-only and builds main with read-only
+repository permissions. It installs the pinned documentation dependencies, runs
+the staged publication builder and validates the requirement graph and published
+diagram targets. Only ``docs/_build/html`` is uploaded as the Pages artifact;
+previous builds, diagnostics and local audit reports are outside that tree.
+
+The ``publish`` input defaults to false: this prepares a downloadable preview
+artifact without deployment. When explicitly selected, deployment additionally
+requires a public repository and main. A separate job uses the ``github-pages``
+environment with Pages/OIDC write permissions; it only deploys the artifact and
+does not check out or execute project code. Actions are pinned to full commits.
+
+First-publication procedure:
+
+#. Merge the preparation and obtain successful Validation checks for main.
+#. Run **Documentation Pages** on main with ``publish`` unchecked. Download its
+   artifact and review the site, including the demo and detail navigation.
+#. Confirm the final repository/history disclosure review, then make the
+   repository public in its GitHub settings.
+#. Apply the reviewed ``.github/main-protection.json`` profile after confirming
+   the required check names. Set Pages **Source** to **GitHub Actions** and
+   restrict the ``github-pages`` deployment environment to main.
+#. Run **Documentation Pages** on main with ``publish`` checked. Verify the
+   deployed site while signed out, including nested pages, STV details, diagrams
+   and downloads. Add the verified URL to the repository website field.
+
+The expected site is
+`STV documentation <https://sysblacksmith.github.io/STV_sphinx-traceability-view/>`_.
+These instructions describe the prepared workflow; they do not claim that remote
+settings have been applied or that deployment has succeeded. Publishing docs
+does not create a software release. Candidate attestations remain a separate
+manual provenance operation.
+
+For GitHub's settings and deployment requirements, see
+`configuring a publishing source <https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>`_
+and `custom Pages workflows <https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages>`_.
