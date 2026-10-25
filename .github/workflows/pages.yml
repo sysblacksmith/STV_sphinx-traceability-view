@@ -31,7 +31,7 @@ jobs:
       - name: Build clean publication
         run: python scripts/build_docs.py docs
       - name: Validate requirement graph
-        run: python tools/method/tooling/validate_traceability.py docs/_build/html/needs.json --version 1.0 --repo-root . --require-test-coverage
+        run: python scripts/release.py validate-docs
       - name: Validate published diagram links
         run: python tools/method/tooling/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
       - name: Upload validated website

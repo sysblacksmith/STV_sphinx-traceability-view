@@ -19,8 +19,13 @@ export function capture(workspace,{base,resources,regions=[]}={}) {
     if(style.display==='none'||style.visibility==='hidden')return null;
     // SVG definitions have no screen rectangle but are needed for arrows/paint.
     const definition=node.namespaceURI===SVG&&!!node.closest('defs');
+    const clipping=/(hidden|auto|scroll|clip)/.test(style.overflowX+' '+style.overflowY);
     const outside=!definition&&rect.width&&rect.height&&(!intersect(rect,clip).width||!intersect(rect,clip).height);
-    if(outside&&(style.display!=='inline'||node.localName==='img')){
+    // A scene's own box may be off-screen while negatively positioned
+    // children overflow into the crop. Only clipping or leaf boxes can
+    // establish that the whole subtree is outside.
+    const overflowingChildren=!clipping&&node.children.length>0;
+    if(outside&&!overflowingChildren&&(style.display!=='inline'||node.localName==='img')){
       if(node.namespaceURI===SVG||['absolute','fixed'].includes(style.position))return null;
       // Removing flow boxes changes scroll positions. Keep only their inert
       // geometry, never their text/media/identities, outside the visible crop.
@@ -52,7 +57,6 @@ export function capture(workspace,{base,resources,regions=[]}={}) {
       if(href?.startsWith('#'))copy.setAttribute('href',href);else if(href)throw Error('External SVG references are not permitted.');
     }
     if(node.localName==='a'&&node.href){const url=new URL(node.getAttribute('href'),document.baseURI);if(['http:','https:','file:','mailto:','tel:'].includes(url.protocol))copy.setAttribute('href',url.href);}
-    const clipping=/(hidden|auto|scroll|clip)/.test(style.overflowX+' '+style.overflowY);
     const childClip=clipping?intersect(clip,rect):clip;
     const target=(node.scrollTop||node.scrollLeft)?document.createElementNS(XHTML,'div'):copy;
     if(target!==copy){

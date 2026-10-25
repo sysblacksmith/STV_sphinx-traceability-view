@@ -32,13 +32,15 @@ def write_checksums(directory):
 def validate():
     import tomllib  # Maintainer CI uses Python 3.11+; runtime subcommand supports 3.10.
     base=ROOT/'docs/_build/ci';reports=base/'reports';reports.mkdir(parents=True,exist_ok=True)
-    distributions=base/'distributions'
+    release_directory=os.environ.get('STV_RELEASE_DIR')
+    distributions=(ROOT/release_directory).resolve() if release_directory else base/'distributions'
     run([sys.executable,'scripts/check-workflows.py'])
     run(['npm.cmd' if os.name=='nt' else 'npm','ci'],ROOT/'frontend')
     run(['node','build.js'],ROOT/'frontend')
     run(['git','diff','--exit-code','--','src/sphinx_traceability_view/static'])
     run(['node','--test','--test-reporter=junit','--test-reporter-destination='+str(reports/'node.xml'),'src/*/tests/*.test.js'],ROOT/'frontend')
-    run([sys.executable,'-m','build','--no-isolation','--outdir',str(distributions)])
+    if not release_directory:
+        run([sys.executable,'-m','build','--no-isolation','--outdir',str(distributions)])
     config=tomllib.loads((ROOT/'pyproject.toml').read_text(encoding='utf-8'))
     run([sys.executable,'-m','pip','download','--only-binary=:all:','--dest',str(ROOT/'docs/_build/wheelhouse'),
          '-r','requirements-tooling.txt',*config['project']['dependencies']])
@@ -49,7 +51,7 @@ def validate():
          '--junitxml='+str(reports/'pytest.xml'),'-q'],env=env)
     run([sys.executable,'scripts/check-coverage.py','--strict'])
     run([sys.executable,'scripts/check-method-package.py'])
-    run([sys.executable,'-m','sphinx','-E','-a','-W','--keep-going','-b','html','docs','docs/_build/html'])
+    run([sys.executable,'scripts/build_docs.py','docs'])
     from runpy import run_path
     version=run_path(str(ROOT/'src/sphinx_traceability_view/_version.py'))['__version__']
     run([sys.executable,'tools/method/tooling/validate_traceability.py','docs/_build/html/needs.json',
@@ -58,7 +60,8 @@ def validate():
     run([sys.executable,'tools/method/tooling/normalize-diagram-links.py',
          '--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
     run([sys.executable,'scripts/check-method-package.py','--published','docs/_build/html'])
-    write_checksums(distributions)
+    if not release_directory:
+        write_checksums(distributions)
     frozen=subprocess.check_output([sys.executable,'-m','pip','freeze'],text=True)
     (reports/'environment.txt').write_text(frozen,encoding='utf-8')
 

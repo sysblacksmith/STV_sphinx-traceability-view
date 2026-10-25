@@ -44,7 +44,7 @@ Install STV in the Python environment used to build your Sphinx documentation.
    :end-before: .. stv-compatibility-end
 
 Obtain the wheel (``.whl``) for the version you intend to use from
-`GitHub Releases <https://github.com/sysforger/STV_sphinx-traceability-view/releases>`_
+`GitHub Releases <https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases>`_
 or from a maintainer-provided development build. From its download directory,
 install it with your documentation environment's Python::
 
@@ -52,8 +52,12 @@ install it with your documentation environment's Python::
 
 Replace ``<version>`` with the actual wheel version; the placeholder is not a
 literal shell argument. For repeatable CI builds, use a specific wheel version.
-The first stable release is still being prepared; these instructions do not
-imply that a stable release has already been published.
+The published package is also available from PyPI::
+
+   python -m pip install sphinx-traceability-view
+
+For a candidate not yet published, use its qualified wheel instead. See
+:doc:`maturity` for the current release-preparation state.
 
 Consumers need the wheel and its Python dependencies. Node, Draw.io and the
 shared requirements-tooling checkout used to build STV's own engineering

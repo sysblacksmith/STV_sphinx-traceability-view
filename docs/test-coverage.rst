@@ -634,6 +634,7 @@ Executable sources
 * ``docs/test-scripts/test_persistent_details.py``
 * ``docs/test-scripts/test_position_stability.py``
 * ``docs/test-scripts/test_publication.py``
+* ``docs/test-scripts/test_release_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
 * ``docs/test-scripts/test_view_controls.py``
