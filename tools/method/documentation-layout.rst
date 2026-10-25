@@ -169,7 +169,7 @@ Local rendering code and style
 Import status_charts and traceability_model from tools/method/tooling.
 Use tools/method/static as a local Sphinx static asset path, with
 wide-layout.css in html_css_files. Enable sphinx_needs, sphinx_rtd_theme
-and status_charts plus need_controls by default. All tooling and assets are checked into the consuming
+and status_charts plus need_controls and method_version by default. All tooling and assets are checked into the consuming
 project.
 
 The ``need_controls`` extension adds **Collapse all** and **Expand all** on
@@ -443,3 +443,7 @@ a non-instantiated starter. CR colors use gold for Draft, blue for
 Accepted and green for Implemented. Keep nine charts at the shared 80%
 linear display size with responsive rows. Tagged chart populations use
 distinct safe SVG filenames.
+
+The ``method_version`` extension renders the version immediately before Purpose
+and limits from the imported ``.method-package.json`` at build time. It tracks
+the manifest as a build dependency and rejects missing or invalid versions.

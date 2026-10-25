@@ -1,6 +1,8 @@
 Minimal requirements and allocation model
 =========================================
 
+.. method-version::
+
 Purpose and limits
 ------------------
 
