@@ -497,7 +497,9 @@ within the snapshot. The effective workspace ancestor background is captured
 as an SVG backdrop. Original style elements are omitted after computed-style
 capture; only selected embedded font-face rules are emitted. Ordinary external navigation links may remain explicit
 links; automatic resource loading is restricted to embedded validated data.
-Non-intersecting positioned/SVG subtrees are omitted. Off-screen flow boxes
+Non-intersecting positioned/SVG clipping or leaf boxes are omitted. Containers
+with visible overflow are traversed even when their own box lies outside the
+crop, because positioned descendants can overflow back into it. Off-screen flow boxes
 become empty, nonvisual geometry placeholders, preserving scroll positions and
 flex/grid gaps without their text, resources or identities. Clipping remains
 authoritative for partial text/media intersections. SVG is a visual crop, not a promise to redact every

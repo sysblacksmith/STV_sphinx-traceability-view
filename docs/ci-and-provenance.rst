@@ -1,6 +1,67 @@
 CI validation and candidate provenance
 ================================================================================
 
+Release publication from GitHub Releases
+--------------------------------------------------------------------------------
+
+``.github/workflows/release.yml`` handles **published final releases** in the
+public repository. Drafts and prereleases do not publish. Release tags must be
+``vMAJOR.MINOR.PATCH``, match the single package version in
+``src/sphinx_traceability_view/_version.py``, and identify a commit already in
+``main``. Publishing is serialized; the workflow never creates or moves a tag.
+
+Before publishing a draft GitHub Release, attach the **qualified** wheel, source
+archive and ``SHA256SUMS`` containing exactly those two filenames and hashes.
+The release-test runner retains all three under its candidate's ``artifacts``
+directory. Do not attach an older version or rebuild after qualification.
+The workflow downloads those exact public assets, checks their hashes, version,
+long description and runtime/source contents against the tagged source, and
+runs ``twine check --strict``. Text source comparisons tolerate Git's LF/CRLF
+conversion; packaged browser binaries retain exact byte checks. An altered or
+incomplete archive fails publication. Existing releases are never replaced.
+
+The read-only Windows build job reruns development CI against the downloaded
+wheel, including isolated installation, and produces a clean documentation
+publication from the release tag. Full Windows/Firefox/file/HTTP and capacity
+qualification is a separate prerequisite recorded in :doc:`test-execution/index`.
+The release workflow does not infer that qualification from a green CI result.
+
+Only the separate Ubuntu ``publish-pypi`` job receives OIDC permission. It
+downloads the checked artifact, verifies its checksums, and uses the pinned
+PyPA action with attestations. It does not check out or run repository code.
+The ``pypi`` environment and PyPI Trusted Publisher must identify owner
+``sysblacksmith``, repository ``STV_sphinx-traceability-view``, workflow
+``release.yml`` and environment ``pypi``. No API token or stored secret is used.
+Publishing fails visibly if the version already exists; it does not skip files.
+
+After PyPI succeeds, an isolated ``deploy-docs`` job deploys the validated HTML
+through the ``github-pages`` environment. That environment must allow tag pattern
+``v*`` in addition to ``main`` for the separate manual Pages workflow. The
+``pypi`` environment should allow release tags only. Environment approval rules,
+if configured by the owner, still apply.
+
+This updates the single documentation site to the tagged release, rather than
+publishing unreleased main content on every push. The manual Documentation Pages
+workflow remains available for explicitly requested previews/deployments.
+Do not publish an older final release after a newer one: the workflow is
+serialized but does not maintain multiple versioned documentation sites.
+
+For a failed build/PyPI job, fix the failure and rerun the failed jobs; successful
+jobs need not be repeated. If PyPI succeeded but Pages failed, rerun only the
+failed Pages job. PyPI uploads are irreversible; do not delete/recreate a release
+or replace its attached qualified files to conceal an error. Use a new version
+when the distributed package must change.
+
+See `PyPA Trusted Publishing guidance <https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/>`_
+and `GitHub release events <https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#release>`_.
+
+Retained original preparation notes
+--------------------------------------------------------------------------------
+
+The sections below preserve the earlier CI/provenance and first-publication
+design. Their statements about unpublished releases, visibility or unapplied
+settings describe that preparation stage; current release automation is above.
+
 Scope and trust boundary
 --------------------------------------------------------------------------------
 

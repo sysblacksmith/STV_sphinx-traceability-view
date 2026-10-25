@@ -1,0 +1,19 @@
+{
+  "started": "2026-10-25T20:19:04.352572+00:00",
+  "finished": "2026-10-25T20:19:30.046949+00:00",
+  "result": "passed",
+  "cases": [
+    {
+      "protocol": "http",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 14907,
+      "svg_sha256": "9fe6f866f49d4847b8697eb9350d78c7b97e47adf9a997584462a9ce2a297426",
+      "seconds": 0.0702813999960199,
+      "path": "docs/_build/export-capacity-1.1.0/http-900.svg"
+    }
+  ],
+  "script_sha256": "cb489934af46af7195e8c1e37b39d1f1870b1529a12686f42f5fe1aafce38a1c"
+}

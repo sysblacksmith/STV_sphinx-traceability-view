@@ -1,0 +1,28 @@
+# STV 1.1.0 ? draft release notes
+
+Candidate pending the final release decision and review of the qualification limits.
+
+## New features
+
+- Collapse all graph expansions while keeping the current starting objects and open detail cards.
+- Save the visible graph area, including visible open details, as a standalone SVG through browser-managed downloads.
+- Use smaller detail text by default (70%), with independent tooltip and side-card font-scale settings.
+- Expand or collapse Need metadata across a documentation page while preserving titles, bodies and individual controls.
+
+## Packaging and documentation
+
+- Add a public PyPI description with installation instructions and a complete minimal integration example.
+- Publish qualified package assets and tagged documentation from final GitHub Releases using Trusted Publishing.
+- Show the shared method package version from its manifest at documentation build time.
+
+## Compatibility and validation
+
+Python 3.10+; pinned Sphinx 8.1.3 and Sphinx-Needs 8.2.0. The candidate passed 196 automated checks plus a separate clean Python 3.10 runtime check, including Windows 11 / Firefox 158.0.1 file and HTTP workflows and the 30,000-Need / 90,000-link benchmark.
+
+Qualification evidence: [1.1.0 candidate record](https://github.com/sysblacksmith/STV_sphinx-traceability-view/tree/main/docs/test-execution/1.1.0-candidate-1).
+
+## Known limits
+
+SVG export captures the currently visible area and uses browser-compatible HTML inside SVG; universal vector-editor compatibility is not promised. Save-location selection uses browser settings. The full extended/manual case designs, native save dialogs, 200-node SVG exports with every detail/resource combination, other OS/browser versions and mobile/touch interaction are not fully qualified. Occurrence mode remains deferred.
+
+STV-owned code is MIT licensed; bundled components retain their included license terms and notices.

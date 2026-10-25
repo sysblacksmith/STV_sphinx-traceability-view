@@ -1,0 +1,18 @@
+STV 1.1.0 adds controls for exploring and sharing Sphinx-Needs traceability views.
+
+- **Collapse all nodes** clears expanded relationships while keeping the currently selected starting objects and open detail cards.
+- **Save as SVG** exports the visible graph and details, including a visible tooltip. The browser manages the download location; enable its save-location prompt to choose a folder.
+- Tooltip and side-card text now default to 70% size, with independent `traceability_view_tooltip_font_scale` and `traceability_view_details_font_scale` settings.
+- Documentation pages with Needs receive **Collapse all** and **Expand all** controls for their metadata attributes.
+- SVG export retains visible graph nodes whose positioned parent lies outside the crop.
+- PyPI now includes a public installation and integration description.
+
+The release workflow verifies the qualified distributions against the Git tag, publishes them to PyPI through Trusted Publishing, and deploys the matching documentation to GitHub Pages after successful PyPI publication.
+
+Install or upgrade with `python -m pip install --upgrade sphinx-traceability-view==1.1.0`.
+
+The package requires Python 3.10 or later and pins Sphinx 8.1.3 and Sphinx-Needs 8.2.0. Release-browser qualification uses Windows 11 and Firefox 158.0.1 on file and HTTP transports. Other OS/browser combinations and mobile/touch behavior remain outside that formal qualification. SVG export targets standalone browser viewing; universal vector-editor compatibility is not promised. Occurrence mode remains deferred.
+
+Validation: 229 automated cases passed (187 Python and 42 JavaScript), plus fresh offline Python 3.10 installation and clean Sphinx usage. The 30,000-Need/90,000-link capacity fixture was identity-verified and browser measurements repeated. Four 200-node/ten-card SVG scenarios and extended reset, typography, snapshot and page-control procedures passed; native Save As, cancellation and browser zoom checks were owner-observed. [Qualification evidence](https://github.com/sysblacksmith/STV_sphinx-traceability-view/tree/04e1da24a26b89751874b13d36e856e6bbebd35a/docs/test-execution/1.1.0-candidate-4). Earlier failed candidates and diagnostic attempts are retained rather than overwritten. Published 1.0.0 artifacts remain unchanged.
+
+[Documentation](https://sysblacksmith.github.io/STV_sphinx-traceability-view/) · [Source](https://github.com/sysblacksmith/STV_sphinx-traceability-view) · [Issues](https://github.com/sysblacksmith/STV_sphinx-traceability-view/issues)

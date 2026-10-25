@@ -1,0 +1,19 @@
+........................................................................ [ 38%]
+..............................................................F......... [ 77%]
+...........................................                              [100%]
+================================== FAILURES ===================================
+____________________ test_extended_reset_command_sequences ____________________
+
+    @pytest.mark.requirements('STV_SWR_066')
+    def test_extended_reset_command_sequences():
+        root=Path(__file__).resolve().parents[2]
+        result=subprocess.run(['node','--test',str(root/'docs/test-scripts/fixtures/extended/reset-sequences.mjs')],cwd=root,capture_output=True,text=True)
+        assert result.returncode==0,result.stdout+result.stderr
+>       assert '# pass 2' in result.stdout
+E       AssertionError: assert '# pass 2' in '✔ STV_SWR_066 reset is fresh after every command class and cyclic shared traversal (1.6584ms)\n✔ STV_SWR_066 rese...� tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 51.4989\n'
+E        +  where '✔ STV_SWR_066 reset is fresh after every command class and cyclic shared traversal (1.6584ms)\n✔ STV_SWR_066 rese...� tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 51.4989\n' = CompletedProcess(args=['node', '--test', 'D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-s...�� suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 51.4989\n', stderr='').stdout
+
+docs\test-scripts\test_extended_export_resources.py:107: AssertionError
+=========================== short test summary info ===========================
+FAILED docs/test-scripts/test_extended_export_resources.py::test_extended_reset_command_sequences
+1 failed, 186 passed in 958.28s (0:15:58)

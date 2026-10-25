@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-10-25T21:07:48.026227+00:00",
+  "software_baseline": "41e57ed76c2acb521cdeb033f4be7b01fac50115",
+  "browser": "Firefox 158.0.1; isolated always-ask profile",
+  "owner_report": "cancellation works... files are stored in docs/_build/extended-qualification/chosen-folder",
+  "basis": "Owner-observed native Save As/cancellation; agent verified stored files, not the native dialog interaction.",
+  "files": [
+    {
+      "file": "stv-stv-2a97516c354b68848cdbd8f54a226a0a55b21ed138e207ad6c5cbb9c00aa5aea-0.svg",
+      "bytes": 1100978,
+      "sha256": "d5a4e4768a7951d909e85c3ee18a698ff81f2b6e8b65d2354e7e03ca204740e7",
+      "graph_nodes": 6,
+      "detail_cards": 1,
+      "link_schemes": [
+        "file"
+      ],
+      "svg_dimensions": {
+        "width": "1078.433349609375",
+        "height": "1106.1000061035156"
+      }
+    },
+    {
+      "file": "stv-stv-2a97516c354b68848cdbd8f54a226a0a55b21ed138e207ad6c5cbb9c00aa5aea-0_http_demo.svg",
+      "bytes": 1100649,
+      "sha256": "141fdbe011db3533ecaf75870de83f2fbe1a0182215f3c8c68c20a76a5723a6a",
+      "graph_nodes": 6,
+      "detail_cards": 1,
+      "link_schemes": [
+        "http"
+      ],
+      "svg_dimensions": {
+        "width": "1175.46875",
+        "height": "665.703125"
+      }
+    }
+  ]
+}

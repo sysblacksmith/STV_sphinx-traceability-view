@@ -9,7 +9,77 @@ ALLOWED={'actions/checkout','actions/setup-python','actions/setup-node','actions
          'actions/upload-pages-artifact','actions/deploy-pages'}
 
 
+def validate_release(workflow):
+    if workflow.get('permissions') != {'contents': 'read'} or workflow.get('on') != {'release': {'types': ['published']}}:
+        raise ValueError('Release publication requires a published-release event and read-only default token')
+    jobs = workflow.get('jobs', {})
+    if set(jobs) != {'build', 'publish-pypi', 'deploy-docs'}:
+        raise ValueError('Release publication jobs changed')
+    build = jobs['build']
+    if build.get('if') != "github.event.repository.visibility == 'public' && !github.event.release.prerelease && !github.event.release.draft":
+        raise ValueError('Only final public releases may publish')
+    steps = build['steps']
+    checkout = steps[0]
+    if (checkout.get('with', {}).get('ref') != '${{ github.event.release.tag_name }}'
+            or checkout['with'].get('fetch-depth') != 0):
+        raise ValueError('Release build requires the tag and full ancestry')
+    commands = [s.get('run') for s in steps]
+    if not {'python scripts/release.py prepare', 'python scripts/ci.py validate'} <= set(commands):
+        raise ValueError('Release inputs and documentation must be validated')
+    if commands.index('python scripts/release.py prepare') >= commands.index('python scripts/ci.py validate'):
+        raise ValueError('Validate release assets before running consumer tests')
+    test_step = next(s for s in steps if s.get('run') == 'python scripts/ci.py validate')
+    if test_step.get('env') != {'STV_RELEASE_DIR': 'docs/_build/release-publish/packages'}:
+        raise ValueError('Consumer tests must use exact release assets')
+    for identity, job in jobs.items():
+        if not 1 <= job.get('timeout-minutes', 0) <= 30:
+            raise ValueError('Release job timeout must be bounded')
+        privileged = identity != 'build'
+        if job.get('runs-on') != ('ubuntu-24.04' if privileged else 'windows-2025'):
+            raise ValueError('Use reviewed hosted release runners')
+        if privileged:
+            expected = {'contents': 'read', 'id-token': 'write'}
+            if identity == 'deploy-docs':
+                expected['pages'] = 'write'
+            if job.get('permissions') != expected:
+                raise ValueError('Unexpected release publication permissions')
+            environment = 'pypi' if identity == 'publish-pypi' else 'github-pages'
+            dependencies = 'build' if identity == 'publish-pypi' else ['build', 'publish-pypi']
+            if job.get('environment', {}).get('name') != environment or job.get('needs') != dependencies:
+                raise ValueError('Publication environments and dependency gates must be preserved')
+        elif 'permissions' in job:
+            raise ValueError('Release code execution must remain read-only')
+        for step in job['steps']:
+            action = step.get('uses', '')
+            if action:
+                allowed = (ALLOWED - {'actions/deploy-pages', 'actions/attest-build-provenance'}) if not privileged else (
+                    {'actions/download-artifact', 'pypa/gh-action-pypi-publish'} if identity == 'publish-pypi' else {'actions/deploy-pages'})
+                if not re.fullmatch(r'[^@]+@[0-9a-f]{40}', action) or action.split('@')[0] not in allowed:
+                    raise ValueError('Unapproved or unpinned release action')
+                if action.startswith('actions/checkout@') and step.get('with', {}).get('persist-credentials') is not False:
+                    raise ValueError('Release checkout must not persist credentials')
+            if privileged and 'run' in step:
+                if identity != 'publish-pypi' or (step.get('working-directory'), step['run']) != ('release', 'sha256sum --strict --check SHA256SUMS'):
+                    raise ValueError('No repository code may execute with publication credentials')
+    publish = jobs['publish-pypi']['steps']
+    if len(publish) != 3 or not publish[-1].get('uses', '').startswith('pypa/gh-action-pypi-publish@'):
+        raise ValueError('PyPI publication must follow download and checksum verification')
+    if publish[0].get('with') != {'name': 'release-distributions', 'path': 'release'}:
+        raise ValueError('Download only the qualified release artifact')
+    if publish[-1].get('with') != {'packages-dir': 'release/packages/', 'attestations': True}:
+        raise ValueError('Publish only the verified packages with attestations')
+    if len(jobs['deploy-docs']['steps']) != 1:
+        raise ValueError('Pages deployment must only deploy the validated artifact')
+    uploads = [s for s in steps if s.get('uses', '').startswith('actions/upload-pages-artifact@')]
+    if len(uploads) != 1 or uploads[0].get('with', {}).get('path') != 'docs/_build/html':
+        raise ValueError('Publish only the clean HTML tree')
+    if 'secrets.' in yaml.safe_dump(workflow):
+        raise ValueError('Release publishing uses Trusted Publishing, not stored secrets')
+
+
 def validate(name,workflow):
+    if name == 'release':
+        return validate_release(workflow)
     if workflow.get('permissions')!={'contents':'read'}:raise ValueError('Workflow token must be read-only')
     expected={'push','pull_request','workflow_dispatch'} if name=='validation' else {'workflow_dispatch'}
     if set(workflow.get('on',{}))!=expected:raise ValueError('Unexpected workflow trigger')
@@ -55,9 +125,9 @@ def validate(name,workflow):
 
 
 def main():
-    for name in ('validation','provenance','pages'):
+    for name in ('validation','provenance','pages','release'):
         validate(name,yaml.safe_load((ROOT/'.github/workflows'/f'{name}.yml').read_text(encoding='utf-8')))
-    print('Workflow trust policy valid: pinned actions, read-only builds, isolated manual attestation/Pages deployment, no user secrets.')
+    print('Workflow trust policy valid: pinned actions, read-only builds, isolated publication, no user secrets.')
 
 
 if __name__=='__main__':main()

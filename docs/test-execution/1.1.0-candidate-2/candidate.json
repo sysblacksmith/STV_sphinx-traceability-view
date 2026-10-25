@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-25T20:28:30.667862+00:00",
+  "revision": "9dd462b5df9e0e5433d6c973f43b2a33fb8973ee",
+  "dirty_worktree": " M .github/workflows/pages.yml\n M docs/architecture/implementation/requirements-implementation.txt\n M docs/ci-and-provenance.rst\n M docs/getting-started.rst\n M docs/internal-interfaces.rst\n M docs/maturity.rst\n M docs/test-cases/software-tests.rst\n M docs/test-cases/system-tests.rst\n M docs/test-coverage.rst\n M docs/test-execution/index.rst\n M docs/test-scripts/test_ci_security.py\n M docs/test-scripts/test_view_controls.py\n M frontend/src/export/snapshot.js\n M scripts/check-workflows.py\n M scripts/ci.py\n M scripts/verify-release.py\n M src/sphinx_traceability_view/_version.py\n M src/sphinx_traceability_view/static/stv.js\n?? .github/workflows/release.yml\n?? docs/problem-tickets/STV_PR_016_svg-overflow-descendants.rst\n?? docs/test-execution/1.1.0-candidate-1/\n?? docs/test-execution/1.1.0-candidate-2/\n?? docs/test-scripts/test_release_publication.py\n?? scripts/release.py\n",
+  "source_identity": "7614fa7a8fa30807004bb8efbdfd650aa221322a29fe27d32544917e5972f817",
+  "wheel": "sphinx_traceability_view-1.1.0-py3-none-any.whl",
+  "wheel_sha256": "4cfed985248b3f328d46c5ffb57a15b5c4d89c9be0f4296e0c3568bba18549eb",
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\1.1.0-candidate-2\\html"
+}

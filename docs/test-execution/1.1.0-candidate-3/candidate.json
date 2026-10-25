@@ -1,0 +1,22 @@
+{
+  "started": "2026-10-25T21:52:09.111229+00:00",
+  "revision": "b435c695c048a03601749e5f62aec05224b69b07",
+  "dirty_worktree": " M docs/maturity.rst\n M docs/problem-tickets/STV_PR_016_svg-overflow-descendants.rst\n M docs/test-cases/software-tests.rst\n M docs/test-cases/system-tests.rst\n M docs/test-execution/index.rst\n?? docs/test-execution/1.1.0-candidate-1/\n?? docs/test-execution/1.1.0-candidate-2/\n?? docs/test-execution/1.1.0-candidate-3/\n",
+  "source_identity": "35567a38a0b353fa197be62387e77a73c3e499a6e4c4b623df9b58bb8531914e",
+  "wheel": "sphinx_traceability_view-1.1.0-py3-none-any.whl",
+  "wheel_sha256": "4cfed985248b3f328d46c5ffb57a15b5c4d89c9be0f4296e0c3568bba18549eb",
+  "python": "3.13.17 (tags/v3.13.17:64e080d, Oct 21 2026, 14:08:53) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "host": "Hk-Legion_Pro7i",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "node": "v24.21.0",
+  "driver": "C:\\Users\\fragg\\.cache\\selenium\\geckodriver\\win64\\0.37.1\\geckodriver.exe",
+  "driver_version": "geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)",
+  "browser": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "offline_policy": "External HTTP/HTTPS proxy points at closed loopback port; local static HTTP bypasses proxy",
+  "browser_mode": "Headless automation of the installed stable desktop Firefox binary",
+  "benchmark_output": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-benchmark\\1.1.0-candidate-2\\html",
+  "capacity_fixture_reused_from": "1.1.0-candidate-2"
+}

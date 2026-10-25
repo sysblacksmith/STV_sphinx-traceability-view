@@ -176,7 +176,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_059
    :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
 

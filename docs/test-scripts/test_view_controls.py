@@ -37,6 +37,23 @@ def test_standalone_svg_visible_details(browser, short_output, protocol, card_co
             identity = f'BOX_{index:02}'
             open_box(browser, root, identity)
             wait.until(lambda d: 'Long rendered' in panel(d, root, identity).text)
+        # Reproduce the large-layout invariant without building 30k Needs:
+        # move the scene's own box off-screen, compensating its children so
+        # the rendered graph stays exactly where it was.
+        geometry = browser.execute_script("""
+          const scene=arguments[0].querySelector('.stv-scene');
+          const first=scene.querySelector('.stv-node');
+          const before=first.getBoundingClientRect();
+          const scale=new DOMMatrix(getComputedStyle(scene).transform).a;
+          scene.style.left=`${20000*scale}px`;
+          for(const child of scene.children)
+            child.style.left=`${(parseFloat(getComputedStyle(child).left)||0)-20000}px`;
+          const after=first.getBoundingClientRect();
+          return {sceneLeft:scene.getBoundingClientRect().left, width:innerWidth,
+            dx:Math.abs(before.left-after.left),dy:Math.abs(before.top-after.top)};
+        """, root)
+        assert geometry['sceneLeft'] > geometry['width'], geometry
+        assert geometry['dx'] < 0.5 and geometry['dy'] < 0.5, geometry
         browser.execute_script('window.exportBlob=null; const create=URL.createObjectURL; URL.createObjectURL=b=>{window.exportBlob=b; return create(b);};')
         save = root.find_element(By.XPATH, ".//button[.='Save as SVG']")
         wait.until(lambda d: save.is_enabled())
@@ -66,6 +83,18 @@ def test_standalone_svg_visible_details(browser, short_output, protocol, card_co
         output.rename(output.with_name(output.name + '-unavailable'))
         browser.get(saved.as_uri())
         assert browser.find_elements(By.CSS_SELECTOR, 'foreignObject')
+        # Positioned scenes can lie outside their own box while overflowing
+        # graph nodes remain visible. Export must retain those descendants.
+        assert browser.find_elements(By.CSS_SELECTOR, '.stv-node .stv-id')
+        assert browser.execute_script("""
+          const frame=document.documentElement.getBoundingClientRect();
+          return [...document.querySelectorAll('.stv-node .stv-id')].some(node=>{
+            const r=node.getBoundingClientRect();
+            return node.textContent.includes('BOX_') && r.width>0 && r.height>0
+              && r.bottom>frame.top && r.top<frame.bottom
+              && r.right>frame.left && r.left<frame.right;
+          });
+        """)
         assert browser.execute_script("return document.documentElement.textContent.includes('Long rendered')")
         assert browser.execute_script("""
           const frame=document.documentElement.getBoundingClientRect();

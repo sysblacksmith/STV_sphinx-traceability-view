@@ -1,0 +1,54 @@
+{
+  "fixture": "Unchanged candidate-1 host data in temporary copy with exact candidate-2 runtime bundle",
+  "runtime_sha256": "dc98c772a0f0030f440c1d85e3ecabe75454c4245380a865de7f6a833d53c023",
+  "started": "2026-10-25T20:29:35.344923+00:00",
+  "finished": "2026-10-25T20:30:40.185099+00:00",
+  "result": "passed",
+  "cases": [
+    {
+      "protocol": "file",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 11840093,
+      "svg_sha256": "c669500aac0352613213510f72e2096b5fedce0a187460bab99460901999d481",
+      "seconds": 1.0096561999525875,
+      "path": "docs/_build/export-capacity-1.1.0-fixed/file-1600.svg"
+    },
+    {
+      "protocol": "file",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10803858,
+      "svg_sha256": "b67c4047f87398c67d53e7ce469c1e1fa37bd862d40ad6ddc5266be7116b5962",
+      "seconds": 0.8859085000585765,
+      "path": "docs/_build/export-capacity-1.1.0-fixed/file-900.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 11831981,
+      "svg_sha256": "1d1e0462a5b33922d5dfd9983f4071de94611b02d37ab3b4c8234be3e963f294",
+      "seconds": 0.9770491999806836,
+      "path": "docs/_build/export-capacity-1.1.0-fixed/http-1600.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10796058,
+      "svg_sha256": "9f78caf462856a44463d17061d71167004865ab8246f65e60e45cb7d5958c250",
+      "seconds": 0.8770125999581069,
+      "path": "docs/_build/export-capacity-1.1.0-fixed/http-900.svg"
+    }
+  ],
+  "script_sha256": "0a4ac5a12243ed892b86038b9fcc9621b684b2934be96d6fd7085b15e29e058e"
+}

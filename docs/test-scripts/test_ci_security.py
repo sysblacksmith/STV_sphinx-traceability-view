@@ -72,3 +72,23 @@ def test_pages_policy_rejects_publication_and_permission_drift():
     for mutate in mutations:
         bad=copy.deepcopy(pages);mutate(bad)
         with pytest.raises(ValueError):policy.validate('pages',bad)
+
+
+def test_release_policy_rejects_untrusted_triggers_and_publication_code():
+    release = yaml.safe_load((ROOT/'.github/workflows/release.yml').read_text())
+    policy.validate('release', release)
+    mutations = [
+        lambda w: w['on'].update(pull_request={}),
+        lambda w: w['jobs']['build'].update({'if': 'always()'}),
+        lambda w: w['jobs']['build']['steps'][0]['with'].update(ref='main'),
+        lambda w: w['jobs']['publish-pypi']['steps'].append({'run': 'python project.py'}),
+        lambda w: w['jobs']['deploy-docs'].update(needs='build'),
+        lambda w: w['jobs']['publish-pypi']['steps'][-1]['with'].update({'skip-existing': True}),
+        lambda w: w['jobs']['publish-pypi']['steps'][-1]['with'].update({'packages-dir': '.'}),
+        lambda w: w['jobs']['build'].update(permissions={'id-token': 'write'}),
+    ]
+    for mutate in mutations:
+        bad = copy.deepcopy(release)
+        mutate(bad)
+        with pytest.raises(ValueError):
+            policy.validate('release', bad)

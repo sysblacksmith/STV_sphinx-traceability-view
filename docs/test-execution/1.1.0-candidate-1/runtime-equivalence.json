@@ -1,0 +1,20 @@
+{
+  "sphinx_traceability_view/__init__.py": "13d29642d47c33f167b564d4e2433bcaf06c5dda17f5ddb71aa0d2edad804147",
+  "sphinx_traceability_view/_version.py": "3406933c0e38d9e1f56a3697e1bc27eb9f7ca6ccd7b1502a0072c72ec476fff4",
+  "sphinx_traceability_view/bundle/__init__.py": "be20442b4ddecc0f1a5707a2427364c1cbddbb4a577a70e54a549d329d1ac364",
+  "sphinx_traceability_view/detail_build/__init__.py": "4f6eeb92abe69cc7b84fd956fe43c0f1beb7c4d2b98c32f4c2fe879e1c804a53",
+  "sphinx_traceability_view/detail_build/export_resources.py": "6a804c0162e176c39808d53935b443030ad2f58e1571061058175444e3f4b948",
+  "sphinx_traceability_view/directive/__init__.py": "307423fc344c9cae73bb82aecb09ab43ae5a0107c152b99eebe3a8099fdae2a4",
+  "sphinx_traceability_view/directive/directives.py": "9f153db2276001c59488009edfd044e1b7fd00915b795123a0a5171bd6816833",
+  "sphinx_traceability_view/directive/lifecycle.py": "ee272d83e4b5d7698b8f004eaa68d1aa2639994119d6327bc0300671b4267c89",
+  "sphinx_traceability_view/graph/__init__.py": "2347906f55fc6d5ea5d8cc8ad5ec9e0db15f572006fdfcec619b0447176c286b",
+  "sphinx_traceability_view/graph/placement.py": "96f4d4169a678e010604d065bdf3ff239b37f6b96a9433c834050977c8352f65",
+  "sphinx_traceability_view/model/__init__.py": "bdca6e84569afe8ebf000480786d7471b212238979c24405a1d233b5e97ad58f",
+  "sphinx_traceability_view/static/LICENSE.txt": "363726635411461a4f16c757930343bb8d9ab969ba1a41e66d47aee096058929",
+  "sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt": "a960714473502ebd05284a8eec9914a84397ebcbe2eb8b1da81b7fd2c8e9c109",
+  "sphinx_traceability_view/static/stv.css": "7a878f08d4133f0123c1d18aadbad8391a987b3fa36fab8640088c3efe91dd1b",
+  "sphinx_traceability_view/static/stv.js": "377dff01ffbe941d7dc7a4202e43b71f45a8a066877dd6f1ca0add661dda27db",
+  "sphinx_traceability_view/static/vendor/ELK-INVENTORY.json": "b98e87a326cd87e136958579b343d466bb84b856cfdf9313d4be62f2e4f5f3d6",
+  "sphinx_traceability_view/static/vendor/ELK-SOURCE.txt": "bb1827072b40c849822fdbf1f597201a2a857700dd8643e70f588bdac8ad811b",
+  "sphinx_traceability_view/static/vendor/elk.bundled.js": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf"
+}

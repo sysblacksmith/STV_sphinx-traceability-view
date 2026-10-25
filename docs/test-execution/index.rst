@@ -29,13 +29,13 @@ Historical candidate results; no deployment or release approval is implied.
    prsa-005-fix/index
    prsa-006-fix/index
    pr013-poc/index
-
    pr013-final/index
    cr013-rows/index
-
    pr014-boundary/index
-
    cr014-details/index
-
    pr015-details/index
    1.0.0-candidate-2/index
+   1.1.0-candidate-1/index
+   1.1.0-candidate-2/index
+   1.1.0-candidate-3/index
+   1.1.0-candidate-4/index

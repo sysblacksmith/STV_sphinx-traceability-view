@@ -26,7 +26,8 @@ def candidate_sources():
     files=[]
     for directory in ('src','frontend/src','frontend/legal','docs/test-scripts','scripts'):
         files.extend(path for path in (ROOT/directory).rglob('*') if path.is_file() and '__pycache__' not in path.parts and not path.is_symlink())
-    files.extend(ROOT/name for name in ('pyproject.toml','conftest.py','hatch_build.py','frontend/package.json','frontend/package-lock.json','frontend/build.js','docs/conf.py'))
+    files.extend(ROOT/name for name in ('pyproject.toml','PYPI.rst','.gitattributes','conftest.py','hatch_build.py','frontend/package.json','frontend/package-lock.json','frontend/build.js','docs/conf.py'))
+    files.extend((ROOT/'.github/workflows').glob('*.yml'))
     files.extend(ROOT/'docs'/name for name in ('requirements-stakeholder.rst','requirements-system.rst','requirements-software.rst','internal-interfaces.rst','implementation-plan.rst','verification-plan.rst'))
     files.extend((ROOT/'docs/architecture/decisions').glob('*.rst'))
     return {path.relative_to(ROOT).as_posix():sha(path) for path in sorted(set(files))}
@@ -58,7 +59,8 @@ def main():
     index=record.parent/'index.rst'
     existing=index.read_text(encoding='utf-8') if index.exists() else 'Release test executions\n=======================\n\nHistorical candidate results; no deployment or release approval is implied.\n\n.. toctree::\n   :maxdepth: 2\n\n'
     index.write_text(existing+'   '+args.record+'/index\n',encoding='utf-8')
-    wheel=ROOT/'dist'/f'sphinx_traceability_view-{version}-py3-none-any.whl'
+    wheel=record/'artifacts'/f'sphinx_traceability_view-{version}-py3-none-any.whl'
+    wheel.parent.mkdir()
     method_tools=ROOT/'tools/method/tooling'
     env=dict(os.environ,STV_WHEEL=str(wheel),STV_GECKODRIVER=str(args.driver.resolve()),STV_SCREENSHOTS=str(record/'screenshots'),
              STV_CAPACITY_OUTPUT=str(ROOT/'docs/_build/release-benchmark'/args.record/'html'),
@@ -76,15 +78,19 @@ def main():
         print(f'{name}: exit {result.returncode}',flush=True)
         return result.returncode
 
-    if run('browser-assets',['node','build.js'],ROOT/'frontend') or run('python-package',[sys.executable,'-m','build','--no-isolation']):
+    if run('browser-assets',['node','build.js'],ROOT/'frontend') or run('python-package',[sys.executable,'-m','build','--no-isolation','--outdir',str(wheel.parent)]):
         (record/'index.rst').write_text(f'{args.record} execution\n'+('='*(len(args.record)+10))+'\n\nCandidate preparation failed; see commands.json and retained logs.\n',encoding='utf-8')
         return 2
     if not wheel.is_file():return 2
     sources=candidate_sources()
     source_identity=hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()
     (record/'source-hashes.json').write_text(json.dumps(sources,indent=2),encoding='utf-8')
-    artifact_dir=record/'artifacts';artifact_dir.mkdir()
-    shutil.copyfile(wheel,artifact_dir/wheel.name)
+    artifact_dir=wheel.parent
+    source_archive=wheel.parent/f'sphinx_traceability_view-{version}.tar.gz'
+    (artifact_dir/'SHA256SUMS').write_bytes(''.join(sha(p)+'  '+p.name+'\n' for p in (wheel,source_archive)).encode())
+    run('workflow-policy',[sys.executable,'scripts/check-workflows.py'])
+    run('package-metadata',[sys.executable,'-m','twine','check','--strict',str(wheel),str(source_archive)])
+    run('publication-inputs',[sys.executable,'scripts/release.py','check','--directory',str(artifact_dir),'--tag','v'+version])
     versions=subprocess.run([sys.executable,'-m','pip','freeze'],capture_output=True,text=True,check=True).stdout
     (record/'environment.txt').write_text(versions,encoding='utf-8')
     lock={p.name:sha(p) for p in (ROOT/'docs/_build/wheelhouse').glob('*.whl') if not p.name.startswith('sphinx_traceability_view-')}
@@ -101,7 +107,7 @@ def main():
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('coverage',[sys.executable,'scripts/check-coverage.py','--strict'])
     run('diagram-links-source',[sys.executable,str(method_tools/'normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams'])
-    run('documentation',[sys.executable,'-m','sphinx','-b','html','-W','--keep-going','docs','docs/_build/html'])
+    run('documentation',[sys.executable,'scripts/build_docs.py','docs'])
     benchmark_dir=ROOT/'docs/_build/release-benchmark'/args.record
     if args.reuse_capacity_from:
         previous=record.parent/args.reuse_capacity_from

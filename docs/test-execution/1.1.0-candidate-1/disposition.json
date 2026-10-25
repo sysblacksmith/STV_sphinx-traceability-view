@@ -1,0 +1,8 @@
+{
+  "state": "rejected",
+  "recorded_at": "2026-10-25T20:28:30.587956+00:00",
+  "reason": "Supplemental inspection found visible graph nodes omitted from SVG. Original 196-check results did not assert graph presence in exported SVG. No candidate-1 artifacts may be published.",
+  "problem": "STV_PR_016",
+  "regression_before": "svg-regression-old-runtime.log",
+  "regression_after": "svg-regression-fixed-transports.log"
+}

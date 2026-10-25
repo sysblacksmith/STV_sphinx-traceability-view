@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="4" time="93.309" timestamp="2026-10-25T22:27:54.180606+01:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[file]" time="38.798"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="ef633706-cbcb-4fc1-997c-1d9e6c9dea54")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-5dq6kd_y/html')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_066')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_reset_stale_layout_failure_retry_and_independent_views(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url);wait=ready(browser)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision]'))==2)
+            other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+            unchanged=(ids(browser,other),other.get_attribute('data-stv-revision'))
+            root=mount_controlled(browser);assert set(ids(browser,root))=={'GOAL_00','GOAL_01'}
+            browser.execute_script("arguments[0].querySelector('[data-focus=details]').click()",root)
+            wait.until(lambda d:root.find_elements(By.CSS_SELECTOR,'.stv-persistent-detail table.need'))
+            cards=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-persistent-detail')].map(p=&gt;p.dataset.needId)",root)
+            browser.execute_script("extendedMode='delay';arguments[0].querySelector('.stv-groups button[aria-expanded=false]').click()",root)
+&gt;           wait.until(lambda d:d.execute_script('return extendedPending.length')==1)
+
+docs\test-scripts\test_extended_controls.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="ef633706-cbcb-4fc1-997c-1d9e6c9dea54")&gt;
+method = &lt;function test_reset_stale_layout_failure_retry_and_independent_views.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C93D4F32E0&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[http]" time="39.415"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="da1a09da-8d18-445b-a266-7a27217eaeec")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-5dq6kd_y/html')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_066')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_reset_stale_layout_failure_retry_and_independent_views(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url);wait=ready(browser)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision]'))==2)
+            other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+            unchanged=(ids(browser,other),other.get_attribute('data-stv-revision'))
+            root=mount_controlled(browser);assert set(ids(browser,root))=={'GOAL_00','GOAL_01'}
+            browser.execute_script("arguments[0].querySelector('[data-focus=details]').click()",root)
+            wait.until(lambda d:root.find_elements(By.CSS_SELECTOR,'.stv-persistent-detail table.need'))
+            cards=browser.execute_script("return [...arguments[0].querySelectorAll('.stv-persistent-detail')].map(p=&gt;p.dataset.needId)",root)
+            browser.execute_script("extendedMode='delay';arguments[0].querySelector('.stv-groups button[aria-expanded=false]').click()",root)
+&gt;           wait.until(lambda d:d.execute_script('return extendedPending.length')==1)
+
+docs\test-scripts\test_extended_controls.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="da1a09da-8d18-445b-a266-7a27217eaeec")&gt;
+method = &lt;function test_reset_stale_layout_failure_retry_and_independent_views.&lt;locals&gt;.&lt;lambda&gt; at 0x000001C93D536F20&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]" time="7.316"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]" time="7.448"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties></testcase></testsuite></testsuites>
