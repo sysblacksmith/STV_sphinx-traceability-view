@@ -117,10 +117,3 @@ method hash and assessed sources. Case design hashes exclude changing
 does not imply a changed test procedure. Other concept acceptance/history is
 preserved. Concept acceptance does not set results or requirement verification
 to passed; the subsequent release records supply actual outcomes.
-
-
-
-.. note::
-
-   Publication copy: private tooling locations are omitted. The unchanged original
-   is retained under engineering-history/pre-portable-method in the checkout.

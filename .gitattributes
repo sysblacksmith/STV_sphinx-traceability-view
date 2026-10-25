@@ -10,7 +10,3 @@
 
 # Portable package hashes identify exact LF bytes on every platform.
 /tools/method/** text eol=lf
-
-
-# Historical originals retain their original blob bytes in working checkouts.
-/engineering-history/pre-portable-method/** -text

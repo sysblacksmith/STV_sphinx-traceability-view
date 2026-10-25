@@ -20,8 +20,8 @@ STV_PR_010: Source archives include execution logs despite exclusion
 
    **Expected outcome and fix:** Select source-package inputs explicitly and
    independently of VCS negations. Keep implementation/browser sources, built
-   assets, full legal materials and build inputs. Engineering history, local
-   tools and execution evidence stay in Git/local storage. Exclude bytecode and
+   assets, full legal materials and build inputs. Local tools and execution
+   evidence stay in Git/local storage. Exclude bytecode and
    caches within selected directories. Original test records and archives are
    unchanged. See :doc:`../technology-stack` for the boundary.
 

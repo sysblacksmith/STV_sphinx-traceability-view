@@ -193,10 +193,3 @@ Elements Software:
 
 
 The diagram correction additionally assessed every element link: :need:`STV_SE_BUILD`, :need:`STV_SE_BROWSER`, :need:`STV_SWE_DIRECTIVE`, :need:`STV_SWE_MODEL`, :need:`STV_SWE_GRAPH`, :need:`STV_SWE_DETAIL_BUILD`, :need:`STV_SWE_BUNDLE`, :need:`STV_SWE_STATE`, :need:`STV_SWE_LAYOUT`, :need:`STV_SWE_RENDER`, :need:`STV_SWE_INSPECT`.
-
-
-
-.. note::
-
-   Publication copy: private tooling locations are omitted. The unchanged original
-   is retained under engineering-history/pre-portable-method in the checkout.

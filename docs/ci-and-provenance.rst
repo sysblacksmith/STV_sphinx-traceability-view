@@ -87,8 +87,7 @@ Public evidence presentation
 
 Canonical requirement, case and execution records remain visible in the website.
 Historical records are rendered with private tooling repository locations omitted.
-The adjusted publication sources have unchanged originals under
-engineering-history/pre-portable-method. Logs, inventories, screenshots and binary
+Logs, inventories, screenshots and binary
 attachments remain unchanged in the engineering checkout. Historical raw downloads and execution
 screenshots are excluded from the website; source-copy downloads are disabled.
 This publication policy does not rewrite previous hashes, outcomes or acceptance.

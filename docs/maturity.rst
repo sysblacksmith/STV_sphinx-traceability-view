@@ -391,5 +391,6 @@ remain in the checkout and are excluded from the public website, as described in
 
 .. note::
 
-   Publication copy: private tooling locations are omitted. The unchanged original
-   is retained under engineering-history/pre-portable-method in the checkout.
+   The documentation/tooling restructuring took place in commit
+   ``a807a1b8300151fc1dfc2e64a792d24a48d46f38``. Earlier documentation
+   can be found in Git history.

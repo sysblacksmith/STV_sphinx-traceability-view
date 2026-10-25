@@ -67,10 +67,3 @@ STV_CR_007: Record folder layout
      claimed for this refactor.
 
    These checks do not update historical release results or verification states.
-
-
-
-.. note::
-
-   Publication copy: private tooling locations are omitted. The unchanged original
-   is retained under engineering-history/pre-portable-method in the checkout.
