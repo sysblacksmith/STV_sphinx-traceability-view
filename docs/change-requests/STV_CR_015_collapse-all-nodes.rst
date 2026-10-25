@@ -5,11 +5,11 @@ STV_CR_015: Collapse all graph relationships
 
 .. change_request:: Collapse all graph relationships
    :id: STV_CR_015
-   :status: accepted
+   :status: implemented
    :basis: owner
    :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    **Owner request, 2026-10-25 (language-corrected):** Add a Collapse all nodes
    button that returns to the initial seed without any opened links.

@@ -1175,7 +1175,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    Each traceability view shall offer a Collapse all nodes button that clears
    all ordinary relationship expansions and returns to its current starting
@@ -1200,7 +1200,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    Each traceability view shall offer a Save as SVG button to save its currently
    visible graph and visible opened detail information as an SVG file, allowing
@@ -1226,7 +1226,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    The view shall use detail text approximately 70% of its previous default size
    in both hover tooltips and persistent side cards, and shall provide configurable
@@ -1249,7 +1249,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    Each documentation page containing rendered Sphinx-Needs elements shall offer
    Collapse all and Expand all buttons for their detailed attributes. The buttons

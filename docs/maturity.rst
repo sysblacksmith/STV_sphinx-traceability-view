@@ -6,6 +6,31 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+CR015-018 development implementation, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner invoked concept-implementation for accepted baseline ``2c4236a`` on
+``concept-cr015-018``. The four CRs now have implemented status: graph collapse
+keeps current roots/cards, visible-area SVG export uses safe local resources and
+browser-managed downloads, tooltip/card font scales default independently to
+0.7, and host pages have scoped bulk metadata controls. :doc:`implementation-review`
+records actual source/test mappings, checks, artifacts and limits.
+
+The developer check sets include 42 frontend passes, 87 non-browser passes,
+57 broad Firefox passes and later targeted retests after edge corrections.
+Packaging is verified in an isolated offline consumer without Node. The updated
+behavioral tables and adjacent Draw.io/SVG sources describe the actual command,
+error/recovery and download-lease states. Runtime product/dependency versions and
+existing release artifacts remain unchanged; development archives are isolated.
+
+Verification for the new requirements/CRs is partial, not a new release pass.
+The nine formal case designs remain accepted/not_run pending complete recorded
+qualification; development pytest/Node checks are identified separately. No new
+release, deployment, push or implementation commit is authorized by these results.
+Prior concept/release history below remains historical evidence for its exact
+artifacts. The working demo is rebuilt locally for owner inspection.
+
+
 CR015-018 accepted concept, 2026-10-25
 --------------------------------------------------------------------------------
 

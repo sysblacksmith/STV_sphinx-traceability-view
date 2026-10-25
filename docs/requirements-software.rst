@@ -1310,7 +1310,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SHR_058
    :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
 
@@ -1338,7 +1338,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SHR_060
    :allocated_to: STV_SWE_MODEL, STV_SWE_DIRECTIVE
 
@@ -1364,7 +1364,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SHR_060
    :allocated_to: STV_SWE_INSPECT, STV_SWE_RENDER
 
@@ -1390,7 +1390,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SHR_061
    :allocated_to: STV_SWE_RENDER, STV_SWE_DIRECTIVE
 
@@ -1419,7 +1419,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SYS_011
    :allocated_to: STV_SWE_EXPORT
 
@@ -1442,7 +1442,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SYS_011
    :allocated_to: STV_SWE_EXPORT, STV_SWE_RENDER
 
@@ -1465,7 +1465,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
    :derives_from: STV_SYS_011
    :allocated_to: STV_SWE_DETAIL_BUILD, STV_SWE_BUNDLE, STV_SWE_EXPORT
 

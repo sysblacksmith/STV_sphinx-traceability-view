@@ -31,7 +31,9 @@ export function visible(graph, state) {
 export function transition(graph, current, command) {
   const next = {...current, expanded: new Set(current.expanded), pages: new Map(current.pages), revision: current.revision + 1};
   try {
-    if (command.type === 'seed') {
+    if (command.type === 'collapse-all') {
+      Object.assign(next,initial(current.mode==='seeds'?current.seeds:[]),{revision:current.revision+1});
+    } else if (command.type === 'seed') {
       const id=typeof command.id==='string'?command.id.trim():'';
       if(!id || !Object.hasOwn(graph.objects,id))throw Error('Choose an existing Need ID.');
       Object.assign(next,initial([id]),{revision:current.revision+1});

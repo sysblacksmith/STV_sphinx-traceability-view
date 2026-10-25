@@ -7,6 +7,9 @@ import {persistentDetails} from '../inspect/persistent.js';
 import {orderedGroups} from './groups.js';
 import {seedPicker} from './seeds.js';
 import {edgeViewport} from './edge-viewport.js';
+import {loadResources} from '../export/resources.js';
+import {capture,serialize} from '../export/snapshot.js';
+import {saveSVG} from '../export/download.js';
 const nodeKey=id=>JSON.stringify(['need',id]);
 const rootKey=JSON.stringify(['project']);
 function element(tag,cls,text) {const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
@@ -31,7 +34,27 @@ export async function mount(root,graph,base,layout=compute) {
     ['Pan left',()=>select(viewport).call(zoomer.translateBy,100,0)],['Pan right',()=>select(viewport).call(zoomer.translateBy,-100,0)],
     ['Pan up',()=>select(viewport).call(zoomer.translateBy,0,100)],['Pan down',()=>select(viewport).call(zoomer.translateBy,0,-100)]])toolbar.append(button(label,action));
   toolbar.append(button('Reset viewport',()=>{home=fitGeometry(committedGeometry);select(viewport).call(zoomer.transform,home);}));
-  const retry=button('Retry layout',()=>update(null));retry.hidden=true;toolbar.append(retry);
+  let exportResources,exportError,exporting=false,pointerSnapshot;
+  loadResources(graph,base).then(data=>{exportResources=data;save.disabled=false;}).catch(error=>{exportError=error;save.title=error.message;status.textContent=`SVG export unavailable: ${error.message}`;});
+  const snapshot=()=>{
+    if(root.getAttribute('aria-busy')==='true'||!hasCommitted||!retry.hidden)throw Error('Wait for layout to finish before exporting.');
+    if(exportError)throw exportError;
+    if(!exportResources)throw Error('Export resources are preparing. Retry shortly.');
+    return capture(workspace,{base,resources:exportResources,regions:[...document.querySelectorAll('.stv-hover-detail')].filter(p=>p.id.startsWith(root.id+'-detail-'))});
+  };
+  const save=button('Save as SVG',event=>{
+    if(exporting)return;exporting=true;
+    try{saveSVG(serialize(event.detail===0?snapshot():pointerSnapshot||snapshot()),root.id);status.textContent='SVG download requested. Your browser controls the save location.';}
+    catch(error){status.textContent=`SVG export failed: ${error.message}`;}
+    finally{pointerSnapshot=null;exporting=false;}
+  });
+  save.disabled=true;save.title='Save the visible graph and details. Enable your browser’s save-location prompt to choose a folder.';
+  save.addEventListener('pointerdown',e=>{if(e.button===0){try{pointerSnapshot=snapshot();}catch{pointerSnapshot=null;}document.addEventListener('pointerup',up=>{if(!save.contains(up.target))pointerSnapshot=null;},{once:true});}});
+  for(const event of ['pointercancel','blur'])save.addEventListener(event,()=>{pointerSnapshot=null;});
+  toolbar.append(save);
+  let retryCommand=null;
+  toolbar.append(button('Collapse all nodes',()=>update({type:'collapse-all'})));
+  const retry=button('Retry layout',()=>update(retryCommand));retry.hidden=true;toolbar.append(retry);
   const closeAll=button('Close all details',()=>persistent.clear());closeAll.className='stv-close-all';closeAll.setAttribute('aria-controls',stack.id);toolbar.append(closeAll);
   const persistent=persistentDetails(root,graph,base,{stack,findTrigger:id=>nodeElements.get(nodeKey(id))?.querySelector('[data-focus=details]'),fallback:closeAll,changed:size=>{stack.hidden=!size;workspace.classList.toggle('stv-has-details',size>0);}});
   window.addEventListener('pagehide',()=>persistent.clear(false));
@@ -139,12 +162,12 @@ export async function mount(root,graph,base,layout=compute) {
       for(const edge of geometry.edges){const path=document.createElementNS(svg.namespaceURI,'polyline');path.setAttribute('points',edge.points.map(p=>p.join(',')).join(' '));path.setAttribute('marker-end',`url(#${marker.id})`);const title=document.createElementNS(svg.namespaceURI,'title');title.textContent=edge.edge[1];path.append(title);svg.append(path);}
       scene.style.width=`${geometry.width}px`;scene.style.height=`${geometry.height}px`;
       home=fitGeometry(geometry);
-      if(!hasCommitted||['seed','overview','page'].includes(command?.type)){
+      if(!hasCommitted||['seed','overview','page','collapse-all'].includes(command?.type)){
         viewport.scrollLeft=0;viewport.scrollTop=0;select(viewport).call(zoomer.transform,home);hasCommitted=true;
       }
-      root.dataset.stvRevision=String(state.revision);status.textContent=`${keys.length} visible ${keys.length===1?'node':'nodes'}`;retry.hidden=true;
+      root.dataset.stvRevision=String(state.revision);status.textContent=`${keys.length} visible ${keys.length===1?'node':'nodes'}${exportError?' / SVG export unavailable: '+exportError.message:''}`;retry.hidden=true;
       if(focusKey&&restoreFocus){const owner=nodeElements.get(focusKey),initiator=nodeElements.get(initiatingKey);const match=owner&&[...owner.querySelectorAll('button,a')].find(e=>e.dataset.focus===focusControl&&!e.disabled);const fallback=initiator&&[...initiator.querySelectorAll('button,a')].find(e=>e.dataset.focus===initiatingControl&&!e.disabled);(match||owner?.querySelector('button,a')||fallback||toolbar.querySelector('button')).focus({preventScroll:true});}
-    }catch(error){if(ticket===request){status.textContent=`Layout failed: ${error.message}`;retry.hidden=false;
+    }catch(error){if(ticket===request){retryCommand=command;status.textContent=`Layout failed: ${error.message}`;retry.hidden=false;
       if(!nodeElements.size){let y=20;for(const [key,n]of staged){Object.assign(n.style,{position:'absolute',left:'20px',top:`${y}px`});y+=boxes.get(key)+20;nodesLayer.append(n);nodeElements.set(key,n);}}}}
     finally{measure.remove();if(ticket===request)root.setAttribute('aria-busy','false');}
   }

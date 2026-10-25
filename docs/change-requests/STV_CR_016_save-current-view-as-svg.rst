@@ -5,11 +5,11 @@ STV_CR_016: Save the visible view as SVG
 
 .. change_request:: Save the visible view as SVG
    :id: STV_CR_016
-   :status: accepted
+   :status: implemented
    :basis: owner
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    **Owner request, 2026-10-25 (language-corrected):** Add a Save as SVG button
    that saves the current view, including any opened detailed information, into

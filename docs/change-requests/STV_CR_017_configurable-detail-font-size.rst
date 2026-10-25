@@ -5,11 +5,11 @@ STV_CR_017: Smaller configurable detail text
 
 .. change_request:: Smaller configurable detail text
    :id: STV_CR_017
-   :status: accepted
+   :status: implemented
    :basis: owner
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    **Owner request, 2026-10-25 (language-corrected):** Reduce the font size of
    detail cards, both tooltips and side cards, to approximately 70% and make

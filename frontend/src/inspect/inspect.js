@@ -1,5 +1,6 @@
 import {computePosition,autoUpdate,offset,flip,shift,size} from '@floating-ui/dom';
 import {loadDetail,detailContent,associate} from './content.js';
+import {scaleTypography} from './typography.js';
 export {loadDetail} from './content.js';
 let sequence=0;
 export function inspector(root,graph,base) {
@@ -16,14 +17,14 @@ export function inspector(root,graph,base) {
     const dismiss=document.createElement('button');dismiss.textContent='Close details';dismiss.onclick=()=>close(true);
     const original=document.createElement('a');original.textContent='Open original object';original.href=new URL(graph.objects[id].url,base).href;original.target='_blank';original.rel='noopener noreferrer';
     const body=document.createElement('div');body.textContent='Loading detailsâ€¦';
-    panel.append(dismiss,original,body);document.body.append(panel);associate(button,panel.id);
+    panel.append(dismiss,original,body);document.body.append(panel);scaleTypography(panel,graph.presentation?.tooltip_font_scale??1);associate(button,panel.id);
     panel.onmouseenter=()=>clearTimeout(timer);panel.onmouseleave=schedule;panel.onfocusout=schedule;
     panel.onkeydown=e=>{if(e.key==='Escape'){e.preventDefault();close(true);}};
     const position=()=>computePosition(button,panel,{strategy:'fixed',middleware:[offset(8),flip(),shift({padding:12}),size({padding:12,apply({availableWidth,availableHeight,elements}){Object.assign(elements.floating.style,{maxWidth:`${Math.max(180,availableWidth)}px`,maxHeight:`${Math.max(100,availableHeight)}px`});}})]}).then(({x,y})=>{if(panel&&request===token)Object.assign(panel.style,{left:`${x}px`,top:`${y}px`});});
     cleanup=autoUpdate(button,panel,position);if(keyboard)dismiss.focus();
     try {
       const html=await loadDetail(graph,id,base); if(request!==token)return;
-      body.replaceChildren(detailContent(html,graph,id,base,`${panel.id}-`));position();
+      body.replaceChildren(detailContent(html,graph,id,base,`${panel.id}-`));scaleTypography(panel,graph.presentation?.tooltip_font_scale??1);position();
     }catch(error){if(request===token)body.textContent=error.message;}
   };
   const hover=(id,button)=> {

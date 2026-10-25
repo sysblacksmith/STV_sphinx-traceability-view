@@ -407,9 +407,10 @@ context at scale 1.0 before changing any font styles. Capture computed CSS-pixel
 sizes for the complete descendant tree, then apply each captured size times the
 presentation scale in a second pass. This avoids nested multiplication and
 preserves existing explicit heading/table/code sizes. The visible panel wrapper's
-own heading/link text uses the same baseline rule. Use an off-screen inert,
-visibility-hidden measurement container with the same width/classes, never a
-second accessible live card. Delayed fonts must finish before measurement, or
+own heading/link text uses the same baseline rule. Measure synchronously in the actual restored presentation before the next
+paint, never creating a second accessible live card. Restore retained baselines
+before measuring newly inserted descendants, then apply all sizes in a second
+pass; initial loading/error wrappers use the same rule. Delayed fonts must finish before measurement, or
 re-measure from the retained unscaled baseline after font readiness. Reuse never
 rescales already scaled values. Fragment disposal releases its measurement state.
 This is presentation-local; no source-page or graph label CSS is changed.
@@ -452,7 +453,7 @@ INSPECT controls retain their separate existing initialization and lifecycle.
 Visible-area capture and resource contract
 -------------------------------------------
 
-``EXPORT.capture({root, workspace, viewport, revision, resources, inspectRegions})``
+``EXPORT.capture(workspace, {base, resources, regions})``
 returns an immutable snapshot descriptor or a typed capture error. A crop with
 zero width/height produces "No visible view area to export" and no download;
 never fabricate a minimum-size canvas or scroll the page automatically. Capture
@@ -484,7 +485,7 @@ the crop. Frozen descriptors contain no live nodes or callbacks. Future graph,
 font, viewport or card changes cannot alter an in-progress snapshot. Read-only
 snapshotting does not close cards, update their age or move focus.
 
-``EXPORT.serialize(snapshot, resourceRecord)`` constructs namespaced SVG with
+``EXPORT.serialize(snapshot)`` constructs namespaced SVG with
 XHTML foreignObject, computed inline style and nested graph SVG. It materializes
 visible ::before/::after textual decoration, replacing control icons with their
 captured inert appearance. Freeze animation/transition state. Discard handlers,
@@ -492,10 +493,14 @@ scripts, forms, embedded executable widgets, graph/transport attributes and
 nonvisual accessibility-control markup. Already safe detail content remains the
 source; export adds a second inert-output boundary. Do not serialize document
 head, style sheets or arbitrary host scripts. Rewrite fragment IDs/references
-within the snapshot. Ordinary external navigation links may remain explicit
+within the snapshot. The effective workspace ancestor background is captured
+as an SVG backdrop. Original style elements are omitted after computed-style
+capture; only selected embedded font-face rules are emitted. Ordinary external navigation links may remain explicit
 links; automatic resource loading is restricted to embedded validated data.
-Non-intersecting subtrees are omitted; clipping remains authoritative for partial
-text/media intersections. SVG is a visual crop, not a promise to redact every
+Non-intersecting positioned/SVG subtrees are omitted. Off-screen flow boxes
+become empty, nonvisual geometry placeholders, preserving scroll positions and
+flex/grid gaps without their text, resources or identities. Clipping remains
+authoritative for partial text/media intersections. SVG is a visual crop, not a promise to redact every
 character beyond the visible portion of a partly clipped text node.
 
 DETAIL_BUILD finalization walks safe local media/CSS dependencies used by detail
@@ -521,7 +526,7 @@ previously available local content or report success with broken images. No
 runtime fetch/XHR, arbitrary file access or original-page dependency is permitted.
 No export change relaxes the existing detail URL/sanitization policies.
 
-``EXPORT.save(svgText, suggestedName)`` uses Blob type
+``EXPORT.saveSVG(svgText, viewId)`` uses Blob type
 ``image/svg+xml;charset=utf-8``, URL.createObjectURL and a temporary HTML anchor
 with download. Default name is ``stv-<safe-view-id>.svg``; allow only safe filename
 characters and bound the generated component to 80 characters. There is one
@@ -552,3 +557,7 @@ Validate all references again after rewriting. Unsupported local SVG remains
 viewable in the source documentation but export reports its unsupported resource
 rather than claiming a complete standalone snapshot. Extending the allowlist is
 a reviewed compatibility change with corresponding security/fidelity fixtures.
+
+Host bulk actions reject disclosures targeting title/head or content/body rows.
+Missing host handlers or unsupported row encodings disable the page-wide pair
+with a readable explanation rather than applying a partial change.

@@ -90,7 +90,7 @@ Software module responsibilities and containment within the product system eleme
    **Component directory:** ``src/sphinx_traceability_view/detail_build``. The folder name is the
    lowercase suffix of ``STV_SWE_DETAIL_BUILD``.
 
-   **Implementation:** ``__init__.py``.
+   **Implementation:** ``__init__.py``; ``export_resources.py``.
 
    **Unit tests:** ``tests/test_details.py``.
 
@@ -212,7 +212,8 @@ Software module responsibilities and containment within the product system eleme
    lowercase suffix of ``STV_SWE_INSPECT``.
 
    **Implementation:** ``inspect.js`` (hover), ``content.js`` (shared safe content),
-   ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus).
+   ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus),
+   ``typography.js`` (baseline-preserving font scaling).
 
    **Unit tests:** ``tests/inspect.test.js``; ``tests/collection.test.js``;
    ``tests/typography.test.js``.

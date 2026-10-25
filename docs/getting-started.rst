@@ -174,3 +174,32 @@ at capacity replaces the oldest open box; focusing/reusing it does not renew age
 Detail boxes target a width of 720 px. Metadata such as status and tags starts
 folded; use the little arrow (or focus it and press Enter/Space) to reveal it.
 The artifact ID in the copied heading opens the original artifact in a new tab.
+
+Exploration and detail controls
+--------------------------------
+
+**Collapse all nodes** clears opened graph relationships while retaining your
+current starting objects and open detail cards. **Close all details** remains a
+separate operation. On pages with rendered Needs, **Collapse all** and **Expand
+all** control their detailed attributes without changing embedded graphs.
+
+**Save as SVG** captures the currently visible graph and detail area, including
+its current pan, zoom, clipping and attribute state. It excludes off-screen
+content and toolbar controls. Open the resulting self-contained SVG in a browser;
+vector editors differ in their support for embedded HTML. Export errors leave
+your exploration intact and can be retried after the indicated issue is resolved.
+
+The browser controls file name/location and cancellation. In Firefox, enable
+**Settings > General > Files and Applications > Downloads > Always ask you where
+to save files** when you want a location dialog. Otherwise the browser can save
+to its configured download folder. STV reports that a download was requested;
+it cannot confirm that the file was saved.
+
+Authors can independently configure detail text in ``conf.py``::
+
+   traceability_view_tooltip_font_scale = 0.7
+   traceability_view_details_font_scale = 0.7
+
+Both defaults are approximately 70% of the previous detail typography. Use 1.0
+to restore the previous size. Values must be finite positive numbers. Ordinary
+graph labels and original Need page text keep their existing sizes.

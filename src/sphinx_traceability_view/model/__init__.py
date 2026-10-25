@@ -91,6 +91,17 @@ def normalize(host_types, host_links, supplied=None, project_mode=False):
 DETAILS_LIMIT_DEFAULT = 10
 
 
+def validate_font_scale(value, setting):
+    import math
+    try:
+        valid = type(value) in (int, float) and math.isfinite(value) and value > 0
+    except OverflowError:
+        valid = False
+    if not valid:
+        raise ValueError(f"{setting}: expected a finite positive number")
+    return value
+
+
 def validate_details_limit(value=DETAILS_LIMIT_DEFAULT):
     """Keep author capacity exact across Python and the JavaScript consumer."""
     if type(value) is not int or not 1 <= value <= 9007199254740991:

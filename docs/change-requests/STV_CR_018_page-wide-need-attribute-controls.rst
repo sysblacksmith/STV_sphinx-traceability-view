@@ -5,11 +5,11 @@ STV_CR_018: Page-wide Need attribute controls
 
 .. change_request:: Page-wide Need attribute controls
    :id: STV_CR_018
-   :status: accepted
+   :status: implemented
    :basis: owner
    :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    **Owner request, 2026-10-25 (language-corrected):** Add Collapse all and Expand
    all buttons to each page containing Sphinx-Needs elements, to collapse or
