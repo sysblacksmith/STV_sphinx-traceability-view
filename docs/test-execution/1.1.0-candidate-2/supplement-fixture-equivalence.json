@@ -1,0 +1,16 @@
+{
+  "basis": "Exact graph and selected detail bytes match the fresh candidate-2 benchmark; the temporary supplement uses exact candidate-2 runtime bytes.",
+  "files": {
+    "_static/stv/graph-247b26e86cd82a43a85dcf4a18c1d5fcf99c23b0fa95b680565128691d1ad864.js": "ff1f965ee6d71a6e8e070cecbada66847d16879d3fb9d1f496965b3c6cd03c02",
+    "_static/stv/details/015ef03d1b1262668393a9a314aff96f648ff8e362e771ed83b43cd92006dae9.js": "c26da1745aacca22cafbc968e472ae266a54e95dd04a6954a197d539f76ee686",
+    "_static/stv/details/88a1351be1137fc8bca3a86cf0c438ea59db8704dbcd03d72fd8a199f29b3344.js": "e72308f9230a1733353f4bc78c31676182e899be2223edd4bec0c6fde4e6498e",
+    "_static/stv/details/d4d0dbc3876e546322fe5d87626f88cf2f73acde3123c836b6de2d0413dbe1a8.js": "ee002de39947e82009954572aa455b59b3de7c43eeb755f4dd1a3db6f6e2d3ee",
+    "_static/stv/details/ae52f972472632f8ee36263cc0e9dd8dedb3fc7be0006e4e02ef762a24d8302f.js": "7dca5246eb0e50f41dd8dbd364d689f0fa4f30911f8cb11fc1a04d0f020c6424",
+    "_static/stv/details/9873eedd98e0c92bc5d950673033f8084ba49737fccebdf72738870422132381.js": "5dd952234f860b60200479caf5625f27e34b8bae159628ab0ba76afed2aa3d83",
+    "_static/stv/details/88130141a6bc0db9ff3831b08d771ad2957b3da67681ddcb0fba1e5af5ca2bbe.js": "09e78a6dbf4bfef8aeafd0eaba0f34763c9e59a6a0b0f26751f28a845b91fa78",
+    "_static/stv/details/5f734f02879811ce69f81e12fe51c0247f6799c21e72fed03a5ad095dce97a3e.js": "18ad09d41f0246258bdfd5685bd688912f1cce2864dd996da482cf2c242f5306",
+    "_static/stv/details/3a8c599fb3a5cb7ff6158a9f767db0343aec4242a76ec48c6f159ced9ebdc9df.js": "280157cab58f19cecbd2c303b45b1ae393d1070b0de3ae688cad1619ba4b51dc",
+    "_static/stv/details/5bc1a3ae0c2542c9fc1afabc9eab24d0df558570553584bd4f62703fa7342b1d.js": "0ae8035db0be04130b9ef0bbd0ef69913cd88f64b42d904ef928bfb9386e5dc9",
+    "_static/stv/details/672c269d556266d20adc292792c4cf5b9ac49bb5d7db1adb91145dedcf8872bb.js": "18ab071c4f057ac74ba31666a14fc7dca6421007d9f267c678b0f652c973f01c"
+  }
+}

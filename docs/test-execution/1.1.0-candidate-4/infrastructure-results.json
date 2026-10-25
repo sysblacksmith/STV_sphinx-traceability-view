@@ -1,0 +1,37 @@
+[
+  {
+    "test": "docs.test-scripts.test_ci_security::test_pages_policy_rejects_publication_and_permission_drift",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_ci_security::test_release_policy_rejects_untrusted_triggers_and_publication_code",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_method_publication::test_ordinary_output_with_zip_signature_is_scanned_as_content",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_method_publication::test_archive_members_are_checked_for_private_tooling_references",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_release_publication::test_qualified_assets_match_source_and_reject_tampering",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_release_publication::test_valid_checksums_do_not_accept_different_runtime_source",
+    "outcome": "passed",
+    "requirements": []
+  },
+  {
+    "test": "docs.test-scripts.test_release_publication::test_checksum_paths_and_duplicates_are_rejected",
+    "outcome": "passed",
+    "requirements": []
+  }
+]

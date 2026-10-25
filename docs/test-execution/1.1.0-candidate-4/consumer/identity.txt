@@ -1,0 +1,4 @@
+C:\Users\fragg\AppData\Local\Temp\stv-wheel-cnadjpft\env\Lib\site-packages\sphinx_traceability_view\__init__.py
+1.1.0
+
+PATH=C:\Users\fragg\AppData\Local\Temp\stv-wheel-cnadjpft\env\Scripts;C:\Windows\System32

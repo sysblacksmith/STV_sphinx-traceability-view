@@ -3,11 +3,11 @@ STV_PR_016: SVG export omits visible graph overflow
 
 .. problem_report:: SVG export omits visible graph overflow
    :id: STV_PR_016
-   :status: analyzed
+   :status: fixed
    :basis: observed
    :evidence: docs/test-execution/1.1.0-candidate-1/narrow-diagnostic.log; docs/test-execution/1.1.0-candidate-1/export-capacity.py
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    **Reporter/date:** Agent release qualification, 2026-10-25.
 
@@ -33,3 +33,9 @@ STV_PR_016: SVG export omits visible graph overflow
    196-check result remains historical; its artifacts must not be published.
    Earlier supplementary assertion/layout mistakes and their diagnostic attempts
    remain in that record rather than being reclassified as product passes.
+
+   **Observed fix evidence:** Software baseline ``41e57ed``; the rejected
+   runtime fails the overflow regression and the corrected runtime passes all
+   four existing export variants. Fresh candidate-2 full selection: 196 passes;
+   four maximum-size exports also pass and were visually inspected. See
+   :doc:`../test-execution/1.1.0-candidate-2/qualification`.

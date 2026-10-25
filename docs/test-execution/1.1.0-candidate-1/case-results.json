@@ -1,0 +1,1730 @@
+[
+  {
+    "selector": "test::STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_001",
+    "execution_id": "STV_TE_A063FBB343CFA543"
+  },
+  {
+    "selector": "test::STV_SWR_056: parent and project center over five visible children",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_002",
+    "execution_id": "STV_TE_4772E629C5DF0C41"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_003",
+    "execution_id": "STV_TE_D6D57196A0BD52FC"
+  },
+  {
+    "selector": "test::STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_004",
+    "execution_id": "STV_TE_2061166002862322"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_005",
+    "execution_id": "STV_TE_F6B331358B9C07AE"
+  },
+  {
+    "selector": "test::STV_SWR_024: self-loop terminates and collapse restores the only seed",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_006",
+    "execution_id": "STV_TE_1035294787C40022"
+  },
+  {
+    "selector": "test::STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_007",
+    "execution_id": "STV_TE_04F3105677595604"
+  },
+  {
+    "selector": "test::STV_SWR_057: runtime reseeding is atomic and clears exploration",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_008",
+    "execution_id": "STV_TE_F3308B7381D9393C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_host_normalization",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_009",
+    "execution_id": "STV_TE_24F9C0ABB2C9B746"
+  },
+  {
+    "selector": "test::STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_010",
+    "execution_id": "STV_TE_73317DE732D031AD"
+  },
+  {
+    "selector": "test::STV_SWR_056: competing parents do not displace a separate centered parent",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_011",
+    "execution_id": "STV_TE_EC460D57BC62810C"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_012",
+    "execution_id": "STV_TE_18E7535631644178"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_013",
+    "execution_id": "STV_TE_F8C3A11198CCE4A3"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_014",
+    "execution_id": "STV_TE_15C14EFE4B6DD84F"
+  },
+  {
+    "selector": "test::STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_015",
+    "execution_id": "STV_TE_3671A37E5ED1A2C0"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change0-levels]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_016",
+    "execution_id": "STV_TE_8ABC3F42AC879FC0"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change2-types]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_017",
+    "execution_id": "STV_TE_35614CC9B221D4C8"
+  },
+  {
+    "selector": "test::STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_018",
+    "execution_id": "STV_TE_932A211664BB1A77"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_019",
+    "execution_id": "STV_TE_2F95F668906A8FA5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_020",
+    "execution_id": "STV_TE_F1989BF0CD6EEFEC"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_portable_paths_preserve_queries_and_fragments",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_021",
+    "execution_id": "STV_TE_3BBB2C5AF3F601AE"
+  },
+  {
+    "selector": "test::STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_022",
+    "execution_id": "STV_TE_5DF76875EDD06132"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[ ]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_023",
+    "execution_id": "STV_TE_346499F34ADD0143"
+  },
+  {
+    "selector": "test::STV_SWR_053: blocked skipped-level edges retain safe detours",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_024",
+    "execution_id": "STV_TE_C868B82E2C9BBA81"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_srcset_data_images_and_css_resources",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_025",
+    "execution_id": "STV_TE_3E2F6F3CB0AF101D"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_026",
+    "execution_id": "STV_TE_179AA546A7F552CF"
+  },
+  {
+    "selector": "test::STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_027",
+    "execution_id": "STV_TE_EE8E51B2AC024456"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change1-types.goal]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_028",
+    "execution_id": "STV_TE_D91C47B3234F7FB5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_hidden_parts_external_and_missing_targets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_029",
+    "execution_id": "STV_TE_52D543C1FC58B2EF"
+  },
+  {
+    "selector": "test::STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_030",
+    "execution_id": "STV_TE_733BAB4A51C12873"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_031",
+    "execution_id": "STV_TE_AD981D83518F55A3"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_static_details_and_remote_fallback",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_032",
+    "execution_id": "STV_TE_036B8D77B5C36830"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_033",
+    "execution_id": "STV_TE_476719BEF8A0F046"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_034",
+    "execution_id": "STV_TE_4F11704B79864DF7"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_active_embed_urls_are_not_retained_as_navigation",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_035",
+    "execution_id": "STV_TE_4460150890D9872A"
+  },
+  {
+    "selector": "test::STV_SWR_057: local suggestions match IDs and titles and bound results",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_036",
+    "execution_id": "STV_TE_5F5601835AAED688"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_037",
+    "execution_id": "STV_TE_8F1A32D12327681A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change3-accepted_statuses]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_038",
+    "execution_id": "STV_TE_C26EA80767296E98"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_039",
+    "execution_id": "STV_TE_7E705BDF3C2D3854"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_040",
+    "execution_id": "STV_TE_0D951659E53FDB05"
+  },
+  {
+    "selector": "test::STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_041",
+    "execution_id": "STV_TE_327EBF2156D6C2CB"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_042",
+    "execution_id": "STV_TE_A0E46CA267A77B4D"
+  },
+  {
+    "selector": "test::STV_SWR_058: expand and collapse preserve existing primary slots",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_058: existing test lane is stable while new primary nodes fit beside it",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_058: a growing earlier band makes room above the clicked lower band",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_058: reranked shared tests remain unique and honor either anchor role",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_058: project root stays anchored through collapse and reopening",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_058: 200-node incremental geometry remains finite and stable",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_D2D9B7C1D6888199"
+  },
+  {
+    "selector": "test::STV_SWR_059: SVG bounds include negative routes, detours and node boxes",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_616E1386E8F62D90"
+  },
+  {
+    "selector": "test::STV_SWR_059: an empty edge scene still has a finite SVG viewport",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_616E1386E8F62D90"
+  },
+  {
+    "selector": "test::STV_SWR_060: initial seed and project rows use natural numeric ID order",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_045",
+    "execution_id": "STV_TE_42AAD197E7217EEF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_is_portable_and_does_not_mutate_input",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement0-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement1-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement2-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement3-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement4-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement5-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement6-fallback_level]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement7-level_from.relation]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement8-level_from]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement9-level_from]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement10-level_from.levels]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement11-fixed level]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_CA6305FE6AEA9D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_classification_is_complete_graph_based_portable_and_deterministic",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_52831484038C5E73"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_52831484038C5E73"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_52831484038C5E73"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_outgoing_owner_mapping_and_malformed_tags_use_defined_policy",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_52831484038C5E73"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_large_classified_graph_resolves_every_execution_from_its_case",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_52831484038C5E73"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_335EA7DFD887E0F9"
+  },
+  {
+    "selector": "test::STV_SWR_055: controls use resolved case and execution rows",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_335EA7DFD887E0F9"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_335EA7DFD887E0F9"
+  },
+  {
+    "selector": "test::STV_SWR_063: persistent collection reuses identity without refreshing FIFO age",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_049",
+    "execution_id": "STV_TE_70211243C27F2728"
+  },
+  {
+    "selector": "test::STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_049",
+    "execution_id": "STV_TE_70211243C27F2728"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_defaults_and_exact_bounds",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[-1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[3]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[1.0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[9007199254740992]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[3]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_3DA5340BA849923C"
+  },
+  {
+    "selector": "test::STV_SWR_066 reset retains current roots and clears every restoration cache",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_051",
+    "execution_id": "STV_TE_2E5ED4612FDD4D85"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[-1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0.7]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[nan]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[inf]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_independent_font_scales_remain_exact",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "test::STV_SWR_068 descendant typography is scaled once from unmodified baselines",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_F8A3AD503097ECE4"
+  },
+  {
+    "selector": "test::STV_SWR_071 download uses safe filenames and releases owned URLs",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_6EE2FF75BF27095F"
+  },
+  {
+    "selector": "test::STV_SWR_070 visible crop intersects screen and never invents dimensions",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_6EE2FF75BF27095F"
+  },
+  {
+    "selector": "test::STV_SWR_069 bulk state normalizes mixed rows and repeated actions never invert them",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_054",
+    "execution_id": "STV_TE_4EFA329495A7E99F"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_export_resources_embed_local_content_and_reject_active_svg",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_unreferenced_images_do_not_enter_the_graph_resource_record",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_inline_detail_font_faces_embed_local_bytes",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-8]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-16]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "test::STV_SWR_072 snapshot resources reject remote paths and inherited dictionary entries",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.759979+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_9E2569A18E774B0A"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_001",
+    "execution_id": "STV_TE_D68BBA2BC672A957"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_002",
+    "execution_id": "STV_TE_2E552F667F047742"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_003",
+    "execution_id": "STV_TE_9D6123D898988719"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_failed_finalization_retains_pending_page_and_previous_assets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_004",
+    "execution_id": "STV_TE_43EC581314FEB950"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_005",
+    "execution_id": "STV_TE_D8056F473116FDB6"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_alternate_host_schema_external_metadata_and_parts",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_006",
+    "execution_id": "STV_TE_1DAC049D0A5D148A"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_documentation_visuals",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_007",
+    "execution_id": "STV_TE_8DE4DA01E32EBBEC"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[UNKNOWN]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_008",
+    "execution_id": "STV_TE_7ECA7E344B860974"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_009",
+    "execution_id": "STV_TE_463EAF1F5A2DBCA9"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_010",
+    "execution_id": "STV_TE_2305068297D4DE1F"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[200-True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_011",
+    "execution_id": "STV_TE_6D696303432BC7C8"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_012",
+    "execution_id": "STV_TE_04395F65C2DC7521"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_cross_page_bundle",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_013",
+    "execution_id": "STV_TE_E3E662FC79CD1503"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_014",
+    "execution_id": "STV_TE_BDE8AC2E7AF70D1A"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_015",
+    "execution_id": "STV_TE_95F0B44A5100699E"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_016",
+    "execution_id": "STV_TE_2DD4D61CC1768AC7"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_017",
+    "execution_id": "STV_TE_B9F860BD0657B89B"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_mapping_has_entry_path_and_location",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_018",
+    "execution_id": "STV_TE_BF4F7F2714720616"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_019",
+    "execution_id": "STV_TE_B1856276067DD5FD"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_020",
+    "execution_id": "STV_TE_04649C30DC0167D7"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_021",
+    "execution_id": "STV_TE_D5A008B344DB0388"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[HIDDEN_A]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_022",
+    "execution_id": "STV_TE_8B0700DC00B39515"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[201-False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_023",
+    "execution_id": "STV_TE_2EABE1B34FE7C16D"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_024",
+    "execution_id": "STV_TE_BD57BEDA18552973"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_025",
+    "execution_id": "STV_TE_A45D91EBCD47189C"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_incremental_body_change_hidden_and_deleted_objects",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_026",
+    "execution_id": "STV_TE_5D129E706050ED4A"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_owns_broken_trace_failure",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_027",
+    "execution_id": "STV_TE_1DADCCE77BA8F1AA"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_028",
+    "execution_id": "STV_TE_2DD310F24F67C848"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_default_directional_labels_are_used",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_029",
+    "execution_id": "STV_TE_ACE9C1B0730B1F80"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_030",
+    "execution_id": "STV_TE_99656696793F848A"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_031",
+    "execution_id": "STV_TE_2522C6ACB028F1A4"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_032",
+    "execution_id": "STV_TE_EECA1AE0C4A89B68"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_033",
+    "execution_id": "STV_TE_F227E7F8F64E9942"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_034",
+    "execution_id": "STV_TE_2AC7B06424B73B9D"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_035",
+    "execution_id": "STV_TE_CDFD772A1134C279"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_036",
+    "execution_id": "STV_TE_D7F50F82479AC0C8"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_037",
+    "execution_id": "STV_TE_6360FE728FDA103F"
+  },
+  {
+    "selector": "docs.test-scripts.test_package::test_clean_wheel_host",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_038",
+    "execution_id": "STV_TE_F750E6633DE4056D"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_039",
+    "execution_id": "STV_TE_2006E17586AC3CE7"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_unsupported_builder_fails_clearly",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_040",
+    "execution_id": "STV_TE_AF301C9173BE297C"
+  },
+  {
+    "selector": "docs.test-scripts.test_windows_paths::test_nested_windows_detail_loading_and_retry",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_045",
+    "execution_id": "STV_TE_5EA591226543E09E"
+  },
+  {
+    "selector": "docs.test-scripts.test_legal_guard::test_build_rejects_unaudited_elk_and_missing_notices",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_046",
+    "execution_id": "STV_TE_A74A579CBD8A43DE"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_047",
+    "execution_id": "STV_TE_B4680757B5EBD9B6"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_048",
+    "execution_id": "STV_TE_E8C533F33F0B37B7"
+  },
+  {
+    "selector": "scripts/ci.py runtime (clean installed Python 3.10)",
+    "report": "supplement-commands.json",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:40:48.276219+00:00",
+    "mapping_source": "explicit installed-runtime procedure",
+    "case_id": "STV_TC_SY_050",
+    "execution_id": "STV_TE_63B6EBE88E472425"
+  },
+  {
+    "selector": "docs.test-scripts.test_sdist::test_sdist_excludes_local_evidence_and_rebuilds_wheel",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_051",
+    "execution_id": "STV_TE_0062C61AC4ED5ABE"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_clean_publication_removes_obsolete_assets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_052",
+    "execution_id": "STV_TE_95CD54454268526C"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_build_preserves_published_tree",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_053",
+    "execution_id": "STV_TE_9D8704D758FD0921"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_promotion_restores_previous_tree",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_054",
+    "execution_id": "STV_TE_343809F516DE6145"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_055",
+    "execution_id": "STV_TE_3742A83C2E3FAE19"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_candidate_checksums_detect_changed_artifact_bytes",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_056",
+    "execution_id": "STV_TE_72D4DF66DF6B2B7D"
+  },
+  {
+    "selector": "scripts/ci.py runtime (clean installed Python 3.10)",
+    "report": "supplement-commands.json",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:40:48.276219+00:00",
+    "mapping_source": "explicit installed-runtime procedure",
+    "case_id": "STV_TC_SY_057",
+    "execution_id": "STV_TE_EBE31340A9BBCC87"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_F5373865A628182C"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_F5373865A628182C"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_F5373865A628182C"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_F5373865A628182C"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_F108B1B11E6A70F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_F108B1B11E6A70F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_F108B1B11E6A70F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_F108B1B11E6A70F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_361A3EFE750F6E42"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_361A3EFE750F6E42"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_061",
+    "execution_id": "STV_TE_BAA88F7F4D7239D5"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/cr014-details/case-results.json",
+    "case_id": "STV_TC_SY_061",
+    "execution_id": "STV_TE_BAA88F7F4D7239D5"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_58DC3797C13AF162"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_58DC3797C13AF162"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_B863F8A01DCA8556"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_B863F8A01DCA8556"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_B863F8A01DCA8556"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_B863F8A01DCA8556"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_6E717D50D8A45C92"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_6E717D50D8A45C92"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_F1877BF68A7C887D"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "docs/test-execution/pr015-details/case-results.json",
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_F1877BF68A7C887D"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_1F3D9A05677CDFA3"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_1F3D9A05677CDFA3"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_3893F5FF7471EF7E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_3893F5FF7471EF7E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_3893F5FF7471EF7E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_3893F5FF7471EF7E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_font_scales_are_independent_and_applied_once",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_068",
+    "execution_id": "STV_TE_975D95E25D67690D"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_234E8CF136742890"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_234E8CF136742890"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_unsupported_markup_without_partial_success",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_234E8CF136742890"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_missing_host_handler_dependency",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T19:58:10.008320+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_234E8CF136742890"
+  },
+  {
+    "selector": "check-historical.py: Git/archive inventory and complete supplement",
+    "report": "historical-check.json",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:01:04.945251+00:00",
+    "mapping_source": "STV_TC_SY_049 retained procedure",
+    "case_id": "STV_TC_SY_049",
+    "execution_id": "STV_TE_472FA68626CCD96B"
+  }
+]

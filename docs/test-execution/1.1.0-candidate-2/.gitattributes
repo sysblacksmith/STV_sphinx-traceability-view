@@ -1,0 +1,2 @@
+# Preserve the original bytes of retained evidence across Git checkouts.
+* -text

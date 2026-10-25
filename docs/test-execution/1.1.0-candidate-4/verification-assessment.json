@@ -1,0 +1,110 @@
+{
+  "basis": "Full candidate-4 execution plus criterion assessment and owner native/zoom observations; acceptance statuses unchanged",
+  "changes": [
+    {
+      "id": "STV_SHR_058",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_059",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_060",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_061",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SYS_011",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_066",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_067",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_068",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_069",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_070",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_071",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_072",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SY_066",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SY_067",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SY_068",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SY_069",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_051",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_052",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_053",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_054",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_055",
+      "before": "partial",
+      "after": "passed"
+    }
+  ]
+}

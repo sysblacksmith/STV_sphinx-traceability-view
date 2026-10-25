@@ -1,0 +1,91 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_________________ test_standalone_svg_visible_details[1-file] _________________
+
+browser = <selenium.webdriver.firefox.webdriver.WebDriver (session="a4c458a6-3530-4a63-8597-fb42ea102e93")>
+short_output = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-i0bnzrrn')
+protocol = 'file', card_count = 1
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SYS_011', 'STV_SWR_070', 'STV_SWR_071', 'STV_SWR_072')
+    @pytest.mark.parametrize('protocol', ['file', 'http'])
+    @pytest.mark.parametrize('card_count', [1, 10])
+    def test_standalone_svg_visible_details(browser, short_output, protocol, card_count):
+        source = short_output / 'export-source'
+        prepare_source(source)
+        (source / 'pixel.png').write_bytes(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aWZkAAAAASUVORK5CYII='))
+        requirements = source / 'requirements.rst'
+        text = requirements.read_text(encoding='utf-8')
+        text = text.replace('   Long rendered detail paragraph 0 for BOX_00', '   .. image:: pixel.png\n\n   .. raw:: html\n\n      <input type="password" value="export-test-sensitive-sentinel" aria-label="Password probe">\n\n   Long rendered detail paragraph 0 for BOX_00', 1)
+        requirements.write_text(text, encoding='utf-8')
+        output = short_output / 'export-output'
+        result = build(source, output)
+        assert result.returncode == 0, result.stderr
+        with published_url(output, protocol) as url:
+            browser.get(url)
+            wait = WebDriverWait(browser, 20)
+            root = wait.until(lambda d: d.find_element(By.CSS_SELECTOR, '.stv-view[data-stv-revision]'))
+            open_box(browser, root, 'BOX_00')
+            wait.until(lambda d: 'Long rendered' in panel(d, root, 'BOX_00').text)
+            for index in range(1, card_count):
+                identity = f'BOX_{index:02}'
+                open_box(browser, root, identity)
+                wait.until(lambda d: 'Long rendered' in panel(d, root, identity).text)
+            # Reproduce the large-layout invariant without building 30k Needs:
+            # move the scene's own box off-screen, compensating its children so
+            # the rendered graph stays exactly where it was.
+            geometry = browser.execute_script("""
+              const scene=arguments[0].querySelector('.stv-scene');
+              const first=scene.querySelector('.stv-node');
+              const before=first.getBoundingClientRect();
+              const scale=new DOMMatrix(getComputedStyle(scene).transform).a;
+              scene.style.left=`${20000*scale}px`;
+              for(const child of scene.children)
+                child.style.left=`${(parseFloat(getComputedStyle(child).left)||0)-20000}px`;
+              const after=first.getBoundingClientRect();
+              return {sceneLeft:scene.getBoundingClientRect().left, width:innerWidth,
+                dx:Math.abs(before.left-after.left),dy:Math.abs(before.top-after.top)};
+            """, root)
+            assert geometry['sceneLeft'] > geometry['width'], geometry
+            assert geometry['dx'] < 0.5 and geometry['dy'] < 0.5, geometry
+            browser.execute_script('window.exportBlob=null; const create=URL.createObjectURL; URL.createObjectURL=b=>{window.exportBlob=b; return create(b);};')
+            save = root.find_element(By.XPATH, ".//button[.='Save as SVG']")
+            wait.until(lambda d: save.is_enabled())
+            # Empty crop fails without requesting a download and remains recoverable.
+            browser.execute_script("arguments[0].querySelector('.stv-workspace').style.transform='translateY(2000px)'", root)
+            save.click()
+            assert 'No visible view area' in root.text
+            assert not browser.execute_script('return window.exportBlob')
+            browser.execute_script("arguments[0].querySelector('.stv-workspace').style.transform=''", root)
+            browser.save_screenshot(str(short_output / 'export-source.png'))
+            save.click()
+            wait.until(lambda d: d.execute_script('return window.exportBlob!==null'))
+            text = browser.execute_async_script('const done=arguments[0]; window.exportBlob.text().then(done);')
+            assert '<svg' in text and 'Long rendered' in text
+            assert ET.fromstring(text).find('{http://www.w3.org/2000/svg}rect').get('fill') == browser.execute_script('return getComputedStyle(arguments[0]).backgroundColor', root)
+            if card_count == 1:
+                assert 'data:image/png;base64,' in text
+            assert 'data-stv-' not in text and '<script' not in text
+            assert 'export-test-sensitive-sentinel' not in text
+            assert 'SVG download requested' in root.text
+            downloaded = wait.until(lambda d: next(iter(d.stv_download_directory.glob('*.svg')), None))
+            wait.until(lambda d: downloaded.read_text(encoding='utf-8') == text)
+            saved = short_output / 'standalone.svg'
+            saved.write_text(text, encoding='utf-8')
+            # Prove that the snapshot does not depend on the source output tree.
+            output.resolve().relative_to(short_output.resolve())
+            output.rename(output.with_name(output.name + '-unavailable'))
+            browser.get(saved.as_uri())
+            assert browser.find_elements(By.CSS_SELECTOR, 'foreignObject')
+            # Positioned scenes can lie outside their own box while overflowing
+            # graph nodes remain visible. Export must retain those descendants.
+>           assert browser.find_elements(By.CSS_SELECTOR, '.stv-node .stv-id')
+E           assert []
+E            +  where [] = find_elements('css selector', '.stv-node .stv-id')
+E            +    where find_elements = <selenium.webdriver.firefox.webdriver.WebDriver (session="a4c458a6-3530-4a63-8597-fb42ea102e93")>.find_elements
+E            +    and   'css selector' = By.CSS_SELECTOR
+
+docs\test-scripts\test_view_controls.py:88: AssertionError
+=========================== short test summary info ===========================
+FAILED docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]
+1 failed in 10.60s

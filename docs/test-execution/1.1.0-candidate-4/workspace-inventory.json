@@ -1,0 +1,176 @@
+{
+  "recorded_at": "2026-10-25T22:27:08.518029+00:00",
+  "git_status": " M docs/maturity.rst\n M docs/problem-tickets/STV_PR_016_svg-overflow-descendants.rst\n M docs/test-cases/software-tests.rst\n M docs/test-cases/system-tests.rst\n M docs/test-execution/index.rst\n?? docs/test-execution/1.1.0-candidate-1/\n?? docs/test-execution/1.1.0-candidate-2/\n?? docs/test-execution/1.1.0-candidate-3/\n?? docs/test-execution/1.1.0-candidate-4/\n",
+  "top_level_bytes": {
+    "[root files]": 25002,
+    ".git": 50768830,
+    ".github": 10066,
+    ".pytest_cache": 23072,
+    ".venv": 240574359,
+    ".venv-implementation": 287310067,
+    "dist": 7153088,
+    "docs": 6354172349,
+    "engineering-history": 0,
+    "frontend": 20009725,
+    "scripts": 116023,
+    "src": 3615994,
+    "tools": 127126,
+    "_security-audits": 1563878,
+    "__pycache__": 5481
+  },
+  "optional_removal_proposal": [
+    {
+      "path": "docs/_build/.html-previous-0588b5bcde034db28ec2ff36fed12e03",
+      "bytes": 50733885,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-05e9f0c2a4024fc8bbbd2c2f2b6c455a",
+      "bytes": 50763956,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-0850c52b0fd247d39364266d747ecfbb",
+      "bytes": 42636576,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-0d83f8bc9c25474e9cd7720c66ca0a4a",
+      "bytes": 67549779,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-10e7a9a3e2a442a5b462f5770b548e47",
+      "bytes": 43502664,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-27b3fe4e4682494cbc871f987bfe3900",
+      "bytes": 67526902,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-2c8efb2a93614c31bb440e33392ec31a",
+      "bytes": 50764026,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-3490a11dd0644494bdcb251ad09deeb8",
+      "bytes": 43567131,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-39438b455ad841e187c2559c8a6cd19c",
+      "bytes": 54458869,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-404a6eb1c325491ead5f964188ea71fc",
+      "bytes": 67539730,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-4ce947313d4647268d9430ef522b4bd4",
+      "bytes": 50707350,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-533615533421426a9e570d56ad7e5188",
+      "bytes": 67823703,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-673ce3ed5e024c5d8ea1a4d5a711c27a",
+      "bytes": 43567117,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-69212351acad4c0cac4ac71a47bc6a74",
+      "bytes": 42629598,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-77ce03126c324e549f255d7aca638a5d",
+      "bytes": 50764026,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-8083e788aa294fdf8d2998a9ccc9df37",
+      "bytes": 67521517,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-8d6c4d77dffe4338b4d591a53928a914",
+      "bytes": 42876737,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-905f230925274b5ca5713601bef66d4c",
+      "bytes": 42874860,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-b79f055c6fc44d1b83f6b5fd73c13579",
+      "bytes": 54458869,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-c0e91d30ba4343008c0dc059b701d472",
+      "bytes": 50798397,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-c45b5609b1414c63ab3f2b7c14edcc87",
+      "bytes": 67823417,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-d330a83316aa4f5e8b48eb8cf008a4a3",
+      "bytes": 43502101,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-dd3ae66afacb4e00b562805f311d0ffb",
+      "bytes": 67823704,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-e441c34099044591af900c4b80b6b8b7",
+      "bytes": 50734464,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    },
+    {
+      "path": "docs/_build/.html-previous-fb1accdfb6594b2782e107e96ecb69bf",
+      "bytes": 42628721,
+      "reason": "Previous successful generated documentation tree; current HTML and evidence retained",
+      "consequence": "Rebuild documentation if needed"
+    }
+  ],
+  "proposed_bytes": 1325578099,
+  "deleted": false,
+  "retained": "All dist archives, all candidate evidence, active/current builds and capacity fixtures, dependency environments and wheelhouse; uncertain staging trees retained"
+}

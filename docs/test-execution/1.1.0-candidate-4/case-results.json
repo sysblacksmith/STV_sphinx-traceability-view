@@ -1,0 +1,2072 @@
+[
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+    "case_id": "STV_TC_SW_014",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7A83E1BDA4FBA25A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths",
+    "case_id": "STV_TC_SW_039",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5D0B283B559478DC"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_static_details_and_remote_fallback",
+    "case_id": "STV_TC_SW_032",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DCC902DC57563C68"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_portable_paths_preserve_queries_and_fragments",
+    "case_id": "STV_TC_SW_021",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_85EB070A1AF97E13"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_srcset_data_images_and_css_resources",
+    "case_id": "STV_TC_SW_025",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_CBD9986FCBC1E646"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_active_embed_urls_are_not_retained_as_navigation",
+    "case_id": "STV_TC_SW_035",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_E35CD9A917BCA75D"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "case_id": "STV_TC_SW_040",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_6CA461D06A173E2A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_export_resources_embed_local_content_and_reject_active_svg",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_unreferenced_images_do_not_enter_the_graph_resource_record",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_inline_detail_font_faces_embed_local_bytes",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-8]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-16]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_failed_finalization_retains_pending_page_and_previous_assets",
+    "case_id": "STV_TC_SY_004",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7B6CE5D5AA9DCA82"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+    "case_id": "STV_TC_SY_024",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_49AC08F58BB7959E"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_hidden_parts_external_and_missing_targets",
+    "case_id": "STV_TC_SW_029",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_01BB249D9A425D38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+    "case_id": "STV_TC_SW_005",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_B29A88B5A4EB0B2A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+    "case_id": "STV_TC_SW_020",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_B8A6080E7104D830"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+    "case_id": "STV_TC_SW_019",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_638CF55F88D4E602"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_classification_is_complete_graph_based_portable_and_deterministic",
+    "case_id": "STV_TC_SW_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4EB6FAD4EA5C62AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records0]",
+    "case_id": "STV_TC_SW_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4EB6FAD4EA5C62AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records1]",
+    "case_id": "STV_TC_SW_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4EB6FAD4EA5C62AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_outgoing_owner_mapping_and_malformed_tags_use_defined_policy",
+    "case_id": "STV_TC_SW_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4EB6FAD4EA5C62AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_large_classified_graph_resolves_every_execution_from_its_case",
+    "case_id": "STV_TC_SW_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4EB6FAD4EA5C62AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[True]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[False]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[-1]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0.7]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[nan]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[inf]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_independent_font_scales_remain_exact",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_host_normalization",
+    "case_id": "STV_TC_SW_009",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0004B40EF6F07681"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change0-levels]",
+    "case_id": "STV_TC_SW_016",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0C44DFC5698E2E8D"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change1-types.goal]",
+    "case_id": "STV_TC_SW_028",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_2A2C9F9FA53F9897"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change2-types]",
+    "case_id": "STV_TC_SW_017",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_542E363BDFF6E3B8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change3-accepted_statuses]",
+    "case_id": "STV_TC_SW_038",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_B1F352DE49DED95A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[]",
+    "case_id": "STV_TC_SW_013",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7AACF2017F0B436C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[ ]",
+    "case_id": "STV_TC_SW_023",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_6C28081765062E30"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[None]",
+    "case_id": "STV_TC_SW_037",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0A96BBF3C88D362F"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[1]",
+    "case_id": "STV_TC_SW_031",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_13E95BCDBA71FAF6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_is_portable_and_does_not_mutate_input",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement0-levels_by_tag]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement1-levels_by_tag]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement2-levels_by_tag]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement3-types.case]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement4-types.case]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement5-types.case]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement6-fallback_level]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement7-level_from.relation]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement8-level_from]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement9-level_from]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement10-level_from.levels]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement11-fixed level]",
+    "case_id": "STV_TC_SW_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3504E1B1CDA41DD6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_defaults_and_exact_bounds",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[0]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[-1]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[True]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[False]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[3]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[1.0]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[None]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[9007199254740992]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[file]",
+    "case_id": "STV_TC_SY_016",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_9497AD07336A96B3"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[http]",
+    "case_id": "STV_TC_SY_001",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C6A8BF692AE392F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[file]",
+    "case_id": "STV_TC_SY_030",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46D683A2FBB94ACF"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[http]",
+    "case_id": "STV_TC_SY_037",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F9676FBC315DBFF5"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[file]",
+    "case_id": "STV_TC_SY_031",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_8C8006872295E8D3"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[http]",
+    "case_id": "STV_TC_SY_025",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_9092D8E50E28B340"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[file]",
+    "case_id": "STV_TC_SY_010",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_9043AB9378286E9A"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[http]",
+    "case_id": "STV_TC_SY_021",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_671083236DF393C2"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[file]",
+    "case_id": "STV_TC_SY_020",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_05CD890A08061442"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[http]",
+    "case_id": "STV_TC_SY_032",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_D69BCBFE6F8CCA03"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[file]",
+    "case_id": "STV_TC_SY_015",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_35FB54BAAB756A5E"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[http]",
+    "case_id": "STV_TC_SY_033",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5F59ABA5113CD6C4"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[file]",
+    "case_id": "STV_TC_SY_003",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0F414A54C03A4E46"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[http]",
+    "case_id": "STV_TC_SY_012",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_720279BBD09277C1"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_documentation_visuals",
+    "case_id": "STV_TC_SY_007",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AC6CFB631FC13A26"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[file]",
+    "case_id": "STV_TC_SY_009",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_183C1C7ED8127FB9"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[http]",
+    "case_id": "STV_TC_SY_002",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_BDC8A354E2C4DC86"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_cross_page_bundle",
+    "case_id": "STV_TC_SY_013",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_2663333BEDD0993E"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[UNKNOWN]",
+    "case_id": "STV_TC_SY_008",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AE9A6D175B070252"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+    "case_id": "STV_TC_SY_014",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F573520D32C946D7"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[HIDDEN_A]",
+    "case_id": "STV_TC_SY_022",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3ECB5894059D4525"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_owns_broken_trace_failure",
+    "case_id": "STV_TC_SY_027",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_094A7E0FA6FEF0E2"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_incremental_body_change_hidden_and_deleted_objects",
+    "case_id": "STV_TC_SY_026",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_6F44E4DAFCBC42DE"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[200-True]",
+    "case_id": "STV_TC_SY_011",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_2C1C26AE520E7580"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[201-False]",
+    "case_id": "STV_TC_SY_023",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_87D3CFA80A551B52"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_alternate_host_schema_external_metadata_and_parts",
+    "case_id": "STV_TC_SY_006",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_E4896463459663B7"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_mapping_has_entry_path_and_location",
+    "case_id": "STV_TC_SY_018",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_6B318ECBD0F9E0A6"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_unsupported_builder_fails_clearly",
+    "case_id": "STV_TC_SY_040",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_1BFE396F1328BC93"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_default_directional_labels_are_used",
+    "case_id": "STV_TC_SY_029",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_445D4DCBA570FB1E"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[file]",
+    "case_id": "STV_TC_SY_017",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_20B0861FE4CAF0C7"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[http]",
+    "case_id": "STV_TC_SY_035",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_43B6FB7759209B3D"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+    "case_id": "STV_TC_SY_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_2145D7E34A337FF0"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_candidate_checksums_detect_changed_artifact_bytes",
+    "case_id": "STV_TC_SY_056",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0858F185CEC1A735"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[file]",
+    "case_id": "STV_TC_SY_061",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_471F081A1E795BE6"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[http]",
+    "case_id": "STV_TC_SY_061",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_471F081A1E795BE6"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[file]",
+    "case_id": "STV_TC_SY_047",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5A9D6B8DC1AB49AC"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[http]",
+    "case_id": "STV_TC_SY_048",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_FFCA3F00A628A9C9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_stale_layout_failure_retry_and_independent_views[file]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_stale_layout_failure_retry_and_independent_views[http]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[0]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[3]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[12]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[file]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[http]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_typography_nested_units_late_children_and_repeat_scaling",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]",
+    "case_id": "STV_TC_SY_068",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AB3F15769187326B"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]",
+    "case_id": "STV_TC_SY_068",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AB3F15769187326B"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_download_expiry_pagehide_and_error_ownership",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_snapshot_clipping_immutable_text_resources_and_readiness",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]",
+    "case_id": "STV_TC_SW_054",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_82437B7697DB348A"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]",
+    "case_id": "STV_TC_SW_054",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_82437B7697DB348A"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_pointer_snapshot_cancel_keyboard_and_serialization_recovery",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_page_metadata_excludes_copies_and_handles_empty_pages",
+    "case_id": "STV_TC_SW_054",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_82437B7697DB348A"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[file]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[file]",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[http]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[http]",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_resource_retry_and_pending_fonts_refuse_capture",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_resource_retry_and_pending_fonts_refuse_capture",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[../outside.png]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[%2e%2e/outside.png]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[https://example.invalid/beacon.png]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[//example.invalid/beacon.png]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[javascript:alert(1)]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_real_symlink_escape_does_not_read_target",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_nested_svg_cycles_are_explicit_failures",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<script/>]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<foreignObject/>]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<rect onclick=\"alert(1)\"/>]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<style>@import \"remote.css\";</style>]",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_css_import_cycle_encoded_names_srcset_fonts_and_deterministic_records",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_font_settings_defaults_identity_and_named_build_errors",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_extended_reset_command_sequences",
+    "case_id": "STV_TC_SW_051",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_BEB9B8C6A3CF6A6F"
+  },
+  {
+    "selector": "docs.test-scripts.test_legal_guard::test_build_rejects_unaudited_elk_and_missing_notices",
+    "case_id": "STV_TC_SY_046",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C6F4E2EFCEBE9659"
+  },
+  {
+    "selector": "docs.test-scripts.test_package::test_clean_wheel_host",
+    "case_id": "STV_TC_SY_038",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_276AE256DA132001"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[None]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[1]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[3]",
+    "case_id": "STV_TC_SW_050",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C58FE0079F7F4FE2"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]",
+    "case_id": "STV_TC_SY_063",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3560C9D93E7D77F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]",
+    "case_id": "STV_TC_SY_063",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3560C9D93E7D77F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]",
+    "case_id": "STV_TC_SY_063",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3560C9D93E7D77F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]",
+    "case_id": "STV_TC_SY_063",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3560C9D93E7D77F1"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[file]",
+    "case_id": "STV_TC_SY_064",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5DAD06625FF240A3"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[http]",
+    "case_id": "STV_TC_SY_064",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5DAD06625FF240A3"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "case_id": "STV_TC_SY_065",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_836F6E0063EB6DBD"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "case_id": "STV_TC_SY_065",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_836F6E0063EB6DBD"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[file]",
+    "case_id": "STV_TC_SY_058",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_320E931965C15242"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[http]",
+    "case_id": "STV_TC_SY_058",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_320E931965C15242"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-file]",
+    "case_id": "STV_TC_SY_059",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DD4AA0D380BDF0C3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-http]",
+    "case_id": "STV_TC_SY_059",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DD4AA0D380BDF0C3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-file]",
+    "case_id": "STV_TC_SY_059",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DD4AA0D380BDF0C3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-http]",
+    "case_id": "STV_TC_SY_059",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DD4AA0D380BDF0C3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[file]",
+    "case_id": "STV_TC_SY_060",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_358C84E3287B376E"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[http]",
+    "case_id": "STV_TC_SY_060",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_358C84E3287B376E"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[file]",
+    "case_id": "STV_TC_SY_058",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_320E931965C15242"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[http]",
+    "case_id": "STV_TC_SY_058",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_320E931965C15242"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_clean_publication_removes_obsolete_assets",
+    "case_id": "STV_TC_SY_052",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_67C5F33620631412"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_build_preserves_published_tree",
+    "case_id": "STV_TC_SY_053",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_CCE8E0DCF3719A06"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_promotion_restores_previous_tree",
+    "case_id": "STV_TC_SY_054",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_BF63FCCA7228006C"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[file]",
+    "case_id": "STV_TC_SY_028",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0EF09DDE354057C3"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[http]",
+    "case_id": "STV_TC_SY_019",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_6251FD2EBF141AEC"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[file]",
+    "case_id": "STV_TC_SY_039",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_723306A23F12F53A"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[http]",
+    "case_id": "STV_TC_SY_034",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4F13B65C7988E6F4"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[file]",
+    "case_id": "STV_TC_SY_005",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_E929F4EC8065A6E8"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[http]",
+    "case_id": "STV_TC_SY_036",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_351FD1E3C6BE094F"
+  },
+  {
+    "selector": "docs.test-scripts.test_sdist::test_sdist_excludes_local_evidence_and_rebuilds_wheel",
+    "case_id": "STV_TC_SY_051",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_85B5ACEA5A1F0B46"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-file]",
+    "case_id": "STV_TC_SY_067",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_1727CFEADD67393A"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-http]",
+    "case_id": "STV_TC_SY_067",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_1727CFEADD67393A"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-file]",
+    "case_id": "STV_TC_SY_067",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_1727CFEADD67393A"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-http]",
+    "case_id": "STV_TC_SY_067",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_1727CFEADD67393A"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[file]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[http]",
+    "case_id": "STV_TC_SY_066",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_22816527CBAE39E9"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[file]",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[http]",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_font_scales_are_independent_and_applied_once",
+    "case_id": "STV_TC_SY_068",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AB3F15769187326B"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_unsupported_markup_without_partial_success",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_missing_host_handler_dependency",
+    "case_id": "STV_TC_SY_069",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F80092425DBB0B9E"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[file]",
+    "case_id": "STV_TC_SY_062",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DC9753FC471984A4"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[http]",
+    "case_id": "STV_TC_SY_062",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DC9753FC471984A4"
+  },
+  {
+    "selector": "docs.test-scripts.test_windows_paths::test_nested_windows_detail_loading_and_retry",
+    "case_id": "STV_TC_SY_045",
+    "result": "passed",
+    "report": "pytest.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0CBA56C2D1B16D6F"
+  },
+  {
+    "selector": "test::STV_SWR_071 download uses safe filenames and releases owned URLs",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "test::STV_SWR_072 snapshot resources reject remote paths and inherited dictionary entries",
+    "case_id": "STV_TC_SW_055",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_EA378DB47B0463C6"
+  },
+  {
+    "selector": "test::STV_SWR_070 visible crop intersects screen and never invents dimensions",
+    "case_id": "STV_TC_SW_053",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_862BB8C8881F2197"
+  },
+  {
+    "selector": "test::STV_SWR_063: persistent collection reuses identity without refreshing FIFO age",
+    "case_id": "STV_TC_SW_049",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7552FFFA9D293927"
+  },
+  {
+    "selector": "test::STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity",
+    "case_id": "STV_TC_SW_049",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7552FFFA9D293927"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+    "case_id": "STV_TC_SW_033",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_ADD9552E4D6CC923"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+    "case_id": "STV_TC_SW_034",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_0699288FDDE7A463"
+  },
+  {
+    "selector": "test::STV_SWR_068 descendant typography is scaled once from unmodified baselines",
+    "case_id": "STV_TC_SW_052",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_746BECC509AF2327"
+  },
+  {
+    "selector": "test::STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "case_id": "STV_TC_SW_041",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_5A7107CEAA57317D"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "case_id": "STV_TC_SW_042",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_9D2F6E2E50504A3D"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation",
+    "case_id": "STV_TC_SW_048",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_40AB49054A8D401E"
+  },
+  {
+    "selector": "test::STV_SWR_055: controls use resolved case and execution rows",
+    "case_id": "STV_TC_SW_048",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_40AB49054A8D401E"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes",
+    "case_id": "STV_TC_SW_048",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_40AB49054A8D401E"
+  },
+  {
+    "selector": "test::STV_SWR_056: competing parents do not displace a separate centered parent",
+    "case_id": "STV_TC_SW_011",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_B6C570EDD3468C8D"
+  },
+  {
+    "selector": "test::STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+    "case_id": "STV_TC_SW_030",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_BEF43A484C3E815E"
+  },
+  {
+    "selector": "test::STV_SWR_056: parent and project center over five visible children",
+    "case_id": "STV_TC_SW_002",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F3BEA8ADB763A2F6"
+  },
+  {
+    "selector": "test::STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+    "case_id": "STV_TC_SW_022",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_FEC1F15201D47AC5"
+  },
+  {
+    "selector": "test::STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+    "case_id": "STV_TC_SW_004",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_C3A466A1D64BDF8B"
+  },
+  {
+    "selector": "test::STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "case_id": "STV_TC_SW_010",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_B9F098EF78A2B0E5"
+  },
+  {
+    "selector": "test::STV_SWR_053: blocked skipped-level edges retain safe detours",
+    "case_id": "STV_TC_SW_024",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_7DC1E9AF82042226"
+  },
+  {
+    "selector": "test::STV_SWR_058: expand and collapse preserve existing primary slots",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_058: existing test lane is stable while new primary nodes fit beside it",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_058: a growing earlier band makes room above the clicked lower band",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_060: initial seed and project rows use natural numeric ID order",
+    "case_id": "STV_TC_SW_045",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_FAE119942CA36B07"
+  },
+  {
+    "selector": "test::STV_SWR_058: reranked shared tests remain unique and honor either anchor role",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_058: project root stays anchored through collapse and reopening",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_058: 200-node incremental geometry remains finite and stable",
+    "case_id": "STV_TC_SW_043",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_46DF45A36C9B6158"
+  },
+  {
+    "selector": "test::STV_SWR_059: SVG bounds include negative routes, detours and node boxes",
+    "case_id": "STV_TC_SW_044",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_E6E2238192804B12"
+  },
+  {
+    "selector": "test::STV_SWR_059: an empty edge scene still has a finite SVG viewport",
+    "case_id": "STV_TC_SW_044",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_E6E2238192804B12"
+  },
+  {
+    "selector": "test::STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+    "case_id": "STV_TC_SW_027",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4BDA5BC12FC20B57"
+  },
+  {
+    "selector": "test::STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+    "case_id": "STV_TC_SW_007",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_820FA15051F58DD8"
+  },
+  {
+    "selector": "test::STV_SWR_069 bulk state normalizes mixed rows and repeated actions never invert them",
+    "case_id": "STV_TC_SW_054",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_82437B7697DB348A"
+  },
+  {
+    "selector": "test::STV_SWR_057: local suggestions match IDs and titles and bound results",
+    "case_id": "STV_TC_SW_036",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_AEF7BB584406612D"
+  },
+  {
+    "selector": "test::STV_SWR_066 reset retains current roots and clears every restoration cache",
+    "case_id": "STV_TC_SW_051",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_BEB9B8C6A3CF6A6F"
+  },
+  {
+    "selector": "test::STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+    "case_id": "STV_TC_SW_015",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_FDBD1EFEE7E4F99D"
+  },
+  {
+    "selector": "test::STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+    "case_id": "STV_TC_SW_018",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_3D8C39217F9D6690"
+  },
+  {
+    "selector": "test::STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+    "case_id": "STV_TC_SW_001",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_66865E2B7A686A88"
+  },
+  {
+    "selector": "test::STV_SWR_024: self-loop terminates and collapse restores the only seed",
+    "case_id": "STV_TC_SW_006",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_F8113005121A9A19"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+    "case_id": "STV_TC_SW_012",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_33C1A318F1F310E0"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+    "case_id": "STV_TC_SW_026",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_349EEF9A45EA0531"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+    "case_id": "STV_TC_SW_003",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_4D7D20BCD4C2BEAB"
+  },
+  {
+    "selector": "test::STV_SWR_057: runtime reseeding is atomic and clears exploration",
+    "case_id": "STV_TC_SW_008",
+    "result": "passed",
+    "report": "node.xml",
+    "report_completed_at": "2026-10-25T22:26:15.864816+00:00",
+    "mapping_source": "Candidate-2 canonical mapping plus reviewed extended criterion allocation",
+    "execution_id": "STV_TE_DD8EACBEA23AE6E2"
+  },
+  {
+    "selector": "check-historical.py: complete archive/supplement procedure",
+    "case_id": "STV_TC_SY_049",
+    "result": "passed",
+    "report": "historical-check.json",
+    "report_completed_at": "2026-10-25T22:11:34.388899+00:00",
+    "mapping_source": "Fresh final-candidate supplemental execution",
+    "execution_id": "STV_TE_A0D4D6BC54AE39C9"
+  },
+  {
+    "selector": "check-runtime310.py: fresh installed Python 3.10 and clean host",
+    "case_id": "STV_TC_SY_050",
+    "result": "passed",
+    "report": "supplement-commands.json",
+    "report_completed_at": "2026-10-25T22:16:22.340797+00:00",
+    "mapping_source": "Fresh final-candidate supplemental execution",
+    "execution_id": "STV_TE_BF2C08B633BD00D3"
+  },
+  {
+    "selector": "scripts/ci.py runtime: installed final candidate on Python 3.10",
+    "case_id": "STV_TC_SY_057",
+    "result": "passed",
+    "report": "supplement-commands.json",
+    "report_completed_at": "2026-10-25T22:16:22.340797+00:00",
+    "mapping_source": "Fresh final-candidate supplemental execution",
+    "execution_id": "STV_TE_BA4FCAA2A46146AA"
+  }
+]

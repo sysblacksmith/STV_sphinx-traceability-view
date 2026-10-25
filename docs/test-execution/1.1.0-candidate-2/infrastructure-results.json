@@ -1,0 +1,51 @@
+[
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_pages_policy_rejects_publication_and_permission_drift",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_release_policy_rejects_untrusted_triggers_and_publication_code",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_method_publication::test_ordinary_output_with_zip_signature_is_scanned_as_content",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_method_publication::test_archive_members_are_checked_for_private_tooling_references",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_publication::test_qualified_assets_match_source_and_reject_tampering",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_publication::test_valid_checksums_do_not_accept_different_runtime_source",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_publication::test_checksum_paths_and_duplicates_are_rejected",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-10-25T20:47:48.690601+00:00",
+    "mapping_source": "explicit CR015-018 selector review in record-results.py"
+  }
+]

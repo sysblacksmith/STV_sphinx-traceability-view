@@ -6,6 +6,48 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+1.1.0 release qualification, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner requested final-GitHub-Release-driven PyPI and documentation publishing,
+then complete extended qualification before the next release. STV **1.1.0**
+adds graph reset, visible-area SVG export, independently configurable detail
+fonts and page-wide Need metadata controls. The PyPI description is included.
+Issued 1.0.0 artifacts and historical evidence remain unchanged.
+
+Software baseline **41e57ed** and final test baseline **3b32d6b** are committed.
+Candidate 4 passed **229 automated cases (187 Python / 42 JavaScript)** with no
+failures or skips, plus a fresh offline Python 3.10 installed-runtime and clean
+host check. Main qualification uses Python 3.13.17, Windows 11 and Firefox
+158.0.1 on file and HTTP. Four 200-node/ten-card SVG checks remain applicable
+through exact runtime/fixture equivalence; the 30,000-Need/90,000-link host is
+identity-verified and current browser measurements ran again.
+
+The owner confirmed native Save As/folder selection and cancellation, then
+readability and keyboard scrolling at 125%/150% browser zoom. Extended reset
+races, font hierarchy/reuse, real local media/fonts, immutable/event-owned
+snapshots and host page controls have recorded criterion coverage. Only scoped
+verification states advance; acceptance statuses and occurrence-mode deferrals
+remain unchanged.
+
+Candidate 1 is rejected for :need:`STV_PR_016`, omitted visible graph nodes in
+SVG export. Candidate 2 fixes it and passes the initial 196 checks. Candidate 3
+retains a test-wrapper reporter-format failure; explicit TAP output resolves
+it in the final test baseline. Candidate 4's original documentation navigation
+warnings and corrected strict retests remain visible in the final record.
+
+:doc:`test-execution/1.1.0-candidate-4/qualification` is the final local evidence
+and scope assessment. :doc:`ci-and-provenance` describes exact qualified asset
+checks, tag/main ancestry, isolated PyPI Trusted Publishing and matching Pages
+deployment. PR #4 carries the software and evidence. Successful hosted checks
+remain a gate before merge/tag/publication; live publication status is recorded
+by GitHub Releases and Actions, rather than inferred from local tests.
+
+Additional OS/browser combinations, mobile/touch optimization, universal SVG
+editor support and occurrence mode are not formally qualified by this release.
+The optional cleanup proposal is retained; nothing was deleted. Post-release
+workspace review remains due when publication completes.
+
 CR015-018 development implementation, 2026-10-25
 --------------------------------------------------------------------------------
 

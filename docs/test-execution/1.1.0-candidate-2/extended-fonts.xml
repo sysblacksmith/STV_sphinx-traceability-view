@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="86.425" timestamp="2026-10-25T22:42:09.930295+01:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_extended_controls" name="test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]" time="42.146"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5&#10;dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16">docs\test-scripts\test_extended_controls.py:168: in test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation
+    hover=wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-hover-detail .need p'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]" time="43.952"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5&#10;dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16">docs\test-scripts\test_extended_controls.py:168: in test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation
+    hover=wait.until(lambda d:d.find_element(By.CSS_SELECTOR,'.stv-hover-detail .need p'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16</failure></testcase></testsuite></testsuites>

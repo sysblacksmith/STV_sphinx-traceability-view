@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="9" time="128.064" timestamp="2026-10-25T22:20:22.519261+01:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[file]" time="38.992"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="95e2c101-06a0-4336-8913-a714ecafe9a0")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-wa8zm5xg/html')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_066')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_reset_stale_layout_failure_retry_and_independent_views(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url);wait=ready(browser)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision]'))==2)
+            other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+            unchanged=(ids(browser,other),other.get_attribute('data-stv-revision'))
+            root=mount_controlled(browser);assert set(ids(browser,root))=={'GOAL_00','GOAL_01'}
+            browser.execute_script("arguments[0].querySelector('[data-focus=details]').click()",root)
+&gt;           wait.until(lambda d:root.find_elements(By.CSS_SELECTOR,'.stv-persistent-detail table.need'))
+
+docs\test-scripts\test_extended_controls.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="95e2c101-06a0-4336-8913-a714ecafe9a0")&gt;
+method = &lt;function test_reset_stale_layout_failure_retry_and_independent_views.&lt;locals&gt;.&lt;lambda&gt; at 0x0000021853786B60&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[http]" time="39.021"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties><failure message="selenium.common.exceptions.TimeoutException: Message:">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="5713e561-d172-4a18-a62f-aeabf5b4669a")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-wa8zm5xg/html')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_066')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_reset_stale_layout_failure_retry_and_independent_views(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url);wait=ready(browser)
+            wait.until(lambda d:len(d.find_elements(By.CSS_SELECTOR,'.stv-view[data-stv-revision]'))==2)
+            other=browser.find_elements(By.CSS_SELECTOR,'.stv-view')[1]
+            unchanged=(ids(browser,other),other.get_attribute('data-stv-revision'))
+            root=mount_controlled(browser);assert set(ids(browser,root))=={'GOAL_00','GOAL_01'}
+            browser.execute_script("arguments[0].querySelector('[data-focus=details]').click()",root)
+&gt;           wait.until(lambda d:root.find_elements(By.CSS_SELECTOR,'.stv-persistent-detail table.need'))
+
+docs\test-scripts\test_extended_controls.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="5713e561-d172-4a18-a62f-aeabf5b4669a")&gt;
+method = &lt;function test_reset_stale_layout_failure_retry_and_independent_views.&lt;locals&gt;.&lt;lambda&gt; at 0x000002185381AA20&gt;
+message = ''
+
+    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
+        """Wait until the method returns a value that is not False.
+    
+        Calls the method provided with the driver as an argument until the
+        return value does not evaluate to ``False``.
+    
+        Parameters:
+        -----------
+        method: callable(WebDriver)
+            - A callable object that takes a WebDriver instance as an argument.
+    
+        message: str
+            - Optional message for :exc:`TimeoutException`
+    
+        Return:
+        -------
+        object: T
+            - The result of the last call to `method`
+    
+        Raises:
+        -------
+        TimeoutException
+            - If 'method' does not return a truthy value within the WebDriverWait
+            object's timeout
+    
+        Example:
+        --------
+        &gt;&gt;&gt; from selenium.webdriver.common.by import By
+        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
+        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
+    
+        # Wait until an element is visible on the page
+        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
+        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
+        &gt;&gt;&gt; print(element.text)
+        """
+        screen = None
+        stacktrace = None
+    
+        end_time = time.monotonic() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, "screen", None)
+                stacktrace = getattr(exc, "stacktrace", None)
+            if time.monotonic() &gt; end_time:
+                break
+            time.sleep(self._poll)
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+.venv-implementation\Lib\site-packages\selenium\webdriver\support\wait.py:138: TimeoutException</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[0]" time="6.942"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[3]" time="7.156"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[12]" time="7.039"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_typography_nested_units_late_children_and_repeat_scaling" time="7.098"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_download_expiry_pagehide_and_error_ownership" time="6.942"><properties><property name="requirement_ids" value="STV_SWR_071" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]" time="7.055"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties><failure message="assert 0 == (0 + 1)&#10; +  where 0 = execute_script('return extendedNativeClicks')&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;311d4fb6-7be9-45d8-868e-f4d11256e037&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="311d4fb6-7be9-45d8-868e-f4d11256e037")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-wa8zm5xg/html')
+protocol = 'file'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_069')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_host_bulk_mixed_rows_reinitialization_and_native_toggle(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url.replace('index.html','host-only.html'));ready(browser)
+            assert not browser.find_elements(By.CSS_SELECTOR,'.stv-page-metadata')
+            browser.execute_script("""
+              const table=document.querySelector('table.need'),row=document.createElement('tr');row.className='need meta';row.innerHTML='&lt;td&gt;Extra attributes&lt;/td&gt;';table.querySelector('tbody').append(row);
+              table.querySelector('tr.meta').classList.add('collapse_is_hidden');row.classList.remove('collapse_is_hidden');window.extendedNativeClicks=0;
+              table.querySelectorAll('.needs_collapse span.needs').forEach(n=&gt;n.addEventListener('click',()=&gt;extendedNativeClicks++));
+              STVExtended.initializePageMetadata();STVExtended.initializePageMetadata();
+            """)
+            groups=browser.find_elements(By.CSS_SELECTOR,'.stv-page-metadata');assert len(groups)==1
+            group=groups[0];controls=browser.find_elements(By.CSS_SELECTOR,'table.need .needs_collapse');assert controls
+            for label,expected,key in [('Collapse all','false',Keys.ENTER),('Expand all','true',Keys.SPACE)]:
+                for _ in range(2):
+                    button=group.find_element(By.XPATH,f".//button[.='{label}']");button.send_keys(key)
+                    assert all(c.get_attribute('aria-expanded')==expected for c in controls)
+                    assert browser.switch_to.active_element==button
+            before=browser.execute_script('return extendedNativeClicks');controls[0].send_keys(Keys.ENTER)
+&gt;           assert browser.execute_script('return extendedNativeClicks')==before+1
+E           assert 0 == (0 + 1)
+E            +  where 0 = execute_script('return extendedNativeClicks')
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="311d4fb6-7be9-45d8-868e-f4d11256e037")&gt;.execute_script
+
+docs\test-scripts\test_extended_controls.py:191: AssertionError</failure></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]" time="7.487"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties><failure message="assert 0 == (0 + 1)&#10; +  where 0 = execute_script('return extendedNativeClicks')&#10; +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session=&quot;8ab12ac5-5b13-4116-85c4-97f04006c34e&quot;)&gt;.execute_script">browser = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="8ab12ac5-5b13-4116-85c4-97f04006c34e")&gt;
+extended_site = WindowsPath('C:/Users/fragg/AppData/Local/Temp/stv-ex-wa8zm5xg/html')
+protocol = 'http'
+
+    @pytest.mark.browser
+    @pytest.mark.requirements('STV_SWR_069')
+    @pytest.mark.parametrize('protocol',['file','http'])
+    def test_host_bulk_mixed_rows_reinitialization_and_native_toggle(browser,extended_site,protocol):
+        with published_url(extended_site,protocol) as url:
+            browser.get(url.replace('index.html','host-only.html'));ready(browser)
+            assert not browser.find_elements(By.CSS_SELECTOR,'.stv-page-metadata')
+            browser.execute_script("""
+              const table=document.querySelector('table.need'),row=document.createElement('tr');row.className='need meta';row.innerHTML='&lt;td&gt;Extra attributes&lt;/td&gt;';table.querySelector('tbody').append(row);
+              table.querySelector('tr.meta').classList.add('collapse_is_hidden');row.classList.remove('collapse_is_hidden');window.extendedNativeClicks=0;
+              table.querySelectorAll('.needs_collapse span.needs').forEach(n=&gt;n.addEventListener('click',()=&gt;extendedNativeClicks++));
+              STVExtended.initializePageMetadata();STVExtended.initializePageMetadata();
+            """)
+            groups=browser.find_elements(By.CSS_SELECTOR,'.stv-page-metadata');assert len(groups)==1
+            group=groups[0];controls=browser.find_elements(By.CSS_SELECTOR,'table.need .needs_collapse');assert controls
+            for label,expected,key in [('Collapse all','false',Keys.ENTER),('Expand all','true',Keys.SPACE)]:
+                for _ in range(2):
+                    button=group.find_element(By.XPATH,f".//button[.='{label}']");button.send_keys(key)
+                    assert all(c.get_attribute('aria-expanded')==expected for c in controls)
+                    assert browser.switch_to.active_element==button
+            before=browser.execute_script('return extendedNativeClicks');controls[0].send_keys(Keys.ENTER)
+&gt;           assert browser.execute_script('return extendedNativeClicks')==before+1
+E           assert 0 == (0 + 1)
+E            +  where 0 = execute_script('return extendedNativeClicks')
+E            +    where execute_script = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="8ab12ac5-5b13-4116-85c4-97f04006c34e")&gt;.execute_script
+
+docs\test-scripts\test_extended_controls.py:191: AssertionError</failure></testcase></testsuite></testsuites>

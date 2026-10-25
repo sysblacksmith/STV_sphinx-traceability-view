@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="8.980" timestamp="2026-10-25T22:38:01.279721+01:00" hostname="Hk-Legion_Pro7i"><testcase classname="docs.test-scripts.test_extended_controls" name="test_snapshot_clipping_immutable_text_resources_and_readiness" time="8.626"><properties><property name="requirement_ids" value="STV_SWR_070,STV_SWR_072" /></properties><failure message="selenium.common.exceptions.JavascriptException: Message: Error: Fonts are loading. Retry SVG export shortly.&#10;Stacktrace:&#10;capture@file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/_static/extended.js?v=01b6fb1e:96109:53&#10;@file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/index.html:7:34&#10;@file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/index.html:18:8">docs\test-scripts\test_extended_controls.py:175: in test_snapshot_clipping_immutable_text_resources_and_readiness
+    value=browser.execute_script("""
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:555: in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\webdriver.py:458: in execute
+    self.error_handler.check_response(response)
+.venv-implementation\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: in check_response
+    raise exception_class(message, screen, stacktrace)
+E   selenium.common.exceptions.JavascriptException: Message: Error: Fonts are loading. Retry SVG export shortly.
+E   Stacktrace:
+E   capture@file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/_static/extended.js?v=01b6fb1e:96109:53
+E   @file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/index.html:7:34
+E   @file:///C:/Users/fragg/AppData/Local/Temp/stv-ex-y31p30mj/html/index.html:18:8</failure></testcase></testsuite></testsuites>
