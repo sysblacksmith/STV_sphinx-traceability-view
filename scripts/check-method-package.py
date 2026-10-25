@@ -32,7 +32,7 @@ def main():
         for path in directory.rglob('*'):
             if not path.is_file():continue
             data=path.read_bytes();inspect(str(path),data)
-            if zipfile.is_zipfile(path):
+            if path.suffix.lower() in ('.zip','.whl','.jar','.pptx','.docx','.xlsx'):
                 with zipfile.ZipFile(path) as archive:
                     for name in archive.namelist():inspect(str(path)+'!'+name,archive.read(name))
             elif path.name.endswith(('.tar.gz','.tgz')):
