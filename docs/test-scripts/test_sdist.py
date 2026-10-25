@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tarfile
 import zipfile
+from email.parser import BytesParser
 import pytest
 
 ROOT=Path(__file__).parents[2]
@@ -16,7 +17,7 @@ def test_sdist_excludes_local_evidence_and_rebuilds_wheel(tmp_path):
     source=tmp_path/'source';source.mkdir()
     for name in ('src','frontend'):
         shutil.copytree(ROOT/name,source/name,ignore=shutil.ignore_patterns('node_modules','__pycache__','*.pyc'))
-    for name in ('pyproject.toml','hatch_build.py','README.rst','LICENSE','requirements-tooling.txt','requirements-docs.txt','conftest.py','.gitignore'):
+    for name in ('pyproject.toml','hatch_build.py','README.rst','PYPI.rst','LICENSE','requirements-tooling.txt','requirements-docs.txt','conftest.py','.gitignore'):
         shutil.copyfile(ROOT/name,source/name)
     # The checked-in VCS negation and nested negation must not widen the tar.
     payloads=('docs/test-execution/private/probe.log','docs/_build/probe.log',
@@ -34,7 +35,7 @@ def test_sdist_excludes_local_evidence_and_rebuilds_wheel(tmp_path):
     assert not any(name in members for name in payloads)
     assert not any(n.startswith(('docs/test-execution/','docs/_build/','_security-audits/','.venv/','frontend/node_modules/')) for n in members)
     assert not any(b'STV_LOCAL_ONLY_SENTINEL' in data for data in members.values())
-    for name in ('pyproject.toml','hatch_build.py','LICENSE','README.rst','requirements-tooling.txt',
+    for name in ('pyproject.toml','hatch_build.py','LICENSE','README.rst','PYPI.rst','requirements-tooling.txt',
                  'src/sphinx_traceability_view/_version.py','src/sphinx_traceability_view/static/stv.js',
                  'src/sphinx_traceability_view/static/vendor/ELK-INVENTORY.json',
                  'frontend/src/render/index.js','frontend/build.js','frontend/package.json','frontend/package-lock.json',
@@ -42,6 +43,9 @@ def test_sdist_excludes_local_evidence_and_rebuilds_wheel(tmp_path):
         assert name in members,name
     # `build` above builds the wheel from the produced source archive, not the checkout.
     with zipfile.ZipFile(next(output.glob('*.whl'))) as wheel:
+        metadata = BytesParser().parsebytes(wheel.read(next(n for n in wheel.namelist() if n.endswith('.dist-info/METADATA'))))
+        assert metadata['Description-Content-Type'] == 'text/x-rst'
+        assert metadata.get_payload().strip() == members['PYPI.rst'].decode('utf-8').strip()
         for name in ('stv.js','LICENSE.txt','THIRD_PARTY_NOTICES.txt','vendor/ELK-SOURCE.txt','vendor/ELK-INVENTORY.json'):
             path='sphinx_traceability_view/static/'+name
             assert wheel.read(path)==members['src/'+path]

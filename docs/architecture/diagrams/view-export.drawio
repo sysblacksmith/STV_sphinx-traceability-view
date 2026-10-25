@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="view-export" name="Visible-area SVG output">
+    <mxGraphModel page="1" pageWidth="1200" pageHeight="740">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="build" label="DETAIL_BUILD&#10;Output-local media and fonts" link="elements-software.html#STV_SWE_DETAIL_BUILD" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="40" y="60" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="bundle" label="BUNDLE&#10;Content-addressed resource records" link="elements-software.html#STV_SWE_BUNDLE" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="40" y="270" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="render" label="RENDER&#10;Committed view / current crop" link="elements-software.html#STV_SWE_RENDER" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="450" y="60" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="export" label="EXPORT&#10;Inert SVG snapshot + download" link="elements-software.html#STV_SWE_EXPORT" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="450" y="270" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="inspect" label="INSPECT&#10;Visible cards / scroll / typography" link="elements-software.html#STV_SWE_INSPECT" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="450" y="480" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="browser" label="Browser / OS save interface&#10;Reader chooses file location">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7f0fa;strokeColor=#425466;fontSize=17;spacing=12;">
+            <mxGeometry x="850" y="270" width="290" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="a" source="build" target="bundle" value="validated bytes" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b" source="bundle" target="export" value="resource map" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c" source="render" target="export" value="snapshot descriptor" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d" source="inspect" target="export" value="read-only regions" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e" source="export" target="browser" value="SVG Blob" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

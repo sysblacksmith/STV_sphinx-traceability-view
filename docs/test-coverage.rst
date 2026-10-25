@@ -494,6 +494,60 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]``;
        ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]``;
        ``docs/test-scripts/test_persistent_details.py::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]``
+   * - :need:`STV_SWR_066`
+     - Multiple seeds, interactive reseeding, shared paths/cycles, empty/fewer-than-five project entries and a previously closed entry group reset to their defined initial states. Returning to another project page cannot restore old expansions. Other views and persistent entries/order are unchanged. Repeated resets remain valid within the existing 200-node limit.
+     - ``docs/test-scripts/test_view_controls.py::test_collapse_all_keeps_current_roots_and_open_details[file]``;
+       ``docs/test-scripts/test_view_controls.py::test_collapse_all_keeps_current_roots_and_open_details[http]``;
+       ``frontend/src/state/tests/collapse-all.test.js :: STV_SWR_066 reset retains current roots and clears every restoration cache``
+   * - :need:`STV_SWR_067`
+     - Default, 1.0 and independent 0.8/0.6 values are published unchanged. Zero, negative, boolean, string, NaN and infinite values fail deterministically. Missing presentation fields in older bundles mean 1.0, preserving their pre-change appearance; new builds always publish explicit defaults.
+     - ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[True]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[False]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[0]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[-1]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[0.7]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[nan]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[inf]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_invalid_font_scale_names_the_setting[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]``;
+       ``src/sphinx_traceability_view/model/tests/test_font_scale.py::test_independent_font_scales_remain_exact``;
+       ``docs/test-scripts/test_view_controls.py::test_font_scales_are_independent_and_applied_once``
+   * - :need:`STV_SWR_068`
+     - At identical browser zoom, representative text computed sizes are 0.7 times their scale-1.0 baselines within 0.5 CSS px rounding. Independent overrides affect only the intended presentation. Reuse, reopen and delayed content do not compound scaling; scrolling, disclosure and visible focus remain usable.
+     - ``docs/test-scripts/test_view_controls.py::test_font_scales_are_independent_and_applied_once``;
+       ``frontend/src/inspect/tests/typography.test.js :: STV_SWR_068 descendant typography is scaled once from unmodified baselines``
+   * - :need:`STV_SWR_069`
+     - Mixed open/closed sections, several types, out-of-viewport Needs and absent metadata behave deterministically. Repeated initialization adds no duplicate controls/handlers. Pointer and Enter/Space work, titles/body stay visible, and host individual toggles still work after either bulk operation. Pages without rendered host Needs have no bulk controls; Needs without metadata retain disabled controls and an explanation.
+     - ``docs/test-scripts/test_view_controls.py::test_page_metadata_without_a_graph[file]``;
+       ``docs/test-scripts/test_view_controls.py::test_page_metadata_without_a_graph[http]``;
+       ``docs/test-scripts/test_view_controls.py::test_page_controls_disclose_unsupported_markup_without_partial_success``;
+       ``docs/test-scripts/test_view_controls.py::test_page_controls_disclose_missing_host_handler_dependency``;
+       ``frontend/src/render/tests/page-metadata.test.js :: STV_SWR_069 bulk state normalizes mixed rows and repeated actions never invert them``
+   * - :need:`STV_SWR_070`
+     - A panned graph with clipped nodes, scrolled long cards, folded attributes, narrow stacked layout and a visible transient tooltip exports the same visible crop. XML parses, SVG reopens independently in Firefox, and script/event/form behavior and graph datasets are absent. A concurrent layout commit cannot mix revisions; a new attempt captures the new revision.
+     - ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``;
+       ``frontend/src/export/tests/snapshot.test.js :: STV_SWR_070 visible crop intersects screen and never invents dimensions``
+   * - :need:`STV_SWR_071`
+     - Location-prompt mode allows saving to a chosen folder or cancelling. Automatic download mode is identified in user guidance without claiming that the app can force a dialog or detect completion. Export failure preserves the live view and permits retry; repeated exports and pagehide do not leak object URLs.
+     - ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``;
+       ``frontend/src/export/tests/download.test.js :: STV_SWR_071 download uses safe filenames and releases owned URLs``
+   * - :need:`STV_SWR_072`
+     - Local PNG/SVG, srcset selection, CSS image/font resources and paths containing non-ASCII characters work under file and HTTP. Traversal, remote URLs, active SVG and malformed resources cannot execute or access outside files. Missing required visible resources fail visibly; off-screen content is not loaded for capture. Hidden Needs and transport/graph data are not export payloads.
+     - ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_export_resources_embed_local_content_and_reject_active_svg``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_unreferenced_images_do_not_enter_the_graph_resource_record``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_inline_detail_font_faces_embed_local_bytes``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_svg_entity_declarations_are_rejected_before_parsing[utf-8]``;
+       ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py::test_svg_entity_declarations_are_rejected_before_parsing[utf-16]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``;
+       ``frontend/src/export/tests/resources.test.js :: STV_SWR_072 snapshot resources reject remote paths and inherited dictionary entries``
    * - :need:`STV_SYS_001`
      - Zero-, one- and multiple-ID invocations resolve independently. Zero IDs selects the project root; multiple valid IDs select every specified object. Any invalid explicit ID fails with the ID, filename and invocation location.
      - ``docs/test-scripts/test_build.py::test_cross_page_bundle``;
@@ -551,14 +605,22 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
      - ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[file]``;
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``
+   * - :need:`STV_SYS_011`
+     - A saved SVG reopens in the supported browser after the original documentation directory is unavailable, under file and HTTP hosting. It preserves the captured crop and visible content/styles, contains no executable behavior or required external resource requests, and neither cancellation nor failure changes exploration state. Missing required local resources produce a readable export failure rather than a misleading success.
+     - ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[1-http]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-file]``;
+       ``docs/test-scripts/test_view_controls.py::test_standalone_svg_visible_details[10-http]``
 
 Executable sources
 ------------------
 
 * ``src/sphinx_traceability_view/bundle/tests/test_bundle.py``
 * ``src/sphinx_traceability_view/detail_build/tests/test_details.py``
+* ``src/sphinx_traceability_view/detail_build/tests/test_export_resources.py``
 * ``src/sphinx_traceability_view/directive/tests/test_lifecycle.py``
 * ``src/sphinx_traceability_view/graph/tests/test_graph.py``
+* ``src/sphinx_traceability_view/model/tests/test_font_scale.py``
 * ``src/sphinx_traceability_view/model/tests/test_model.py``
 * ``docs/test-scripts/test_browser.py``
 * ``docs/test-scripts/test_build.py``
@@ -567,21 +629,29 @@ Executable sources
 * ``docs/test-scripts/test_classified_rows.py``
 * ``docs/test-scripts/test_detail_transport.py``
 * ``docs/test-scripts/test_legal_guard.py``
+* ``docs/test-scripts/test_method_publication.py``
 * ``docs/test-scripts/test_package.py``
 * ``docs/test-scripts/test_persistent_details.py``
 * ``docs/test-scripts/test_position_stability.py``
 * ``docs/test-scripts/test_publication.py``
 * ``docs/test-scripts/test_release_seeds.py``
 * ``docs/test-scripts/test_sdist.py``
+* ``docs/test-scripts/test_view_controls.py``
 * ``docs/test-scripts/test_viewport_boundary.py``
 * ``docs/test-scripts/test_windows_paths.py``
+* ``frontend/src/export/tests/download.test.js``
+* ``frontend/src/export/tests/resources.test.js``
+* ``frontend/src/export/tests/snapshot.test.js``
 * ``frontend/src/inspect/tests/collection.test.js``
 * ``frontend/src/inspect/tests/inspect.test.js``
+* ``frontend/src/inspect/tests/typography.test.js``
 * ``frontend/src/inspect/tests/urls.test.js``
 * ``frontend/src/layout/tests/classified-rows.test.js``
 * ``frontend/src/layout/tests/layout.test.js``
 * ``frontend/src/layout/tests/stability.test.js``
 * ``frontend/src/render/tests/edge-viewport.test.js``
 * ``frontend/src/render/tests/groups.test.js``
+* ``frontend/src/render/tests/page-metadata.test.js``
 * ``frontend/src/render/tests/seeds.test.js``
+* ``frontend/src/state/tests/collapse-all.test.js``
 * ``frontend/src/state/tests/state.test.js``

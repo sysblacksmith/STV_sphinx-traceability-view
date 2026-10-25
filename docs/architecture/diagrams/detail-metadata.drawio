@@ -5,6 +5,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="diagram-padding" parent="1" vertex="1" style="shape=rect;fillColor=#ffffff;fillOpacity=0;strokeColor=none;pointerEvents=0;">
+          <mxGeometry x="0" y="0" width="1100" height="380" as="geometry" />
+        </mxCell>
         <object id="folded" label="FOLDED (initial per copy)&#10;metadata hidden; right arrow" link="requirements-software.html#STV_SWR_064" linkTarget="_top">
           <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;spacing=10;">
             <mxGeometry x="40" y="120" width="320" height="100" as="geometry" />

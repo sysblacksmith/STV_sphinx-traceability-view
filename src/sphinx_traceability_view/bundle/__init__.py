@@ -19,9 +19,14 @@ def atomic(path, value):
     os.replace(temporary, path)
 
 
-def emit(graph, fragments, output):
+def emit(graph, fragments, output, resources=None):
     graph = dict(graph, details={})
     files = {}
+    if resources is not None:
+        resource_hash = digest(encoded(resources))
+        resource_name = f"_static/stv/resources/{resource_hash}.js"
+        graph["export_resources"] = {"url": resource_name, "digest": resource_hash}
+        files[resource_name] = 'globalThis.__STV_DATA__ ||= {graphs:{},fragments:{}};globalThis.__STV_DATA__.resources ||= Object.create(null);globalThis.__STV_DATA__.resources[' + encoded(resource_hash) + '] = JSON.parse(' + encoded(encoded(resources)) + ');'
     for identity, fragment in fragments.items():
         content_hash = digest(fragment)
         name = f"_static/stv/details/{content_hash}.js"

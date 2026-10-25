@@ -381,3 +381,183 @@ border-box width. Its side-by-side outer height is 976 px, matching the graph's
 card shadow so the pane top/separator remain crisp. The narrow container's
 existing 60vh maximum still bounds the below-graph stack. Hidden stacks do not
 render the frame. No exploration or inspection state transition changes.
+
+CR015-018 command and presentation contracts
+--------------------------------------------
+
+RENDER dispatches ``{type: 'collapse-all'}`` to STATE. STATE computes
+``initial(current.mode === 'seeds' ? current.seeds : [])``, sets revision to
+current revision plus one, and returns the ordinary validated visibility result.
+This clears expanded groups and all page restoration caches, sets project page
+zero/rootOpen true, and never changes the persistent collection. RENDER cancels
+old layout generations and closes transient hover using its normal graph-commit
+policy. A successful fresh layout fits the current viewport. Pending layout
+failure retains the committed view and permits retry; no partial reset is shown.
+The existing occurrence-mode deferral remains; no unimplemented mode is enabled.
+
+``traceability_view_tooltip_font_scale`` and
+``traceability_view_details_font_scale`` are independent finite positive numbers,
+not booleans, with new-build default 0.7. MODEL validates; DIRECTIVE publishes
+schema-1 additive ``graph.presentation = {tooltip_font_scale, details_font_scale}``.
+Missing fields in old bundles default to 1.0. Both values participate in bundle
+identity. No user data model replacement or reader settings panel is required.
+
+INSPECT measures each newly restored fragment in its actual presentation style
+context at scale 1.0 before changing any font styles. Capture computed CSS-pixel
+sizes for the complete descendant tree, then apply each captured size times the
+presentation scale in a second pass. This avoids nested multiplication and
+preserves existing explicit heading/table/code sizes. The visible panel wrapper's
+own heading/link text uses the same baseline rule. Measure synchronously in the actual restored presentation before the next
+paint, never creating a second accessible live card. Restore retained baselines
+before measuring newly inserted descendants, then apply all sizes in a second
+pass; initial loading/error wrappers use the same rule. Delayed fonts must finish before measurement, or
+re-measure from the retained unscaled baseline after font readiness. Reuse never
+rescales already scaled values. Fragment disposal releases its measurement state.
+This is presentation-local; no source-page or graph label CSS is changed.
+
+``render/page-metadata.js`` initializes at DOMContentLoaded (or immediately when
+already ready), selecting original ``table.need`` elements outside ``.stv-view``
+and all ``.stv-detail``/persistent-copy subtrees. DIRECTIVE includes the existing
+local runtime on every HTML page with rendered Needs, even with zero STV roots;
+initialization is idempotent and does not require a graph transport. DIRECTIVE
+finalization scans completed host HTML for rendered Need tables and injects one
+STV-owned local runtime/CSS reference using output-relative URLs when absent.
+It does not inject a graph script merely for page controls. RENDER index.js
+initializes the page controller before looking for a data-stv-root script; if
+no view roots exist it returns without dereferencing a missing script. Place one
+labelled control group before the first host Need, with real button elements.
+No Needs means no group; Needs without disclosures show disabled buttons with
+an explanation. Discover host disclosure controls only in their closest owning
+Need table and derive target rows using the host's encoded class list. The pinned Sphinx-Needs 8.2.0 handler is attached to the nested
+``span.needs.collapsed`` and ``span.needs.visible`` icons, not their
+``.needs_collapse`` wrapper. For uniformly folded/open rows whose state differs
+from the requested target, activate the currently displayed nested icon once,
+then reconcile actual rows/icons/ARIA. For already matching rows do nothing.
+For mixed rows within one disclosure normalize the identified rows and its two
+icons directly to the target instead of inverting their mixed states.
+A shared synchronization routine derives aria-expanded, aria-controls and label
+from row visibility. A post-host delegated icon-click listener invokes only that
+synchronization routine, never a second toggle; this keeps ARIA correct after
+subsequent individual native clicks. Give the wrapper role/button tabindex and
+map Enter/Space to the currently displayed host icon once, with preventDefault.
+Bulk buttons remain real native buttons. Do not attach a competing individual
+visibility-toggle handler to the host wrapper.
+
+Enable page controls only after window load and a registered jQuery ready
+callback, including already-complete document cases; host collapse handlers are
+then installed. Missing pinned host prerequisites or unsupported encodings leave
+a readable disabled group, not a partial/global toggle. Custom markup without
+collapsible metadata retains the defined no-attributes explanation. Copied
+INSPECT controls retain their separate existing initialization and lifecycle.
+
+Visible-area capture and resource contract
+-------------------------------------------
+
+``EXPORT.capture(workspace, {base, resources, regions})``
+returns an immutable snapshot descriptor or a typed capture error. A crop with
+zero width/height produces "No visible view area to export" and no download;
+never fabricate a minimum-size canvas or scroll the page automatically. Capture
+requires completed local resource registration and document.fonts readiness.
+Pending resources/fonts expose a retryable preparation state; failed required
+resources/fonts expose an error while graph interaction remains available.
+Capture does not asynchronously wait for fonts and then read newer live DOM.
+RENDER exposes
+only its last committed presentation. Busy/failed layout blocks export with a
+retry instruction rather than mixing pending geometry and committed DOM.
+
+Capture reads geometry, computed styles, all scroll offsets and DOM synchronously
+in one task. The crop is the intersection of the workspace rectangle with the
+browser visual viewport (layout viewport fallback), in CSS pixels. Toolbar,
+status, other views and content outside this crop are excluded. Narrow layouts
+include only the screen-visible part of the below-graph dock. The outer SVG uses
+this crop as width/height and viewBox; workspace/tooltip positions are translated
+relative to its top-left. Each overflow ancestor becomes an explicit clipping
+wrapper. Normalize scroll containers into fixed-size overflow-hidden wrappers
+with inner content translated by captured negative scroll offsets. Preserve the
+D3 transform and existing nested SVG viewBox/origins; never refit for export.
+
+A pointer activation snapshots on primary pointerdown before toolbar focus can
+dismiss a visible tooltip; click completes serialization/save. Cancelled pointer
+activation discards the descriptor. Keyboard activation captures the state at
+activation; it does not recreate a tooltip already dismissed by normal focus.
+An INSPECT region is included only if it belongs to this view and intersects
+the crop. Frozen descriptors contain no live nodes or callbacks. Future graph,
+font, viewport or card changes cannot alter an in-progress snapshot. Read-only
+snapshotting does not close cards, update their age or move focus.
+
+``EXPORT.serialize(snapshot)`` constructs namespaced SVG with
+XHTML foreignObject, computed inline style and nested graph SVG. It materializes
+visible ::before/::after textual decoration, replacing control icons with their
+captured inert appearance. Freeze animation/transition state. Discard handlers,
+scripts, forms, embedded executable widgets, graph/transport attributes and
+nonvisual accessibility-control markup. Already safe detail content remains the
+source; export adds a second inert-output boundary. Do not serialize document
+head, style sheets or arbitrary host scripts. Rewrite fragment IDs/references
+within the snapshot. The effective workspace ancestor background is captured
+as an SVG backdrop. Original style elements are omitted after computed-style
+capture; only selected embedded font-face rules are emitted. Ordinary external navigation links may remain explicit
+links; automatic resource loading is restricted to embedded validated data.
+Non-intersecting positioned/SVG subtrees are omitted. Off-screen flow boxes
+become empty, nonvisual geometry placeholders, preserving scroll positions and
+flex/grid gaps without their text, resources or identities. Clipping remains
+authoritative for partial text/media intersections. SVG is a visual crop, not a promise to redact every
+character beyond the visible portion of a partly clipped text node.
+
+DETAIL_BUILD finalization walks safe local media/CSS dependencies used by detail
+fragments and STV styles. Resolve and symlink-check every file beneath the output
+root before reading. Validate MIME by content, retain approved raster data,
+sanitize local SVG to inert namespaced markup (no scripts, event handlers,
+foreign executable content or unresolved external dependencies), and collect
+local font bytes needed for @font-face. Reject cycles/unresolvable references
+with an explicit resource error. Never traverse outside output or download
+HTTP resources. Existing unavailable remote-media placeholders remain visible.
+Build records map canonical output-relative paths to MIME/base64/digest or a
+readable failure record. Keep large resource maps in separate content-addressed
+classic scripts, registered as immutable data using the existing escaped-JSON
+transport; the graph points to their identity/URL. Load the local record script
+before enabling Save; keep graph exploration usable if it fails. Include only
+resources selected by the visible capture (including currentSrc for srcset),
+not the entire resource map, in the saved SVG. Font fallback with no bundled
+webfont uses the captured system-font family and carries no external request.
+
+The resulting XML must parse before a download is offered. Required visible
+resource/style failures abort with a readable message; do not silently replace
+previously available local content or report success with broken images. No
+runtime fetch/XHR, arbitrary file access or original-page dependency is permitted.
+No export change relaxes the existing detail URL/sanitization policies.
+
+``EXPORT.saveSVG(svgText, viewId)`` uses Blob type
+``image/svg+xml;charset=utf-8``, URL.createObjectURL and a temporary HTML anchor
+with download. Default name is ``stv-<safe-view-id>.svg``; allow only safe filename
+characters and bound the generated component to 80 characters. There is one
+in-flight operation per view. Remove the anchor after activation; revoke its URL
+after 60 seconds or pagehide, whichever is first. A pending URL registry supports
+several successive completed downloads without early revocation. The 60-second
+lease is a cleanup policy to verify with the target browser, not proof of disk
+save completion. Generation errors release immediately and allow retry.
+
+Location/name choice is browser/OS owned. User guidance explains enabling
+"Always ask you where to save files" in Firefox (or the equivalent browser
+setting). STV cannot force the native dialog or observe a cancelled/completed
+download. Its status says "SVG download requested", never "file saved". Automatic
+folder mode remains usable but does not claim a location prompt. The accepted
+owner clarification permits this documented browser-managed behavior.
+
+Local SVG validation uses the standard-library XML parser with DTD/entity
+constructs rejected before parsing. Accept only the SVG namespace and static
+svg/g/defs/path/rect/circle/ellipse/line/polyline/polygon/text/tspan/use/image,
+clipPath/mask/marker/pattern/linearGradient/radialGradient/stop/title/desc/style
+nodes. Reject animation, scripts, event attributes, foreignObject and unknown
+namespaces in imported resources; EXPORT's own controlled foreignObject wrapper
+is a different boundary. SVG use/href and paint/filter references must resolve
+to a local fragment or an embedded validated raster dependency; unresolved or
+external references produce a typed resource failure. Reject CSS imports and
+external URL references; embed accepted local font-face records explicitly.
+Validate all references again after rewriting. Unsupported local SVG remains
+viewable in the source documentation but export reports its unsupported resource
+rather than claiming a complete standalone snapshot. Extending the allowlist is
+a reviewed compatibility change with corresponding security/fidelity fixtures.
+
+Host bulk actions reject disclosures targeting title/head or content/body rows.
+Missing host handlers or unsupported row encodings disable the page-wide pair
+with a readable explanation rather than applying a partial change.

@@ -124,10 +124,20 @@ def browser():
     options.set_preference("network.proxy.ssl", "127.0.0.1")
     options.set_preference("network.proxy.ssl_port", 9)
     options.set_preference("network.proxy.no_proxies_on", "localhost,127.0.0.1")
+    downloads = tempfile.TemporaryDirectory(prefix='stv-download-')
+    options.set_preference("browser.download.folderList", 2)
+    options.set_preference("browser.download.dir", downloads.name)
+    options.set_preference("browser.download.useDownloadDir", True)
+    options.set_preference("browser.download.alwaysOpenPanel", False)
+    options.set_preference("browser.helperApps.neverAsk.saveToDisk", "image/svg+xml")
     driver = webdriver.Firefox(service=Service(driver_path), options=options)
+    driver.stv_download_directory = Path(downloads.name)
     driver.set_window_size(1440, 1100)
-    yield driver
-    driver.quit()
+    try:
+        yield driver
+    finally:
+        driver.quit()
+        downloads.cleanup()
 
 
 @pytest.fixture

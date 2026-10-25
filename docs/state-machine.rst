@@ -344,3 +344,67 @@ No matching rows means no actionable arrow is published. Header artifact-ID
 navigation uses its source URL and opens a new tab; ordinary copied-body
 fragment navigation remains local. Source: :need:`STV_SWR_064`,
 :need:`STV_SWR_016`; rendered verification: :need:`STV_TC_SY_065`.
+
+Collapse-all and export commands
+--------------------------------
+
+Collapse-all is an atomic STATE transition from any committed shared exploration
+state to initial (current roots), clearing every expanded group and page cache.
+Project mode restores page zero and its initial entry group. A new revision
+invalidates old layout generations; successful fresh layout commits/fits, failure
+retains the last committed presentation for retry. Persistent collection state
+is orthogonal and unchanged. This command does not enable deferred occurrence mode.
+
+Export has per-view idle -> captured -> serializing -> download-requested -> idle
+states, with capture/resource/serialization failure returning to idle with a
+readable error. Pointer cancellation before activation discards its snapshot.
+No export state writes exploration or collection state. A separate URL-lease
+registry survives a completed request until cleanup expiry/pagehide; browser
+completion/cancellation is not observable as a product success state. Page-wide
+metadata commands have no graph-state transition. See :doc:`internal-interfaces`.
+
+.. raw:: html
+
+   <object type="image/svg+xml" data="export-lifecycle.svg" style="width:100%;height:auto;aspect-ratio:1240/700" aria-label="Implemented SVG capture and browser download lifecycle">
+     <a href="export-lifecycle.svg">Open SVG export lifecycle diagram</a>
+   </object>
+
+Diagram source: ``architecture/diagrams/export-lifecycle.drawio``. EXPORT owns
+capture/serialization/download; RENDER owns activation and readable status.
+
+.. list-table:: Implemented command and page-control transitions
+   :header-rows: 1
+   :widths: 22 28 50
+
+   * - Trigger / guard
+     - Owner / source
+     - Action / resulting state
+   * - Collapse all nodes
+     - STATE transition(), RENDER update()
+     - initial(current roots), clear page caches, revision increment; fresh layout
+       and fit commit together, retaining persistent details. Failure retains the
+       previous scene; Retry layout repeats the rejected command.
+   * - Primary pointerdown / committed layout and ready resources
+     - render/view.js, export/snapshot.js capture()
+     - Freeze detached presentation with crop/styles/scroll and selected resources.
+       Empty crop, loading fonts or missing images fail readably without download.
+   * - Pointer cancellation, release outside or blur
+     - render/view.js
+     - Discard the pending snapshot. Keyboard activation always captures current
+       presentation rather than reusing a cancelled pointer snapshot.
+   * - Save activation / frozen or fresh capture
+     - export/snapshot.js serialize(), export/download.js saveSVG()
+     - Parse/serialize XML and request Blob download. Errors announce and release
+       operation state; no graph/card mutation or false disk-save completion.
+   * - URL lease expiry or pagehide
+     - export/download.js releaseDownloads()
+     - Revoke owned URLs; browser/OS retains responsibility for actual save/cancel.
+   * - Page Expand all / Collapse all after host readiness
+     - render/page-metadata.js
+     - Normalize only original host metadata to the requested state; sync icons
+       and ARIA. Preserve source body, individual controls and copied STV details.
+
+Source modules use the component paths in :doc:`elements-software`. Executable
+coverage is in :doc:`test-coverage`; developer verification is recorded centrally
+in :doc:`implementation-review`. These are implemented transitions, while
+occurrence-mode behavior retains its existing deferred scope.

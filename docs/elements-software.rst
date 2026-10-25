@@ -27,6 +27,8 @@ Software module responsibilities and containment within the product system eleme
 
    **Boundary:** ``README.rst``.
 
+   Registers the two font-scale settings and page-level metadata assets on HTML pages with actionable host Need metadata, including pages without an STV directive. See :ref:`STV_ADR_011`.
+
 .. swe:: Host model normalization
    :id: STV_SWE_MODEL
    :status: accepted
@@ -47,6 +49,8 @@ Software module responsibilities and containment within the product system eleme
    **Unit tests:** ``tests/test_model.py``.
 
    **Boundary:** ``README.rst``.
+
+   Validates independent finite positive tooltip/detail font scales. See :ref:`STV_ADR_011`.
 
 .. swe:: Graph adapter and indexes
    :id: STV_SWE_GRAPH
@@ -86,11 +90,13 @@ Software module responsibilities and containment within the product system eleme
    **Component directory:** ``src/sphinx_traceability_view/detail_build``. The folder name is the
    lowercase suffix of ``STV_SWE_DETAIL_BUILD``.
 
-   **Implementation:** ``__init__.py``.
+   **Implementation:** ``__init__.py``; ``export_resources.py``.
 
    **Unit tests:** ``tests/test_details.py``.
 
    **Boundary:** ``README.rst``.
+
+   Collects output-contained media/font bytes and safe export resource dependencies after final HTML extraction. See :ref:`STV_ADR_011`.
 
 .. swe:: Static bundle emission
    :id: STV_SWE_BUNDLE
@@ -117,6 +123,8 @@ Software module responsibilities and containment within the product system eleme
    own audited npm/compiled-library notices and generated package assets for
    this delivery boundary; they introduce no additional runtime element.
 
+   Publishes additive presentation fields and content-addressed export resource records with the graph/detail identities. See :ref:`STV_ADR_011`.
+
 .. swe:: Exploration state engine
    :id: STV_SWE_STATE
    :status: accepted
@@ -137,6 +145,8 @@ Software module responsibilities and containment within the product system eleme
    **Unit tests:** ``tests/state.test.js``.
 
    **Boundary:** ``README.rst``.
+
+   Handles atomic collapse-all with current roots and clears stored page expansions. See :ref:`STV_ADR_011`.
 
 .. swe:: Semantic rank layout
    :id: STV_SWE_LAYOUT
@@ -178,9 +188,12 @@ Software module responsibilities and containment within the product system eleme
 
    **Implementation:** ``index.js``; ``view.js``; ``groups.js``; ``seeds.js``; ``edge-viewport.js``; ``stv.css``.
 
-   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``; ``tests/edge-viewport.test.js``.
+   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``; ``tests/edge-viewport.test.js``;
+   ``tests/page-metadata.test.js``.
 
    **Boundary:** ``README.rst``.
+
+   Owns Collapse all nodes / Save as SVG wiring and page-metadata.js for scoped page-wide metadata actions; supplies committed workspace geometry to EXPORT. See :ref:`STV_ADR_011`.
 
 .. swe:: Hover, persistent details and original links
    :id: STV_SWE_INSPECT
@@ -199,8 +212,34 @@ Software module responsibilities and containment within the product system eleme
    lowercase suffix of ``STV_SWE_INSPECT``.
 
    **Implementation:** ``inspect.js`` (hover), ``content.js`` (shared safe content),
-   ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus).
+   ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus),
+   ``typography.js`` (baseline-preserving font scaling).
 
-   **Unit tests:** ``tests/inspect.test.js`` and ``tests/collection.test.js``.
+   **Unit tests:** ``tests/inspect.test.js``; ``tests/collection.test.js``;
+   ``tests/typography.test.js``.
 
    **Boundary:** ``README.rst``.
+
+   Applies independent presentation scales and supplies read-only currently visible detail snapshots to EXPORT. See :ref:`STV_ADR_011`.
+
+.. swe:: Visible-area SVG snapshot and download
+   :id: STV_SWE_EXPORT
+   :status: accepted
+   :tags: change_increment
+   :basis: documented
+   :evidence: docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :part_of: STV_SE_BROWSER
+
+   Owns immutable visible-area capture, clipping/style/resource composition,
+   inert XML serialization and browser-managed SVG download. Reads committed
+   RENDER geometry and INSPECT display state without owning exploration or cards.
+   Uses native DOM, SVG foreignObject, XMLSerializer, Blob and object URLs.
+
+   **Component directory:** ``frontend/src/export``.
+
+   **Source:** ``snapshot.js``; ``resources.js``; ``download.js``; ``README.rst``.
+
+   **Unit tests:** ``tests/snapshot.test.js``; ``tests/resources.test.js``;
+   ``tests/download.test.js``. Real browser checks remain system-level.

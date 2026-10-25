@@ -1,5 +1,6 @@
 import {detailCollection,DEFAULT_DETAILS_LIMIT} from './collection.js';
 import {loadDetail,detailContent,associate} from './content.js';
+import {scaleTypography} from './typography.js';
 let sequence=0;
 /** Collection DOM is independent of graph commits and transient hover. */
 export function persistentDetails(root,graph,base,{stack,findTrigger,fallback,changed,load=loadDetail}) {
@@ -38,10 +39,11 @@ export function persistentDetails(root,graph,base,{stack,findTrigger,fallback,ch
       panel.append(title,dismiss,original,body);return {id,panel,dismiss,body};
     });
     if(reused){sync();reveal(entry);return;}
-    remove(evicted);stack.append(entry.panel);sync();reveal(entry);
+    remove(evicted);stack.append(entry.panel);scaleTypography(entry.panel,graph.presentation?.details_font_scale??1);sync();reveal(entry);
     Promise.resolve().then(()=>load(graph,id,base)).then(html=> {
       if(collection.entries.get(id)!==entry||!entry.panel.isConnected)return;
       entry.body.replaceChildren(detailContent(html,graph,id,base,`${entry.panel.id}-`));
+      scaleTypography(entry.panel,graph.presentation?.details_font_scale??1);
     }).catch(error=>{if(collection.entries.get(id)===entry&&entry.panel.isConnected)entry.body.textContent=error.message;});
   }
   sync();return {open,close,clear,sync};

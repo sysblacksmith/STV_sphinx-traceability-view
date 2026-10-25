@@ -168,3 +168,27 @@ Executable criteria and retained results: :doc:`test-coverage` and
    The system shall support the initial release workflow in stable desktop Firefox on Windows.
 
    **Acceptance criterion:** All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.
+
+.. sysr:: Deliver a standalone visible-area SVG without a runtime service
+   :id: STV_SYS_011
+   :status: accepted
+   :tags: change_increment
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
+   :priority: unassigned
+   :verification_state: partial
+   :derives_from: STV_SHR_059
+   :allocated_to: STV_SE_BUILD, STV_SE_BROWSER
+
+   The system shall turn a reader-requested visible-area snapshot into a
+   self-contained SVG, including the visible graph and opened detail content,
+   without runtime server calls or access to files outside the documentation
+   output. It shall delegate file location/name and cancellation to browser/OS
+   save behavior, with documented prompt settings where needed.
+
+   **Acceptance criterion:** A saved SVG reopens in the supported browser after
+   the original documentation directory is unavailable, under file and HTTP
+   hosting. It preserves the captured crop and visible content/styles, contains
+   no executable behavior or required external resource requests, and neither
+   cancellation nor failure changes exploration state. Missing required local
+   resources produce a readable export failure rather than a misleading success.

@@ -252,3 +252,139 @@ The actual normal demo and metadata state diagram/HTML embedding were visually
 reviewed. No arbitrary host/widget script is initialized and adjacent safe
 transport/offline/race/hover/package checks pass. Owner acceptance retest is
 pending; no release qualification or new capacity result is claimed.
+
+CR015-018 development implementation, 2026-10-25
+--------------------------------------------------------------------------------
+
+Input: accepted concept commit ``2c4236a`` on ``concept-cr015-018``, including
+round 15 and the four owner-approved stakeholder amendments. Implementation is
+an uncommitted development worktree, not a new release or deployed publication.
+No dependency/version change is introduced. Development distributions remain
+version 1.0.0 in an isolated directory; existing release assets are not replaced.
+
+Delivered behavior
+~~~~~~~~~~~~~~~~~~
+
+* :need:`STV_SHR_058` / :need:`STV_SWR_066`: atomic Collapse all nodes keeps
+  current roots, clears all page restoration caches, fits a fresh committed
+  scene and preserves persistent cards. Layout retry repeats the rejected command.
+* :need:`STV_SHR_059` / :need:`STV_SYS_011` / :need:`STV_SWR_070`,
+  :need:`STV_SWR_071`, :need:`STV_SWR_072`: inert visible-area SVG capture,
+  local resource/font records, preserved crop/background/scroll layout and actual
+  browser downloads. Errors retain the live view. Imported active SVG and
+  outside-output paths fail; unreferenced images do not enter resource records.
+* :need:`STV_SHR_060` / :need:`STV_SWR_067`, :need:`STV_SWR_068`: independent
+  author font scales default to 0.7, including loading/error wrappers and later
+  inserted content. Baseline restoration and two-phase measurement avoid nested
+  or repeated scaling, with no duplicated accessible measurement card.
+* :need:`STV_SHR_061` / :need:`STV_SWR_069`: page-wide metadata controls on
+  rootless and graph pages, preserving body/title, copied details and native
+  individual operation. Unsupported encodings or absent host handlers produce
+  disabled explanatory controls rather than partial success.
+
+Implementation source and transition ownership are in :doc:`elements-software`
+and :doc:`state-machine`. Author settings and browser save-location guidance
+are in :doc:`getting-started`. The interface changes bind the accepted design
+into actual function signatures and equivalent synchronous pre-paint measurement;
+no stakeholder behavior, component boundary or accepted ADR choice was weakened.
+
+Executable coverage and actual developer checks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: Canonical design to executable checks
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Canonical cases
+     - Executable selection
+   * - :need:`STV_TC_SW_051`, :need:`STV_TC_SY_066`
+     - ``frontend/src/state/tests/collapse-all.test.js`` and retained state/cap
+       tests; ``test_collapse_all_keeps_current_roots_and_open_details``.
+   * - :need:`STV_TC_SW_052`, :need:`STV_TC_SY_068`
+     - ``model/tests/test_font_scale.py``, ``inspect/tests/typography.test.js``;
+       ``test_font_scales_are_independent_and_applied_once`` measures both actual
+       hover and persistent sizes under default, baseline and separate overrides.
+   * - :need:`STV_TC_SW_053`, :need:`STV_TC_SW_055`, :need:`STV_TC_SY_067`
+     - ``export/tests/*.test.js``, ``detail_build/tests/test_export_resources.py``;
+       ``test_standalone_svg_visible_details`` covers file/HTTP, one/ten cards,
+       empty-crop recovery, real temporary-folder downloads, background and visible
+       reopened card positions after the original output directory is unavailable.
+   * - :need:`STV_TC_SW_054`, :need:`STV_TC_SY_069`
+     - ``render/tests/page-metadata.test.js`` and the ``test_page_*`` functions
+       in ``docs/test-scripts/test_view_controls.py`` cover native individual
+       operation, rootless pages and explicit unsupported/missing-handler failures.
+
+Actual check sets are separate developer runs, not a manufactured aggregate
+release execution:
+
+* Complete frontend selection: **42 passed**.
+* Complete non-browser selection excluding the separate capacity benchmark:
+  **87 passed**. Its package check uses the development wheel.
+* Broad Firefox selection excluding the separate capacity benchmark:
+  **57 passed** before the final export/page edge refinements.
+* Later delivered-scope/persistent-detail selection: **30 passed**.
+* Final SVG/reset/font feature selection after crop/scroll corrections:
+  **9 passed**; page-only refinements are rechecked separately on the final build.
+* Clean offline wheel host without Node: **passed**, with required runtime/legal
+  assets and no component tests in the runtime wheel. Final package hashes and
+  source/test identity are retained in ignored developer build output.
+
+Commands use ``.venv-implementation/Scripts/python.exe`` with installed Firefox
+158.0.1 and geckodriver 0.37.1 for browser checks. For example::
+
+   node --test src/*/tests/*.test.js
+   .venv-implementation/Scripts/python.exe -m pytest -m "not browser" --ignore=docs/test-scripts/test_capacity.py -q
+   .venv-implementation/Scripts/python.exe -m pytest docs/test-scripts/test_view_controls.py -q
+   .venv-implementation/Scripts/python.exe scripts/check-coverage.py --strict
+
+Run the Node command from ``frontend``. Set STV_GECKODRIVER to the installed driver
+and STV_WHEEL to the new wheel for consumer checks. Browser fixture downloads are
+confined to automatically cleaned temporary folders. Early identified fixture
+SVGs were moved out of Downloads into ignored build output.
+
+Developer logs/JUnit, packages, source/test identity and visual examples are under
+``docs/_build/cr015-018*``. They are transient local evidence, not committed release
+records. The real generated demo and an exported standalone SVG were inspected
+in Firefox. Visual checks exposed inherited-background and off-screen flow-layout
+issues; the implementation now captures a backdrop and empty flow placeholders,
+and browser checks assert visible reopened content rather than text presence only.
+
+Verification boundary and handover
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The four CRs are implemented. New requirement verification is conservatively
+``partial``: these development checks do not constitute execution of every full
+canonical case procedure, native Save As dialog qualification, the separate
+30,000/90,000 capacity benchmark or a release qualification. The nine canonical
+case designs remain accepted/not_run until their complete procedures are recorded;
+no test_execution or historical release result was fabricated or overwritten.
+Existing passing release claims retain their original candidate identities.
+
+The development wheel/source archive are in
+``docs/_build/cr015-018/distributions``. To replace the same version in a local
+consumer, use pip with ``--force-reinstall --no-deps`` and the explicit wheel path
+in that consumer's environment. Readers need no Node or runtime service.
+User inspection and separately authorized release-test work remain before any
+new release/publication claim. Implementation changes have not been committed,
+pushed or deployed by this invocation.
+
+Final local verification identity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Source/test SHA-256: ``0d79572952f63638efd7b433a6515370af15865cae2f2b7b38d65e2250fe0a50``.
+The complete input file hashes and archive hashes are in
+``docs/_build/cr015-018/source-identity.json``. The wheel's packaged stv.js was
+compared byte-for-byte with the final rebuilt asset; runtime tests are excluded.
+
+Final page-control retest: four passes, including explicit missing-host and
+body-target refusal and collision-safe ARIA row references. Final export retest:
+four passes (file/HTTP, one/ten cards), including actual temporary-folder file
+bytes, visible reopened content, and plaintext-password exclusion. Final resource
+and font validation selection: fourteen passes, including UTF-8/UTF-16 entity
+rejection. These supersede only their affected earlier developer checks; they
+are not combined into a fictitious release run.
+
+Source whitespace checks exclude generated stv.js, whose vendored raw string
+literals legitimately retain trailing spaces; the generated bytes are not trimmed.
+Strict documentation, graph/evidence/test coverage and published diagram checks
+are recorded in :doc:`maturity`. No additional implementation commit was made.

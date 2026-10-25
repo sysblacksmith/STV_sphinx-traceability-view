@@ -169,8 +169,18 @@ Local rendering code and style
 Import status_charts and traceability_model from tools/method/tooling.
 Use tools/method/static as a local Sphinx static asset path, with
 wide-layout.css in html_css_files. Enable sphinx_needs, sphinx_rtd_theme
-and status_charts. All tooling and assets are checked into the consuming
+and status_charts plus need_controls and method_version by default. All tooling and assets are checked into the consuming
 project.
+
+The ``need_controls`` extension adds **Collapse all** and **Expand all** on
+pages containing Sphinx-Needs objects. They hide/show only collapsible metadata,
+preserving titles, bodies and individual controls. Copied detail cards are excluded.
+Unsupported host markup disables the buttons with an explanation. Where STV
+already provides page controls, the shared script reuses that group.
+Include ``need_controls`` in ``extensions`` with the local tooling directory on
+``sys.path``; the extension registers its JavaScript and CSS automatically.
+Keep ``tools/method/static`` in ``html_static_path``. This requires no Node build
+or STV installation and works with local HTML files.
 
 Preserve any required project extensions or static assets. Start with
 the tested dependency pins. The default theme is Read the Docs with the
@@ -433,3 +443,7 @@ a non-instantiated starter. CR colors use gold for Draft, blue for
 Accepted and green for Implemented. Keep nine charts at the shared 80%
 linear display size with responsive rows. Tagged chart populations use
 distinct safe SVG filenames.
+
+The ``method_version`` extension renders the version immediately before Purpose
+and limits from the imported ``.method-package.json`` at build time. It tracks
+the manifest as a build dependency and rejects missing or invalid versions.

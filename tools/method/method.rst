@@ -1,6 +1,8 @@
 Minimal requirements and allocation model
 =========================================
 
+.. method-version::
+
 Purpose and limits
 ------------------
 
@@ -758,3 +760,11 @@ Charts read exported Needs, not document metadata, filenames or Git
 stashes. Existing projects without CRs remain valid and display the
 no-data message/zero total. Ordinary release instructions belong in
 maturity, not the CR register.
+
+Default page metadata controls
+------------------------------
+
+Enable the local ``need_controls`` Sphinx extension with the shared rendering
+setup described in ``documentation-layout.rst``. It supplies page-wide Collapse
+all and Expand all buttons for Need metadata by default, while preserving Need
+titles, bodies and individual disclosure controls.

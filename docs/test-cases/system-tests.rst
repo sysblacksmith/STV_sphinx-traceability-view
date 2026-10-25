@@ -3655,3 +3655,122 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
    unintended changes to other links, hover isolation or safe local transport.
    **Selector:** ``test_detail_metadata_controls_width_and_artifact_navigation``
    in ``docs/test-scripts/test_persistent_details.py`` (both protocol variants).
+
+.. test_case:: Reset exploration without losing current roots or cards
+   :id: STV_TC_SY_066
+   :status: accepted
+   :tags: change_increment, test_system
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_058, STV_SWR_066
+   :last_result: not_run
+
+   **Level/environment:** System integration.
+   Windows Firefox/geckodriver with file and loopback HTTP, pinned Sphinx host;
+   fixtures contain two views, multi-seeds, shared/cyclic paths and 12 project
+   entry Needs (also empty and three-entry variants).
+
+   **Procedure:** Expand several branches/pages, retain cards for now-hidden artifacts, change
+   the interactive seed, then activate Collapse all nodes by pointer and keyboard.
+   Return through old project pages, expand again and reset twice. Delay an old
+   layout completion until after reset and trigger a layout failure/retry.
+
+   **Expected:** Current seeds only, or project root plus first five eligible entries; zero
+   ordinary expanded groups and no restored old expansions. Node cap/hidden policy
+   holds, cards/order and second view are unchanged. Fresh fit uses actual dock
+   width; focus remains on the command; stale layout does not overwrite reset;
+   failed layout retains committed state until retry.
+
+.. test_case:: Export and save the visible graph and details offline
+   :id: STV_TC_SY_067
+   :status: accepted
+   :tags: change_increment, test_system
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_059, STV_SYS_011, STV_SWR_070, STV_SWR_071, STV_SWR_072
+   :last_result: not_run
+
+   **Level/environment:** System integration.
+   Windows Firefox on file/HTTP, network blocked, browser ask-location enabled;
+   two views, 200 visible graph nodes, clipped edges, long scrolled details,
+   folded metadata, local PNG/SVG/font resources and remote-media placeholders.
+   Record browser version, viewport/zoom, file hash and screenshot references.
+
+   **Procedure:** Pan/zoom and scroll graph/card/stack; export at wide and narrow widths with
+   part of workspace below the screen. Include visible hover on pointer activation,
+   then repeat by keyboard. Choose a folder/name, cancel another download, repeat
+   after a failed resource load and with delayed layout/fonts. Place the entire
+   workspace outside the screen and require a readable empty-crop refusal, then
+   scroll back and retry. Remove/rename the source
+   output before reopening the saved SVG with networking blocked. Inspect XML,
+   DOM resources, focus, live state and second view. Repeat at maximum default
+   card count and with independent configured font scales.
+
+   **Expected:** Snapshot crop matches the activation-time screen-visible graph/detail area,
+   including current scale, clipping/folding/scroll and applicable visible hover;
+   no toolbar or off-screen region is rendered. Reopened SVG parses and displays
+   without the source site/resources; no script/beacon or required external load.
+   Filename/location are reader-controlled by browser prompt, cancellation and
+   failures preserve state/cards/focus, and retry works. Check automatic-download
+   mode against guidance, not an invented mandatory app dialog. Browser render
+   comparison allows 1 CSS px geometry rounding; no missing visible text/media.
+   Save completion is never falsely claimed. Vector-editor compatibility is
+   explicitly not a pass criterion.
+
+.. test_case:: Configure and read both detail text presentations
+   :id: STV_TC_SY_068
+   :status: accepted
+   :tags: change_increment, test_system
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_060, STV_SWR_067, STV_SWR_068
+   :last_result: not_run
+
+   **Level/environment:** System integration.
+   Pinned Sphinx/Firefox file and HTTP host; headings, metadata, tables/code,
+   local media, long content, two graphs and a page with original rendered Needs.
+
+   **Procedure:** Build scale 1.0 baseline, defaults and independent tooltip 0.8/card 0.6;
+   measure computed text sizes before/after. Hover, open/reuse/close/reopen cards,
+   load delayed content/fonts, resize and use browser zoom and keyboard scrolling.
+   Exercise metadata controls and inspect original page and node text.
+
+   **Expected:** Defaults are 0.7 of baseline within 0.5 CSS px rounding; independent overrides
+   affect only their surface, with no accumulated scaling. All full content,
+   hierarchy, controls/focus and scrolling remain usable; host Need/node fonts
+   are unchanged. Invalid author values fail the build naming the setting.
+
+.. test_case:: Bulk-fold host attributes without changing embedded views
+   :id: STV_TC_SY_069
+   :status: accepted
+   :tags: change_increment, test_system
+   :basis: documented
+   :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_061, STV_SWR_069
+   :last_result: not_run
+
+   **Level/environment:** System integration.
+   Pinned Sphinx-Needs 8.2.0 host under Firefox file/HTTP; pages with mixed
+   fold states/types, off-screen Needs, no view, two views with open detail copies,
+   no Needs and Needs without collapsible metadata.
+
+   **Procedure:** Activate page Collapse all / Expand all repeatedly with pointer, Enter and
+   Space. Use individual toggles afterward. Repeat initialization. Observe body,
+   titles, hidden Needs, graphs, tooltip/card copies and ARIA/icons; include an
+   unsupported custom host control fixture and mixed rows inside one disclosure.
+   Verify individual native icon clicks synchronize ARIA after a bulk operation.
+
+   **Expected:** One group on pages with host Needs; all applicable host attribute sections
+   fold/unfold uniformly, including off-screen ones. Individual toggles still
+   work; body/title/ID remain and graphs/copied details do not change. No group
+   without host Needs; disabled explanatory controls without metadata. No duplicate
+   handlers, focus traps or invented handling for unsupported markup; failure
+   is readable. No network service or hidden-data exposure.

@@ -495,3 +495,50 @@ Persistent-details slice
    responsive scrolling, deferred races and unchanged hover/security/package flows.
 
 See :ref:`STV_ADR_010` and :doc:`internal-interfaces`. No dependency changes.
+
+CR015-018 delivery sequence
+----------------------------
+
+Authoritative input: accepted STV_SHR_058 through STV_SHR_061 and the owner Save As
+clarification in CR016. Internal requirements STV_SYS_011 and STV_SWR_066 through
+STV_SWR_072, ADR011, the component descriptions and internal interface contracts
+form the implementation handover. Preserve existing graph/detail security and
+capacity policies, with no new product dependency or runtime service.
+
+1. First vertical slice: in an isolated host fixture, build one local-media detail
+   resource record, capture a scrolled/clipped view with one card, emit an inert
+   foreignObject SVG and request a browser-managed download. Reopen it after the
+   source output is removed with networking blocked. Exit: STV_TC_SW_053/055 and
+   the corresponding STV_TC_SY_067 subset pass. Resolve export fidelity before
+   spreading feature wiring through the main UI; no screenshot-only substitute.
+2. Add the atomic collapse-all command in state/state.js and render/view.js;
+   invalidate old layouts, clear page caches, fit committed roots and retain cards.
+   Exit: STV_TC_SW_051 and STV_TC_SY_066.
+3. Add two font settings in MODEL/DIRECTIVE and additive BUNDLE presentation data;
+   implement baseline/once-only typography in inspect/content.js and presentation
+   wrappers. Exit: STV_TC_SW_052 and STV_TC_SY_068 including legacy bundle behavior.
+4. Add render/page-metadata.js and its page-only initialization/delivery, preserving
+   host individual handlers and excluding copied details. Exit: STV_TC_SW_054 and
+   STV_TC_SY_069 on pages with and without embedded graphs.
+5. Complete export resources, error/focus/lifecycle handling and responsive crop;
+   retain source media/licenses in normal packaging, include new runtime modules
+   in the existing esbuild output and rebuild checked-in stv.js/stv.css. No
+   change to the source-package allowlist is needed for colocated frontend files.
+6. Run the nine new cases plus existing navigation, detail transport/security,
+   installed-wheel and all relevant Python/Node regressions. Rebuild docs and run
+   strict graph/evidence/test coverage plus published diagram-link checks. Record
+   actual source/test identities and results without rewriting prior executions.
+
+Component locations: frontend/src/export owns snapshot.js/resources.js/download.js,
+colocated tests and README.rst; RENDER owns page-metadata.js and view controls;
+INSPECT owns presentation scaling; DETAIL_BUILD/BUNDLE own export resource records;
+MODEL/DIRECTIVE own config validation and HTML-page delivery. No user source is
+read beyond the output-root resource boundary. Incremental invalidation must
+include font config and resource digests. Packaging uses the existing pinned
+Python/frontend manifests and legal inventory.
+
+Browser runtime correctness, resource fidelity at the 200-node/default-card limits
+and download behavior require execution before implementation acceptance. Mobile
+smoke evidence is not mobile export qualification. Native vector-editor editing,
+full-graph export, mandatory application folder pickers, occurrence mode and
+new touch optimization are excluded. Concept checks do not constitute a release.

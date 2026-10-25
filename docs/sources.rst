@@ -378,3 +378,29 @@ yet." Numbering refers to the preceding readiness assessment. See
 The owner clarified that the release must not be labelled private and may
 become publicly visible later. Remaining security findings are accepted as
 nonblocking deferred work for v1.0.0. No visibility change is requested now.
+
+CR015-018 acceptance and Save As clarification, 2026-10-25
+----------------------------------------------------------
+
+Owner conversation (language-corrected): "I have reviewed the stakeholder
+requirements and the CRs and accept their content. Please proceed with
+concept-creation." This approves the four prepared CRs and STV_SHR_058-061, not
+new internal requirements, ADRs, implementation or a release. The earlier request
+and current-seed/visible-area/page-scope answers remain in the canonical CRs.
+
+Owner clarification: use browser-managed Save As with documented settings,
+including enabling a location prompt when automatic downloads otherwise select
+a default folder. This resolves the open location-interface question in CR016.
+The owner also requested working on main; the local branch was safely updated
+to origin/main at 8dbbe79 and all uncommitted concept work was retained.
+
+Round 15 acceptance delegation, 2026-10-25
+------------------------------------------
+
+The owner requested a side branch and commit of the prepared concept, followed
+by concept-review. Branch concept-cr015-018 and commit 2e1eace satisfy the first
+instruction. In the review clarification the owner explicitly selected:
+"Review and accept clean artifacts on my behalf." This delegates acceptance
+of the reviewed clean internal concept/case designs, not implementation or
+passing verification. :doc:`concept-reviews/round-15` records the assessed scope,
+corrections and decision. No unrelated historical artifact was bulk accepted.

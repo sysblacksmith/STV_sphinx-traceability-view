@@ -5,8 +5,10 @@
 # Keep the project license and its generated copy consistent across platforms.
 /LICENSE text eol=lf
 /src/sphinx_traceability_view/static/LICENSE.txt text eol=lf
+# Keep the PyPI description identical in source files and built metadata.
+/PYPI.rst text eol=lf
 # Release checksum lists must remain usable by GNU sha256sum after checkout.
 /docs/test-execution/1.0.0-candidate-2/SHA256SUMS.txt text eol=lf
 
-# Portable package hashes identify exact LF bytes on every platform.
-/tools/method/** text eol=lf
+# Imported package hashes identify exact upstream bytes on every platform.
+/tools/method/** -text

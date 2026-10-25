@@ -1,5 +1,8 @@
 import {mount} from './view.js';
+import {schedulePageMetadata} from './page-metadata.js';
 function start() {
+  schedulePageMetadata();
+  if(!document.querySelector('.stv-view'))return;
   const script=[...document.scripts].find(s=>s.hasAttribute('data-stv-root'));
   const base=new URL(script.dataset.stvRoot,document.baseURI);
   document.querySelectorAll('.stv-view').forEach(root=> {

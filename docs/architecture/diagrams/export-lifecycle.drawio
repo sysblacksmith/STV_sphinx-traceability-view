@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="export-lifecycle" name="SVG capture and download">
+    <mxGraphModel page="1" pageWidth="1240" pageHeight="700">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="diagram-padding" parent="1" vertex="1" style="shape=rect;fillColor=#ffffff;fillOpacity=0;strokeColor=none;pointerEvents=0;">
+          <mxGeometry x="0" y="0" width="1240" height="700" as="geometry" />
+        </mxCell>
+        <object id="idle" label="IDLE&#10;Save gated by readiness" link="requirements-software.html#STV_SWR_071" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;">
+            <mxGeometry x="40" y="100" width="300" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="captured" label="CAPTURED&#10;Detached frozen presentation" link="requirements-software.html#STV_SWR_070" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;">
+            <mxGeometry x="460" y="100" width="300" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="serializing" label="SERIALIZING&#10;XML parse / Blob creation" link="requirements-software.html#STV_SWR_071" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;">
+            <mxGeometry x="880" y="100" width="300" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="requested" label="DOWNLOAD REQUESTED&#10;Browser owns save / URL lease" link="requirements-software.html#STV_SWR_071" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ddeaf5;strokeColor=#425466;fontSize=16;">
+            <mxGeometry x="460" y="440" width="300" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="a" source="idle" target="captured" value="capture" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b" source="captured" target="serializing" value="activate" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c" source="captured" target="idle" value="cancel / blur" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="40" />
+              <mxPoint x="190" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d" source="serializing" target="requested" value="valid XML / request download" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e" source="serializing" target="idle" value="failure / announce; retry possible" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="330" />
+              <mxPoint x="190" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f" source="requested" target="idle" value="operation released&#10;URL lease tracked separately" edge="1" parent="1" style="edgeStyle=none;endArrow=block;html=0;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.2;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
