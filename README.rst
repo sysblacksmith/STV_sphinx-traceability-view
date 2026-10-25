@@ -29,17 +29,14 @@ staging are retained beside ``html`` under ``docs/_build/``; publish only the
 ``html`` directory. Rebuilding into an existing output with a direct Sphinx
 command does not provide this clean-publication guarantee.
 
-The configuration imports the shared model, status-chart extension and styling
-directly, and includes the live central method. It discovers the shared skill
-under an ancestor's ``-agents/skills`` or ``~/.agents/skills``. To select another
-location, set ``REQUIREMENTS_SKILL_DIR`` to the shared
-``reverse-engineer-requirements`` skill directory. Its repository-level
-``method.md`` must also be present.
+The configuration imports the versioned model, status-chart extension and styling
+from tools/method in this checkout. The Methods chapter includes its local RST
+method. No additional checkout, skill registration or environment variable is
+required. After building, validate the requirement graph::
 
-After building, run the shared validator (replace ``<shared-skill>`` with the
-selected reverse-engineer-requirements skill directory)::
+   python tools/method/tooling/validate_traceability.py docs/_build/html/needs.json --version <major.minor> --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/validate_traceability.py docs/_build/html/needs.json --version <major.minor> --repo-root . --require-test-coverage --csv docs/_build/traceability.csv --test-csv docs/_build/test-traceability.csv
+Replace <major.minor> with the documentation version.
 
 The internal specification includes conventional and channeled derivation paths,
 allocations and containment. Graph validation establishes structural checks;
@@ -52,16 +49,16 @@ Architecture diagrams
 Keep each .drawio source and its same-named .svg export together in
 ``docs/architecture/diagrams``. Edit the Draw.io source and export SVG only::
 
-   & <shared-skill>/scripts/export-architecture.ps1 -ProjectRoot .
+   & tools/method/tooling/export-architecture.ps1 -ProjectRoot .
 
-Use the selected shared skill checkout directly. No project-local symbolic
-links or administrator rights for link creation are required.
+Use the checked-in diagram tools. No symbolic links or administrator rights
+for link creation are required.
 
 The export script uses Draw.io and restores portable links from each paired
 Draw.io source. It accepts ``-ProjectRoot`` and ``-DiagramDirectory`` for other
 project layouts. To validate the published targets after building::
 
-   .\.venv\Scripts\python.exe <shared-skill>/scripts/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
+   .\.venv\Scripts\python.exe tools/method/tooling/normalize-diagram-links.py --diagram-dir docs/architecture/diagrams --published-dir docs/_build/html
 
 Sphinx embeds the linked SVGs as interactive objects.
 
@@ -161,11 +158,9 @@ reports remain in place, with evidence and any pending owner/release review.
 Development verification
 ------------------------
 
-``scripts/normalize-diagram-links.py`` is a relative symbolic link to the
-shared ``-agents`` diagram utility. Keep that repository alongside this
-checkout. Make utility changes explicitly in the shared repository rather
-than editing through this link. The documentation and release workflow also
-depend on the shared method, model and tools as described above.
+The diagram wrapper uses the versioned utility under tools/method/tooling.
+Documentation, graph validation and release checks use that same local package.
+Its neutral .method-package.json records the imported version and checksums.
 
 Verify development changes::
 
@@ -185,15 +180,13 @@ requirement links. Per-case execution records retain actual attempts, while
 occurrence-mode cases remain unexecuted. Review acceptance and recorded test
 results are independent.
 
-For full qualification, select the shared skill explicitly (the release
-runner's legacy fallback predates the directory rename)::
+For full qualification::
 
-   $env:REQUIREMENTS_SKILL_DIR = '<shared-skill>'
    .\.venv-implementation\Scripts\python.exe scripts/verify-release.py --record <new-record-name> --driver <provisioned-geckodriver>
    .\.venv-implementation\Scripts\python.exe docs/test-execution/import-case-results.py <new-record-name>
 
-Replace the placeholders with the shared ``reverse-engineer-requirements``
-directory, a unique execution name and the provisioned driver path. Retain failed
+Replace the placeholders with a unique execution name and the provisioned driver
+path. Retain failed
 attempts. Import results only after the runner has finished; then rebuild and
 validate the published requirement/test/execution graph. Inspect the generated
 cleanup proposal and approve exact paths before deleting disposable output.
@@ -277,3 +270,4 @@ checksummed candidate bytes and, for a public repository, build provenance.
 Neither workflow publishes a release. ``docs/ci-and-provenance.rst`` describes
 the check scope, verification commands and unapplied branch-protection proposal.
 Hosted runs and protection activation remain separate owner steps.
+

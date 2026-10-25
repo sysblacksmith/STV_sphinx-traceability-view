@@ -60,7 +60,7 @@ Semantic review and findings
   product model; no product schema/default or runtime code changes are needed.
 
 Finding **STV_REVIEW_015**: the documentation located the shared method using
-the obsolete ``#agents`` directory. Corrected its discovery to ``-agents``;
+the obsolete the historical tooling repository directory. Corrected its discovery to the historical tooling repository;
 the environment override remains available. Historical paths in execution logs
 remain accurate snapshots and are preserved.
 
@@ -117,3 +117,10 @@ method hash and assessed sources. Case design hashes exclude changing
 does not imply a changed test procedure. Other concept acceptance/history is
 preserved. Concept acceptance does not set results or requirement verification
 to passed; the subsequent release records supply actual outcomes.
+
+
+
+.. note::
+
+   Publication copy: private tooling locations are omitted. The unchanged original
+   is retained under engineering-history/pre-portable-method in the checkout.

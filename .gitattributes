@@ -7,3 +7,10 @@
 /src/sphinx_traceability_view/static/LICENSE.txt text eol=lf
 # Release checksum lists must remain usable by GNU sha256sum after checkout.
 /docs/test-execution/1.0.0-candidate-2/SHA256SUMS.txt text eol=lf
+
+# Portable package hashes identify exact LF bytes on every platform.
+/tools/method/** text eol=lf
+
+
+# Historical originals retain their original blob bytes in working checkouts.
+/engineering-history/pre-portable-method/** -text

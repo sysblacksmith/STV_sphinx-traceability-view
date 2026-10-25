@@ -48,6 +48,16 @@ def validate():
     run([sys.executable,'-m','pytest','-m','not browser','--ignore=docs/test-scripts/test_capacity.py',
          '--junitxml='+str(reports/'pytest.xml'),'-q'],env=env)
     run([sys.executable,'scripts/check-coverage.py','--strict'])
+    run([sys.executable,'scripts/check-method-package.py'])
+    run([sys.executable,'-m','sphinx','-E','-a','-W','--keep-going','-b','html','docs','docs/_build/html'])
+    from runpy import run_path
+    version=run_path(str(ROOT/'src/sphinx_traceability_view/_version.py'))['__version__']
+    run([sys.executable,'tools/method/tooling/validate_traceability.py','docs/_build/html/needs.json',
+         '--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--require-test-coverage',
+         '--csv',str(reports/'traceability.csv'),'--test-csv',str(reports/'test-traceability.csv')])
+    run([sys.executable,'tools/method/tooling/normalize-diagram-links.py',
+         '--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
+    run([sys.executable,'scripts/check-method-package.py','--published','docs/_build/html'])
     write_checksums(distributions)
     frozen=subprocess.check_output([sys.executable,'-m','pip','freeze'],text=True)
     (reports/'environment.txt').write_text(frozen,encoding='utf-8')
@@ -73,3 +83,4 @@ def main():
 
 
 if __name__=='__main__':main()
+

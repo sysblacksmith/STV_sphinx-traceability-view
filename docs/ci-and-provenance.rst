@@ -23,9 +23,9 @@ pinned action updates reviewable; they do not auto-merge.
 
 Validation scope is development assurance, not release acceptance. Browser and
 capacity cases remain in the separately authorized release qualification. The
-project's full engineering Sphinx build/traceability checks require the private
-shared method repository. CI does not fetch it or introduce a credential for it;
-those checks remain local using the established shared-method configuration.
+full engineering Sphinx build, graph validation and diagram-link checks use the
+versioned tools/method package in this checkout and run in CI without a private
+method checkout or credentials.
 
 Checksums and manual provenance
 --------------------------------------------------------------------------------
@@ -79,3 +79,19 @@ mutation is authorized by this preparation alone. PRSA-006 remains partially
 remediated until those hosted checks, actual provenance and chosen remote
 protections can be confirmed. See :need:`STV_PR_012` and
 :doc:`test-execution/prsa-006-fix/index` for local evidence and remaining limits.
+
+
+
+Public evidence presentation
+--------------------------------------------------------------------------------
+
+Canonical requirement, case and execution records remain visible in the website.
+Historical records are rendered with private tooling repository locations omitted.
+The adjusted publication sources have unchanged originals under
+engineering-history/pre-portable-method. Logs, inventories, screenshots and binary
+attachments remain unchanged in the engineering checkout. Historical raw downloads and execution
+screenshots are excluded from the website; source-copy downloads are disabled.
+This publication policy does not rewrite previous hashes, outcomes or acceptance.
+It does not remove any material from Git history or qualify a public repository
+visibility change. The final HTML tree and downloadable archives are scanned before
+publication; a private tooling reference fails the check.

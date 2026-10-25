@@ -59,7 +59,7 @@ def main():
     existing=index.read_text(encoding='utf-8') if index.exists() else 'Release test executions\n=======================\n\nHistorical candidate results; no deployment or release approval is implied.\n\n.. toctree::\n   :maxdepth: 2\n\n'
     index.write_text(existing+'   '+args.record+'/index\n',encoding='utf-8')
     wheel=ROOT/'dist'/f'sphinx_traceability_view-{version}-py3-none-any.whl'
-    shared=Path(os.environ.get('REQUIREMENTS_SKILL_DIR',ROOT.parent/'-agents/skills/reverse-engineer-requirements'))
+    method_tools=ROOT/'tools/method/tooling'
     env=dict(os.environ,STV_WHEEL=str(wheel),STV_GECKODRIVER=str(args.driver.resolve()),STV_SCREENSHOTS=str(record/'screenshots'),
              STV_CAPACITY_OUTPUT=str(ROOT/'docs/_build/release-benchmark'/args.record/'html'),
              STV_CAPACITY_METRICS=str(record/'capacity-browser.json'),STV_CONSUMER_RECORD=str(record/'consumer'))
@@ -100,7 +100,7 @@ def main():
               'benchmark_output':env['STV_CAPACITY_OUTPUT']}
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('coverage',[sys.executable,'scripts/check-coverage.py','--strict'])
-    run('diagram-links-source',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams'])
+    run('diagram-links-source',[sys.executable,str(method_tools/'normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams'])
     run('documentation',[sys.executable,'-m','sphinx','-b','html','-W','--keep-going','docs','docs/_build/html'])
     benchmark_dir=ROOT/'docs/_build/release-benchmark'/args.record
     if args.reuse_capacity_from:
@@ -146,8 +146,8 @@ def main():
     run('pytest',[sys.executable,'-m','pytest','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
     run('node-tests',['node','--test','--test-reporter=junit','frontend/src/*/tests/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
-    run('traceability',[sys.executable,str(shared/'scripts/validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--require-test-coverage','--test-csv',str(record/'test-traceability.csv'),'--csv',str(record/'traceability.csv')])
-    run('diagram-links-published',[sys.executable,str(shared/'scripts/normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
+    run('traceability',[sys.executable,str(method_tools/'validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--require-test-coverage','--test-csv',str(record/'test-traceability.csv'),'--csv',str(record/'traceability.csv')])
+    run('diagram-links-published',[sys.executable,str(method_tools/'normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
     cases=junit_cases(record/'pytest.xml')+junit_cases(record/'node.xml')
     for case in cases:
         if not case['requirements']:case['requirements']=__import__('re').findall(r'STV_(?:SYS|SWR)_\d+',case['test'])
@@ -185,3 +185,4 @@ def main():
 
 
 if __name__=='__main__':raise SystemExit(main())
+
