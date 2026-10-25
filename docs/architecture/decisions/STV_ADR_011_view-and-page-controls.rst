@@ -3,7 +3,8 @@
 STV_ADR_011: Separate exploration, page metadata and SVG capture
 ================================================================================
 
-Status: **proposed**. Date: 2026-10-25. Decision owner: project owner.
+Status: **accepted**. Date: 2026-10-25. Decision owner: project owner through
+delegated review in :doc:`../../concept-reviews/round-15`.
 Supersedes: none. Superseded by: none.
 
 Context
@@ -29,8 +30,11 @@ INSPECT scales computed unscaled typography once per clone; original host Need
 tables and ordinary graph node typography are unchanged. Page metadata controls
 belong to RENDER's separate page controller, delivered by DIRECTIVE even on pages
 without a view. They never traverse copied detail subtrees. Host per-Need click
-handlers remain authoritative: bulk commands activate only controls whose
-actual row visibility differs from the requested state, then synchronize ARIA.
+handlers remain authoritative for individual controls. Bulk commands activate
+only the currently displayed nested host icon when uniformly opposite rows need
+changing, normalize mixed rows explicitly, and synchronize rows/icons/ARIA.
+A synchronization-only post-host listener keeps later individual clicks accessible;
+load plus jQuery-ready gates prevent use before host handlers exist.
 
 EXPORT is a cohesive tenth software component contained in
 :need:`STV_SE_BROWSER`. Its inputs are the committed view presentation,

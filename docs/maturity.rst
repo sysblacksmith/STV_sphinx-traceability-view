@@ -6,7 +6,43 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
-CR015-018 concept increment, 2026-10-25
+CR015-018 accepted concept, 2026-10-25
+--------------------------------------------------------------------------------
+
+The owner requested the concept on a side branch and delegated acceptance of
+clean artifacts explicitly. Branch ``concept-cr015-018`` preserves creation
+commit ``2e1eace``. :doc:`concept-reviews/round-15` records the scoped review,
+five resolved findings, semantic paths, diagram assessment and exact acceptance
+inventory. The source identities are in
+``docs/concept-reviews/round-15-inventory.json``. Earlier creation-stage pending
+statements below are historical, superseded only for this reviewed increment.
+
+Accepted internal revisions: STV_SYS_011, STV_SWR_066 through STV_SWR_072,
+DIRECTIVE/MODEL/DETAIL_BUILD/BUNDLE/STATE/RENDER/INSPECT/EXPORT, ADR011 and
+STV_TC_SY_066 through STV_TC_SY_069 plus STV_TC_SW_051 through STV_TC_SW_055.
+This is 25 modeled artifacts and one ADR. Ordinary architecture/interface/plan
+and picture acceptance is recorded in the inventory without invented statuses.
+Existing stakeholder acceptance is preserved; CRs remain accepted, not implemented.
+
+The host-icon/ARIA/mixed-state contract, host readiness gate, capture font/resource
+readiness and zero-area failure policy were tightened. The metadata diagram was
+re-exported with source-owned label padding; review round 14 was restored to the
+review index. No current acceptance blocker remains after the final checks.
+Product implementation is not authorized by review acceptance and is unchanged.
+New cases remain not_run with no execution records; requirement verification
+stays not_assessed. Deferred occurrence mode, full-graph export, universal vector
+editor support and mobile/touch qualification retain their existing boundaries.
+
+Validation: strict fresh Sphinx/publication build, full graph/evidence validation
+with --require-test-coverage and both CSV exports, published diagram targets,
+canonical acceptance/result-state assertions and git diff --check passed. All six current diagrams and three containing HTML pages were rendered
+for visual review; the corrected metadata picture was rechecked separately.
+Native SVG feasibility remains distinct from unexecuted implementation tests.
+Implementation handover is :doc:`implementation-plan` and
+:doc:`verification-plan`; execute the risky offline export slice first.
+
+
+Creation history: CR015-018, 2026-10-25
 --------------------------------------------------------------------------------
 
 The owner explicitly reviewed and accepted :need:`STV_CR_015` through

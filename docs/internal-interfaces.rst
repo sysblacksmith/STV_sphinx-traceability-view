@@ -427,19 +427,40 @@ no view roots exist it returns without dereferencing a missing script. Place one
 labelled control group before the first host Need, with real button elements.
 No Needs means no group; Needs without disclosures show disabled buttons with
 an explanation. Discover host disclosure controls only in their closest owning
-Need table and derive target rows using the host's encoded class list. Invoke
-the existing per-Need control only if target rows differ from the requested
-state; synchronize aria-expanded/controls and icon visibility after the host
-handler. Do not attach a second individual-toggle implementation to the same
-host control. Unsupported host markup produces a readable unavailable notice,
-not a guessed global selector or partial success. Initialization enables bulk actions after the window load event, when host
-metadata handler initialization has completed; copied INSPECT controls keep their separate existing lifecycle.
+Need table and derive target rows using the host's encoded class list. The pinned Sphinx-Needs 8.2.0 handler is attached to the nested
+``span.needs.collapsed`` and ``span.needs.visible`` icons, not their
+``.needs_collapse`` wrapper. For uniformly folded/open rows whose state differs
+from the requested target, activate the currently displayed nested icon once,
+then reconcile actual rows/icons/ARIA. For already matching rows do nothing.
+For mixed rows within one disclosure normalize the identified rows and its two
+icons directly to the target instead of inverting their mixed states.
+A shared synchronization routine derives aria-expanded, aria-controls and label
+from row visibility. A post-host delegated icon-click listener invokes only that
+synchronization routine, never a second toggle; this keeps ARIA correct after
+subsequent individual native clicks. Give the wrapper role/button tabindex and
+map Enter/Space to the currently displayed host icon once, with preventDefault.
+Bulk buttons remain real native buttons. Do not attach a competing individual
+visibility-toggle handler to the host wrapper.
+
+Enable page controls only after window load and a registered jQuery ready
+callback, including already-complete document cases; host collapse handlers are
+then installed. Missing pinned host prerequisites or unsupported encodings leave
+a readable disabled group, not a partial/global toggle. Custom markup without
+collapsible metadata retains the defined no-attributes explanation. Copied
+INSPECT controls retain their separate existing initialization and lifecycle.
 
 Visible-area capture and resource contract
 -------------------------------------------
 
 ``EXPORT.capture({root, workspace, viewport, revision, resources, inspectRegions})``
-returns an immutable snapshot descriptor or a typed capture error. RENDER exposes
+returns an immutable snapshot descriptor or a typed capture error. A crop with
+zero width/height produces "No visible view area to export" and no download;
+never fabricate a minimum-size canvas or scroll the page automatically. Capture
+requires completed local resource registration and document.fonts readiness.
+Pending resources/fonts expose a retryable preparation state; failed required
+resources/fonts expose an error while graph interaction remains available.
+Capture does not asynchronously wait for fonts and then read newer live DOM.
+RENDER exposes
 only its last committed presentation. Busy/failed layout blocks export with a
 retry instruction rather than mixing pending geometry and committed DOM.
 

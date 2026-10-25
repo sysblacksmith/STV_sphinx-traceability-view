@@ -393,3 +393,14 @@ including enabling a location prompt when automatic downloads otherwise select
 a default folder. This resolves the open location-interface question in CR016.
 The owner also requested working on main; the local branch was safely updated
 to origin/main at 8dbbe79 and all uncommitted concept work was retained.
+
+Round 15 acceptance delegation, 2026-10-25
+------------------------------------------
+
+The owner requested a side branch and commit of the prepared concept, followed
+by concept-review. Branch concept-cr015-018 and commit 2e1eace satisfy the first
+instruction. In the review clarification the owner explicitly selected:
+"Review and accept clean artifacts on my behalf." This delegates acceptance
+of the reviewed clean internal concept/case designs, not implementation or
+passing verification. :doc:`concept-reviews/round-15` records the assessed scope,
+corrections and decision. No unrelated historical artifact was bulk accepted.

@@ -3658,7 +3658,7 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
 
 .. test_case:: Reset exploration without losing current roots or cards
    :id: STV_TC_SY_066
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_system
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -3685,7 +3685,7 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
 
 .. test_case:: Export and save the visible graph and details offline
    :id: STV_TC_SY_067
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_system
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -3703,7 +3703,9 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
    **Procedure:** Pan/zoom and scroll graph/card/stack; export at wide and narrow widths with
    part of workspace below the screen. Include visible hover on pointer activation,
    then repeat by keyboard. Choose a folder/name, cancel another download, repeat
-   after a failed resource load and with delayed layout. Remove/rename the source
+   after a failed resource load and with delayed layout/fonts. Place the entire
+   workspace outside the screen and require a readable empty-crop refusal, then
+   scroll back and retry. Remove/rename the source
    output before reopening the saved SVG with networking blocked. Inspect XML,
    DOM resources, focus, live state and second view. Repeat at maximum default
    card count and with independent configured font scales.
@@ -3721,7 +3723,7 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
 
 .. test_case:: Configure and read both detail text presentations
    :id: STV_TC_SY_068
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_system
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -3746,7 +3748,7 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
 
 .. test_case:: Bulk-fold host attributes without changing embedded views
    :id: STV_TC_SY_069
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_system
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -3763,7 +3765,8 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
    **Procedure:** Activate page Collapse all / Expand all repeatedly with pointer, Enter and
    Space. Use individual toggles afterward. Repeat initialization. Observe body,
    titles, hidden Needs, graphs, tooltip/card copies and ARIA/icons; include an
-   unsupported custom host control fixture.
+   unsupported custom host control fixture and mixed rows inside one disclosure.
+   Verify individual native icon clicks synchronize ARIA after a bulk operation.
 
    **Expected:** One group on pages with host Needs; all applicable host attribute sections
    fold/unfold uniformly, including off-screen ones. Individual toggles still

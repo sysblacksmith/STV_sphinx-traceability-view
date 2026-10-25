@@ -2216,7 +2216,7 @@ STV_TC_SW_050: Persistent limit configuration validation
 
 .. test_case:: Reset state, page caches and stale layout ownership
    :id: STV_TC_SW_051
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_software
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -2240,7 +2240,7 @@ STV_TC_SW_050: Persistent limit configuration validation
 
 .. test_case:: Validate font configuration and avoid compounded scaling
    :id: STV_TC_SW_052
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_software
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -2263,7 +2263,7 @@ STV_TC_SW_050: Persistent limit configuration validation
 
 .. test_case:: Snapshot XML, clip geometry and download lifecycle
    :id: STV_TC_SW_053
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_software
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -2279,17 +2279,20 @@ STV_TC_SW_050: Persistent limit configuration validation
    **Procedure:** Capture nested clips, negative scene origins, D3 transform, partially visible
    cards/text, pseudo-elements, namespaces and non-ASCII/markup-like titles.
    Mutate live presentation after capture. Exercise pointer cancel, keyboard,
-   busy layout, serializer exceptions, repeated downloads, timer and pagehide.
+   busy layout, zero-area crop, pending/failed fonts/resources, serializer
+   exceptions, repeated downloads, timer and pagehide.
 
    **Expected:** Immutable coherent descriptor, exact crop/scroll transforms, parseable inert
    XML with escaped content and internal IDREFs; no live mutation or graph data.
    One in-flight job per view, safe bounded .svg filename, correct MIME, temporary
    nodes removed, and URL leases revoked on expiry/pagehide (immediately on error).
-   No premature URL revocation or success claim about disk completion.
+   No premature URL revocation or success claim about disk completion. Empty
+   crops fail readably without download/page scrolling; pending/failed readiness
+   never captures a later live revision implicitly.
 
 .. test_case:: Scope bulk metadata commands and preserve individual host behavior
    :id: STV_TC_SW_054
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_software
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst
@@ -2304,16 +2307,20 @@ STV_TC_SW_050: Persistent limit configuration validation
 
    **Procedure:** Initialize twice, bulk-set both states twice, individually toggle, remove a
    table, add view/card copies before initialization and use pages without roots
-   or without metadata; introduce unmatched/unsupported control encodings.
+   or without metadata; introduce unmatched/unsupported control encodings and
+   mixed rows within one disclosure. Test initialization both before and after
+   window load/jQuery readiness, wrapper keyboard forwarding and native icon clicks.
 
    **Expected:** Idempotent group/handlers, closest-table row ownership, explicit state setting
    through existing host handlers with synchronized ARIA/icons, no toggling of
    copied STV content and no hiding title/body. Disabled/no-group policy and
-   explanatory failure match the interface contract.
+   explanatory failure match the interface contract. Exactly one native icon
+   handler runs per activation; mixed rows become uniform, and individual clicks
+   update row/icon state and ARIA without double toggles.
 
 .. test_case:: Embed only safe output-local export resources
    :id: STV_TC_SW_055
-   :status: draft
+   :status: accepted
    :tags: change_increment, test_software
    :basis: documented
    :evidence: docs/internal-interfaces.rst; docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst

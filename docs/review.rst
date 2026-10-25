@@ -368,5 +368,6 @@ Retained scope includes Firefox desktop, offline/static hosting, independent
 views, current seed identities, hidden exclusions, node capacity and persistent
 card lifecycle. Full graph export, mandatory filesystem pickers, vector-editor
 portability and new mobile/touch qualification are excluded. Product execution
-and formal concept review/acceptance remain separate gates. Historical accepted
+remains separate; :doc:`concept-reviews/round-15` records subsequent delegated
+concept review/acceptance. Historical accepted
 reviews and hashes are not rewritten for these new revisions.

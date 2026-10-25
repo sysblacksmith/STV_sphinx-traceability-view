@@ -1305,7 +1305,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Reset view-local exploration to current roots
    :id: STV_SWR_066
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_015_collapse-all-nodes.rst; docs/internal-interfaces.rst
@@ -1333,7 +1333,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Validate and serialize independent detail font scales
    :id: STV_SWR_067
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
@@ -1359,7 +1359,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Scale copied detail typography once per presentation
    :id: STV_SWR_068
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_017_configurable-detail-font-size.rst; docs/internal-interfaces.rst
@@ -1385,7 +1385,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Control rendered page metadata through scoped bulk actions
    :id: STV_SWR_069
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_018_page-wide-need-attribute-controls.rst; docs/internal-interfaces.rst
@@ -1414,7 +1414,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Capture a clipped inert visible-area SVG snapshot
    :id: STV_SWR_070
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
@@ -1437,7 +1437,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Save and release SVG downloads without changing exploration
    :id: STV_SWR_071
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst
@@ -1460,7 +1460,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. swr:: Bundle safe export resources for offline snapshots
    :id: STV_SWR_072
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst; docs/internal-interfaces.rst

@@ -5,7 +5,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Extension lifecycle and directives
    :id: STV_SWE_DIRECTIVE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -31,7 +31,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Host model normalization
    :id: STV_SWE_MODEL
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -77,7 +77,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Rendered detail extraction
    :id: STV_SWE_DETAIL_BUILD
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -100,7 +100,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Static bundle emission
    :id: STV_SWE_BUNDLE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -127,7 +127,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Exploration state engine
    :id: STV_SWE_STATE
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -173,7 +173,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Accessible view and viewport
    :id: STV_SWE_RENDER
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -188,7 +188,8 @@ Software module responsibilities and containment within the product system eleme
 
    **Implementation:** ``index.js``; ``view.js``; ``groups.js``; ``seeds.js``; ``edge-viewport.js``; ``stv.css``.
 
-   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``; ``tests/edge-viewport.test.js``.
+   **Unit tests:** ``tests/groups.test.js``; ``tests/seeds.test.js``; ``tests/edge-viewport.test.js``;
+   ``tests/page-metadata.test.js``.
 
    **Boundary:** ``README.rst``.
 
@@ -196,7 +197,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Hover, persistent details and original links
    :id: STV_SWE_INSPECT
-   :status: draft
+   :status: accepted
    :tags: release_initial
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst
@@ -213,7 +214,8 @@ Software module responsibilities and containment within the product system eleme
    **Implementation:** ``inspect.js`` (hover), ``content.js`` (shared safe content),
    ``collection.js`` (bounded identities), ``persistent.js`` (persistent DOM/focus).
 
-   **Unit tests:** ``tests/inspect.test.js`` and ``tests/collection.test.js``.
+   **Unit tests:** ``tests/inspect.test.js``; ``tests/collection.test.js``;
+   ``tests/typography.test.js``.
 
    **Boundary:** ``README.rst``.
 
@@ -221,7 +223,7 @@ Software module responsibilities and containment within the product system eleme
 
 .. swe:: Visible-area SVG snapshot and download
    :id: STV_SWE_EXPORT
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: documented
    :evidence: docs/architecture/decisions/STV_ADR_011_view-and-page-controls.rst

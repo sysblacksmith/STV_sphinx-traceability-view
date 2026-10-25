@@ -171,7 +171,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
 
 .. sysr:: Deliver a standalone visible-area SVG without a runtime service
    :id: STV_SYS_011
-   :status: draft
+   :status: accepted
    :tags: change_increment
    :basis: owner
    :evidence: docs/change-requests/STV_CR_016_save-current-view-as-svg.rst
