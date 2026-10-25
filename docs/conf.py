@@ -21,7 +21,7 @@ traceability_model = import_module('traceability_model')
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 html_copy_source = False
 html_show_sourcelink = False
-extensions = ["_publication", "sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts", "sphinx_traceability_view"]
+extensions = ["_publication", "sphinx_needs", "sphinx_rtd_theme", "myst_parser", "status_charts", "need_controls", "sphinx_traceability_view"]
 needs_types = traceability_model.NEEDS_TYPES
 needs_links = traceability_model.NEEDS_LINKS
 needs_fields = traceability_model.NEEDS_FIELDS

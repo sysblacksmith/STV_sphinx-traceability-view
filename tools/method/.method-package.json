@@ -1,11 +1,14 @@
 {
   "files": {
     "LICENSE.txt": "1f4ba72cd31210ed627d0b2dbaba4c6a61c9263cc9c904dbf44baddd9b18fa0a",
-    "documentation-layout.rst": "ad5c765e800053db315c953fcaad9fef6dd87904a4858325ae2bc95411f98838",
-    "method.rst": "d8459b017992102f3b45e3ca84fc16fb8d668a2157a7b4a1fe1312cb856f1e05",
+    "documentation-layout.rst": "caca29ef64a01fefe2faa583c7950bacccd63eba1051b216a90aa770779dce36",
+    "method.rst": "317d11d5c966c1fca1d31ee5450757595b6e753a691930a0fcc8eac38eaa8b1e",
     "requirements-docs.txt": "63db95a978fa78aaf934c043b89cd590bda783d1b99e76f1e41f54a4a152dd07",
+    "static/need-controls.css": "ff951a6d21d26aedbfcb133dc381565180053605ec057bd6ec4dfa1e01feeb5e",
+    "static/need-controls.js": "758ea3f06169c35599553ed279c0345e46e6547a2036097f75761b769b211550",
     "static/wide-layout.css": "1beecf533115b3a7be7ed4d5118b352842c841f94d2f1bff274a96ae1e90485c",
     "tooling/export-architecture.ps1": "4296f0ce097bc8805bfc4d3c950e83238f2aa905c0a2e9bea87f6854c73ba62c",
+    "tooling/need_controls.py": "e8979fc48b59822e93348c911d2b578e0f02f598b7101d6ffe5849dcb03a5c2b",
     "tooling/normalize-diagram-links.py": "44cc761a06e2ca8a3d3efcafb0d94b24f475c791cde31ae2c0503aae603dfbcb",
     "tooling/status_charts.py": "18d2d85a4c8f057b6334b970928b66ac7d0d2a1cf36db8e41b23da09c3a8fc74",
     "tooling/traceability_model.py": "bb6a18b449285f6bdd245cda89447f0744cfd840c8bd762e32e8c8133c70708c",
@@ -13,5 +16,5 @@
   },
   "package": "engineering-method",
   "schema": 1,
-  "version": "1.0.0"
+  "version": "1.1.1"
 }
