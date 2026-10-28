@@ -1,0 +1,14 @@
+{
+  "reason": "Preserve the existing main environments whose Python home was formerly under disposable build output.",
+  "package_sha256": "dce409744b088f94c6e37ba41f8100c384c27e029e843237364c602d30d475e5",
+  "environments": [
+    {
+      "environment": ".venv",
+      "base": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\.base-python\\tools"
+    },
+    {
+      "environment": ".venv-implementation",
+      "base": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\.base-python\\tools"
+    }
+  ]
+}

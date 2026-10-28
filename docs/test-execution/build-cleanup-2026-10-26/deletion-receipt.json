@@ -1,0 +1,959 @@
+﻿{
+    "RecordedAt":  "2026-10-25T23:14:41.1047168Z",
+    "Scope":  "All direct children of docs/_build except html; owner authorized after evidence preservation.",
+    "ReparsePolicy":  "Only non-redirecting Microsoft cloud tags accepted; junctions, symlinks and unknown tags rejected before deletion.",
+    "Results":  [
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\browser",
+                        "Bytes":  829565,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\browser-tools",
+                        "Bytes":  23957031,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci",
+                        "Bytes":  2040987,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci-runtime",
+                        "Bytes":  6753347,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci-tools",
+                        "Bytes":  6432768,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-feasibility",
+                        "Bytes":  38785929,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-review-15",
+                        "Bytes":  141740950,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-model-fixture",
+                        "Bytes":  4997512,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-visual",
+                        "Bytes":  826880,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-dist",
+                        "Bytes":  2031585,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-dist",
+                        "Bytes":  2037441,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-visual",
+                        "Bytes":  1053807,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018",
+                        "Bytes":  57843657,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\elk-audit",
+                        "Bytes":  28161356,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\export-capacity-1.1.0",
+                        "Bytes":  745206,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\export-capacity-1.1.0-fixed",
+                        "Bytes":  58346330,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification",
+                        "Bytes":  2250239,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\getting-started-check",
+                        "Bytes":  1433262,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\legacy-envs-prsa003",
+                        "Bytes":  504849145,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist",
+                        "Bytes":  3158918,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist-2",
+                        "Bytes":  3165482,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist-3",
+                        "Bytes":  3176842,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr013-dist",
+                        "Bytes":  2025953,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr013-poc",
+                        "Bytes":  6763261,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr014-dist",
+                        "Bytes":  2031808,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-dist",
+                        "Bytes":  2039117,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr3-clean-checkout",
+                        "Bytes":  111399084,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\private-release-runtime310",
+                        "Bytes":  102976965,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa-002-html",
+                        "Bytes":  58109159,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa003-dist",
+                        "Bytes":  3265662,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa004-dist",
+                        "Bytes":  2019698,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pypi-description-preparation",
+                        "Bytes":  230823163,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-post-review",
+                        "Bytes":  92034,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310",
+                        "Bytes":  315822528,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html",
+                        "Bytes":  6723804,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003",
+                        "Bytes":  102945082,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-source",
+                        "Bytes":  1042,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\shared-layout-check",
+                        "Bytes":  15127621,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\tooling",
+                        "Bytes":  60271107,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse",
+                        "Bytes":  26498795,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\agents-need-controls-browser.log",
+                        "Bytes":  3792,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\agents-need-controls-build.log",
+                        "Bytes":  3482,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\check-cr-migration.py",
+                        "Bytes":  2523,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\check-metrics-view.py",
+                        "Bytes":  4133,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-proposal.json",
+                        "Bytes":  24551,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-proposal.md",
+                        "Bytes":  13928,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-result.json",
+                        "Bytes":  24277,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-size-inventory.json",
+                        "Bytes":  25183,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-commit.txt",
+                        "Bytes":  381,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-2.log",
+                        "Bytes":  184558,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-final.log",
+                        "Bytes":  184558,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-verified.log",
+                        "Bytes":  184558,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build.log",
+                        "Bytes":  208670,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-test-traceability.csv",
+                        "Bytes":  1044786,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-traceability.csv",
+                        "Bytes":  13057,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-completion-build.log",
+                        "Bytes":  153738,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-build-recheck.log",
+                        "Bytes":  147780,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-build.log",
+                        "Bytes":  148350,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-test-coverage.csv",
+                        "Bytes":  800277,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-traceability.csv",
+                        "Bytes":  12212,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-traceability.log",
+                        "Bytes":  230,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-visual.log",
+                        "Bytes":  202,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-diagram-export.log",
+                        "Bytes":  326,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-node.log",
+                        "Bytes":  0,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-node.xml",
+                        "Bytes":  8411,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-unit.log",
+                        "Bytes":  204,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-completion-build.log",
+                        "Bytes":  165278,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-concept-recheck.log",
+                        "Bytes":  159210,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-concept.log",
+                        "Bytes":  160202,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-config-first.log",
+                        "Bytes":  204,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-diagrams-recheck.log",
+                        "Bytes":  434,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-diagrams.log",
+                        "Bytes":  434,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-implemented-build.log",
+                        "Bytes":  163914,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-map.py",
+                        "Bytes":  1648,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-node-first.xml",
+                        "Bytes":  8915,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-record.py",
+                        "Bytes":  6088,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-test-coverage.csv",
+                        "Bytes":  803273,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-traceability.csv",
+                        "Bytes":  13057,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-traceability.log",
+                        "Bytes":  230,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-visual.log",
+                        "Bytes":  202,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-browser.log",
+                        "Bytes":  258,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-browser.xml",
+                        "Bytes":  14537,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-build.log",
+                        "Bytes":  44632,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-build.log",
+                        "Bytes":  44970,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-test-traceability.csv",
+                        "Bytes":  1045527,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-traceability.csv",
+                        "Bytes":  13908,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-delivery.log",
+                        "Bytes":  228,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-delivery.xml",
+                        "Bytes":  8629,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-docs.log",
+                        "Bytes":  45622,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-export-final.xml",
+                        "Bytes":  1256,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-browser.log",
+                        "Bytes":  224,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-browser.xml",
+                        "Bytes":  2375,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-node.log",
+                        "Bytes":  7990,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-package.xml",
+                        "Bytes":  463,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-python.log",
+                        "Bytes":  418,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-python.xml",
+                        "Bytes":  22517,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-scope.log",
+                        "Bytes":  226,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-scope.xml",
+                        "Bytes":  3161,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final.log",
+                        "Bytes":  224,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final.xml",
+                        "Bytes":  2375,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-package.xml",
+                        "Bytes":  463,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-page-final.xml",
+                        "Bytes":  1146,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-python.log",
+                        "Bytes":  418,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-resource-final.xml",
+                        "Bytes":  4698,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-test-traceability.csv",
+                        "Bytes":  1045527,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-traceability.csv",
+                        "Bytes":  13908,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\documentation-1.1.0-verification.json",
+                        "Bytes":  305,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification-native.log",
+                        "Bytes":  9556,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification-native.py",
+                        "Bytes":  1878,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\finish-cr-need-refactor.py",
+                        "Bytes":  2398,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\github-publication-admin.py",
+                        "Bytes":  2335,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.1.0-import.log",
+                        "Bytes":  46074,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.1.1-import.log",
+                        "Bytes":  45622,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.2.0-import.log",
+                        "Bytes":  45622,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-version-package.log",
+                        "Bytes":  3696,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-navigation-build.log",
+                        "Bytes":  131798,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-template-update-2.log",
+                        "Bytes":  184252,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-template-update.log",
+                        "Bytes":  183696,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-test-traceability.csv",
+                        "Bytes":  1044786,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-traceability.csv",
+                        "Bytes":  13057,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-view-check.json",
+                        "Bytes":  2378,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pages-commit-message.txt",
+                        "Bytes":  476,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr014-completion-build.log",
+                        "Bytes":  158348,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-build.log",
+                        "Bytes":  168546,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-completion-build.log",
+                        "Bytes":  170978,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-final-publication.log",
+                        "Bytes":  170978,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-pane-build.log",
+                        "Bytes":  171522,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-pane-completion.log",
+                        "Bytes":  172266,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-record.py",
+                        "Bytes":  5920,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-tickets-1500.png",
+                        "Bytes":  285267,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-tickets-600.png",
+                        "Bytes":  182110,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-title-build.log",
+                        "Bytes":  131628,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\project-metrics-1500.png",
+                        "Bytes":  244484,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\project-metrics-600.png",
+                        "Bytes":  217757,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pypi-1.1.0-verification.json",
+                        "Bytes":  424,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\refactor-change-request-needs.py",
+                        "Bytes":  12261,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-completion.json",
+                        "Bytes":  1345,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-publication.json",
+                        "Bytes":  1279,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-state.json",
+                        "Bytes":  1587,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-outcome-commit.txt",
+                        "Bytes":  291,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-pages-failure.json",
+                        "Bytes":  7029,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-preparation-history.py",
+                        "Bytes":  3437,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-publication.json",
+                        "Bytes":  1418,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-pypi-failure.json",
+                        "Bytes":  7007,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-whitespace.log",
+                        "Bytes":  0,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\review-commit.txt",
+                        "Bytes":  473,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-build.log",
+                        "Bytes":  45618,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-test-traceability.csv",
+                        "Bytes":  1045527,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-traceability.csv",
+                        "Bytes":  13908,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-metrics-build.log",
+                        "Bytes":  184558,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-navigation-build.log",
+                        "Bytes":  131628,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-structure-shared-build.log",
+                        "Bytes":  131798,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-category-id-build.log",
+                        "Bytes":  139934,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-id-migration-build.log",
+                        "Bytes":  139934,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-map.json",
+                        "Bytes":  39748,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-traceability.csv",
+                        "Bytes":  217490,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\traceability.csv",
+                        "Bytes":  11498,
+                        "Removed":  true,
+                        "Error":  null
+                    },
+                    {
+                        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\update-scope-metrics.py",
+                        "Bytes":  10427,
+                        "Removed":  true,
+                        "Error":  null
+                    }
+                ],
+    "RemovedBytes":  1956503430,
+    "Remaining":  [
+                      "html"
+                  ]
+}

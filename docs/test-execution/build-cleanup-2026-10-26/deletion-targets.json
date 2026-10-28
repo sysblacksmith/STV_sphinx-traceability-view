@@ -1,0 +1,792 @@
+﻿[
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\browser",
+        "Directory":  true,
+        "Bytes":  829565
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\browser-tools",
+        "Directory":  true,
+        "Bytes":  23957031
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci",
+        "Directory":  true,
+        "Bytes":  2040987
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci-runtime",
+        "Directory":  true,
+        "Bytes":  6753347
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\ci-tools",
+        "Directory":  true,
+        "Bytes":  6432768
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-feasibility",
+        "Directory":  true,
+        "Bytes":  38785929
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-review-15",
+        "Directory":  true,
+        "Bytes":  141740950
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-model-fixture",
+        "Directory":  true,
+        "Bytes":  4997512
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-visual",
+        "Directory":  true,
+        "Bytes":  826880
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-dist",
+        "Directory":  true,
+        "Bytes":  2031585
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-dist",
+        "Directory":  true,
+        "Bytes":  2037441
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-visual",
+        "Directory":  true,
+        "Bytes":  1053807
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018",
+        "Directory":  true,
+        "Bytes":  57843657
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\elk-audit",
+        "Directory":  true,
+        "Bytes":  28161356
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\export-capacity-1.1.0",
+        "Directory":  true,
+        "Bytes":  745206
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\export-capacity-1.1.0-fixed",
+        "Directory":  true,
+        "Bytes":  58346330
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification",
+        "Directory":  true,
+        "Bytes":  2250239
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\getting-started-check",
+        "Directory":  true,
+        "Bytes":  1433262
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\legacy-envs-prsa003",
+        "Directory":  true,
+        "Bytes":  504849145
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist",
+        "Directory":  true,
+        "Bytes":  3158918
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist-2",
+        "Directory":  true,
+        "Bytes":  3165482
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\maintenance-dist-3",
+        "Directory":  true,
+        "Bytes":  3176842
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr013-dist",
+        "Directory":  true,
+        "Bytes":  2025953
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr013-poc",
+        "Directory":  true,
+        "Bytes":  6763261
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr014-dist",
+        "Directory":  true,
+        "Bytes":  2031808
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-dist",
+        "Directory":  true,
+        "Bytes":  2039117
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr3-clean-checkout",
+        "Directory":  true,
+        "Bytes":  111399084
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\private-release-runtime310",
+        "Directory":  true,
+        "Bytes":  102976965
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa-002-html",
+        "Directory":  true,
+        "Bytes":  58109159
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa003-dist",
+        "Directory":  true,
+        "Bytes":  3265662
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\prsa004-dist",
+        "Directory":  true,
+        "Bytes":  2019698
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pypi-description-preparation",
+        "Directory":  true,
+        "Bytes":  230823163
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-post-review",
+        "Directory":  true,
+        "Bytes":  92034
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310",
+        "Directory":  true,
+        "Bytes":  315822528
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-html",
+        "Directory":  true,
+        "Bytes":  6723804
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-prsa003",
+        "Directory":  true,
+        "Bytes":  102945082
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\runtime310-source",
+        "Directory":  true,
+        "Bytes":  1042
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\shared-layout-check",
+        "Directory":  true,
+        "Bytes":  15127621
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\tooling",
+        "Directory":  true,
+        "Bytes":  60271107
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse",
+        "Directory":  true,
+        "Bytes":  26498795
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\agents-need-controls-browser.log",
+        "Directory":  false,
+        "Bytes":  3792
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\agents-need-controls-build.log",
+        "Directory":  false,
+        "Bytes":  3482
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\check-cr-migration.py",
+        "Directory":  false,
+        "Bytes":  2523
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\check-metrics-view.py",
+        "Directory":  false,
+        "Bytes":  4133
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-proposal.json",
+        "Directory":  false,
+        "Bytes":  24551
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-proposal.md",
+        "Directory":  false,
+        "Bytes":  13928
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-result.json",
+        "Directory":  false,
+        "Bytes":  24277
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cleanup-size-inventory.json",
+        "Directory":  false,
+        "Bytes":  25183
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\concept-commit.txt",
+        "Directory":  false,
+        "Bytes":  381
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-2.log",
+        "Directory":  false,
+        "Bytes":  184558
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-final.log",
+        "Directory":  false,
+        "Bytes":  184558
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build-verified.log",
+        "Directory":  false,
+        "Bytes":  184558
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-build.log",
+        "Directory":  false,
+        "Bytes":  208670
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  1044786
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr-needs-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13057
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-completion-build.log",
+        "Directory":  false,
+        "Bytes":  153738
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-build-recheck.log",
+        "Directory":  false,
+        "Bytes":  147780
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-build.log",
+        "Directory":  false,
+        "Bytes":  148350
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-test-coverage.csv",
+        "Directory":  false,
+        "Bytes":  800277
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-traceability.csv",
+        "Directory":  false,
+        "Bytes":  12212
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-traceability.log",
+        "Directory":  false,
+        "Bytes":  230
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-concept-visual.log",
+        "Directory":  false,
+        "Bytes":  202
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-diagram-export.log",
+        "Directory":  false,
+        "Bytes":  326
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-node.log",
+        "Directory":  false,
+        "Bytes":  0
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-node.xml",
+        "Directory":  false,
+        "Bytes":  8411
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr013-first-unit.log",
+        "Directory":  false,
+        "Bytes":  204
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-completion-build.log",
+        "Directory":  false,
+        "Bytes":  165278
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-concept-recheck.log",
+        "Directory":  false,
+        "Bytes":  159210
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-concept.log",
+        "Directory":  false,
+        "Bytes":  160202
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-config-first.log",
+        "Directory":  false,
+        "Bytes":  204
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-diagrams-recheck.log",
+        "Directory":  false,
+        "Bytes":  434
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-diagrams.log",
+        "Directory":  false,
+        "Bytes":  434
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-implemented-build.log",
+        "Directory":  false,
+        "Bytes":  163914
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-map.py",
+        "Directory":  false,
+        "Bytes":  1648
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-node-first.xml",
+        "Directory":  false,
+        "Bytes":  8915
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-record.py",
+        "Directory":  false,
+        "Bytes":  6088
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-test-coverage.csv",
+        "Directory":  false,
+        "Bytes":  803273
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13057
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-traceability.log",
+        "Directory":  false,
+        "Bytes":  230
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr014-visual.log",
+        "Directory":  false,
+        "Bytes":  202
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-browser.log",
+        "Directory":  false,
+        "Bytes":  258
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-browser.xml",
+        "Directory":  false,
+        "Bytes":  14537
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-build.log",
+        "Directory":  false,
+        "Bytes":  44632
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-build.log",
+        "Directory":  false,
+        "Bytes":  44970
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  1045527
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-concept-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13908
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-delivery.log",
+        "Directory":  false,
+        "Bytes":  228
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-delivery.xml",
+        "Directory":  false,
+        "Bytes":  8629
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-docs.log",
+        "Directory":  false,
+        "Bytes":  45622
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-export-final.xml",
+        "Directory":  false,
+        "Bytes":  1256
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-browser.log",
+        "Directory":  false,
+        "Bytes":  224
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-browser.xml",
+        "Directory":  false,
+        "Bytes":  2375
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-node.log",
+        "Directory":  false,
+        "Bytes":  7990
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-package.xml",
+        "Directory":  false,
+        "Bytes":  463
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-python.log",
+        "Directory":  false,
+        "Bytes":  418
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-python.xml",
+        "Directory":  false,
+        "Bytes":  22517
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-scope.log",
+        "Directory":  false,
+        "Bytes":  226
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final-scope.xml",
+        "Directory":  false,
+        "Bytes":  3161
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final.log",
+        "Directory":  false,
+        "Bytes":  224
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-final.xml",
+        "Directory":  false,
+        "Bytes":  2375
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-package.xml",
+        "Directory":  false,
+        "Bytes":  463
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-page-final.xml",
+        "Directory":  false,
+        "Bytes":  1146
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-python.log",
+        "Directory":  false,
+        "Bytes":  418
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-resource-final.xml",
+        "Directory":  false,
+        "Bytes":  4698
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  1045527
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\cr015-018-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13908
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\documentation-1.1.0-verification.json",
+        "Directory":  false,
+        "Bytes":  305
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification-native.log",
+        "Directory":  false,
+        "Bytes":  9556
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\extended-qualification-native.py",
+        "Directory":  false,
+        "Bytes":  1878
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\finish-cr-need-refactor.py",
+        "Directory":  false,
+        "Bytes":  2398
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\github-publication-admin.py",
+        "Directory":  false,
+        "Bytes":  2335
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.1.0-import.log",
+        "Directory":  false,
+        "Bytes":  46074
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.1.1-import.log",
+        "Directory":  false,
+        "Bytes":  45622
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-1.2.0-import.log",
+        "Directory":  false,
+        "Bytes":  45622
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\method-version-package.log",
+        "Directory":  false,
+        "Bytes":  3696
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-navigation-build.log",
+        "Directory":  false,
+        "Bytes":  131798
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-template-update-2.log",
+        "Directory":  false,
+        "Bytes":  184252
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-template-update.log",
+        "Directory":  false,
+        "Bytes":  183696
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  1044786
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13057
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\metrics-view-check.json",
+        "Directory":  false,
+        "Bytes":  2378
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pages-commit-message.txt",
+        "Directory":  false,
+        "Bytes":  476
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr014-completion-build.log",
+        "Directory":  false,
+        "Bytes":  158348
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-build.log",
+        "Directory":  false,
+        "Bytes":  168546
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-completion-build.log",
+        "Directory":  false,
+        "Bytes":  170978
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-final-publication.log",
+        "Directory":  false,
+        "Bytes":  170978
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-pane-build.log",
+        "Directory":  false,
+        "Bytes":  171522
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-pane-completion.log",
+        "Directory":  false,
+        "Bytes":  172266
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pr015-record.py",
+        "Directory":  false,
+        "Bytes":  5920
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-tickets-1500.png",
+        "Directory":  false,
+        "Bytes":  285267
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-tickets-600.png",
+        "Directory":  false,
+        "Bytes":  182110
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\problem-title-build.log",
+        "Directory":  false,
+        "Bytes":  131628
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\project-metrics-1500.png",
+        "Directory":  false,
+        "Bytes":  244484
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\project-metrics-600.png",
+        "Directory":  false,
+        "Bytes":  217757
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\pypi-1.1.0-verification.json",
+        "Directory":  false,
+        "Bytes":  424
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\refactor-change-request-needs.py",
+        "Directory":  false,
+        "Bytes":  12261
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-completion.json",
+        "Directory":  false,
+        "Bytes":  1345
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-publication.json",
+        "Directory":  false,
+        "Bytes":  1279
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-1.1.0-state.json",
+        "Directory":  false,
+        "Bytes":  1587
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-outcome-commit.txt",
+        "Directory":  false,
+        "Bytes":  291
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-pages-failure.json",
+        "Directory":  false,
+        "Bytes":  7029
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-preparation-history.py",
+        "Directory":  false,
+        "Bytes":  3437
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-publication.json",
+        "Directory":  false,
+        "Bytes":  1418
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-pypi-failure.json",
+        "Directory":  false,
+        "Bytes":  7007
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-whitespace.log",
+        "Directory":  false,
+        "Bytes":  0
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\review-commit.txt",
+        "Directory":  false,
+        "Bytes":  473
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-build.log",
+        "Directory":  false,
+        "Bytes":  45618
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  1045527
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\round-15-traceability.csv",
+        "Directory":  false,
+        "Bytes":  13908
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-metrics-build.log",
+        "Directory":  false,
+        "Bytes":  184558
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-navigation-build.log",
+        "Directory":  false,
+        "Bytes":  131628
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\scope-structure-shared-build.log",
+        "Directory":  false,
+        "Bytes":  131798
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-category-id-build.log",
+        "Directory":  false,
+        "Bytes":  139934
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-id-migration-build.log",
+        "Directory":  false,
+        "Bytes":  139934
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-map.json",
+        "Directory":  false,
+        "Bytes":  39748
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\test-traceability.csv",
+        "Directory":  false,
+        "Bytes":  217490
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\traceability.csv",
+        "Directory":  false,
+        "Bytes":  11498
+    },
+    {
+        "Path":  "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\update-scope-metrics.py",
+        "Directory":  false,
+        "Bytes":  10427
+    }
+]

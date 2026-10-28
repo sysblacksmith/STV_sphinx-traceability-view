@@ -39,3 +39,4 @@ Historical candidate results; no deployment or release approval is implied.
    1.1.0-candidate-2/index
    1.1.0-candidate-3/index
    1.1.0-candidate-4/index
+   build-cleanup-2026-10-26/index

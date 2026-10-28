@@ -1,1 +1,0 @@
-../../-agents/skills/reverse-engineer-requirements/scripts/export-architecture.ps1
