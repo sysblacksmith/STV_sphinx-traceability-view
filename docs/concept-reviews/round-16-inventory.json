@@ -1,0 +1,39 @@
+{
+  "scope": "CR019 scoped concept",
+  "authority": "Owner acceptance and invocation of concept creation/review/implementation, 2026-10-28",
+  "method_version": "1.2.0",
+  "input_revision": "ae0c0b5a5af6a03e13fd3ef4911888bfaa66442e",
+  "decision": "accepted under owner delegation",
+  "needs": [
+    "STV_SWR_003",
+    "STV_SWR_063",
+    "STV_SWR_073",
+    "STV_SWR_074",
+    "STV_SWR_075",
+    "STV_SWE_STATE",
+    "STV_SWE_LAYOUT",
+    "STV_SWE_RENDER",
+    "STV_SWE_INSPECT",
+    "STV_TC_SW_056",
+    "STV_TC_SY_070"
+  ],
+  "artifact_sha256": {
+    "docs/requirements-stakeholder.rst": "f6552dd8f7e06d27df2822d814fb48d5ff36e40fafbc39fdb83dc4b32e5ff138",
+    "docs/requirements-software.rst": "125d911ae187d9e6c628b1b85d8c84126aafa58c8668625e2782af6b5cfc96b3",
+    "docs/elements-software.rst": "c7252929913f949c62a31148ee1eede65138d1e06d1c9dce897e0dbf6115d76f",
+    "docs/test-cases/software-tests.rst": "6ef10d5c4a1866c41a7d94e47400a3d0253654c8fcb57703c891ca008f2b597b",
+    "docs/test-cases/system-tests.rst": "eb1b48a4f349dc7bfaccfef7b27481bc6d4ec28100cfe0825cc9724e0b5d1698",
+    "docs/internal-interfaces.rst": "d7e8fcef81e9827d1d603f7a53371289adde898b3272ebb8631d6a56cebce49a",
+    "docs/architecture-software.rst": "469f93bd153a426c94e9eef1e4da08c690b7a298ecaf2be68acde360d3655f35",
+    "docs/architecture-decisions.rst": "c0310433cbc33f252a68d924d92c8f9de7e97ce75dece66d204954546904aa91",
+    "docs/architecture/decisions/STV_ADR_010_persistent_details.rst": "889521337c5b1439b6986a94ca3c54067f62a750773a13c1a15cd16000280470",
+    "docs/architecture/decisions/STV_ADR_012_remembered_views.rst": "72f2e64800c29ec8d9a65389938824df9ff3bdd0c9171188fd5aacecc60be6b4",
+    "docs/implementation-plan.rst": "903f73c01cbd0dd25c33ad7fef99140da6fc7ead80737cc4f4c896f6fcd8a7df",
+    "docs/verification-plan.rst": "d12762ee76e6fb6950ac0d97567887a5ebe37846abc01acbb8e0e01b46e789ff",
+    "docs/technology-stack.rst": "6fe761a12bee3726cfc4899195776e9c46cc9e9ddfa20626b6efadf49a06e77f",
+    "docs/state-machine.rst": "9b9af859938f695bebabd1b2978ac46195a5b73e5a3e0744c4ddabc17650087e",
+    "docs/architecture/diagrams/remembered-view.drawio": "5f542233e94918d650342bebfef44bd46bba19c2821c7d35f014e9cad5a8ca85",
+    "docs/architecture/diagrams/remembered-view.svg": "c09d1a59b976f55d814ffe37c101a9a876c7a07ee63ec16b642fe108c692eb86"
+  },
+  "verification": "separate partial development evidence; no release acceptance"
+}

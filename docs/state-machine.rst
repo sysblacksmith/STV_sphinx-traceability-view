@@ -408,3 +408,45 @@ Source modules use the component paths in :doc:`elements-software`. Executable
 coverage is in :doc:`test-coverage`; developer verification is recorded centrally
 in :doc:`implementation-review`. These are implemented transitions, while
 occurrence-mode behavior retains its existing deferred scope.
+
+Remembered view lifecycle
+-------------------------
+
+.. raw:: html
+
+   <object type="image/svg+xml" data="remembered-view.svg" style="width:100%;height:auto" aria-label="Remembered view lifecycle">
+     <a href="remembered-view.svg">Open remembered view lifecycle</a>
+   </object>
+
+STATE owns snapshot validation/storage in ``frontend/src/state/persistence.js``;
+RENDER owns the mount/save gate in ``frontend/src/render/view.js``. INSPECT reopens
+ordered IDs without focus; LAYOUT checks dimensions/ranks before position reuse.
+See :need:`STV_SWR_073`, :need:`STV_SWR_074`, :need:`STV_SWR_075`.
+
+.. list-table:: Persistence transitions
+   :header-rows: 1
+
+   * - State / trigger
+     - Guard, action and destination
+   * - Startup / read
+     - No snapshot: Off. Valid snapshot: Restoring. Invalid/unavailable storage:
+       ordinary startup plus accessible explanation.
+   * - Restoring / layout completion
+     - Current request only; restore ordered cards without focus and apply saved
+       transform, then enable saving. Unusable saved geometry retries fresh layout.
+   * - Off / enable
+     - Save the committed view, enter On. Failure enters Storage error.
+   * - On / graph or card commit, zoom end
+     - Save current committed state. Pending/failed/stale layout does not save.
+   * - On or Storage error / disable
+     - Remove this key, keep live display; Off. Removal failure is announced.
+   * - Storage error / next view change
+     - Retry saving; success returns On; failure retains usable live display.
+   * - On / another tab saves
+     - No live transition. The next page load reads the last successful save.
+   * - On / pagehide
+     - Remembering enabled: no empty-card write or clearing; back/forward cache remains usable. Disabled: ordinary card cleanup without saving.
+
+Snapshot validation cases are in ``frontend/src/state/tests/persistence.test.js``;
+real reload/control checks are in ``docs/test-scripts/test_remembered_view.py``.
+:need:`STV_TC_SW_056` and :need:`STV_TC_SY_070` define criterion coverage.

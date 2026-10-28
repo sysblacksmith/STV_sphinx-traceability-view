@@ -1,3 +1,4 @@
+import {restorePositions} from '../state/persistence.js';
 import ELK from 'elkjs/lib/elk.bundled.js';
 import {stabilize} from './stability.js';
 import {levelIndex} from './level.js';
@@ -104,6 +105,7 @@ export async function compute(graph, visible, boxes, context={}) {
     shift+=Math.max(0,ty-(band.y+shift)-24-band.height);
   }
   stabilize(nodes,ranks,bands,context.previous,context.anchor);
+  restorePositions(context.restore,graph,visible,nodes,ranks,bands);
   const maxRight=Math.max(...[...nodes.values()].map(n=>n.x+n.width));
   const rankBounds = new Map();
   for(const [key,node] of nodes) {

@@ -276,3 +276,18 @@ Neither workflow publishes a release. ``docs/ci-and-provenance.rst`` describes
 the check scope, verification commands and unapplied branch-protection proposal.
 Hosted runs and protection activation remain separate owner steps.
 
+
+Remember the current view
+-------------------------
+
+Enable **Remember my current view** in an individual view to retain its current
+starting objects, expanded graph, open detail cards, node positions and pan/zoom
+across page reloads and browser restarts. Each page and embedded view is saved
+independently in the same browser profile and site. Disable the checkbox to clear
+that view's saved state; the current display stays unchanged.
+
+Storage is local to the browser, with no account or device synchronization.
+Clearing browser/site data removes remembered views. Direct-file persistence
+depends on browser storage support; an unavailable or failed save is explained
+without preventing ordinary exploration. Page scroll, hover, keyboard focus and
+card-internal scroll/attribute folds are not retained.

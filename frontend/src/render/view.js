@@ -1,3 +1,4 @@
+import {storageKey,rememberedStorage,restoreSnapshot,snapshot as viewSnapshot} from '../state/persistence.js';
 import {select} from 'd3-selection';
 import {zoom,zoomIdentity} from 'd3-zoom';
 import {initial,visible,transition,groupKey,PAGE_SIZE} from '../state/state.js';
@@ -17,6 +18,10 @@ function button(text,action,label=text) {const b=element('button','',text);b.typ
 export async function mount(root,graph,base,layout=compute) {
   if(graph.schema!==1)throw Error(`Unsupported STV schema ${graph.schema}`);
   let state=initial(JSON.parse(root.dataset.stvSeeds)),request=0,home=zoomIdentity,hasCommitted=false,committedGeometry;
+  let persistenceReady=false,restored,persistenceError='';
+  const memory=rememberedStorage(()=>window.localStorage,storageKey(base,graph.project,location.pathname,root.id,JSON.parse(root.dataset.stvSeeds)));
+  try{const raw=memory.read();if(raw)restored=restoreSnapshot(raw,graph);}catch(error){persistenceError=error.message;}
+  if(restored)state=restored.state;
   const toolbar=element('div','stv-toolbar'),status=element('p','stv-status');status.setAttribute('role','status');
   const viewport=element('div','stv-viewport');viewport.tabIndex=0;viewport.setAttribute('aria-label','Trace graph viewport');
   const scene=element('div','stv-scene'),nodesLayer=element('div','stv-nodes');
@@ -24,11 +29,20 @@ export async function mount(root,graph,base,layout=compute) {
   const workspace=element('div','stv-workspace'),stack=element('section','stv-details-stack');
   stack.id=`${root.id}-persistent-details`;stack.setAttribute('aria-label','Artifact details');
   scene.append(svg,nodesLayer);viewport.append(scene);workspace.append(viewport,stack);root.replaceChildren(toolbar,status,workspace);
+  const rememberLabel=element('label','stv-remember'),remember=element('input');remember.type='checkbox';remember.checked=!!restored;remember.disabled=true;
+  rememberLabel.append(remember,document.createTextNode(' Remember my current view'));toolbar.append(rememberLabel);
+  const memoryStatus=element('p','stv-memory-status');memoryStatus.setAttribute('role','status');memoryStatus.textContent=persistenceError?`Remembered view unavailable: ${persistenceError}`:'';root.insertBefore(memoryStatus,workspace);
+  function persist(){
+    if(!persistenceReady||!remember.checked||!hasCommitted)return;
+    try{memory.write(viewSnapshot(graph,state,persistent.ids(),viewport.__zoom,committedGeometry));memoryStatus.textContent='';}
+    catch(error){memoryStatus.textContent=`Could not remember this view: ${error.message}`;}
+  }
+  remember.onchange=()=>{if(remember.checked)persist();else try{memory.clear();memoryStatus.textContent='';}catch(error){memoryStatus.textContent=`Could not clear remembered view: ${error.message}`;}};
   const details=inspector(root,graph,base),nodeElements=new Map();
   // Pointer hover does not move keyboard focus into this root.
   document.addEventListener('keydown',e=>{if(e.key==='Escape')details.close();});
   const zoomer=zoom().scaleExtent([0.15,3]).filter(e=>e.type==='wheel'||(!e.button&&!e.target.closest('article,button,a')))
-    .on('zoom',event=>{scene.style.transform=`translate(${event.transform.x}px,${event.transform.y}px) scale(${event.transform.k})`;details.close();});
+    .on('zoom',event=>{scene.style.transform=`translate(${event.transform.x}px,${event.transform.y}px) scale(${event.transform.k})`;details.close();}).on('end',persist);
   select(viewport).call(zoomer).on('dblclick.zoom',null);
   for(const [label,action] of [['Zoom in',()=>select(viewport).call(zoomer.scaleBy,1.25)],['Zoom out',()=>select(viewport).call(zoomer.scaleBy,0.8)],
     ['Pan left',()=>select(viewport).call(zoomer.translateBy,100,0)],['Pan right',()=>select(viewport).call(zoomer.translateBy,-100,0)],
@@ -56,8 +70,10 @@ export async function mount(root,graph,base,layout=compute) {
   toolbar.append(button('Collapse all nodes',()=>update({type:'collapse-all'})));
   const retry=button('Retry layout',()=>update(retryCommand));retry.hidden=true;toolbar.append(retry);
   const closeAll=button('Close all details',()=>persistent.clear());closeAll.className='stv-close-all';closeAll.setAttribute('aria-controls',stack.id);toolbar.append(closeAll);
-  const persistent=persistentDetails(root,graph,base,{stack,findTrigger:id=>nodeElements.get(nodeKey(id))?.querySelector('[data-focus=details]'),fallback:closeAll,changed:size=>{stack.hidden=!size;workspace.classList.toggle('stv-has-details',size>0);}});
-  window.addEventListener('pagehide',()=>persistent.clear(false));
+  const persistent=persistentDetails(root,graph,base,{stack,findTrigger:id=>nodeElements.get(nodeKey(id))?.querySelector('[data-focus=details]'),fallback:closeAll,changed:size=>{stack.hidden=!size;workspace.classList.toggle('stv-has-details',size>0);persist();}});
+  // Remembered views retain the live collection in the back/forward cache.
+  // Ordinary views keep their existing navigation cleanup without saving it.
+  window.addEventListener('pagehide',()=>{if(!remember.checked){const ready=persistenceReady;persistenceReady=false;persistent.clear(false);persistenceReady=ready;}});
   toolbar.prepend(seedPicker(root,graph,id=>update({type:'seed',id}),()=>update({type:'overview'})));
   viewport.addEventListener('focusin',e=> {
     // Native Tab focus can scroll an overflow-hidden element. Fold that motion
@@ -134,7 +150,9 @@ export async function mount(root,graph,base,layout=compute) {
     try {
       const incremental=['group','root'].includes(command?.type);
       const anchor=command?.type==='root'?rootKey:command?.id?nodeKey(command.id):null;
-      const geometry=await layout(graph,result.graph,boxes,incremental?{previous:committedGeometry,anchor}:{});
+      let geometry;
+      try{geometry=await layout(graph,result.graph,boxes,incremental?{previous:committedGeometry,anchor}:!hasCommitted&&restored?{restore:restored.geometry}:{});}
+      catch(error){if(hasCommitted||!restored)throw error;geometry=await layout(graph,result.graph,boxes,{});}
       if(ticket!==request)return;
       const active=document.activeElement;
       const ownPanel=active?.closest('.stv-detail')?.id.startsWith(root.id+'-detail-');
@@ -166,10 +184,16 @@ export async function mount(root,graph,base,layout=compute) {
         viewport.scrollLeft=0;viewport.scrollTop=0;select(viewport).call(zoomer.transform,home);hasCommitted=true;
       }
       root.dataset.stvRevision=String(state.revision);status.textContent=`${keys.length} visible ${keys.length===1?'node':'nodes'}${exportError?' / SVG export unavailable: '+exportError.message:''}`;retry.hidden=true;
+      if(persistenceReady)remember.disabled=false;
+      persist();
       if(focusKey&&restoreFocus){const owner=nodeElements.get(focusKey),initiator=nodeElements.get(initiatingKey);const match=owner&&[...owner.querySelectorAll('button,a')].find(e=>e.dataset.focus===focusControl&&!e.disabled);const fallback=initiator&&[...initiator.querySelectorAll('button,a')].find(e=>e.dataset.focus===initiatingControl&&!e.disabled);(match||owner?.querySelector('button,a')||fallback||toolbar.querySelector('button')).focus({preventScroll:true});}
     }catch(error){if(ticket===request){retryCommand=command;status.textContent=`Layout failed: ${error.message}`;retry.hidden=false;
       if(!nodeElements.size){let y=20;for(const [key,n]of staged){Object.assign(n.style,{position:'absolute',left:'20px',top:`${y}px`});y+=boxes.get(key)+20;nodesLayer.append(n);nodeElements.set(key,n);}}}}
     finally{measure.remove();if(ticket===request)root.setAttribute('aria-busy','false');}
   }
+  if(restored)for(const id of restored.cards)persistent.open(id,{focus:false});
   await update(null);
+  if(restored&&hasCommitted){const t=restored.transform;select(viewport).call(zoomer.transform,zoomIdentity.translate(t.x,t.y).scale(t.k));}
+  persistenceReady=true;remember.disabled=!hasCommitted;
+  if(restored&&hasCommitted)persist();
 }

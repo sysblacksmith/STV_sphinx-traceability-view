@@ -563,3 +563,39 @@ a reviewed compatibility change with corresponding security/fidelity fixtures.
 Host bulk actions reject disclosures targeting title/head or content/body rows.
 Missing host handlers or unsupported row encodings disable the page-wide pair
 with a readable explanation rather than applying a partial change.
+
+Remembered view protocol
+------------------------
+
+STATE owns ``frontend/src/state/persistence.js``: snapshot encoding, validation,
+key scope and guarded storage access. RENDER wires it to committed exploration,
+LAYOUT positions, INSPECT ordered IDs and D3 transform. No new component/service.
+
+Version-1 snapshot: ``{version:1, state:{mode,seeds,expanded,pages,page,rootOpen},
+cards:[Need ID], transform:{x,y,k}, geometry:{signature,nodes,bandTops}}``.
+Sets/maps are encoded as arrays. The key is ``stv:view:1:`` plus a JSON tuple of
+documentation base URL, project name, page pathname, root ID and authored seeds.
+URL fragments identify document anchors and do not override remembered graph
+state; explicit Start at Need/Project overview actions replace it and are saved.
+
+Validate at the browser storage boundary. Unknown snapshot versions, malformed
+fields, invalid starting context or over-capacity rooted graphs select ordinary
+startup and announce why. Remove unavailable expansion groups and cards by
+checking current published objects/adjacency; never restore copied HTML. A reduced
+card capacity keeps the newest. Missing storage is a recoverable UI error, not a
+mount failure. Last completed save wins; storage events do not replace live state.
+
+Saved geometry includes node key, finite coordinates/dimensions and semantic rank;
+band tops retain stable-navigation offsets after reload; its signature covers visible edge tuples, project entries and layout model.
+Only matching keys, sizes, ranks and signature permit geometry reuse before
+current edge routing/validation. Otherwise fresh layout applies the saved pan/zoom.
+A corrupt geometry record is ignored without trusting stored DOM or edge paths.
+
+The mount gate suppresses saves until first layout, card reopening and transform
+restoration finish. Checkbox changes are unavailable during that gate. Save only
+committed scenes; layout completion uses existing request-ticket protection.
+Card open/close and D3 zoom-end save synchronously; failed candidates never save.
+Pagehide does not empty a remembered card collection; no unload writes overwrite other tabs.
+Persistent reopening accepts ``{focus:false}``; ordinary explicit opens retain
+existing focus/reveal and FIFO semantics. A separate live status reports storage
+failure without overwriting layout diagnostics. Read/remove/write are guarded.

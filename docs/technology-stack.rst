@@ -317,3 +317,12 @@ proof of snapshot fidelity. No requirement is added for universal vector-editor
 foreignObject support or browser-native filesystem pickers. Browser/OS managed
 Save As and prompt settings are the owner-approved location interface. See
 :ref:`STV_ADR_011` for alternatives, primary API evidence and limitations.
+
+Browser view storage
+--------------------
+
+The native Web Storage localStorage API stores opt-in versioned JSON snapshots
+through STATE; RENDER supplies the checkbox and error status. No new bundled
+library, license or server is added. :ref:`STV_ADR_012` records alternatives,
+file-URL limitations and storage-failure recovery. JSON snapshots contain only
+identifiers, exploration, card order, geometry and transform, not rendered bodies.

@@ -2349,3 +2349,22 @@ STV_TC_SW_050: Persistent limit configuration validation
    required visible resources return typed failures; existing remote placeholders
    remain. JSON/script delimiters are safely escaped and no hidden Need data or
    unselected resource inventory enters the downloaded SVG.
+
+.. test_case:: Validate and store remembered view snapshots
+   :id: STV_TC_SW_056
+   :status: accepted
+   :tags: feature_view_persistence, test_software
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SWR_073, STV_SWR_074
+   :last_result: not_run
+
+   **Environment:** Node tests for STATE using a published-graph-shaped fixture
+   and controlled storage. **Procedure:** Round-trip seed/project states, page
+   memories and card order; remove objects/groups, change limits; inject malformed
+   JSON/schema/coordinates, 200/201-node visibility and storage exceptions.
+   **Expected:** Equivalent compatible state, atomic invalid-context/cap fallback,
+   hidden objects absent, newest cards retained, independent keys/removal and
+   explicit read/write/remove errors. Last completed save wins without live mutation.

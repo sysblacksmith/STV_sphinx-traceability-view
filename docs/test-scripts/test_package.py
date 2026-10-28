@@ -62,14 +62,14 @@ def test_clean_wheel_host():
         root=Path(directory);envpath=root/'env'
         assert root.resolve().is_relative_to(Path(tempfile.gettempdir()).resolve())
         subprocess.run([sys.executable,'-m','venv',str(envpath)],check=True,capture_output=True)
-        python=envpath/'Scripts/python.exe'
+        python=envpath/('Scripts/python.exe' if os.name=='nt' else 'bin/python')
         bootstrap=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),'-r',str(ROOT/'requirements-tooling.txt')],capture_output=True,text=True)
         assert bootstrap.returncode==0,bootstrap.stdout+bootstrap.stderr
         result=subprocess.run([str(python),'-m','pip','install','--no-index','--find-links',str(wheelhouse),str(wheel)],capture_output=True,text=True)
         assert result.returncode==0,result.stdout+result.stderr
         source=root/'source';shutil.copytree(ROOT/'docs/test-scripts/fixtures/minimal',source)
         env=dict(os.environ);env.pop('PYTHONPATH',None)
-        env['PATH']=str(envpath/'Scripts')+os.pathsep+str(Path(os.environ['SystemRoot'])/'System32')
+        env['PATH']=str(python.parent)+(os.pathsep+str(Path(os.environ['SystemRoot'])/'System32') if os.name=='nt' else '')
         result=subprocess.run([str(python),'-m','sphinx','-b','html','-W',str(source),str(root/'html')],env=env,cwd=root,capture_output=True,text=True)
         assert result.returncode==0,result.stdout+result.stderr
         assert 'STV_PENDING' not in (root/'html/index.html').read_text(encoding='utf-8')

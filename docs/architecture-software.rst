@@ -146,3 +146,13 @@ composes an inert snapshot and requests the browser download. Page metadata is
 separately scoped host-document behavior in RENDER. Font configuration crosses
 MODEL/DIRECTIVE into BUNDLE, then INSPECT. :ref:`STV_ADR_011` and
 :doc:`internal-interfaces` define lifecycle, serialization and failure ownership.
+
+Remembered view flow
+--------------------
+
+:need:`STV_SWR_073` through :need:`STV_SWR_075` extend STATE, RENDER,
+LAYOUT and INSPECT. Browser storage feeds validated state into startup; the
+first layout/card restore precedes saved D3 transform application. Committed
+state, card IDs, geometry and zoom-end events flow back through STATE to storage.
+:ref:`STV_ADR_012` selects the storage boundary. The coordinated persistence
+machine is in :doc:`state-machine`.

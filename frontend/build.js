@@ -40,3 +40,10 @@ await writeFile(`${output}/vendor/ELK-INVENTORY.json`,JSON.stringify(audit,null,
 await writeFile(`${output}/LICENSE.txt`,await readFile('../LICENSE'));
 const sourceNotice=await readFile(`${output}/vendor/ELK-SOURCE.txt`,'utf8');
 await writeFile(`${output}/THIRD_PARTY_NOTICES.txt`,notices.join('\n\n')+'\n\n'+sourceNotice);
+
+// Dependency license text has platform-specific newlines. Keep checked-in assets
+// reproducible across Windows and Linux without changing their content.
+for(const name of ['stv.js','THIRD_PARTY_NOTICES.txt']) {
+  const file=`${output}/${name}`;
+  await writeFile(file,(await readFile(file,'utf8')).replace(/\r\n/g,'\n'));
+}

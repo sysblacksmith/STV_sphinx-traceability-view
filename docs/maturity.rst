@@ -6,6 +6,75 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+CR019 implemented development increment, 2026-10-28
+--------------------------------------------------------------------------------
+
+:need:`STV_CR_019` is implemented. The owner accepted the exact stakeholder
+amendment; :doc:`concept-reviews/round-16` records scoped concept acceptance
+under the owner's explicit review delegation. :need:`STV_SWR_073` through
+:need:`STV_SWR_075`, revised :need:`STV_SWR_003` / :need:`STV_SWR_063`,
+four browser component revisions, ADR012 and two new case designs are accepted.
+The input baseline is ae0c0b5a5af6a03e13fd3ef4911888bfaa66442e; exact accepted
+artifact identities are in the round-16 inventory.
+
+The opt-in checkbox remembers current seeds/project page, rooted expansion,
+node positions, open-card age/order, pan and zoom. Saving is view-local and
+browser-local; safe current-graph validation, storage-error status and startup
+save gating preserve hidden-object/capacity constraints. No dependency or runtime
+version change, account, server, release or deployment is added.
+
+:doc:`test-execution/cr019-development/index` retains candidate/source identities,
+actual reports, commands, corrections and limitations. Results: 48 named Node
+checks, 107 non-browser Python checks, six feature checks and 40 targeted existing
+browser regression cases passed. One browser startup error required four retests;
+it is preserved rather than counted as an all-green suite. Strict documentation,
+publication, graph/evidence/test-coverage, diagram links/visual review and clean
+wheel/source-package verification passed. Authored diffs pass whitespace checks;
+generated minified JavaScript retains dependency template-string whitespace.
+
+Verification is partial for amended obligations: actual development uses Linux
+Firefox 159.0, not the project's Windows release platform. Formal case designs
+remain not_run pending qualification; no test execution or release pass is
+fabricated. Historical acceptance and 1.1.0 qualification remain valid only for
+their original identities. PR #6 carries the development change for review/merge.
+
+CR019 owner acceptance and delivery authorization, 2026-10-28
+--------------------------------------------------------------------------------
+
+The owner reviewed the exact RST in PR #6 and explicitly accepted
+:need:`STV_CR_019`, revised :need:`STV_SHR_003` and :need:`STV_SHR_057`,
+and new :need:`STV_SHR_062` through :need:`STV_SHR_065`. Their canonical
+status is accepted; verification remains not_assessed. Input revision:
+ae0c0b5a5af6a03e13fd3ef4911888bfaa66442e.
+
+The same owner reply authorizes concept creation, review and implementation
+for CR019, including acceptance of clean reviewed concept artifacts under the
+invoked review workflow. Product release/deployment is separate. Historical
+pending statements below are superseded for this accepted stakeholder input.
+
+CR019 stakeholder amendment awaiting owner review, 2026-10-28
+--------------------------------------------------------------------------------
+
+The owner invoked stakeholder elicitation and manage-change to align and accept
+:need:`STV_CR_019` and its stakeholder requirements. This increment is limited
+to that stakeholder boundary. :doc:`change-requests/STV_CR_019_remember-current-view`
+contains the request, proposals, retained constraints and pending impact analysis.
+
+Revised :need:`STV_SHR_003` and :need:`STV_SHR_057`, plus new
+:need:`STV_SHR_062` through :need:`STV_SHR_065`, are draft/not_assessed.
+The CR is draft. Exact wording awaits explicit owner review; the instruction
+to reach acceptance is not recorded as approval of newly authored wording.
+Previous acceptance/results below remain historical for their recorded revisions,
+including the earlier STV_SHR_057 result; they do not verify this amendment.
+Current downstream design is not yet reconciled with persistence requirements.
+No internal concept refinement, product implementation or release is included.
+
+PR #6 carries the reviewable stakeholder increment on cr019-remember-current-view,
+based on main 3c2647f56898efce1e1b59b261af30f0f905cf61. Authoring checks only:
+unique stakeholder IDs, draft status and configured model fields checked;
+Sphinx/traceability validation and runtime verification have not been executed.
+New stakeholder derivation/test coverage is an explicit downstream gap.
+
 1.1.0 release qualification, 2026-10-25
 --------------------------------------------------------------------------------
 

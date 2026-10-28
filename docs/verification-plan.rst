@@ -325,3 +325,15 @@ must supplement visual comparisons for inactive XML and outside-root protection.
 Use actual DOM styles/host handlers rather than mocks for presentation claims.
 Component tests may mock save APIs only for deterministic cleanup/error paths.
 Full release qualification and optional mobile/browser extensions remain separate.
+
+Remembered view verification
+----------------------------
+
+:need:`STV_TC_SW_056` and :need:`STV_TC_SY_070` cover CR019. Execute pure
+snapshot validation/storage tests, then real browser file/HTTP reload with
+expanded graphs, off-viewport nodes, ordered cards and nontrivial pan/zoom.
+Exercise disable, independent views/pages, stale/hidden data, card/node capacity,
+blocked/quota storage, pending/failed layout and concurrent tabs. Run existing
+navigation/details tests, rebuild assets and verify wheel delivery. Browser/OS
+results are reported for the actual environment; Windows release qualification
+remains separate from this development increment.
