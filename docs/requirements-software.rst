@@ -49,16 +49,17 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: partial
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
-   The software shall initialize each view with every distinct selected seed
+   Unless restoring a valid opted-in snapshot under :need:`STV_SWR_074`,
+   the software shall initialize each view with every distinct selected seed
    visible, or the project node and first five stakeholder entries when no
    seeds were supplied,
    and no expanded relationship keys.
 
-   **Acceptance criterion:** One seed produces one node; multiple distinct
+   **Acceptance criterion:** Without a restored snapshot, one seed produces one node; multiple distinct
    seeds within the capacity limit produce their corresponding nodes; no
    seeds produces the project node and at most five stakeholder entries. Every
    case has an empty ordinary expansion set; project entries are the sole
@@ -1221,10 +1222,11 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: partial
    :derives_from: STV_SHR_057
    :allocated_to: STV_SWE_INSPECT
 
+   Restore opted-in card IDs oldest first without focus under :need:`STV_SWR_075`.
    Maintain an insertion-ordered collection keyed by Need ID, separate from hover
    and exploration state. Reuse/focus does not reorder. On new insertion at the
    configured capacity remove the oldest live entry, then append the new entry.
@@ -1481,3 +1483,81 @@ Executable criteria and retained results: :doc:`test-coverage` and
    SVG and malformed resources cannot execute or access outside files. Missing
    required visible resources fail visibly; off-screen content is not loaded for
    capture. Hidden Needs and transport/graph data are not export payloads.
+
+.. swr:: Store opt-in snapshots independently
+   :id: STV_SWR_073
+   :status: accepted
+   :tags: feature_view_persistence
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: partial
+   :derives_from: STV_SHR_062, STV_SHR_064, STV_SHR_065
+   :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
+
+   The software shall store version-1 JSON snapshots in localStorage under a
+   key combining the documentation base URL, project, page path, root ID and
+   authored seeds. Store after successful state/card changes and viewport zoom
+   end; never save a pending layout candidate. Remove only that key on opt-out.
+   Do not react to storage events by changing a live view. Catch read/write/remove
+   failures and announce them through an accessible persistence status.
+
+   **Acceptance criterion:** Independent keys, initial off/enabled reload,
+   updates, removal, last-save-wins and blocked/quota failures behave as specified;
+   other view state and live exploration are unchanged.
+
+   **Channeling rationale:** Browser-local interaction and persistence within the
+   existing static extension add no separate system service or deployment boundary.
+
+.. swr:: Validate and reconstruct remembered exploration
+   :id: STV_SWR_074
+   :status: accepted
+   :tags: feature_view_persistence
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: partial
+   :derives_from: STV_SHR_003, STV_SHR_063, STV_SHR_065
+   :allocated_to: STV_SWE_STATE
+
+   The software shall validate snapshot schema, mode, seeds, page, expansion
+   keys, page memories, cards and finite viewport coordinates before restoration.
+   Resolve against current published graph data; discard missing expansion groups,
+   removed/hidden seeds and cards. If no saved seed remains, the saved page is
+   invalid, or rooted visibility exceeds 200, reject the complete snapshot and
+   use normal startup. Retain only the newest allowed cards. Restore only IDs
+   and state, never cached HTML or graph metadata from storage.
+
+   **Acceptance criterion:** Seeded and overview round trips, cycles/shared paths,
+   stale objects, changed page/card capacity, invalid schema and coordinates,
+   hidden objects and 200/201-node boundaries restore or reject atomically.
+
+   **Channeling rationale:** Browser-local interaction and persistence within the
+   existing static extension add no separate system service or deployment boundary.
+
+.. swr:: Restore presentation without startup interference
+   :id: STV_SWR_075
+   :status: accepted
+   :tags: feature_view_persistence
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: partial
+   :derives_from: STV_SHR_057, STV_SHR_063, STV_SHR_065
+   :allocated_to: STV_SWE_RENDER, STV_SWE_LAYOUT, STV_SWE_INSPECT
+
+   The renderer shall load a valid snapshot before first layout, reopen cards
+   oldest first without focusing them, and apply saved pan/zoom after first
+   successful commit. The layout shall reuse saved node positions only when
+   current node dimensions, semantic ranks and visible edge identities match;
+   retain ordinary route/overlap validation. Changed geometry uses fresh layout
+   with the saved transform. Clear transient hover; do not persist page scroll,
+   card scroll/folds or keyboard focus. Do not clear/save empty remembered cards on pagehide.
+
+   **Acceptance criterion:** A real reload preserves nodes, placement, open-card
+   order and viewport; subsequent FIFO, collapse/reseed, zoom and card close work.
+   Failed/stale layouts do not overwrite a committed snapshot. Restore does not
+   focus/scroll the page and browser back/forward retains the same live view.
+
+   **Channeling rationale:** Browser-local interaction and persistence within the
+   existing static extension add no separate system service or deployment boundary.

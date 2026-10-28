@@ -542,3 +542,14 @@ and download behavior require execution before implementation acceptance. Mobile
 smoke evidence is not mobile export qualification. Native vector-editor editing,
 full-graph export, mandatory application folder pickers, occurrence mode and
 new touch optimization are excluded. Concept checks do not constitute a release.
+
+Remembered view increment
+-------------------------
+
+First validate versioned snapshots and 200-node reconstruction in STATE. Then
+wire the checkbox through actual mount/layout/cards/D3, guarding first commit and
+pagehide. Reuse saved geometry before current routing; do not replay stale DOM.
+Build the browser assets with the existing lockfile/build script. Add colocated
+snapshot tests and real file/HTTP reload, isolation and failure tests. Finish with
+strict Sphinx, traceability/test coverage, regression and clean wheel checks.
+No version bump, dependency addition, release or deployment is included.

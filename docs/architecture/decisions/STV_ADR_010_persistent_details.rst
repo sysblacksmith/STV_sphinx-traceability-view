@@ -6,7 +6,8 @@ STV_ADR_010: Separate persistent details from hover inspection
 Status: **accepted**. Date: 2026-10-24. Owner: project owner through scoped
 review in :doc:`../../concept-reviews/round-12`.
 Supersedes: partially :ref:`STV_ADR_003` for the shared explicit/hover inspection
-lifecycle. Superseded by: none. Other graph/exploration decisions remain.
+lifecycle. Superseded by: partially :ref:`STV_ADR_012` for opt-in browser serialization
+and reload restoration only. Other graph/exploration decisions remain.
 
 Decision and ownership
 -----------------------
@@ -48,8 +49,10 @@ reserving graph space beside it only above a 1120 px container width. Reading lo
 bounded box and stack scrolling. Opening the dock can reduce graph width; graph
 world positions/transform are preserved until the reader requests Reset.
 
-The collection is not serialized into Needs, URL, local storage or sessions.
-Navigation/reload creates a fresh page. Configuration is author-side, not a
+The original CR014 decision did not serialize the collection into Needs, URL,
+local storage or sessions, and navigation/reload created a fresh page. This
+portion is superseded by :ref:`STV_ADR_012` only when the reader opts into
+remembering the view; the default remains fresh-page behavior. Configuration is author-side, not a
 reader capacity control. No later occurrence-mode delivery or release is implied.
 
 Handover and verification

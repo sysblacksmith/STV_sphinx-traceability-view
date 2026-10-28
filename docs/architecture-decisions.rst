@@ -23,3 +23,7 @@ The technology selection is listed directly under Architecture:
 :doc:`technology-stack`. Supporting material is listed under Miscellaneous:
 :doc:`internal-interfaces`, :doc:`implementation-plan` and
 :doc:`verification-plan`.
+
+.. toctree::
+
+   architecture/decisions/STV_ADR_012_remembered_views

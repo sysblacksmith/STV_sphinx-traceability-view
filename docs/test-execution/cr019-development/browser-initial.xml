@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="43" time="258.490" timestamp="2026-10-28T22:11:07.629795+00:00" hostname="dcc63a4185e4"><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_view_roundtrip_disable_isolation_and_card_order[file]" time="5.761"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_063,STV_SWR_073,STV_SWR_074,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_view_roundtrip_disable_isolation_and_card_order[http]" time="6.078"><properties><property name="requirement_ids" value="STV_SWR_003,STV_SWR_063,STV_SWR_073,STV_SWR_074,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_view_stale_corrupt_and_reduced_capacity" time="6.004"><properties><property name="requirement_ids" value="STV_SWR_073,STV_SWR_074,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_view_storage_failure_and_pending_layout" time="7.413"><properties><property name="requirement_ids" value="STV_SWR_073,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_overview_pages_and_last_save_wins_between_tabs" time="12.379"><properties><property name="requirement_ids" value="STV_SWR_073,STV_SWR_074,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_remembered_view" name="test_remembered_view_survives_browser_restart" time="13.430"><properties><property name="requirement_ids" value="STV_SWR_073,STV_SWR_075" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[None]" time="0.985"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[1]" time="1.281"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_limit_is_published_by_real_host[3]" time="0.871"><properties><property name="requirement_ids" value="STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]" time="6.282"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]" time="6.786"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]" time="6.756"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]" time="7.170"><properties><property name="requirement_ids" value="STV_SWR_050,STV_SWR_063,STV_SWR_064,STV_SWR_065" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[file]" time="5.594"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_persistent_completion_identity_eviction_and_retry[http]" time="5.675"><properties><property name="requirement_ids" value="STV_SWR_063,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_detail_metadata_controls_width_and_artifact_navigation[file]" time="6.520"><properties><property name="requirement_ids" value="STV_SWR_016,STV_SWR_018,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_persistent_details" name="test_detail_metadata_controls_width_and_artifact_navigation[http]" time="5.682"><properties><property name="requirement_ids" value="STV_SWR_016,STV_SWR_018,STV_SWR_064" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[file]" time="6.762"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_stale_layout_failure_retry_and_independent_views[http]" time="5.530"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[0]" time="5.581"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[3]" time="5.651"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_overview_boundaries_and_page_restoration_cache[12]" time="5.585"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[file]" time="5.481"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[http]" time="5.550"><properties><property name="requirement_ids" value="STV_SWR_066" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_typography_nested_units_late_children_and_repeat_scaling" time="5.492"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]" time="9.855"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]" time="11.337"><properties><property name="requirement_ids" value="STV_SWR_067,STV_SWR_068" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_download_expiry_pagehide_and_error_ownership" time="5.587"><properties><property name="requirement_ids" value="STV_SWR_071" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_snapshot_clipping_immutable_text_resources_and_readiness" time="5.642"><properties><property name="requirement_ids" value="STV_SWR_070,STV_SWR_072" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]" time="5.616"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]" time="5.584"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_export_pointer_snapshot_cancel_keyboard_and_serialization_recovery" time="5.549"><properties><property name="requirement_ids" value="STV_SWR_070,STV_SWR_071" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_page_metadata_excludes_copies_and_handles_empty_pages" time="5.541"><properties><property name="requirement_ids" value="STV_SWR_069" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_real_font_and_selected_local_media_are_self_contained[file]" time="5.541"><properties><property name="requirement_ids" value="STV_SWR_068,STV_SWR_070,STV_SWR_072" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_real_font_and_selected_local_media_are_self_contained[http]" time="5.540"><properties><property name="requirement_ids" value="STV_SWR_068,STV_SWR_070,STV_SWR_072" /></properties></testcase><testcase classname="docs.test-scripts.test_extended_controls" name="test_export_resource_retry_and_pending_fonts_refuse_capture" time="5.545"><properties><property name="requirement_ids" value="STV_SWR_070,STV_SWR_072" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_group_navigation_keeps_existing_nodes_still[file]" time="5.522"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_group_navigation_keeps_existing_nodes_still[http]" time="5.620"><properties><property name="requirement_ids" value="STV_SWR_058" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[down-file]" time="5.507"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[down-http]" time="4.012"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[up-file]" time="5.588"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_arrow_viewport_covers_negative_routes[up-http]" time="3.937"><properties><property name="requirement_ids" value="STV_SWR_059" /></properties></testcase><testcase classname="docs.test-scripts.test_position_stability" name="test_initial_numeric_seed_order[file]" time="6.332"><properties><property name="requirement_ids" value="STV_SWR_060" /></properties><error message="failed on setup with &quot;selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded&#10;Stacktrace:&#10;RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8&#10;WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5&#10;NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:781:5&#10;assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13&#10;[+7 more lines; full report in element text]">@pytest.fixture
+    def browser():
+        driver_path = os.environ.get("STV_GECKODRIVER")
+        if not driver_path:
+            pytest.fail("Set STV_GECKODRIVER to the provisioned geckodriver executable")
+        options = webdriver.FirefoxOptions()
+        options.add_argument("-headless")
+        options.set_preference("network.dns.disablePrefetch", True)
+        options.set_preference("network.prefetch-next", False)
+        options.set_preference("network.proxy.type", 1)
+        options.set_preference("network.proxy.http", "127.0.0.1")
+        options.set_preference("network.proxy.http_port", 9)
+        options.set_preference("network.proxy.ssl", "127.0.0.1")
+        options.set_preference("network.proxy.ssl_port", 9)
+        options.set_preference("network.proxy.no_proxies_on", "localhost,127.0.0.1")
+        downloads = tempfile.TemporaryDirectory(prefix='stv-download-')
+        options.set_preference("browser.download.folderList", 2)
+        options.set_preference("browser.download.dir", downloads.name)
+        options.set_preference("browser.download.useDownloadDir", True)
+        options.set_preference("browser.download.alwaysOpenPanel", False)
+        options.set_preference("browser.helperApps.neverAsk.saveToDisk", "image/svg+xml")
+        driver = webdriver.Firefox(service=Service(driver_path), options=options)
+        driver.stv_download_directory = Path(downloads.name)
+&gt;       driver.set_window_size(1440, 1100)
+
+docs/test-scripts/test_browser.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:1026: in set_window_size
+    self.set_window_rect(width=int(width), height=int(height))
+.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:1101: in set_window_rect
+    return self.execute(Command.SET_WINDOW_RECT, {"x": x, "y": y, "width": width, "height": height})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fcf633e3260&gt;
+response = {'status': 404, 'value': '{"value":{"error":"no such window","message":"Browsing context has been discarded","stacktra...ionette/server.sys.mjs:263:9\\n_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:493:20\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -&gt; None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "&lt;anonymous&gt;")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "&lt;anonymous&gt;")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:14:8
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E       NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:781:5
+E       assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:581:13
+E       assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:169:4
+E       setWindowRect@chrome://remote/content/marionette/driver.sys.mjs:3608:17
+E       dispatch@chrome://remote/content/marionette/server.sys.mjs:317:49
+E       execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+E       onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+E       onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+E       _onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:493:20
+
+.venv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:232: NoSuchWindowException</error></testcase></testsuite></testsuites>

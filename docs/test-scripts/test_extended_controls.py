@@ -25,7 +25,7 @@ def extended_site():
         shutil.copyfile(files('sphinx_rtd_theme')/'static/fonts/RobotoSlab/roboto-slab-v7-regular.woff2',static/'extended.woff2')
         (static/'extended.png').write_bytes(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aWZkAAAAASUVORK5CYII='))
         (static/'extended.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="red"/></svg>')
-        subprocess.run(['node',str(ROOT/'frontend/node_modules/esbuild/bin/esbuild'),str(ROOT/'docs/test-scripts/fixtures/extended/harness-entry.js'),'--bundle','--platform=browser','--format=iife','--global-name=STVExtended','--outfile='+str(static/'extended.js')],check=True,capture_output=True)
+        subprocess.run(['node','--input-type=module','-e',"import {build} from './frontend/node_modules/esbuild/lib/main.js';await build({entryPoints:[process.argv[1]],bundle:true,platform:'browser',format:'iife',globalName:'STVExtended',outfile:process.argv[2]});",str(ROOT/'docs/test-scripts/fixtures/extended/harness-entry.js'),str(static/'extended.js')],cwd=ROOT,check=True,capture_output=True)
         with (source/'conf.py').open('a',encoding='utf-8') as f:f.write("\nhtml_static_path=['_static']\nhtml_js_files=['extended.js']\n")
         text='Requirements\n============\n\n'
         for i in range(12):

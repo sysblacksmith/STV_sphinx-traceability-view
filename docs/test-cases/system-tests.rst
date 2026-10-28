@@ -3778,3 +3778,25 @@ STV_TC_SY_065: Readable details, metadata disclosure and artifact-ID navigation
    without host Needs; disabled explanatory controls without metadata. No duplicate
    handlers, focus traps or invented handling for unsupported markup; failure
    is readable. No network service or hidden-data exposure.
+
+.. test_case:: Remember and restore a real browser view
+   :id: STV_TC_SY_070
+   :status: accepted
+   :tags: feature_view_persistence, test_system
+   :basis: documented
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+   :verifies: STV_SHR_003, STV_SHR_057, STV_SHR_062, STV_SHR_063, STV_SHR_064, STV_SHR_065, STV_SWR_003, STV_SWR_063, STV_SWR_073, STV_SWR_074, STV_SWR_075
+   :last_result: not_run
+
+   **Environment:** Real browser and built Sphinx fixture, file and static HTTP.
+   **Procedure:** Enable by keyboard, expand/reseed/page, open ordered cards,
+   pan/zoom and reload. Compare node IDs/world positions, card order and D3
+   transform. Exercise FIFO/close after restoration, opt-out, independent roots
+   and pages, another tab, malformed/stale/over-capacity state, reduced card limit,
+   blocked/quota storage and layout failure/race. Close and reopen the page using
+   the retained browser profile. Check narrow viewport behavior and no focus theft.
+   **Expected:** All agreed view state restores without HTML from storage;
+   independent scope, last-save-wins, safe fallback and accessible failure status.
+   Disabled reload uses normal startup; existing offline/keyboard controls work.

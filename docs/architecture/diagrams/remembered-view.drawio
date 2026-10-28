@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Remembered view">
+    <mxGraphModel pageWidth="1100" pageHeight="900">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="off" label="OFF / ordinary startup&#10;No view writes" link="requirements-software.html#STV_SWR_073" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=12;">
+            <mxGeometry x="90" y="60" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="restore" label="RESTORING&#10;Validate state; layout; cards; transform" link="requirements-software.html#STV_SWR_074" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=12;">
+            <mxGeometry x="650" y="60" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="on" label="ON / committed view&#10;Save state + cards + pan/zoom" link="requirements-software.html#STV_SWR_075" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=12;">
+            <mxGeometry x="650" y="400" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="error" label="STORAGE ERROR&#10;Announce; exploration remains usable" link="requirements-software.html#STV_SWR_073" linkTarget="_top">
+          <mxCell vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=12;">
+            <mxGeometry x="90" y="400" width="300" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="startup" source="off" target="restore" value="Page load with saved state" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="complete" source="restore" target="on" value="Compatible snapshot / commit" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="enable" source="off" target="on" value="Enable / save current view" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8;entryX=0;entryY=0.2;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="140" />
+              <mxPoint x="490" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fail" source="on" target="error" value="Write fails / keep live view" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;exitX=0;exitY=0.8;entryX=1;entryY=0.8;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="retry" source="error" target="on" value="Next change / successful save" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="650" />
+              <mxPoint x="800" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="disable" source="on" target="off" value="Disable / remove snapshot" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;fontSize=15;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="450" />
+              <mxPoint x="1030" y="20" />
+              <mxPoint x="240" y="20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

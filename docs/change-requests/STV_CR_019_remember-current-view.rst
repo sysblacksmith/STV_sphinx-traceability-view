@@ -1,15 +1,15 @@
 .. _STV_CR_019:
 
 STV_CR_019: Remember current view across page reloads
-===================================================
+=====================================================
 
 .. change_request:: Remember current view across page reloads
    :id: STV_CR_019
-   :status: draft
+   :status: implemented
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: not_assessed
+   :verification_state: partial
 
    **Owner request, 2026-10-28:** Add a checkbox that the user can enable to
    retain the currently shown STV view across page reloads.
@@ -108,3 +108,16 @@ STV_CR_019: Remember current view across page reloads
    Sphinx and the traceability validator have not been run in this session;
    downstream derivation and verification coverage for new SHRs remain pending.
    No runtime checks or acceptance evidence are claimed.
+
+   **Owner acceptance, 2026-10-28:** After reviewing the exact proposed RST,
+   the owner explicitly accepted this CR and STV_SHR_003, STV_SHR_057 and
+   STV_SHR_062 through STV_SHR_065. The owner then invoked concept creation,
+   concept review and concept implementation for this increment. This supersedes
+   the pending-owner statements above for this exact stakeholder revision.
+
+   **Implementation outcome, 2026-10-28:** Agreed behavior is implemented in
+   STATE/RENDER/LAYOUT/INSPECT and the distributable browser asset. Stakeholder
+   acceptance is preserved. :doc:`/concept-reviews/round-16` records concept
+   acceptance; :doc:`/test-execution/cr019-development/index` records actual
+   development checks and limitations. Windows release qualification and formal
+   case executions remain separate; verification is partial, not a release pass.

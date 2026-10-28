@@ -39,3 +39,7 @@ Historical candidate results; no deployment or release approval is implied.
    1.1.0-candidate-2/index
    1.1.0-candidate-3/index
    1.1.0-candidate-4/index
+
+.. toctree::
+
+   cr019-development/index

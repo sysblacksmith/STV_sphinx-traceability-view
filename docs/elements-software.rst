@@ -148,6 +148,8 @@ Software module responsibilities and containment within the product system eleme
 
    Handles atomic collapse-all with current roots and clears stored page expansions. See :ref:`STV_ADR_011`.
 
+   Owns versioned snapshot encoding, current-graph validation and guarded browser storage in ``persistence.js``; unit tests: ``tests/persistence.test.js``. See :ref:`STV_ADR_012`.
+
 .. swe:: Semantic rank layout
    :id: STV_SWE_LAYOUT
    :status: accepted
@@ -170,6 +172,8 @@ Software module responsibilities and containment within the product system eleme
    **Unit tests:** ``tests/layout.test.js``; ``tests/stability.test.js``; ``tests/classified-rows.test.js``.
 
    **Boundary:** ``README.rst``.
+
+   Reuses snapshot positions only with matching dimensions/ranks/topology before current routing and geometry validation. See :ref:`STV_ADR_012`.
 
 .. swe:: Accessible view and viewport
    :id: STV_SWE_RENDER
@@ -194,6 +198,8 @@ Software module responsibilities and containment within the product system eleme
    **Boundary:** ``README.rst``.
 
    Owns Collapse all nodes / Save as SVG wiring and page-metadata.js for scoped page-wide metadata actions; supplies committed workspace geometry to EXPORT. See :ref:`STV_ADR_011`.
+
+   Owns opt-in checkbox, persistence status, startup save gate and committed-state/zoom-end wiring. See :ref:`STV_ADR_012`.
 
 .. swe:: Hover, persistent details and original links
    :id: STV_SWE_INSPECT
@@ -221,6 +227,8 @@ Software module responsibilities and containment within the product system eleme
    **Boundary:** ``README.rst``.
 
    Applies independent presentation scales and supplies read-only currently visible detail snapshots to EXPORT. See :ref:`STV_ADR_011`.
+
+   Provides ordered card IDs and focus-free reopening for snapshot restoration. See :ref:`STV_ADR_012`.
 
 .. swe:: Visible-area SVG snapshot and download
    :id: STV_SWE_EXPORT

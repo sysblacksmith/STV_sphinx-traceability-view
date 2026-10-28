@@ -26,7 +26,7 @@ export function persistentDetails(root,graph,base,{stack,findTrigger,fallback,ch
   function reveal(entry) {
     entry.dismiss.focus({preventScroll:true});entry.dismiss.scrollIntoView({block:'nearest',inline:'nearest'});
   }
-  function open(id) {
+  function open(id,{focus=true}={}) {
     if(!graph.objects[id])return;
     const {entry,reused,evicted}=collection.open(id,()=> {
       const panel=document.createElement('article');panel.className='stv-detail stv-persistent-detail';
@@ -38,13 +38,13 @@ export function persistentDetails(root,graph,base,{stack,findTrigger,fallback,ch
       const body=document.createElement('div');body.className='stv-persistent-body';body.tabIndex=0;body.textContent='Loading details...';body.setAttribute('aria-live','polite');
       panel.append(title,dismiss,original,body);return {id,panel,dismiss,body};
     });
-    if(reused){sync();reveal(entry);return;}
-    remove(evicted);stack.append(entry.panel);scaleTypography(entry.panel,graph.presentation?.details_font_scale??1);sync();reveal(entry);
+    if(reused){sync();if(focus)reveal(entry);return;}
+    remove(evicted);stack.append(entry.panel);scaleTypography(entry.panel,graph.presentation?.details_font_scale??1);sync();if(focus)reveal(entry);
     Promise.resolve().then(()=>load(graph,id,base)).then(html=> {
       if(collection.entries.get(id)!==entry||!entry.panel.isConnected)return;
       entry.body.replaceChildren(detailContent(html,graph,id,base,`${entry.panel.id}-`));
       scaleTypography(entry.panel,graph.presentation?.details_font_scale??1);
     }).catch(error=>{if(collection.entries.get(id)===entry&&entry.panel.isConnected)entry.body.textContent=error.message;});
   }
-  sync();return {open,close,clear,sync};
+  sync();return {open,close,clear,sync,ids:()=>[...collection.entries.keys()]};
 }
