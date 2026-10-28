@@ -40,19 +40,21 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Initially collapse traced objects
    :id: STV_SHR_003
-   :status: accepted
+   :status: draft
    :tags: feature_navigation, release_initial
    :basis: owner
-   :evidence: docs/sources.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
+   :evidence: docs/sources.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst; docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
    :verification_state: not_assessed
 
-   The system shall initially display only the selected starting objects, or
+   Unless restoring an opted-in saved view under :need:`STV_SHR_063`,
+   the system shall initially display only the selected starting objects, or
    the artificial project node and its first page of at most five stakeholder
    requirements when no IDs are supplied. Ordinary traced relationships shall
    initially remain collapsed.
 
-   **Acceptance criterion:** A single-seed view initially shows that object;
+   **Acceptance criterion:** Without an applicable saved view, a single-seed
+   view initially shows that object;
    a multi-seed view shows all selected objects; a seedless view shows the
    project node plus its first five visible stakeholder requirements, or all
    available entries if fewer exist. No ordinary trace is initially expanded.
@@ -1142,12 +1144,12 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
 
 .. shr:: Keep explicitly opened artifact details available
    :id: STV_SHR_057
-   :status: accepted
+   :status: draft
    :tags: release_initial, persistent_details
    :basis: owner
-   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
+   :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst; docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: passed
+   :verification_state: not_assessed
 
    Each view shall keep explicitly opened artifact details in an independent
    right-side vertical stack, below the graph on narrow screens. Reopening an
@@ -1155,7 +1157,8 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    the bottom. Boxes survive hover, graph navigation, seed/overview/page changes
    and loss of their artifact from the visible graph, until own Close, view-local
    Close all details or oldest-first capacity eviction. Normal document navigation
-   or reload clears them; session persistence is not required.
+   or reload clears them unless opted-in restoration under :need:`STV_SHR_063`
+   applies. Restoration retains card order and the existing capacity policy.
 
    The author shall configure a positive maximum through
    traceability_view_details_limit in conf.py, default 10 per view. Opening a new
@@ -1265,3 +1268,96 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    needs no bulk controls. Both buttons support keyboard activation and visible
    focus under file URLs and static HTTP hosting without exposing hidden Needs
    or changing any embedded graph or open STV detail card.
+
+.. shr:: Choose whether to remember a view
+   :id: STV_SHR_062
+   :status: draft
+   :tags: feature_view_persistence, change_increment
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Each traceability view shall offer an initially unchecked "Remember my
+   current view" checkbox. Enabling it shall save that view's current state,
+   keep the saved state updated after completed view changes, and retain the
+   enabled preference across reloads. Disabling it shall clear that view's saved
+   state and stop saving without changing its current display.
+
+   **Acceptance criterion:** A fresh view defaults to unchecked. Enable, change
+   the view and reload: the checkbox remains checked. Disable and reload: normal
+   startup applies. Disabling does not close cards or move the live graph.
+
+.. shr:: Restore the remembered exploration and viewport
+   :id: STV_SHR_063
+   :status: draft
+   :tags: feature_view_persistence, change_increment
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   With remembering enabled and compatible saved state available, the view
+   shall restore its current starting objects or project-overview page,
+   displayed graph nodes and relationship expansion state, open detail cards
+   in their original oldest-to-newest order, and graph pan position and zoom.
+   Displayed nodes include those outside the current viewport. At unchanged
+   viewport dimensions and unchanged graph data, restoration shall reproduce
+   the same graph area and node positions.
+
+   **Acceptance criterion:** Explore from an interactively selected seed or a
+   non-first overview page, expand branches, open several cards including one
+   absent from the graph, then pan and zoom. Reload reproduces those states;
+   exploration, card closing and oldest-first eviction remain usable.
+   Browser page scroll, hover tooltips, keyboard focus, card-internal scroll
+   and attribute fold state are outside this increment.
+
+.. shr:: Keep remembered views independent and local
+   :id: STV_SHR_064
+   :status: draft
+   :tags: feature_view_persistence, change_increment
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Remembered state and its checkbox preference shall be independent for each
+   documentation project, page and embedded view within the same browser
+   profile and site. Ordinary navigation away and back or a browser restart
+   shall not intentionally clear a remembered view. Cross-device or account
+   synchronization is not required. Changes in another open tab shall not
+   replace the live view without a reload; the last successfully saved state
+   for the same view shall be used on subsequent reload.
+
+   **Acceptance criterion:** Save different states in two embedded views and
+   on two pages; reload each and confirm independent restoration. Two tabs
+   retain their live displays when one saves. Reopening the same documentation
+   in the same profile restores its last saved state when storage is retained.
+
+.. shr:: Recover safely when a remembered view cannot be restored
+   :id: STV_SHR_065
+   :status: draft
+   :tags: feature_view_persistence, change_increment
+   :basis: owner
+   :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
+   :priority: unassigned
+   :verification_state: not_assessed
+
+   Restoration shall preserve host-hidden exclusions, the 200-node limit,
+   the configured detail-card limit and existing offline/static-host operation.
+   The system shall restore compatible available state, omit removed or newly
+   hidden objects, and retain the newest cards if a reduced card limit requires
+   eviction. An invalid snapshot, unusable saved starting context, or graph
+   restoration exceeding the node limit shall use normal startup behavior
+   rather than a partial arbitrary graph. A changed viewport size shall retain
+   graph position and zoom as far as possible without disabling pan or zoom.
+   Unavailable browser storage or failed saving shall leave exploration usable
+   and visibly explain that remembering is unavailable or unsuccessful.
+
+   **Acceptance criterion:** Removed/hidden objects never reappear from saved
+   state. Reduced card capacity follows oldest-first eviction. Corrupt state,
+   an invalid saved starting context and over-capacity graphs fall back safely.
+   Blocked storage or a save failure shows an explanation without breaking
+   graph controls. HTTP/static and direct-file use retain existing functionality;
+   persistence is available where the browser permits local storage.
+   Saved data is not an authority to expose hidden or obsolete detail content.
