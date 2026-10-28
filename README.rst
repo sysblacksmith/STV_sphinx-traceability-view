@@ -5,10 +5,10 @@ Sphinx-Needs extension providing offline interactive traceability exploration.
 Requirements and architecture are indexed in ``docs/index.rst``.
 Project maturity and review records are maintained in ``docs/maturity.rst``.
 
-The planned documentation address is
+The documentation is live at
 `STV documentation <https://sysblacksmith.github.io/STV_sphinx-traceability-view/>`_.
-It becomes available after the first GitHub Pages deployment. Publication steps
-and workflow boundaries are described in ``docs/ci-and-provenance.rst``.
+Publication steps and workflow boundaries are described in
+``docs/ci-and-provenance.rst``.
 
 Build documentation
 -------------------
