@@ -102,6 +102,6 @@ def test_font_settings_defaults_identity_and_named_build_errors(tmp_path):
 @pytest.mark.requirements('STV_SWR_066')
 def test_extended_reset_command_sequences():
     root=Path(__file__).resolve().parents[2]
-    result=subprocess.run(['node','--test','--test-isolation=none','--test-reporter=tap',str(root/'docs/test-scripts/fixtures/extended/reset-sequences.mjs')],cwd=root,capture_output=True,text=True)
+    result=subprocess.run(['node','--test-reporter=tap',str(root/'docs/test-scripts/fixtures/extended/reset-sequences.mjs')],cwd=root,capture_output=True,text=True)
     assert result.returncode==0,result.stdout+result.stderr
     assert '# pass 2' in result.stdout
