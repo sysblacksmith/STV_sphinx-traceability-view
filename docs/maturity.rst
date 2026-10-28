@@ -6,6 +6,29 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+CR019 stakeholder amendment awaiting owner review, 2026-10-28
+--------------------------------------------------------------------------------
+
+The owner invoked stakeholder elicitation and manage-change to align and accept
+:need:`STV_CR_019` and its stakeholder requirements. This increment is limited
+to that stakeholder boundary. :doc:`change-requests/STV_CR_019_remember-current-view`
+contains the request, proposals, retained constraints and pending impact analysis.
+
+Revised :need:`STV_SHR_003` and :need:`STV_SHR_057`, plus new
+:need:`STV_SHR_062` through :need:`STV_SHR_065`, are draft/not_assessed.
+The CR is draft. Exact wording awaits explicit owner review; the instruction
+to reach acceptance is not recorded as approval of newly authored wording.
+Previous acceptance/results below remain historical for their recorded revisions,
+including the earlier STV_SHR_057 result; they do not verify this amendment.
+Current downstream design is not yet reconciled with persistence requirements.
+No internal concept refinement, product implementation or release is included.
+
+PR #6 carries the reviewable stakeholder increment on cr019-remember-current-view,
+based on main 3c2647f56898efce1e1b59b261af30f0f905cf61. Authoring checks only:
+unique stakeholder IDs, draft status and configured model fields checked;
+Sphinx/traceability validation and runtime verification have not been executed.
+New stakeholder derivation/test coverage is an explicit downstream gap.
+
 1.1.0 release qualification, 2026-10-25
 --------------------------------------------------------------------------------
 
