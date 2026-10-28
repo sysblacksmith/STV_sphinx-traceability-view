@@ -164,7 +164,15 @@ GitHub Pages publication
 repository permissions. It installs the pinned documentation dependencies, runs
 the staged publication builder and validates the requirement graph and published
 diagram targets. Only ``docs/_build/html`` is uploaded as the Pages artifact;
-previous builds, diagnostics and local audit reports are outside that tree.
+temporary build output and local audit reports are not uploaded.
+
+Each build uses fresh staging and doctree directories, validates the result,
+then replaces the complete HTML tree so obsolete pages and assets disappear.
+The old HTML and this build's temporary directories are removed afterward.
+Build or audit failures leave current HTML unchanged; promotion failures restore
+it. If restoration itself fails, the script reports and retains the recovery
+backup instead of deleting the last good copy. Capture command output when
+diagnostic logs are needed; temporary build trees are not kept by default.
 
 The ``publish`` input defaults to false: this prepares a downloadable preview
 artifact without deployment. When explicitly selected, deployment additionally

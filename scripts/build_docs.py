@@ -1,8 +1,9 @@
-"""Build a fresh local HTML publication; retain earlier output outside its tree."""
+"""Publish validated fresh HTML and clean up this build's temporary output."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -21,16 +22,22 @@ def build_docs(source):
     # Reject redirected paths before moving any existing tree.
     if output.is_symlink() or output.resolve()!=output:
         raise ValueError('HTML output must be a direct directory below the build directory')
-    stage=Path(tempfile.mkdtemp(prefix='.html-stage-',dir=build))
-    doctrees=build/('.html-doctrees-'+uuid.uuid4().hex)
+    if output.exists() and not output.is_dir():
+        raise ValueError('HTML output must be a directory')
+    with tempfile.TemporaryDirectory(prefix='.html-stage-',dir=build) as stage, \
+         tempfile.TemporaryDirectory(prefix='.html-doctrees-',dir=build) as doctrees:
+        return publish(source,build,output,Path(stage),Path(doctrees))
+
+
+def publish(source,build,output,stage,doctrees):
     result=subprocess.run([sys.executable,'-m','sphinx','-E','-a','-W','--keep-going',
                            '-b','html','-d',str(doctrees),str(source),str(stage)])
     if result.returncode:
-        print(f'Build failed; published output retained. Diagnostic staging: {stage}',file=sys.stderr)
+        print('Build failed; published output retained.',file=sys.stderr)
         return result.returncode
     audit=subprocess.run([sys.executable,str(Path(__file__).with_name('check-method-package.py')),'--published',str(stage)])
     if audit.returncode:
-        print(f'Publication audit failed; previous output retained. Staging: {stage}',file=sys.stderr)
+        print('Publication audit failed; published output retained.',file=sys.stderr)
         return audit.returncode
     if (stage/MANIFEST).exists():
         raise ValueError('Source output collides with the reserved publication manifest')
@@ -52,11 +59,18 @@ def build_docs(source):
     try:
         stage.rename(output)
     except OSError:
-        if had_previous:previous.rename(output)
+        if had_previous:
+            try:
+                previous.rename(output)
+            except OSError as error:
+                # Never delete the only surviving published tree when rollback
+                # itself fails (for example, because another process locks it).
+                raise RuntimeError(f'Promotion and rollback failed; recover previous HTML from {previous}') from error
         raise
+    if had_previous:
+        shutil.rmtree(previous)
     print(f'Documentation built: {output / "index.html"}')
     print(f'Publication inventory: {output / MANIFEST}')
-    if had_previous:print(f'Previous output retained outside publication: {previous}')
     return 0
 
 

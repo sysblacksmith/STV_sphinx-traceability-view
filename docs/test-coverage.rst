@@ -264,6 +264,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
        ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
        ``docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree``;
+       ``docs/test-scripts/test_publication.py::test_failed_audit_cleans_temporary_output[False]``;
+       ``docs/test-scripts/test_publication.py::test_failed_audit_cleans_temporary_output[True]``;
+       ``docs/test-scripts/test_publication.py::test_failed_rollback_preserves_recoverable_backup``;
        ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SWR_043`
      - Candidate sizes 199 and 200 pass, 201 fails; 200 distinct explicit seeds initialize, 201 fail before publication; a tens-of-thousands graph fixture remains addressable through adjacency indexes.
@@ -676,6 +679,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_publication.py::test_clean_publication_removes_obsolete_assets``;
        ``docs/test-scripts/test_publication.py::test_failed_build_preserves_published_tree``;
        ``docs/test-scripts/test_publication.py::test_failed_promotion_restores_previous_tree``;
+       ``docs/test-scripts/test_publication.py::test_failed_audit_cleans_temporary_output[False]``;
+       ``docs/test-scripts/test_publication.py::test_failed_audit_cleans_temporary_output[True]``;
+       ``docs/test-scripts/test_publication.py::test_failed_rollback_preserves_recoverable_backup``;
        ``docs/test-scripts/test_sdist.py::test_sdist_excludes_local_evidence_and_rebuilds_wheel``
    * - :need:`STV_SYS_010`
      - All in-scope MVP interaction checks pass on recorded stable Firefox and Windows versions against file and static HTTP output.

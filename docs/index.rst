@@ -1,6 +1,8 @@
 STV Sphinx Traceability View
 ============================
 
+**STV version:** |release|
+
 STV (Sphinx Traceability View) adds interactive traceability graphs to
 Sphinx-Needs documentation. Explore how requirements, architecture elements
 and tests connect, then inspect their published details without losing your
