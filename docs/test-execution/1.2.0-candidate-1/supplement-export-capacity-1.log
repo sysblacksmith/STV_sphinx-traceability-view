@@ -1,0 +1,118 @@
+Opening file 0 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00000" data-focus="details">Details</button>
+Opening file 1 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00001" data-focus="details">Details</button>
+Opening file 2 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00007" data-focus="details">Details</button>
+Opening file 3 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00101" data-focus="details">Details</button>
+Opening file 4 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29899" data-focus="details">Details</button>
+Opening file 5 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29993" data-focus="details">Details</button>
+Opening file 6 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29999" data-focus="details">Details</button>
+Opening file 7 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00002" data-focus="details">Details</button>
+Opening file 8 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00008" data-focus="details">Details</button>
+Opening file 9 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00102" data-focus="details">Details</button>
+Export file 1600 visible cards 4 bytes 11755693
+Export file 900 visible cards 5 bytes 10898786
+127.0.0.1 - - [01/Nov/2026 14:56:27] "GET /html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/stv/stv.css?v=7a878f08d4133f0123c1d18aadbad8391a987b3fa36fab8640088c3efe91dd1b HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/pygments.css?v=5ecbeea2 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/alabaster.css?v=27fed22d HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/basic.css?v=686e5160 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/documentation_options.js?v=5929fcd5 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/stv/graph-247b26e86cd82a43a85dcf4a18c1d5fcf99c23b0fa95b680565128691d1ad864.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/custom.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:28] "GET /html/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:29] "GET /html/_static/stv/stv.js?v=f0ae65325faef0231906369f8b2c52a8a92e6d168ec8c27aa5a6ea284d677496 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:29] "GET /html/_static/stv/resources/85eb5c125912e6b1c6de7478767a5d5d148dba906c04c3e68e9aeb2e459f6e4c.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:56:29] code 404, message File not found
+127.0.0.1 - - [01/Nov/2026 14:56:29] "GET /favicon.ico HTTP/1.1" 404 -
+Opening http 0 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00000" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:44] "GET /html/_static/stv/details/015ef03d1b1262668393a9a314aff96f648ff8e362e771ed83b43cd92006dae9.js HTTP/1.1" 200 -
+Opening http 1 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00001" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:45] "GET /html/_static/stv/details/88a1351be1137fc8bca3a86cf0c438ea59db8704dbcd03d72fd8a199f29b3344.js HTTP/1.1" 200 -
+Opening http 2 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00007" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:46] "GET /html/_static/stv/details/d4d0dbc3876e546322fe5d87626f88cf2f73acde3123c836b6de2d0413dbe1a8.js HTTP/1.1" 200 -
+Opening http 3 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00101" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:46] "GET /html/_static/stv/details/ae52f972472632f8ee36263cc0e9dd8dedb3fc7be0006e4e02ef762a24d8302f.js HTTP/1.1" 200 -
+Opening http 4 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29899" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:47] "GET /html/_static/stv/details/9873eedd98e0c92bc5d950673033f8084ba49737fccebdf72738870422132381.js HTTP/1.1" 200 -
+Opening http 5 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29993" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:47] "GET /html/_static/stv/details/88130141a6bc0db9ff3831b08d771ad2957b3da67681ddcb0fba1e5af5ca2bbe.js HTTP/1.1" 200 -
+Opening http 6 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_29999" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:48] "GET /html/_static/stv/details/5f734f02879811ce69f81e12fe51c0247f6799c21e72fed03a5ad095dce97a3e.js HTTP/1.1" 200 -
+Opening http 7 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00002" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:48] "GET /html/_static/stv/details/3a8c599fb3a5cb7ff6158a9f767db0343aec4242a76ec48c6f159ced9ebdc9df.js HTTP/1.1" 200 -
+Opening http 8 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00008" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:49] "GET /html/_static/stv/details/5bc1a3ae0c2542c9fc1afabc9eab24d0df558570553584bd4f62703fa7342b1d.js HTTP/1.1" 200 -
+Opening http 9 <button type="button" aria-label="Details for BENCHMARK_LONG_IDENTIFIER_00102" data-focus="details">Details</button>
+127.0.0.1 - - [01/Nov/2026 14:56:49] "GET /html/_static/stv/details/672c269d556266d20adc292792c4cf5b9ac49bb5d7db1adb91145dedcf8872bb.js HTTP/1.1" 200 -
+Export http 1600 visible cards 4 bytes 11747620
+Export http 900 visible cards 5 bytes 10890986
+{
+  "fixture": "Fresh 1.2.0 capacity host in a temporary copy with the exact candidate runtime bundle",
+  "runtime_sha256": "f0ae65325faef0231906369f8b2c52a8a92e6d168ec8c27aa5a6ea284d677496",
+  "started": "2026-11-01T13:55:49.156131+00:00",
+  "finished": "2026-11-01T13:57:01.727020+00:00",
+  "result": "passed",
+  "cases": [
+    {
+      "protocol": "file",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 4,
+      "svg_bytes": 11755783,
+      "svg_sha256": "b19dccef8a46d418a0f64c91317e15c78f0d57c791ec24a16e368260e9d67c7d",
+      "seconds": 1.074280000058934,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-1600.svg"
+    },
+    {
+      "protocol": "file",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10898832,
+      "svg_sha256": "de2507523d5db7bba4f80d560a7cd46ad1c7ff8b9749581cc496a50903df78ee",
+      "seconds": 1.3677060999907553,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-900.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 4,
+      "svg_bytes": 11747710,
+      "svg_sha256": "baa458b2415dc95e34f22ea692800cfb7805e5dec7be1aa21cdf54eba4819bd5",
+      "seconds": 1.170250799972564,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-1600.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10891032,
+      "svg_sha256": "02dd42c79508325dccbe3bb84bb313a170351314a11c6ca4c830ed695f126465",
+      "seconds": 1.0042695000302047,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-900.svg"
+    }
+  ],
+  "script_sha256": "be1ab555177c908130e04267d1d3a9f37a8786870fe9dde24bffca672d2b36f0"
+}

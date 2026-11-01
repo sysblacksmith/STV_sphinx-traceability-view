@@ -1,0 +1,121 @@
+[
+  {
+    "suite": "documentation",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "scripts/build_docs.py",
+      "docs"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T13:53:20.656546+00:00",
+    "log": "supplement-documentation-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T13:54:15.995473+00:00"
+  },
+  {
+    "suite": "hover-export",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\check-hover-export.py"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T13:54:23.043205+00:00",
+    "log": "supplement-hover-export-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T13:54:41.895942+00:00"
+  },
+  {
+    "suite": "export-capacity",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\export-capacity.py"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T13:55:48.385376+00:00",
+    "log": "supplement-export-capacity-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T13:57:01.879717+00:00"
+  },
+  {
+    "suite": "documentation",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "scripts/build_docs.py",
+      "docs"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T14:20:30.845617+00:00",
+    "log": "supplement-documentation-2.log",
+    "returncode": 0,
+    "finished": "2026-11-01T14:21:54.441763+00:00"
+  },
+  {
+    "suite": "traceability",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "tools/method/tooling/validate_traceability.py",
+      "docs/_build/html/needs.json",
+      "--version",
+      "1.2",
+      "--repo-root",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+      "--require-test-coverage",
+      "--csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\final-traceability.csv",
+      "--test-csv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\final-test-traceability.csv"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T14:21:54.442074+00:00",
+    "log": "supplement-traceability-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T14:21:54.610387+00:00"
+  },
+  {
+    "suite": "diagram-links",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "tools/method/tooling/normalize-diagram-links.py",
+      "--diagram-dir",
+      "docs/architecture/diagrams",
+      "--published-dir",
+      "docs/_build/html"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T14:21:54.610783+00:00",
+    "log": "supplement-diagram-links-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T14:21:54.825587+00:00"
+  },
+  {
+    "suite": "published-method",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "scripts/check-method-package.py",
+      "--published",
+      "docs/_build/html"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T14:21:54.826260+00:00",
+    "log": "supplement-published-method-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T14:21:55.859704+00:00"
+  },
+  {
+    "suite": "publication-inputs",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+      "scripts/release.py",
+      "check",
+      "--directory",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\artifacts",
+      "--tag",
+      "v1.2.0"
+    ],
+    "cwd": "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view",
+    "started": "2026-11-01T14:21:55.860158+00:00",
+    "log": "supplement-publication-inputs-1.log",
+    "returncode": 0,
+    "finished": "2026-11-01T14:21:56.129535+00:00"
+  }
+]

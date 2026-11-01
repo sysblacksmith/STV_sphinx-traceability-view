@@ -1,0 +1,62 @@
+{
+  "started": "2026-11-01T14:16:29.018735+00:00",
+  "passed": false,
+  "candidate": "1.2.0-candidate-1",
+  "outcomes": {
+    "passed": 244,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "source_identity": "0b2dbfb2a11436ea6728365e04c1f3207844a786a7ea1daf44549b63128e6b14",
+  "post_run_changes": [
+    {
+      "path": "docs/requirements-software.rst",
+      "change": "verification metadata only",
+      "sha256": "4b1374e15b167dbd4f5d55003b010d77a807f695e9135378d5a5041eea7e7cb4"
+    },
+    {
+      "path": "docs/requirements-stakeholder.rst",
+      "change": "verification metadata only",
+      "sha256": "ccbccb8efff6000d9eb02ec85303173952eec8da3dbbf7be4d26c2e9c38ec264"
+    }
+  ],
+  "commands": [
+    {
+      "suite": "coverage",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/check-coverage.py",
+        "--strict"
+      ],
+      "started": "2026-11-01T14:16:29.019334+00:00",
+      "log": "final-1-coverage.log",
+      "returncode": 0,
+      "finished": "2026-11-01T14:16:30.279685+00:00"
+    },
+    {
+      "suite": "method-package",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/check-method-package.py"
+      ],
+      "started": "2026-11-01T14:16:30.281197+00:00",
+      "log": "final-1-method-package.log",
+      "returncode": 0,
+      "finished": "2026-11-01T14:16:30.724721+00:00"
+    },
+    {
+      "suite": "documentation",
+      "command": [
+        "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\.venv-implementation\\Scripts\\python.exe",
+        "scripts/build_docs.py",
+        "docs"
+      ],
+      "started": "2026-11-01T14:16:30.725405+00:00",
+      "log": "final-1-documentation.log",
+      "returncode": 1,
+      "finished": "2026-11-01T14:17:34.278727+00:00"
+    }
+  ],
+  "finished": "2026-11-01T14:17:34.278727+00:00"
+}
