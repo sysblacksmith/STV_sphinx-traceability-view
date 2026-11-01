@@ -1,0 +1,11 @@
+{
+  "publication_passed": true,
+  "documentation_passed": true,
+  "git_status": " M docs/maturity.rst\r\n M docs/test-execution/index.rst\r\n?? docs/test-execution/1.2.0-publication/\r\n",
+  "follow_up": "Publication evidence and maturity/index updates remain uncommitted; issued tag and packages unchanged.",
+  "recorded_at": "2026-11-01T14:41:33.0256780Z",
+  "remaining_build_entries": [
+    "html"
+  ],
+  "traceability_passed": true
+}
