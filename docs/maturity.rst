@@ -6,6 +6,20 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+1.2.0 released, 2026-11-01
+---------------------------
+
+The owner authorized publishing after committing the qualified baseline.
+PR #11 passed hosted validation and merged. Annotated ``v1.2.0`` identifies
+``c75dbbe84481bf0c319daf09151b6330d6f99c9d``. GitHub release, PyPI Trusted
+Publishing and Pages deployment completed successfully. Public distribution
+hashes and the deployed 1.2.0 runtime match the qualified artifacts.
+
+:doc:`test-execution/1.2.0-publication/index` retains the publication receipts,
+public verification and completed post-release workspace review. Prior
+qualification/failed-attempt records remain unchanged. Publication documentation
+and subsequent development do not move the issued tag.
+
 1.2.0 release qualification, 2026-11-01
 ---------------------------------------
 
