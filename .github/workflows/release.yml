@@ -64,7 +64,7 @@ jobs:
         working-directory: release
         run: sha256sum --strict --check SHA256SUMS
       - name: Publish qualified distributions through Trusted Publishing
-        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
         with:
           packages-dir: release/packages/
           attestations: true
@@ -82,4 +82,4 @@ jobs:
     steps:
       - name: Deploy validated release documentation
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
