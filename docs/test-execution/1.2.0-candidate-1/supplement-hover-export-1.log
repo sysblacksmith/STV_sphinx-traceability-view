@@ -1,0 +1,53 @@
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/demo.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/stv/stv.js?v=f0ae65325faef0231906369f8b2c52a8a92e6d168ec8c27aa5a6ea284d677496 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/stv/stv.css?v=7a878f08d4133f0123c1d18aadbad8391a987b3fa36fab8640088c3efe91dd1b HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/stv/graph-608b3e32ddb395f07fe0a9fa9505e6c269ff33d45e0a98be638df9e0647df751.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/pygments.css?v=b86133f3 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/css/theme.css?v=9edc463e HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/graphviz.css?v=4ae1632d HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/need-controls.css?v=cff058cf HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/common_css/needstable.css?v=5e1b6797 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/common_css/need_core.css?v=f5b60a78 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/common_css/need_links.css?v=2150a916 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/common_css/need_style.css?v=92936fa5 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/modern.css?v=803738c0 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/wide-layout.css?v=cf1a8d56 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/jquery.js?v=5d32c60e HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/documentation_options.js?v=84a24d03 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/doctools.js?v=9bcbadda HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx_highlight.js?v=dc90522c HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/need-controls.js?v=1c006165 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:36] "GET /html/_static/js/theme.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /html/_static/stv/resources/feacc13cb8e28b9e7f027b192ac208000f006b12b382597ca51b995d02a71fbd.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /html/_static/css/fonts/lato-normal.woff2?bd03a2cc277bbbc338d464e679fe9942 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /html/_static/css/fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /html/_static/css/fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /html/_static/css/fonts/lato-bold.woff2?cccb897485813c7c256901dbca54ecf2 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 14:54:37] code 404, message File not found
+127.0.0.1 - - [01/Nov/2026 14:54:37] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [01/Nov/2026 14:54:38] "GET /html/_static/stv/details/2dffa5bc7d65b93772335c129a8dcb56266f0eafa3f190492610d90545783078.js HTTP/1.1" 200 -
+[
+  {
+    "protocol": "file",
+    "result": "passed",
+    "visible_words_checked": 25,
+    "sha256": "dc499507caa6cb667c84a88b151ed051882f4d2e04e358d06b1a5d97bdfecd25",
+    "bytes": 682165
+  },
+  {
+    "protocol": "http",
+    "result": "passed",
+    "visible_words_checked": 25,
+    "sha256": "d2ec691691877f0814fb0d6284e5b29c06f69165fc2d783e860983355acaf05c",
+    "bytes": 681766
+  }
+]

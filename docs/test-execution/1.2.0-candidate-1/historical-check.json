@@ -1,0 +1,598 @@
+{
+  "started": "2026-11-01T14:00:32.848208+00:00",
+  "finished": "2026-11-01T14:01:34.510021+00:00",
+  "result": "passed",
+  "archives": [
+    {
+      "sha256": "03dc6ab7caa5d1c0c5cde0b3c3d354a881dc37380f5d03bfc14360e3360b8370",
+      "bytes": 946072,
+      "locations": [
+        "docs/test-execution/0.1.0-candidate-1/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "36aee552566b60e9d071a69027b52d196aef51f1"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "0d6f84c2d5e98f328cb5fbc041dc875a702ea0ebf4f784601d99f88c4f183679",
+      "bytes": 1027622,
+      "locations": [
+        "dist/retained-build-artifacts/0d6f84c2d5e98f32/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "13691dae25243fa05dc45a2fc52a2fd84dd949bf9cb763dc6f8bd122fb98db67",
+      "bytes": 1004186,
+      "locations": [
+        "dist/retained-build-artifacts/13691dae25243fa0/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "1410b74060ec6cbebe5d8dd0c31f603e1da1771a18bc8f4120ed85f3a9c160ca",
+      "bytes": 1004169,
+      "locations": [
+        "dist/retained-build-artifacts/1410b74060ec6cbe/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "1905bebe38f24df37531004915f7b252489039df7e8e7ead5306880c8643a839",
+      "bytes": 1006193,
+      "locations": [
+        "dist/sphinx_traceability_view-1.0.0-py3-none-any.whl",
+        "docs/test-execution/1.0.0-candidate-2/artifacts/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "fa2834dbf27e504f46044b4270e8ecab5274274f"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "2a9cbe046177b58973781de8df45598219f6510a88f9ca1f89498e2aa7b9b199",
+      "bytes": 947306,
+      "locations": [
+        "docs/test-execution/0.2.0-candidate-1/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "2bc7d035cdabec5abd8b238dce679e40fdb51ac9"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "2b5d42eb6b853792c3b0782f58bb721404a921ab8c4d50de58bf47741fa77a0b",
+      "bytes": 37564590,
+      "locations": [
+        "docs/test-execution/build-cleanup-2026-10-26/retained-evidence.zip"
+      ],
+      "git_objects": [
+        "25377f4c2b809be2311bd8e520b0f17fb1390791"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "2fa0f670297e953a76b896836f4c64d55f0251984188ee9f77dfc43df6affad3",
+      "bytes": 960376,
+      "locations": [
+        "docs/test-execution/1.0.0-candidate-1/artifacts/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "f0a8f452443ccc640f7d7064b4148963d09826b0"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "32acbd6f8208a4ab8ecd00fe36078288c09411cfad6b7c38e99b46af41f861bd",
+      "bytes": 2175542,
+      "locations": [
+        "dist/retained-build-artifacts/32acbd6f8208a4ab/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "346a3fb086620850096b0409a3db05cbc3d3256688cd0d236d84ce3ee0859dbd",
+      "bytes": 1005745,
+      "locations": [
+        "dist/retained-build-artifacts/346a3fb086620850/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "37e6b1e586fd4436de9dcdf7f9fa6d9a1b17bc7210d6793e363375f02b43633b",
+      "bytes": 1050889,
+      "locations": [
+        "dist/sphinx_traceability_view-1.1.0.tar.gz",
+        "docs/test-execution/1.1.0-candidate-1/artifacts/sphinx_traceability_view-1.1.0.tar.gz"
+      ],
+      "git_objects": [
+        "ea8fd8bfa4a77f5ddbc2bf569fdda1d7e6b8f1b4"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "3e18f79f07b4a9898c439510fefca078073b8ef0ed612e44e7bfa33091cba500",
+      "bytes": 1032866,
+      "locations": [
+        "dist/retained-build-artifacts/3e18f79f07b4a989/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "3fc4930b3aa382968b8a61f982f48dc36ebbd71356c03c02b1843394f28c3e75",
+      "bytes": 1050874,
+      "locations": [
+        "dist/retained-build-artifacts/3fc4930b3aa38296/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "46344f70e2e48f6be191fb8fe2dd25f66082b0c72f59f742052ba563a1fbcd3a",
+      "bytes": 1006251,
+      "locations": [
+        "dist/retained-build-artifacts/46344f70e2e48f6b/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "4cfed985248b3f328d46c5ffb57a15b5c4d89c9be0f4296e0c3568bba18549eb",
+      "bytes": 1015699,
+      "locations": [
+        "docs/test-execution/1.1.0-candidate-2/artifacts/sphinx_traceability_view-1.1.0-py3-none-any.whl",
+        "docs/test-execution/1.1.0-candidate-3/artifacts/sphinx_traceability_view-1.1.0-py3-none-any.whl",
+        "docs/test-execution/1.1.0-candidate-4/artifacts/sphinx_traceability_view-1.1.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "958cdbdfbe6326bc42ae4e2cef61154820cf9567"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "4d0788ac57431020b9769c6722dbbf19063d6c66c510cbcdcc64aed135260aef",
+      "bytes": 1001300,
+      "locations": [
+        "dist/retained-build-artifacts/4d0788ac57431020/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "4f2d60dfdbcc553b46b5758ffead69141bfc43791c9472fb28ca4788fa324564",
+      "bytes": 1015646,
+      "locations": [
+        "dist/retained-build-artifacts/4f2d60dfdbcc553b/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "558ffe75a7fd2550660713e6cd472dc9f4d7d9d6034f5e1cd017e3b55ce9095d",
+      "bytes": 1001212,
+      "locations": [
+        "dist/retained-build-artifacts/558ffe75a7fd2550/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "5c9e3c669f76ce85c5148bc87d947ea0c21e41583782db2ff63cb9b497af4b02",
+      "bytes": 1015640,
+      "locations": [
+        "dist/retained-build-artifacts/5c9e3c669f76ce85/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "63e8f1e68f07be31946e3e26546e3e7db05a07b8958ccba4485ce2afc41396b8",
+      "bytes": 1032885,
+      "locations": [
+        "dist/sphinx_traceability_view-1.0.0.tar.gz",
+        "docs/test-execution/1.0.0-candidate-2/artifacts/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [
+        "a4da23707cb012dd26989cdea5deaba2be91315f"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "64be216ffc2fa2fc14b3af92b0704480ecd831994762e3e4942984d813f18f58",
+      "bytes": 2087874,
+      "locations": [
+        "docs/test-execution/1.0.0-candidate-1/artifacts/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [
+        "6cc208e0d89349f7c391edea113424a91fc6e03c"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "65bc6639ea31559ebd34b5f8e3c49283f7ac17af1a912c0588e8a2dfeab1246d",
+      "bytes": 2157706,
+      "locations": [
+        "dist/retained-build-artifacts/65bc6639ea31559e/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "6ad696e86a2b9af6b82f0e43f0254d2d69d6b2a2a5789c34c2fd43585d6ee2e0",
+      "bytes": 1031696,
+      "locations": [
+        "dist/retained-build-artifacts/6ad696e86a2b9af6/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "6e964833b68488b722bc761a0116155e589b3928813abeaa8d61a5824bf73785",
+      "bytes": 1051113,
+      "locations": [
+        "docs/test-execution/1.1.0-candidate-2/artifacts/sphinx_traceability_view-1.1.0.tar.gz",
+        "docs/test-execution/1.1.0-candidate-3/artifacts/sphinx_traceability_view-1.1.0.tar.gz",
+        "docs/test-execution/1.1.0-candidate-4/artifacts/sphinx_traceability_view-1.1.0.tar.gz"
+      ],
+      "git_objects": [
+        "d823aaf61520d3dc697697e2134b0e3c878b05f7"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "7575ef0652547fdc7017e944cd1eaca3306e5d4e4032ef4a8c42df2666c6cc26",
+      "bytes": 1018069,
+      "locations": [
+        "dist/retained-build-artifacts/7575ef0652547fdc/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "7fed3e71cd96910f013bf30def789a02075a5b13df2011b15f990be888d7d7a4",
+      "bytes": 1056395,
+      "locations": [
+        "docs/test-execution/1.2.0-candidate-1/artifacts/sphinx_traceability_view-1.2.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "82fcd6689ad4f743b6cb277142159f4767277344820c2fc87c61a8f71c6966a2",
+      "bytes": 1001226,
+      "locations": [
+        "dist/retained-build-artifacts/82fcd6689ad4f743/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "86ab3810d6723fa8a7712f2875549ef97d681a450229e6160fa0950a4fae614f",
+      "bytes": 1050888,
+      "locations": [
+        "dist/retained-build-artifacts/86ab3810d6723fa8/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "8a31577baec118e32d697c00faef83f06b60dd9478cb0f791be64a0c867f1fdd",
+      "bytes": 946603,
+      "locations": [
+        "docs/test-execution/0.1.0-candidate-3/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl",
+        "docs/test-execution/0.1.0-candidate-4/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "1206c7f4a965b9e009639f7e0ffbab4221e557bd"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "935d61d7ae0da3440e34d25959c5cac2b1b6557df40a150602367ff51cc61056",
+      "bytes": 1050885,
+      "locations": [
+        "dist/retained-build-artifacts/935d61d7ae0da344/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "94f2829879678ba75a947a82a038a58bb1f52f1878e8055eecf3290b91444953",
+      "bytes": 2164256,
+      "locations": [
+        "dist/retained-build-artifacts/94f2829879678ba7/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "9638e2eeab8016af42a1f627abc609c21256ed07a4a6d70eef5d2c2a4d56733f",
+      "bytes": 1027416,
+      "locations": [
+        "dist/retained-build-artifacts/9638e2eeab8016af/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "981142d716aeeee6b182093f35bcb662d1d52fa14650b9652f7e42645b9337f0",
+      "bytes": 1048316,
+      "locations": [
+        "dist/retained-build-artifacts/981142d716aeeee6/sphinx_traceability_view-1.0.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "994ac6361bd044068f44399cd4f1ece6176207c9841d95448a5cf91bca5f3c29",
+      "bytes": 1015650,
+      "locations": [
+        "dist/retained-build-artifacts/994ac6361bd04406/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "a2798aa829c9a8c910c2292a3456134bc5a264d7c4786ae4d86ae5b43dc579f8",
+      "bytes": 1002641,
+      "locations": [
+        "dist/retained-build-artifacts/a2798aa829c9a8c9/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "a2e7964f3d3f7c754daaadea0fbabe4c151a2c02832190ba9d8f2d88d1816a44",
+      "bytes": 949118,
+      "locations": [
+        "docs/test-execution/0.2.0-candidate-2/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl",
+        "docs/test-execution/0.2.0-candidate-3/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "0c316fd73bbc09b6a45b682dbfb17d2c690b694f"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ac1a23625c104ca26768856b1c00675c042fe62a0685bac7967a57f52f0ef6e5",
+      "bytes": 949206,
+      "locations": [
+        "docs/test-execution/0.2.0-candidate-4/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl",
+        "docs/test-execution/0.2.0-candidate-5/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl",
+        "docs/test-execution/0.2.0-method-1/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl",
+        "docs/test-execution/0.2.0-method-2/artifacts/sphinx_traceability_view-0.2.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "a36fe8438dc567e2393aaf6395c163d061b9a10e"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ad2a8635e5b984159d360aa0b331d0af537fb5200ba674798702388439ef5693",
+      "bytes": 2264033,
+      "locations": [
+        "dist/retained-build-artifacts/ad2a8635e5b98415/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ad6d54122beb6af4415bead0182e333520f0a1ec875b7725822c68340db3cc97",
+      "bytes": 946427,
+      "locations": [
+        "docs/test-execution/0.1.0-candidate-2/artifacts/sphinx_traceability_view-0.1.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "55329f476946277413cf4e2a4e7f41a87ca53417"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ba1fe107d142fb8f99ee629c9f6d78a500917e93448e974be05708f4a0ce192a",
+      "bytes": 2087118,
+      "locations": [
+        "dist/sphinx_traceability_view-0.2.0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "bb0c64d44c056b5a8d7fb9945775f628586e5a340fbebc56f75ca66527d87b74",
+      "bytes": 1015644,
+      "locations": [
+        "dist/sphinx_traceability_view-1.1.0-py3-none-any.whl",
+        "docs/test-execution/1.1.0-candidate-1/artifacts/sphinx_traceability_view-1.1.0-py3-none-any.whl"
+      ],
+      "git_objects": [
+        "f425cf164d90f1b252678021230c48397a47a270"
+      ],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "bd2b3cec948f0a737c787a1fa2fe076e66992606a99d25b63ffceb69277e928f",
+      "bytes": 1014167,
+      "locations": [
+        "dist/retained-build-artifacts/bd2b3cec948f0a73/sphinx_traceability_view-1.0.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ca8c4e3f43e7307e549ec42da7ed1d04ceb84d52517dc5672099522256ffbf83",
+      "bytes": 1001629,
+      "locations": [
+        "dist/retained-build-artifacts/ca8c4e3f43e7307e/sphinx_traceability_view-1.0.0.dev0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "dfc02d224353df0d207eb10e14c4d03226bc8024f9c9382a4fe18cd849f928ec",
+      "bytes": 1016913,
+      "locations": [
+        "docs/test-execution/1.2.0-candidate-1/artifacts/sphinx_traceability_view-1.2.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "e335029605579d9c931532a43dd80468d941d3289f4cf8ed227cb3b0b64bd8a7",
+      "bytes": 1018504,
+      "locations": [
+        "dist/retained-build-artifacts/e335029605579d9c/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "e709d41a89d4309abee062fd02be865b390f98df2b54bfaf8254060058760a52",
+      "bytes": 960359,
+      "locations": [
+        "dist/sphinx_traceability_view-0.2.0-py3-none-any.whl"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    },
+    {
+      "sha256": "ff5c27b2f9247c66d64e54c52665b8825f319c34478b8e352b7517d12675e26e",
+      "bytes": 1023312,
+      "locations": [
+        "dist/retained-build-artifacts/ff5c27b2f9247c66/sphinx_traceability_view-1.0.0.dev0.tar.gz"
+      ],
+      "git_objects": [],
+      "elk_sha256": "48d338d5aeddd9503ccf1d12661c11b5d7d43c6afc5f66c7ddb2ea4170c0f6bf",
+      "supplement": "LICENSE.txt + THIRD_PARTY_NOTICES.txt + ELK-SOURCE.txt + ELK-INVENTORY.json",
+      "archive_unchanged": true
+    }
+  ],
+  "supplement": [
+    {
+      "source": "LICENSE",
+      "retained": "LICENSE.txt",
+      "identical_bytes": true,
+      "identical_text": true,
+      "sha256": "363726635411461a4f16c757930343bb8d9ab969ba1a41e66d47aee096058929"
+    },
+    {
+      "source": "src/sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt",
+      "retained": "THIRD_PARTY_NOTICES.txt",
+      "identical_bytes": false,
+      "identical_text": true,
+      "sha256": "3664cca7e9539ba2d9a23db962602c2cc3186a16e0ce24489618ebbdd35988f6"
+    },
+    {
+      "source": "src/sphinx_traceability_view/static/vendor/ELK-SOURCE.txt",
+      "retained": "ELK-SOURCE.txt",
+      "identical_bytes": true,
+      "identical_text": true,
+      "sha256": "bb1827072b40c849822fdbf1f597201a2a857700dd8643e70f588bdac8ad811b"
+    },
+    {
+      "source": "frontend/legal/elk-inventory.json",
+      "retained": "ELK-INVENTORY.json",
+      "identical_bytes": true,
+      "identical_text": true,
+      "sha256": "63edf3a9f3ca0cdb45c4ad32fed7df99ba45c12eb7c09189444774896cfa5b84"
+    }
+  ],
+  "basis": "Fresh Git and retained archive scan; audited ELK fingerprint; known retained checksums; complete supplement with only CRLF/LF normalization"
+}

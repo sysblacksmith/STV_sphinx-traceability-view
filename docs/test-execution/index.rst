@@ -41,3 +41,5 @@ Historical candidate results; no deployment or release approval is implied.
    1.1.0-candidate-4/index
    build-cleanup-2026-10-26/index
    cr019-development/index
+   1.2.0-candidate-1/index
+   1.2.0-publication/index

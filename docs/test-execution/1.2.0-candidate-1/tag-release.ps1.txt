@@ -1,0 +1,4 @@
+# Create and review the final release commit and pass hosted checks first.
+# Replace this placeholder with that explicit final commit hash.
+$releaseCommit = '<final-release-commit-sha>'
+git tag -a v1.2.0 $releaseCommit -m 'STV 1.2.0'

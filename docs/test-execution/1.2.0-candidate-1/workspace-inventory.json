@@ -1,0 +1,163 @@
+{
+  "recorded_at": "2026-11-01T14:05:52.857994+00:00",
+  "proposed": [
+    {
+      "path": "docs/_build/ci-runtime",
+      "bytes": 6749867,
+      "files": 83,
+      "reason": "Reproducible release working output; canonical reports and distributions retained separately",
+      "consequence": "Recreate capacity host, offline wheelhouse or temporary consumer as needed"
+    },
+    {
+      "path": "docs/_build/release-benchmark",
+      "bytes": 430588508,
+      "files": 30086,
+      "reason": "Reproducible release working output; canonical reports and distributions retained separately",
+      "consequence": "Recreate capacity host, offline wheelhouse or temporary consumer as needed"
+    },
+    {
+      "path": "docs/_build/release-runtime310",
+      "bytes": 128963607,
+      "files": 8113,
+      "reason": "Reproducible release working output; canonical reports and distributions retained separately",
+      "consequence": "Recreate capacity host, offline wheelhouse or temporary consumer as needed"
+    },
+    {
+      "path": "docs/_build/test-map.json",
+      "bytes": 41707,
+      "files": 1,
+      "reason": "Reproducible release working output; canonical reports and distributions retained separately",
+      "consequence": "Recreate capacity host, offline wheelhouse or temporary consumer as needed"
+    },
+    {
+      "path": "docs/_build/wheelhouse",
+      "bytes": 26612096,
+      "files": 38,
+      "reason": "Reproducible release working output; canonical reports and distributions retained separately",
+      "consequence": "Recreate capacity host, offline wheelhouse or temporary consumer as needed"
+    },
+    {
+      "path": "src/sphinx_traceability_view/__pycache__",
+      "bytes": 1380,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/__pycache__",
+      "bytes": 5107,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/tests/__pycache__",
+      "bytes": 15150,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/__pycache__",
+      "bytes": 30303,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/tests/__pycache__",
+      "bytes": 44339,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/__pycache__",
+      "bytes": 21994,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/tests/__pycache__",
+      "bytes": 11821,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/__pycache__",
+      "bytes": 11479,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/tests/__pycache__",
+      "bytes": 29164,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/__pycache__",
+      "bytes": 12980,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/tests/__pycache__",
+      "bytes": 19576,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "docs/test-scripts/__pycache__",
+      "bytes": 1109810,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "scripts/__pycache__",
+      "bytes": 55261,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": "tools/method/tooling/__pycache__",
+      "bytes": 29077,
+      "reason": "Regenerated Python bytecode cache",
+      "consequence": "Python recreates it on next import"
+    },
+    {
+      "path": ".pytest_cache",
+      "bytes": 24182,
+      "reason": "Regenerated test/Python cache",
+      "consequence": "Recreated by subsequent tests/imports"
+    },
+    {
+      "path": "__pycache__",
+      "bytes": 5481,
+      "reason": "Regenerated test/Python cache",
+      "consequence": "Recreated by subsequent tests/imports"
+    },
+    {
+      "path": "docs/__pycache__",
+      "bytes": 2898,
+      "reason": "Regenerated test/Python cache",
+      "consequence": "Recreated by subsequent tests/imports"
+    },
+    {
+      "path": "docs/test-execution/1.2.0-candidate-1/__pycache__",
+      "bytes": 33434,
+      "reason": "Regenerated test/Python cache",
+      "consequence": "Recreated by subsequent tests/imports"
+    }
+  ],
+  "total_bytes": 594419221,
+  "retained": [
+    "docs/_build/html",
+    "dist (all current and historical distributions)",
+    "docs/test-execution (all evidence)",
+    ".venv",
+    ".venv-implementation",
+    "frontend/node_modules",
+    "next_steps.rst",
+    "original problem attachments",
+    "_security-audits"
+  ],
+  "deleted": [],
+  "runtime_dependencies": "Both development environment base interpreters remain outside _build",
+  "git_status": " M docs/test-coverage.rst\n M docs/test-execution/index.rst\n M scripts/verify-release.py\n M src/sphinx_traceability_view/_version.py\n M src/sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt\n?? docs/test-execution/1.2.0-candidate-1/\n!! .pytest_cache/\n!! .venv-implementation/\n!! .venv/\n!! __pycache__/\n!! _security-audits/\n!! dist/\n!! docs/__pycache__/\n!! docs/_build/\n!! docs/change-requests/STV_CR_013_artifact_vertical_target_position.pptx\n!! docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.pptx\n!! docs/test-execution/1.2.0-candidate-1/__pycache__/\n!! docs/test-scripts/__pycache__/\n!! frontend/node_modules/\n!! next_steps.rst\n!! scripts/__pycache__/\n!! src/sphinx_traceability_view/__pycache__/\n!! src/sphinx_traceability_view/bundle/__pycache__/\n!! src/sphinx_traceability_view/bundle/tests/__pycache__/\n!! src/sphinx_traceability_view/detail_build/__pycache__/\n!! src/sphinx_traceability_view/detail_build/tests/__pycache__/\n!! src/sphinx_traceability_view/directive/__pycache__/\n!! src/sphinx_traceability_view/directive/tests/__pycache__/\n!! src/sphinx_traceability_view/graph/__pycache__/\n!! src/sphinx_traceability_view/graph/tests/__pycache__/\n!! src/sphinx_traceability_view/model/__pycache__/\n!! src/sphinx_traceability_view/model/tests/__pycache__/\n!! tools/method/tooling/__pycache__/\n"
+}

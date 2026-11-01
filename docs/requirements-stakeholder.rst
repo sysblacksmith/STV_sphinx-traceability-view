@@ -45,7 +45,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/sources.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst; docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    Unless restoring an opted-in saved view under :need:`STV_SHR_063`,
    the system shall initially display only the selected starting objects, or
@@ -1149,7 +1149,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst; docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    Each view shall keep explicitly opened artifact details in an independent
    right-side vertical stack, below the graph on narrow screens. Reopening an
@@ -1276,7 +1276,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    Each traceability view shall offer an initially unchecked "Remember my
    current view" checkbox. Enabling it shall save that view's current state,
@@ -1295,7 +1295,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    With remembering enabled and compatible saved state available, the view
    shall restore its current starting objects or project-overview page,
@@ -1319,7 +1319,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    Remembered state and its checkbox preference shall be independent for each
    documentation project, page and embedded view within the same browser
@@ -1341,7 +1341,7 @@ Stakeholder outcomes and constraints. See :doc:`review` for scope decisions.
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    Restoration shall preserve host-hidden exclusions, the 200-node limit,
    the configured detail-card limit and existing offline/static-host operation.

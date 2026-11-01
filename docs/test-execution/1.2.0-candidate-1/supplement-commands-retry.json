@@ -1,0 +1,75 @@
+[
+  {
+    "suite": "retry-create-runtime310",
+    "command": [
+      "C:\\Users\\fragg\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "-m",
+      "venv",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry"
+    ],
+    "started": "2026-11-01T13:52:08.490473+00:00",
+    "finished": "2026-11-01T13:52:14.734968+00:00",
+    "returncode": 0,
+    "log": "retry-create-runtime310.log"
+  },
+  {
+    "suite": "retry-install-runtime310",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--no-index",
+      "--find-links",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\wheelhouse",
+      "-r",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\requirements-tooling.txt",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-execution\\1.2.0-candidate-1\\artifacts\\sphinx_traceability_view-1.2.0-py3-none-any.whl"
+    ],
+    "started": "2026-11-01T13:52:14.735311+00:00",
+    "finished": "2026-11-01T13:52:38.284238+00:00",
+    "returncode": 0,
+    "log": "retry-install-runtime310.log"
+  },
+  {
+    "suite": "retry-runtime310-host",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry\\Scripts\\python.exe",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\scripts\\ci.py",
+      "runtime"
+    ],
+    "started": "2026-11-01T13:52:38.284563+00:00",
+    "finished": "2026-11-01T13:52:42.780983+00:00",
+    "returncode": 0,
+    "log": "retry-runtime310-host.log"
+  },
+  {
+    "suite": "retry-runtime310-clean-build",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry\\Scripts\\python.exe",
+      "-m",
+      "sphinx",
+      "-W",
+      "-b",
+      "html",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\test-scripts\\fixtures\\minimal",
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry\\fresh-host"
+    ],
+    "started": "2026-11-01T13:52:42.781255+00:00",
+    "finished": "2026-11-01T13:52:43.794733+00:00",
+    "returncode": 0,
+    "log": "retry-runtime310-clean-build.log"
+  },
+  {
+    "suite": "retry-runtime310-version",
+    "command": [
+      "D:\\Dropbox\\MikroContr_Projects\\STV_sphinx-traceability-view\\docs\\_build\\release-runtime310\\1.2.0-candidate-1-retry\\Scripts\\python.exe",
+      "-c",
+      "import sys;print(sys.version)"
+    ],
+    "started": "2026-11-01T13:52:43.795001+00:00",
+    "finished": "2026-11-01T13:52:43.824479+00:00",
+    "returncode": 0,
+    "log": "retry-runtime310-version.log"
+  }
+]
