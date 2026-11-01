@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-11-01T14:23:58.118187+00:00",
+  "passed": true,
+  "source_stability": "All candidate source/build/test inputs unchanged except assessed verification metadata; criterion hashes match",
+  "evidence_publication": "Public summaries retain checkout-only evidence notices; successful local gate/receipt records verified",
+  "audit_harness_corrections": "Initial audit assumed a generic Project version label and public raw downloads; corrected to the actual STV version label and established checkout-only evidence publication policy, without product changes",
+  "remaining_build_entries": [
+    "html"
+  ],
+  "pip_checks": [
+    {
+      "environment": ".venv",
+      "returncode": 0,
+      "output": "No broken requirements found."
+    },
+    {
+      "environment": ".venv-implementation",
+      "returncode": 0,
+      "output": "No broken requirements found."
+    }
+  ],
+  "disposition": "Local qualification complete; awaiting owner release decision and hosted gates; no commit/tag/publication performed"
+}

@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-11-01T14:39:15.524334+00:00",
+  "scope": "Normal teardown of newly created task-owned publication staging only; pre-existing workspace output preserved",
+  "preserved": [
+    {
+      "original": "docs/_build/release-publication/finalize-record.py",
+      "retained": "docs/test-execution/1.2.0-publication/finalize-record.py",
+      "bytes": 5800,
+      "sha256": "920b131aa56017e6d12ae9d8e23a3849a5fab56f72ccfe83e323d453589bb533"
+    },
+    {
+      "original": "docs/_build/release-publication/inspect-hosted.py",
+      "retained": "docs/test-execution/1.2.0-publication/inspect-hosted.py",
+      "bytes": 1402,
+      "sha256": "1781b55ee75592c86bf14fe4f5e3a6ab96c2ee15858df3cad7c5443ff20f004d"
+    },
+    {
+      "original": "docs/_build/release-publication/prepare.py",
+      "retained": "docs/test-execution/1.2.0-publication/prepare.py",
+      "bytes": 811,
+      "sha256": "69dfba637aa44279a43983bb41b3242b16da1f3c4c63fff2b2ca00a275d5ef56"
+    },
+    {
+      "original": "docs/_build/release-publication/publish.py",
+      "retained": "docs/test-execution/1.2.0-publication/publish.py",
+      "bytes": 5365,
+      "sha256": "08e828988f1e80dca302de8e9d10e6411b59ebe7c9e75d00bb00708f9af69638"
+    },
+    {
+      "original": "docs/_build/release-publication/release-notes.md",
+      "retained": "docs/test-execution/1.2.0-publication/release-notes.md.txt",
+      "bytes": 1420,
+      "sha256": "e52fa26da7850ecc63077dce9e502a14b3c24b0cbc2ac53a72469712236e0809"
+    },
+    {
+      "original": "docs/_build/release-publication/verify-publication.py",
+      "retained": "docs/test-execution/1.2.0-publication/verify-publication.py",
+      "bytes": 3722,
+      "sha256": "9a3d6fbd01d82142db9fb174df15aa71935edb49f6c17b434f72051477b01b37"
+    },
+    {
+      "original": "docs/_build/release-1.2.0-publication.json",
+      "retained": "docs/test-execution/1.2.0-publication/github-release.json",
+      "bytes": 1279,
+      "sha256": "459a4b666785388f54455de7cdc53f2796293bcae45d27726c5962b7327969a0"
+    }
+  ],
+  "remaining_build_entries": [
+    "html"
+  ],
+  "distribution_files_verified": 37,
+  "html_files_verified": 2174,
+  "removed_bytes": 19799,
+  "git_status": "?? docs/test-execution/1.2.0-publication/\n"
+}

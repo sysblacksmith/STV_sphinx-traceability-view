@@ -6,6 +6,38 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+1.2.0 released, 2026-11-01
+---------------------------
+
+The owner authorized publishing after committing the qualified baseline.
+PR #11 passed hosted validation and merged. Annotated ``v1.2.0`` identifies
+``c75dbbe84481bf0c319daf09151b6330d6f99c9d``. GitHub release, PyPI Trusted
+Publishing and Pages deployment completed successfully. Public distribution
+hashes and the deployed 1.2.0 runtime match the qualified artifacts.
+
+:doc:`test-execution/1.2.0-publication/index` retains the publication receipts,
+public verification and completed post-release workspace review. Prior
+qualification/failed-attempt records remain unchanged. Publication documentation
+and subsequent development do not move the issued tag.
+
+1.2.0 release qualification, 2026-11-01
+---------------------------------------
+
+The owner authorized version 1.2.0 and complete qualification on current main.
+CR019 is already accepted and implemented. Candidate 1 passed 244
+main automated cases (196 Python / 48 JavaScript), six separate
+CR019 browser supplements, a fresh Python 3.10 consumer, fresh capacity host and
+browser checks, maximum-size/hover SVG supplements and licensing checks. The
+owner confirmed native save/cancel and browser zoom behavior. Scoped CR019
+verification advances without changing acceptance or earlier release records.
+
+:doc:`test-execution/1.2.0-candidate-1/qualification` records the candidate,
+exact artifacts, failed provisioning/publication attempts and successful retests,
+semantic coverage, cleanup approval and limits. Final consolidated gates are
+retained separately; hosted checks and owner release approval remain before
+publication. No commit, tag, push, release or deployment is claimed. Other
+platforms/browsers and occurrence mode remain deferred.
+
 CR019 implemented development increment, 2026-10-28
 --------------------------------------------------------------------------------
 

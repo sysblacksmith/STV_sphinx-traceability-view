@@ -9,7 +9,7 @@ STV_CR_019: Remember current view across page reloads
    :basis: owner
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
 
    **Owner request, 2026-10-28:** Add a checkbox that the user can enable to
    retain the currently shown STV view across page reloads.
