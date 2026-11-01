@@ -6,6 +6,24 @@ links to its review and lifecycle evidence. Need ``:status:`` fields and ADR
 status metadata remain authoritative for individual artifacts. The charts in
 :doc:`project-metrics` read those fields directly.
 
+1.2.0 release qualification, 2026-11-01
+---------------------------------------
+
+The owner authorized version 1.2.0 and complete qualification on current main.
+CR019 is already accepted and implemented. Candidate 1 passed 244
+main automated cases (196 Python / 48 JavaScript), six separate
+CR019 browser supplements, a fresh Python 3.10 consumer, fresh capacity host and
+browser checks, maximum-size/hover SVG supplements and licensing checks. The
+owner confirmed native save/cancel and browser zoom behavior. Scoped CR019
+verification advances without changing acceptance or earlier release records.
+
+:doc:`test-execution/1.2.0-candidate-1/qualification` records the candidate,
+exact artifacts, failed provisioning/publication attempts and successful retests,
+semantic coverage, cleanup approval and limits. Final consolidated gates are
+retained separately; hosted checks and owner release approval remain before
+publication. No commit, tag, push, release or deployment is claimed. Other
+platforms/browsers and occurrence mode remain deferred.
+
 CR019 implemented development increment, 2026-10-28
 --------------------------------------------------------------------------------
 

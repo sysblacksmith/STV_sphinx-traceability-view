@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-01T13:54:41.789327+00:00",
+  "results": [
+    {
+      "protocol": "file",
+      "result": "passed",
+      "visible_words_checked": 25,
+      "sha256": "dc499507caa6cb667c84a88b151ed051882f4d2e04e358d06b1a5d97bdfecd25",
+      "bytes": 682165
+    },
+    {
+      "protocol": "http",
+      "result": "passed",
+      "visible_words_checked": 25,
+      "sha256": "d2ec691691877f0814fb0d6284e5b29c06f69165fc2d783e860983355acaf05c",
+      "bytes": 681766
+    }
+  ]
+}

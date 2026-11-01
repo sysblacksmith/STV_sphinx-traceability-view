@@ -1,0 +1,2279 @@
+[
+  {
+    "selector": "test::STV_SWR_006 STV_SWR_013: reverse traversal has no depth cutoff",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_001",
+    "execution_id": "STV_TE_7430DEE1AF82400B"
+  },
+  {
+    "selector": "test::STV_SWR_056: parent and project center over five visible children",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_002",
+    "execution_id": "STV_TE_5B50654967FFC8AD"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052 STV_SWR_043 STV_SWR_044: page boundaries, root capacity and independent views",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_003",
+    "execution_id": "STV_TE_C6046D23B902B7F1"
+  },
+  {
+    "selector": "test::STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_004",
+    "execution_id": "STV_TE_9E90FD93668F7B71"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[javascript:bad()]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_005",
+    "execution_id": "STV_TE_2ECAA521E086E2B6"
+  },
+  {
+    "selector": "test::STV_SWR_024: self-loop terminates and collapse restores the only seed",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_006",
+    "execution_id": "STV_TE_91D3C9A0FAA76337"
+  },
+  {
+    "selector": "test::STV_SWR_055: replacement level mappings drive ordering without relation-name assumptions",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_007",
+    "execution_id": "STV_TE_C3F56BFD9AD699B6"
+  },
+  {
+    "selector": "test::STV_SWR_057: runtime reseeding is atomic and clears exploration",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_008",
+    "execution_id": "STV_TE_329CE2C2BBEDE64C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_host_normalization",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_009",
+    "execution_id": "STV_TE_0E2668B41EA19292"
+  },
+  {
+    "selector": "test::STV_SWR_053: clear facing ports and fan-in avoid outer detours",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_010",
+    "execution_id": "STV_TE_CB50D19504DA48CE"
+  },
+  {
+    "selector": "test::STV_SWR_056: competing parents do not displace a separate centered parent",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_011",
+    "execution_id": "STV_TE_7093D91720EA4D60"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: project pages preserve independent expansion and collapsed root",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_012",
+    "execution_id": "STV_TE_A79472804540AF7B"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_013",
+    "execution_id": "STV_TE_857CE1B4B8826689"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_classic_registration_treats_prototype_keys_and_script_text_as_data",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_014",
+    "execution_id": "STV_TE_A33CF4119AD409A2"
+  },
+  {
+    "selector": "test::STV_SWR_003 STV_SWR_007 STV_SWR_020 STV_SWR_024 STV_SWR_025: rooted diamond and isolated cycle",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_015",
+    "execution_id": "STV_TE_B6F61063DB62CE56"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change0-levels]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_016",
+    "execution_id": "STV_TE_25FD87376E37D801"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change2-types]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_017",
+    "execution_id": "STV_TE_5F288B697C4D9DDE"
+  },
+  {
+    "selector": "test::STV_SWR_005 STV_SWR_043 STV_SWR_044: 199/200/201 atomic capacity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_018",
+    "execution_id": "STV_TE_B3A18FE76BCFDA38"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[file:///private.html]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_019",
+    "execution_id": "STV_TE_EED3725B7EB23289"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_external_original_url_rejects_executable_or_nonportable_navigation[data:text/html,bad]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_020",
+    "execution_id": "STV_TE_F870EC8D88865014"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_portable_paths_preserve_queries_and_fragments",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_021",
+    "execution_id": "STV_TE_DA522DBAE2AB5A7C"
+  },
+  {
+    "selector": "test::STV_SWR_056: shared children keep unique nodes and conflicting parents do not overlap",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_022",
+    "execution_id": "STV_TE_CD22209C07D0075D"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[ ]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_023",
+    "execution_id": "STV_TE_BAAD3A76EB6BB104"
+  },
+  {
+    "selector": "test::STV_SWR_053: blocked skipped-level edges retain safe detours",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_024",
+    "execution_id": "STV_TE_D0A3E01A4A7E7AB4"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_srcset_data_images_and_css_resources",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_025",
+    "execution_id": "STV_TE_34C4832B6871EA36"
+  },
+  {
+    "selector": "test::STV_SWR_051 STV_SWR_052: cross-page targets do not acquire synthetic root edges",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_026",
+    "execution_id": "STV_TE_2D87998D5C3DC523"
+  },
+  {
+    "selector": "test::STV_SWR_055: upward controls precede neutral and downward controls regardless of authorship",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_027",
+    "execution_id": "STV_TE_9901FCCAA9BA9415"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change1-types.goal]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_028",
+    "execution_id": "STV_TE_B1CECCF3D2308C39"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_hidden_parts_external_and_missing_targets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_029",
+    "execution_id": "STV_TE_6BA9767DF6789E86"
+  },
+  {
+    "selector": "test::STV_SWR_056: cyclic shared geometry with isolated nodes remains deterministic and separated",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_030",
+    "execution_id": "STV_TE_24380697FB81015F"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_031",
+    "execution_id": "STV_TE_52205362FAE71B51"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_static_details_and_remote_fallback",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_032",
+    "execution_id": "STV_TE_6A15072AD411A0E3"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_033",
+    "execution_id": "STV_TE_C80E24695813AB59"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_034",
+    "execution_id": "STV_TE_E647036865E8CE55"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_active_embed_urls_are_not_retained_as_navigation",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_035",
+    "execution_id": "STV_TE_534FCFCF7E00BA5D"
+  },
+  {
+    "selector": "test::STV_SWR_057: local suggestions match IDs and titles and bound results",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_036",
+    "execution_id": "STV_TE_A1A863FCFDCFE832"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_directional_labels[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_037",
+    "execution_id": "STV_TE_450B0BA78CEBEB6C"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_invalid_model[change3-accepted_statuses]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_038",
+    "execution_id": "STV_TE_4BF0C1FF7DD40155"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.bundle.tests.test_bundle::test_detail_assets_preserve_full_identity_with_compact_deduplicated_paths",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_039",
+    "execution_id": "STV_TE_615D2C73A0EE99A6"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_details::test_reserved_transport_attributes_are_never_copied_from_authored_html",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_040",
+    "execution_id": "STV_TE_6A7A81842DEE2E49"
+  },
+  {
+    "selector": "test::STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_041",
+    "execution_id": "STV_TE_D4623CE36094AF61"
+  },
+  {
+    "selector": "test::STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_042",
+    "execution_id": "STV_TE_0D0FF11F245AFB52"
+  },
+  {
+    "selector": "test::STV_SWR_058: expand and collapse preserve existing primary slots",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_058: existing test lane is stable while new primary nodes fit beside it",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_058: a growing earlier band makes room above the clicked lower band",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_058: reranked shared tests remain unique and honor either anchor role",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_058: project root stays anchored through collapse and reopening",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_058: 200-node incremental geometry remains finite and stable",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_043",
+    "execution_id": "STV_TE_CB94B015EC263DD5"
+  },
+  {
+    "selector": "test::STV_SWR_059: SVG bounds include negative routes, detours and node boxes",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_8B91454B0C395027"
+  },
+  {
+    "selector": "test::STV_SWR_059: an empty edge scene still has a finite SVG viewport",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_044",
+    "execution_id": "STV_TE_8B91454B0C395027"
+  },
+  {
+    "selector": "test::STV_SWR_060: initial seed and project rows use natural numeric ID order",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_045",
+    "execution_id": "STV_TE_B434D1EA9FB606AF"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_is_portable_and_does_not_mutate_input",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement0-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement1-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement2-levels_by_tag]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement3-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement4-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement5-types.case]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement6-fallback_level]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement7-level_from.relation]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement8-level_from]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement9-level_from]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement10-level_from.levels]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_classified_model_rejects_invalid_selectors[placement11-fixed level]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_046",
+    "execution_id": "STV_TE_268446FB7219D587"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_classification_is_complete_graph_based_portable_and_deterministic",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_14C556B1E6669FD5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_14C556B1E6669FD5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_unclassified_records_without_fallback_fail_with_need_identity[records1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_14C556B1E6669FD5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_outgoing_owner_mapping_and_malformed_tags_use_defined_policy",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_14C556B1E6669FD5"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.graph.tests.test_graph::test_large_classified_graph_resolves_every_execution_from_its_case",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_047",
+    "execution_id": "STV_TE_14C556B1E6669FD5"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_F291E7AE0C3A7A59"
+  },
+  {
+    "selector": "test::STV_SWR_055: controls use resolved case and execution rows",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_F291E7AE0C3A7A59"
+  },
+  {
+    "selector": "test::STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_048",
+    "execution_id": "STV_TE_F291E7AE0C3A7A59"
+  },
+  {
+    "selector": "test::STV_SWR_063: persistent collection reuses identity without refreshing FIFO age",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_049",
+    "execution_id": "STV_TE_9017F869AADDAD56"
+  },
+  {
+    "selector": "test::STV_SWR_063: default, one-slot and independent detail collections enforce their own capacity",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_049",
+    "execution_id": "STV_TE_9017F869AADDAD56"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_defaults_and_exact_bounds",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[-1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[3]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[1.0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_model::test_details_limit_rejects_invalid_author_values[9007199254740992]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[None]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_limit_is_published_by_real_host[3]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_050",
+    "execution_id": "STV_TE_ABB3E68E80D2F3EA"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_extended_reset_command_sequences",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_051",
+    "execution_id": "STV_TE_3F71C80CBE76794D"
+  },
+  {
+    "selector": "test::STV_SWR_066 reset retains current roots and clears every restoration cache",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_051",
+    "execution_id": "STV_TE_3F71C80CBE76794D"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[-1]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[0.7]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[nan]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[inf]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_invalid_font_scale_names_the_setting[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.model.tests.test_font_scale::test_independent_font_scales_remain_exact",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_typography_nested_units_late_children_and_repeat_scaling",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_font_settings_defaults_identity_and_named_build_errors",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "test::STV_SWR_068 descendant typography is scaled once from unmodified baselines",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_052",
+    "execution_id": "STV_TE_60469460A825E5A8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_download_expiry_pagehide_and_error_ownership",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_snapshot_clipping_immutable_text_resources_and_readiness",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_pointer_snapshot_cancel_keyboard_and_serialization_recovery",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_resource_retry_and_pending_fonts_refuse_capture",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "test::STV_SWR_071 download uses safe filenames and releases owned URLs",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "test::STV_SWR_070 visible crop intersects screen and never invents dimensions",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_053",
+    "execution_id": "STV_TE_CF2826CD0F467EF9"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_054",
+    "execution_id": "STV_TE_F0FB7F36E887613A"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_054",
+    "execution_id": "STV_TE_F0FB7F36E887613A"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_page_metadata_excludes_copies_and_handles_empty_pages",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_054",
+    "execution_id": "STV_TE_F0FB7F36E887613A"
+  },
+  {
+    "selector": "test::STV_SWR_069 bulk state normalizes mixed rows and repeated actions never invert them",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_054",
+    "execution_id": "STV_TE_F0FB7F36E887613A"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_export_resources_embed_local_content_and_reject_active_svg",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_unreferenced_images_do_not_enter_the_graph_resource_record",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_inline_detail_font_faces_embed_local_bytes",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-8]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.detail_build.tests.test_export_resources::test_svg_entity_declarations_are_rejected_before_parsing[utf-16]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_real_font_and_selected_local_media_are_self_contained[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_export_resource_retry_and_pending_fonts_refuse_capture",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[../outside.png]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[%2e%2e/outside.png]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[https://example.invalid/beacon.png]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[//example.invalid/beacon.png]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_svg_resource_escape_and_remote_targets_never_read_outside[javascript:alert(1)]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_real_symlink_escape_does_not_read_target",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_nested_svg_cycles_are_explicit_failures",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<script/>]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<foreignObject/>]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<rect onclick=\"alert(1)\"/>]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_active_svg_elements_attributes_and_imports_are_rejected[<style>@import \"remote.css\";</style>]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_export_resources::test_css_import_cycle_encoded_names_srcset_fonts_and_deterministic_records",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "test::STV_SWR_072 snapshot resources reject remote paths and inherited dictionary entries",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_055",
+    "execution_id": "STV_TE_AAEFAAE3A0582726"
+  },
+  {
+    "selector": "test::STV_SWR_074 exploration/page/card/viewport round trip",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "test::STV_SWR_074 stale/hidden IDs and reduced card limit",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "test::STV_SWR_074 malformed schema/state/page/transform rejected atomically",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "test::STV_SWR_074 200/201-node limits apply to seeds and expansions",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "test::STV_SWR_073 isolation/removal/last-save-wins and guarded getter/quota errors",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "test::STV_SWR_075 geometry reuse requires current dimensions and ranks",
+    "report": "node.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:56.194826+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SW_056",
+    "execution_id": "STV_TE_245E622F914124F3"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_001",
+    "execution_id": "STV_TE_21EC36CA6CCE8591"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_002",
+    "execution_id": "STV_TE_592C60F7DBAE2635"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_003",
+    "execution_id": "STV_TE_10D8C741EA634C01"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_failed_finalization_retains_pending_page_and_previous_assets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_004",
+    "execution_id": "STV_TE_EDBF887E42FFA00D"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_005",
+    "execution_id": "STV_TE_FE386BE5427049F0"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_alternate_host_schema_external_metadata_and_parts",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_006",
+    "execution_id": "STV_TE_F74CE1E256232699"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_documentation_visuals",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_007",
+    "execution_id": "STV_TE_A068479E3F7C1674"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[UNKNOWN]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_008",
+    "execution_id": "STV_TE_562442171556608D"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_control_order_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_009",
+    "execution_id": "STV_TE_FD3CB24029F71B7D"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_010",
+    "execution_id": "STV_TE_28A980B4D13444E8"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[200-True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_011",
+    "execution_id": "STV_TE_1653F853EF6BA9A5"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_missing_placeholder_and_detail_error[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_012",
+    "execution_id": "STV_TE_07748973EFBEE7AF"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_cross_page_bundle",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_013",
+    "execution_id": "STV_TE_819761153322682B"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[ROOT_A UNKNOWN]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_014",
+    "execution_id": "STV_TE_A247DA8C0E04955C"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_015",
+    "execution_id": "STV_TE_885907CB7C9BE957"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_usability_smoke[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_016",
+    "execution_id": "STV_TE_8944DFBBE4F32C4F"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_017",
+    "execution_id": "STV_TE_D938868A58E75A99"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_mapping_has_entry_path_and_location",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_018",
+    "execution_id": "STV_TE_2AB9279CD710B2D6"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_019",
+    "execution_id": "STV_TE_0DECE0E8697DFBED"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_020",
+    "execution_id": "STV_TE_D3F32F1A7B2C808E"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_interactive_seed_smoke[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_021",
+    "execution_id": "STV_TE_A84D8ECC1014B0EE"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_invalid_seed_source_location[HIDDEN_A]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_022",
+    "execution_id": "STV_TE_F3789E9A81CEF0BE"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_seed_capacity_at_directive[201-False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_023",
+    "execution_id": "STV_TE_2ED0C4098318A308"
+  },
+  {
+    "selector": "src.sphinx_traceability_view.directive.tests.test_lifecycle::test_prior_fatal_exception_is_not_replaced_by_bundle_generation",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_024",
+    "execution_id": "STV_TE_244B1C037AA3C732"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_025",
+    "execution_id": "STV_TE_356D0AA693768685"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_incremental_body_change_hidden_and_deleted_objects",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_026",
+    "execution_id": "STV_TE_662FFE1D5E60218E"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_owns_broken_trace_failure",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_027",
+    "execution_id": "STV_TE_54E20F597A26F24F"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_selection_release[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_028",
+    "execution_id": "STV_TE_379A3FC426E17AE7"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_host_default_directional_labels_are_used",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_029",
+    "execution_id": "STV_TE_C1EDE9A31DFDC3A9"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_030",
+    "execution_id": "STV_TE_1DFB3F3B10BB7640"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_project_paging[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_031",
+    "execution_id": "STV_TE_E3A97E937014C6FB"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_async_layout_failure_and_stale_completion[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_032",
+    "execution_id": "STV_TE_41E221457D96AB22"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_alternate_model_geometry_details_and_external[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_033",
+    "execution_id": "STV_TE_84741E6A453CC99C"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_034",
+    "execution_id": "STV_TE_CA503BDB2E45A2A8"
+  },
+  {
+    "selector": "docs.test-scripts.test_capacity::test_large_project_at_visible_capacity[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_035",
+    "execution_id": "STV_TE_3232344A59C0F9C0"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_seed_layout_replacement_failure_and_staleness[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_036",
+    "execution_id": "STV_TE_82A872882A01D6B9"
+  },
+  {
+    "selector": "docs.test-scripts.test_browser::test_offline_exploration[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_037",
+    "execution_id": "STV_TE_D21D12BEAAE35E74"
+  },
+  {
+    "selector": "docs.test-scripts.test_package::test_clean_wheel_host",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_038",
+    "execution_id": "STV_TE_B0F93EF8DDAA2A15"
+  },
+  {
+    "selector": "docs.test-scripts.test_release_seeds::test_empty_seed_catalog[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_039",
+    "execution_id": "STV_TE_23C70B5CADFE85F6"
+  },
+  {
+    "selector": "docs.test-scripts.test_build::test_unsupported_builder_fails_clearly",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_040",
+    "execution_id": "STV_TE_BA73A0873DEDC23D"
+  },
+  {
+    "selector": "docs.test-scripts.test_windows_paths::test_nested_windows_detail_loading_and_retry",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_045",
+    "execution_id": "STV_TE_8022ED96D359D61B"
+  },
+  {
+    "selector": "docs.test-scripts.test_legal_guard::test_build_rejects_unaudited_elk_and_missing_notices",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_046",
+    "execution_id": "STV_TE_9315CB8A6BAFB14A"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_047",
+    "execution_id": "STV_TE_2D0224E188572853"
+  },
+  {
+    "selector": "docs.test-scripts.test_detail_transport::test_authored_transport_markers_stay_inert[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_048",
+    "execution_id": "STV_TE_4FC31631AC32AD39"
+  },
+  {
+    "case_id": "STV_TC_SY_049",
+    "selector": "Fresh Git/retained-archive inventory and complete licensing supplement",
+    "report": "historical-check.json",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:01:34.510021+00:00",
+    "mapping_source": "Fresh supplemental procedure",
+    "execution_id": "STV_TE_18C9BA971B0CE338"
+  },
+  {
+    "case_id": "STV_TC_SY_050",
+    "selector": "Fresh offline Python 3.10 install, dependency check and clean host",
+    "report": "supplement-commands-retry.json",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T13:52:43.824479+00:00",
+    "mapping_source": "Fresh supplemental procedure",
+    "execution_id": "STV_TE_3784740026DBAEE3"
+  },
+  {
+    "selector": "docs.test-scripts.test_sdist::test_sdist_excludes_local_evidence_and_rebuilds_wheel",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_051",
+    "execution_id": "STV_TE_BDAB8C896C5B7922"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_clean_publication_removes_obsolete_assets",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_052",
+    "execution_id": "STV_TE_3194E0C00D5E5120"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_build_preserves_published_tree",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_053",
+    "execution_id": "STV_TE_BE516BF1862781FE"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_audit_cleans_temporary_output[False]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_053",
+    "execution_id": "STV_TE_BE516BF1862781FE"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_audit_cleans_temporary_output[True]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_053",
+    "execution_id": "STV_TE_BE516BF1862781FE"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_promotion_restores_previous_tree",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_054",
+    "execution_id": "STV_TE_3094558686816C3D"
+  },
+  {
+    "selector": "docs.test-scripts.test_publication::test_failed_rollback_preserves_recoverable_backup",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_054",
+    "execution_id": "STV_TE_3094558686816C3D"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_workflow_policy_accepts_reviewed_files_and_rejects_privilege_drift",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_055",
+    "execution_id": "STV_TE_2114AE5490730B19"
+  },
+  {
+    "selector": "docs.test-scripts.test_ci_security::test_candidate_checksums_detect_changed_artifact_bytes",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_056",
+    "execution_id": "STV_TE_A465F6AC125E6A0F"
+  },
+  {
+    "case_id": "STV_TC_SY_057",
+    "selector": "scripts/ci.py runtime against the installed 1.2.0 wheel",
+    "report": "supplement-commands-retry.json",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T13:52:43.824479+00:00",
+    "mapping_source": "Fresh supplemental procedure",
+    "execution_id": "STV_TE_EF9CF01D208E1305"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_05BC66F63ACA5FF3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_group_navigation_keeps_existing_nodes_still[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_05BC66F63ACA5FF3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_05BC66F63ACA5FF3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_project_root_preserves_anchor[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_058",
+    "execution_id": "STV_TE_05BC66F63ACA5FF3"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_D733514232D9B3A0"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[down-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_D733514232D9B3A0"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_D733514232D9B3A0"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_arrow_viewport_covers_negative_routes[up-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_059",
+    "execution_id": "STV_TE_D733514232D9B3A0"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_105487D5F40F1890"
+  },
+  {
+    "selector": "docs.test-scripts.test_position_stability::test_initial_numeric_seed_order[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_060",
+    "execution_id": "STV_TE_105487D5F40F1890"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_061",
+    "execution_id": "STV_TE_575799773B1DCCEC"
+  },
+  {
+    "selector": "docs.test-scripts.test_classified_rows::test_published_classified_rows_and_fallback_navigation[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_061",
+    "execution_id": "STV_TE_575799773B1DCCEC"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_BCF4CA8DCA71F916"
+  },
+  {
+    "selector": "docs.test-scripts.test_viewport_boundary::test_viewport_boundary_tracks_clipping_and_controls[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_062",
+    "execution_id": "STV_TE_BCF4CA8DCA71F916"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_A3A11EF15BFC0A39"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[None-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_A3A11EF15BFC0A39"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_A3A11EF15BFC0A39"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_stack_fifo_scope_navigation_and_responsive_layout[3-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_063",
+    "execution_id": "STV_TE_A3A11EF15BFC0A39"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_3B3D244CA3DF9D0B"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_persistent_completion_identity_eviction_and_retry[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_064",
+    "execution_id": "STV_TE_3B3D244CA3DF9D0B"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_B42030594D71B57E"
+  },
+  {
+    "selector": "docs.test-scripts.test_persistent_details::test_detail_metadata_controls_width_and_artifact_navigation[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_065",
+    "execution_id": "STV_TE_B42030594D71B57E"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_stale_layout_failure_retry_and_independent_views[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_stale_layout_failure_retry_and_independent_views[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[0]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[3]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_overview_boundaries_and_page_restoration_cache[12]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_reset_uses_interactive_seed_and_retains_hidden_artifact_card[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_collapse_all_keeps_current_roots_and_open_details[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_066",
+    "execution_id": "STV_TE_223F00B3F57FF9F8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[1-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_standalone_svg_visible_details[10-http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_067",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "case_id": "STV_TC_SY_067",
+    "selector": "200 nodes / ten cards, file/HTTP, 1600/900px SVG exports",
+    "report": "export-capacity.json",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T13:57:01.727020+00:00",
+    "mapping_source": "Fresh supplemental procedure",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "case_id": "STV_TC_SY_067",
+    "selector": "Real visible-hover capture/reopen on file and HTTP",
+    "report": "hover-export.json",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T13:54:41.789327+00:00",
+    "mapping_source": "Fresh supplemental procedure",
+    "execution_id": "STV_TE_F94B92BCB22B9EC2"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_068",
+    "execution_id": "STV_TE_D2778F6079356CB2"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_font_defaults_legacy_fallback_reuse_resize_and_host_isolation[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_068",
+    "execution_id": "STV_TE_D2778F6079356CB2"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_font_scales_are_independent_and_applied_once",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_068",
+    "execution_id": "STV_TE_D2778F6079356CB2"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_extended_controls::test_host_bulk_mixed_rows_reinitialization_and_native_toggle[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_metadata_without_a_graph[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_unsupported_markup_without_partial_success",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_view_controls::test_page_controls_disclose_missing_host_handler_dependency",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_069",
+    "execution_id": "STV_TE_255830AF37EC9FD8"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_view_roundtrip_disable_isolation_and_card_order[file]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_view_roundtrip_disable_isolation_and_card_order[http]",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_view_stale_corrupt_and_reduced_capacity",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_view_storage_failure_and_pending_layout",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_overview_pages_and_last_save_wins_between_tabs",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-scripts.test_remembered_view::test_remembered_view_survives_browser_restart",
+    "report": "pytest.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:15:54.617430+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_narrow_restore_reduced_cards_and_untrusted_snapshot[file]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_narrow_restore_reduced_cards_and_untrusted_snapshot[http]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_failed_layout_and_storage_removal_preserve_live_view[file]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_failed_layout_and_storage_removal_preserve_live_view[http]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_history_two_saved_views_pages_and_changed_viewport[file]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  },
+  {
+    "selector": "docs.test-execution.1.2.0-candidate-1.test_remembered_supplement::test_history_two_saved_views_pages_and_changed_viewport[http]",
+    "report": "remember-supplement-final.xml",
+    "result": "passed",
+    "report_completed_at": "2026-11-01T14:00:40.079372+00:00",
+    "mapping_source": "Reviewed candidate-4 selector allocation retained; explicit CR019, failed-audit and failed-rollback criterion allocation",
+    "case_id": "STV_TC_SY_070",
+    "execution_id": "STV_TE_1669814EA3AAFF11"
+  }
+]

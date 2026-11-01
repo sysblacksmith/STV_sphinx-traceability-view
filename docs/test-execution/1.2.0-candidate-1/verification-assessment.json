@@ -1,0 +1,83 @@
+{
+  "recorded_at": "2026-11-01T14:16:21.196647+00:00",
+  "basis": "Complete Windows/Firefox file/HTTP selection, fresh minimum runtime, six CR019 browser supplements, 200-node/ten-card and real-hover exports, semantic criterion review and owner native observations; acceptance statuses unchanged",
+  "changes": [
+    {
+      "id": "STV_SHR_003",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_057",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_062",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_063",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_064",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SHR_065",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_003",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_063",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_073",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_074",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_SWR_075",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_CR_019",
+      "before": "partial",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SY_070",
+      "before": "not_assessed",
+      "after": "passed"
+    },
+    {
+      "id": "STV_TC_SW_056",
+      "before": "not_assessed",
+      "after": "passed"
+    }
+  ],
+  "unchanged_criteria_sha256": {
+    "docs/requirements-stakeholder.rst": "1a5f88a2f7bb4cc0fe36294b53257a9565e5d0b8e8bd2edb56bb8aed7364632a",
+    "docs/requirements-software.rst": "90239d40c189add4a23040945eabf288f67a3d7c918c82e7307d15b403545d65",
+    "docs/change-requests/STV_CR_019_remember-current-view.rst": "e7a2cf5918443fd5197a8b4484110a150876508f8f3286de75cd48a1aa8957a5",
+    "docs/test-cases/system-tests.rst": "4e4769cd58eaf08656921b1e91a3109e8071c5b586fef346b6da30e050563d89",
+    "docs/test-cases/software-tests.rst": "ace9f88e4cd49bf4f5d42fe419e9c11fdbf7e81d5ae38f51dd632a93e8df54b2"
+  }
+}

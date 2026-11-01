@@ -1,0 +1,4 @@
+C:\Users\fragg\AppData\Local\Temp\stv-wheel-pxermb9p\env\Lib\site-packages\sphinx_traceability_view\__init__.py
+1.2.0
+
+PATH=C:\Users\fragg\AppData\Local\Temp\stv-wheel-pxermb9p\env\Scripts;C:\Windows\System32

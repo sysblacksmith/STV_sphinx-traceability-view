@@ -63,9 +63,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
-       ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``;
        ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
-       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``;
+       ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_013`
      - A single authored relationship appears in both directional indexes with one canonical edge identity.
      - ``src/sphinx_traceability_view/graph/tests/test_graph.py::test_hidden_parts_external_and_missing_targets``;
@@ -91,9 +91,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
        ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
-       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
-       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
+       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``
    * - :need:`STV_SWR_016`
      - Activation from file and HTTP output opens the correct cross-page object and preserves exploration.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
@@ -114,10 +114,10 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[file]``;
        ``docs/test-scripts/test_detail_transport.py::test_authored_transport_markers_stay_inert[http]``;
        ``docs/test-scripts/test_windows_paths.py::test_nested_windows_detail_loading_and_retry``;
-       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root``;
-       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``;
        ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: concurrent detail requests share one load and retain build identity``;
-       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``
+       ``frontend/src/inspect/tests/inspect.test.js :: STV_SWR_015 STV_SWR_017: failed local detail loading can retry without a stale rejection``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_017 STV_SWR_018: restored detail paths stay inside the output root``;
+       ``frontend/src/inspect/tests/urls.test.js :: STV_SWR_015 STV_SWR_017: restored CSS rejects noncanonical and remote resource paths``
    * - :need:`STV_SWR_018`
      - The same nested-page bundle works below a non-root HTTP prefix and through file URLs.
      - ``src/sphinx_traceability_view/bundle/tests/test_bundle.py::test_classic_registration_treats_prototype_keys_and_script_text_as_data``;
@@ -232,9 +232,9 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_browser.py::test_alternate_model_geometry_details_and_external[http]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[file]``;
        ``docs/test-scripts/test_classified_rows.py::test_published_classified_rows_and_fallback_navigation[http]``;
-       ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``;
        ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
-       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037: 200 classified nodes keep row alignment and safe cyclic routes``;
+       ``frontend/src/layout/tests/layout.test.js :: STV_SWR_009 STV_SWR_010 STV_SWR_011 STV_SWR_012 STV_SWR_037 STV_SWR_053: semantic bands and shared test lane``
    * - :need:`STV_SWR_038`
      - Two views remain independent after navigation and viewport commands; later selectors are independent too.
      - ``docs/test-scripts/test_browser.py::test_offline_exploration[file]``;
@@ -403,8 +403,8 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_release_seeds.py::test_empty_seed_catalog[http]``;
        ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[file]``;
        ``docs/test-scripts/test_release_seeds.py::test_seed_layout_replacement_failure_and_staleness[http]``;
-       ``frontend/src/state/tests/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``;
-       ``frontend/src/render/tests/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``
+       ``frontend/src/render/tests/seeds.test.js :: STV_SWR_057: local suggestions match IDs and titles and bound results``;
+       ``frontend/src/state/tests/state.test.js :: STV_SWR_057: runtime reseeding is atomic and clears exploration``
    * - :need:`STV_SWR_058`
      - Expansion, collapse, repeated identical input, upward band growth, shared-test reranking, project root toggles and a 200-node scene remain finite and nonoverlapping. Surviving ordinary horizontal slots and clicked node coordinates stay unchanged; unrelated views and viewport transforms stay unchanged. Failure/stale completion preserves the previous committed geometry. Fresh initialization, seed, overview and page commands omit prior geometry.
      - ``docs/test-scripts/test_browser.py::test_async_layout_failure_and_stale_completion[file]``;
@@ -415,13 +415,13 @@ separate; see :doc:`maturity`, :doc:`test-execution/index` and :doc:`state-machi
        ``docs/test-scripts/test_position_stability.py::test_group_navigation_keeps_existing_nodes_still[http]``;
        ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[file]``;
        ``docs/test-scripts/test_position_stability.py::test_project_root_preserves_anchor[http]``;
+       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: expand and collapse preserve existing primary slots``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: existing test lane is stable while new primary nodes fit beside it``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: a growing earlier band makes room above the clicked lower band``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: reranked shared tests remain unique and honor either anchor role``;
        ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: project root stays anchored through collapse and reopening``;
-       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: 200-node incremental geometry remains finite and stable``;
-       ``frontend/src/layout/tests/classified-rows.test.js :: STV_SWR_012 STV_SWR_037 STV_SWR_058: classified rows align and stay stable during navigation``
+       ``frontend/src/layout/tests/stability.test.js :: STV_SWR_058: 200-node incremental geometry remains finite and stable``
    * - :need:`STV_SWR_059`
      - Firefox file/HTTP upward and downward negative-route fixtures contain every polyline point and align endpoints with node borders within 2 screen px. Empty geometry has finite positive SVG bounds. Reset fits the scene and focus does not move it; pan/zoom and independent views still work.
      - ``docs/test-scripts/test_position_stability.py::test_arrow_viewport_covers_negative_routes[down-file]``;
