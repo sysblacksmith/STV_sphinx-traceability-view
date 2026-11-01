@@ -1,0 +1,54 @@
+{
+  "fixture": "Fresh 1.2.0 capacity host in a temporary copy with the exact candidate runtime bundle",
+  "runtime_sha256": "f0ae65325faef0231906369f8b2c52a8a92e6d168ec8c27aa5a6ea284d677496",
+  "started": "2026-11-01T13:55:49.156131+00:00",
+  "finished": "2026-11-01T13:57:01.727020+00:00",
+  "result": "passed",
+  "cases": [
+    {
+      "protocol": "file",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 4,
+      "svg_bytes": 11755783,
+      "svg_sha256": "b19dccef8a46d418a0f64c91317e15c78f0d57c791ec24a16e368260e9d67c7d",
+      "seconds": 1.074280000058934,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-1600.svg"
+    },
+    {
+      "protocol": "file",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10898832,
+      "svg_sha256": "de2507523d5db7bba4f80d560a7cd46ad1c7ff8b9749581cc496a50903df78ee",
+      "seconds": 1.3677060999907553,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-900.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 1600,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 4,
+      "svg_bytes": 11747710,
+      "svg_sha256": "baa458b2415dc95e34f22ea692800cfb7805e5dec7be1aa21cdf54eba4819bd5",
+      "seconds": 1.170250799972564,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-1600.svg"
+    },
+    {
+      "protocol": "http",
+      "width": 900,
+      "visible_nodes": 200,
+      "open_cards": 10,
+      "visible_cards": 5,
+      "svg_bytes": 10891032,
+      "svg_sha256": "02dd42c79508325dccbe3bb84bb313a170351314a11c6ca4c830ed695f126465",
+      "seconds": 1.0042695000302047,
+      "path": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-900.svg"
+    }
+  ],
+  "script_sha256": "be1ab555177c908130e04267d1d3a9f37a8786870fe9dde24bffca672d2b36f0"
+}

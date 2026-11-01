@@ -106,6 +106,7 @@ def main():
               'benchmark_output':env['STV_CAPACITY_OUTPUT']}
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('coverage',[sys.executable,'scripts/check-coverage.py','--strict'])
+    run('method-package',[sys.executable,'scripts/check-method-package.py'])
     run('diagram-links-source',[sys.executable,str(method_tools/'normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams'])
     run('documentation',[sys.executable,'scripts/build_docs.py','docs'])
     benchmark_dir=ROOT/'docs/_build/release-benchmark'/args.record
@@ -150,10 +151,11 @@ def main():
     # Fixture reuse changes the actual benchmark path; retain it in both records.
     (record/'candidate.json').write_text(json.dumps(metadata,indent=2),encoding='utf-8')
     run('pytest',[sys.executable,'-m','pytest','-q','--junitxml='+str(record/'pytest.xml'),'--requirement-map='+str(record/'test-map.json')],report='pytest.xml')
-    run('node-tests',['node','--test','--test-reporter=junit','frontend/src/*/tests/*.test.js'],report='node-tests.log')
+    run('node-tests',['node','--test','--test-isolation=none','--test-reporter=junit','frontend/src/*/tests/*.test.js'],report='node-tests.log')
     shutil.copyfile(record/'node-tests.log',record/'node.xml')
     run('traceability',[sys.executable,str(method_tools/'validate_traceability.py'),'docs/_build/html/needs.json','--version','.'.join(version.split('.')[:2]),'--repo-root',str(ROOT),'--require-test-coverage','--test-csv',str(record/'test-traceability.csv'),'--csv',str(record/'traceability.csv')])
     run('diagram-links-published',[sys.executable,str(method_tools/'normalize-diagram-links.py'),'--diagram-dir','docs/architecture/diagrams','--published-dir','docs/_build/html'])
+    run('published-method-package',[sys.executable,'scripts/check-method-package.py','--published','docs/_build/html'])
     cases=junit_cases(record/'pytest.xml')+junit_cases(record/'node.xml')
     for case in cases:
         if not case['requirements']:case['requirements']=__import__('re').findall(r'STV_(?:SYS|SWR)_\d+',case['test'])

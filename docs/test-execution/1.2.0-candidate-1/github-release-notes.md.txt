@@ -1,0 +1,13 @@
+STV 1.2.0
+
+Adds an opt-in **Remember my current view** checkbox. It restores starting objects or the overview page, expanded graph and node positions, ordered detail cards, and pan/zoom after reloads and browser restarts. Saved views remain independent by project, page and embedded view. Disabling the checkbox clears that view's saved state without changing the live display.
+
+Saved state stays in the browser profile. Current graph validation, capacity limits, safe fallback and visible storage errors protect existing offline/static operation. No new runtime dependency or configuration migration is required; remembering defaults to off.
+
+Validation: 244 main automated tests passed (196 Python / 48 JavaScript), plus six CR019 browser supplements, fresh Python 3.10 consumer checks, 30,000-Need/90,000-link capacity checks and maximum-size/hover SVG checks. The owner confirmed native save/cancel and browser zoom behavior. Qualification scope is Windows 11 / Firefox 159.0 over file and HTTP.
+
+[Qualification evidence](https://github.com/sysblacksmith/STV_sphinx-traceability-view/blob/main/docs/test-execution/1.2.0-candidate-1/qualification.rst)
+
+Other operating systems/browsers, mobile/touch optimization, occurrence mode and universal SVG-editor support remain outside qualification. Direct-file persistence depends on browser storage support. No cross-device/account synchronization is provided.
+
+Attach the exact qualified 1.2.0 wheel, source archive and SHA256SUMS. These notes are prepared for owner review; publication and successful hosted checks are separate steps.

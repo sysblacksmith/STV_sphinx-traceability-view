@@ -1,0 +1,132 @@
+{
+  "started": "2026-11-01T14:19:52.797755+00:00",
+  "authorization": "Owner approved the explicit cleanup-review.rst / workspace-inventory.json list on 2026-11-01, after tests finish",
+  "preserved": [
+    {
+      "original": "docs/_build/test-map.json",
+      "retained": "docs/test-execution/1.2.0-candidate-1/executable-test-map.json",
+      "sha256": "9756915c6ae2e7b4984dc0befac502ab9b0c2c84e898bbcd9efd50551aca2cc9"
+    },
+    {
+      "original": "docs/_build/release-benchmark/1.2.0-candidate-1/metrics.json",
+      "retained": "docs/test-execution/1.2.0-candidate-1/capacity-build.json",
+      "sha256": "a2a2ec100a0d5fff25924cb310d3bcf40311ead228926af89f39a412050b5ac6"
+    },
+    {
+      "original": "docs/_build/release-benchmark/1.2.0-candidate-1/build.log",
+      "retained": "docs/test-execution/1.2.0-candidate-1/capacity-host.log",
+      "sha256": "173fdef10db633e775665b06152c13109ad0c3dadeaebfa799104ba2ba938eb8"
+    }
+  ],
+  "removed": [
+    {
+      "path": "docs/_build/ci-runtime",
+      "bytes": 6749867
+    },
+    {
+      "path": "docs/_build/release-benchmark",
+      "bytes": 430588508
+    },
+    {
+      "path": "docs/_build/release-runtime310",
+      "bytes": 128963607
+    },
+    {
+      "path": "docs/_build/test-map.json",
+      "bytes": 41707
+    },
+    {
+      "path": "docs/_build/wheelhouse",
+      "bytes": 26612096
+    },
+    {
+      "path": "src/sphinx_traceability_view/__pycache__",
+      "bytes": 1380
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/__pycache__",
+      "bytes": 5107
+    },
+    {
+      "path": "src/sphinx_traceability_view/bundle/tests/__pycache__",
+      "bytes": 15150
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/__pycache__",
+      "bytes": 30303
+    },
+    {
+      "path": "src/sphinx_traceability_view/detail_build/tests/__pycache__",
+      "bytes": 44339
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/__pycache__",
+      "bytes": 21994
+    },
+    {
+      "path": "src/sphinx_traceability_view/directive/tests/__pycache__",
+      "bytes": 11821
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/__pycache__",
+      "bytes": 11479
+    },
+    {
+      "path": "src/sphinx_traceability_view/graph/tests/__pycache__",
+      "bytes": 29164
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/__pycache__",
+      "bytes": 12980
+    },
+    {
+      "path": "src/sphinx_traceability_view/model/tests/__pycache__",
+      "bytes": 19576
+    },
+    {
+      "path": "docs/test-scripts/__pycache__",
+      "bytes": 1109810
+    },
+    {
+      "path": "scripts/__pycache__",
+      "bytes": 55261
+    },
+    {
+      "path": "tools/method/tooling/__pycache__",
+      "bytes": 29077
+    },
+    {
+      "path": ".pytest_cache",
+      "bytes": 24563
+    },
+    {
+      "path": "__pycache__",
+      "bytes": 5481
+    },
+    {
+      "path": "docs/__pycache__",
+      "bytes": 2898
+    },
+    {
+      "path": "docs/test-execution/1.2.0-candidate-1/__pycache__",
+      "bytes": 33434
+    }
+  ],
+  "failed": [],
+  "retained": [
+    "docs/_build/html",
+    "all dist files",
+    "all canonical evidence",
+    "source and tests",
+    "normal development environments and frontend dependencies"
+  ],
+  "finished": "2026-11-01T14:20:12.568839+00:00",
+  "removed_bytes": 594419602,
+  "current_html_files_verified": 2174,
+  "distribution_files_verified": 37,
+  "canonical_evidence_files_verified": 123,
+  "remaining_build_entries": [
+    "html"
+  ],
+  "git_status": " M docs/change-requests/STV_CR_019_remember-current-view.rst\n M docs/maturity.rst\n M docs/requirements-software.rst\n M docs/requirements-stakeholder.rst\n M docs/test-cases/software-tests.rst\n M docs/test-cases/system-tests.rst\n M docs/test-coverage.rst\n M docs/test-execution/index.rst\n M scripts/verify-release.py\n M src/sphinx_traceability_view/_version.py\n M src/sphinx_traceability_view/static/THIRD_PARTY_NOTICES.txt\n?? docs/test-execution/1.2.0-candidate-1/\n!! .venv-implementation/\n!! .venv/\n!! _security-audits/\n!! dist/\n!! docs/_build/\n!! docs/change-requests/STV_CR_013_artifact_vertical_target_position.pptx\n!! docs/problem-tickets/STV_PR_014_node_disappears_behind_invisible_line.pptx\n!! frontend/node_modules/\n!! next_steps.rst\n"
+}

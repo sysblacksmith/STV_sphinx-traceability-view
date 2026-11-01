@@ -49,7 +49,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: inferred
    :evidence: docs/architecture/decisions/STV_ADR_001_static_extension.rst; docs/change-requests/STV_CR_006_centered-layout-and-interactive-seeds.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_003
    :allocated_to: STV_SWE_STATE
 
@@ -1222,7 +1222,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: owner
    :evidence: docs/change-requests/STV_CR_014_persistent-right-side-details.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_057
    :allocated_to: STV_SWE_INSPECT
 
@@ -1491,7 +1491,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_062, STV_SHR_064, STV_SHR_065
    :allocated_to: STV_SWE_STATE, STV_SWE_RENDER
 
@@ -1516,7 +1516,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_003, STV_SHR_063, STV_SHR_065
    :allocated_to: STV_SWE_STATE
 
@@ -1542,7 +1542,7 @@ Executable criteria and retained results: :doc:`test-coverage` and
    :basis: documented
    :evidence: docs/change-requests/STV_CR_019_remember-current-view.rst; docs/internal-interfaces.rst
    :priority: unassigned
-   :verification_state: partial
+   :verification_state: passed
    :derives_from: STV_SHR_057, STV_SHR_063, STV_SHR_065
    :allocated_to: STV_SWE_RENDER, STV_SWE_LAYOUT, STV_SWE_INSPECT
 

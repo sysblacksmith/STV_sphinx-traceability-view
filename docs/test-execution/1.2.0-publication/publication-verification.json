@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-11-01T14:38:50.858691+00:00",
+  "release": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/tag/v1.2.0",
+  "published_at": "2026-11-01T14:32:34Z",
+  "commit": "c75dbbe84481bf0c319daf09151b6330d6f99c9d",
+  "annotated_tag": "v1.2.0",
+  "tag_object": "f141809b85941518fa3d7768453117325b0db99c",
+  "workflow": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/actions/runs/41316712011",
+  "workflow_conclusion": "success",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "sha256": "70c77e8240d0aef91090f80619a5323535462ad336c650212603c13cc212330b",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.2.0/SHA256SUMS",
+      "size": 220
+    },
+    {
+      "name": "sphinx_traceability_view-1.2.0-py3-none-any.whl",
+      "sha256": "dfc02d224353df0d207eb10e14c4d03226bc8024f9c9382a4fe18cd849f928ec",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.2.0/sphinx_traceability_view-1.2.0-py3-none-any.whl",
+      "size": 1016913
+    },
+    {
+      "name": "sphinx_traceability_view-1.2.0.tar.gz",
+      "sha256": "7fed3e71cd96910f013bf30def789a02075a5b13df2011b15f990be888d7d7a4",
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/v1.2.0/sphinx_traceability_view-1.2.0.tar.gz",
+      "size": 1056395
+    }
+  ],
+  "pypi": "https://pypi.org/project/sphinx-traceability-view/1.2.0/",
+  "pypi_hashes_match": true,
+  "documentation": "https://sysblacksmith.github.io/STV_sphinx-traceability-view/",
+  "documentation_version": "1.2.0",
+  "documentation_runtime_sha256": "f0ae65325faef0231906369f8b2c52a8a92e6d168ec8c27aa5a6ea284d677496"
+}

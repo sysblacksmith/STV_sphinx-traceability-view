@@ -1,0 +1,28 @@
+{
+  "id": 430639319,
+  "tag": "v1.2.0",
+  "commit": "c75dbbe84481bf0c319daf09151b6330d6f99c9d",
+  "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/tag/v1.2.0",
+  "stage": "published",
+  "assets": [
+    {
+      "name": "sphinx_traceability_view-1.2.0-py3-none-any.whl",
+      "sha256": "dfc02d224353df0d207eb10e14c4d03226bc8024f9c9382a4fe18cd849f928ec",
+      "size": 1016913,
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/untagged-5b32be77ae7c1bb075a9/sphinx_traceability_view-1.2.0-py3-none-any.whl"
+    },
+    {
+      "name": "sphinx_traceability_view-1.2.0.tar.gz",
+      "sha256": "7fed3e71cd96910f013bf30def789a02075a5b13df2011b15f990be888d7d7a4",
+      "size": 1056395,
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/untagged-5b32be77ae7c1bb075a9/sphinx_traceability_view-1.2.0.tar.gz"
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "70c77e8240d0aef91090f80619a5323535462ad336c650212603c13cc212330b",
+      "size": 220,
+      "url": "https://github.com/sysblacksmith/STV_sphinx-traceability-view/releases/download/untagged-5b32be77ae7c1bb075a9/SHA256SUMS"
+    }
+  ],
+  "published_at": "2026-11-01T14:32:34Z"
+}

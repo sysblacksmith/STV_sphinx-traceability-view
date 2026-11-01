@@ -1,0 +1,44 @@
+{
+  "archive": "retained-exports.zip",
+  "archive_sha256": "3961565966e72e97d5487be33e5e342052bf745c44f78ca3ca295596ddec73c6",
+  "archive_bytes": 505926,
+  "files": [
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-1600.svg",
+      "member": "export-capacity/file-1600.svg",
+      "bytes": 11755783,
+      "sha256": "b19dccef8a46d418a0f64c91317e15c78f0d57c791ec24a16e368260e9d67c7d"
+    },
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/export-capacity/file-900.svg",
+      "member": "export-capacity/file-900.svg",
+      "bytes": 10898832,
+      "sha256": "de2507523d5db7bba4f80d560a7cd46ad1c7ff8b9749581cc496a50903df78ee"
+    },
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-1600.svg",
+      "member": "export-capacity/http-1600.svg",
+      "bytes": 11747710,
+      "sha256": "baa458b2415dc95e34f22ea692800cfb7805e5dec7be1aa21cdf54eba4819bd5"
+    },
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/export-capacity/http-900.svg",
+      "member": "export-capacity/http-900.svg",
+      "bytes": 10891032,
+      "sha256": "02dd42c79508325dccbe3bb84bb313a170351314a11c6ca4c830ed695f126465"
+    },
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/hover-export-file.svg",
+      "member": "hover-export-file.svg",
+      "bytes": 682165,
+      "sha256": "dc499507caa6cb667c84a88b151ed051882f4d2e04e358d06b1a5d97bdfecd25"
+    },
+    {
+      "original": "docs/test-execution/1.2.0-candidate-1/hover-export-http.svg",
+      "member": "hover-export-http.svg",
+      "bytes": 681766,
+      "sha256": "d2ec691691877f0814fb0d6284e5b29c06f69165fc2d783e860983355acaf05c"
+    }
+  ],
+  "purpose": "Exact raw SVG observations retained with lossless compression; original paths in issued supplemental metrics remain provenance"
+}

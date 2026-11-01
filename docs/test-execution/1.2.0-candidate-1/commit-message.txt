@@ -1,0 +1,6 @@
+Qualify STV 1.2.0 for release
+
+  - Prepare a verified release of the remembered-view feature.
+  - Set version 1.2.0 and correct the release runner's Node reporting and method checks.
+  - Record Windows qualification, canonical executions and assessed CR019 verification.
+  - Retain exact packages, supplemental evidence and the approved cleanup receipt.
