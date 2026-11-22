@@ -8,7 +8,7 @@ import tarfile
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-FORBIDDEN=re.compile(rb'-agents|#agents|requirements_skill_dir|@shared_requirements_method@',re.I)
+FORBIDDEN=re.compile(rb'-agents|_agents|#agents|requirements_skill_dir|@shared_requirements_method@',re.I)
 
 
 def inspect(name,data):
